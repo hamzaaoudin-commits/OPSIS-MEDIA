@@ -12,14 +12,15 @@
   :root{
     --obsidian:#08080A;--obsidian-2:#101013;--obsidian-3:#17171B;
     --strawberry:#A8141A;--straw-bright:#C8202A;--oxblood:#5E0B0F;
-    --paper:#ECE7DC;--ink:#16130F;--offwhite:#EFEBE2;--dim:#A39E94;--ash:#6E6A63;
+    --paper:#ECE7DC;--ink:#16130F;--offwhite:#EFEBE2;
+    --text:#CDC8BE;--dim:#B2ADA3;--ash:#6E6A63;
     --gold:#B79152;--gold-lo:#6E5631;
     --serif:'Cormorant Garamond',Georgia,serif;--sans:'Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
     --maxw:1160px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--obsidian);color:var(--offwhite);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--obsidian);color:var(--offwhite);font-family:var(--sans);font-weight:300;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
 
   .grain{position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.045;mix-blend-mode:overlay}
@@ -27,12 +28,17 @@
   .lb{position:fixed;left:0;right:0;height:clamp(20px,3.4vh,40px);background:#000;z-index:8200;pointer-events:none}
   .lb.t{top:0}.lb.b{bottom:0}
 
+  /* placeholder image générique */
+  .ph{background:linear-gradient(135deg,#161018,#0b0b0d);position:relative;overflow:hidden;background-size:cover;background-position:center}
+  .ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(48deg,rgba(239,235,226,.022) 0 12px,transparent 12px 24px);pointer-events:none}
+  .phl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:rgba(239,235,226,.3);text-transform:uppercase;text-align:center;line-height:1.7;pointer-events:none}
+
   nav{position:fixed;top:clamp(20px,3.4vh,40px);left:0;right:0;z-index:8600;display:flex;align-items:center;justify-content:space-between;padding:16px 30px;backdrop-filter:blur(8px);background:linear-gradient(var(--obsidian),rgba(8,8,10,.4) 70%,transparent);transition:padding .4s}
   nav.shrink{padding:10px 30px;background:rgba(8,8,10,.86)}
   nav .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:23px;letter-spacing:.14em}
   nav .brand svg{width:23px;height:23px}
   nav .brand .sub{font-family:var(--mono);font-size:8.5px;letter-spacing:.24em;color:var(--ash);text-transform:uppercase;margin-left:-4px}
-  nav .links{display:flex;gap:28px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+  nav .links{display:flex;gap:26px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
   nav .links a{transition:color .3s} nav .links a:hover{color:var(--offwhite)} nav .links a.cta{color:var(--strawberry)}
   nav .burger{display:none;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--dim);background:none;border:0;cursor:pointer;text-transform:uppercase}
 
@@ -60,47 +66,75 @@
   .sec-head p.lede{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.9vw,26px);line-height:1.4}
   .salle .sec-head p.lede{color:var(--dim)} .revue .sec-head p.lede{color:#5b554a}
 
-  .mani{text-align:center;max-width:900px;margin:0 auto}
+  .mani{text-align:center;max-width:920px;margin:0 auto}
   .mani .big{font-family:var(--serif);font-size:clamp(30px,5.4vw,60px);line-height:1.12;font-weight:300}
   .mani .big em{color:var(--strawberry);font-style:italic}
-  .mani .sub{margin-top:32px;font-size:clamp(15px,2.2vw,18px);color:var(--dim);max-width:64ch;margin-left:auto;margin-right:auto}
-  .mani .tri{margin-top:36px;display:flex;gap:0;justify-content:center;border-top:1px solid rgba(239,235,226,.1);border-bottom:1px solid rgba(239,235,226,.1);max-width:640px;margin-left:auto;margin-right:auto}
+  .mani .sub{margin-top:32px;font-size:clamp(15px,2.2vw,18px);color:var(--text);max-width:64ch;margin-left:auto;margin-right:auto}
+  .mani .sub b{color:var(--offwhite);font-weight:400}
+  .mani .tri{margin-top:38px;display:flex;gap:0;justify-content:center;border-top:1px solid rgba(239,235,226,.1);border-bottom:1px solid rgba(239,235,226,.1);max-width:640px;margin-left:auto;margin-right:auto}
   .mani .tri div{flex:1;padding:22px 10px;border-right:1px solid rgba(239,235,226,.08)}
   .mani .tri div:last-child{border-right:0}
   .mani .tri .tk{font-family:var(--serif);font-size:24px;color:var(--offwhite)}
   .mani .tri .tv{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-top:8px}
 
+  /* FEATURED / POSTER */
   .feat{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
-  .feat .player{position:relative;aspect-ratio:16/9;background:radial-gradient(70% 90% at 50% 35%,#1c1418,#0a0a0c);border:1px solid rgba(239,235,226,.1);overflow:hidden;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .feat .player{position:relative;aspect-ratio:16/9;border:1px solid rgba(239,235,226,.12);overflow:hidden;cursor:pointer;display:flex;align-items:center;justify-content:center}
   .feat .player .lbb{position:absolute;left:0;right:0;height:9%;background:#000;z-index:3}.feat .player .lbb.t{top:0}.feat .player .lbb.b{bottom:0}
-  .feat .player::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.14) 3px 4px);z-index:2}
-  .feat .player .play{position:relative;z-index:4;width:78px;height:78px;border:1.5px solid var(--offwhite);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.35s;background:rgba(8,8,10,.35)}
-  .feat .player:hover .play{border-color:var(--strawberry);transform:scale(1.08)}
+  .feat .player .play{position:relative;z-index:4;width:80px;height:80px;border:1.5px solid var(--offwhite);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.35s;background:rgba(8,8,10,.4)}
+  .feat .player:hover .play{border-color:var(--strawberry);transform:scale(1.08);background:rgba(168,20,26,.25)}
   .feat .player .play svg{width:24px;height:24px;margin-left:4px}
-  .feat .player .ep{position:absolute;left:24px;bottom:22px;z-index:4;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
-  .feat .player .ep b{color:var(--strawberry)}
-  .feat .player .tcr{position:absolute;right:18px;top:calc(9% + 10px);z-index:4;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:rgba(239,235,226,.45)}
+  .feat .player .ptitle{position:absolute;left:26px;bottom:24px;z-index:4;max-width:70%}
+  .feat .player .ptitle .pk{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--strawberry)}
+  .feat .player .ptitle .pv{font-family:var(--serif);font-size:26px;line-height:1.02;margin-top:6px}
+  .feat .player .pv-stamp{position:absolute;right:22px;bottom:24px;z-index:4;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;border:1.5px solid var(--strawberry);color:var(--strawberry);padding:6px 11px;transform:rotate(-3deg);background:rgba(8,8,10,.5)}
+  .feat .player .tcr{position:absolute;right:18px;top:calc(9% + 10px);z-index:4;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:rgba(239,235,226,.5)}
   .feat .fk{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--strawberry)}
   .feat h3{font-family:var(--serif);font-size:clamp(30px,4.4vw,46px);line-height:1.04;margin:14px 0 18px;font-weight:400}
-  .feat .meta{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:13.5px;color:var(--dim);border-top:1px solid rgba(239,235,226,.1);padding-top:20px}
-  .feat .meta .mk{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);padding-top:3px}
+  .feat .meta{display:grid;grid-template-columns:auto 1fr;gap:11px 18px;font-size:14px;color:var(--text);border-top:1px solid rgba(239,235,226,.1);padding-top:20px}
+  .feat .meta .mk{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);padding-top:4px}
   .feat .meta .mv b{color:var(--offwhite);font-weight:400}
   .feat .vstamp{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1.5px solid var(--strawberry);color:var(--strawberry);padding:5px 11px;transform:rotate(-2deg)}
-  .feat .watch{margin-top:24px;display:inline-flex;gap:12px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--offwhite);border:1px solid rgba(239,235,226,.25);padding:13px 22px;transition:.3s}
-  .feat .watch:hover{border-color:var(--strawberry);color:var(--strawberry)}
+  .feat .watch{margin-top:24px;display:inline-flex;gap:12px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--obsidian);background:var(--strawberry);padding:14px 24px;transition:.3s;font-weight:500}
+  .feat .watch:hover{background:var(--straw-bright)}
 
-  .epgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(239,235,226,.08);border:1px solid rgba(239,235,226,.08)}
-  .epcard{background:var(--obsidian-2);padding:26px 24px;transition:background .4s;position:relative}
-  .epcard.live{cursor:pointer} .epcard:hover{background:var(--obsidian-3)}
-  .epcard .et{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+  /* FULL-BLEED VOICE */
+  .voice{position:relative;padding:clamp(90px,16vh,180px) 0;text-align:center;overflow:hidden;border-top:1px solid rgba(239,235,226,.06);border-bottom:1px solid rgba(239,235,226,.06)}
+  .voice .vbg{position:absolute;inset:0;z-index:0}
+  .voice .vbg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,8,10,.72),rgba(8,8,10,.9))}
+  .voice .lbb{position:absolute;left:0;right:0;height:clamp(24px,5vh,52px);background:#000;z-index:2}.voice .lbb.t{top:0}.voice .lbb.b{bottom:0}
+  .voice .inner{position:relative;z-index:3;max-width:960px;margin:0 auto;padding:0 30px}
+  .voice .qk{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--strawberry)}
+  .voice .q{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,6vw,66px);line-height:1.1;margin:22px 0 20px}
+  .voice .a{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+  .voice .a b{color:var(--offwhite);font-weight:400}
+
+  /* SÉANCES */
+  .epgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .epcard{background:var(--obsidian-2);border:1px solid rgba(239,235,226,.08);transition:border-color .4s,transform .4s;position:relative;overflow:hidden}
+  .epcard.live{cursor:pointer} .epcard:hover{border-color:rgba(168,20,26,.5);transform:translateY(-3px)}
+  .epcard .thumb{aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center}
+  .epcard .thumb .play-s{width:46px;height:46px;border:1px solid var(--offwhite);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;transition:.3s}
+  .epcard.live:hover .thumb .play-s{border-color:var(--strawberry);background:rgba(168,20,26,.3)}
+  .epcard .thumb .play-s svg{width:15px;height:15px;margin-left:3px}
+  .epcard .thumb .tstamp{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;border:1px solid;padding:4px 9px;background:rgba(8,8,10,.55)}
+  .epcard .thumb .tstamp.live{border-color:var(--strawberry);color:var(--strawberry)}
+  .epcard .thumb .tstamp.soon{border-color:var(--ash);color:var(--ash)}
+  .epcard .ebody{padding:22px 22px 24px}
+  .epcard .et{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
   .epcard .en{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
   .epcard .ed{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--strawberry)}
-  .epcard h4{font-family:var(--serif);font-size:25px;line-height:1.08;font-weight:400;min-height:2.1em}
-  .epcard .ework{font-size:12.5px;color:var(--dim);margin-top:10px}
-  .epcard .efoot{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(239,235,226,.07)}
-  .epcard .es{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
-  .epcard .es.live{color:var(--strawberry)} .epcard .es.soon{color:var(--ash)}
-  .epcard .eap{width:24px;height:24px;margin-left:auto}
+  .epcard .ed.soon{color:var(--ash)}
+  .epcard h4{font-family:var(--serif);font-size:25px;line-height:1.08;font-weight:400}
+  .epcard .ework{font-size:13px;color:var(--dim);margin-top:10px}
+
+  /* ÉCHELLE */
+  .scale{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(239,235,226,.08);border:1px solid rgba(239,235,226,.08)}
+  .stier{background:var(--obsidian-2);padding:26px 16px;text-align:center}
+  .stier .sap{width:46px;height:46px;margin:0 auto 16px}
+  .stier .sl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+  .stier .sd{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--dim);margin-top:8px;line-height:1.3}
+  .stier.canon .sl{color:var(--gold)} .stier.impo .sl{color:var(--strawberry)}
 
   .canon{background:linear-gradient(180deg,#0c0a06,#08080a)}
   .canon .ctable{border-top:1px solid rgba(183,145,82,.22)}
@@ -108,7 +142,7 @@
   .crow:hover{padding-left:12px}
   .crow .cidx{font-family:var(--mono);font-size:12px;color:var(--gold-lo)}
   .crow .cw{font-family:var(--serif);font-size:clamp(20px,2.8vw,28px);color:var(--offwhite)}
-  .crow .cw small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--ash);margin-top:5px;font-weight:300}
+  .crow .cw small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--dim);margin-top:5px;font-weight:300}
   .crow .cy{font-family:var(--mono);font-size:11px;color:var(--gold)}
 
   .arc{border-top:1px solid #d3ccbd}
@@ -116,19 +150,24 @@
   .beat .bi{font-family:var(--mono);font-size:12px;color:var(--strawberry)}
   .beat .bn{font-family:var(--serif);font-size:24px;line-height:1.05;color:var(--ink)}
   .beat .bn small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8a8478;margin-top:5px}
-  .beat .bd{font-size:13.5px;color:#5b554a}
+  .beat .bd{font-size:13.5px;color:#4f4a40}
 
-  .jury{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(239,235,226,.08)}
-  .role{background:var(--obsidian-2);padding:30px 28px}
-  .role .rk{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash)}
-  .role h3{font-size:30px;margin:8px 0 6px}
-  .role .tg{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--strawberry);margin-bottom:13px}
-  .role p{font-size:14px;color:var(--dim)} .role.gold .tg{color:var(--gold)}
+  /* JURY portraits */
+  .jgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .jcard{background:var(--obsidian-2);border:1px solid rgba(239,235,226,.08);overflow:hidden}
+  .jcard .portrait{aspect-ratio:4/5;position:relative;display:flex;align-items:flex-end}
+  .jcard .portrait .pg{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(8,8,10,.85));z-index:1}
+  .jcard .jbody{padding:20px}
+  .jcard .jarch{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--strawberry)}
+  .jcard h3{font-family:var(--serif);font-size:26px;margin:8px 0 8px;line-height:1}
+  .jcard p{font-size:13px;color:var(--dim);line-height:1.5}
+  .jnote{margin-top:34px;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,23px);color:var(--dim);text-align:center;max-width:44ch;margin-left:auto;margin-right:auto}
+  .jnote b{color:var(--offwhite);font-style:normal;font-weight:400}
 
   .salon{background:linear-gradient(150deg,#14080a,#08080a);text-align:center}
   .salon .si{max-width:680px;margin:0 auto}
   .salon h2{font-family:var(--serif);font-size:clamp(34px,6vw,62px);line-height:1.02}
-  .salon p{margin-top:22px;font-size:16px;color:var(--dim)}
+  .salon p{margin-top:22px;font-size:16px;color:var(--text)}
   .salon .perks{margin:36px auto 0;max-width:560px;list-style:none;text-align:left}
   .salon .perks li{font-size:14px;color:var(--dim);padding:12px 0 12px 24px;position:relative;border-bottom:1px solid rgba(239,235,226,.07)}
   .salon .perks li b{color:var(--offwhite);font-weight:400} .salon .perks li::before{content:"›";position:absolute;left:0;color:var(--strawberry)}
@@ -139,21 +178,22 @@
   .salon button:hover{background:var(--straw-bright)}
   .salon .msg{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--gold);min-height:1.2em}
 
-  footer{padding:80px 0 60px;text-align:center;border-top:1px solid rgba(239,235,226,.08);background:var(--obsidian)}
+  footer{padding:76px 0 56px;text-align:center;border-top:1px solid rgba(239,235,226,.08);background:var(--obsidian)}
   footer #footIris{width:54px;height:54px;margin:0 auto 22px}
   footer .fw{font-family:var(--serif);font-size:36px;letter-spacing:.07em} footer .fw small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.24em;color:var(--ash);text-transform:uppercase;margin-top:12px}
-  footer .where{margin-top:26px;display:flex;gap:22px;justify-content:center;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
-  footer .where a:hover{color:var(--strawberry)}
+  footer .where{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  footer .where a{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);border:1px solid rgba(239,235,226,.16);padding:11px 18px;transition:.3s}
+  footer .where a:hover{border-color:var(--strawberry);color:var(--strawberry)}
 
   .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
-  @media (max-width:880px){
+  @media (max-width:900px){
     nav .links{display:none} nav .links.open{display:flex;position:absolute;top:100%;right:0;left:0;flex-direction:column;gap:18px;background:rgba(8,8,10,.96);padding:24px 30px}
     nav .burger{display:block}
-    .feat{grid-template-columns:1fr;gap:28px} .epgrid{grid-template-columns:1fr} .jury{grid-template-columns:1fr}
-    .beat{grid-template-columns:40px 1fr;gap:10px}.beat .bd{grid-column:2} .salon .form{flex-direction:column} .mani .tri{flex-direction:column}
-    .mani .tri div{border-right:0;border-bottom:1px solid rgba(239,235,226,.08)}.mani .tri div:last-child{border-bottom:0}
+    .feat{grid-template-columns:1fr;gap:28px} .epgrid{grid-template-columns:1fr 1fr} .jgrid{grid-template-columns:1fr 1fr}
+    .scale{grid-template-columns:1fr 1fr} .beat{grid-template-columns:40px 1fr;gap:10px}.beat .bd{grid-column:2}
+    .salon .form{flex-direction:column} .mani .tri{flex-direction:column}.mani .tri div{border-right:0;border-bottom:1px solid rgba(239,235,226,.08)}.mani .tri div:last-child{border-bottom:0}
   }
-  @media (max-width:560px){.epgrid{grid-template-columns:1fr}}
+  @media (max-width:560px){.epgrid,.jgrid{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .ov,.hero .wm,.hero .bl,.hero .cue{opacity:1;transform:none}}
 </style>
 </head>
@@ -171,9 +211,9 @@
   <button class="burger" id="burger">Menu</button>
   <div class="links" id="links">
     <a href="#seances">Les Séances</a>
+    <a href="#note">La Note</a>
     <a href="#canon">Le Canon</a>
-    <a href="#format">L'Émission</a>
-    <a href="#jury">Le Jury</a>
+    <a href="#jury">La Bande</a>
     <a href="#salon" class="cta">Le Club</a>
   </div>
 </nav>
@@ -193,8 +233,8 @@
 <!-- ÉDITER : le pitch de l'émission -->
 <section class="blk salle" id="principe">
   <div class="wrap mani rv">
-    <div class="big">On adore le ciné et les séries.<br>Assez pour en parler <em>vraiment.</em></div>
-    <p class="sub">À chaque grande sortie, film ou série, on fait une Séance. La review pour savoir si ça vaut le coup, l'analyse qui rentre dans les détails, le débat qui part en vrille — et à la fin, on tranche. Pas pour frimer, pas pour donner des leçons : pour partager ça avec ceux qui aiment ça autant que nous.</p>
+    <div class="big">On aime trop le ciné<br>pour <em>fermer les yeux.</em></div>
+    <p class="sub">À chaque grande sortie, film ou série, on fait une Séance : la review pour savoir si ça vaut le coup, l'analyse qui rentre dans les détails, le débat qui part en vrille. <b>On dit quand c'est nul. On dit quand c'est immense. Et on assume.</b> Pas pour donner des leçons — pour partager ça avec ceux qui aiment ça autant que nous.</p>
     <div class="tri">
       <div><div class="tk">La Review</div><div class="tv">ça vaut le coup ?</div></div>
       <div><div class="tk">L'Analyse</div><div class="tv">on rentre dedans</div></div>
@@ -204,7 +244,7 @@
 </section>
 
 <!-- ============ DERNIÈRE SÉANCE ============ -->
-<!-- ÉDITER : brancher la vidéo (lien YouTube/Vimeo) sur .player et .watch -->
+<!-- ÉDITER : remplacer le style="background-image" du .player par le still de l'épisode, et supprimer le .phl -->
 <section class="blk salle" id="derniere">
   <div class="wrap">
     <div class="sec-head rv">
@@ -212,11 +252,13 @@
       <h2>La dernière Séance.</h2>
     </div>
     <div class="feat rv">
-      <div class="player" id="player">
+      <div class="player ph" id="player" style="background-image:none">
+        <span class="phl">Visuel — still 16:9<br>(à remplacer)</span>
         <div class="lbb t"></div><div class="lbb b"></div>
         <div class="tcr">TC 00:00:00:00</div>
         <div class="play"><svg viewBox="0 0 24 24" fill="#EFEBE2"><path d="M5 3l16 9-16 9z"/></svg></div>
-        <div class="ep"><b>Séance 01</b> · On a vu le film de la semaine</div>
+        <div class="ptitle"><div class="pk">Séance 01</div><div class="pv">On a vu le film de la semaine</div></div>
+        <div class="pv-stamp">Tenable</div>
       </div>
       <div class="finfo">
         <div class="fk">Séance 01 — la review + l'analyse</div>
@@ -227,14 +269,26 @@
           <div class="mk">La question</div><div class="mv">Est-ce qu'un carton peut être un grand film ?</div>
           <div class="mk">Verdict</div><div class="mv"><span class="vstamp">Tenable</span></div>
         </div>
-        <a class="watch" href="#" id="watch"><span style="color:var(--strawberry)">▶</span> Regarder la Séance</a>
+        <a class="watch" href="#" id="watch"><span>▶</span> Regarder la Séance</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ FULL-BLEED VOIX ============ -->
+<!-- ÉDITER : mettre un still en fond via style="background-image" sur .vbg -->
+<section class="voice">
+  <div class="vbg ph" style="background-image:none"></div>
+  <div class="lbb t"></div><div class="lbb b"></div>
+  <div class="inner rv">
+    <div class="qk">Le Verdict · Séance 01</div>
+    <div class="q">« Deux heures d'effets spéciaux pour dire ce qu'un court-métrage aurait dit en dix minutes. »</div>
+    <div class="a">Verdict rendu — <b>Tenable</b> · ça se regarde, ça ne se retient pas</div>
+  </div>
+</section>
+
 <!-- ============ LES SÉANCES ============ -->
-<!-- ÉDITER : une carte = un épisode. .live = en ligne, sinon "Bientôt". -->
+<!-- ÉDITER : une carte = un épisode. Remplacer background-image du .thumb par la vignette, supprimer le .phl. -->
 <section class="blk salle" id="seances">
   <div class="wrap">
     <div class="sec-head rv">
@@ -244,41 +298,73 @@
     </div>
     <div class="epgrid rv">
       <article class="epcard live">
-        <div class="et"><span class="en">Séance 01</span><span class="ed">En ligne</span></div>
-        <h4>On a vu le film de la semaine</h4>
-        <div class="ework">La sortie : le blockbuster de la semaine</div>
-        <div class="efoot"><span class="es live">▶ Regarder</span>
-          <svg class="eap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#B7B2A8" stroke-width="11"/><circle r="50" fill="none" stroke="#B7B2A8" stroke-width="11"/></svg></div>
+        <div class="thumb ph" style="background-image:none"><span class="phl">Vignette 16:9</span>
+          <div class="play-s"><svg viewBox="0 0 24 24" fill="#EFEBE2"><path d="M5 3l16 9-16 9z"/></svg></div>
+          <span class="tstamp live">Verdict · Tenable</span>
+        </div>
+        <div class="ebody">
+          <div class="et"><span class="en">Séance 01</span><span class="ed">En ligne</span></div>
+          <h4>On a vu le film de la semaine</h4>
+          <div class="ework">La sortie : le blockbuster de la semaine</div>
+        </div>
       </article>
       <article class="epcard">
-        <div class="et"><span class="en">Séance 02</span><span class="ed" style="color:var(--ash)">Cette semaine</span></div>
-        <h4>La série que tout le monde binge</h4>
-        <div class="ework">La sortie : le carton streaming du moment</div>
-        <div class="efoot"><span class="es soon">Bientôt</span></div>
+        <div class="thumb ph" style="background-image:none"><span class="phl">Vignette 16:9</span>
+          <span class="tstamp soon">Cette semaine</span>
+        </div>
+        <div class="ebody">
+          <div class="et"><span class="en">Séance 02</span><span class="ed soon">Bientôt</span></div>
+          <h4>La série que tout le monde binge</h4>
+          <div class="ework">La sortie : le carton streaming du moment</div>
+        </div>
       </article>
       <article class="epcard">
-        <div class="et"><span class="en">Séance 03</span><span class="ed" style="color:var(--ash)">À venir</span></div>
-        <h4>La grosse sortie du week-end</h4>
-        <div class="ework">La sortie : à annoncer</div>
-        <div class="efoot"><span class="es soon">Bientôt</span></div>
+        <div class="thumb ph" style="background-image:none"><span class="phl">Vignette 16:9</span>
+          <span class="tstamp soon">À venir</span>
+        </div>
+        <div class="ebody">
+          <div class="et"><span class="en">Séance 03</span><span class="ed soon">Bientôt</span></div>
+          <h4>La grosse sortie du week-end</h4>
+          <div class="ework">La sortie : à annoncer</div>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
+<!-- ============ LA NOTE (l'échelle) ============ -->
+<section class="blk salle" id="note">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="reg"><span class="num">II</span><span>—</span><span class="nm">La note</span></div>
+      <h2>Comment on juge.</h2>
+      <p class="lede">Cinq crans, de l'imposture au chef-d'œuvre. Plus l'œil s'ouvre, plus ça nous a marqués. Le sommet — le Canon — est réservé aux vrais coups de cœur.</p>
+    </div>
+    <div class="scale rv">
+      <div class="stier canon"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#B79152" stroke-width="9"/><circle r="14" fill="#B79152"/></svg><div class="sl">Canon</div><div class="sd">le chef-d'œuvre, direction le panthéon</div></div>
+      <div class="stier"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#EFEBE2" stroke-width="9"/><circle r="40" fill="none" stroke="#EFEBE2" stroke-width="9"/></svg><div class="sl">Majeur</div><div class="sd">une réussite, à voir sans hésiter</div></div>
+      <div class="stier"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#B7B2A8" stroke-width="9"/><circle r="52" fill="none" stroke="#B7B2A8" stroke-width="9"/></svg><div class="sl">Tenable</div><div class="sd">ça se regarde, sans plus</div></div>
+      <div class="stier"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#6E6A63" stroke-width="9"/><circle r="74" fill="none" stroke="#6E6A63" stroke-width="9"/></svg><div class="sl">Mineur</div><div class="sd">tu peux passer ton chemin</div></div>
+      <div class="stier impo"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#A8141A" stroke-width="9"/><line x1="-44" y1="-44" x2="44" y2="44" stroke="#A8141A" stroke-width="9"/><line x1="44" y1="-44" x2="-44" y2="44" stroke="#A8141A" stroke-width="9"/></svg><div class="sl">Imposture</div><div class="sd">on s'est fait avoir</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ LE CANON ============ -->
-<!-- ÉDITER : une ligne = une œuvre qui nous a marqués -->
+<!-- ÉDITER : REMPLACE ces films par TES classiques à toi. Ce sont des exemples pour montrer ta gamme. -->
 <section class="blk salle canon" id="canon">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="reg"><span class="num">II</span><span>—</span><span class="nm" style="color:var(--gold)">Le Canon</span></div>
+      <div class="reg"><span class="num">III</span><span>—</span><span class="nm" style="color:var(--gold)">Le Canon</span></div>
       <h2>Celles qu'on n'oubliera pas.</h2>
-      <p class="lede">Notre hall of fame. Les œuvres qui nous ont vraiment marqués — celles qui décrochent la meilleure note en Séance. Il grandit à chaque coup de cœur.</p>
+      <p class="lede">Notre hall of fame. Les œuvres qui décrochent la note maximale en Séance. Tous genres, toutes époques — le seul critère, c'est que ça nous ait retournés.</p>
     </div>
     <div class="ctable rv">
-      <div class="crow"><span class="cidx">01</span><span class="cw">Le film qui nous a scotchés<small>Consacré en Séance 01 — celui contre lequel on juge tous les autres.</small></span><span class="cy">2026</span></div>
-      <div class="crow"><span class="cidx">02</span><span class="cw">Le prochain coup de cœur<small>La prochaine œuvre qui décrochera la meilleure note.</small></span><span class="cy">—</span></div>
-      <div class="crow"><span class="cidx">03</span><span class="cw">À venir<small>Le Canon se remplit, Séance après Séance.</small></span><span class="cy">—</span></div>
+      <div class="crow"><span class="cidx">01</span><span class="cw">Mulholland Drive<small>Le cauchemar éveillé qui a redéfini ce qu'un film peut cacher.</small></span><span class="cy">2001</span></div>
+      <div class="crow"><span class="cidx">02</span><span class="cw">Le Voyage de Chihiro<small>La preuve qu'un « film pour enfants » peut être un sommet absolu.</small></span><span class="cy">2001</span></div>
+      <div class="crow"><span class="cidx">03</span><span class="cw">Mad Max : Fury Road<small>Le blockbuster comme art pur — deux heures de mise en scène parfaite.</small></span><span class="cy">2015</span></div>
+      <div class="crow"><span class="cidx">04</span><span class="cw">Parasite<small>Le film qui a mis tout le monde d'accord, sans rien lâcher.</small></span><span class="cy">2019</span></div>
+      <div class="crow"><span class="cidx">05</span><span class="cw">The Wire<small>La série qui a prouvé que la télé pouvait écrire comme les grands romans.</small></span><span class="cy">2002</span></div>
     </div>
   </div>
 </section>
@@ -287,7 +373,7 @@
 <section class="blk revue" id="format">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="reg"><span class="num">III</span><span>—</span><span class="nm">L'émission</span></div>
+      <div class="reg"><span class="num">IV</span><span>—</span><span class="nm">L'émission</span></div>
       <h2>À quoi ressemble une Séance.</h2>
       <p class="lede">Toujours le même déroulé, pour que vous sachiez où vous mettez les pieds. La review d'abord — sans spoilers — pour ceux qui n'ont pas encore vu.</p>
     </div>
@@ -303,20 +389,34 @@
   </div>
 </section>
 
-<!-- ============ LE JURY ============ -->
+<!-- ============ LA BANDE ============ -->
+<!-- ÉDITER : personas à personnaliser (noms + punchlines). Remplacer background-image des .portrait par les vraies photos, supprimer les .phl. -->
 <section class="blk salle" id="jury">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="reg"><span class="num">IV</span><span>—</span><span class="nm">Le Jury</span></div>
-      <h2>La bande.</h2>
-      <p class="lede">Tout repose sur la chimie de l'équipe. Chacun a ses goûts, ses obsessions, ses angles morts — et c'est quand on n'est pas d'accord que ça devient bon.</p>
+      <div class="reg"><span class="num">V</span><span>—</span><span class="nm">La bande</span></div>
+      <h2>Ceux qui débattent.</h2>
+      <p class="lede">Tout repose sur la chimie de l'équipe. Chacun ses goûts, ses obsessions, ses angles morts — et c'est quand on n'est pas d'accord que ça devient bon.</p>
     </div>
-    <div class="jury rv">
-      <div class="role"><div class="rk">L'hôte</div><h3>Le Président</h3><div class="tg">Il lance, il relance, il tranche.</div><p>Le maître du jeu. Il ouvre la Séance, mène les débats, garde le rythme, et donne le verdict final.</p></div>
-      <div class="role"><div class="rk">La bande · le moteur</div><h3>Le Jury</h3><div class="tg">Deux ou trois voix jamais d'accord.</div><p>Les chroniqueurs récurrents : celui qui défend le grand public, celui qui ne jure que par le cinéma d'auteur, celui qui adore avoir tort. Leur chimie fait tout.</p></div>
-      <div class="role"><div class="rk">Le témoin</div><h3>L'Invité</h3><div class="tg">Il passe, il défend, il balance.</div><p>Un réalisateur, un acteur, un passionné, un critique. La tête d'affiche qui change à chaque Séance et amène son énergie.</p></div>
-      <div class="role gold"><div class="rk">Le sujet</div><h3>La sortie</h3><div class="tg">On juge l'œuvre, on respecte les gens.</div><p>C'est toujours le film ou la série qu'on passe au crible, jamais les personnes. On peut détester un film sans détester ceux qui l'ont fait.</p></div>
+    <div class="jgrid rv">
+      <div class="jcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">L'hôte</div><h3>Le Président</h3><p>Il lance, il relance, il tranche. Un avis sur tout — souvent le bon, jamais tiède.</p></div>
+      </div>
+      <div class="jcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">La voix pop</div><h3>[Prénom]</h3><p>Défend le grand public, les blockbusters et les plaisirs coupables. Et il n'a pas tort.</p></div>
+      </div>
+      <div class="jcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">Le puriste</div><h3>[Prénom]</h3><p>Ne jure que par le cinéma d'auteur et les plans-séquences. Insupportable et souvent brillant.</p></div>
+      </div>
+      <div class="jcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">Le trouble-fête</div><h3>[Prénom]</h3><p>Adore avoir tort, provoque, allume le débat. Le grain de sable qui fait tout basculer.</p></div>
+      </div>
     </div>
+    <p class="jnote rv">Une règle, une seule : on juge <b>l'œuvre</b>, jamais les gens. On peut détester un film sans détester ceux qui l'ont fait.</p>
   </div>
 </section>
 
@@ -349,7 +449,7 @@
     <div class="fw">OPSIS <small>La Séance · reviews, analyses & débats</small></div>
     <!-- ÉDITER : liens vers vos chaînes -->
     <div class="where">
-      <a href="#">YouTube</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#salon">Newsletter</a>
+      <a href="#">▶ YouTube</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#salon">Newsletter</a>
     </div>
   </div>
 </footer>
