@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OPSIS — La Séance · Reviews, analyses & débats</title>
-<meta name="description" content="OPSIS — La Séance. À chaque grande sortie ciné ou série : la review, l'analyse, le débat. Pour tous ceux qui aiment vraiment ça.">
+<meta name="description" content="OPSIS — La Séance. Le talk-show qui review, analyse et débat chaque grande sortie ciné et série. Tour de table, notes /10, débats et verdict.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Archivo:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,9 +12,8 @@
   :root{
     --obsidian:#08080A;--obsidian-2:#101013;--obsidian-3:#17171B;
     --strawberry:#A8141A;--straw-bright:#C8202A;--oxblood:#5E0B0F;
-    --paper:#ECE7DC;--ink:#16130F;--offwhite:#EFEBE2;
-    --text:#CDC8BE;--dim:#B2ADA3;--ash:#6E6A63;
-    --gold:#B79152;--gold-lo:#6E5631;
+    --paper:#ECE7DC;--ink:#16130F;--offwhite:#EFEBE2;--text:#CDC8BE;--dim:#B2ADA3;--ash:#6E6A63;
+    --gold:#B79152;--gold-lo:#6E5631;--blue:#4A7BB5;
     --serif:'Cormorant Garamond',Georgia,serif;--sans:'Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
     --maxw:1160px;
   }
@@ -24,11 +23,10 @@
   a{color:inherit;text-decoration:none}
 
   .grain{position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.045;mix-blend-mode:overlay}
-  .vig{position:fixed;inset:0;z-index:8400;pointer-events:none;box-shadow:inset 0 0 220px 60px rgba(0,0,0,.6)}
+  .vig{position:fixed;inset:0;z-index:8400;pointer-events:none;box-shadow:inset 0 0 220px 60px rgba(0,0,0,.55)}
   .lb{position:fixed;left:0;right:0;height:clamp(20px,3.4vh,40px);background:#000;z-index:8200;pointer-events:none}
   .lb.t{top:0}.lb.b{bottom:0}
 
-  /* placeholder image générique */
   .ph{background:linear-gradient(135deg,#161018,#0b0b0d);position:relative;overflow:hidden;background-size:cover;background-position:center}
   .ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(48deg,rgba(239,235,226,.022) 0 12px,transparent 12px 24px);pointer-events:none}
   .phl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:rgba(239,235,226,.3);text-transform:uppercase;text-align:center;line-height:1.7;pointer-events:none}
@@ -38,7 +36,7 @@
   nav .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:23px;letter-spacing:.14em}
   nav .brand svg{width:23px;height:23px}
   nav .brand .sub{font-family:var(--mono);font-size:8.5px;letter-spacing:.24em;color:var(--ash);text-transform:uppercase;margin-left:-4px}
-  nav .links{display:flex;gap:26px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+  nav .links{display:flex;gap:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
   nav .links a{transition:color .3s} nav .links a:hover{color:var(--offwhite)} nav .links a.cta{color:var(--strawberry)}
   nav .burger{display:none;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--dim);background:none;border:0;cursor:pointer;text-transform:uppercase}
 
@@ -50,7 +48,7 @@
   .hero .ov.in{opacity:1}
   .hero .wm{font-family:var(--serif);font-weight:300;font-size:clamp(52px,13vw,148px);line-height:.86;letter-spacing:.05em;margin-top:8px;opacity:0;transform:translateY(16px);transition:.9s ease .8s}
   .hero .wm.in{opacity:1;transform:none}
-  .hero .bl{margin-top:22px;font-family:var(--mono);font-size:clamp(10px,2.2vw,13px);letter-spacing:.34em;text-transform:uppercase;color:var(--dim);opacity:0;transition:1s ease 1.1s}
+  .hero .bl{margin-top:22px;font-family:var(--mono);font-size:clamp(10px,2.2vw,13px);letter-spacing:.3em;text-transform:uppercase;color:var(--dim);opacity:0;transition:1s ease 1.1s}
   .hero .bl.in{opacity:1}
   .hero .cue{margin-top:50px;display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);border:1px solid rgba(239,235,226,.2);padding:13px 22px;transition:.3s,opacity 1s ease 1.5s;opacity:0;cursor:pointer}
   .hero .cue.in{opacity:.85} .hero .cue:hover{border-color:var(--strawberry);color:var(--offwhite)}
@@ -69,7 +67,7 @@
   .mani{text-align:center;max-width:920px;margin:0 auto}
   .mani .big{font-family:var(--serif);font-size:clamp(30px,5.4vw,60px);line-height:1.12;font-weight:300}
   .mani .big em{color:var(--strawberry);font-style:italic}
-  .mani .sub{margin-top:32px;font-size:clamp(15px,2.2vw,18px);color:var(--text);max-width:64ch;margin-left:auto;margin-right:auto}
+  .mani .sub{margin-top:32px;font-size:clamp(15px,2.2vw,18px);color:var(--text);max-width:66ch;margin-left:auto;margin-right:auto}
   .mani .sub b{color:var(--offwhite);font-weight:400}
   .mani .tri{margin-top:38px;display:flex;gap:0;justify-content:center;border-top:1px solid rgba(239,235,226,.1);border-bottom:1px solid rgba(239,235,226,.1);max-width:640px;margin-left:auto;margin-right:auto}
   .mani .tri div{flex:1;padding:22px 10px;border-right:1px solid rgba(239,235,226,.08)}
@@ -84,10 +82,13 @@
   .feat .player .play{position:relative;z-index:4;width:80px;height:80px;border:1.5px solid var(--offwhite);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.35s;background:rgba(8,8,10,.4)}
   .feat .player:hover .play{border-color:var(--strawberry);transform:scale(1.08);background:rgba(168,20,26,.25)}
   .feat .player .play svg{width:24px;height:24px;margin-left:4px}
-  .feat .player .ptitle{position:absolute;left:26px;bottom:24px;z-index:4;max-width:70%}
+  .feat .player .ptitle{position:absolute;left:26px;bottom:24px;z-index:4;max-width:66%}
   .feat .player .ptitle .pk{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--strawberry)}
   .feat .player .ptitle .pv{font-family:var(--serif);font-size:26px;line-height:1.02;margin-top:6px}
-  .feat .player .pv-stamp{position:absolute;right:22px;bottom:24px;z-index:4;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;border:1.5px solid var(--strawberry);color:var(--strawberry);padding:6px 11px;transform:rotate(-3deg);background:rgba(8,8,10,.5)}
+  .feat .player .pv-note{position:absolute;right:22px;bottom:22px;z-index:4;text-align:center;background:rgba(8,8,10,.5);border:1px solid var(--strawberry);padding:8px 12px}
+  .feat .player .pv-note .n{font-family:var(--serif);font-size:28px;line-height:.9;color:var(--offwhite)}
+  .feat .player .pv-note .n small{font-size:13px;color:var(--dim)}
+  .feat .player .pv-note .l{font-family:var(--mono);font-size:7px;letter-spacing:.16em;text-transform:uppercase;color:var(--strawberry);margin-top:4px}
   .feat .player .tcr{position:absolute;right:18px;top:calc(9% + 10px);z-index:4;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:rgba(239,235,226,.5)}
   .feat .fk{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--strawberry)}
   .feat h3{font-family:var(--serif);font-size:clamp(30px,4.4vw,46px);line-height:1.04;margin:14px 0 18px;font-weight:400}
@@ -98,16 +99,21 @@
   .feat .watch{margin-top:24px;display:inline-flex;gap:12px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--obsidian);background:var(--strawberry);padding:14px 24px;transition:.3s;font-weight:500}
   .feat .watch:hover{background:var(--straw-bright)}
 
-  /* FULL-BLEED VOICE */
-  .voice{position:relative;padding:clamp(90px,16vh,180px) 0;text-align:center;overflow:hidden;border-top:1px solid rgba(239,235,226,.06);border-bottom:1px solid rgba(239,235,226,.06)}
-  .voice .vbg{position:absolute;inset:0;z-index:0}
-  .voice .vbg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,8,10,.72),rgba(8,8,10,.9))}
-  .voice .lbb{position:absolute;left:0;right:0;height:clamp(24px,5vh,52px);background:#000;z-index:2}.voice .lbb.t{top:0}.voice .lbb.b{bottom:0}
-  .voice .inner{position:relative;z-index:3;max-width:960px;margin:0 auto;padding:0 30px}
-  .voice .qk{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--strawberry)}
-  .voice .q{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,6vw,66px);line-height:1.1;margin:22px 0 20px}
-  .voice .a{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
-  .voice .a b{color:var(--offwhite);font-weight:400}
+  /* TABLEAU DES NOTES (bug) */
+  .voice{position:relative;padding:clamp(70px,12vh,130px) 0;overflow:hidden;border-top:1px solid rgba(239,235,226,.06);border-bottom:1px solid rgba(239,235,226,.06);background:linear-gradient(#0a0a0c,#0d0b0e)}
+  .voice .inner{position:relative;z-index:3;max-width:720px;margin:0 auto;padding:0 30px}
+  .voice .qk{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--strawberry);text-align:center}
+  .voice .bug{margin-top:28px;background:var(--obsidian-2);border:1px solid rgba(239,235,226,.1);padding:26px 28px}
+  .voice .nrow{display:grid;grid-template-columns:150px 1fr 52px;gap:16px;align-items:center;padding:9px 0}
+  .voice .who{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--dim)}
+  .voice .bar{height:7px;background:rgba(239,235,226,.1);position:relative}
+  .voice .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--strawberry)}
+  .voice .bar i.blue{background:var(--blue)}
+  .voice .val{font-family:var(--serif);font-size:24px;text-align:right}
+  .voice .avg{margin-top:16px;padding-top:16px;border-top:1px solid rgba(239,235,226,.1);display:flex;justify-content:space-between;align-items:baseline}
+  .voice .avg .l{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .voice .avg .v{font-family:var(--serif);font-size:38px;color:var(--gold)}
+  .voice .q{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3.4vw,30px);line-height:1.2;text-align:center;margin-top:30px;color:var(--offwhite)}
 
   /* SÉANCES */
   .epgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -117,9 +123,9 @@
   .epcard .thumb .play-s{width:46px;height:46px;border:1px solid var(--offwhite);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;transition:.3s}
   .epcard.live:hover .thumb .play-s{border-color:var(--strawberry);background:rgba(168,20,26,.3)}
   .epcard .thumb .play-s svg{width:15px;height:15px;margin-left:3px}
-  .epcard .thumb .tstamp{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;border:1px solid;padding:4px 9px;background:rgba(8,8,10,.55)}
-  .epcard .thumb .tstamp.live{border-color:var(--strawberry);color:var(--strawberry)}
-  .epcard .thumb .tstamp.soon{border-color:var(--ash);color:var(--ash)}
+  .epcard .thumb .tnote{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--serif);font-size:22px;background:rgba(8,8,10,.55);border:1px solid var(--strawberry);padding:2px 10px;line-height:1.2}
+  .epcard .thumb .tnote small{font-size:11px;color:var(--dim)}
+  .epcard .thumb .tsoon{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);border:1px solid var(--ash);padding:4px 9px;background:rgba(8,8,10,.55)}
   .epcard .ebody{padding:22px 22px 24px}
   .epcard .et{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
   .epcard .en{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
@@ -128,13 +134,46 @@
   .epcard h4{font-family:var(--serif);font-size:25px;line-height:1.08;font-weight:400}
   .epcard .ework{font-size:13px;color:var(--dim);margin-top:10px}
 
-  /* ÉCHELLE */
-  .scale{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(239,235,226,.08);border:1px solid rgba(239,235,226,.08)}
-  .stier{background:var(--obsidian-2);padding:26px 16px;text-align:center}
-  .stier .sap{width:46px;height:46px;margin:0 auto 16px}
-  .stier .sl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-  .stier .sd{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--dim);margin-top:8px;line-height:1.3}
-  .stier.canon .sl{color:var(--gold)} .stier.impo .sl{color:var(--strawberry)}
+  /* LA BANDE (4 axes) */
+  .band{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .bcard{background:var(--obsidian-2);border:1px solid rgba(239,235,226,.08);overflow:hidden}
+  .bcard .portrait{aspect-ratio:4/5;position:relative;display:flex;align-items:flex-end}
+  .bcard .portrait .pg{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(8,8,10,.85));z-index:1}
+  .bcard .portrait .axtag{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--strawberry);border:1px solid var(--strawberry);padding:3px 7px;background:rgba(8,8,10,.5)}
+  .bcard .jbody{padding:20px}
+  .bcard .jarch{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+  .bcard h3{font-family:var(--serif);font-size:24px;margin:6px 0 8px;line-height:1}
+  .bcard p{font-size:12.5px;color:var(--dim);line-height:1.5}
+  .host-row{display:grid;grid-template-columns:1fr;gap:0;margin-bottom:20px;background:linear-gradient(150deg,#16090b,#0c0b0d);border:1px solid rgba(168,20,26,.3);padding:26px 28px}
+  .host-row .jarch{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--strawberry)}
+  .host-row h3{font-family:var(--serif);font-size:30px;margin:8px 0 8px}
+  .host-row .tg{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--offwhite);margin-bottom:10px}
+  .host-row p{font-size:14px;color:var(--dim);max-width:70ch}
+  .jnote{margin-top:30px;font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.5vw,22px);color:var(--dim);text-align:center;max-width:46ch;margin-left:auto;margin-right:auto}
+  .jnote b{color:var(--offwhite);font-style:normal;font-weight:400}
+
+  /* DÉROULÉ */
+  .arc{border-top:1px solid #d3ccbd}
+  .beat{display:grid;grid-template-columns:54px 230px 1fr;gap:24px;align-items:baseline;padding:18px 4px;border-bottom:1px solid #d3ccbd}
+  .beat .bi{font-family:var(--mono);font-size:12px;color:var(--strawberry)}
+  .beat .bn{font-family:var(--serif);font-size:23px;line-height:1.05;color:var(--ink)}
+  .beat .bn small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8a8478;margin-top:5px}
+  .beat .bd{font-size:13.5px;color:#4f4a40}
+
+  /* ENJEUX / INTERACTIVITÉ */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(239,235,226,.08);border:1px solid rgba(239,235,226,.08)}
+  .colc{background:var(--obsidian-2);padding:30px 28px}
+  .colc h4{font-family:var(--serif);font-size:26px;margin-bottom:6px} .colc .kk{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--strawberry);margin-bottom:16px}
+  .colc ul{list-style:none} .colc li{font-size:14px;color:var(--dim);padding:11px 0 11px 22px;position:relative;border-bottom:1px solid rgba(239,235,226,.06)}
+  .colc li:last-child{border-bottom:0} .colc li b{color:var(--offwhite);font-weight:500} .colc li::before{content:"›";position:absolute;left:0;color:var(--strawberry)}
+
+  /* STATS */
+  .datarow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .statcard{background:var(--obsidian-3);border:1px solid rgba(239,235,226,.1);padding:20px}
+  .statcard .sk{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
+  .statcard .sv{font-family:var(--serif);font-size:32px;line-height:1;margin:8px 0 4px}
+  .statcard .ss{font-family:var(--mono);font-size:9px;color:var(--strawberry);letter-spacing:.06em}
+  .statcard.blue .sv{color:var(--blue)} .statcard.gold .sv{color:var(--gold)}
 
   .canon{background:linear-gradient(180deg,#0c0a06,#08080a)}
   .canon .ctable{border-top:1px solid rgba(183,145,82,.22)}
@@ -144,25 +183,6 @@
   .crow .cw{font-family:var(--serif);font-size:clamp(20px,2.8vw,28px);color:var(--offwhite)}
   .crow .cw small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--dim);margin-top:5px;font-weight:300}
   .crow .cy{font-family:var(--mono);font-size:11px;color:var(--gold)}
-
-  .arc{border-top:1px solid #d3ccbd}
-  .beat{display:grid;grid-template-columns:54px 230px 1fr;gap:24px;align-items:baseline;padding:20px 4px;border-bottom:1px solid #d3ccbd}
-  .beat .bi{font-family:var(--mono);font-size:12px;color:var(--strawberry)}
-  .beat .bn{font-family:var(--serif);font-size:24px;line-height:1.05;color:var(--ink)}
-  .beat .bn small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8a8478;margin-top:5px}
-  .beat .bd{font-size:13.5px;color:#4f4a40}
-
-  /* JURY portraits */
-  .jgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .jcard{background:var(--obsidian-2);border:1px solid rgba(239,235,226,.08);overflow:hidden}
-  .jcard .portrait{aspect-ratio:4/5;position:relative;display:flex;align-items:flex-end}
-  .jcard .portrait .pg{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(8,8,10,.85));z-index:1}
-  .jcard .jbody{padding:20px}
-  .jcard .jarch{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--strawberry)}
-  .jcard h3{font-family:var(--serif);font-size:26px;margin:8px 0 8px;line-height:1}
-  .jcard p{font-size:13px;color:var(--dim);line-height:1.5}
-  .jnote{margin-top:34px;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,23px);color:var(--dim);text-align:center;max-width:44ch;margin-left:auto;margin-right:auto}
-  .jnote b{color:var(--offwhite);font-style:normal;font-weight:400}
 
   .salon{background:linear-gradient(150deg,#14080a,#08080a);text-align:center}
   .salon .si{max-width:680px;margin:0 auto}
@@ -189,11 +209,11 @@
   @media (max-width:900px){
     nav .links{display:none} nav .links.open{display:flex;position:absolute;top:100%;right:0;left:0;flex-direction:column;gap:18px;background:rgba(8,8,10,.96);padding:24px 30px}
     nav .burger{display:block}
-    .feat{grid-template-columns:1fr;gap:28px} .epgrid{grid-template-columns:1fr 1fr} .jgrid{grid-template-columns:1fr 1fr}
-    .scale{grid-template-columns:1fr 1fr} .beat{grid-template-columns:40px 1fr;gap:10px}.beat .bd{grid-column:2}
+    .feat{grid-template-columns:1fr;gap:28px} .epgrid{grid-template-columns:1fr 1fr} .band{grid-template-columns:1fr 1fr}
+    .cols{grid-template-columns:1fr} .datarow{grid-template-columns:1fr 1fr} .beat{grid-template-columns:40px 1fr;gap:10px}.beat .bd{grid-column:2}
     .salon .form{flex-direction:column} .mani .tri{flex-direction:column}.mani .tri div{border-right:0;border-bottom:1px solid rgba(239,235,226,.08)}.mani .tri div:last-child{border-bottom:0}
   }
-  @media (max-width:560px){.epgrid,.jgrid{grid-template-columns:1fr}}
+  @media (max-width:560px){.epgrid,.band{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .ov,.hero .wm,.hero .bl,.hero .cue{opacity:1;transform:none}}
 </style>
 </head>
@@ -211,9 +231,9 @@
   <button class="burger" id="burger">Menu</button>
   <div class="links" id="links">
     <a href="#seances">Les Séances</a>
-    <a href="#note">La Note</a>
+    <a href="#bande">La Bande</a>
+    <a href="#emission">L'Émission</a>
     <a href="#canon">Le Canon</a>
-    <a href="#jury">La Bande</a>
     <a href="#salon" class="cta">Le Club</a>
   </div>
 </nav>
@@ -221,30 +241,30 @@
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <svg id="heroIris" viewBox="-110 -110 220 220" aria-label="OPSIS — cliquer pour fermer l'œil"></svg>
-  <div class="ov" id="ov">L'émission</div>
+  <div class="ov" id="ov">Le talk-show</div>
   <div class="wm" id="wm">La Séance</div>
-  <div class="bl" id="bl">On regarde tout. On vous dit tout.</div>
+  <div class="bl" id="bl">On s'amuse. Mais on sait de quoi on parle.</div>
   <a class="cue" id="cue" href="#derniere"><span class="pl">▶</span> Voir la dernière Séance</a>
 </header>
 
 <main>
 
 <!-- ============ PITCH ============ -->
-<!-- ÉDITER : le pitch de l'émission -->
+<!-- ÉDITER : le pitch -->
 <section class="blk salle" id="principe">
   <div class="wrap mani rv">
-    <div class="big">On aime trop le ciné<br>pour <em>fermer les yeux.</em></div>
-    <p class="sub">À chaque grande sortie, film ou série, on fait une Séance : la review pour savoir si ça vaut le coup, l'analyse qui rentre dans les détails, le débat qui part en vrille. <b>On dit quand c'est nul. On dit quand c'est immense. Et on assume.</b> Pas pour donner des leçons — pour partager ça avec ceux qui aiment ça autant que nous.</p>
+    <div class="big">Le talk-show qui prend<br>le ciné <em>au sérieux</em>. Sans se prendre au sérieux.</div>
+    <p class="sub">À chaque grande sortie, film ou série, on se réunit sur le plateau. Chacun balance son avis et sa note sur 10, le débat s'enflamme sur les désaccords, on décortique pour de vrai — technique, sens, ressenti, chiffres — et on tranche. <b>Des vannes, des enjeux, des invités, et une vraie analyse derrière.</b></p>
     <div class="tri">
       <div><div class="tk">La Review</div><div class="tv">ça vaut le coup ?</div></div>
-      <div><div class="tk">L'Analyse</div><div class="tv">on rentre dedans</div></div>
-      <div><div class="tk">Le Débat</div><div class="tv">et on tranche</div></div>
+      <div><div class="tk">Le Débat</div><div class="tv">ça part en vrille</div></div>
+      <div><div class="tk">L'Analyse</div><div class="tv">et on tranche</div></div>
     </div>
   </div>
 </section>
 
 <!-- ============ DERNIÈRE SÉANCE ============ -->
-<!-- ÉDITER : remplacer le style="background-image" du .player par le still de l'épisode, et supprimer le .phl -->
+<!-- ÉDITER : still de l'épisode via background-image sur .player, brancher la vidéo -->
 <section class="blk salle" id="derniere">
   <div class="wrap">
     <div class="sec-head rv">
@@ -258,16 +278,16 @@
         <div class="tcr">TC 00:00:00:00</div>
         <div class="play"><svg viewBox="0 0 24 24" fill="#EFEBE2"><path d="M5 3l16 9-16 9z"/></svg></div>
         <div class="ptitle"><div class="pk">Séance 01</div><div class="pv">On a vu le film de la semaine</div></div>
-        <div class="pv-stamp">Tenable</div>
+        <div class="pv-note"><div class="n">7,1<small>/10</small></div><div class="l">Note du plateau</div></div>
       </div>
       <div class="finfo">
-        <div class="fk">Séance 01 — la review + l'analyse</div>
+        <div class="fk">Séance 01 — le talk-show</div>
         <h3>On a vu le film de la semaine.</h3>
         <div class="meta">
           <div class="mk">La sortie</div><div class="mv"><b>Le blockbuster de la semaine</b></div>
-          <div class="mk">Au programme</div><div class="mv">Review sans spoilers · décryptage · débat</div>
-          <div class="mk">La question</div><div class="mv">Est-ce qu'un carton peut être un grand film ?</div>
-          <div class="mk">Verdict</div><div class="mv"><span class="vstamp">Tenable</span></div>
+          <div class="mk">Le plateau</div><div class="mv">4 chroniqueurs + un invité réalisateur</div>
+          <div class="mk">Le clash</div><div class="mv">La technique sauve-t-elle un scénario creux ?</div>
+          <div class="mk">Verdict</div><div class="mv"><span class="vstamp">Tenable · 7,1/10</span></div>
         </div>
         <a class="watch" href="#" id="watch"><span>▶</span> Regarder la Séance</a>
       </div>
@@ -275,32 +295,36 @@
   </div>
 </section>
 
-<!-- ============ FULL-BLEED VOIX ============ -->
-<!-- ÉDITER : mettre un still en fond via style="background-image" sur .vbg -->
+<!-- ============ LE TOUR DE TABLE (bug des notes) ============ -->
 <section class="voice">
-  <div class="vbg ph" style="background-image:none"></div>
-  <div class="lbb t"></div><div class="lbb b"></div>
   <div class="inner rv">
-    <div class="qk">Le Verdict · Séance 01</div>
-    <div class="q">« Deux heures d'effets spéciaux pour dire ce qu'un court-métrage aurait dit en dix minutes. »</div>
-    <div class="a">Verdict rendu — <b>Tenable</b> · ça se regarde, ça ne se retient pas</div>
+    <div class="qk">Le tour de table · Séance 01</div>
+    <div class="bug">
+      <div class="nrow"><span class="who">L'Œil technique</span><div class="bar"><i style="width:85%"></i></div><span class="val">8,5</span></div>
+      <div class="nrow"><span class="who">Le Sens</span><div class="bar"><i style="width:60%"></i></div><span class="val">6,0</span></div>
+      <div class="nrow"><span class="who">Le Ressenti</span><div class="bar"><i style="width:90%"></i></div><span class="val">9,0</span></div>
+      <div class="nrow"><span class="who">Le Baromètre</span><div class="bar"><i style="width:50%"></i></div><span class="val">5,0</span></div>
+      <div class="nrow"><span class="who" style="color:var(--blue)">Le public</span><div class="bar"><i class="blue" style="width:78%"></i></div><span class="val" style="color:var(--blue)">7,8</span></div>
+      <div class="avg"><span class="l">Note du plateau</span><span class="v">7,1</span></div>
+    </div>
+    <div class="q">Quatre points d'écart entre eux. Autant dire que le débat a été chaud.</div>
   </div>
 </section>
 
 <!-- ============ LES SÉANCES ============ -->
-<!-- ÉDITER : une carte = un épisode. Remplacer background-image du .thumb par la vignette, supprimer le .phl. -->
+<!-- ÉDITER : une carte = un épisode. Vignette via background-image sur .thumb. -->
 <section class="blk salle" id="seances">
   <div class="wrap">
     <div class="sec-head rv">
       <div class="reg"><span class="num">I</span><span>—</span><span class="nm">Les Séances</span></div>
-      <h2>Toutes les sorties, décryptées.</h2>
-      <p class="lede">Une nouvelle Séance à chaque grande sortie ciné ou série. On regarde, on analyse, on débat — et on garde une trace.</p>
+      <h2>Toutes les sorties, débattues.</h2>
+      <p class="lede">Une nouvelle Séance à chaque grande sortie ciné ou série. La note du plateau, le débat, l'analyse — tout est là.</p>
     </div>
     <div class="epgrid rv">
       <article class="epcard live">
         <div class="thumb ph" style="background-image:none"><span class="phl">Vignette 16:9</span>
           <div class="play-s"><svg viewBox="0 0 24 24" fill="#EFEBE2"><path d="M5 3l16 9-16 9z"/></svg></div>
-          <span class="tstamp live">Verdict · Tenable</span>
+          <span class="tnote">7,1<small>/10</small></span>
         </div>
         <div class="ebody">
           <div class="et"><span class="en">Séance 01</span><span class="ed">En ligne</span></div>
@@ -310,7 +334,7 @@
       </article>
       <article class="epcard">
         <div class="thumb ph" style="background-image:none"><span class="phl">Vignette 16:9</span>
-          <span class="tstamp soon">Cette semaine</span>
+          <span class="tsoon">Cette semaine</span>
         </div>
         <div class="ebody">
           <div class="et"><span class="en">Séance 02</span><span class="ed soon">Bientôt</span></div>
@@ -320,7 +344,7 @@
       </article>
       <article class="epcard">
         <div class="thumb ph" style="background-image:none"><span class="phl">Vignette 16:9</span>
-          <span class="tstamp soon">À venir</span>
+          <span class="tsoon">À venir</span>
         </div>
         <div class="ebody">
           <div class="et"><span class="en">Séance 03</span><span class="ed soon">Bientôt</span></div>
@@ -332,91 +356,118 @@
   </div>
 </section>
 
-<!-- ============ LA NOTE (l'échelle) ============ -->
-<section class="blk salle" id="note">
+<!-- ============ LA BANDE ============ -->
+<!-- ÉDITER : personas à personnaliser (noms + punchlines). Photos via background-image sur .portrait. -->
+<section class="blk salle" id="bande">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="reg"><span class="num">II</span><span>—</span><span class="nm">La note</span></div>
-      <h2>Comment on juge.</h2>
-      <p class="lede">Cinq crans, de l'imposture au chef-d'œuvre. Plus l'œil s'ouvre, plus ça nous a marqués. Le sommet — le Canon — est réservé aux vrais coups de cœur.</p>
+      <div class="reg"><span class="num">II</span><span>—</span><span class="nm">La bande</span></div>
+      <h2>Quatre regards qui ne se ressemblent pas.</h2>
+      <p class="lede">Des chroniqueurs complémentaires, un par angle. Ensemble ils couvrent tout — et c'est quand ils ne sont pas d'accord que ça devient bon.</p>
     </div>
-    <div class="scale rv">
-      <div class="stier canon"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#B79152" stroke-width="9"/><circle r="14" fill="#B79152"/></svg><div class="sl">Canon</div><div class="sd">le chef-d'œuvre, direction le panthéon</div></div>
-      <div class="stier"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#EFEBE2" stroke-width="9"/><circle r="40" fill="none" stroke="#EFEBE2" stroke-width="9"/></svg><div class="sl">Majeur</div><div class="sd">une réussite, à voir sans hésiter</div></div>
-      <div class="stier"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#B7B2A8" stroke-width="9"/><circle r="52" fill="none" stroke="#B7B2A8" stroke-width="9"/></svg><div class="sl">Tenable</div><div class="sd">ça se regarde, sans plus</div></div>
-      <div class="stier"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#6E6A63" stroke-width="9"/><circle r="74" fill="none" stroke="#6E6A63" stroke-width="9"/></svg><div class="sl">Mineur</div><div class="sd">tu peux passer ton chemin</div></div>
-      <div class="stier impo"><svg class="sap" viewBox="-110 -110 220 220"><circle r="100" fill="none" stroke="#A8141A" stroke-width="9"/><line x1="-44" y1="-44" x2="44" y2="44" stroke="#A8141A" stroke-width="9"/><line x1="44" y1="-44" x2="-44" y2="44" stroke="#A8141A" stroke-width="9"/></svg><div class="sl">Imposture</div><div class="sd">on s'est fait avoir</div></div>
+    <div class="host-row rv">
+      <div class="jarch">Le présentateur — toi</div>
+      <h3>Le chef d'orchestre</h3>
+      <div class="tg">Il présente, distribue la parole, arbitre — et tient les enjeux.</div>
+      <p>Il lance la Séance, donne le tempo, provoque les frictions, garde le fil. Il n'impose pas son avis : il fait parler la bande et monte la tension. Le maître du jeu.</p>
+    </div>
+    <div class="band rv">
+      <div class="bcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="axtag">Technique</span><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">L'Œil technique</div><h3>Comment c'est fait</h3><p>Réalisation, image, montage, son. Le cinéphile du geste, qui voit le travail derrière l'écran.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="axtag">Fond</span><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">Le Sens</div><h3>Ce que ça raconte</h3><p>Thèmes, propos, sous-texte. Celui qui cherche ce que l'œuvre dit vraiment, au-delà de l'histoire.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="axtag">Ressenti</span><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">Le Ressenti</div><h3>Ce que ça fait</h3><p>Émotion, plaisir, expérience. La voix du public : est-ce qu'on a vibré, ri, décroché ?</p></div>
+      </div>
+      <div class="bcard">
+        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="axtag">Réception</span><span class="phl">Portrait</span></div>
+        <div class="jbody"><div class="jarch">Le Baromètre</div><h3>Ce que ça pèse</h3><p>Box-office, critique, buzz, contexte. Le connaisseur de l'industrie, qui amène la data.</p></div>
+      </div>
+    </div>
+    <p class="jnote rv">Et l'<b>invité</b> du jour — réalisateur, monteur, critique — apporte le savoir d'un vrai spécialiste, et peut renverser la table.</p>
+  </div>
+</section>
+
+<!-- ============ L'ÉMISSION (déroulé) ============ -->
+<section class="blk revue" id="emission">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="reg"><span class="num">III</span><span>—</span><span class="nm">L'émission</span></div>
+      <h2>Comment se déroule une Séance.</h2>
+      <p class="lede">Du chaud au tranché. On commence par l'instinct, on ouvre la bagarre, on creuse pour de vrai, puis on tranche.</p>
+    </div>
+    <div class="arc rv">
+      <div class="beat"><span class="bi">00</span><div class="bn">L'accroche<small>l'ouverture</small></div><div class="bd">La sortie du jour, l'invité, l'enjeu. Direct, sans cérémonie.</div></div>
+      <div class="beat"><span class="bi">01</span><div class="bn">Le tour de table<small>à chaud · note /10</small></div><div class="bd">Chacun 30 secondes : son avis brut et sa note sur 10. Le tableau s'affiche, les écarts sautent aux yeux.</div></div>
+      <div class="beat"><span class="bi">02</span><div class="bn">Les points de friction<small>le débat</small></div><div class="bd">On pointe les plus gros désaccords et on lance les joutes. Ça monte, ça se répond, on distribue la parole.</div></div>
+      <div class="beat"><span class="bi">03</span><div class="bn">L'analyse en profondeur<small>les 4 axes</small></div><div class="bd">Technique, sens, ressenti, réception : chacun mène son angle, extraits et stats à l'appui. Contradiction obligatoire.</div></div>
+      <div class="beat"><span class="bi">04</span><div class="bn">L'expert<small>l'invité</small></div><div class="bd">L'invité tranche un débat, apporte son savoir, ou casse un consensus.</div></div>
+      <div class="beat"><span class="bi">05</span><div class="bn">L'interactivité<small>le public</small></div><div class="bd">La note du public face à celle du plateau. Questions et sondages en direct.</div></div>
+      <div class="beat"><span class="bi">06</span><div class="bn">Le verdict<small>la note finale</small></div><div class="bd">La note collective tombe. Et si c'est un chef-d'œuvre : direction le Canon.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LE JEU + LE PUBLIC ============ -->
+<section class="blk salle" id="jeu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="reg"><span class="num">IV</span><span>—</span><span class="nm">Le jeu & le public</span></div>
+      <h2>Des enjeux, et un cinquième juré.</h2>
+      <p class="lede">Ce qui rend une émission addictive : des stakes qui courent sur la saison, et un public qui vote vraiment.</p>
+    </div>
+    <div class="cols rv">
+      <div class="colc">
+        <div class="kk">Les enjeux de la saison</div>
+        <ul>
+          <li><b>Le classement des goûts</b> — qui avait raison ? On suit les notes de chacun.</li>
+          <li><b>Les paris</b> — box-office, récompenses : on prédit, on vérifie, on marque des points.</li>
+          <li><b>La défense impossible</b> — défendre une note qu'on ne partage pas.</li>
+          <li><b>Le duel</b> — les deux plus opposés s'affrontent, le public tranche.</li>
+        </ul>
+      </div>
+      <div class="colc">
+        <div class="kk">Le public au cœur</div>
+        <ul>
+          <li><b>La note du public</b> — les spectateurs votent leur /10, affiché face au plateau.</li>
+          <li><b>Les questions live</b> — on répond aux meilleures en direct.</li>
+          <li><b>Le choix de la sortie</b> — le public vote le film de la prochaine Séance.</li>
+          <li><b>Le juré invité</b> — un spectateur rejoint parfois le plateau.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rv" style="margin-top:28px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);margin-bottom:8px">La fiche de la sortie — à l'écran pendant l'analyse</div>
+      <div class="datarow">
+        <div class="statcard"><div class="sk">Budget</div><div class="sv">200 M$</div><div class="ss">production</div></div>
+        <div class="statcard"><div class="sk">Box-office</div><div class="sv">540 M$</div><div class="ss">mondial · J+10</div></div>
+        <div class="statcard blue"><div class="sk">Durée</div><div class="sv">2h28</div><div class="ss">trop long ?</div></div>
+        <div class="statcard gold"><div class="sk">Note plateau</div><div class="sv">7,1</div><div class="ss">vs public 7,8</div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ LE CANON ============ -->
-<!-- ÉDITER : REMPLACE ces films par TES classiques à toi. Ce sont des exemples pour montrer ta gamme. -->
+<!-- ÉDITER : remplace par TES classiques -->
 <section class="blk salle canon" id="canon">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="reg"><span class="num">III</span><span>—</span><span class="nm" style="color:var(--gold)">Le Canon</span></div>
+      <div class="reg"><span class="num">V</span><span>—</span><span class="nm" style="color:var(--gold)">Le Canon</span></div>
       <h2>Celles qu'on n'oubliera pas.</h2>
-      <p class="lede">Notre hall of fame. Les œuvres qui décrochent la note maximale en Séance. Tous genres, toutes époques — le seul critère, c'est que ça nous ait retournés.</p>
+      <p class="lede">Notre hall of fame. Les œuvres qui décrochent la meilleure note du plateau. Tous genres, toutes époques — le seul critère, c'est que ça nous ait retournés.</p>
     </div>
     <div class="ctable rv">
-      <div class="crow"><span class="cidx">01</span><span class="cw">Mulholland Drive<small>Le cauchemar éveillé qui a redéfini ce qu'un film peut cacher.</small></span><span class="cy">2001</span></div>
-      <div class="crow"><span class="cidx">02</span><span class="cw">Le Voyage de Chihiro<small>La preuve qu'un « film pour enfants » peut être un sommet absolu.</small></span><span class="cy">2001</span></div>
-      <div class="crow"><span class="cidx">03</span><span class="cw">Mad Max : Fury Road<small>Le blockbuster comme art pur — deux heures de mise en scène parfaite.</small></span><span class="cy">2015</span></div>
-      <div class="crow"><span class="cidx">04</span><span class="cw">Parasite<small>Le film qui a mis tout le monde d'accord, sans rien lâcher.</small></span><span class="cy">2019</span></div>
-      <div class="crow"><span class="cidx">05</span><span class="cw">The Wire<small>La série qui a prouvé que la télé pouvait écrire comme les grands romans.</small></span><span class="cy">2002</span></div>
+      <div class="crow"><span class="cidx">01</span><span class="cw">Mad Max : Fury Road<small>Le blockbuster comme art pur — deux heures de mise en scène parfaite.</small></span><span class="cy">9,4</span></div>
+      <div class="crow"><span class="cidx">02</span><span class="cw">Parasite<small>Le film qui a mis tout le monde d'accord, sans rien lâcher.</small></span><span class="cy">9,3</span></div>
+      <div class="crow"><span class="cidx">03</span><span class="cw">Le Voyage de Chihiro<small>La preuve qu'un « film pour enfants » peut être un sommet absolu.</small></span><span class="cy">9,2</span></div>
+      <div class="crow"><span class="cidx">04</span><span class="cw">The Wire<small>La série qui écrivait comme les grands romans.</small></span><span class="cy">9,1</span></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ L'ÉMISSION (déroulé) ============ -->
-<section class="blk revue" id="format">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="reg"><span class="num">IV</span><span>—</span><span class="nm">L'émission</span></div>
-      <h2>À quoi ressemble une Séance.</h2>
-      <p class="lede">Toujours le même déroulé, pour que vous sachiez où vous mettez les pieds. La review d'abord — sans spoilers — pour ceux qui n'ont pas encore vu.</p>
-    </div>
-    <div class="arc rv">
-      <div class="beat"><span class="bi">00</span><div class="bn">L'Ouverture<small>l'accroche</small></div><div class="bd">L'iris s'ouvre. On annonce la sortie du jour et l'invité. C'est parti.</div></div>
-      <div class="beat"><span class="bi">01</span><div class="bn">La Review<small>sans spoilers</small></div><div class="bd">L'essentiel d'abord : c'est quoi, ça vaut le coup, pour qui. Vous pouvez regarder même sans avoir vu le film.</div></div>
-      <div class="beat"><span class="bi">02</span><div class="bn">Le Décryptage<small>avec spoilers · on prévient</small></div><div class="bd">On rentre dedans : la mise en scène, le scénario, les thèmes, les références. L'analyse pour ceux qui ont vu.</div></div>
-      <div class="beat"><span class="bi">03</span><div class="bn">Le Débat<small>ça chauffe</small></div><div class="bd">Le jury s'affronte. On n'est jamais d'accord, et c'est tout l'intérêt.</div></div>
-      <div class="beat"><span class="bi">04</span><div class="bn">Le Procès<small>la grande question</small></div><div class="bd">La sortie soulève un vrai débat de fond. Deux camps, on tranche pour de bon.</div></div>
-      <div class="beat"><span class="bi">05</span><div class="bn">Le Verdict<small>la note</small></div><div class="bd">On donne notre note. Et si c'est un chef-d'œuvre : direction le Canon.</div></div>
-      <div class="beat"><span class="bi">06</span><div class="bn">La Clôture<small>la suite</small></div><div class="bd">La prochaine sortie qu'on attend. L'iris se referme.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LA BANDE ============ -->
-<!-- ÉDITER : personas à personnaliser (noms + punchlines). Remplacer background-image des .portrait par les vraies photos, supprimer les .phl. -->
-<section class="blk salle" id="jury">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="reg"><span class="num">V</span><span>—</span><span class="nm">La bande</span></div>
-      <h2>Ceux qui débattent.</h2>
-      <p class="lede">Tout repose sur la chimie de l'équipe. Chacun ses goûts, ses obsessions, ses angles morts — et c'est quand on n'est pas d'accord que ça devient bon.</p>
-    </div>
-    <div class="jgrid rv">
-      <div class="jcard">
-        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
-        <div class="jbody"><div class="jarch">L'hôte</div><h3>Le Président</h3><p>Il lance, il relance, il tranche. Un avis sur tout — souvent le bon, jamais tiède.</p></div>
-      </div>
-      <div class="jcard">
-        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
-        <div class="jbody"><div class="jarch">La voix pop</div><h3>[Prénom]</h3><p>Défend le grand public, les blockbusters et les plaisirs coupables. Et il n'a pas tort.</p></div>
-      </div>
-      <div class="jcard">
-        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
-        <div class="jbody"><div class="jarch">Le puriste</div><h3>[Prénom]</h3><p>Ne jure que par le cinéma d'auteur et les plans-séquences. Insupportable et souvent brillant.</p></div>
-      </div>
-      <div class="jcard">
-        <div class="portrait ph" style="background-image:none"><div class="pg"></div><span class="phl">Portrait</span></div>
-        <div class="jbody"><div class="jarch">Le trouble-fête</div><h3>[Prénom]</h3><p>Adore avoir tort, provoque, allume le débat. Le grain de sable qui fait tout basculer.</p></div>
-      </div>
-    </div>
-    <p class="jnote rv">Une règle, une seule : on juge <b>l'œuvre</b>, jamais les gens. On peut détester un film sans détester ceux qui l'ont fait.</p>
   </div>
 </section>
 
@@ -427,11 +478,11 @@
     <h2>On regarde ça ensemble.</h2>
     <p>Rejoignez la bande — pas pour payer un abonnement de plus, pour faire partie de l'émission.</p>
     <ul class="perks">
-      <li><b>Choisissez la sortie de la prochaine Séance</b> — vous votez ce qu'on décortique ensuite.</li>
-      <li><b>Votez la question du Procès</b> — vous décidez de quoi on va s'engueuler.</li>
-      <li><b>Les Séances en avant-première</b>, et l'accès aux tournages.</li>
+      <li><b>Votez votre note /10</b> — elle s'affiche face à celle du plateau.</li>
+      <li><b>Choisissez la sortie de la prochaine Séance</b> — vous décidez ce qu'on décortique.</li>
+      <li><b>Posez vos questions</b> — les meilleures passent à l'antenne.</li>
     </ul>
-    <!-- ÉDITER : brancher à votre outil d'emailing (Substack, Mailchimp, Beehiiv…) -->
+    <!-- ÉDITER : brancher à votre outil d'emailing -->
     <div class="form">
       <input id="email" type="email" placeholder="Votre adresse — rejoindre la bande">
       <button id="join">Rejoindre</button>
@@ -446,7 +497,7 @@
 <footer>
   <div class="wrap">
     <svg id="footIris" viewBox="-110 -110 220 220"></svg>
-    <div class="fw">OPSIS <small>La Séance · reviews, analyses & débats</small></div>
+    <div class="fw">OPSIS <small>La Séance · le talk-show</small></div>
     <!-- ÉDITER : liens vers vos chaînes -->
     <div class="where">
       <a href="#">▶ YouTube</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#salon">Newsletter</a>
