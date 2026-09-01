@@ -8,7 +8,15 @@
 <meta name="theme-color" content="#08080A">
 <link rel="canonical" href="https://opsis.media/">
 
-<!-- Partage social — remplacer l'URL absolue de og:image par votre visuel 1200x630 -->
+<!-- FAVICONS — fichiers réels, seule méthode fiable pour Safari.
+     Ils doivent être déposés à la racine du site, à côté de index.html. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#A8141A">
+
+<!-- Partage social — remplacer og:image par votre visuel 1200x630 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OPSIS">
 <meta property="og:locale" content="fr_FR">
@@ -23,19 +31,17 @@
 <meta name="twitter:description" content="Toutes les œuvres ne méritent pas votre temps. OPSIS vous aide à choisir.">
 <meta name="twitter:image" content="https://opsis.media/og.jpg">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-110 -110 220 220'%3E%3Crect x='-110' y='-110' width='220' height='220' fill='%2308080A'/%3E%3Ccircle r='84' fill='none' stroke='%23A8141A' stroke-width='14'/%3E%3Ccircle r='26' fill='%23A8141A'/%3E%3C/svg%3E">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Organization",
   "name":"OPSIS",
-  "alternateName":"OPSIS Media",
   "url":"https://opsis.media/",
+  "logo":"https://opsis.media/favicon-512.png",
   "description":"Média dédié au cinéma et à l'audiovisuel. OPSIS aide son public à choisir les œuvres qui méritent son attention et à prolonger l'expérience après le visionnage.",
   "slogan":"Le cinéma qui mérite votre temps."
 }
@@ -43,238 +49,248 @@
 
 <style>
   :root{
-    --obsidian:#08080A;--obsidian-2:#101013;--strawberry:#A8141A;--straw-bright:#C8202A;
-    --offwhite:#EFEBE2;--text:#CDC8BE;--dim:#B2ADA3;--ash:#837E75;--gold:#B79152;--blue:#4A7BB5;
-    --line:rgba(239,235,226,.12);
-    --serif:'Cormorant Garamond',Georgia,serif;--sans:'Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
+    --obsidian:#08080A;--obsidian-2:#101013;
+    --red:#A8141A;                /* rouge de marque — graphique uniquement */
+    --red-bright:#C8202A;
+    --red-type:#E2454C;           /* rouge de lecture — typographie sur fond noir */
+    --offwhite:#F2EFE8;--text:#D6D1C7;--dim:#B9B4AA;--ash:#8B8579;
+    --gold:#C6A063;--gold-deep:#B79152;--blue:#5E92CE;
+    --line:rgba(242,239,232,.13);
+    --display:'Newsreader',Georgia,'Times New Roman',serif;
+    --sans:'Barlow',system-ui,-apple-system,sans-serif;
+    --mono:'DM Mono',ui-monospace,'SFMono-Regular',monospace;
     --lb:clamp(20px,3.6vh,46px);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--obsidian);color:var(--offwhite);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--obsidian);color:var(--offwhite);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-  /* ---------- fond WebGL : l'iris à 5 lamelles ---------- */
   #webgl{position:fixed;inset:0;z-index:0;display:block}
   .fallbackbg{position:fixed;inset:0;z-index:0;background:radial-gradient(58% 58% at 50% 42%,rgba(168,20,26,.18),#0a0a0c 70%),var(--obsidian);display:none}
 
-  /* ---------- couches de projection ---------- */
-  .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;mix-blend-mode:overlay}
+  .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;mix-blend-mode:overlay}
   .vig{position:fixed;inset:0;z-index:55;pointer-events:none;box-shadow:inset 0 0 240px 70px rgba(0,0,0,.72)}
   .lb{position:fixed;left:0;right:0;height:var(--lb);background:#000;z-index:58;pointer-events:none}
   .lb.t{top:0}.lb.b{bottom:0}
 
-  /* ---------- fil de progression ---------- */
-  .thread{position:fixed;top:0;bottom:0;right:22px;width:1px;background:rgba(239,235,226,.1);z-index:57;pointer-events:none}
-  .thread i{position:absolute;top:0;left:0;right:0;height:0;background:linear-gradient(var(--gold),var(--strawberry))}
-  .threadpct{position:fixed;right:12px;bottom:calc(var(--lb) + 14px);z-index:57;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--ash);pointer-events:none}
+  .thread{position:fixed;top:0;bottom:0;right:22px;width:1px;background:rgba(242,239,232,.1);z-index:57;pointer-events:none}
+  .thread i{position:absolute;top:0;left:0;right:0;height:0;background:linear-gradient(var(--gold),var(--red))}
+  .threadpct{position:fixed;right:12px;bottom:calc(var(--lb) + 14px);z-index:57;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ash);pointer-events:none}
 
-  /* ---------- navigation ---------- */
-  nav{position:fixed;top:var(--lb);left:0;right:0;z-index:59;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;transition:opacity .4s,transform .4s;background:linear-gradient(180deg,rgba(8,8,10,.75),transparent)}
+  nav{position:fixed;top:var(--lb);left:0;right:0;z-index:59;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;transition:opacity .4s,transform .4s;background:linear-gradient(180deg,rgba(8,8,10,.8),transparent)}
   nav.hide{opacity:0;pointer-events:none;transform:translateY(-10px)}
-  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;letter-spacing:.16em}
+  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:500;font-size:23px;letter-spacing:.2em}
   nav .brand svg{width:21px;height:21px;flex:none}
-  nav .brand .sub{font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--ash);text-transform:uppercase;margin-left:-4px}
-  nav .cta{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(239,235,226,.28);padding:11px 17px;transition:.3s;white-space:nowrap}
-  nav .cta:hover,nav .cta:focus-visible{border-color:var(--strawberry);color:var(--straw-bright)}
+  nav .cta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(242,239,232,.3);padding:11px 17px;transition:.3s;white-space:nowrap}
+  nav .cta:hover,nav .cta:focus-visible{border-color:var(--red-type);color:var(--red-type)}
 
   main{position:relative;z-index:10}
 
-  /* ---------- rythme des actes ---------- */
   .act{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:calc(var(--lb) + 9vh) 26px calc(var(--lb) + 9vh);position:relative}
-  .act.short{min-height:auto;padding-top:16vh;padding-bottom:16vh}
+  .act.short{min-height:auto;padding-top:15vh;padding-bottom:15vh}
   .inner{max-width:920px;width:100%;text-align:center}
   .inner.left{text-align:left}
   .inner.wide{max-width:1120px}
-  .act .veil{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(1180px,98vw);height:min(820px,94vh);background:radial-gradient(closest-side,rgba(8,8,10,.78),rgba(8,8,10,.4) 60%,transparent);z-index:-1;pointer-events:none}
+  .act .veil{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(1180px,98vw);height:min(820px,94vh);background:radial-gradient(closest-side,rgba(8,8,10,.8),rgba(8,8,10,.42) 60%,transparent);z-index:-1;pointer-events:none}
 
   /* ---------- typographie ---------- */
-  .kick{font-family:var(--mono);font-size:clamp(10px,2vw,11px);letter-spacing:.34em;text-transform:uppercase;color:var(--strawberry)}
+  .kick{font-family:var(--mono);font-weight:500;font-size:clamp(11px,2vw,12px);letter-spacing:.3em;text-transform:uppercase;color:var(--red-type)}
   .kick.g{color:var(--gold)}
-  h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,10.5vw,132px);line-height:.9;letter-spacing:.02em;margin-top:16px;text-shadow:0 4px 40px rgba(0,0,0,.65)}
-  .wordmark{font-family:var(--serif);font-weight:300;font-size:clamp(64px,18vw,210px);line-height:.85;letter-spacing:.14em;text-indent:.14em}
-  h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,6.2vw,70px);line-height:1.04;letter-spacing:.005em;text-shadow:0 4px 40px rgba(0,0,0,.6)}
-  h2 em{font-style:italic;color:var(--strawberry)}
+  h1,h2,h3,h4,.wordmark{text-transform:uppercase}
+  h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,7.6vw,96px);line-height:1;letter-spacing:.04em;margin-top:18px}
+  h2{font-family:var(--display);font-weight:500;font-size:clamp(27px,4.8vw,54px);line-height:1.12;letter-spacing:.045em}
+  h2 em{font-style:italic;color:var(--red-type);text-transform:none;letter-spacing:.02em}
   h2 em.g{color:var(--gold)}
-  h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4.2vw,40px);line-height:1.1}
-  .sub{margin-top:20px;font-family:var(--mono);font-size:clamp(10px,2.1vw,13px);letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
-  .lede{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:clamp(21px,3.4vw,34px);line-height:1.35;color:var(--text);max-width:20ch;margin-left:auto;margin-right:auto}
+  h3{font-family:var(--display);font-weight:500;font-size:clamp(20px,3vw,28px);line-height:1.2;letter-spacing:.06em}
+  .wordmark{font-family:var(--display);font-weight:500;font-size:clamp(26px,5vw,60px);line-height:1.1;letter-spacing:.05em}
+  .sub{margin-top:22px;font-family:var(--mono);font-size:clamp(11px,2.1vw,13px);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+  .lede{margin-top:24px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(21px,3.2vw,32px);line-height:1.42;color:var(--text);max-width:22ch;margin-left:auto;margin-right:auto}
   .inner.left .lede{margin-left:0}
-  .p{margin-top:20px;font-size:clamp(15px,2vw,17px);color:var(--text);max-width:58ch;margin-left:auto;margin-right:auto;line-height:1.75}
+  .p{margin-top:22px;font-size:clamp(16px,1.9vw,18px);color:var(--text);max-width:60ch;margin-left:auto;margin-right:auto;line-height:1.75}
   .inner.left .p{margin-left:0}
-  .p b{color:var(--offwhite);font-weight:400}
+  .p b{color:var(--offwhite);font-weight:600}
   .p.tight{max-width:46ch}
 
-  .scrollcue{position:absolute;bottom:calc(var(--lb) + 5vh);left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:10px}
-  .scrollcue .ln{width:1px;height:34px;background:linear-gradient(var(--strawberry),transparent);animation:drop 2.4s ease-in-out infinite}
+  .scrollcue{position:absolute;bottom:calc(var(--lb) + 5vh);left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scrollcue .ln{width:1px;height:34px;background:linear-gradient(var(--red-type),transparent);animation:drop 2.4s ease-in-out infinite}
   @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  /* ---------- panneaux ---------- */
-  .panel{background:rgba(12,12,15,.74);backdrop-filter:blur(7px);border:1px solid var(--line);padding:30px}
-  .plabel{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);margin-bottom:16px}
+  .panel{background:rgba(12,12,15,.76);backdrop-filter:blur(7px);border:1px solid var(--line);padding:30px}
+  .plabel{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-bottom:16px}
 
-  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px;text-align:left}
-  .duo .panel h3{margin:10px 0 12px}
-  .duo .panel p{font-size:15px;color:var(--dim);line-height:1.7}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px;text-align:left}
+  .duo .panel h3{margin:10px 0 14px}
+  .duo .panel p{font-size:16px;color:var(--dim);line-height:1.7}
 
-  /* ---------- iris du Score (SVG interactif) ---------- */
-  .scorewrap{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:44px;align-items:center;margin-top:40px;text-align:left}
-  .irisbox{position:relative;aspect-ratio:1;width:100%}
-  .irisbox svg{width:100%;height:100%;overflow:visible}
-  .blade{fill:#16161b;stroke:rgba(239,235,226,.16);stroke-width:1;transform-box:fill-box;transform-origin:center;transition:fill .35s,stroke .35s}
-  .blade.on{fill:#2a1216;stroke:var(--strawberry)}
-  .irisbox .ring{fill:none;stroke:var(--gold);stroke-width:1.2;opacity:.5}
-  .irisbox .ring2{stroke:var(--strawberry);stroke-width:.8;opacity:.4}
-  .irisctr{font-family:var(--serif);font-size:46px;fill:var(--gold);text-anchor:middle;dominant-baseline:central}
-  .irisctr-l{font-family:var(--mono);font-size:9px;letter-spacing:.2em;fill:var(--ash);text-anchor:middle;text-transform:uppercase}
+  /* ================= LE SCORE OPSIS — section signature ================= */
+  #score{padding-top:calc(var(--lb) + 11vh);padding-bottom:calc(var(--lb) + 11vh)}
+  #score .veil{background:radial-gradient(closest-side,rgba(8,8,10,.92),rgba(8,8,10,.62) 55%,transparent)}
+  .scoreglow{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(880px,120vw);height:min(880px,120vw);z-index:-1;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(168,20,26,.20),rgba(183,145,82,.07) 45%,transparent 72%)}
 
-  .letters{display:flex;flex-direction:column;gap:2px}
-  .lt{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:baseline;padding:15px 12px;border-bottom:1px solid var(--line);background:none;border-left:0;border-right:0;border-top:0;text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%;transition:background .3s}
-  .lt:hover,.lt.on{background:rgba(168,20,26,.08)}
-  .lt .ltr{font-family:var(--serif);font-size:40px;line-height:1;color:var(--ash);transition:color .3s}
-  .lt:hover .ltr,.lt.on .ltr{color:var(--strawberry)}
-  .lt .ltn{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--offwhite)}
-  .lt .ltd{font-size:14px;color:var(--dim);margin-top:6px;line-height:1.55}
-  .lt .ltq{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text);margin-top:8px}
-  .lt.synth .ltr{color:var(--gold)}
-  .lt.synth:hover .ltr,.lt.synth.on .ltr{color:var(--gold)}
-  .lt.synth:hover,.lt.synth.on{background:rgba(183,145,82,.08)}
+  .lens{position:relative;width:min(560px,88vw);margin:44px auto 0;aspect-ratio:1}
+  .lens svg{width:100%;height:100%;overflow:visible;display:block}
+  .barrel{fill:none;stroke:rgba(198,160,99,.55);stroke-width:1}
+  .barrel.inner{stroke:rgba(242,239,232,.14)}
+  .tick{stroke:rgba(242,239,232,.3);stroke-width:1}
+  .tick.major{stroke:var(--gold);stroke-width:1.6}
+  .ticknum{font-family:var(--mono);font-size:11px;fill:var(--ash);text-anchor:middle;dominant-baseline:middle}
+  .needle{stroke:var(--red-type);stroke-width:2;stroke-linecap:round;transition:transform 1s cubic-bezier(.2,.7,.2,1);transform-box:view-box;transform-origin:0px 0px}
+  .blade{fill:#15151b;stroke:rgba(242,239,232,.22);stroke-width:1.2;transform-box:fill-box;transform-origin:center;transition:transform .9s cubic-bezier(.2,.7,.2,1),fill .4s,stroke .4s}
+  .blade.on{fill:#33141a;stroke:var(--red-type);stroke-width:1.8}
+  .ctrval{font-family:var(--display);font-weight:500;font-size:76px;fill:var(--gold);text-anchor:middle;dominant-baseline:central;letter-spacing:.02em}
+  .ctrlab{font-family:var(--mono);font-size:11px;letter-spacing:.24em;fill:var(--ash);text-anchor:middle;text-transform:uppercase}
+  .engrave{font-family:var(--mono);font-size:11px;letter-spacing:.3em;fill:var(--gold);text-anchor:middle;text-transform:uppercase}
 
-  /* ---------- fiche exemple ---------- */
-  .fiche{max-width:600px;margin:38px auto 0;text-align:left}
-  .frow{display:grid;grid-template-columns:120px 1fr 50px;gap:14px;align-items:center;padding:10px 0}
-  .frow .who{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--dim)}
-  .frow .bar{height:6px;background:rgba(239,235,226,.1);position:relative;overflow:hidden}
-  .frow .bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--strawberry);transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+  /* le mot OPSIS devient l'interface */
+  .keys{display:flex;justify-content:center;gap:clamp(4px,2.2vw,22px);margin-top:40px;flex-wrap:nowrap}
+  .key{background:none;border:0;border-bottom:2px solid transparent;padding:6px clamp(6px,2vw,18px) 12px;cursor:pointer;color:var(--ash);
+       font-family:var(--display);font-weight:500;font-size:clamp(38px,9vw,84px);line-height:1;letter-spacing:.04em;
+       transition:color .35s,border-color .35s,transform .35s}
+  .key:hover{color:var(--text);transform:translateY(-3px)}
+  .key.on{color:var(--red-type);border-bottom-color:var(--red-type)}
+  .key.synth.on{color:var(--gold);border-bottom-color:var(--gold)}
+  .keyhint{margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
+
+  .detail{max-width:640px;margin:34px auto 0;text-align:left;min-height:212px}
+  .detail .dname{font-family:var(--display);font-weight:500;font-size:clamp(24px,3.6vw,34px);text-transform:uppercase;letter-spacing:.06em;color:var(--offwhite)}
+  .detail .dq{font-family:var(--display);font-style:italic;font-size:clamp(19px,2.6vw,25px);color:var(--red-type);margin-top:12px;line-height:1.35}
+  .detail .dq.g{color:var(--gold)}
+  .detail .dd{margin-top:14px;font-size:16px;color:var(--dim);line-height:1.7}
+  .detail .dbar{margin-top:22px;display:grid;grid-template-columns:1fr 76px;gap:18px;align-items:center}
+  .detail .dtrack{height:7px;background:rgba(242,239,232,.1);position:relative;overflow:hidden}
+  .detail .dtrack i{position:absolute;inset:0 auto 0 0;width:0;background:var(--red);transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .detail .dtrack i.g{background:var(--gold)}
+  .detail .dval{font-family:var(--display);font-weight:500;font-size:34px;text-align:right;color:var(--offwhite)}
+  .detail.swap{opacity:0;transform:translateY(8px)}
+  .detail{transition:opacity .3s,transform .3s}
+  /* ====================================================================== */
+
+  .fiche{max-width:620px;margin:40px auto 0;text-align:left}
+  .frow{display:grid;grid-template-columns:130px 1fr 52px;gap:14px;align-items:center;padding:10px 0}
+  .frow .who{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--dim)}
+  .frow .bar{height:6px;background:rgba(242,239,232,.1);position:relative;overflow:hidden}
+  .frow .bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--red);transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
   .reveal-bars.in .frow .bar i{width:var(--w)}
-  .frow .val{font-family:var(--serif);font-size:21px;text-align:right}
+  .frow .val{font-family:var(--display);font-weight:500;font-size:22px;text-align:right}
   .fsynth{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
-  .fsynth .l{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-  .fsynth .v{font-family:var(--serif);font-size:52px;color:var(--gold);line-height:1}
+  .fsynth .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .fsynth .v{font-family:var(--display);font-weight:500;font-size:56px;color:var(--gold);line-height:1}
   .fsynth .v small{font-size:20px;color:var(--ash)}
   .fverdict{margin-top:18px;display:flex;align-items:center;gap:12px;border:1px solid var(--gold);padding:15px 18px}
   .fverdict .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none}
-  .fverdict .txt{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-  .ftime{margin-top:14px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .fverdict .txt{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .ftime{margin-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash)}
   .ftime b{color:var(--offwhite);font-weight:500}
-  .legend{margin-top:22px;display:flex;gap:26px;justify-content:center;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
 
-  /* ---------- verdicts ---------- */
-  .vlist{max-width:720px;margin:38px auto 0;text-align:left}
-  .vrow{display:grid;grid-template-columns:14px 210px 1fr;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line)}
+  .vlist{max-width:760px;margin:40px auto 0;text-align:left}
+  .vrow{display:grid;grid-template-columns:14px 220px 1fr;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line)}
   .vrow .d{width:10px;height:10px;border-radius:50%;align-self:center}
-  .vrow .n{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-  .vrow .x{font-size:14px;color:var(--dim);line-height:1.55}
+  .vrow .n{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .vrow .x{font-size:15px;color:var(--dim);line-height:1.6}
 
-  /* ---------- avant / après ---------- */
-  .split{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;margin-top:40px;text-align:left}
+  .split{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:42px;text-align:left}
   .split .rule{background:var(--line)}
-  .split .col{padding:0 34px}
+  .split .col{padding:0 36px}
   .split .col:first-child{padding-left:0}
   .split .col:last-child{padding-right:0}
-  .split h3{margin:14px 0 18px}
   .qlist{list-style:none}
-  .qlist li{padding:9px 0;font-size:15px;color:var(--text);border-bottom:1px solid rgba(239,235,226,.06)}
+  .qlist li{padding:10px 0;font-size:16px;color:var(--text);border-bottom:1px solid rgba(242,239,232,.06)}
   .qlist li:last-child{border-bottom:0}
-  .qlist.italic li{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text)}
+  .qlist.italic li{font-family:var(--display);font-style:italic;font-size:20px}
 
-  /* ---------- anatomie de la fiche ---------- */
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;justify-content:center}
-  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:9px 13px}
-  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;text-align:left}
-  .three .n{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--strawberry)}
-  .three .t{font-family:var(--serif);font-size:23px;margin-top:8px;line-height:1.2}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;justify-content:center}
+  .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:9px 13px}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;text-align:left}
+  .three .n{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.16em;color:var(--red-type)}
+  .three .t{font-family:var(--display);font-weight:400;font-size:23px;margin-top:9px;line-height:1.3}
 
-  /* ---------- formats ---------- */
-  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px;text-align:left}
-  .fmt{background:rgba(12,12,15,.7);backdrop-filter:blur(6px);border:1px solid var(--line);padding:24px 20px;transition:border-color .3s,transform .4s}
-  .fmt:hover{border-color:rgba(168,20,26,.5);transform:translateY(-3px)}
-  .fmt .fk{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--strawberry)}
-  .fmt h4{font-family:var(--serif);font-size:25px;font-weight:400;margin:9px 0 8px}
-  .fmt p{font-size:13px;color:var(--dim);line-height:1.6}
-  .fmt.flag{grid-column:span 3;border-color:rgba(183,145,82,.45);display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;text-align:left}
+  .fmt{background:rgba(12,12,15,.72);backdrop-filter:blur(6px);border:1px solid var(--line);padding:24px 20px;transition:border-color .3s,transform .4s}
+  .fmt:hover{border-color:rgba(226,69,76,.5);transform:translateY(-3px)}
+  .fmt .fk{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-type)}
+  .fmt h4{font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:.05em;margin:10px 0 9px}
+  .fmt p{font-size:14px;color:var(--dim);line-height:1.65}
+  .fmt.flag{grid-column:span 3;border-color:rgba(198,160,99,.45);display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
   .fmt.flag .fk{color:var(--gold)}
-  .fmt.flag h4{font-size:38px}
+  .fmt.flag h4{font-size:36px}
 
-  /* ---------- club : deux scores ---------- */
-  .versus{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center;max-width:660px;margin:40px auto 0}
+  .versus{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center;max-width:680px;margin:42px auto 0}
   .vs{text-align:center;padding:26px 18px;border:1px solid var(--line)}
-  .vs .l{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
-  .vs .n{font-family:var(--serif);font-size:clamp(48px,9vw,76px);line-height:1;margin-top:10px}
+  .vs .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+  .vs .n{font-family:var(--display);font-weight:500;font-size:clamp(48px,9vw,78px);line-height:1;margin-top:10px}
   .vs.opsis .n{color:var(--gold)}
   .vs.public .n{color:var(--blue)}
-  .vsx{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ash)}
+  .vsx{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
 
-  /* ---------- vision : la trajectoire ---------- */
-  .road{margin-top:44px;display:grid;grid-template-columns:repeat(6,1fr);gap:0;text-align:left}
-  .rst{padding:0 14px;border-top:1px solid var(--line);position:relative;padding-top:22px}
+  .road{margin-top:46px;display:grid;grid-template-columns:repeat(6,1fr);text-align:left}
+  .rst{padding:22px 14px 0;border-top:1px solid var(--line);position:relative}
   .rst:before{content:"";position:absolute;top:-4px;left:14px;width:7px;height:7px;border-radius:50%;background:var(--ash)}
-  .rst.now{border-top-color:var(--strawberry)}
-  .rst.now:before{background:var(--strawberry)}
-  .rst .ph{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
-  .rst.now .ph{color:var(--strawberry)}
-  .rst .nm{font-family:var(--serif);font-size:21px;margin-top:7px;line-height:1.15}
+  .rst.now{border-top-color:var(--red)}
+  .rst.now:before{background:var(--red-type)}
+  .rst .ph{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .rst.now .ph{color:var(--red-type)}
+  .rst .nm{font-family:var(--display);font-weight:500;font-size:19px;text-transform:uppercase;letter-spacing:.05em;margin-top:8px;line-height:1.25}
 
-  /* ---------- CTA ---------- */
-  .form{margin:34px auto 0;max-width:520px;display:flex;gap:0;border:1px solid rgba(239,235,226,.28)}
-  .form input{flex:1;min-width:0;background:transparent;border:0;color:var(--offwhite);font-family:var(--mono);font-size:13px;padding:16px 18px}
+  .form{margin:36px auto 0;max-width:540px;display:flex;border:1px solid rgba(242,239,232,.3)}
+  .form input{flex:1;min-width:0;background:transparent;border:0;color:var(--offwhite);font-family:var(--mono);font-size:14px;padding:16px 18px}
   .form input::placeholder{color:var(--ash)}
-  .form input:focus{outline:none;background:rgba(239,235,226,.04)}
-  .form button{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--obsidian);background:var(--strawberry);border:0;padding:16px 24px;cursor:pointer;transition:background .3s;font-weight:500}
-  .form button:hover{background:var(--straw-bright)}
-  .formnote{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ash)}
+  .form input:focus{outline:none;background:rgba(242,239,232,.04)}
+  .form button{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--obsidian);background:var(--red-bright);border:0;padding:16px 24px;cursor:pointer;transition:background .3s}
+  .form button:hover{background:var(--red-type)}
+  .formnote{margin-top:13px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ash)}
   .formnote.ok{color:var(--gold)}
-  .formnote.err{color:var(--straw-bright)}
+  .formnote.err{color:var(--red-type)}
   .where{margin-top:34px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .where a{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);border:1px solid rgba(239,235,226,.18);padding:11px 17px;transition:.3s}
-  .where a:hover{border-color:var(--strawberry);color:var(--straw-bright)}
+  .where a{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);border:1px solid rgba(242,239,232,.2);padding:11px 17px;transition:.3s}
+  .where a:hover{border-color:var(--red-type);color:var(--red-type)}
 
-  footer{position:relative;z-index:10;padding:44px 26px calc(var(--lb) + 34px);border-top:1px solid var(--line);background:rgba(8,8,10,.82);backdrop-filter:blur(7px)}
-  .fin{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
-  .fin .fbrand{font-family:var(--serif);font-size:26px;letter-spacing:.16em;color:var(--offwhite);text-transform:none}
-  .fin a:hover{color:var(--strawberry)}
+  footer{position:relative;z-index:10;padding:46px 26px calc(var(--lb) + 34px);border-top:1px solid var(--line);background:rgba(8,8,10,.84);backdrop-filter:blur(7px)}
+  .fin{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash)}
+  .fin .fbrand{font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:.2em;color:var(--offwhite)}
+  .fin a:hover{color:var(--red-type)}
 
-  /* ---------- reveal ---------- */
-  .rv{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .rv{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
   .rv.in{opacity:1;transform:none}
   .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
 
-  /* ---------- responsive ---------- */
   @media (max-width:900px){
-    .scorewrap{grid-template-columns:1fr;gap:26px}
-    .irisbox{max-width:300px;margin:0 auto}
     .fgrid{grid-template-columns:1fr 1fr}
     .fmt.flag{grid-column:span 2;grid-template-columns:1fr}
-    .road{grid-template-columns:repeat(3,1fr);gap:22px 0}
+    .road{grid-template-columns:repeat(3,1fr);gap:24px 0}
     .three{grid-template-columns:1fr}
+    .ctrval{font-size:60px}
   }
   @media (max-width:680px){
+    body{font-size:16px}
     nav{padding:12px 18px}
-    nav .brand{font-size:19px}
+    nav .brand{font-size:20px}
     .act{padding-left:20px;padding-right:20px}
     .duo{grid-template-columns:1fr}
     .fgrid{grid-template-columns:1fr}
     .fmt.flag{grid-column:span 1}
-    .split{grid-template-columns:1fr;gap:34px}
+    .split{grid-template-columns:1fr;gap:36px}
     .split .rule{height:1px;width:100%}
     .split .col{padding:0}
     .versus{grid-template-columns:1fr;gap:14px}
     .vrow{grid-template-columns:12px 1fr;gap:12px}
     .vrow .x{grid-column:2}
-    .frow{grid-template-columns:96px 1fr 44px}
+    .frow{grid-template-columns:104px 1fr 46px}
     .road{grid-template-columns:1fr 1fr}
     .thread{right:12px}
     .form{flex-direction:column}
     .form button{padding:15px}
-    .lt{grid-template-columns:40px 1fr;gap:12px}
-    .lt .ltr{font-size:32px}
+    .detail{min-height:250px}
+    .ctrval{font-size:54px}
+    .ticknum{font-size:13px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *{animation:none!important}
     .rv{opacity:1;transform:none;transition:none}
-    .fmt:hover{transform:none}
+    .fmt:hover,.key:hover{transform:none}
   }
 </style>
 </head>
@@ -290,8 +306,12 @@
 
 <nav id="nav">
   <a class="brand" href="#top" aria-label="OPSIS, retour en haut">
-    <svg viewBox="-110 -110 220 220" aria-hidden="true"><circle r="100" fill="none" stroke="#A8141A" stroke-width="7"/><circle r="42" fill="none" stroke="#EFEBE2" stroke-width="7"/><circle r="14" fill="#A8141A"/></svg>
-    OPSIS <span class="sub">Media</span>
+    <svg viewBox="-110 -110 220 220" aria-hidden="true">
+      <circle r="100" fill="none" stroke="#A8141A" stroke-width="9"/>
+      <polygon points="0,-56 53,-17 33,45 -33,45 -53,-17" fill="none" stroke="#F2EFE8" stroke-width="8"/>
+      <circle r="17" fill="#C8202A"/>
+    </svg>
+    OPSIS
   </a>
   <a class="cta" href="#club">Rejoindre le Club</a>
 </nav>
@@ -301,19 +321,19 @@
   <!-- ACTE 0 — HERO -->
   <section class="act" id="hero">
     <div class="inner">
-      <p class="kick rv in">OPSIS Media</p>
-      <h1 class="rv in d1">Le cinéma qui<br>mérite votre temps.</h1>
+      <p class="kick rv in">OPSIS</p>
+      <h1 class="rv in d1">Le cinéma qui<br>mérite votre temps</h1>
       <p class="sub rv in d2">Choisissez ce qui mérite de recevoir votre attention</p>
     </div>
     <div class="scrollcue" aria-hidden="true"><span>Ouvrez l'œil</span><span class="ln"></span></div>
   </section>
 
-  <!-- ACTE 1 — LE PROBLÈME -->
+  <!-- ACTE 1 — LE CONSTAT -->
   <section class="act">
     <div class="veil"></div>
     <div class="inner left">
       <p class="kick rv">Le constat</p>
-      <h2 class="rv d1">Le problème n'est plus<br>de trouver quoi regarder.<br><em>C'est de savoir ce qui<br>mérite notre temps.</em></h2>
+      <h2 class="rv d1">Le problème n'est plus<br>de trouver quoi regarder.<br><em>C'est de savoir ce qui mérite notre temps.</em></h2>
       <p class="p rv d2">Des centaines de films sortent chaque année. Les plateformes publient sans interruption. Les réseaux recommandent en continu. <b>Notre attention, elle, reste limitée.</b> OPSIS remet au centre la seule ressource que personne ne peut fabriquer : le temps.</p>
     </div>
   </section>
@@ -344,76 +364,55 @@
     <div class="veil"></div>
     <div class="inner">
       <p class="kick rv">La question</p>
-      <p class="lede rv d1" style="max-width:30ch">Une œuvre peut être brillante mais inaccessible. Imparfaite mais passionnante. Magnifique mais vide. Divisive mais essentielle.</p>
-      <h2 class="rv d2" style="margin-top:34px">« Est-ce que cette œuvre<br><em>mérite mon temps ?</em> »</h2>
+      <p class="lede rv d1" style="max-width:32ch">Une œuvre peut être brillante mais inaccessible. Imparfaite mais passionnante. Magnifique mais vide. Divisive mais essentielle.</p>
+      <h2 class="rv d2" style="margin-top:36px">« Est-ce que cette œuvre<br><em>mérite mon temps ?</em> »</h2>
       <p class="p rv d3 tight">Une note ne dit pas si un film est bon. Elle dit s'il vaut ce qu'il vous coûte.</p>
     </div>
   </section>
 
-  <!-- ACTE 4 — LE SCORE OPSIS -->
+  <!-- ================= ACTE 4 — LE SCORE OPSIS ================= -->
   <section class="act" id="score">
     <div class="veil"></div>
+    <div class="scoreglow" aria-hidden="true"></div>
     <div class="inner wide">
-      <p class="kick rv">Notre système de lecture</p>
-      <h2 class="rv d1">Le <em>Score OPSIS.</em></h2>
-      <p class="p rv d2">Cinq dimensions, cinq lamelles. L'objectif s'ouvre exactement autant que l'œuvre le mérite.</p>
+      <p class="kick g rv">Système de lecture propriétaire</p>
+      <h2 class="rv d1">Le <em class="g">Score OPSIS</em></h2>
+      <p class="p rv d2 tight">Cinq dimensions. Cinq lamelles. L'objectif s'ouvre exactement autant que l'œuvre le mérite.</p>
 
-      <div class="scorewrap">
-        <div class="irisbox rv d2">
-          <svg viewBox="-160 -160 320 320" role="img" aria-label="Diaphragme à cinq lamelles représentant les cinq dimensions du Score OPSIS">
-            <circle class="ring" r="148"/>
-            <circle class="ring ring2" r="134"/>
-            <g id="blades"></g>
-            <text class="irisctr" id="irisval" y="-6">8,7</text>
-            <text class="irisctr-l" y="30">Score OPSIS</text>
-          </svg>
-        </div>
+      <div class="lens rv d2">
+        <svg viewBox="-200 -200 400 400" role="img" aria-label="Objectif à cinq lamelles : chaque lamelle représente une dimension du Score OPSIS et son ouverture correspond à sa note">
+          <g id="ticks" aria-hidden="true"></g>
+          <circle class="barrel" r="176"/>
+          <circle class="barrel inner" r="150"/>
+          <line class="needle" id="needle" x1="0" y1="-150" x2="0" y2="-176"/>
+          <g id="blades"></g>
+          <text class="engrave" id="engrave" y="-108">Œil</text>
+          <text class="ctrval" id="ctrval" y="4">9,3</text>
+          <text class="ctrlab" y="52">sur 10</text>
+        </svg>
+      </div>
 
-        <div class="letters rv d3">
-          <button class="lt on" type="button" data-i="0" aria-pressed="true">
-            <span class="ltr">O</span>
-            <span>
-              <span class="ltn">Œil — la maîtrise</span>
-              <span class="ltd">Mise en scène, image, montage, son, direction artistique, jeu, réalisation.</span>
-              <span class="ltq">Est-ce que c'est bien fait ?</span>
-            </span>
-          </button>
-          <button class="lt" type="button" data-i="1" aria-pressed="false">
-            <span class="ltr">P</span>
-            <span>
-              <span class="ltn">Propos — le fond</span>
-              <span class="ltd">Scénario, personnages, thèmes, symbolisme, sous-texte, cohérence, intentions.</span>
-              <span class="ltq">Est-ce que cette œuvre a quelque chose à dire ?</span>
-            </span>
-          </button>
-          <button class="lt" type="button" data-i="2" aria-pressed="false">
-            <span class="ltr">S</span>
-            <span>
-              <span class="ltn">Sensation — l'expérience</span>
-              <span class="ltd">Émotion, immersion, tension, plaisir, rythme, empathie, impact émotionnel.</span>
-              <span class="ltq">Qu'est-ce que cette œuvre me fait ressentir ?</span>
-            </span>
-          </button>
-          <button class="lt" type="button" data-i="3" aria-pressed="false">
-            <span class="ltr">I</span>
-            <span>
-              <span class="ltn">Impact — la place</span>
-              <span class="ltd">Réception, influence, originalité, contexte, popularité, portée, mémoire.</span>
-              <span class="ltq">Pourquoi cette œuvre compte-t-elle ?</span>
-            </span>
-          </button>
-          <button class="lt synth" type="button" data-i="4" aria-pressed="false">
-            <span class="ltr">S</span>
-            <span>
-              <span class="ltn">Synthèse — le verdict</span>
-              <span class="ltd">Pas une cinquième note, mais la conclusion de toute l'analyse.</span>
-              <span class="ltq">Après tout ce qu'elle propose, mérite-t-elle votre temps ?</span>
-            </span>
-          </button>
+      <div class="keys rv d3" role="group" aria-label="Les cinq dimensions du Score OPSIS">
+        <button class="key on" type="button" data-i="0" aria-pressed="true" aria-label="Œil">O</button>
+        <button class="key" type="button" data-i="1" aria-pressed="false" aria-label="Propos">P</button>
+        <button class="key" type="button" data-i="2" aria-pressed="false" aria-label="Sensation">S</button>
+        <button class="key" type="button" data-i="3" aria-pressed="false" aria-label="Impact">I</button>
+        <button class="key synth" type="button" data-i="4" aria-pressed="false" aria-label="Synthèse">S</button>
+      </div>
+      <p class="keyhint rv d3">Le nom du média est la méthode — choisissez une lettre</p>
+
+      <div class="detail rv d3" id="detail" aria-live="polite">
+        <p class="dname" id="dname">Œil — la maîtrise</p>
+        <p class="dq" id="dq">Est-ce que c'est bien fait ?</p>
+        <p class="dd" id="dd">Mise en scène, image, montage, son, direction artistique, jeu, réalisation. Le geste derrière l'écran.</p>
+        <div class="dbar">
+          <span class="dtrack"><i id="dfill" style="width:93%"></i></span>
+          <span class="dval" id="dval">9,3</span>
         </div>
       </div>
     </div>
   </section>
+  <!-- =========================================================== -->
 
   <!-- ACTE 5 — EN PRATIQUE -->
   <section class="act">
@@ -440,13 +439,13 @@
     <div class="veil"></div>
     <div class="inner">
       <p class="kick rv">Les verdicts</p>
-      <h2 class="rv d1">Jamais seulement<br><em>« bon » ou « mauvais ».</em></h2>
+      <h2 class="rv d1">Jamais seulement<br><em>« bon » ou « mauvais »</em></h2>
       <div class="vlist rv d2">
-        <div class="vrow"><span class="d" style="background:#B79152"></span><span class="n" style="color:#B79152">Mérite ton temps</span><span class="x">Une œuvre que nous recommandons fortement.</span></div>
-        <div class="vrow"><span class="d" style="background:#EFEBE2"></span><span class="n" style="color:#EFEBE2">À voir si…</span><span class="x">Intéressante, mais très dépendante de vos goûts et de vos attentes.</span></div>
-        <div class="vrow"><span class="d" style="background:#4A7BB5"></span><span class="n" style="color:#4A7BB5">Prenez le risque</span><span class="x">Imparfaite, étrange ou divisive, mais assez singulière pour justifier votre attention.</span></div>
-        <div class="vrow"><span class="d" style="background:#837E75"></span><span class="n" style="color:#B2ADA3">Épargnez votre temps</span><span class="x">Ne justifie pas l'investissement qu'elle demande.</span></div>
-        <div class="vrow"><span class="d" style="background:#A8141A"></span><span class="n" style="color:#C8202A">À débattre</span><span class="x">Trop complexe ou trop controversée pour être réduite à une recommandation.</span></div>
+        <div class="vrow"><span class="d" style="background:#C6A063"></span><span class="n" style="color:#C6A063">Mérite ton temps</span><span class="x">Une œuvre que nous recommandons fortement.</span></div>
+        <div class="vrow"><span class="d" style="background:#F2EFE8"></span><span class="n" style="color:#F2EFE8">À voir si…</span><span class="x">Intéressante, mais très dépendante de vos goûts et de vos attentes.</span></div>
+        <div class="vrow"><span class="d" style="background:#5E92CE"></span><span class="n" style="color:#5E92CE">Prenez le risque</span><span class="x">Imparfaite, étrange ou divisive, mais assez singulière pour justifier votre attention.</span></div>
+        <div class="vrow"><span class="d" style="background:#8B8579"></span><span class="n" style="color:#B9B4AA">Épargnez votre temps</span><span class="x">Ne justifie pas l'investissement qu'elle demande.</span></div>
+        <div class="vrow"><span class="d" style="background:#E2454C"></span><span class="n" style="color:#E2454C">À débattre</span><span class="x">Trop complexe ou trop controversée pour être réduite à une recommandation.</span></div>
       </div>
     </div>
   </section>
@@ -456,7 +455,7 @@
     <div class="veil"></div>
     <div class="inner wide">
       <p class="kick rv">Avant, après</p>
-      <h2 class="rv d1">Une œuvre intéressante ne<br>devrait pas s'arrêter <em>au générique.</em></h2>
+      <h2 class="rv d1">Une œuvre intéressante ne devrait<br>pas s'arrêter <em>au générique</em></h2>
       <div class="split">
         <div class="col rv d2">
           <p class="plabel">Avant le film — décider</p>
@@ -488,7 +487,7 @@
     <div class="veil"></div>
     <div class="inner">
       <p class="kick rv">Le format fondateur</p>
-      <h2 class="rv d1">La <em>Fiche OPSIS.</em></h2>
+      <h2 class="rv d1">La <em>Fiche OPSIS</em></h2>
       <p class="p rv d2">Une œuvre transformée en objet éditorial clair, visuel et partageable.</p>
       <div class="tags rv d2">
         <span class="tag">Score OPSIS</span><span class="tag">Verdict</span><span class="tag">Temps investi</span><span class="tag">Les 4 regards</span><span class="tag">Points forts</span><span class="tag">Points faibles</span><span class="tag">Pour qui</span><span class="tag">À éviter si…</span><span class="tag">Détails à remarquer</span><span class="tag">Théories</span><span class="tag">Références</span><span class="tag">Œuvres similaires</span><span class="tag">Question de débat</span>
@@ -506,7 +505,7 @@
     <div class="veil"></div>
     <div class="inner wide">
       <p class="kick rv">L'écosystème</p>
-      <h2 class="rv d1">Un média,<br><em>plusieurs vitesses.</em></h2>
+      <h2 class="rv d1">Un média,<br><em>plusieurs vitesses</em></h2>
       <div class="fgrid">
         <div class="fmt rv d1"><p class="fk">Le socle</p><h4>Fiche OPSIS</h4><p>Une œuvre, un score, un verdict. La porte d'entrée vers la discussion.</p></div>
         <div class="fmt rv d1"><p class="fk">Format court</p><h4>OPSIS Flash</h4><p>Opinions, recommandations et observations en quelques secondes.</p></div>
@@ -530,9 +529,9 @@
     <div class="veil"></div>
     <div class="inner">
       <p class="kick g rv">La Séance</p>
-      <h2 class="rv d1">Le désaccord fait partie<br><em class="g">de l'expérience.</em></h2>
+      <h2 class="rv d1">Le désaccord fait partie<br><em class="g">de l'expérience</em></h2>
       <p class="p rv d2">Le format met en scène les dimensions du Score OPSIS et transforme l'analyse en spectacle de débat. L'objectif n'est pas de fabriquer du conflit, mais de montrer qu'une œuvre se regarde sous plusieurs angles.</p>
-      <p class="lede rv d3" style="max-width:34ch;margin-top:34px">« Nous ne sommes pas d'accord. Et c'est précisément pour ça que cette œuvre mérite d'être discutée. »</p>
+      <p class="lede rv d3" style="max-width:36ch;margin-top:36px">« Nous ne sommes pas d'accord. Et c'est précisément pour ça que cette œuvre mérite d'être discutée. »</p>
     </div>
   </section>
 
@@ -550,14 +549,14 @@
       <p class="p rv d3">Votes, débats, classements, projections, contenus exclusifs. Comparez votre jugement au nôtre. <b>Quand le public n'est pas d'accord avec OPSIS, le désaccord devient lui-même du contenu.</b></p>
 
       <form class="form rv d3" id="signup" novalidate>
-        <label class="visually-hidden" for="email" style="position:absolute;left:-9999px">Votre adresse e-mail</label>
+        <label for="email" style="position:absolute;left:-9999px">Votre adresse e-mail</label>
         <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="votre@email.com" required>
         <button type="submit">Rejoindre le Club</button>
       </form>
       <p class="formnote" id="formnote" role="status">Une Fiche OPSIS par semaine. Rien d'autre.</p>
 
       <div class="where rv d3">
-        <!-- ÉDITER : remplacer par vos vraies URL, ou retirer le lien tant qu'il n'existe pas -->
+        <!-- ÉDITER : remplacer par vos vraies URL -->
         <a href="https://youtube.com/" rel="noopener">YouTube</a>
         <a href="https://instagram.com/" rel="noopener">Instagram</a>
         <a href="https://tiktok.com/" rel="noopener">TikTok</a>
@@ -571,7 +570,7 @@
     <div class="veil"></div>
     <div class="inner">
       <p class="kick rv">Notre philosophie</p>
-      <h2 class="rv d1">OPSIS ne dit pas<br>quoi penser.<br><em>OPSIS aide à mieux regarder.</em></h2>
+      <h2 class="rv d1">OPSIS ne dit pas quoi penser.<br><em>OPSIS aide à mieux regarder.</em></h2>
       <p class="p rv d2">Parce qu'un film peut être techniquement imparfait et profondément touchant. Parce qu'il peut être brillant sans être fait pour vous. Parce qu'un succès populaire peut être passionnant à analyser. Et parce qu'une œuvre rejetée par beaucoup mérite parfois d'être défendue.</p>
     </div>
   </section>
@@ -590,8 +589,8 @@
         <div class="rst rv d3"><p class="ph">Phase 05</p><p class="nm">La Séance</p></div>
         <div class="rst rv d3"><p class="ph">Phase 06</p><p class="nm">Les événements</p></div>
       </div>
-      <p class="p rv d4" style="margin-top:44px">Critique, information, divertissement, débat, communauté. Un média culturel construit dans cet ordre, autour d'une idée simple.</p>
-      <p class="wordmark rv d4" style="margin-top:34px;font-size:clamp(30px,6vw,72px);letter-spacing:.04em;text-indent:0">Votre attention a de la valeur.</p>
+      <p class="p rv d4" style="margin-top:46px">Critique, information, divertissement, débat, communauté. Un média culturel construit dans cet ordre, autour d'une idée simple.</p>
+      <p class="wordmark rv d4" style="margin-top:34px">Votre attention a de la valeur</p>
     </div>
   </section>
 
@@ -601,7 +600,7 @@
   <div class="fin">
     <div>
       <p class="fbrand">OPSIS</p>
-      <p style="margin-top:6px">Le cinéma qui mérite votre temps.</p>
+      <p style="margin-top:8px">Le cinéma qui mérite votre temps.</p>
     </div>
     <div style="display:flex;gap:22px;flex-wrap:wrap">
       <a href="#score">Le Score</a>
@@ -619,6 +618,7 @@
   "use strict";
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarse = window.matchMedia('(pointer: coarse)').matches;
+  var SVGNS='http://www.w3.org/2000/svg';
 
   /* ============ Progression, reveals, nav ============ */
   var threadfill=document.getElementById('threadfill'),
@@ -631,9 +631,8 @@
     scrollP = h>0 ? Math.min(1,Math.max(0,window.scrollY/h)) : 0;
     threadfill.style.height=(scrollP*100)+'%';
     threadpct.textContent=('0'+Math.round(scrollP*100)).slice(-2)+' %';
-    // la nav se replie quand on descend, revient quand on remonte
-    var y=window.scrollY, goingDown = y>lastY;
-    nav.classList.toggle('hide', goingDown && y>window.innerHeight*0.6);
+    var y=window.scrollY;
+    nav.classList.toggle('hide', y>lastY && y>window.innerHeight*0.6);
     lastY=y;
   }
   window.addEventListener('scroll',onScroll,{passive:true});
@@ -641,65 +640,129 @@
   onScroll();
 
   var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:.16});
-  document.querySelectorAll('.rv').forEach(function(el){
-    if(!el.classList.contains('in')) io.observe(el);
-  });
+  document.querySelectorAll('.rv').forEach(function(el){ if(!el.classList.contains('in')) io.observe(el); });
 
-  /* ============ Iris du Score — SVG interactif ============ */
-  var SCORES=[9.3,8.8,9.1,8.0,8.7];               // O, P, S, I, S(ynthèse)
-  var LABELS=['9,3','8,8','9,1','8,0','8,7'];
-  var bladesG=document.getElementById('blades');
-  var irisval=document.getElementById('irisval');
-  var svgBlades=[];
+  /* ============ LE SCORE OPSIS ============ */
+  var DIM=[
+    {l:'O', n:'Œil — la maîtrise',        s:9.3, q:"Est-ce que c'est bien fait ?",
+     d:"Mise en scène, image, montage, son, direction artistique, jeu, réalisation. Le geste derrière l'écran."},
+    {l:'P', n:'Propos — le fond',         s:8.8, q:"Est-ce que cette œuvre a quelque chose à dire ?",
+     d:"Scénario, personnages, thèmes, symbolisme, sous-texte, cohérence, intentions."},
+    {l:'S', n:'Sensation — l\u2019expérience', s:9.1, q:"Qu'est-ce que cette œuvre me fait ressentir ?",
+     d:"Émotion, immersion, tension, plaisir, rythme, empathie, impact émotionnel."},
+    {l:'I', n:'Impact — la place',        s:8.0, q:"Pourquoi cette œuvre compte-t-elle ?",
+     d:"Réception, influence, originalité, contexte, popularité, portée, capacité à rester en mémoire."},
+    {l:'S', n:'Synthèse — le verdict',    s:8.7, q:"Après tout ce qu'elle propose, mérite-t-elle votre temps ?",
+     d:"Pas une cinquième note, mais la conclusion de toute l'analyse. C'est elle qui donne le Score OPSIS."}
+  ];
+  var ENGRAVE=['Œil','Propos','Sensation','Impact','Synthèse'];
+  var fr=function(v){return v.toFixed(1).replace('.',',');};
 
-  (function buildIris(){
-    var N=5, R=118;
-    for(var i=0;i<N;i++){
-      var a=i/N*Math.PI*2 - Math.PI/2;
-      var g=document.createElementNS('http://www.w3.org/2000/svg','g');
-      var p=document.createElementNS('http://www.w3.org/2000/svg','path');
-      // lamelle : trapèze pointant vers le centre
-      p.setAttribute('d','M -34 0 L 34 0 L 20 -128 L -20 -128 Z');
-      p.setAttribute('class','blade');
-      g.appendChild(p);
-      g.setAttribute('data-a', a);
-      g.setAttribute('transform','translate('+(R*Math.cos(a)).toFixed(2)+','+(R*Math.sin(a)).toFixed(2)+')');
-      bladesG.appendChild(g);
-      svgBlades.push(g);
+  /* graduations du barillet, comme une bague d'objectif */
+  (function ticks(){
+    var g=document.getElementById('ticks');
+    for(var i=0;i<=40;i++){
+      var major = i%4===0;
+      var a=(-Math.PI/2)+(i/40)*Math.PI*2;
+      var r1= major?162:168, r2=176;
+      var ln=document.createElementNS(SVGNS,'line');
+      ln.setAttribute('x1',(r1*Math.cos(a)).toFixed(2)); ln.setAttribute('y1',(r1*Math.sin(a)).toFixed(2));
+      ln.setAttribute('x2',(r2*Math.cos(a)).toFixed(2)); ln.setAttribute('y2',(r2*Math.sin(a)).toFixed(2));
+      ln.setAttribute('class', major?'tick major':'tick');
+      g.appendChild(ln);
+      if(major){
+        var t=document.createElementNS(SVGNS,'text');
+        t.setAttribute('x',(191*Math.cos(a)).toFixed(2)); t.setAttribute('y',(191*Math.sin(a)).toFixed(2));
+        t.setAttribute('class','ticknum'); t.textContent=String(i/4);
+        g.appendChild(t);
+      }
     }
   })();
 
-  function setIris(active){
-    svgBlades.forEach(function(g,i){
+  /* les 5 lamelles */
+  var bladesG=document.getElementById('blades'), svgBlades=[];
+  (function buildBlades(){
+    var R=124;
+    for(var i=0;i<5;i++){
+      var a=i/5*Math.PI*2 - Math.PI/2;
+      var g=document.createElementNS(SVGNS,'g');
+      var p=document.createElementNS(SVGNS,'path');
+      p.setAttribute('d','M -40 0 L 40 0 L 24 -146 L -24 -146 Z');
+      p.setAttribute('class','blade');
+      g.appendChild(p);
+      g.setAttribute('data-a',a);
+      g.setAttribute('transform','translate('+(R*Math.cos(a)).toFixed(2)+','+(R*Math.sin(a)).toFixed(2)+')');
+      bladesG.appendChild(g); svgBlades.push(g);
+    }
+  })();
+
+  var needle=document.getElementById('needle'),
+      engrave=document.getElementById('engrave'),
+      ctrval=document.getElementById('ctrval'),
+      detail=document.getElementById('detail'),
+      dname=document.getElementById('dname'), dq=document.getElementById('dq'),
+      dd=document.getElementById('dd'), dfill=document.getElementById('dfill'),
+      dval=document.getElementById('dval');
+  var keys=Array.prototype.slice.call(document.querySelectorAll('.key'));
+  var current=-1;
+
+  function render(i){
+    var dim=DIM[i], synth=(i===4);
+    svgBlades.forEach(function(g,k){
       var a=parseFloat(g.getAttribute('data-a'));
-      var base=(a*180/Math.PI)+90;                 // pointe vers le centre
-      var open=(SCORES[i]/10)*46;                  // plus la note est haute, plus la lamelle s'écarte
-      var deg = base + open + (i===active?9:0);
-      g.style.transition='transform .7s cubic-bezier(.2,.7,.2,1)';
-      g.style.transform='rotate('+deg.toFixed(2)+'deg)';
-      g.firstChild.classList.toggle('on', i===active);
+      var base=(a*180/Math.PI)+90;
+      var open=(DIM[k].s/10)*44;                 // l'ouverture EST la note
+      g.style.transform='rotate('+(base+open+(k===i?10:0)).toFixed(2)+'deg)';
+      g.firstChild.classList.toggle('on', k===i);
     });
-    irisval.textContent = active===null ? '8,7' : LABELS[active];
+    needle.style.transform='rotate('+((dim.s/10)*360).toFixed(2)+'deg)';
+    engrave.textContent=ENGRAVE[i];
+    ctrval.textContent=fr(dim.s);
+    ctrval.style.fill = synth ? '#C6A063' : '#F2EFE8';
+    engrave.style.fill = synth ? '#C6A063' : '#E2454C';
+
+    dname.textContent=dim.n;
+    dq.textContent=dim.q; dq.classList.toggle('g',synth);
+    dd.textContent=dim.d;
+    dfill.style.width=(dim.s*10)+'%'; dfill.classList.toggle('g',synth);
+    dval.textContent=fr(dim.s);
   }
 
-  var btns=Array.prototype.slice.call(document.querySelectorAll('.lt'));
   function select(i){
-    btns.forEach(function(b,k){
-      b.classList.toggle('on',k===i);
-      b.setAttribute('aria-pressed', k===i ? 'true':'false');
-    });
-    setIris(i);
+    if(i===current) return;
+    current=i;
+    keys.forEach(function(b,k){ b.classList.toggle('on',k===i); b.setAttribute('aria-pressed',k===i?'true':'false'); });
+    if(reduce){ render(i); return; }
+    detail.classList.add('swap');
+    setTimeout(function(){ render(i); detail.classList.remove('swap'); },170);
   }
-  btns.forEach(function(b){
+  keys.forEach(function(b){
     var i=parseInt(b.getAttribute('data-i'),10);
-    b.addEventListener('click',function(){select(i);});
+    b.addEventListener('click',function(){ select(i); });
     b.addEventListener('mouseenter',function(){ if(!coarse) select(i); });
+    b.addEventListener('focus',function(){ select(i); });
   });
-  select(0);
+  render(0); current=0;
+
+  /* cycle automatique tant que personne n'a touché — la section se présente seule */
+  if(!reduce){
+    var auto=null, touched=false, idx=0;
+    var lensIO=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting && !touched && !auto){
+          auto=setInterval(function(){ idx=(idx+1)%5; select(idx); },2600);
+        }else if(!e.isIntersecting && auto){ clearInterval(auto); auto=null; }
+      });
+    },{threshold:.4});
+    lensIO.observe(document.getElementById('score'));
+    ['click','mouseenter','focus','touchstart'].forEach(function(ev){
+      document.querySelector('.keys').addEventListener(ev,function(){
+        touched=true; if(auto){ clearInterval(auto); auto=null; }
+      },{passive:true});
+    });
+  }
 
   /* ============ Inscription au Club ============ */
   var form=document.getElementById('signup'), note=document.getElementById('formnote');
@@ -710,20 +773,17 @@
     note.className='formnote';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
       note.textContent='Cette adresse n\u2019a pas l\u2019air valide. Vérifiez-la.';
-      note.classList.add('err');
-      form.email.focus();
-      return;
+      note.classList.add('err'); form.email.focus(); return;
     }
-    /* ÉDITER — brancher ici votre fournisseur (Beehiiv, Substack, Kit, Formspree…) :
+    /* ÉDITER — brancher votre fournisseur (Beehiiv, Substack, Kit, Formspree…) :
        fetch('VOTRE_ENDPOINT',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
-       Tant que ce n\u2019est pas branché, aucune adresse n\u2019est réellement enregistrée. */
+       Tant que ce n'est pas branché, aucune adresse n'est réellement enregistrée. */
     note.textContent='Bienvenue dans le Club. Première Fiche bientôt.';
-    note.classList.add('ok');
-    form.email.value='';
+    note.classList.add('ok'); form.email.value='';
     setTimeout(function(){ note.textContent=DEFAULT_NOTE; note.className='formnote'; },6000);
   });
 
-  /* ============ Fond WebGL — l'iris à 5 lamelles ============ */
+  /* ============ Fond WebGL ============ */
   if(typeof THREE==='undefined'){
     document.getElementById('fallbackbg').style.display='block';
     document.getElementById('webgl').style.display='none';
@@ -732,11 +792,7 @@
 
   var canvas=document.getElementById('webgl');
   var small=window.innerWidth<760;
-  var renderer=new THREE.WebGLRenderer({
-    canvas:canvas, alpha:true,
-    antialias:!small,
-    powerPreference:'low-power'
-  });
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:!small,powerPreference:'low-power'});
   renderer.setClearColor(0x000000,0);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, small?1.5:1.75));
   renderer.setSize(window.innerWidth,window.innerHeight);
@@ -747,18 +803,17 @@
   camera.position.set(0,0,9);
 
   scene.add(new THREE.AmbientLight(0x20181c,1.1));
-  var lRed=new THREE.PointLight(0xA8141A,2.4,40);  lRed.position.set(4,2.5,6);   scene.add(lRed);
-  var lGold=new THREE.PointLight(0xB79152,1.3,40); lGold.position.set(-5,-3,4);  scene.add(lGold);
-  var lWhite=new THREE.PointLight(0xEFEBE2,0.7,30);lWhite.position.set(0,0,7);   scene.add(lWhite);
+  var lRed=new THREE.PointLight(0xA8141A,2.4,40);  lRed.position.set(4,2.5,6);  scene.add(lRed);
+  var lGold=new THREE.PointLight(0xB79152,1.3,40); lGold.position.set(-5,-3,4); scene.add(lGold);
+  var lWhite=new THREE.PointLight(0xF2EFE8,0.7,30);lWhite.position.set(0,0,7);  scene.add(lWhite);
 
   var rig=new THREE.Group(); scene.add(rig);
-
   var pupilMat=new THREE.MeshStandardMaterial({color:0x1a0406,emissive:0xA8141A,emissiveIntensity:1.4,roughness:.4,metalness:.2});
-  var pupil=new THREE.Mesh(new THREE.SphereGeometry(0.7,40,40),pupilMat); rig.add(pupil);
+  rig.add(new THREE.Mesh(new THREE.SphereGeometry(0.7,40,40),pupilMat));
+  var pupil=rig.children[0];
   var glowMat=new THREE.MeshBasicMaterial({color:0xC8202A,transparent:true,opacity:.25});
   var glow=new THREE.Mesh(new THREE.SphereGeometry(1.2,28,28),glowMat); rig.add(glow);
 
-  // 5 lamelles = 5 dimensions du Score OPSIS
   var N=5, Rr=2.4, blades=[];
   var bladeGeo=new THREE.BoxGeometry(0.86,3.0,0.09); bladeGeo.translate(0,1.5,0);
   var matA=new THREE.MeshStandardMaterial({color:0x141419,metalness:.85,roughness:.34});
@@ -768,36 +823,27 @@
     var pivot=new THREE.Group();
     pivot.position.set(Rr*Math.cos(a),Rr*Math.sin(a),0);
     pivot.userData.base=a+Math.PI+0.55;
-    pivot.userData.weight=SCORES[i]/10;            // chaque lamelle porte sa dimension
+    pivot.userData.weight=DIM[i].s/10;
     pivot.add(new THREE.Mesh(bladeGeo, i%2?matA:matB));
     rig.add(pivot); blades.push(pivot);
   }
-
   var ring1=new THREE.Mesh(new THREE.TorusGeometry(3.05,0.045,14,110),
     new THREE.MeshStandardMaterial({color:0x9C844C,metalness:.9,roughness:.35,emissive:0x3a2e18,emissiveIntensity:.4}));
   var ring2=new THREE.Mesh(new THREE.TorusGeometry(3.5,0.02,14,110),
     new THREE.MeshStandardMaterial({color:0xA8141A,metalness:.6,roughness:.5,emissive:0x2a0608,emissiveIntensity:.5}));
   rig.add(ring1); rig.add(ring2);
 
-  /* bokeh pentagonal — un iris à 5 lamelles produit des taches à 5 côtés.
-     Shader minimal pour que la taille par point serve réellement à quelque chose. */
   function pentaTex(){
     var c=document.createElement('canvas'); c.width=c.height=64;
     var g=c.getContext('2d'); g.translate(32,32);
     var rg=g.createRadialGradient(0,0,4,0,0,30);
-    rg.addColorStop(0,'rgba(255,255,255,.95)');
-    rg.addColorStop(.55,'rgba(255,255,255,.35)');
-    rg.addColorStop(1,'rgba(255,255,255,0)');
+    rg.addColorStop(0,'rgba(255,255,255,.95)'); rg.addColorStop(.55,'rgba(255,255,255,.35)'); rg.addColorStop(1,'rgba(255,255,255,0)');
     g.fillStyle=rg; g.beginPath();
-    for(var k=0;k<5;k++){
-      var a=k/5*Math.PI*2-Math.PI/2;
-      g[k?'lineTo':'moveTo'](Math.cos(a)*30,Math.sin(a)*30);
-    }
+    for(var k=0;k<5;k++){ var a=k/5*Math.PI*2-Math.PI/2; g[k?'lineTo':'moveTo'](Math.cos(a)*30,Math.sin(a)*30); }
     g.closePath(); g.fill();
     return new THREE.CanvasTexture(c);
   }
-
-  var CNT = small?70:140;
+  var CNT=small?70:140;
   var pos=new Float32Array(CNT*3), col=new Float32Array(CNT*3), siz=new Float32Array(CNT);
   var palette=[[0.66,0.08,0.10],[0.72,0.57,0.32],[0.94,0.92,0.89]];
   for(var k=0;k<CNT;k++){
@@ -810,26 +856,17 @@
   bg.setAttribute('position',new THREE.BufferAttribute(pos,3));
   bg.setAttribute('color',new THREE.BufferAttribute(col,3));
   bg.setAttribute('psize',new THREE.BufferAttribute(siz,1));
-
   var bokehMat=new THREE.ShaderMaterial({
-    uniforms:{ map:{value:pentaTex()}, opacity:{value:0.5} },
-    vertexShader:[
-      'attribute float psize;','varying vec3 vC;',
-      'void main(){ vC=color;',
-      '  vec4 mv=modelViewMatrix*vec4(position,1.0);',
-      '  gl_PointSize=psize*(1.0/-mv.z);',
-      '  gl_Position=projectionMatrix*mv; }'
-    ].join('\n'),
-    fragmentShader:[
-      'uniform sampler2D map;','uniform float opacity;','varying vec3 vC;',
-      'void main(){ vec4 t=texture2D(map,gl_PointCoord);',
-      '  gl_FragColor=vec4(vC,1.0)*t*opacity; }'
-    ].join('\n'),
+    uniforms:{map:{value:pentaTex()},opacity:{value:0.5}},
+    vertexShader:['attribute float psize;','varying vec3 vC;','void main(){ vC=color;',
+      ' vec4 mv=modelViewMatrix*vec4(position,1.0);',' gl_PointSize=psize*(1.0/-mv.z);',
+      ' gl_Position=projectionMatrix*mv; }'].join('\n'),
+    fragmentShader:['uniform sampler2D map;','uniform float opacity;','varying vec3 vC;',
+      'void main(){ vec4 t=texture2D(map,gl_PointCoord); gl_FragColor=vec4(vC,1.0)*t*opacity; }'].join('\n'),
     transparent:true, depthWrite:false, vertexColors:true, blending:THREE.AdditiveBlending
   });
   var bokeh=new THREE.Points(bg,bokehMat); scene.add(bokeh);
 
-  /* parallaxe : souris ET tactile */
   var tmx=0,tmy=0;
   window.addEventListener('mousemove',function(e){
     tmx=(e.clientX/window.innerWidth-.5); tmy=(e.clientY/window.innerHeight-.5);
@@ -850,50 +887,34 @@
   function easeIO(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;}
 
   var t0=performance.now(), rafId=null;
-
   function frame(){
-    var t=(performance.now()-t0)*0.001;
-    var p=scrollP;
-
-    /* L'obturateur suit le récit : fermé à l'arrivée, grand ouvert au cœur
-       de la page, resserré sur la pupille au moment du verdict final. */
+    var t=(performance.now()-t0)*0.001, p=scrollP;
     var openness = smooth(0.02,0.34,p) - smooth(0.80,0.99,p)*0.7;
-    var breathe  = reduce?0:Math.sin(t*0.8)*0.02;
-    var open = Math.max(0, openness) + breathe;
-
+    var open = Math.max(0,openness) + (reduce?0:Math.sin(t*0.8)*0.02);
     for(var i=0;i<N;i++){
       var pv=blades[i];
       pv.rotation.z = pv.userData.base + open*0.72*pv.userData.weight*1.25;
     }
-
-    var ps=0.14+open*0.9;
-    pupil.scale.setScalar(ps); glow.scale.setScalar(0.5+open*1.1);
-    pupilMat.emissiveIntensity=0.8+open*1.6;
-    glowMat.opacity=0.08+open*0.28;
-
+    pupil.scale.setScalar(0.14+open*0.9); glow.scale.setScalar(0.5+open*1.1);
+    pupilMat.emissiveIntensity=0.8+open*1.6; glowMat.opacity=0.08+open*0.28;
     camera.position.z = 9 - easeIO(p)*5.0;
     camera.position.x += (tmx*1.1 - camera.position.x)*0.05;
     camera.position.y += (-tmy*0.8 - camera.position.y)*0.05;
     camera.lookAt(0,0,0);
-
     rig.rotation.z = p*Math.PI*0.5 + t*0.03;
     rig.rotation.x += (tmy*0.25 - rig.rotation.x)*0.04;
     rig.rotation.y += (tmx*0.30 - rig.rotation.y)*0.04;
     ring1.rotation.z=t*0.06; ring2.rotation.z=-t*0.04;
-
     bokeh.rotation.z=t*0.01; bokeh.position.y=Math.sin(t*0.1)*0.4;
     lRed.intensity=2.0+Math.sin(t*1.2)*0.4;
-
     renderer.render(scene,camera);
   }
-
   function loop(){ frame(); rafId=requestAnimationFrame(loop); }
-  function start(){ if(rafId===null) loop(); }              // jamais deux boucles
+  function start(){ if(rafId===null) loop(); }
   function stop(){ if(rafId!==null){ cancelAnimationFrame(rafId); rafId=null; } }
 
-  if(reduce){
-    frame();                                                // une seule image, pas de boucle
-  }else{
+  if(reduce){ frame(); }
+  else{
     start();
     document.addEventListener('visibilitychange',function(){
       if(document.hidden){ stop(); } else { t0=performance.now(); start(); }
