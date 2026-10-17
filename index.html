@@ -3,32 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPSIS — Le cinéma qui mérite votre temps</title>
-<meta name="description" content="OPSIS est un média dédié au cinéma et à l'audiovisuel. Nous aidons le public à choisir les œuvres qui méritent son attention, puis à prolonger l'expérience après le générique.">
+<title>OPSIS — Chaque jour, une histoire vraie</title>
+<meta name="description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre. Destins, arnaques, inventions, exploits : la réalité, mise en scène.">
 <meta name="theme-color" content="#08080A">
 <link rel="canonical" href="https://opsis.media/">
 
-<!-- FAVICONS — fichiers réels, seule méthode fiable pour Safari.
-     Ils doivent être déposés à la racine du site, à côté de index.html. -->
+<!-- FAVICONS — fichiers réels à la racine du site, à côté de index.html -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#A8141A">
 
-<!-- Partage social — remplacer og:image par votre visuel 1200x630 -->
+<!-- Partage social — remplacer og:image par un visuel 1200x630 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OPSIS">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://opsis.media/">
-<meta property="og:title" content="OPSIS — Le cinéma qui mérite votre temps">
-<meta property="og:description" content="Toutes les œuvres ne méritent pas votre temps. OPSIS vous aide à choisir, puis à prolonger l'expérience après le générique.">
+<meta property="og:title" content="OPSIS — Chaque jour, une histoire vraie">
+<meta property="og:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre. La réalité, mise en scène.">
 <meta property="og:image" content="https://opsis.media/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OPSIS — Le cinéma qui mérite votre temps">
-<meta name="twitter:description" content="Toutes les œuvres ne méritent pas votre temps. OPSIS vous aide à choisir.">
+<meta name="twitter:title" content="OPSIS — Chaque jour, une histoire vraie">
+<meta name="twitter:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre.">
 <meta name="twitter:image" content="https://opsis.media/og.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,8 +41,8 @@
   "name":"OPSIS",
   "url":"https://opsis.media/",
   "logo":"https://opsis.media/favicon-512.png",
-  "description":"Média dédié au cinéma et à l'audiovisuel. OPSIS aide son public à choisir les œuvres qui méritent son attention et à prolonger l'expérience après le visionnage.",
-  "slogan":"Le cinéma qui mérite votre temps."
+  "description":"Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.",
+  "slogan":"La réalité, mise en scène."
 }
 </script>
 
@@ -54,7 +53,7 @@
     --red-bright:#C8202A;
     --red-type:#E2454C;           /* rouge de lecture — typographie sur fond noir */
     --offwhite:#F2EFE8;--text:#D6D1C7;--dim:#B9B4AA;--ash:#8B8579;
-    --gold:#C6A063;--gold-deep:#B79152;--blue:#5E92CE;
+    --gold:#C6A063;--gold-deep:#B79152;
     --line:rgba(242,239,232,.13);
     --display:'Newsreader',Georgia,'Times New Roman',serif;
     --sans:'Barlow',system-ui,-apple-system,sans-serif;
@@ -79,7 +78,7 @@
   .thread i{position:absolute;top:0;left:0;right:0;height:0;background:linear-gradient(var(--gold),var(--red))}
   .threadpct{position:fixed;right:12px;bottom:calc(var(--lb) + 14px);z-index:57;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ash);pointer-events:none}
 
-  nav{position:fixed;top:var(--lb);left:0;right:0;z-index:59;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;transition:opacity .4s,transform .4s;background:linear-gradient(180deg,rgba(8,8,10,.8),transparent)}
+  nav{position:fixed;top:var(--lb);left:0;right:0;z-index:59;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;transition:opacity .4s,transform .4s;background:linear-gradient(180deg,rgba(8,8,10,.85),rgba(8,8,10,0))}
   nav.hide{opacity:0;pointer-events:none;transform:translateY(-10px)}
   nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:500;font-size:23px;letter-spacing:.2em}
   nav .brand svg{width:21px;height:21px;flex:none}
@@ -90,207 +89,167 @@
 
   .act{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:calc(var(--lb) + 9vh) 26px calc(var(--lb) + 9vh);position:relative}
   .act.short{min-height:auto;padding-top:15vh;padding-bottom:15vh}
-  .inner{max-width:920px;width:100%;text-align:center}
-  .inner.left{text-align:left}
+  .inner{max-width:920px;width:100%;text-align:center;position:relative}
   .inner.wide{max-width:1120px}
-  .act .veil{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(1180px,98vw);height:min(820px,94vh);background:radial-gradient(closest-side,rgba(8,8,10,.8),rgba(8,8,10,.42) 60%,transparent);z-index:-1;pointer-events:none}
+  .act .veil{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(1180px,98vw);height:min(820px,94vh);background:radial-gradient(closest-side,rgba(8,8,10,.82),rgba(8,8,10,.45) 60%,transparent);z-index:-1;pointer-events:none}
 
   /* ---------- typographie ---------- */
   .kick{font-family:var(--mono);font-weight:500;font-size:clamp(11px,2vw,12px);letter-spacing:.3em;text-transform:uppercase;color:var(--red-type)}
   .kick.g{color:var(--gold)}
-  h1,h2,h3,h4,.wordmark{text-transform:uppercase}
-  h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,7.6vw,96px);line-height:1;letter-spacing:.04em;margin-top:18px}
-  h2{font-family:var(--display);font-weight:500;font-size:clamp(27px,4.8vw,54px);line-height:1.12;letter-spacing:.045em}
+  h1,h2,h3{text-transform:uppercase}
+  h1{font-family:var(--display);font-weight:500;font-size:clamp(38px,8.4vw,104px);line-height:.98;letter-spacing:.035em;margin-top:18px}
+  h1 em{display:block;font-style:italic;text-transform:none;color:var(--red-type);letter-spacing:.01em}
+  h2{font-family:var(--display);font-weight:500;font-size:clamp(27px,4.8vw,54px);line-height:1.12;letter-spacing:.045em;margin-top:16px}
   h2 em{font-style:italic;color:var(--red-type);text-transform:none;letter-spacing:.02em}
   h2 em.g{color:var(--gold)}
-  h3{font-family:var(--display);font-weight:500;font-size:clamp(20px,3vw,28px);line-height:1.2;letter-spacing:.06em}
-  .wordmark{font-family:var(--display);font-weight:500;font-size:clamp(26px,5vw,60px);line-height:1.1;letter-spacing:.05em}
-  .sub{margin-top:22px;font-family:var(--mono);font-size:clamp(11px,2.1vw,13px);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-  .lede{margin-top:24px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(21px,3.2vw,32px);line-height:1.42;color:var(--text);max-width:22ch;margin-left:auto;margin-right:auto}
-  .inner.left .lede{margin-left:0}
-  .p{margin-top:22px;font-size:clamp(16px,1.9vw,18px);color:var(--text);max-width:60ch;margin-left:auto;margin-right:auto;line-height:1.75}
-  .inner.left .p{margin-left:0}
+  h3{font-family:var(--display);font-weight:500;font-size:clamp(20px,2.6vw,26px);line-height:1.2;letter-spacing:.06em}
+  .lede{margin-top:26px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(21px,3.1vw,31px);line-height:1.42;color:var(--text);max-width:26ch;margin-left:auto;margin-right:auto}
+  .p{margin-top:22px;font-size:clamp(16px,1.9vw,18px);color:var(--text);max-width:58ch;margin-left:auto;margin-right:auto;line-height:1.75}
   .p b{color:var(--offwhite);font-weight:600}
-  .p.tight{max-width:46ch}
+  .sub{margin-top:26px;font-family:var(--mono);font-size:clamp(11px,2vw,12px);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
 
-  .scrollcue{position:absolute;bottom:calc(var(--lb) + 5vh);left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:12px;margin-top:34px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;background:var(--red);color:var(--offwhite);padding:17px 26px;border:1px solid var(--red);transition:.3s;cursor:pointer}
+  .btn:hover,.btn:focus-visible{background:transparent;color:var(--red-type);border-color:var(--red-type)}
+  .btn .arw{transition:transform .3s}
+  .btn:hover .arw{transform:translateX(4px)}
+
+  .scrollcue{position:absolute;bottom:calc(var(--lb) + 4vh);left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:10px}
   .scrollcue .ln{width:1px;height:34px;background:linear-gradient(var(--red-type),transparent);animation:drop 2.4s ease-in-out infinite}
   @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  .panel{background:rgba(12,12,15,.76);backdrop-filter:blur(7px);border:1px solid var(--line);padding:30px}
-  .plabel{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-bottom:16px}
+  .panel{background:rgba(12,12,15,.78);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid var(--line);padding:30px;text-align:left}
+  .plabel{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
 
-  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px;text-align:left}
-  .duo .panel h3{margin:10px 0 14px}
-  .duo .panel p{font-size:16px;color:var(--dim);line-height:1.7}
-
-  /* ================= LE SCORE OPSIS — section signature ================= */
-  #score{padding-top:calc(var(--lb) + 11vh);padding-bottom:calc(var(--lb) + 11vh)}
-  #score .veil{background:radial-gradient(closest-side,rgba(8,8,10,.92),rgba(8,8,10,.62) 55%,transparent)}
-  .scoreglow{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(880px,120vw);height:min(880px,120vw);z-index:-1;pointer-events:none;
-    background:radial-gradient(closest-side,rgba(168,20,26,.20),rgba(183,145,82,.07) 45%,transparent 72%)}
-
-  .lens{position:relative;width:min(560px,88vw);margin:44px auto 0;aspect-ratio:1}
-  .lens svg{width:100%;height:100%;overflow:visible;display:block}
-  .barrel{fill:none;stroke:rgba(198,160,99,.55);stroke-width:1}
-  .barrel.inner{stroke:rgba(242,239,232,.14)}
-  .tick{stroke:rgba(242,239,232,.3);stroke-width:1}
-  .tick.major{stroke:var(--gold);stroke-width:1.6}
-  .ticknum{font-family:var(--mono);font-size:11px;fill:var(--ash);text-anchor:middle;dominant-baseline:middle}
-  .needle{stroke:var(--red-type);stroke-width:2;stroke-linecap:round;transition:transform 1s cubic-bezier(.2,.7,.2,1);transform-box:view-box;transform-origin:0px 0px}
-  .blade{fill:#15151b;stroke:rgba(242,239,232,.22);stroke-width:1.2;transform-box:fill-box;transform-origin:center;transition:transform .9s cubic-bezier(.2,.7,.2,1),fill .4s,stroke .4s}
-  .blade.on{fill:#33141a;stroke:var(--red-type);stroke-width:1.8}
-  .ctrval{font-family:var(--display);font-weight:500;font-size:76px;fill:var(--gold);text-anchor:middle;dominant-baseline:central;letter-spacing:.02em}
-  .ctrlab{font-family:var(--mono);font-size:11px;letter-spacing:.24em;fill:var(--ash);text-anchor:middle;text-transform:uppercase}
-  .engrave{font-family:var(--mono);font-size:11px;letter-spacing:.3em;fill:var(--gold);text-anchor:middle;text-transform:uppercase}
-
-  /* le mot OPSIS devient l'interface */
-  .keys{display:flex;justify-content:center;gap:clamp(4px,2.2vw,22px);margin-top:40px;flex-wrap:nowrap}
-  .key{background:none;border:0;border-bottom:2px solid transparent;padding:6px clamp(6px,2vw,18px) 12px;cursor:pointer;color:var(--ash);
-       font-family:var(--display);font-weight:500;font-size:clamp(38px,9vw,84px);line-height:1;letter-spacing:.04em;
-       transition:color .35s,border-color .35s,transform .35s}
-  .key:hover{color:var(--text);transform:translateY(-3px)}
-  .key.on{color:var(--red-type);border-bottom-color:var(--red-type)}
-  .key.synth.on{color:var(--gold);border-bottom-color:var(--gold)}
-  .keyhint{margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
-
-  .detail{max-width:640px;margin:34px auto 0;text-align:left;min-height:212px}
-  .detail .dname{font-family:var(--display);font-weight:500;font-size:clamp(24px,3.6vw,34px);text-transform:uppercase;letter-spacing:.06em;color:var(--offwhite)}
-  .detail .dq{font-family:var(--display);font-style:italic;font-size:clamp(19px,2.6vw,25px);color:var(--red-type);margin-top:12px;line-height:1.35}
-  .detail .dq.g{color:var(--gold)}
-  .detail .dd{margin-top:14px;font-size:16px;color:var(--dim);line-height:1.7}
-  .detail .dbar{margin-top:22px;display:grid;grid-template-columns:1fr 76px;gap:18px;align-items:center}
-  .detail .dtrack{height:7px;background:rgba(242,239,232,.1);position:relative;overflow:hidden}
-  .detail .dtrack i{position:absolute;inset:0 auto 0 0;width:0;background:var(--red);transition:width .9s cubic-bezier(.2,.7,.2,1)}
-  .detail .dtrack i.g{background:var(--gold)}
-  .detail .dval{font-family:var(--display);font-weight:500;font-size:34px;text-align:right;color:var(--offwhite)}
-  .detail.swap{opacity:0;transform:translateY(8px)}
-  .detail{transition:opacity .3s,transform .3s}
-  /* ====================================================================== */
-
-  .fiche{max-width:620px;margin:40px auto 0;text-align:left}
-  .frow{display:grid;grid-template-columns:130px 1fr 52px;gap:14px;align-items:center;padding:10px 0}
-  .frow .who{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--dim)}
-  .frow .bar{height:6px;background:rgba(242,239,232,.1);position:relative;overflow:hidden}
-  .frow .bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--red);transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
-  .reveal-bars.in .frow .bar i{width:var(--w)}
-  .frow .val{font-family:var(--display);font-weight:500;font-size:22px;text-align:right}
-  .fsynth{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
-  .fsynth .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-  .fsynth .v{font-family:var(--display);font-weight:500;font-size:56px;color:var(--gold);line-height:1}
-  .fsynth .v small{font-size:20px;color:var(--ash)}
-  .fverdict{margin-top:18px;display:flex;align-items:center;gap:12px;border:1px solid var(--gold);padding:15px 18px}
-  .fverdict .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none}
-  .fverdict .txt{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-  .ftime{margin-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash)}
-  .ftime b{color:var(--offwhite);font-weight:500}
-
-  .vlist{max-width:760px;margin:40px auto 0;text-align:left}
-  .vrow{display:grid;grid-template-columns:14px 220px 1fr;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line)}
-  .vrow .d{width:10px;height:10px;border-radius:50%;align-self:center}
-  .vrow .n{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-  .vrow .x{font-size:15px;color:var(--dim);line-height:1.6}
-
-  .split{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:42px;text-align:left}
-  .split .rule{background:var(--line)}
-  .split .col{padding:0 36px}
-  .split .col:first-child{padding-left:0}
-  .split .col:last-child{padding-right:0}
-  .qlist{list-style:none}
-  .qlist li{padding:10px 0;font-size:16px;color:var(--text);border-bottom:1px solid rgba(242,239,232,.06)}
-  .qlist li:last-child{border-bottom:0}
-  .qlist.italic li{font-family:var(--display);font-style:italic;font-size:20px}
-
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;justify-content:center}
-  .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:9px 13px}
-  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;text-align:left}
-  .three .n{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.16em;color:var(--red-type)}
-  .three .t{font-family:var(--display);font-weight:400;font-size:23px;margin-top:9px;line-height:1.3}
-
-  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;text-align:left}
-  .fmt{background:rgba(12,12,15,.72);backdrop-filter:blur(6px);border:1px solid var(--line);padding:24px 20px;transition:border-color .3s,transform .4s}
-  .fmt:hover{border-color:rgba(226,69,76,.5);transform:translateY(-3px)}
-  .fmt .fk{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-type)}
-  .fmt h4{font-family:var(--display);font-weight:500;font-size:24px;letter-spacing:.05em;margin:10px 0 9px}
-  .fmt p{font-size:14px;color:var(--dim);line-height:1.65}
-  .fmt.flag{grid-column:span 3;border-color:rgba(198,160,99,.45);display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-  .fmt.flag .fk{color:var(--gold)}
-  .fmt.flag h4{font-size:36px}
-
-  .versus{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center;max-width:680px;margin:42px auto 0}
-  .vs{text-align:center;padding:26px 18px;border:1px solid var(--line)}
-  .vs .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
-  .vs .n{font-family:var(--display);font-weight:500;font-size:clamp(48px,9vw,78px);line-height:1;margin-top:10px}
-  .vs.opsis .n{color:var(--gold)}
-  .vs.public .n{color:var(--blue)}
-  .vsx{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
-
-  .road{margin-top:46px;display:grid;grid-template-columns:repeat(6,1fr);text-align:left}
-  .rst{padding:22px 14px 0;border-top:1px solid var(--line);position:relative}
-  .rst:before{content:"";position:absolute;top:-4px;left:14px;width:7px;height:7px;border-radius:50%;background:var(--ash)}
-  .rst.now{border-top-color:var(--red)}
-  .rst.now:before{background:var(--red-type)}
-  .rst .ph{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
-  .rst.now .ph{color:var(--red-type)}
-  .rst .nm{font-family:var(--display);font-weight:500;font-size:19px;text-transform:uppercase;letter-spacing:.05em;margin-top:8px;line-height:1.25}
-
-  .form{margin:36px auto 0;max-width:540px;display:flex;border:1px solid rgba(242,239,232,.3)}
-  .form input{flex:1;min-width:0;background:transparent;border:0;color:var(--offwhite);font-family:var(--mono);font-size:14px;padding:16px 18px}
-  .form input::placeholder{color:var(--ash)}
-  .form input:focus{outline:none;background:rgba(242,239,232,.04)}
-  .form button{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--obsidian);background:var(--red-bright);border:0;padding:16px 24px;cursor:pointer;transition:background .3s}
-  .form button:hover{background:var(--red-type)}
-  .formnote{margin-top:13px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ash)}
-  .formnote.ok{color:var(--gold)}
-  .formnote.err{color:var(--red-type)}
-  .where{margin-top:34px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .where a{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);border:1px solid rgba(242,239,232,.2);padding:11px 17px;transition:.3s}
-  .where a:hover{border-color:var(--red-type);color:var(--red-type)}
-
-  footer{position:relative;z-index:10;padding:46px 26px calc(var(--lb) + 34px);border-top:1px solid var(--line);background:rgba(8,8,10,.84);backdrop-filter:blur(7px)}
-  .fin{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash)}
-  .fin .fbrand{font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:.2em;color:var(--offwhite)}
-  .fin a:hover{color:var(--red-type)}
-
-  .rv{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
   .rv.in{opacity:1;transform:none}
-  .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+  /* ---------- le constat ---------- */
+  .count{font-family:var(--display);font-weight:500;font-size:clamp(64px,14vw,160px);line-height:1;color:var(--offwhite);letter-spacing:.01em;margin-top:18px}
+  .count small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ash);margin-top:14px}
+
+  /* ---------- la méthode ---------- */
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .trio .panel .num{font-family:var(--display);font-style:italic;font-size:38px;color:var(--red-type);line-height:1}
+  .trio .panel h3{margin:14px 0 12px}
+  .trio .panel p{font-size:16px;color:var(--dim);line-height:1.7}
+
+  /* ---------- les formats ---------- */
+  .formats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .fmt{position:relative;overflow:hidden}
+  .fmt .dur{display:flex;align-items:baseline;gap:8px;margin-top:18px}
+  .fmt .dur b{font-family:var(--display);font-weight:500;font-size:54px;line-height:1;color:var(--offwhite)}
+  .fmt .dur span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+  .fmt .meter{height:3px;background:rgba(242,239,232,.1);margin-top:18px;position:relative}
+  .fmt .meter i{position:absolute;inset:0 auto 0 0;width:0;background:var(--red);transition:width 1.4s cubic-bezier(.2,.7,.2,1) .2s}
+  .fmt.in .meter i{width:var(--w)}
+  .fmt.serie .meter i{background:var(--gold)}
+  .fmt h3{margin-top:22px}
+  .fmt p{margin-top:12px;font-size:16px;color:var(--dim);line-height:1.7}
+  .fmt .freq{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+  /* ---------- la semaine ---------- */
+  .switch{display:inline-flex;margin-top:34px;border:1px solid var(--line)}
+  .switch button{background:none;border:0;color:var(--ash);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px;cursor:pointer;transition:.3s}
+  .switch button[aria-pressed="true"]{background:var(--offwhite);color:var(--obsidian)}
+  .week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px}
+  .day{border:1px solid var(--line);background:rgba(12,12,15,.78);padding:16px 12px 18px;text-align:left;min-height:150px;display:flex;flex-direction:column;transition:border-color .4s,background .4s}
+  .day .dn{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+  .day .df{font-family:var(--display);font-weight:500;font-size:20px;text-transform:uppercase;letter-spacing:.05em;margin-top:auto;line-height:1.15;transition:opacity .35s}
+  .day .dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--dim);margin-top:8px;transition:opacity .35s}
+  .day .bar{height:3px;margin-top:14px;background:rgba(242,239,232,.12);position:relative}
+  .day .bar i{position:absolute;inset:0 auto 0 0;background:var(--red);transition:width .7s cubic-bezier(.2,.7,.2,1),background .4s}
+  .day.ep{border-color:rgba(198,160,99,.5);background:rgba(28,22,14,.7)}
+  .day.ep .df{color:var(--gold)}
+  .day.ep .bar i{background:var(--gold)}
+  .week.fade .df,.week.fade .dt{opacity:0}
+  .weeknote{margin-top:18px;font-size:15px;color:var(--dim)}
+
+  /* ---------- territoires ---------- */
+  .terr{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+  .terr div{background:rgba(10,10,13,.9);padding:28px 26px;text-align:left}
+  .terr .tn{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--red-type)}
+  .terr h3{margin-top:12px}
+  .terr p{margin-top:10px;font-size:15px;color:var(--dim);line-height:1.65}
+
+  /* ---------- séries ---------- */
+  .marquee{position:relative;overflow:hidden;margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+  .track{display:flex;gap:44px;width:max-content;animation:slide 70s linear infinite}
+  .track.rev{animation-direction:reverse;animation-duration:85s;margin-top:18px}
+  .marquee:hover .track{animation-play-state:paused}
+  .track span{font-family:var(--display);font-weight:500;font-size:clamp(22px,3vw,32px);letter-spacing:.06em;white-space:nowrap;color:var(--dim)}
+  .track span:nth-child(3n+1){color:var(--offwhite)}
+  .track span:nth-child(5n+2){color:var(--red-type);font-style:italic;text-transform:none}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .featured{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .featured .panel h3{margin-top:12px}
+  .featured .panel p{margin-top:12px;font-size:16px;color:var(--dim);line-height:1.7}
+
+  /* ---------- extrait ---------- */
+  .story{max-width:720px;margin:44px auto 0;text-align:left;border:1px solid var(--line);background:rgba(10,10,13,.88)}
+  .story .head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+  .story .head b{color:var(--red-type);font-weight:500}
+  .story .body{padding:34px clamp(22px,5vw,48px) 38px}
+  .story .ttl{font-family:var(--display);font-weight:500;font-size:clamp(26px,4vw,40px);text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
+  .story .scene{margin-top:22px;font-family:var(--display);font-size:clamp(19px,2.3vw,22px);line-height:1.7;color:var(--text)}
+  .story .scene p+p{margin-top:16px}
+  .story .scene .drop{font-style:italic;color:var(--offwhite)}
+  .story .progress{height:2px;background:rgba(242,239,232,.1)}
+  .story .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--red));transition:width 2.4s cubic-bezier(.2,.7,.2,1) .4s}
+  .story.in .progress i{width:31%}
+  .story .foot{padding:16px 24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+  /* ---------- promesse ---------- */
+  .vows{max-width:760px;margin:40px auto 0;text-align:left}
+  .vow{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+  .vow .vn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--red-type)}
+  .vow .vt{font-family:var(--display);font-size:clamp(20px,2.6vw,25px);line-height:1.35;color:var(--offwhite)}
+  .vow .vt span{display:block;font-family:var(--sans);font-size:15px;color:var(--dim);margin-top:6px;line-height:1.6}
+
+  /* ---------- inscription ---------- */
+  .signup{max-width:560px;margin:36px auto 0;display:flex;border:1px solid rgba(242,239,232,.3);background:rgba(10,10,13,.9)}
+  .signup input{flex:1;min-width:0;background:none;border:0;color:var(--offwhite);font-family:var(--sans);font-size:17px;padding:18px 20px}
+  .signup input::placeholder{color:var(--ash)}
+  .signup input:focus{outline:none}
+  .signup:focus-within{border-color:var(--gold)}
+  .signup .btn{margin:0;border:0}
+  .formmsg{margin-top:16px;min-height:24px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--gold)}
+  .countdown{display:flex;justify-content:center;gap:clamp(16px,4vw,40px);margin-top:44px}
+  .countdown div{text-align:center}
+  .countdown b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(40px,7vw,72px);line-height:1;color:var(--offwhite)}
+  .countdown span{display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash)}
+
+  /* ---------- fin ---------- */
+  .fin{position:relative;z-index:10;border-top:1px solid var(--line);padding:46px 26px calc(var(--lb) + 40px);background:rgba(8,8,10,.92)}
+  .fin .row{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .fin .fbrand{font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:.2em;color:var(--offwhite)}
+  .fin .ftag{font-family:var(--display);font-style:italic;font-size:18px;color:var(--dim);margin-top:6px}
+  .fin .fmeta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);text-align:right;line-height:2}
 
   @media (max-width:900px){
-    .fgrid{grid-template-columns:1fr 1fr}
-    .fmt.flag{grid-column:span 2;grid-template-columns:1fr}
-    .road{grid-template-columns:repeat(3,1fr);gap:24px 0}
-    .three{grid-template-columns:1fr}
-    .ctrval{font-size:60px}
+    .trio,.formats,.featured{grid-template-columns:1fr}
+    .terr{grid-template-columns:1fr 1fr}
+    .week{grid-template-columns:repeat(4,1fr)}
   }
-  @media (max-width:680px){
-    body{font-size:16px}
-    nav{padding:12px 18px}
+  @media (max-width:560px){
+    nav{padding:12px 16px}
     nav .brand{font-size:20px}
-    .act{padding-left:20px;padding-right:20px}
-    .duo{grid-template-columns:1fr}
-    .fgrid{grid-template-columns:1fr}
-    .fmt.flag{grid-column:span 1}
-    .split{grid-template-columns:1fr;gap:36px}
-    .split .rule{height:1px;width:100%}
-    .split .col{padding:0}
-    .versus{grid-template-columns:1fr;gap:14px}
-    .vrow{grid-template-columns:12px 1fr;gap:12px}
-    .vrow .x{grid-column:2}
-    .frow{grid-template-columns:104px 1fr 46px}
-    .road{grid-template-columns:1fr 1fr}
-    .thread{right:12px}
-    .form{flex-direction:column}
-    .form button{padding:15px}
-    .detail{min-height:250px}
-    .ctrval{font-size:54px}
-    .ticknum{font-size:13px}
+    nav .cta{padding:10px 12px;font-size:10px}
+    .act{padding-left:16px;padding-right:16px}
+    .terr{grid-template-columns:1fr}
+    .week{grid-template-columns:1fr 1fr}
+    .day{min-height:118px}
+    .panel{padding:24px}
+    .signup{flex-direction:column}
+    .signup .btn{justify-content:center}
+    .thread,.threadpct{display:none}
+    .fin .fmeta{text-align:left}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    *{animation:none!important}
     .rv{opacity:1;transform:none;transition:none}
-    .fmt:hover,.key:hover{transform:none}
+    .track{animation:none}
+    .scrollcue .ln{animation:none}
   }
 </style>
 </head>
@@ -298,9 +257,10 @@
 
 <canvas id="webgl" aria-hidden="true"></canvas>
 <div class="fallbackbg" id="fallbackbg" aria-hidden="true"></div>
-<svg class="grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg>
+<svg class="grain" aria-hidden="true"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
 <div class="vig" aria-hidden="true"></div>
-<div class="lb t" aria-hidden="true"></div><div class="lb b" aria-hidden="true"></div>
+<div class="lb t" aria-hidden="true"></div>
+<div class="lb b" aria-hidden="true"></div>
 <div class="thread" aria-hidden="true"><i id="threadfill"></i></div>
 <div class="threadpct" id="threadpct" aria-hidden="true">00 %</div>
 
@@ -313,302 +273,237 @@
     </svg>
     OPSIS
   </a>
-  <a class="cta" href="#club">Rejoindre le Club</a>
+  <a class="cta" href="#inscription">Recevoir l'histoire du jour</a>
 </nav>
 
 <main id="top">
 
-  <!-- ACTE 0 — HERO -->
-  <section class="act" id="hero">
-    <div class="inner">
-      <p class="kick rv in">OPSIS</p>
-      <h1 class="rv in d1">Le cinéma qui<br>mérite votre temps</h1>
-      <p class="sub rv in d2">Choisissez ce qui mérite de recevoir votre attention</p>
-    </div>
-    <div class="scrollcue" aria-hidden="true"><span>Ouvrez l'œil</span><span class="ln"></span></div>
-  </section>
-
-  <!-- ACTE 1 — LE CONSTAT -->
-  <section class="act">
-    <div class="veil"></div>
-    <div class="inner left">
-      <p class="kick rv">Le constat</p>
-      <h2 class="rv d1">Le problème n'est plus<br>de trouver quoi regarder.<br><em>C'est de savoir ce qui mérite notre temps.</em></h2>
-      <p class="p rv d2">Des centaines de films sortent chaque année. Les plateformes publient sans interruption. Les réseaux recommandent en continu. <b>Notre attention, elle, reste limitée.</b> OPSIS remet au centre la seule ressource que personne ne peut fabriquer : le temps.</p>
-    </div>
-  </section>
-
-  <!-- ACTE 2 — LA MISSION -->
-  <section class="act">
+  <!-- I. OUVERTURE -->
+  <section class="act" aria-labelledby="h-hero">
     <div class="veil"></div>
     <div class="inner">
-      <p class="kick rv">La mission</p>
-      <h2 class="rv d1">Protéger votre attention.<br><em>Puis l'enrichir.</em></h2>
-      <div class="duo">
-        <div class="panel rv d2">
-          <p class="plabel">01 — Protéger</p>
-          <h3>Avant l'œuvre</h3>
-          <p>Éviter les films et séries qui ne justifient pas l'attention, le temps et l'énergie qu'ils demandent.</p>
-        </div>
-        <div class="panel rv d3">
-          <p class="plabel">02 — Prolonger</p>
-          <h3>Après l'œuvre</h3>
-          <p>Aller plus loin avec celles qui le méritent : analyses, théories, débats, références, interviews, recommandations.</p>
-        </div>
-      </div>
+      <p class="kick">Histoires vraies · Chaque jour</p>
+      <h1 id="h-hero">La réalité,<em>mise en scène.</em></h1>
+      <p class="lede">Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.</p>
+      <a class="btn" href="#inscription">Recevoir l'histoire de demain <span class="arw" aria-hidden="true">→</span></a>
+      <p class="sub">Gratuit · Premier épisode le lundi 4 janvier 2027</p>
     </div>
+    <div class="scrollcue" aria-hidden="true"><span>Entrer</span><span class="ln"></span></div>
   </section>
 
-  <!-- ACTE 3 — LA QUESTION -->
-  <section class="act short">
+  <!-- II. LE CONSTAT -->
+  <section class="act" aria-labelledby="h-constat">
     <div class="veil"></div>
-    <div class="inner">
-      <p class="kick rv">La question</p>
-      <p class="lede rv d1" style="max-width:32ch">Une œuvre peut être brillante mais inaccessible. Imparfaite mais passionnante. Magnifique mais vide. Divisive mais essentielle.</p>
-      <h2 class="rv d2" style="margin-top:36px">« Est-ce que cette œuvre<br><em>mérite mon temps ?</em> »</h2>
-      <p class="p rv d3 tight">Une note ne dit pas si un film est bon. Elle dit s'il vaut ce qu'il vous coûte.</p>
+    <div class="inner rv">
+      <p class="kick g">Le constat</p>
+      <h2 id="h-constat">Vous voyez des milliers de faits.<br><em>Vous n'en retenez aucun.</em></h2>
+      <p class="p">Le scroll vous montre tout et ne vous raconte rien. Une vidéo de quarante secondes, une info sans début ni fin, puis la suivante. <b>OPSIS fait l'inverse : une seule histoire par jour, racontée du début à la fin, pour que vous la gardiez.</b></p>
     </div>
   </section>
 
-  <!-- ================= ACTE 4 — LE SCORE OPSIS ================= -->
-  <section class="act" id="score">
-    <div class="veil"></div>
-    <div class="scoreglow" aria-hidden="true"></div>
-    <div class="inner wide">
-      <p class="kick g rv">Système de lecture propriétaire</p>
-      <h2 class="rv d1">Le <em class="g">Score OPSIS</em></h2>
-      <p class="p rv d2 tight">Cinq dimensions. Cinq lamelles. L'objectif s'ouvre exactement autant que l'œuvre le mérite.</p>
-
-      <div class="lens rv d2">
-        <svg viewBox="-200 -200 400 400" role="img" aria-label="Objectif à cinq lamelles : chaque lamelle représente une dimension du Score OPSIS et son ouverture correspond à sa note">
-          <g id="ticks" aria-hidden="true"></g>
-          <circle class="barrel" r="176"/>
-          <circle class="barrel inner" r="150"/>
-          <line class="needle" id="needle" x1="0" y1="-150" x2="0" y2="-176"/>
-          <g id="blades"></g>
-          <text class="engrave" id="engrave" y="-108">Œil</text>
-          <text class="ctrval" id="ctrval" y="4">9,3</text>
-          <text class="ctrlab" y="52">sur 10</text>
-        </svg>
-      </div>
-
-      <div class="keys rv d3" role="group" aria-label="Les cinq dimensions du Score OPSIS">
-        <button class="key on" type="button" data-i="0" aria-pressed="true" aria-label="Œil">O</button>
-        <button class="key" type="button" data-i="1" aria-pressed="false" aria-label="Propos">P</button>
-        <button class="key" type="button" data-i="2" aria-pressed="false" aria-label="Sensation">S</button>
-        <button class="key" type="button" data-i="3" aria-pressed="false" aria-label="Impact">I</button>
-        <button class="key synth" type="button" data-i="4" aria-pressed="false" aria-label="Synthèse">S</button>
-      </div>
-      <p class="keyhint rv d3">Le nom du média est la méthode — choisissez une lettre</p>
-
-      <div class="detail rv d3" id="detail" aria-live="polite">
-        <p class="dname" id="dname">Œil — la maîtrise</p>
-        <p class="dq" id="dq">Est-ce que c'est bien fait ?</p>
-        <p class="dd" id="dd">Mise en scène, image, montage, son, direction artistique, jeu, réalisation. Le geste derrière l'écran.</p>
-        <div class="dbar">
-          <span class="dtrack"><i id="dfill" style="width:93%"></i></span>
-          <span class="dval" id="dval">9,3</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- =========================================================== -->
-
-  <!-- ACTE 5 — EN PRATIQUE -->
-  <section class="act">
-    <div class="veil"></div>
-    <div class="inner">
-      <p class="kick rv">En pratique</p>
-      <h2 class="rv d1">Le chiffre compare.<br>La synthèse explique.<br><em>Le verdict tranche.</em></h2>
-
-      <div class="fiche panel rv d2 reveal-bars">
-        <p class="plabel">Fiche OPSIS — exemple</p>
-        <div class="frow"><span class="who">O — Œil</span><span class="bar"><i style="--w:93%"></i></span><span class="val">9,3</span></div>
-        <div class="frow"><span class="who">P — Propos</span><span class="bar"><i style="--w:88%"></i></span><span class="val">8,8</span></div>
-        <div class="frow"><span class="who">S — Sensation</span><span class="bar"><i style="--w:91%"></i></span><span class="val">9,1</span></div>
-        <div class="frow"><span class="who">I — Impact</span><span class="bar"><i style="--w:80%"></i></span><span class="val">8,0</span></div>
-        <div class="fsynth"><span class="l">S — Synthèse</span><span class="v">8,7<small> / 10</small></span></div>
-        <div class="fverdict"><span class="dot"></span><span class="txt">Mérite ton temps</span></div>
-        <div class="ftime"><span>Temps investi — <b>2 h 19</b></span><span>Vaut-il le coup — <b>Oui</b></span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTE 6 — LES VERDICTS -->
-  <section class="act">
-    <div class="veil"></div>
-    <div class="inner">
-      <p class="kick rv">Les verdicts</p>
-      <h2 class="rv d1">Jamais seulement<br><em>« bon » ou « mauvais »</em></h2>
-      <div class="vlist rv d2">
-        <div class="vrow"><span class="d" style="background:#C6A063"></span><span class="n" style="color:#C6A063">Mérite ton temps</span><span class="x">Une œuvre que nous recommandons fortement.</span></div>
-        <div class="vrow"><span class="d" style="background:#F2EFE8"></span><span class="n" style="color:#F2EFE8">À voir si…</span><span class="x">Intéressante, mais très dépendante de vos goûts et de vos attentes.</span></div>
-        <div class="vrow"><span class="d" style="background:#5E92CE"></span><span class="n" style="color:#5E92CE">Prenez le risque</span><span class="x">Imparfaite, étrange ou divisive, mais assez singulière pour justifier votre attention.</span></div>
-        <div class="vrow"><span class="d" style="background:#8B8579"></span><span class="n" style="color:#B9B4AA">Épargnez votre temps</span><span class="x">Ne justifie pas l'investissement qu'elle demande.</span></div>
-        <div class="vrow"><span class="d" style="background:#E2454C"></span><span class="n" style="color:#E2454C">À débattre</span><span class="x">Trop complexe ou trop controversée pour être réduite à une recommandation.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTE 7 — AVANT / APRÈS -->
-  <section class="act">
+  <!-- III. LA MÉTHODE -->
+  <section class="act" aria-labelledby="h-methode">
     <div class="veil"></div>
     <div class="inner wide">
-      <p class="kick rv">Avant, après</p>
-      <h2 class="rv d1">Une œuvre intéressante ne devrait<br>pas s'arrêter <em>au générique</em></h2>
-      <div class="split">
-        <div class="col rv d2">
-          <p class="plabel">Avant le film — décider</p>
-          <ul class="qlist italic">
-            <li>Est-ce que ça vaut mon temps ?</li>
-            <li>Pour qui est-ce fait ?</li>
-            <li>Quelles sont mes chances d'aimer ?</li>
-            <li>Quelle expérience dois-je attendre ?</li>
-          </ul>
-        </div>
-        <div class="rule rv d2"></div>
-        <div class="col rv d3">
-          <p class="plabel">Après le film — prolonger</p>
-          <ul class="qlist">
-            <li>Analyses — comprendre une scène, un personnage, une intention.</li>
-            <li>Théories — explorer ce qui se cache derrière l'œuvre.</li>
-            <li>Débats — confronter plusieurs interprétations.</li>
-            <li>Références — remonter aux influences.</li>
-            <li>Recommandations — trouver la suivante.</li>
-            <li>Making-of — comprendre comment c'est fabriqué.</li>
-          </ul>
-        </div>
+      <div class="rv">
+        <p class="kick">La méthode</p>
+        <h2 id="h-methode">Des histoires vraies,<br><em>écrites comme des films.</em></h2>
+        <p class="p">Chaque histoire OPSIS suit la grammaire du cinéma. Ce que vous lisez est vrai et sourcé ; la façon de le raconter vient du montage.</p>
+      </div>
+      <div class="trio">
+        <article class="panel rv">
+          <p class="num">01</p>
+          <h3>La scène d'abord</h3>
+          <p>On ouvre au cœur de l'action, sans préambule. Le contexte arrive quand vous en avez besoin, jamais avant.</p>
+        </article>
+        <article class="panel rv">
+          <p class="num">02</p>
+          <h3>Le basculement</h3>
+          <p>Chaque histoire a un moment précis où tout se retourne. C'est lui qu'on met en scène, comme un plan-séquence.</p>
+        </article>
+        <article class="panel rv">
+          <p class="num">03</p>
+          <h3>Ce qu'on retient</h3>
+          <p>Trois idées à la fin, assez claires pour les raconter à quelqu'un le soir même. Divertir, puis apprendre.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ACTE 8 — LA FICHE OPSIS -->
-  <section class="act">
-    <div class="veil"></div>
-    <div class="inner">
-      <p class="kick rv">Le format fondateur</p>
-      <h2 class="rv d1">La <em>Fiche OPSIS</em></h2>
-      <p class="p rv d2">Une œuvre transformée en objet éditorial clair, visuel et partageable.</p>
-      <div class="tags rv d2">
-        <span class="tag">Score OPSIS</span><span class="tag">Verdict</span><span class="tag">Temps investi</span><span class="tag">Les 4 regards</span><span class="tag">Points forts</span><span class="tag">Points faibles</span><span class="tag">Pour qui</span><span class="tag">À éviter si…</span><span class="tag">Détails à remarquer</span><span class="tag">Théories</span><span class="tag">Références</span><span class="tag">Œuvres similaires</span><span class="tag">Question de débat</span>
-      </div>
-      <div class="three">
-        <div class="rv d2"><p class="n">Règle 01</p><p class="t">Comprise en quelques secondes.</p></div>
-        <div class="rv d3"><p class="n">Règle 02</p><p class="t">Utile en moins d'une minute.</p></div>
-        <div class="rv d4"><p class="n">Règle 03</p><p class="t">Assez intéressante pour lancer une discussion.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTE 9 — LES FORMATS -->
-  <section class="act">
+  <!-- IV. LES FORMATS -->
+  <section class="act" aria-labelledby="h-formats">
     <div class="veil"></div>
     <div class="inner wide">
-      <p class="kick rv">L'écosystème</p>
-      <h2 class="rv d1">Un média,<br><em>plusieurs vitesses</em></h2>
-      <div class="fgrid">
-        <div class="fmt rv d1"><p class="fk">Le socle</p><h4>Fiche OPSIS</h4><p>Une œuvre, un score, un verdict. La porte d'entrée vers la discussion.</p></div>
-        <div class="fmt rv d1"><p class="fk">Format court</p><h4>OPSIS Flash</h4><p>Opinions, recommandations et observations en quelques secondes.</p></div>
-        <div class="fmt rv d2"><p class="fk">Analyse</p><h4>OPSIS Décryptage</h4><p>Une œuvre, une scène ou un phénomène culturel, en profondeur.</p></div>
-        <div class="fmt rv d2"><p class="fk">Interprétation</p><h4>OPSIS Théories</h4><p>Hypothèses, lectures cachées et détails que personne n'a vus.</p></div>
-        <div class="fmt rv d3"><p class="fk">Rencontre</p><h4>OPSIS Interview</h4><p>Réalisateurs, actrices, scénaristes, producteurs, techniciens.</p></div>
-        <div class="fmt rv d3"><p class="fk">Actualité</p><h4>OPSIS News</h4><p>L'essentiel du cinéma et de l'audiovisuel, sans le bruit.</p></div>
-        <div class="fmt flag rv d3">
-          <div>
-            <p class="fk">Le rendez-vous</p>
-            <h4>La Séance</h4>
+      <div class="rv">
+        <p class="kick g">Les formats</p>
+        <h2 id="h-formats">Une histoire chaque jour.<br><em class="g">La durée dépend du récit.</em></h2>
+      </div>
+      <div class="formats">
+        <article class="panel fmt rv" style="--w:20%">
+          <p class="plabel">Format court</p>
+          <div class="dur"><b>3</b><span>minutes</span></div>
+          <div class="meter"><i></i></div>
+          <h3>Le Flash</h3>
+          <p>Un fait vrai stupéfiant, raconté en une scène. Le temps d'un café.</p>
+          <p class="freq">3 fois par semaine</p>
+        </article>
+        <article class="panel fmt rv" style="--w:40%">
+          <p class="plabel">Format moyen</p>
+          <div class="dur"><b>6</b><span>minutes</span></div>
+          <div class="meter"><i></i></div>
+          <h3>Le Récit</h3>
+          <p>Une histoire complète en trois actes : le monde d'avant, l'escalade, la conséquence.</p>
+          <p class="freq">3 à 4 fois par semaine</p>
+        </article>
+        <article class="panel fmt serie rv" style="--w:100%">
+          <p class="plabel">L'événement du mois</p>
+          <div class="dur"><b>5</b><span>épisodes</span></div>
+          <div class="meter"><i></i></div>
+          <h3>La Série</h3>
+          <p>Une grande histoire en cinq épisodes, du lundi au vendredi. Chaque épisode finit sur une question qui vous fait revenir.</p>
+          <p class="freq">La première semaine de chaque mois</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- V. LA SEMAINE -->
+  <section class="act" aria-labelledby="h-semaine">
+    <div class="veil"></div>
+    <div class="inner wide rv">
+      <p class="kick">Le rituel</p>
+      <h2 id="h-semaine">Sept jours,<br><em>sept histoires.</em></h2>
+      <div class="switch" role="group" aria-label="Choisir la semaine affichée">
+        <button type="button" data-mode="type" aria-pressed="true">Semaine type</button>
+        <button type="button" data-mode="serie" aria-pressed="false">Semaine Série</button>
+      </div>
+      <div class="week" id="week" aria-live="polite"></div>
+      <p class="weeknote" id="weeknote">Chaque matin, une nouvelle histoire, dans l'app et dans votre boîte mail.</p>
+    </div>
+  </section>
+
+  <!-- VI. LES TERRITOIRES -->
+  <section class="act" aria-labelledby="h-terr">
+    <div class="veil"></div>
+    <div class="inner wide">
+      <div class="rv">
+        <p class="kick g">Les territoires</p>
+        <h2 id="h-terr">Six terrains de jeu.<br><em>Une seule exigence.</em></h2>
+        <p class="p">Aucune histoire ne ressemble à celle de la veille. Toutes passent le même filtre : un basculement, un savoir, une scène, des preuves.</p>
+      </div>
+      <div class="terr rv">
+        <div><p class="tn">01</p><h3>Destins</h3><p>Ascensions, chutes et renaissances. Ce que la réussite fait aux gens.</p></div>
+        <div><p class="tn">02</p><h3>Arnaques</h3><p>Imposteurs, faussaires, mensonges géants. Comment le monde s'est fait avoir.</p></div>
+        <div><p class="tn">03</p><h3>Inventions</h3><p>Idées, rivalités, accidents. Les coulisses des objets et des marques.</p></div>
+        <div><p class="tn">04</p><h3>Corps et science</h3><p>Survies impossibles, découvertes, expériences. Le vivant poussé à bout.</p></div>
+        <div><p class="tn">05</p><h3>Exploits</h3><p>Victoires improbables, défis fous, défaites légendaires.</p></div>
+        <div><p class="tn">06</p><h3>Coulisses</h3><p>Les histoires vraies derrière les films, les albums et les œuvres.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VII. LES SÉRIES -->
+  <section class="act" aria-labelledby="h-series">
+    <div class="veil"></div>
+    <div class="inner wide">
+      <div class="rv">
+        <p class="kick">Les séries</p>
+        <h2 id="h-series">Des rendez-vous<br><em>qui reviennent.</em></h2>
+        <p class="p">Chaque série garde le même angle et change d'histoire à chaque épisode. <b>80 séries sont en préparation.</b></p>
+      </div>
+      <div class="marquee rv" aria-hidden="true">
+        <div class="track" id="trackA"></div>
+        <div class="track rev" id="trackB"></div>
+      </div>
+      <div class="featured">
+        <article class="panel rv">
+          <p class="plabel">Destins</p>
+          <h3>Jusqu'à la chute</h3>
+          <p>Des gens au sommet, suivis jusqu'au moment où leur réussite les détruit.</p>
+        </article>
+        <article class="panel rv">
+          <p class="plabel">Arnaques</p>
+          <h3>L'arnaque parfaite</h3>
+          <p>Des escroqueries trop belles pour être vraies. Et pourtant.</p>
+        </article>
+        <article class="panel rv">
+          <p class="plabel">Corps et science</p>
+          <h3>Survivants</h3>
+          <p>Des gens qui n'auraient jamais dû s'en sortir, et ce qu'ils nous apprennent.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIII. EXTRAIT -->
+  <section class="act" aria-labelledby="h-extrait">
+    <div class="veil"></div>
+    <div class="inner wide">
+      <div class="rv">
+        <p class="kick g">Un avant-goût</p>
+        <h2 id="h-extrait">Voilà comment<br><em class="g">une histoire commence.</em></h2>
+      </div>
+      <article class="story rv" aria-label="Extrait d'une histoire OPSIS">
+        <div class="head"><span><b>Flash</b> · L'arnaque parfaite</span><span>3 min de lecture</span></div>
+        <div class="progress" aria-hidden="true"><i></i></div>
+        <div class="body">
+          <p class="ttl">L'homme qui a vendu la tour Eiffel</p>
+          <div class="scene">
+            <p class="drop">Paris, 1925. Dans un salon de l'hôtel de Crillon, quelques ferrailleurs écoutent un homme qui se présente comme un haut fonctionnaire.</p>
+            <p>Il leur demande le secret absolu. La tour Eiffel coûte trop cher à entretenir, explique-t-il. L'État veut s'en débarrasser, et il cherche un acheteur pour sa ferraille.</p>
+            <p>Personne dans la pièce ne sait que cet homme n'a jamais travaillé pour l'État. Et l'un d'eux va payer.</p>
           </div>
-          <p>Le grand format vidéo d'OPSIS. Une œuvre, plusieurs regards, des désaccords, le public, puis un verdict.</p>
         </div>
+        <div class="foot">La suite le jour de sa sortie</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- IX. LA PROMESSE -->
+  <section class="act" aria-labelledby="h-promesse">
+    <div class="veil"></div>
+    <div class="inner rv">
+      <p class="kick">La promesse</p>
+      <h2 id="h-promesse">Chaque histoire<br><em>mérite votre temps.</em></h2>
+      <div class="vows">
+        <div class="vow"><span class="vn">01</span><p class="vt">Tout est vrai.<span>Chaque histoire repose sur des sources solides, listées à la fin. Aucun dialogue n'est inventé.</span></p></div>
+        <div class="vow"><span class="vn">02</span><p class="vt">Le temps est affiché.<span>Vous savez avant de commencer ce que l'histoire vous demande : 3 minutes, 6 minutes, ou une semaine d'épisodes.</span></p></div>
+        <div class="vow"><span class="vn">03</span><p class="vt">Vous en sortez plus riche.<span>Une histoire qui divertit sans rien apprendre n'est pas publiée. Une histoire qui apprend sans captiver non plus.</span></p></div>
+        <div class="vow"><span class="vn">04</span><p class="vt">C'est gratuit.<span>Une histoire chaque matin, sans abonnement.</span></p></div>
       </div>
     </div>
   </section>
 
-  <!-- ACTE 10 — LA SÉANCE -->
-  <section class="act">
+  <!-- X. INSCRIPTION -->
+  <section class="act" id="inscription" aria-labelledby="h-inscription">
     <div class="veil"></div>
-    <div class="inner">
-      <p class="kick g rv">La Séance</p>
-      <h2 class="rv d1">Le désaccord fait partie<br><em class="g">de l'expérience</em></h2>
-      <p class="p rv d2">Le format met en scène les dimensions du Score OPSIS et transforme l'analyse en spectacle de débat. L'objectif n'est pas de fabriquer du conflit, mais de montrer qu'une œuvre se regarde sous plusieurs angles.</p>
-      <p class="lede rv d3" style="max-width:36ch;margin-top:36px">« Nous ne sommes pas d'accord. Et c'est précisément pour ça que cette œuvre mérite d'être discutée. »</p>
-    </div>
-  </section>
-
-  <!-- ACTE 11 — LE CLUB -->
-  <section class="act" id="club">
-    <div class="veil"></div>
-    <div class="inner">
-      <p class="kick rv">OPSIS Club</p>
-      <h2 class="rv d1">Le public n'est pas une audience.<br><em>Il fait partie du regard.</em></h2>
-      <div class="versus rv d2">
-        <div class="vs opsis"><p class="l">Score OPSIS</p><p class="n">8,7</p></div>
-        <div class="vsx">contre</div>
-        <div class="vs public"><p class="l">Score du public</p><p class="n">7,4</p></div>
+    <div class="inner rv">
+      <p class="kick g">Le premier épisode</p>
+      <h2 id="h-inscription">Lundi 4 janvier 2027,<br><em>la première série commence.</em></h2>
+      <div class="countdown" id="countdown" aria-label="Temps restant avant le premier épisode">
+        <div><b id="cd-d">--</b><span>jours</span></div>
+        <div><b id="cd-h">--</b><span>heures</span></div>
+        <div><b id="cd-m">--</b><span>minutes</span></div>
       </div>
-      <p class="p rv d3">Votes, débats, classements, projections, contenus exclusifs. Comparez votre jugement au nôtre. <b>Quand le public n'est pas d'accord avec OPSIS, le désaccord devient lui-même du contenu.</b></p>
-
-      <form class="form rv d3" id="signup" novalidate>
-        <label for="email" style="position:absolute;left:-9999px">Votre adresse e-mail</label>
-        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="votre@email.com" required>
-        <button type="submit">Rejoindre le Club</button>
+      <p class="p">Laissez votre email : vous recevrez la première histoire le jour de sa sortie, puis une nouvelle chaque matin.</p>
+      <form class="signup" id="signup" novalidate>
+        <label for="email" class="plabel" style="position:absolute;left:-9999px">Votre adresse email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required>
+        <button class="btn" type="submit">M'inscrire <span class="arw" aria-hidden="true">→</span></button>
       </form>
-      <p class="formnote" id="formnote" role="status">Une Fiche OPSIS par semaine. Rien d'autre.</p>
-
-      <div class="where rv d3">
-        <!-- ÉDITER : remplacer par vos vraies URL -->
-        <a href="https://youtube.com/" rel="noopener">YouTube</a>
-        <a href="https://instagram.com/" rel="noopener">Instagram</a>
-        <a href="https://tiktok.com/" rel="noopener">TikTok</a>
-        <a href="https://letterboxd.com/" rel="noopener">Letterboxd</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTE 12 — PHILOSOPHIE -->
-  <section class="act short">
-    <div class="veil"></div>
-    <div class="inner">
-      <p class="kick rv">Notre philosophie</p>
-      <h2 class="rv d1">OPSIS ne dit pas quoi penser.<br><em>OPSIS aide à mieux regarder.</em></h2>
-      <p class="p rv d2">Parce qu'un film peut être techniquement imparfait et profondément touchant. Parce qu'il peut être brillant sans être fait pour vous. Parce qu'un succès populaire peut être passionnant à analyser. Et parce qu'une œuvre rejetée par beaucoup mérite parfois d'être défendue.</p>
-    </div>
-  </section>
-
-  <!-- ACTE 13 — LA TRAJECTOIRE -->
-  <section class="act">
-    <div class="veil"></div>
-    <div class="inner wide">
-      <p class="kick rv">La trajectoire</p>
-      <h2 class="rv d1">On commence par les fiches.<br><em>On finit par une culture.</em></h2>
-      <div class="road">
-        <div class="rst now rv d1"><p class="ph">Phase 01 — en cours</p><p class="nm">Les Fiches OPSIS</p></div>
-        <div class="rst rv d1"><p class="ph">Phase 02</p><p class="nm">Les formats courts</p></div>
-        <div class="rst rv d2"><p class="ph">Phase 03</p><p class="nm">Les analyses</p></div>
-        <div class="rst rv d2"><p class="ph">Phase 04</p><p class="nm">La communauté</p></div>
-        <div class="rst rv d3"><p class="ph">Phase 05</p><p class="nm">La Séance</p></div>
-        <div class="rst rv d3"><p class="ph">Phase 06</p><p class="nm">Les événements</p></div>
-      </div>
-      <p class="p rv d4" style="margin-top:46px">Critique, information, divertissement, débat, communauté. Un média culturel construit dans cet ordre, autour d'une idée simple.</p>
-      <p class="wordmark rv d4" style="margin-top:34px">Votre attention a de la valeur</p>
+      <p class="formmsg" id="formmsg" role="status"></p>
     </div>
   </section>
 
 </main>
 
-<footer>
-  <div class="fin">
+<footer class="fin">
+  <div class="row">
     <div>
       <p class="fbrand">OPSIS</p>
-      <p style="margin-top:8px">Le cinéma qui mérite votre temps.</p>
+      <p class="ftag">La réalité, mise en scène.</p>
     </div>
-    <div style="display:flex;gap:22px;flex-wrap:wrap">
-      <a href="#score">Le Score</a>
-      <a href="#club">Le Club</a>
-      <!-- ÉDITER : votre adresse de contact -->
-      <a href="mailto:contact@opsis.media">Contact</a>
-      <a href="mailto:partenariats@opsis.media">Partenariats &amp; presse</a>
-    </div>
+    <p class="fmeta">Histoires vraies · Chaque jour<br>© 2026 OPSIS</p>
   </div>
 </footer>
 
@@ -618,7 +513,12 @@
   "use strict";
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarse = window.matchMedia('(pointer: coarse)').matches;
-  var SVGNS='http://www.w3.org/2000/svg';
+
+  /* ============ Adresse du service d'inscription ============
+     Coller ici l'URL d'un formulaire (Brevo, Formspree, Tally...) qui
+     accepte un POST avec un champ "email". Tant qu'elle est vide,
+     aucun email n'est enregistré et le formulaire le dit honnêtement. */
+  var FORM_ENDPOINT = '';
 
   /* ============ Progression, reveals, nav ============ */
   var threadfill=document.getElementById('threadfill'),
@@ -642,148 +542,99 @@
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:.16});
-  document.querySelectorAll('.rv').forEach(function(el){ if(!el.classList.contains('in')) io.observe(el); });
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
 
-  /* ============ LE SCORE OPSIS ============ */
-  var DIM=[
-    {l:'O', n:'Œil — la maîtrise',        s:9.3, q:"Est-ce que c'est bien fait ?",
-     d:"Mise en scène, image, montage, son, direction artistique, jeu, réalisation. Le geste derrière l'écran."},
-    {l:'P', n:'Propos — le fond',         s:8.8, q:"Est-ce que cette œuvre a quelque chose à dire ?",
-     d:"Scénario, personnages, thèmes, symbolisme, sous-texte, cohérence, intentions."},
-    {l:'S', n:'Sensation — l\u2019expérience', s:9.1, q:"Qu'est-ce que cette œuvre me fait ressentir ?",
-     d:"Émotion, immersion, tension, plaisir, rythme, empathie, impact émotionnel."},
-    {l:'I', n:'Impact — la place',        s:8.0, q:"Pourquoi cette œuvre compte-t-elle ?",
-     d:"Réception, influence, originalité, contexte, popularité, portée, capacité à rester en mémoire."},
-    {l:'S', n:'Synthèse — le verdict',    s:8.7, q:"Après tout ce qu'elle propose, mérite-t-elle votre temps ?",
-     d:"Pas une cinquième note, mais la conclusion de toute l'analyse. C'est elle qui donne le Score OPSIS."}
-  ];
-  var ENGRAVE=['Œil','Propos','Sensation','Impact','Synthèse'];
-  var fr=function(v){return v.toFixed(1).replace('.',',');};
-
-  /* graduations du barillet, comme une bague d'objectif */
-  (function ticks(){
-    var g=document.getElementById('ticks');
-    for(var i=0;i<=40;i++){
-      var major = i%4===0;
-      var a=(-Math.PI/2)+(i/40)*Math.PI*2;
-      var r1= major?162:168, r2=176;
-      var ln=document.createElementNS(SVGNS,'line');
-      ln.setAttribute('x1',(r1*Math.cos(a)).toFixed(2)); ln.setAttribute('y1',(r1*Math.sin(a)).toFixed(2));
-      ln.setAttribute('x2',(r2*Math.cos(a)).toFixed(2)); ln.setAttribute('y2',(r2*Math.sin(a)).toFixed(2));
-      ln.setAttribute('class', major?'tick major':'tick');
-      g.appendChild(ln);
-      if(major){
-        var t=document.createElementNS(SVGNS,'text');
-        t.setAttribute('x',(191*Math.cos(a)).toFixed(2)); t.setAttribute('y',(191*Math.sin(a)).toFixed(2));
-        t.setAttribute('class','ticknum'); t.textContent=String(i/4);
-        g.appendChild(t);
-      }
-    }
-  })();
-
-  /* les 5 lamelles */
-  var bladesG=document.getElementById('blades'), svgBlades=[];
-  (function buildBlades(){
-    var R=124;
-    for(var i=0;i<5;i++){
-      var a=i/5*Math.PI*2 - Math.PI/2;
-      var g=document.createElementNS(SVGNS,'g');
-      var p=document.createElementNS(SVGNS,'path');
-      p.setAttribute('d','M -40 0 L 40 0 L 24 -146 L -24 -146 Z');
-      p.setAttribute('class','blade');
-      g.appendChild(p);
-      g.setAttribute('data-a',a);
-      g.setAttribute('transform','translate('+(R*Math.cos(a)).toFixed(2)+','+(R*Math.sin(a)).toFixed(2)+')');
-      bladesG.appendChild(g); svgBlades.push(g);
-    }
-  })();
-
-  var needle=document.getElementById('needle'),
-      engrave=document.getElementById('engrave'),
-      ctrval=document.getElementById('ctrval'),
-      detail=document.getElementById('detail'),
-      dname=document.getElementById('dname'), dq=document.getElementById('dq'),
-      dd=document.getElementById('dd'), dfill=document.getElementById('dfill'),
-      dval=document.getElementById('dval');
-  var keys=Array.prototype.slice.call(document.querySelectorAll('.key'));
-  var current=-1;
-
-  function render(i){
-    var dim=DIM[i], synth=(i===4);
-    svgBlades.forEach(function(g,k){
-      var a=parseFloat(g.getAttribute('data-a'));
-      var base=(a*180/Math.PI)+90;
-      var open=(DIM[k].s/10)*44;                 // l'ouverture EST la note
-      g.style.transform='rotate('+(base+open+(k===i?10:0)).toFixed(2)+'deg)';
-      g.firstChild.classList.toggle('on', k===i);
-    });
-    needle.style.transform='rotate('+((dim.s/10)*360).toFixed(2)+'deg)';
-    engrave.textContent=ENGRAVE[i];
-    ctrval.textContent=fr(dim.s);
-    ctrval.style.fill = synth ? '#C6A063' : '#F2EFE8';
-    engrave.style.fill = synth ? '#C6A063' : '#E2454C';
-
-    dname.textContent=dim.n;
-    dq.textContent=dim.q; dq.classList.toggle('g',synth);
-    dd.textContent=dim.d;
-    dfill.style.width=(dim.s*10)+'%'; dfill.classList.toggle('g',synth);
-    dval.textContent=fr(dim.s);
-  }
-
-  function select(i){
-    if(i===current) return;
-    current=i;
-    keys.forEach(function(b,k){ b.classList.toggle('on',k===i); b.setAttribute('aria-pressed',k===i?'true':'false'); });
-    if(reduce){ render(i); return; }
-    detail.classList.add('swap');
-    setTimeout(function(){ render(i); detail.classList.remove('swap'); },170);
-  }
-  keys.forEach(function(b){
-    var i=parseInt(b.getAttribute('data-i'),10);
-    b.addEventListener('click',function(){ select(i); });
-    b.addEventListener('mouseenter',function(){ if(!coarse) select(i); });
-    b.addEventListener('focus',function(){ select(i); });
+  /* ============ La semaine ============ */
+  var WEEK={
+    type:[
+      {d:'Lundi',f:'Flash',t:'3 min',w:20},
+      {d:'Mardi',f:'Récit',t:'6 min',w:40},
+      {d:'Mercredi',f:'Flash',t:'3 min',w:20},
+      {d:'Jeudi',f:'Récit',t:'6 min',w:40},
+      {d:'Vendredi',f:'Flash',t:'3 min',w:20},
+      {d:'Samedi',f:'Récit Coulisses',t:'6 min',w:40},
+      {d:'Dimanche',f:'Récit',t:'6 min',w:40}
+    ],
+    serie:[
+      {d:'Lundi',f:'Épisode 1',t:'5 min',w:33,ep:1},
+      {d:'Mardi',f:'Épisode 2',t:'5 min',w:33,ep:1},
+      {d:'Mercredi',f:'Épisode 3',t:'5 min',w:33,ep:1},
+      {d:'Jeudi',f:'Épisode 4',t:'5 min',w:33,ep:1},
+      {d:'Vendredi',f:'Épisode 5',t:'5 min',w:33,ep:1},
+      {d:'Samedi',f:'Flash',t:'3 min',w:20},
+      {d:'Dimanche',f:'Récit',t:'6 min',w:40}
+    ]
+  };
+  var NOTE={
+    type:"Chaque matin, une nouvelle histoire, dans l'app et dans votre boîte mail.",
+    serie:"La première semaine du mois, une grande histoire se déroule en cinq épisodes, du lundi au vendredi."
+  };
+  var weekEl=document.getElementById('week'), noteEl=document.getElementById('weeknote');
+  var days=WEEK.type.map(function(){
+    var el=document.createElement('div'); el.className='day';
+    el.innerHTML='<span class="dn"></span><span class="df"></span><span class="dt"></span><span class="bar"><i></i></span>';
+    weekEl.appendChild(el); return el;
   });
-  render(0); current=0;
-
-  /* cycle automatique tant que personne n'a touché — la section se présente seule */
-  if(!reduce){
-    var auto=null, touched=false, idx=0;
-    var lensIO=new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting && !touched && !auto){
-          auto=setInterval(function(){ idx=(idx+1)%5; select(idx); },2600);
-        }else if(!e.isIntersecting && auto){ clearInterval(auto); auto=null; }
-      });
-    },{threshold:.4});
-    lensIO.observe(document.getElementById('score'));
-    ['click','mouseenter','focus','touchstart'].forEach(function(ev){
-      document.querySelector('.keys').addEventListener(ev,function(){
-        touched=true; if(auto){ clearInterval(auto); auto=null; }
-      },{passive:true});
+  function renderWeek(mode){
+    WEEK[mode].forEach(function(x,i){
+      var el=days[i];
+      el.querySelector('.dn').textContent=x.d;
+      el.querySelector('.df').textContent=x.f;
+      el.querySelector('.dt').textContent=x.t+' de lecture';
+      el.querySelector('.bar i').style.width=x.w+'%';
+      el.classList.toggle('ep',!!x.ep);
     });
+    noteEl.textContent=NOTE[mode];
   }
+  renderWeek('type');
+  document.querySelectorAll('.switch button').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(b.getAttribute('aria-pressed')==='true') return;
+      document.querySelectorAll('.switch button').forEach(function(o){ o.setAttribute('aria-pressed', o===b?'true':'false'); });
+      if(reduce){ renderWeek(b.dataset.mode); return; }
+      weekEl.classList.add('fade');
+      setTimeout(function(){ renderWeek(b.dataset.mode); weekEl.classList.remove('fade'); },320);
+    });
+  });
 
-  /* ============ Inscription au Club ============ */
-  var form=document.getElementById('signup'), note=document.getElementById('formnote');
-  var DEFAULT_NOTE=note.textContent;
+  /* ============ Bandeau des séries ============ */
+  var SERIES=['Jusqu’à la chute','Renaissance','Le dernier jour','Un seul choix','Les oubliés','L’héritier','Gloire éclair','La double vie','L’éminence grise','Le traître',
+    'Le grand mensonge','L’arnaque parfaite','Faussaires','L’emprise','Fake it','Le casse du siècle','Ponzi','Faux remèdes','Canulars','La fraude géante',
+    'Par accident','Guerres de marques','Avant le logo','Le produit maudit','L’idée volée','Le pivot','La première fois','Ceux qui ont dit non','Le brevet','La ruée'];
+  var SERIES_B=['Survivants','Cobayes','Le cerveau','Les limites','L’épidémie','Catastrophes','L’espace','Le mystère','Le prophète moqué','Bêtes',
+    'L’impossible victoire','Le duel','Une seconde','L’expédition','Prodiges','Seul','Le retour','La triche','Le geste','L’échec glorieux',
+    'Tournage maudit','La vraie histoire','Refusé','Le son d’une époque','L’œuvre volée','Le procès','L’album','La scène','L’œuvre cachée','Le désastre'];
+  function fill(id,list){
+    var el=document.getElementById(id), html='';
+    for(var r=0;r<2;r++){ list.forEach(function(s){ html+='<span>'+s+'</span>'; }); }
+    el.innerHTML=html;
+  }
+  fill('trackA',SERIES); fill('trackB',SERIES_B);
+
+  /* ============ Compte à rebours ============ */
+  var LAUNCH=new Date('2027-01-04T07:00:00+01:00').getTime();
+  var cdD=document.getElementById('cd-d'),cdH=document.getElementById('cd-h'),cdM=document.getElementById('cd-m');
+  function tick(){
+    var ms=Math.max(0,LAUNCH-Date.now());
+    var d=Math.floor(ms/864e5), h=Math.floor(ms%864e5/36e5), m=Math.floor(ms%36e5/6e4);
+    cdD.textContent=d; cdH.textContent=('0'+h).slice(-2); cdM.textContent=('0'+m).slice(-2);
+  }
+  tick(); setInterval(tick,30000);
+
+  /* ============ Inscription ============ */
+  var form=document.getElementById('signup'), msg=document.getElementById('formmsg'), email=document.getElementById('email');
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var v=form.email.value.trim();
-    note.className='formnote';
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
-      note.textContent='Cette adresse n\u2019a pas l\u2019air valide. Vérifiez-la.';
-      note.classList.add('err'); form.email.focus(); return;
-    }
-    /* ÉDITER — brancher votre fournisseur (Beehiiv, Substack, Kit, Formspree…) :
-       fetch('VOTRE_ENDPOINT',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
-       Tant que ce n'est pas branché, aucune adresse n'est réellement enregistrée. */
-    note.textContent='Bienvenue dans le Club. Première Fiche bientôt.';
-    note.classList.add('ok'); form.email.value='';
-    setTimeout(function(){ note.textContent=DEFAULT_NOTE; note.className='formnote'; },6000);
+    var v=email.value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ msg.textContent='Cette adresse email ne semble pas valide.'; email.focus(); return; }
+    if(!FORM_ENDPOINT){ msg.textContent='Les inscriptions ouvrent très bientôt. Revenez dans quelques jours.'; return; }
+    msg.textContent='Envoi…';
+    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:v})})
+      .then(function(r){ if(!r.ok) throw new Error(); msg.textContent='C’est noté. La première histoire arrive le 4 janvier.'; form.reset(); })
+      .catch(function(){ msg.textContent='L’envoi a échoué. Réessayez dans un instant.'; });
   });
 
-  /* ============ Fond WebGL ============ */
+  /* ============ Fond WebGL : le diaphragme ============ */
   if(typeof THREE==='undefined'){
     document.getElementById('fallbackbg').style.display='block';
     document.getElementById('webgl').style.display='none';
@@ -809,13 +660,12 @@
 
   var rig=new THREE.Group(); scene.add(rig);
   var pupilMat=new THREE.MeshStandardMaterial({color:0x1a0406,emissive:0xA8141A,emissiveIntensity:1.4,roughness:.4,metalness:.2});
-  rig.add(new THREE.Mesh(new THREE.SphereGeometry(0.7,40,40),pupilMat));
-  var pupil=rig.children[0];
+  var pupil=new THREE.Mesh(new THREE.SphereGeometry(0.7,40,40),pupilMat); rig.add(pupil);
   var glowMat=new THREE.MeshBasicMaterial({color:0xC8202A,transparent:true,opacity:.25});
   var glow=new THREE.Mesh(new THREE.SphereGeometry(1.2,28,28),glowMat); rig.add(glow);
 
-  var N=5, Rr=2.4, blades=[];
-  var bladeGeo=new THREE.BoxGeometry(0.86,3.0,0.09); bladeGeo.translate(0,1.5,0);
+  var N=6, Rr=2.4, blades=[];
+  var bladeGeo=new THREE.BoxGeometry(0.78,3.0,0.09); bladeGeo.translate(0,1.5,0);
   var matA=new THREE.MeshStandardMaterial({color:0x141419,metalness:.85,roughness:.34});
   var matB=new THREE.MeshStandardMaterial({color:0x241a20,metalness:.7,roughness:.5});
   for(var i=0;i<N;i++){
@@ -823,7 +673,6 @@
     var pivot=new THREE.Group();
     pivot.position.set(Rr*Math.cos(a),Rr*Math.sin(a),0);
     pivot.userData.base=a+Math.PI+0.55;
-    pivot.userData.weight=DIM[i].s/10;
     pivot.add(new THREE.Mesh(bladeGeo, i%2?matA:matB));
     rig.add(pivot); blades.push(pivot);
   }
@@ -833,13 +682,13 @@
     new THREE.MeshStandardMaterial({color:0xA8141A,metalness:.6,roughness:.5,emissive:0x2a0608,emissiveIntensity:.5}));
   rig.add(ring1); rig.add(ring2);
 
-  function pentaTex(){
+  function bokehTex(){
     var c=document.createElement('canvas'); c.width=c.height=64;
     var g=c.getContext('2d'); g.translate(32,32);
     var rg=g.createRadialGradient(0,0,4,0,0,30);
     rg.addColorStop(0,'rgba(255,255,255,.95)'); rg.addColorStop(.55,'rgba(255,255,255,.35)'); rg.addColorStop(1,'rgba(255,255,255,0)');
     g.fillStyle=rg; g.beginPath();
-    for(var k=0;k<5;k++){ var a=k/5*Math.PI*2-Math.PI/2; g[k?'lineTo':'moveTo'](Math.cos(a)*30,Math.sin(a)*30); }
+    for(var k=0;k<6;k++){ var a=k/6*Math.PI*2-Math.PI/2; g[k?'lineTo':'moveTo'](Math.cos(a)*30,Math.sin(a)*30); }
     g.closePath(); g.fill();
     return new THREE.CanvasTexture(c);
   }
@@ -857,7 +706,7 @@
   bg.setAttribute('color',new THREE.BufferAttribute(col,3));
   bg.setAttribute('psize',new THREE.BufferAttribute(siz,1));
   var bokehMat=new THREE.ShaderMaterial({
-    uniforms:{map:{value:pentaTex()},opacity:{value:0.5}},
+    uniforms:{map:{value:bokehTex()},opacity:{value:0.5}},
     vertexShader:['attribute float psize;','varying vec3 vC;','void main(){ vC=color;',
       ' vec4 mv=modelViewMatrix*vec4(position,1.0);',' gl_PointSize=psize*(1.0/-mv.z);',
       ' gl_Position=projectionMatrix*mv; }'].join('\n'),
@@ -875,13 +724,6 @@
     var t=e.touches&&e.touches[0]; if(!t) return;
     tmx=(t.clientX/window.innerWidth-.5)*0.6; tmy=(t.clientY/window.innerHeight-.5)*0.6;
   },{passive:true});
-  if(window.DeviceOrientationEvent && coarse){
-    window.addEventListener('deviceorientation',function(e){
-      if(e.gamma==null) return;
-      tmx=Math.max(-.5,Math.min(.5,e.gamma/60));
-      tmy=Math.max(-.5,Math.min(.5,(e.beta-45)/70));
-    },{passive:true});
-  }
 
   function smooth(a,b,x){x=Math.min(1,Math.max(0,(x-a)/(b-a)));return x*x*(3-2*x);}
   function easeIO(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;}
@@ -889,12 +731,10 @@
   var t0=performance.now(), rafId=null;
   function frame(){
     var t=(performance.now()-t0)*0.001, p=scrollP;
-    var openness = smooth(0.02,0.34,p) - smooth(0.80,0.99,p)*0.7;
+    /* le diaphragme s'ouvre quand l'histoire commence, se referme au générique */
+    var openness = smooth(0.02,0.30,p) - smooth(0.82,0.99,p)*0.7;
     var open = Math.max(0,openness) + (reduce?0:Math.sin(t*0.8)*0.02);
-    for(var i=0;i<N;i++){
-      var pv=blades[i];
-      pv.rotation.z = pv.userData.base + open*0.72*pv.userData.weight*1.25;
-    }
+    for(var i=0;i<N;i++){ blades[i].rotation.z = blades[i].userData.base + open*0.82; }
     pupil.scale.setScalar(0.14+open*0.9); glow.scale.setScalar(0.5+open*1.1);
     pupilMat.emissiveIntensity=0.8+open*1.6; glowMat.opacity=0.08+open*0.28;
     camera.position.z = 9 - easeIO(p)*5.0;
@@ -913,7 +753,7 @@
   function start(){ if(rafId===null) loop(); }
   function stop(){ if(rafId!==null){ cancelAnimationFrame(rafId); rafId=null; } }
 
-  if(reduce){ frame(); }
+  if(reduce){ frame(); window.addEventListener('scroll',frame,{passive:true}); }
   else{
     start();
     document.addEventListener('visibilitychange',function(){
