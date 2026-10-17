@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPSIS — Chaque jour, une histoire vraie</title>
-<meta name="description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre. Destins, arnaques, inventions, exploits : la réalité, mise en scène.">
-<meta name="theme-color" content="#08080A">
+<title>OPSIS — Une histoire vraie, chaque matin</title>
+<meta name="description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre. Gratuit, de 3 à 6 minutes de lecture.">
+<meta name="theme-color" content="#F5F6F7">
 <link rel="canonical" href="https://opsis.media/">
 
 <!-- FAVICONS — fichiers réels à la racine du site, à côté de index.html -->
@@ -20,19 +20,19 @@
 <meta property="og:site_name" content="OPSIS">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://opsis.media/">
-<meta property="og:title" content="OPSIS — Chaque jour, une histoire vraie">
-<meta property="og:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre. La réalité, mise en scène.">
+<meta property="og:title" content="OPSIS — Une histoire vraie, chaque matin">
+<meta property="og:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre.">
 <meta property="og:image" content="https://opsis.media/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OPSIS — Chaque jour, une histoire vraie">
+<meta name="twitter:title" content="OPSIS — Une histoire vraie, chaque matin">
 <meta name="twitter:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre.">
 <meta name="twitter:image" content="https://opsis.media/og.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -48,729 +48,525 @@
 
 <style>
   :root{
-    --obsidian:#08080A;--obsidian-2:#101013;
-    --red:#A8141A;                /* rouge de marque — graphique uniquement */
-    --red-bright:#C8202A;
-    --red-type:#E2454C;           /* rouge de lecture — typographie sur fond noir */
-    --offwhite:#F2EFE8;--text:#D6D1C7;--dim:#B9B4AA;--ash:#8B8579;
-    --gold:#C6A063;--gold-deep:#B79152;
-    --line:rgba(242,239,232,.13);
-    --display:'Newsreader',Georgia,'Times New Roman',serif;
-    --sans:'Barlow',system-ui,-apple-system,sans-serif;
-    --mono:'DM Mono',ui-monospace,'SFMono-Regular',monospace;
-    --lb:clamp(20px,3.6vh,46px);
+    --page:#F5F6F7;      /* fond de l'app, blanc froid */
+    --sheet:#FFFFFF;     /* surface de lecture */
+    --ink:#161A22;       /* encre bleu-noir */
+    --soft:#5C6270;      /* texte secondaire */
+    --faint:#8A909C;     /* métadonnées */
+    --rule:#E2E5EA;      /* filets */
+    --read:#A8141A;      /* rouge OPSIS : réservé à la lecture (progression, temps lu) */
+    --read-soft:#F6E7E8;
+    --serif:'Literata',Georgia,'Times New Roman',serif;
+    --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --max:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--obsidian);color:var(--offwhite);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  a{color:inherit;text-decoration:none}
-  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 
-  #webgl{position:fixed;inset:0;z-index:0;display:block}
-  .fallbackbg{position:fixed;inset:0;z-index:0;background:radial-gradient(58% 58% at 50% 42%,rgba(168,20,26,.18),#0a0a0c 70%),var(--obsidian);display:none}
+  /* ---------- barre ---------- */
+  header.top{position:sticky;top:0;z-index:20;background:rgba(245,246,247,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+  header.top.scrolled{border-bottom-color:var(--rule)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.01em}
+  .logo svg{width:22px;height:22px}
+  .pill{display:inline-flex;align-items:center;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;color:var(--sheet);background:var(--ink);border:0;border-radius:999px;padding:11px 20px;cursor:pointer;transition:background .2s}
+  .pill:hover{background:#2B313D}
+  .pill.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+  .pill.ghost:hover{background:var(--ink);color:var(--sheet)}
 
-  .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;mix-blend-mode:overlay}
-  .vig{position:fixed;inset:0;z-index:55;pointer-events:none;box-shadow:inset 0 0 240px 70px rgba(0,0,0,.72)}
-  .lb{position:fixed;left:0;right:0;height:var(--lb);background:#000;z-index:58;pointer-events:none}
-  .lb.t{top:0}.lb.b{bottom:0}
+  /* ---------- ouverture ---------- */
+  .hero{padding:72px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.025em;max-width:11ch}
+  .hero .lead{margin-top:26px;font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--soft);max-width:34ch}
+  .hero .actions{margin-top:36px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .hero .when{font-size:15px;color:var(--faint)}
 
-  .thread{position:fixed;top:0;bottom:0;right:22px;width:1px;background:rgba(242,239,232,.1);z-index:57;pointer-events:none}
-  .thread i{position:absolute;top:0;left:0;right:0;height:0;background:linear-gradient(var(--gold),var(--red))}
-  .threadpct{position:fixed;right:12px;bottom:calc(var(--lb) + 14px);z-index:57;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ash);pointer-events:none}
+  /* le panneau de lecture */
+  .reader{background:var(--sheet);border-radius:22px;box-shadow:0 1px 0 var(--rule),0 24px 60px -28px rgba(22,26,34,.28);overflow:hidden;position:relative}
+  .reader .bar{height:3px;background:var(--rule)}
+  .reader .bar i{display:block;height:100%;width:0;background:var(--read);transition:width .15s linear}
+  .reader .meta{display:flex;justify-content:space-between;align-items:center;padding:18px 26px 0;font-size:14px;color:var(--faint)}
+  .reader .meta .fmt{color:var(--read);font-weight:600}
+  .reader .scroll{height:440px;overflow-y:auto;padding:14px 26px 40px;scrollbar-width:thin;scrollbar-color:var(--rule) transparent;overscroll-behavior:contain}
+  .reader h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;letter-spacing:-.015em;margin-top:8px}
+  .reader .series{margin-top:8px;font-size:15px;color:var(--soft)}
+  .reader .text{margin-top:22px;font-family:var(--serif);font-size:19px;line-height:1.72}
+  .reader .text p+p{margin-top:16px}
+  .reader .end{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);font-size:15px;color:var(--soft)}
+  .reader .end b{color:var(--ink);font-weight:600}
+  .reader .fade{position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none;transition:opacity .3s}
+  .reader.done .fade{opacity:0}
+  .reader .left{position:absolute;right:20px;bottom:16px;font-size:13px;color:var(--faint);background:#fff;padding:2px 6px;border-radius:6px}
 
-  nav{position:fixed;top:var(--lb);left:0;right:0;z-index:59;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;transition:opacity .4s,transform .4s;background:linear-gradient(180deg,rgba(8,8,10,.85),rgba(8,8,10,0))}
-  nav.hide{opacity:0;pointer-events:none;transform:translateY(-10px)}
-  nav .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:500;font-size:23px;letter-spacing:.2em}
-  nav .brand svg{width:21px;height:21px;flex:none}
-  nav .cta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(242,239,232,.3);padding:11px 17px;transition:.3s;white-space:nowrap}
-  nav .cta:hover,nav .cta:focus-visible{border-color:var(--red-type);color:var(--red-type)}
-
-  main{position:relative;z-index:10}
-
-  .act{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:calc(var(--lb) + 9vh) 26px calc(var(--lb) + 9vh);position:relative}
-  .act.short{min-height:auto;padding-top:15vh;padding-bottom:15vh}
-  .inner{max-width:920px;width:100%;text-align:center;position:relative}
-  .inner.wide{max-width:1120px}
-  .act .veil{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(1180px,98vw);height:min(820px,94vh);background:radial-gradient(closest-side,rgba(8,8,10,.82),rgba(8,8,10,.45) 60%,transparent);z-index:-1;pointer-events:none}
-
-  /* ---------- typographie ---------- */
-  .kick{font-family:var(--mono);font-weight:500;font-size:clamp(11px,2vw,12px);letter-spacing:.3em;text-transform:uppercase;color:var(--red-type)}
-  .kick.g{color:var(--gold)}
-  h1,h2,h3{text-transform:uppercase}
-  h1{font-family:var(--display);font-weight:500;font-size:clamp(38px,8.4vw,104px);line-height:.98;letter-spacing:.035em;margin-top:18px}
-  h1 em{display:block;font-style:italic;text-transform:none;color:var(--red-type);letter-spacing:.01em}
-  h2{font-family:var(--display);font-weight:500;font-size:clamp(27px,4.8vw,54px);line-height:1.12;letter-spacing:.045em;margin-top:16px}
-  h2 em{font-style:italic;color:var(--red-type);text-transform:none;letter-spacing:.02em}
-  h2 em.g{color:var(--gold)}
-  h3{font-family:var(--display);font-weight:500;font-size:clamp(20px,2.6vw,26px);line-height:1.2;letter-spacing:.06em}
-  .lede{margin-top:26px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(21px,3.1vw,31px);line-height:1.42;color:var(--text);max-width:26ch;margin-left:auto;margin-right:auto}
-  .p{margin-top:22px;font-size:clamp(16px,1.9vw,18px);color:var(--text);max-width:58ch;margin-left:auto;margin-right:auto;line-height:1.75}
-  .p b{color:var(--offwhite);font-weight:600}
-  .sub{margin-top:26px;font-family:var(--mono);font-size:clamp(11px,2vw,12px);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-
-  .btn{display:inline-flex;align-items:center;gap:12px;margin-top:34px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;background:var(--red);color:var(--offwhite);padding:17px 26px;border:1px solid var(--red);transition:.3s;cursor:pointer}
-  .btn:hover,.btn:focus-visible{background:transparent;color:var(--red-type);border-color:var(--red-type)}
-  .btn .arw{transition:transform .3s}
-  .btn:hover .arw{transform:translateX(4px)}
-
-  .scrollcue{position:absolute;bottom:calc(var(--lb) + 4vh);left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:10px}
-  .scrollcue .ln{width:1px;height:34px;background:linear-gradient(var(--red-type),transparent);animation:drop 2.4s ease-in-out infinite}
-  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-  .panel{background:rgba(12,12,15,.78);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid var(--line);padding:30px;text-align:left}
-  .plabel{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
-
-  /* ---------- reveal ---------- */
-  .rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
-  .rv.in{opacity:1;transform:none}
-
-  /* ---------- le constat ---------- */
-  .count{font-family:var(--display);font-weight:500;font-size:clamp(64px,14vw,160px);line-height:1;color:var(--offwhite);letter-spacing:.01em;margin-top:18px}
-  .count small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ash);margin-top:14px}
-
-  /* ---------- la méthode ---------- */
-  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-  .trio .panel .num{font-family:var(--display);font-style:italic;font-size:38px;color:var(--red-type);line-height:1}
-  .trio .panel h3{margin:14px 0 12px}
-  .trio .panel p{font-size:16px;color:var(--dim);line-height:1.7}
-
-  /* ---------- les formats ---------- */
-  .formats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-  .fmt{position:relative;overflow:hidden}
-  .fmt .dur{display:flex;align-items:baseline;gap:8px;margin-top:18px}
-  .fmt .dur b{font-family:var(--display);font-weight:500;font-size:54px;line-height:1;color:var(--offwhite)}
-  .fmt .dur span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
-  .fmt .meter{height:3px;background:rgba(242,239,232,.1);margin-top:18px;position:relative}
-  .fmt .meter i{position:absolute;inset:0 auto 0 0;width:0;background:var(--red);transition:width 1.4s cubic-bezier(.2,.7,.2,1) .2s}
-  .fmt.in .meter i{width:var(--w)}
-  .fmt.serie .meter i{background:var(--gold)}
-  .fmt h3{margin-top:22px}
-  .fmt p{margin-top:12px;font-size:16px;color:var(--dim);line-height:1.7}
-  .fmt .freq{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  /* ---------- sections ---------- */
+  section.block{padding:104px 0;border-top:1px solid var(--rule)}
+  section.block.white{background:var(--sheet)}
+  .head{max-width:640px}
+  .head h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.02em}
+  .head p{margin-top:18px;font-size:18px;color:var(--soft);max-width:52ch}
 
   /* ---------- la semaine ---------- */
-  .switch{display:inline-flex;margin-top:34px;border:1px solid var(--line)}
-  .switch button{background:none;border:0;color:var(--ash);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px;cursor:pointer;transition:.3s}
-  .switch button[aria-pressed="true"]{background:var(--offwhite);color:var(--obsidian)}
-  .week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px}
-  .day{border:1px solid var(--line);background:rgba(12,12,15,.78);padding:16px 12px 18px;text-align:left;min-height:150px;display:flex;flex-direction:column;transition:border-color .4s,background .4s}
-  .day .dn{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
-  .day .df{font-family:var(--display);font-weight:500;font-size:20px;text-transform:uppercase;letter-spacing:.05em;margin-top:auto;line-height:1.15;transition:opacity .35s}
-  .day .dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--dim);margin-top:8px;transition:opacity .35s}
-  .day .bar{height:3px;margin-top:14px;background:rgba(242,239,232,.12);position:relative}
-  .day .bar i{position:absolute;inset:0 auto 0 0;background:var(--red);transition:width .7s cubic-bezier(.2,.7,.2,1),background .4s}
-  .day.ep{border-color:rgba(198,160,99,.5);background:rgba(28,22,14,.7)}
-  .day.ep .df{color:var(--gold)}
-  .day.ep .bar i{background:var(--gold)}
-  .week.fade .df,.week.fade .dt{opacity:0}
-  .weeknote{margin-top:18px;font-size:15px;color:var(--dim)}
+  .weekbox{margin-top:52px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:end}
+  .seg{display:inline-flex;background:var(--page);border-radius:999px;padding:4px;margin-bottom:28px}
+  .seg button{font:inherit;font-size:15px;font-weight:500;color:var(--soft);background:none;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .2s,color .2s}
+  .seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);box-shadow:0 1px 3px rgba(22,26,34,.14)}
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:end;height:260px;border-bottom:1px solid var(--rule)}
+  .d{display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+  .d .min{font-size:14px;color:var(--faint);margin-bottom:8px;text-align:center}
+  .d .col{background:var(--ink);border-radius:8px 8px 0 0;transition:height .5s cubic-bezier(.2,.7,.2,1),background .3s}
+  .d.ep .col{background:var(--read)}
+  .labels{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:12px}
+  .labels div{text-align:center}
+  .labels .dn{font-size:14px;color:var(--faint)}
+  .labels .fn{font-family:var(--serif);font-size:16px;margin-top:2px;line-height:1.25}
+  .legend{display:flex;flex-direction:column;gap:22px}
+  .legend div{padding-left:16px;border-left:3px solid var(--ink)}
+  .legend div.s{border-left-color:var(--read)}
+  .legend h3{font-family:var(--serif);font-weight:600;font-size:20px}
+  .legend p{font-size:15px;color:var(--soft);margin-top:2px}
+  .weeknote{margin-top:22px;font-size:15px;color:var(--soft)}
 
-  /* ---------- territoires ---------- */
-  .terr{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
-  .terr div{background:rgba(10,10,13,.9);padding:28px 26px;text-align:left}
-  .terr .tn{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--red-type)}
-  .terr h3{margin-top:12px}
-  .terr p{margin-top:10px;font-size:15px;color:var(--dim);line-height:1.65}
+  /* ---------- la structure ---------- */
+  .beats{margin-top:52px;display:grid;gap:0}
+  .beat{display:grid;grid-template-columns:240px 1fr 1.1fr;gap:40px;align-items:center;padding:30px 0;border-top:1px solid var(--rule)}
+  .beat:last-child{border-bottom:1px solid var(--rule)}
+  .beat h3{font-family:var(--serif);font-weight:600;font-size:22px}
+  .beat .track{position:relative;height:3px;background:var(--rule);border-radius:2px}
+  .beat .track i{position:absolute;left:0;top:0;bottom:0;background:var(--read);border-radius:2px}
+  .beat .track b{position:absolute;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:var(--read);box-shadow:0 0 0 4px var(--sheet)}
+  .beat .track span{position:absolute;top:14px;font-size:13px;color:var(--faint);transform:translateX(-50%);white-space:nowrap}
+  .beat p{font-size:16px;color:var(--soft)}
 
-  /* ---------- séries ---------- */
-  .marquee{position:relative;overflow:hidden;margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-  .track{display:flex;gap:44px;width:max-content;animation:slide 70s linear infinite}
-  .track.rev{animation-direction:reverse;animation-duration:85s;margin-top:18px}
-  .marquee:hover .track{animation-play-state:paused}
-  .track span{font-family:var(--display);font-weight:500;font-size:clamp(22px,3vw,32px);letter-spacing:.06em;white-space:nowrap;color:var(--dim)}
-  .track span:nth-child(3n+1){color:var(--offwhite)}
-  .track span:nth-child(5n+2){color:var(--red-type);font-style:italic;text-transform:none}
-  @keyframes slide{to{transform:translateX(-50%)}}
-  .featured{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
-  .featured .panel h3{margin-top:12px}
-  .featured .panel p{margin-top:12px;font-size:16px;color:var(--dim);line-height:1.7}
+  /* ---------- bibliothèque ---------- */
+  .chips{margin-top:44px;display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:inherit;font-size:15px;font-weight:500;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:8px 16px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+  .chip:hover{border-color:var(--faint)}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--sheet);border-color:var(--ink)}
+  .chip .n{color:var(--faint);margin-left:6px;font-weight:400}
+  .chip[aria-pressed="true"] .n{color:#AEB4BF}
+  .lib{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .item{padding:18px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline}
+  .item h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.3}
+  .item p{grid-column:1/-1;font-size:15px;color:var(--soft);margin-top:-8px}
+  .item .t{font-size:13px;color:var(--faint);white-space:nowrap}
+  .libmore{margin-top:28px}
 
-  /* ---------- extrait ---------- */
-  .story{max-width:720px;margin:44px auto 0;text-align:left;border:1px solid var(--line);background:rgba(10,10,13,.88)}
-  .story .head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
-  .story .head b{color:var(--red-type);font-weight:500}
-  .story .body{padding:34px clamp(22px,5vw,48px) 38px}
-  .story .ttl{font-family:var(--display);font-weight:500;font-size:clamp(26px,4vw,40px);text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
-  .story .scene{margin-top:22px;font-family:var(--display);font-size:clamp(19px,2.3vw,22px);line-height:1.7;color:var(--text)}
-  .story .scene p+p{margin-top:16px}
-  .story .scene .drop{font-style:italic;color:var(--offwhite)}
-  .story .progress{height:2px;background:rgba(242,239,232,.1)}
-  .story .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--red));transition:width 2.4s cubic-bezier(.2,.7,.2,1) .4s}
-  .story.in .progress i{width:31%}
-  .story .foot{padding:16px 24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-
-  /* ---------- promesse ---------- */
-  .vows{max-width:760px;margin:40px auto 0;text-align:left}
-  .vow{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
-  .vow .vn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--red-type)}
-  .vow .vt{font-family:var(--display);font-size:clamp(20px,2.6vw,25px);line-height:1.35;color:var(--offwhite)}
-  .vow .vt span{display:block;font-family:var(--sans);font-size:15px;color:var(--dim);margin-top:6px;line-height:1.6}
+  /* ---------- engagements ---------- */
+  .vows{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+  .vow h3{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.25}
+  .vow p{margin-top:10px;font-size:16px;color:var(--soft)}
 
   /* ---------- inscription ---------- */
-  .signup{max-width:560px;margin:36px auto 0;display:flex;border:1px solid rgba(242,239,232,.3);background:rgba(10,10,13,.9)}
-  .signup input{flex:1;min-width:0;background:none;border:0;color:var(--offwhite);font-family:var(--sans);font-size:17px;padding:18px 20px}
-  .signup input::placeholder{color:var(--ash)}
-  .signup input:focus{outline:none}
-  .signup:focus-within{border-color:var(--gold)}
-  .signup .btn{margin:0;border:0}
-  .formmsg{margin-top:16px;min-height:24px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--gold)}
-  .countdown{display:flex;justify-content:center;gap:clamp(16px,4vw,40px);margin-top:44px}
-  .countdown div{text-align:center}
-  .countdown b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(40px,7vw,72px);line-height:1;color:var(--offwhite)}
-  .countdown span{display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash)}
+  .signup{padding:120px 0;border-top:1px solid var(--rule)}
+  .signup .wrap{max-width:720px;text-align:center}
+  .signup .days-left{font-family:var(--serif);font-weight:500;font-size:clamp(84px,14vw,148px);line-height:1;letter-spacing:-.04em;color:var(--read)}
+  .signup .unit{font-size:17px;color:var(--soft);margin-top:6px}
+  .signup h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.02em;margin-top:40px}
+  .signup .sub{margin-top:14px;font-size:18px;color:var(--soft)}
+  form.join{margin:34px auto 0;max-width:500px;display:flex;gap:8px;background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:6px}
+  form.join:focus-within{border-color:var(--ink)}
+  form.join input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:17px;color:var(--ink);padding:0 16px}
+  form.join input::placeholder{color:var(--faint)}
+  form.join input:focus{outline:none}
+  .msg{margin-top:16px;min-height:26px;font-size:15px;color:var(--soft)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  /* ---------- fin ---------- */
-  .fin{position:relative;z-index:10;border-top:1px solid var(--line);padding:46px 26px calc(var(--lb) + 40px);background:rgba(8,8,10,.92)}
-  .fin .row{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-  .fin .fbrand{font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:.2em;color:var(--offwhite)}
-  .fin .ftag{font-family:var(--display);font-style:italic;font-size:18px;color:var(--dim);margin-top:6px}
-  .fin .fmeta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);text-align:right;line-height:2}
+  footer{border-top:1px solid var(--rule);padding:40px 0 56px}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:15px;color:var(--faint)}
+  footer .tag{font-family:var(--serif);font-style:italic;color:var(--soft)}
 
-  @media (max-width:900px){
-    .trio,.formats,.featured{grid-template-columns:1fr}
-    .terr{grid-template-columns:1fr 1fr}
-    .week{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:960px){
+    .hero .wrap{grid-template-columns:1fr;gap:52px}
+    .weekbox{grid-template-columns:1fr;gap:36px}
+    .legend{flex-direction:row;flex-wrap:wrap}
+    .legend div{flex:1 1 180px}
+    .beat{grid-template-columns:1fr;gap:14px}
+    .beat .track{margin:6px 0 22px}
+    .lib{grid-template-columns:1fr}
+    .vows{grid-template-columns:1fr 1fr}
   }
   @media (max-width:560px){
-    nav{padding:12px 16px}
-    nav .brand{font-size:20px}
-    nav .cta{padding:10px 12px;font-size:10px}
-    .act{padding-left:16px;padding-right:16px}
-    .terr{grid-template-columns:1fr}
-    .week{grid-template-columns:1fr 1fr}
-    .day{min-height:118px}
-    .panel{padding:24px}
-    .signup{flex-direction:column}
-    .signup .btn{justify-content:center}
-    .thread,.threadpct{display:none}
-    .fin .fmeta{text-align:left}
+    .wrap{padding:0 18px}
+    .hero{padding:44px 0 72px}
+    .top .pill{padding:9px 14px;font-size:14px}
+    .reader .scroll{height:400px;padding:12px 20px 36px}
+    .reader .meta{padding:16px 20px 0}
+    .reader h2{font-size:26px}
+    .reader .text{font-size:18px}
+    section.block{padding:76px 0}
+    .days{gap:5px;height:200px}
+    .labels{gap:5px}
+    .labels .fn{font-size:13px}
+    .vows{grid-template-columns:1fr;gap:30px}
+    form.join{flex-direction:column;border-radius:18px}
+    form.join input{padding:12px 14px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .rv{opacity:1;transform:none;transition:none}
-    .track{animation:none}
-    .scrollcue .ln{animation:none}
+    .d .col,.reader .bar i{transition:none}
   }
 </style>
 </head>
 <body>
 
-<canvas id="webgl" aria-hidden="true"></canvas>
-<div class="fallbackbg" id="fallbackbg" aria-hidden="true"></div>
-<svg class="grain" aria-hidden="true"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
-<div class="vig" aria-hidden="true"></div>
-<div class="lb t" aria-hidden="true"></div>
-<div class="lb b" aria-hidden="true"></div>
-<div class="thread" aria-hidden="true"><i id="threadfill"></i></div>
-<div class="threadpct" id="threadpct" aria-hidden="true">00 %</div>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="OPSIS, accueil">
+      <svg viewBox="-110 -110 220 220" aria-hidden="true">
+        <circle r="96" fill="none" stroke="#161A22" stroke-width="12"/>
+        <circle r="30" fill="#A8141A"/>
+      </svg>
+      OPSIS
+    </a>
+    <a class="pill" href="#inscription">Recevoir l'histoire du jour</a>
+  </div>
+</header>
 
-<nav id="nav">
-  <a class="brand" href="#top" aria-label="OPSIS, retour en haut">
-    <svg viewBox="-110 -110 220 220" aria-hidden="true">
-      <circle r="100" fill="none" stroke="#A8141A" stroke-width="9"/>
-      <polygon points="0,-56 53,-17 33,45 -33,45 -53,-17" fill="none" stroke="#F2EFE8" stroke-width="8"/>
-      <circle r="17" fill="#C8202A"/>
-    </svg>
-    OPSIS
-  </a>
-  <a class="cta" href="#inscription">Recevoir l'histoire du jour</a>
-</nav>
+<main>
 
-<main id="top">
-
-  <!-- I. OUVERTURE -->
-  <section class="act" aria-labelledby="h-hero">
-    <div class="veil"></div>
-    <div class="inner">
-      <p class="kick">Histoires vraies · Chaque jour</p>
-      <h1 id="h-hero">La réalité,<em>mise en scène.</em></h1>
-      <p class="lede">Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.</p>
-      <a class="btn" href="#inscription">Recevoir l'histoire de demain <span class="arw" aria-hidden="true">→</span></a>
-      <p class="sub">Gratuit · Premier épisode le lundi 4 janvier 2027</p>
-    </div>
-    <div class="scrollcue" aria-hidden="true"><span>Entrer</span><span class="ln"></span></div>
-  </section>
-
-  <!-- II. LE CONSTAT -->
-  <section class="act" aria-labelledby="h-constat">
-    <div class="veil"></div>
-    <div class="inner rv">
-      <p class="kick g">Le constat</p>
-      <h2 id="h-constat">Vous voyez des milliers de faits.<br><em>Vous n'en retenez aucun.</em></h2>
-      <p class="p">Le scroll vous montre tout et ne vous raconte rien. Une vidéo de quarante secondes, une info sans début ni fin, puis la suivante. <b>OPSIS fait l'inverse : une seule histoire par jour, racontée du début à la fin, pour que vous la gardiez.</b></p>
-    </div>
-  </section>
-
-  <!-- III. LA MÉTHODE -->
-  <section class="act" aria-labelledby="h-methode">
-    <div class="veil"></div>
-    <div class="inner wide">
-      <div class="rv">
-        <p class="kick">La méthode</p>
-        <h2 id="h-methode">Des histoires vraies,<br><em>écrites comme des films.</em></h2>
-        <p class="p">Chaque histoire OPSIS suit la grammaire du cinéma. Ce que vous lisez est vrai et sourcé ; la façon de le raconter vient du montage.</p>
-      </div>
-      <div class="trio">
-        <article class="panel rv">
-          <p class="num">01</p>
-          <h3>La scène d'abord</h3>
-          <p>On ouvre au cœur de l'action, sans préambule. Le contexte arrive quand vous en avez besoin, jamais avant.</p>
-        </article>
-        <article class="panel rv">
-          <p class="num">02</p>
-          <h3>Le basculement</h3>
-          <p>Chaque histoire a un moment précis où tout se retourne. C'est lui qu'on met en scène, comme un plan-séquence.</p>
-        </article>
-        <article class="panel rv">
-          <p class="num">03</p>
-          <h3>Ce qu'on retient</h3>
-          <p>Trois idées à la fin, assez claires pour les raconter à quelqu'un le soir même. Divertir, puis apprendre.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- IV. LES FORMATS -->
-  <section class="act" aria-labelledby="h-formats">
-    <div class="veil"></div>
-    <div class="inner wide">
-      <div class="rv">
-        <p class="kick g">Les formats</p>
-        <h2 id="h-formats">Une histoire chaque jour.<br><em class="g">La durée dépend du récit.</em></h2>
-      </div>
-      <div class="formats">
-        <article class="panel fmt rv" style="--w:20%">
-          <p class="plabel">Format court</p>
-          <div class="dur"><b>3</b><span>minutes</span></div>
-          <div class="meter"><i></i></div>
-          <h3>Le Flash</h3>
-          <p>Un fait vrai stupéfiant, raconté en une scène. Le temps d'un café.</p>
-          <p class="freq">3 fois par semaine</p>
-        </article>
-        <article class="panel fmt rv" style="--w:40%">
-          <p class="plabel">Format moyen</p>
-          <div class="dur"><b>6</b><span>minutes</span></div>
-          <div class="meter"><i></i></div>
-          <h3>Le Récit</h3>
-          <p>Une histoire complète en trois actes : le monde d'avant, l'escalade, la conséquence.</p>
-          <p class="freq">3 à 4 fois par semaine</p>
-        </article>
-        <article class="panel fmt serie rv" style="--w:100%">
-          <p class="plabel">L'événement du mois</p>
-          <div class="dur"><b>5</b><span>épisodes</span></div>
-          <div class="meter"><i></i></div>
-          <h3>La Série</h3>
-          <p>Une grande histoire en cinq épisodes, du lundi au vendredi. Chaque épisode finit sur une question qui vous fait revenir.</p>
-          <p class="freq">La première semaine de chaque mois</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- V. LA SEMAINE -->
-  <section class="act" aria-labelledby="h-semaine">
-    <div class="veil"></div>
-    <div class="inner wide rv">
-      <p class="kick">Le rituel</p>
-      <h2 id="h-semaine">Sept jours,<br><em>sept histoires.</em></h2>
-      <div class="switch" role="group" aria-label="Choisir la semaine affichée">
-        <button type="button" data-mode="type" aria-pressed="true">Semaine type</button>
-        <button type="button" data-mode="serie" aria-pressed="false">Semaine Série</button>
-      </div>
-      <div class="week" id="week" aria-live="polite"></div>
-      <p class="weeknote" id="weeknote">Chaque matin, une nouvelle histoire, dans l'app et dans votre boîte mail.</p>
-    </div>
-  </section>
-
-  <!-- VI. LES TERRITOIRES -->
-  <section class="act" aria-labelledby="h-terr">
-    <div class="veil"></div>
-    <div class="inner wide">
-      <div class="rv">
-        <p class="kick g">Les territoires</p>
-        <h2 id="h-terr">Six terrains de jeu.<br><em>Une seule exigence.</em></h2>
-        <p class="p">Aucune histoire ne ressemble à celle de la veille. Toutes passent le même filtre : un basculement, un savoir, une scène, des preuves.</p>
-      </div>
-      <div class="terr rv">
-        <div><p class="tn">01</p><h3>Destins</h3><p>Ascensions, chutes et renaissances. Ce que la réussite fait aux gens.</p></div>
-        <div><p class="tn">02</p><h3>Arnaques</h3><p>Imposteurs, faussaires, mensonges géants. Comment le monde s'est fait avoir.</p></div>
-        <div><p class="tn">03</p><h3>Inventions</h3><p>Idées, rivalités, accidents. Les coulisses des objets et des marques.</p></div>
-        <div><p class="tn">04</p><h3>Corps et science</h3><p>Survies impossibles, découvertes, expériences. Le vivant poussé à bout.</p></div>
-        <div><p class="tn">05</p><h3>Exploits</h3><p>Victoires improbables, défis fous, défaites légendaires.</p></div>
-        <div><p class="tn">06</p><h3>Coulisses</h3><p>Les histoires vraies derrière les films, les albums et les œuvres.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VII. LES SÉRIES -->
-  <section class="act" aria-labelledby="h-series">
-    <div class="veil"></div>
-    <div class="inner wide">
-      <div class="rv">
-        <p class="kick">Les séries</p>
-        <h2 id="h-series">Des rendez-vous<br><em>qui reviennent.</em></h2>
-        <p class="p">Chaque série garde le même angle et change d'histoire à chaque épisode. <b>80 séries sont en préparation.</b></p>
-      </div>
-      <div class="marquee rv" aria-hidden="true">
-        <div class="track" id="trackA"></div>
-        <div class="track rev" id="trackB"></div>
-      </div>
-      <div class="featured">
-        <article class="panel rv">
-          <p class="plabel">Destins</p>
-          <h3>Jusqu'à la chute</h3>
-          <p>Des gens au sommet, suivis jusqu'au moment où leur réussite les détruit.</p>
-        </article>
-        <article class="panel rv">
-          <p class="plabel">Arnaques</p>
-          <h3>L'arnaque parfaite</h3>
-          <p>Des escroqueries trop belles pour être vraies. Et pourtant.</p>
-        </article>
-        <article class="panel rv">
-          <p class="plabel">Corps et science</p>
-          <h3>Survivants</h3>
-          <p>Des gens qui n'auraient jamais dû s'en sortir, et ce qu'ils nous apprennent.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIII. EXTRAIT -->
-  <section class="act" aria-labelledby="h-extrait">
-    <div class="veil"></div>
-    <div class="inner wide">
-      <div class="rv">
-        <p class="kick g">Un avant-goût</p>
-        <h2 id="h-extrait">Voilà comment<br><em class="g">une histoire commence.</em></h2>
-      </div>
-      <article class="story rv" aria-label="Extrait d'une histoire OPSIS">
-        <div class="head"><span><b>Flash</b> · L'arnaque parfaite</span><span>3 min de lecture</span></div>
-        <div class="progress" aria-hidden="true"><i></i></div>
-        <div class="body">
-          <p class="ttl">L'homme qui a vendu la tour Eiffel</p>
-          <div class="scene">
-            <p class="drop">Paris, 1925. Dans un salon de l'hôtel de Crillon, quelques ferrailleurs écoutent un homme qui se présente comme un haut fonctionnaire.</p>
-            <p>Il leur demande le secret absolu. La tour Eiffel coûte trop cher à entretenir, explique-t-il. L'État veut s'en débarrasser, et il cherche un acheteur pour sa ferraille.</p>
-            <p>Personne dans la pièce ne sait que cet homme n'a jamais travaillé pour l'État. Et l'un d'eux va payer.</p>
-          </div>
+  <!-- Ouverture : la page est déjà l'app -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Une histoire vraie, chaque matin.</h1>
+        <p class="lead">Écrite pour divertir autant que pour apprendre. Destins, arnaques, inventions, exploits : de 3 à 6 minutes de lecture, gratuitement.</p>
+        <div class="actions">
+          <a class="pill" href="#inscription">Recevoir l'histoire du jour</a>
+          <span class="when">Premier épisode le lundi 4 janvier 2027</span>
         </div>
-        <div class="foot">La suite le jour de sa sortie</div>
+      </div>
+
+      <article class="reader" id="reader" aria-label="Exemple d'histoire OPSIS">
+        <div class="bar" aria-hidden="true"><i id="readbar"></i></div>
+        <div class="meta"><span class="fmt">Flash</span><span id="readtime">3 min de lecture</span></div>
+        <div class="scroll" id="readscroll" tabindex="0">
+          <h2>L'homme qui a vendu la tour Eiffel</h2>
+          <p class="series">Série L'arnaque parfaite</p>
+          <div class="text">
+            <p>Paris, 1925. Dans un salon de l'hôtel de Crillon, quelques ferrailleurs écoutent un homme qui se présente comme un haut fonctionnaire.</p>
+            <p>Il leur demande le secret absolu. La tour Eiffel coûte trop cher à entretenir, explique-t-il. L'État veut s'en débarrasser, et il cherche un acheteur pour sa ferraille.</p>
+            <p>La demande a de quoi surprendre, mais elle n'a rien d'absurde à l'époque. La tour avait été construite pour l'Exposition universelle de 1889, et personne ne l'avait conçue pour rester debout éternellement.</p>
+            <p>L'homme s'appelle Victor Lustig. Il n'a jamais travaillé pour l'État. Il parle plusieurs langues, change de nom selon les villes, et a compris une chose avant tout le monde : on croit plus facilement un secret qu'une annonce.</p>
+            <p>Dans la pièce, l'un des ferrailleurs se met déjà à faire ses calculs.</p>
+          </div>
+          <div class="end"><b>La suite le jour de sa sortie.</b> Chaque histoire se termine par ses sources et trois choses à retenir.</div>
+        </div>
+        <div class="fade" aria-hidden="true"></div>
       </article>
     </div>
   </section>
 
-  <!-- IX. LA PROMESSE -->
-  <section class="act" aria-labelledby="h-promesse">
-    <div class="veil"></div>
-    <div class="inner rv">
-      <p class="kick">La promesse</p>
-      <h2 id="h-promesse">Chaque histoire<br><em>mérite votre temps.</em></h2>
-      <div class="vows">
-        <div class="vow"><span class="vn">01</span><p class="vt">Tout est vrai.<span>Chaque histoire repose sur des sources solides, listées à la fin. Aucun dialogue n'est inventé.</span></p></div>
-        <div class="vow"><span class="vn">02</span><p class="vt">Le temps est affiché.<span>Vous savez avant de commencer ce que l'histoire vous demande : 3 minutes, 6 minutes, ou une semaine d'épisodes.</span></p></div>
-        <div class="vow"><span class="vn">03</span><p class="vt">Vous en sortez plus riche.<span>Une histoire qui divertit sans rien apprendre n'est pas publiée. Une histoire qui apprend sans captiver non plus.</span></p></div>
-        <div class="vow"><span class="vn">04</span><p class="vt">C'est gratuit.<span>Une histoire chaque matin, sans abonnement.</span></p></div>
+  <!-- La semaine -->
+  <section class="block white" id="semaine">
+    <div class="wrap">
+      <div class="head">
+        <h2>Une histoire par jour. Pas toujours la même longueur.</h2>
+        <p>Le rituel est quotidien, la durée suit le récit. Une semaine par mois, une grande histoire se raconte en cinq épisodes.</p>
+      </div>
+      <div class="weekbox">
+        <div>
+          <div class="seg" role="group" aria-label="Choisir la semaine affichée">
+            <button type="button" data-mode="type" aria-pressed="true">Semaine ordinaire</button>
+            <button type="button" data-mode="serie" aria-pressed="false">Semaine de Série</button>
+          </div>
+          <div class="days" id="days" aria-hidden="true"></div>
+          <div class="labels" id="labels"></div>
+          <p class="weeknote" id="weeknote"></p>
+        </div>
+        <div class="legend">
+          <div><h3>Le Flash</h3><p>Un fait vrai stupéfiant, en une scène. 3 minutes.</p></div>
+          <div><h3>Le Récit</h3><p>Une histoire complète en trois actes. 6 minutes.</p></div>
+          <div class="s"><h3>La Série</h3><p>Cinq épisodes du lundi au vendredi, la première semaine du mois.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- X. INSCRIPTION -->
-  <section class="act" id="inscription" aria-labelledby="h-inscription">
-    <div class="veil"></div>
-    <div class="inner rv">
-      <p class="kick g">Le premier épisode</p>
-      <h2 id="h-inscription">Lundi 4 janvier 2027,<br><em>la première série commence.</em></h2>
-      <div class="countdown" id="countdown" aria-label="Temps restant avant le premier épisode">
-        <div><b id="cd-d">--</b><span>jours</span></div>
-        <div><b id="cd-h">--</b><span>heures</span></div>
-        <div><b id="cd-m">--</b><span>minutes</span></div>
+  <!-- La structure -->
+  <section class="block" id="methode">
+    <div class="wrap">
+      <div class="head">
+        <h2>Racontées comme des films. Vérifiées comme des enquêtes.</h2>
+        <p>Chaque histoire suit la même construction, du premier mot au dernier. Les faits sont sourcés, aucun dialogue n'est inventé.</p>
       </div>
-      <p class="p">Laissez votre email : vous recevrez la première histoire le jour de sa sortie, puis une nouvelle chaque matin.</p>
-      <form class="signup" id="signup" novalidate>
-        <label for="email" class="plabel" style="position:absolute;left:-9999px">Votre adresse email</label>
+      <div class="beats">
+        <div class="beat">
+          <h3>Une scène d'abord</h3>
+          <div class="track" aria-hidden="true"><i style="width:4%"></i><b style="left:4%"></b><span style="left:0;transform:none">premières lignes</span></div>
+          <p>On entre au cœur de l'action, sans préambule. Le contexte vient quand vous en avez besoin.</p>
+        </div>
+        <div class="beat">
+          <h3>Le basculement</h3>
+          <div class="track" aria-hidden="true"><i style="width:62%"></i><b style="left:62%"></b><span style="left:62%">aux deux tiers</span></div>
+          <p>Le moment précis où tout se retourne. Toute l'histoire est construite pour y mener.</p>
+        </div>
+        <div class="beat">
+          <h3>Ce qu'on retient</h3>
+          <div class="track" aria-hidden="true"><i style="width:100%"></i><b style="left:100%"></b><span style="left:auto;right:0;transform:none">à la fin</span></div>
+          <p>Trois idées assez claires pour les raconter à quelqu'un le soir même, puis les sources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bibliothèque des séries -->
+  <section class="block white" id="series">
+    <div class="wrap">
+      <div class="head">
+        <h2>80 séries en préparation, dans six territoires.</h2>
+        <p>Une série garde le même angle et change d'histoire à chaque épisode. Choisissez un territoire pour voir ce qui vous attend.</p>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filtrer les séries par territoire"></div>
+      <div class="lib" id="lib" aria-live="polite"></div>
+      <div class="libmore"><button class="pill ghost" type="button" id="more">Voir toutes les séries</button></div>
+    </div>
+  </section>
+
+  <!-- Engagements -->
+  <section class="block" id="promesse">
+    <div class="wrap">
+      <div class="head">
+        <h2>Chaque histoire mérite votre temps.</h2>
+      </div>
+      <div class="vows">
+        <div class="vow"><h3>Tout est vrai</h3><p>Chaque histoire repose sur des sources solides, listées à la fin.</p></div>
+        <div class="vow"><h3>Le temps est affiché</h3><p>Vous savez avant de commencer ce que l'histoire vous demande.</p></div>
+        <div class="vow"><h3>Vous apprenez quelque chose</h3><p>Une histoire qui divertit sans rien apprendre n'est pas publiée.</p></div>
+        <div class="vow"><h3>C'est gratuit</h3><p>Une histoire chaque matin, sans abonnement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inscription -->
+  <section class="signup" id="inscription">
+    <div class="wrap">
+      <p class="days-left" id="daysleft">—</p>
+      <p class="unit" id="daysunit">jours avant le premier épisode</p>
+      <h2>Lundi 4 janvier 2027, la première Série commence.</h2>
+      <p class="sub">Laissez votre email pour recevoir la première histoire le jour de sa sortie, puis une nouvelle chaque matin.</p>
+      <form class="join" id="join" novalidate>
+        <label class="sr" for="email">Votre adresse email</label>
         <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required>
-        <button class="btn" type="submit">M'inscrire <span class="arw" aria-hidden="true">→</span></button>
+        <button class="pill" type="submit">Recevoir l'histoire du jour</button>
       </form>
-      <p class="formmsg" id="formmsg" role="status"></p>
+      <p class="msg" id="msg" role="status"></p>
     </div>
   </section>
 
 </main>
 
-<footer class="fin">
-  <div class="row">
-    <div>
-      <p class="fbrand">OPSIS</p>
-      <p class="ftag">La réalité, mise en scène.</p>
-    </div>
-    <p class="fmeta">Histoires vraies · Chaque jour<br>© 2026 OPSIS</p>
+<footer>
+  <div class="wrap">
+    <span>© 2026 OPSIS</span>
+    <span class="tag">La réalité, mise en scène.</span>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
   "use strict";
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var coarse = window.matchMedia('(pointer: coarse)').matches;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ============ Adresse du service d'inscription ============
-     Coller ici l'URL d'un formulaire (Brevo, Formspree, Tally...) qui
-     accepte un POST avec un champ "email". Tant qu'elle est vide,
-     aucun email n'est enregistré et le formulaire le dit honnêtement. */
-  var FORM_ENDPOINT = '';
+  /* Adresse du service d'inscription (Brevo, Formspree, Tally…) qui accepte
+     un POST avec un champ "email". Tant qu'elle est vide, aucun email
+     n'est enregistré et le formulaire le dit. */
+  var FORM_ENDPOINT='';
 
-  /* ============ Progression, reveals, nav ============ */
-  var threadfill=document.getElementById('threadfill'),
-      threadpct=document.getElementById('threadpct'),
-      nav=document.getElementById('nav');
-  var scrollP=0, lastY=window.scrollY;
+  /* ---------- barre du haut ---------- */
+  var top=document.getElementById('top');
+  function onScroll(){ top.classList.toggle('scrolled',window.scrollY>8); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
-  function onScroll(){
-    var h=document.documentElement.scrollHeight-window.innerHeight;
-    scrollP = h>0 ? Math.min(1,Math.max(0,window.scrollY/h)) : 0;
-    threadfill.style.height=(scrollP*100)+'%';
-    threadpct.textContent=('0'+Math.round(scrollP*100)).slice(-2)+' %';
-    var y=window.scrollY;
-    nav.classList.toggle('hide', y>lastY && y>window.innerHeight*0.6);
-    lastY=y;
+  /* ---------- panneau de lecture ---------- */
+  var reader=document.getElementById('reader'),scroller=document.getElementById('readscroll'),
+      bar=document.getElementById('readbar'),rt=document.getElementById('readtime');
+  var TOTAL=3;
+  function onRead(){
+    var max=scroller.scrollHeight-scroller.clientHeight;
+    var p=max>0?Math.min(1,scroller.scrollTop/max):1;
+    bar.style.width=(p*100)+'%';
+    reader.classList.toggle('done',p>.98);
+    var left=Math.ceil(TOTAL*(1-p));
+    rt.textContent=p<.02?TOTAL+' min de lecture':(left>0?'encore '+left+' min':'lu');
   }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll,{passive:true});
-  onScroll();
+  scroller.addEventListener('scroll',onRead,{passive:true}); onRead();
 
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:.16});
-  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-
-  /* ============ La semaine ============ */
+  /* ---------- la semaine ---------- */
   var WEEK={
-    type:[
-      {d:'Lundi',f:'Flash',t:'3 min',w:20},
-      {d:'Mardi',f:'Récit',t:'6 min',w:40},
-      {d:'Mercredi',f:'Flash',t:'3 min',w:20},
-      {d:'Jeudi',f:'Récit',t:'6 min',w:40},
-      {d:'Vendredi',f:'Flash',t:'3 min',w:20},
-      {d:'Samedi',f:'Récit Coulisses',t:'6 min',w:40},
-      {d:'Dimanche',f:'Récit',t:'6 min',w:40}
-    ],
-    serie:[
-      {d:'Lundi',f:'Épisode 1',t:'5 min',w:33,ep:1},
-      {d:'Mardi',f:'Épisode 2',t:'5 min',w:33,ep:1},
-      {d:'Mercredi',f:'Épisode 3',t:'5 min',w:33,ep:1},
-      {d:'Jeudi',f:'Épisode 4',t:'5 min',w:33,ep:1},
-      {d:'Vendredi',f:'Épisode 5',t:'5 min',w:33,ep:1},
-      {d:'Samedi',f:'Flash',t:'3 min',w:20},
-      {d:'Dimanche',f:'Récit',t:'6 min',w:40}
-    ]
+    type:[['Lun','Flash',3],['Mar','Récit',6],['Mer','Flash',3],['Jeu','Récit',6],['Ven','Flash',3],['Sam','Récit',6],['Dim','Récit',6]],
+    serie:[['Lun','Épisode 1',5,1],['Mar','Épisode 2',5,1],['Mer','Épisode 3',5,1],['Jeu','Épisode 4',5,1],['Ven','Épisode 5',5,1],['Sam','Flash',3],['Dim','Récit',6]]
   };
   var NOTE={
-    type:"Chaque matin, une nouvelle histoire, dans l'app et dans votre boîte mail.",
-    serie:"La première semaine du mois, une grande histoire se déroule en cinq épisodes, du lundi au vendredi."
+    type:'33 minutes de lecture sur la semaine, une histoire à la fois.',
+    serie:'La Série se lit en cinq matins. Le week-end reprend le rythme ordinaire.'
   };
-  var weekEl=document.getElementById('week'), noteEl=document.getElementById('weeknote');
-  var days=WEEK.type.map(function(){
-    var el=document.createElement('div'); el.className='day';
-    el.innerHTML='<span class="dn"></span><span class="df"></span><span class="dt"></span><span class="bar"><i></i></span>';
-    weekEl.appendChild(el); return el;
-  });
+  var daysEl=document.getElementById('days'),labelsEl=document.getElementById('labels'),noteEl=document.getElementById('weeknote');
+  var cols=[],labs=[];
+  for(var i=0;i<7;i++){
+    var d=document.createElement('div'); d.className='d';
+    d.innerHTML='<span class="min"></span><span class="col"></span>';
+    daysEl.appendChild(d); cols.push(d);
+    var l=document.createElement('div');
+    l.innerHTML='<div class="dn"></div><div class="fn"></div>';
+    labelsEl.appendChild(l); labs.push(l);
+  }
   function renderWeek(mode){
     WEEK[mode].forEach(function(x,i){
-      var el=days[i];
-      el.querySelector('.dn').textContent=x.d;
-      el.querySelector('.df').textContent=x.f;
-      el.querySelector('.dt').textContent=x.t+' de lecture';
-      el.querySelector('.bar i').style.width=x.w+'%';
-      el.classList.toggle('ep',!!x.ep);
+      cols[i].classList.toggle('ep',!!x[3]);
+      cols[i].querySelector('.min').textContent=x[2]+' min';
+      cols[i].querySelector('.col').style.height=(x[2]/6*78)+'%';
+      labs[i].querySelector('.dn').textContent=x[0];
+      labs[i].querySelector('.fn').textContent=x[1];
     });
     noteEl.textContent=NOTE[mode];
   }
   renderWeek('type');
-  document.querySelectorAll('.switch button').forEach(function(b){
+  document.querySelectorAll('.seg button').forEach(function(b){
     b.addEventListener('click',function(){
-      if(b.getAttribute('aria-pressed')==='true') return;
-      document.querySelectorAll('.switch button').forEach(function(o){ o.setAttribute('aria-pressed', o===b?'true':'false'); });
-      if(reduce){ renderWeek(b.dataset.mode); return; }
-      weekEl.classList.add('fade');
-      setTimeout(function(){ renderWeek(b.dataset.mode); weekEl.classList.remove('fade'); },320);
+      document.querySelectorAll('.seg button').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});
+      renderWeek(b.dataset.mode);
     });
   });
 
-  /* ============ Bandeau des séries ============ */
-  var SERIES=['Jusqu’à la chute','Renaissance','Le dernier jour','Un seul choix','Les oubliés','L’héritier','Gloire éclair','La double vie','L’éminence grise','Le traître',
-    'Le grand mensonge','L’arnaque parfaite','Faussaires','L’emprise','Fake it','Le casse du siècle','Ponzi','Faux remèdes','Canulars','La fraude géante',
-    'Par accident','Guerres de marques','Avant le logo','Le produit maudit','L’idée volée','Le pivot','La première fois','Ceux qui ont dit non','Le brevet','La ruée'];
-  var SERIES_B=['Survivants','Cobayes','Le cerveau','Les limites','L’épidémie','Catastrophes','L’espace','Le mystère','Le prophète moqué','Bêtes',
-    'L’impossible victoire','Le duel','Une seconde','L’expédition','Prodiges','Seul','Le retour','La triche','Le geste','L’échec glorieux',
-    'Tournage maudit','La vraie histoire','Refusé','Le son d’une époque','L’œuvre volée','Le procès','L’album','La scène','L’œuvre cachée','Le désastre'];
-  function fill(id,list){
-    var el=document.getElementById(id), html='';
-    for(var r=0;r<2;r++){ list.forEach(function(s){ html+='<span>'+s+'</span>'; }); }
-    el.innerHTML=html;
+  /* ---------- bibliothèque des séries ---------- */
+  var T=['Destins','Arnaques','Inventions','Corps et science','Exploits','Coulisses'];
+  var S=[
+    [0,"Jusqu'à la chute","Des gens au sommet, suivis jusqu'à ce que leur réussite les détruise."],
+    [0,"Renaissance","Partir du fond et raconter la remontée."],
+    [0,"Le dernier jour","La dernière journée normale avant que tout bascule."],
+    [0,"Un seul choix","Une décision de quelques minutes qui change une vie."],
+    [0,"Les oubliés","Ceux qui ont fait l'histoire sans en recevoir la gloire."],
+    [0,"L'héritier","Des enfants de puissants écrasés par leur nom."],
+    [0,"Gloire éclair","Célèbres une année, oubliés la suivante."],
+    [0,"La double vie","Des gens qui ont mené deux existences."],
+    [0,"L'éminence grise","Ceux qui gouvernaient dans l'ombre."],
+    [0,"Le traître","Ceux qui ont trahi leur camp."],
+    [0,"Du jour au lendemain","Une fortune soudaine qui détruit tout."],
+    [0,"L'exil","Tout recommencer ailleurs."],
+    [0,"Le mentor","Un maître, un élève, un destin changé."],
+    [0,"La dernière œuvre","Ce que des créateurs ont fait en sachant la fin proche."],
+    [1,"Le grand mensonge","Des imposteurs qui ont vécu la vie d'un autre."],
+    [1,"L'arnaque parfaite","Des escroqueries trop belles pour être vraies."],
+    [1,"Faussaires","Les génies du faux."],
+    [1,"L'emprise","Comment des gourous prennent le contrôle de vies entières."],
+    [1,"Fake it","Des projets bâtis sur du vide jusqu'à l'effondrement."],
+    [1,"Le casse du siècle","Des vols spectaculaires, préparés comme des films."],
+    [1,"Ponzi","Des pyramides financières et leur effondrement."],
+    [1,"Faux remèdes","Des charlatans de la santé et leurs victimes."],
+    [1,"Faux héritiers","Des imposteurs qui se disent d'une grande lignée."],
+    [1,"L'arnaque en ligne","Des escroqueries nées sur internet."],
+    [1,"Faux exploits","Des records et des victoires truqués."],
+    [1,"Canulars","Des mensonges qui ont trompé le monde entier."],
+    [1,"La fraude géante","Des entreprises admirées qui mentaient sur tout."],
+    [2,"Par accident","Des découvertes nées d'une erreur."],
+    [2,"Guerres de marques","Des rivalités qui ont créé des empires."],
+    [2,"Avant le logo","Ce qu'étaient les grandes marques avant d'être connues."],
+    [2,"Le produit maudit","Des échecs commerciaux spectaculaires."],
+    [2,"L'idée volée","Qui a vraiment inventé quoi."],
+    [2,"Le pivot","Des entreprises sauvées en changeant tout."],
+    [2,"L'objet","La biographie d'un objet du quotidien."],
+    [2,"La première fois","Le jour où une chose a existé pour la première fois."],
+    [2,"Ceux qui ont dit non","Des refus qui ont coûté des milliards."],
+    [2,"Le fondateur évincé","Chassés de l'entreprise qu'ils ont créée."],
+    [2,"La pub qui a tout changé","Des campagnes qui ont créé un besoin."],
+    [2,"Le brevet","Des inventeurs inattendus."],
+    [2,"La ruée","Des bulles et des folies collectives."],
+    [3,"Survivants","Des gens qui n'auraient jamais dû s'en sortir."],
+    [3,"Cobayes","Des scientifiques qui se sont pris pour sujet d'expérience."],
+    [3,"Le cerveau","Des cas qui ont révélé comment l'esprit fonctionne."],
+    [3,"Les limites","Jusqu'où le corps humain peut aller."],
+    [3,"L'épidémie","Des enquêtes sanitaires menées comme des polars."],
+    [3,"Le corps volé","Ce que la science a pris sans demander."],
+    [3,"L'expérience interdite","Des expériences qui ont dépassé les bornes."],
+    [3,"Catastrophes","Les erreurs humaines derrière les désastres."],
+    [3,"Le génie obsédé","La face cachée des grands esprits."],
+    [3,"L'espace","Des missions au bord de la catastrophe."],
+    [3,"Bêtes","Des histoires vraies d'animaux."],
+    [3,"Le mystère","Des énigmes jamais complètement résolues."],
+    [3,"Le prophète moqué","Ceux qui avaient raison trop tôt."],
+    [4,"L'impossible victoire","Des outsiders qui gagnent contre toute logique."],
+    [4,"Le duel","Des rivalités qui ont défini un sport."],
+    [4,"Une seconde","Un seul instant sportif, décortiqué."],
+    [4,"L'expédition","Des aventures extrêmes et ce qu'elles ont coûté."],
+    [4,"Prodiges","Des génies précoces et ce que le talent a fait d'eux."],
+    [4,"Seul","Des exploits accomplis en solitaire."],
+    [4,"Le retour","Des comebacks après l'irréparable."],
+    [4,"La triche","Des champions qui ont menti pour gagner."],
+    [4,"L'équipe","Des collectifs improbables."],
+    [4,"Le geste","Un geste sportif qui a dépassé le sport."],
+    [4,"Le vide","Des défis fous au-dessus du vide."],
+    [4,"La première","Des femmes qui ont forcé une porte fermée."],
+    [4,"L'échec glorieux","Des défaites devenues légendes."],
+    [5,"Tournage maudit","Des films qui ont failli détruire leurs créateurs."],
+    [5,"La vraie histoire","Ce que le film a changé par rapport aux faits."],
+    [5,"Refusé","Des chefs-d'œuvre rejetés avant de devenir cultes."],
+    [5,"Le son d'une époque","L'histoire d'un morceau ou d'un son."],
+    [5,"L'œuvre volée","Des vols d'art célèbres."],
+    [5,"Le procès","Des œuvres jugées au tribunal."],
+    [5,"L'album","Le making-of d'un album mythique."],
+    [5,"Le vrai personnage","Les vraies personnes derrière les héros de fiction."],
+    [5,"La scène","L'histoire d'une seule scène culte."],
+    [5,"Le rôle refusé","Ceux qui ont dit non au rôle d'une vie."],
+    [5,"L'œuvre cachée","Des créateurs découverts après leur mort."],
+    [5,"Le label","Les maisons qui ont fabriqué un son."],
+    [5,"La photo","L'histoire d'une image célèbre."],
+    [5,"Le désastre","Des flops qui ont ruiné des studios."]
+  ];
+  var chipsEl=document.getElementById('chips'),libEl=document.getElementById('lib'),moreBtn=document.getElementById('more');
+  var current=-1, expanded=false;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function chip(label,val,count){
+    var b=document.createElement('button'); b.type='button'; b.className='chip';
+    b.innerHTML=esc(label)+'<span class="n">'+count+'</span>';
+    b.setAttribute('aria-pressed',val===current?'true':'false');
+    b.addEventListener('click',function(){ current=val; expanded=false; renderLib(); });
+    return b;
   }
-  fill('trackA',SERIES); fill('trackB',SERIES_B);
+  function renderLib(){
+    chipsEl.innerHTML='';
+    chipsEl.appendChild(chip('Toutes',-1,S.length));
+    T.forEach(function(t,i){ chipsEl.appendChild(chip(t,i,S.filter(function(s){return s[0]===i;}).length)); });
+    var list=S.filter(function(s){return current<0||s[0]===current;});
+    var show=list;
+    if(current<0 && !expanded){
+      /* aperçu : deux séries par territoire */
+      show=[]; T.forEach(function(_,i){ show=show.concat(S.filter(function(s){return s[0]===i;}).slice(0,2)); });
+    }
+    libEl.innerHTML=show.map(function(s){
+      return '<div class="item"><h3>'+esc(s[1])+'</h3><span class="t">'+esc(T[s[0]])+'</span><p>'+esc(s[2])+'</p></div>';
+    }).join('');
+    moreBtn.parentNode.style.display=(show.length<list.length)?'':'none';
+  }
+  moreBtn.addEventListener('click',function(){ expanded=true; renderLib(); });
+  renderLib();
 
-  /* ============ Compte à rebours ============ */
+  /* ---------- jours restants ---------- */
   var LAUNCH=new Date('2027-01-04T07:00:00+01:00').getTime();
-  var cdD=document.getElementById('cd-d'),cdH=document.getElementById('cd-h'),cdM=document.getElementById('cd-m');
+  var dl=document.getElementById('daysleft'),du=document.getElementById('daysunit');
   function tick(){
-    var ms=Math.max(0,LAUNCH-Date.now());
-    var d=Math.floor(ms/864e5), h=Math.floor(ms%864e5/36e5), m=Math.floor(ms%36e5/6e4);
-    cdD.textContent=d; cdH.textContent=('0'+h).slice(-2); cdM.textContent=('0'+m).slice(-2);
+    var days=Math.ceil(Math.max(0,LAUNCH-Date.now())/864e5);
+    if(days<=0){ dl.textContent='0'; du.textContent='La première Série est en cours.'; return; }
+    dl.textContent=days; du.textContent=days>1?'jours avant le premier épisode':'jour avant le premier épisode';
   }
-  tick(); setInterval(tick,30000);
+  tick(); setInterval(tick,600000);
 
-  /* ============ Inscription ============ */
-  var form=document.getElementById('signup'), msg=document.getElementById('formmsg'), email=document.getElementById('email');
+  /* ---------- inscription ---------- */
+  var form=document.getElementById('join'),msg=document.getElementById('msg'),email=document.getElementById('email');
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var v=email.value.trim();
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ msg.textContent='Cette adresse email ne semble pas valide.'; email.focus(); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ msg.textContent='Cette adresse email ne semble pas valide. Vérifiez-la puis réessayez.'; email.focus(); return; }
     if(!FORM_ENDPOINT){ msg.textContent='Les inscriptions ouvrent très bientôt. Revenez dans quelques jours.'; return; }
-    msg.textContent='Envoi…';
+    msg.textContent='Inscription en cours…';
     fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:v})})
-      .then(function(r){ if(!r.ok) throw new Error(); msg.textContent='C’est noté. La première histoire arrive le 4 janvier.'; form.reset(); })
-      .catch(function(){ msg.textContent='L’envoi a échoué. Réessayez dans un instant.'; });
+      .then(function(r){ if(!r.ok) throw new Error(); msg.textContent='Inscription confirmée. Votre première histoire arrive le 4 janvier.'; form.reset(); })
+      .catch(function(){ msg.textContent="L'inscription n'est pas passée. Réessayez dans un instant."; });
   });
-
-  /* ============ Fond WebGL : le diaphragme ============ */
-  if(typeof THREE==='undefined'){
-    document.getElementById('fallbackbg').style.display='block';
-    document.getElementById('webgl').style.display='none';
-    return;
-  }
-
-  var canvas=document.getElementById('webgl');
-  var small=window.innerWidth<760;
-  var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:!small,powerPreference:'low-power'});
-  renderer.setClearColor(0x000000,0);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, small?1.5:1.75));
-  renderer.setSize(window.innerWidth,window.innerHeight);
-
-  var scene=new THREE.Scene();
-  scene.fog=new THREE.FogExp2(0x08080a,0.045);
-  var camera=new THREE.PerspectiveCamera(52,window.innerWidth/window.innerHeight,0.1,100);
-  camera.position.set(0,0,9);
-
-  scene.add(new THREE.AmbientLight(0x20181c,1.1));
-  var lRed=new THREE.PointLight(0xA8141A,2.4,40);  lRed.position.set(4,2.5,6);  scene.add(lRed);
-  var lGold=new THREE.PointLight(0xB79152,1.3,40); lGold.position.set(-5,-3,4); scene.add(lGold);
-  var lWhite=new THREE.PointLight(0xF2EFE8,0.7,30);lWhite.position.set(0,0,7);  scene.add(lWhite);
-
-  var rig=new THREE.Group(); scene.add(rig);
-  var pupilMat=new THREE.MeshStandardMaterial({color:0x1a0406,emissive:0xA8141A,emissiveIntensity:1.4,roughness:.4,metalness:.2});
-  var pupil=new THREE.Mesh(new THREE.SphereGeometry(0.7,40,40),pupilMat); rig.add(pupil);
-  var glowMat=new THREE.MeshBasicMaterial({color:0xC8202A,transparent:true,opacity:.25});
-  var glow=new THREE.Mesh(new THREE.SphereGeometry(1.2,28,28),glowMat); rig.add(glow);
-
-  var N=6, Rr=2.4, blades=[];
-  var bladeGeo=new THREE.BoxGeometry(0.78,3.0,0.09); bladeGeo.translate(0,1.5,0);
-  var matA=new THREE.MeshStandardMaterial({color:0x141419,metalness:.85,roughness:.34});
-  var matB=new THREE.MeshStandardMaterial({color:0x241a20,metalness:.7,roughness:.5});
-  for(var i=0;i<N;i++){
-    var a=i/N*Math.PI*2;
-    var pivot=new THREE.Group();
-    pivot.position.set(Rr*Math.cos(a),Rr*Math.sin(a),0);
-    pivot.userData.base=a+Math.PI+0.55;
-    pivot.add(new THREE.Mesh(bladeGeo, i%2?matA:matB));
-    rig.add(pivot); blades.push(pivot);
-  }
-  var ring1=new THREE.Mesh(new THREE.TorusGeometry(3.05,0.045,14,110),
-    new THREE.MeshStandardMaterial({color:0x9C844C,metalness:.9,roughness:.35,emissive:0x3a2e18,emissiveIntensity:.4}));
-  var ring2=new THREE.Mesh(new THREE.TorusGeometry(3.5,0.02,14,110),
-    new THREE.MeshStandardMaterial({color:0xA8141A,metalness:.6,roughness:.5,emissive:0x2a0608,emissiveIntensity:.5}));
-  rig.add(ring1); rig.add(ring2);
-
-  function bokehTex(){
-    var c=document.createElement('canvas'); c.width=c.height=64;
-    var g=c.getContext('2d'); g.translate(32,32);
-    var rg=g.createRadialGradient(0,0,4,0,0,30);
-    rg.addColorStop(0,'rgba(255,255,255,.95)'); rg.addColorStop(.55,'rgba(255,255,255,.35)'); rg.addColorStop(1,'rgba(255,255,255,0)');
-    g.fillStyle=rg; g.beginPath();
-    for(var k=0;k<6;k++){ var a=k/6*Math.PI*2-Math.PI/2; g[k?'lineTo':'moveTo'](Math.cos(a)*30,Math.sin(a)*30); }
-    g.closePath(); g.fill();
-    return new THREE.CanvasTexture(c);
-  }
-  var CNT=small?70:140;
-  var pos=new Float32Array(CNT*3), col=new Float32Array(CNT*3), siz=new Float32Array(CNT);
-  var palette=[[0.66,0.08,0.10],[0.72,0.57,0.32],[0.94,0.92,0.89]];
-  for(var k=0;k<CNT;k++){
-    pos[k*3]=(Math.random()-.5)*26; pos[k*3+1]=(Math.random()-.5)*18; pos[k*3+2]=-4-Math.random()*20;
-    var cc=palette[Math.random()<0.5?0:(Math.random()<0.6?1:2)];
-    col[k*3]=cc[0]; col[k*3+1]=cc[1]; col[k*3+2]=cc[2];
-    siz[k]=18+Math.random()*70;
-  }
-  var bg=new THREE.BufferGeometry();
-  bg.setAttribute('position',new THREE.BufferAttribute(pos,3));
-  bg.setAttribute('color',new THREE.BufferAttribute(col,3));
-  bg.setAttribute('psize',new THREE.BufferAttribute(siz,1));
-  var bokehMat=new THREE.ShaderMaterial({
-    uniforms:{map:{value:bokehTex()},opacity:{value:0.5}},
-    vertexShader:['attribute float psize;','varying vec3 vC;','void main(){ vC=color;',
-      ' vec4 mv=modelViewMatrix*vec4(position,1.0);',' gl_PointSize=psize*(1.0/-mv.z);',
-      ' gl_Position=projectionMatrix*mv; }'].join('\n'),
-    fragmentShader:['uniform sampler2D map;','uniform float opacity;','varying vec3 vC;',
-      'void main(){ vec4 t=texture2D(map,gl_PointCoord); gl_FragColor=vec4(vC,1.0)*t*opacity; }'].join('\n'),
-    transparent:true, depthWrite:false, vertexColors:true, blending:THREE.AdditiveBlending
-  });
-  var bokeh=new THREE.Points(bg,bokehMat); scene.add(bokeh);
-
-  var tmx=0,tmy=0;
-  window.addEventListener('mousemove',function(e){
-    tmx=(e.clientX/window.innerWidth-.5); tmy=(e.clientY/window.innerHeight-.5);
-  },{passive:true});
-  window.addEventListener('touchmove',function(e){
-    var t=e.touches&&e.touches[0]; if(!t) return;
-    tmx=(t.clientX/window.innerWidth-.5)*0.6; tmy=(t.clientY/window.innerHeight-.5)*0.6;
-  },{passive:true});
-
-  function smooth(a,b,x){x=Math.min(1,Math.max(0,(x-a)/(b-a)));return x*x*(3-2*x);}
-  function easeIO(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;}
-
-  var t0=performance.now(), rafId=null;
-  function frame(){
-    var t=(performance.now()-t0)*0.001, p=scrollP;
-    /* le diaphragme s'ouvre quand l'histoire commence, se referme au générique */
-    var openness = smooth(0.02,0.30,p) - smooth(0.82,0.99,p)*0.7;
-    var open = Math.max(0,openness) + (reduce?0:Math.sin(t*0.8)*0.02);
-    for(var i=0;i<N;i++){ blades[i].rotation.z = blades[i].userData.base + open*0.82; }
-    pupil.scale.setScalar(0.14+open*0.9); glow.scale.setScalar(0.5+open*1.1);
-    pupilMat.emissiveIntensity=0.8+open*1.6; glowMat.opacity=0.08+open*0.28;
-    camera.position.z = 9 - easeIO(p)*5.0;
-    camera.position.x += (tmx*1.1 - camera.position.x)*0.05;
-    camera.position.y += (-tmy*0.8 - camera.position.y)*0.05;
-    camera.lookAt(0,0,0);
-    rig.rotation.z = p*Math.PI*0.5 + t*0.03;
-    rig.rotation.x += (tmy*0.25 - rig.rotation.x)*0.04;
-    rig.rotation.y += (tmx*0.30 - rig.rotation.y)*0.04;
-    ring1.rotation.z=t*0.06; ring2.rotation.z=-t*0.04;
-    bokeh.rotation.z=t*0.01; bokeh.position.y=Math.sin(t*0.1)*0.4;
-    lRed.intensity=2.0+Math.sin(t*1.2)*0.4;
-    renderer.render(scene,camera);
-  }
-  function loop(){ frame(); rafId=requestAnimationFrame(loop); }
-  function start(){ if(rafId===null) loop(); }
-  function stop(){ if(rafId!==null){ cancelAnimationFrame(rafId); rafId=null; } }
-
-  if(reduce){ frame(); window.addEventListener('scroll',frame,{passive:true}); }
-  else{
-    start();
-    document.addEventListener('visibilitychange',function(){
-      if(document.hidden){ stop(); } else { t0=performance.now(); start(); }
-    });
-  }
-
-  var rTO;
-  window.addEventListener('resize',function(){
-    clearTimeout(rTO);
-    rTO=setTimeout(function(){
-      camera.aspect=window.innerWidth/window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth,window.innerHeight);
-      if(reduce) frame();
-    },140);
-  },{passive:true});
 })();
 </script>
 </body>
