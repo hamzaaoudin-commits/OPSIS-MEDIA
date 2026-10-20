@@ -648,7 +648,7 @@ function apertureSVG(o){
     '<circle r="'+(R+ring/2-.5)+'" fill="none" stroke="#EDE6DA" stroke-width="'+ring+'"/>'+
     (o.ticks?'<g class="ticks" transform="rotate('+(o.tick||0)+')">'+ticks+'</g>':'');
 }
-function logoSVG(){return '<svg viewBox="-100 -100 200 200" aria-hidden="true">'+apertureSVG({open:.82,pupil:.62,rot:-34,ring:18,id:'H'})+'</svg>';}
+function logoSVG(){return '<svg viewBox="-106 -106 212 212" aria-hidden="true">'+apertureSVG({open:.82,pupil:.62,rot:-34,ring:18,id:'H'})+'</svg>';}
 function libCount(){var n=0;Object.keys(S.saved).forEach(function(k){if(S.saved[k])n++;});Object.keys(S.follow).forEach(function(k){if(S.follow[k])n++;});return n;}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
 function toast(t){var e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(toast.k);toast.k=setTimeout(function(){e.classList.remove('show');},1700);}
