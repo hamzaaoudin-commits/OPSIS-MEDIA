@@ -1,274 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPSIS — Une histoire vraie, chaque matin</title>
-<meta name="description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre. Gratuit, de 3 à 6 minutes de lecture.">
-<meta name="theme-color" content="#F5F6F7">
-<link rel="canonical" href="https://opsis.media/">
-
-<!-- FAVICONS — fichiers réels à la racine du site, à côté de index.html -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#A8141A">
-
-<!-- Partage social — remplacer og:image par un visuel 1200x630 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OPSIS · Une histoire vraie, chaque matin</title>
+<meta name="description" content="OPSIS publie une histoire vraie chaque jour, écrite pour divertir autant que pour apprendre. De 3 à 6 minutes de lecture, gratuitement. Premier épisode le 4 janvier 2027.">
+<meta name="theme-color" content="#09090A">
+<meta property="og:title" content="OPSIS · La réalité, mise en scène.">
+<meta property="og:description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="OPSIS">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:url" content="https://opsis.media/">
-<meta property="og:title" content="OPSIS — Une histoire vraie, chaque matin">
-<meta property="og:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre.">
-<meta property="og:image" content="https://opsis.media/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OPSIS — Une histoire vraie, chaque matin">
-<meta name="twitter:description" content="Des histoires vraies à dévorer, écrites pour divertir autant que pour apprendre.">
-<meta name="twitter:image" content="https://opsis.media/og.jpg">
-
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"OPSIS",
-  "url":"https://opsis.media/",
-  "logo":"https://opsis.media/favicon-512.png",
-  "description":"Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.",
-  "slogan":"La réalité, mise en scène."
-}
-</script>
-
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --page:#F5F6F7;      /* fond de l'app, blanc froid */
-    --sheet:#FFFFFF;     /* surface de lecture */
-    --ink:#161A22;       /* encre bleu-noir */
-    --soft:#5C6270;      /* texte secondaire */
-    --faint:#8A909C;     /* métadonnées */
-    --rule:#E2E5EA;      /* filets */
-    --read:#A8141A;      /* rouge OPSIS : réservé à la lecture (progression, temps lu) */
-    --read-soft:#F6E7E8;
-    --serif:'Literata',Georgia,'Times New Roman',serif;
-    --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
-    --max:1120px;
+    --black:#09090A;--coal:#121214;--ash:#1C1C1F;--line:rgba(237,230,218,.12);
+    --bone:#EDE6DA;--dim:#A39E95;--faint:#6F6B65;
+    --red:#D2232C;--red-type:#F04A50;--gold:#D3A85E;
+    --disp:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+    --serif:'Newsreader',Georgia,serif;
+    --ui:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+    --w:1160px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{background:var(--black);color:var(--bone);font-family:var(--ui);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit}
-  :focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+  :focus-visible{outline:2px solid var(--red-type);outline-offset:3px;border-radius:6px}
+  .wrap{width:min(var(--w),100% - 40px);margin:0 auto}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-type)}
+  h1,h2,h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
 
-  /* ---------- barre ---------- */
-  header.top{position:sticky;top:0;z-index:20;background:rgba(245,246,247,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
-  header.top.scrolled{border-bottom-color:var(--rule)}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.01em}
-  .logo svg{width:22px;height:22px}
-  .pill{display:inline-flex;align-items:center;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;color:var(--sheet);background:var(--ink);border:0;border-radius:999px;padding:11px 20px;cursor:pointer;transition:background .2s}
-  .pill:hover{background:#2B313D}
-  .pill.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
-  .pill.ghost:hover{background:var(--ink);color:var(--sheet)}
+  /* ---------- barre du haut ---------- */
+  header.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.top.scrolled{background:rgba(9,9,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px}
+  .mark{display:flex;align-items:center;gap:2px;text-decoration:none}
+  .mark svg{width:32px;height:32px;display:block}
+  .wordmark{font-family:var(--disp);font-weight:900;font-size:28px;letter-spacing:.16em;line-height:1;margin-top:1px}
+  nav.links{display:flex;gap:28px;margin-left:auto;margin-right:8px}
+  nav.links a{font-size:14px;font-weight:600;color:var(--dim);text-decoration:none;transition:color .2s}
+  nav.links a:hover{color:var(--bone)}
+  .pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:999px;background:var(--red);color:#fff;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s;border:1px solid transparent}
+  .pill:hover{background:#E32B35;transform:translateY(-1px)}
+  .pill.ghost{background:transparent;border-color:var(--line);color:var(--bone)}
+  .pill.ghost:hover{border-color:var(--bone);background:rgba(237,230,218,.06)}
+  .pill.big{padding:15px 28px;font-size:16px}
 
   /* ---------- ouverture ---------- */
-  .hero{padding:72px 0 96px}
-  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
-  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.025em;max-width:11ch}
-  .hero .lead{margin-top:26px;font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--soft);max-width:34ch}
-  .hero .actions{margin-top:36px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-  .hero .when{font-size:15px;color:var(--faint)}
-
-  /* le panneau de lecture */
-  .reader{background:var(--sheet);border-radius:22px;box-shadow:0 1px 0 var(--rule),0 24px 60px -28px rgba(22,26,34,.28);overflow:hidden;position:relative}
-  .reader .bar{height:3px;background:var(--rule)}
-  .reader .bar i{display:block;height:100%;width:0;background:var(--read);transition:width .15s linear}
-  .reader .meta{display:flex;justify-content:space-between;align-items:center;padding:18px 26px 0;font-size:14px;color:var(--faint)}
-  .reader .meta .fmt{color:var(--read);font-weight:600}
-  .reader .scroll{height:440px;overflow-y:auto;padding:14px 26px 40px;scrollbar-width:thin;scrollbar-color:var(--rule) transparent;overscroll-behavior:contain}
-  .reader h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;letter-spacing:-.015em;margin-top:8px}
-  .reader .series{margin-top:8px;font-size:15px;color:var(--soft)}
-  .reader .text{margin-top:22px;font-family:var(--serif);font-size:19px;line-height:1.72}
-  .reader .text p+p{margin-top:16px}
-  .reader .end{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);font-size:15px;color:var(--soft)}
-  .reader .end b{color:var(--ink);font-weight:600}
-  .reader .fade{position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none;transition:opacity .3s}
-  .reader.done .fade{opacity:0}
-  .reader .left{position:absolute;right:20px;bottom:16px;font-size:13px;color:var(--faint);background:#fff;padding:2px 6px;border-radius:6px}
+  .hero{position:relative;padding:118px 0 70px;overflow:hidden}
+  .hero::before{content:"";position:absolute;left:62%;top:46%;width:900px;height:900px;margin:-450px 0 0 -450px;background:radial-gradient(closest-side,rgba(210,35,44,.26),rgba(210,35,44,0));pointer-events:none}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center}
+  .hero h1{font-size:clamp(64px,9.2vw,138px);margin:18px 0 26px}
+  .hero h1 em{font-style:normal;color:var(--red-type)}
+  .lead{font-family:var(--serif);font-size:clamp(20px,2.1vw,25px);line-height:1.5;color:#D6CFC2;max-width:30em}
+  .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;margin-top:34px}
+  .when{font-size:14px;color:var(--dim)}
+  .stats{display:flex;gap:34px;margin-top:46px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .stats b{display:block;font-family:var(--disp);font-weight:900;font-size:40px;line-height:1;letter-spacing:.02em}
+  .stats span{font-size:13px;color:var(--dim)}
+  .device{min-width:0;width:100%;position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .stage{position:relative;width:420px;max-width:100%}
+  .stage iframe{position:absolute;left:0;top:0;width:420px;height:880px;border:0;transform-origin:0 0;background:transparent;color-scheme:dark}
+  .hint{font-size:13px;color:var(--faint);letter-spacing:.04em}
 
   /* ---------- sections ---------- */
-  section.block{padding:104px 0;border-top:1px solid var(--rule)}
-  section.block.white{background:var(--sheet)}
-  .head{max-width:640px}
-  .head h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.02em}
-  .head p{margin-top:18px;font-size:18px;color:var(--soft);max-width:52ch}
+  section.block{padding:110px 0;border-top:1px solid var(--line)}
+  .head{max-width:760px;margin-bottom:54px}
+  .head h2{font-size:clamp(44px,6.4vw,84px);margin:14px 0 20px}
+  .head p{font-family:var(--serif);font-size:21px;line-height:1.55;color:#CFC8BB}
+  .alt{background:var(--coal)}
 
-  /* ---------- la semaine ---------- */
-  .weekbox{margin-top:52px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:end}
-  .seg{display:inline-flex;background:var(--page);border-radius:999px;padding:4px;margin-bottom:28px}
-  .seg button{font:inherit;font-size:15px;font-weight:500;color:var(--soft);background:none;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .2s,color .2s}
-  .seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);box-shadow:0 1px 3px rgba(22,26,34,.14)}
-  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:end;height:260px;border-bottom:1px solid var(--rule)}
-  .d{display:flex;flex-direction:column;justify-content:flex-end;height:100%}
-  .d .min{font-size:14px;color:var(--faint);margin-bottom:8px;text-align:center}
-  .d .col{background:var(--ink);border-radius:8px 8px 0 0;transition:height .5s cubic-bezier(.2,.7,.2,1),background .3s}
-  .d.ep .col{background:var(--read)}
-  .labels{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:12px}
-  .labels div{text-align:center}
-  .labels .dn{font-size:14px;color:var(--faint)}
-  .labels .fn{font-family:var(--serif);font-size:16px;margin-top:2px;line-height:1.25}
-  .legend{display:flex;flex-direction:column;gap:22px}
-  .legend div{padding-left:16px;border-left:3px solid var(--ink)}
-  .legend div.s{border-left-color:var(--read)}
-  .legend h3{font-family:var(--serif);font-weight:600;font-size:20px}
-  .legend p{font-size:15px;color:var(--soft);margin-top:2px}
-  .weeknote{margin-top:22px;font-size:15px;color:var(--soft)}
+  /* la semaine */
+  .weekbox{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:start}
+  .seg{display:inline-flex;padding:4px;border:1px solid var(--line);border-radius:999px;margin-bottom:30px;background:var(--black)}
+  .seg button{padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;color:var(--dim);transition:all .2s}
+  .seg button[aria-pressed="true"]{background:var(--bone);color:var(--black)}
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;height:250px;align-items:end}
+  .d{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px;height:100%}
+  .d .min{font-size:12px;font-weight:700;color:var(--dim)}
+  .d .col{width:100%;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#4a4741,#2a2825);transition:height .6s cubic-bezier(.2,.8,.2,1),background .3s}
+  .d.ep .col{background:linear-gradient(180deg,var(--red-type),#8d1118)}
+  .d.ep .min{color:var(--red-type)}
+  .labels{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:14px;text-align:center}
+  .labels .dn{font-family:var(--disp);font-weight:800;font-size:19px;letter-spacing:.08em;text-transform:uppercase}
+  .labels .fn{font-size:12px;color:var(--dim);line-height:1.3}
+  .weeknote{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:19px;color:#CFC8BB}
+  .legend{display:grid;gap:26px}
+  .legend>div{padding-left:20px;border-left:2px solid var(--line)}
+  .legend .s{border-color:var(--red-type)}
+  .legend h3{font-size:34px;margin-bottom:6px}
+  .legend p{color:var(--dim);font-size:16px}
 
-  /* ---------- la structure ---------- */
-  .beats{margin-top:52px;display:grid;gap:0}
-  .beat{display:grid;grid-template-columns:240px 1fr 1.1fr;gap:40px;align-items:center;padding:30px 0;border-top:1px solid var(--rule)}
-  .beat:last-child{border-bottom:1px solid var(--rule)}
-  .beat h3{font-family:var(--serif);font-weight:600;font-size:22px}
-  .beat .track{position:relative;height:3px;background:var(--rule);border-radius:2px}
-  .beat .track i{position:absolute;left:0;top:0;bottom:0;background:var(--read);border-radius:2px}
-  .beat .track b{position:absolute;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:var(--read);box-shadow:0 0 0 4px var(--sheet)}
-  .beat .track span{position:absolute;top:14px;font-size:13px;color:var(--faint);transform:translateX(-50%);white-space:nowrap}
-  .beat p{font-size:16px;color:var(--soft)}
+  /* la structure */
+  .beats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .beat{background:var(--coal);border:1px solid var(--line);border-radius:22px;padding:30px 28px 34px}
+  .alt .beat{background:var(--black)}
+  .beat .no{font-family:var(--disp);font-weight:900;font-size:70px;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(237,230,218,.35)}
+  .beat h3{font-size:38px;margin:22px 0 22px}
+  .track{position:relative;height:2px;background:var(--line);margin:0 0 38px}
+  .track i{position:absolute;left:0;top:0;height:100%;background:var(--red-type)}
+  .track b{position:absolute;top:-5px;width:12px;height:12px;border-radius:50%;background:var(--red-type);margin-left:-6px;box-shadow:0 0 14px var(--red)}
+  .track span{position:absolute;top:14px;transform:translateX(-50%);font-size:12px;color:var(--dim);white-space:nowrap}
+  .beat p{color:var(--dim);font-size:16px}
 
-  /* ---------- bibliothèque ---------- */
-  .chips{margin-top:44px;display:flex;flex-wrap:wrap;gap:8px}
-  .chip{font:inherit;font-size:15px;font-weight:500;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:8px 16px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
-  .chip:hover{border-color:var(--faint)}
-  .chip[aria-pressed="true"]{background:var(--ink);color:var(--sheet);border-color:var(--ink)}
-  .chip .n{color:var(--faint);margin-left:6px;font-weight:400}
-  .chip[aria-pressed="true"] .n{color:#AEB4BF}
-  .lib{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
-  .item{padding:18px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline}
-  .item h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.3}
-  .item p{grid-column:1/-1;font-size:15px;color:var(--soft);margin-top:-8px}
-  .item .t{font-size:13px;color:var(--faint);white-space:nowrap}
-  .libmore{margin-top:28px}
+  /* radar */
+  .radar{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .radar h2{font-size:clamp(44px,6vw,80px);margin:14px 0 20px}
+  .radar p.t{font-family:var(--serif);font-size:21px;line-height:1.55;color:#CFC8BB}
+  .news{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--black)}
+  .news .row{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px 26px;align-items:center}
+  .news .row+.row{border-top:1px solid var(--line)}
+  .news .tag{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);width:74px}
+  .news .tag.r{color:var(--red-type)}
+  .news .line{font-size:17px}
+  .news .line small{display:block;font-size:13px;color:var(--faint);margin-top:2px}
+  .news .row.hot{background:linear-gradient(90deg,rgba(210,35,44,.16),rgba(210,35,44,0))}
+  .news .row.hot .line{font-family:var(--serif);font-size:22px;line-height:1.3}
+  .news .row.hot .line b{font-weight:500;color:var(--bone)}
 
-  /* ---------- engagements ---------- */
-  .vows{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
-  .vow h3{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.25}
-  .vow p{margin-top:10px;font-size:16px;color:var(--soft)}
+  /* séries */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+  .chip{padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:600;color:var(--dim);transition:all .2s}
+  .chip:hover{color:var(--bone);border-color:var(--faint)}
+  .chip[aria-pressed="true"]{background:var(--bone);border-color:var(--bone);color:var(--black)}
+  .chip .n{margin-left:8px;font-size:12px;opacity:.55}
+  .lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  .item{position:relative;background:var(--black);border:1px solid var(--line);border-radius:18px;padding:22px 22px 24px;overflow:hidden;transition:border-color .25s,transform .25s;min-height:170px}
+  .item:hover{border-color:rgba(240,74,80,.5);transform:translateY(-3px)}
+  .item::after{content:attr(data-n);position:absolute;right:14px;top:6px;font-family:var(--disp);font-weight:900;font-size:64px;line-height:1;color:rgba(237,230,218,.05)}
+  .item .t{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red-type);margin-bottom:12px}
+  .item h3{font-size:30px;margin-bottom:10px;position:relative;z-index:1;overflow-wrap:anywhere}
+  .item p{font-size:15px;color:var(--dim);line-height:1.45;position:relative;z-index:1}
+  .libmore{margin-top:34px;text-align:center}
 
-  /* ---------- inscription ---------- */
-  .signup{padding:120px 0;border-top:1px solid var(--rule)}
-  .signup .wrap{max-width:720px;text-align:center}
-  .signup .days-left{font-family:var(--serif);font-weight:500;font-size:clamp(84px,14vw,148px);line-height:1;letter-spacing:-.04em;color:var(--read)}
-  .signup .unit{font-size:17px;color:var(--soft);margin-top:6px}
-  .signup h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.02em;margin-top:40px}
-  .signup .sub{margin-top:14px;font-size:18px;color:var(--soft)}
-  form.join{margin:34px auto 0;max-width:500px;display:flex;gap:8px;background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:6px}
-  form.join:focus-within{border-color:var(--ink)}
-  form.join input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:17px;color:var(--ink);padding:0 16px}
+  /* engagements */
+  .vows{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+  .vow{padding:34px 28px 10px 0}
+  .vow+.vow{padding-left:28px;border-left:1px solid var(--line)}
+  .vow h3{font-size:32px;margin-bottom:12px}
+  .vow p{font-size:16px;color:var(--dim)}
+
+  /* inscription */
+  .signup{position:relative;padding:130px 0 120px;border-top:1px solid var(--line);text-align:center;overflow:hidden}
+  .signup::before{content:"";position:absolute;left:50%;top:50%;width:1000px;height:1000px;margin:-500px 0 0 -500px;background:radial-gradient(closest-side,rgba(210,35,44,.28),rgba(210,35,44,0));pointer-events:none}
+  .signup .wrap{position:relative}
+  .eye-big{width:110px;height:110px;margin:0 auto 18px}
+  .eye-big svg{width:100%;height:100%;display:block}
+  .days-left{font-family:var(--disp);font-weight:900;font-size:clamp(110px,18vw,220px);line-height:.85;letter-spacing:.02em}
+  .unit{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-type);margin:6px 0 34px}
+  .signup h2{font-size:clamp(34px,5vw,62px);max-width:14em;margin:0 auto 18px}
+  .signup .sub{font-family:var(--serif);font-size:20px;color:#CFC8BB;max-width:30em;margin:0 auto 34px}
+  form.join{display:flex;gap:6px;max-width:520px;margin:0 auto;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(18,18,20,.8)}
+  form.join input{flex:1;min-width:0;background:none;border:0;color:var(--bone);font:inherit;font-size:16px;padding:12px 18px;outline:0}
   form.join input::placeholder{color:var(--faint)}
-  form.join input:focus{outline:none}
-  .msg{margin-top:16px;min-height:26px;font-size:15px;color:var(--soft)}
-  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  form.join:focus-within{border-color:var(--red-type)}
+  .msg{min-height:26px;margin-top:16px;font-size:14px;color:var(--dim)}
 
-  footer{border-top:1px solid var(--rule);padding:40px 0 56px}
-  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:15px;color:var(--faint)}
-  footer .tag{font-family:var(--serif);font-style:italic;color:var(--soft)}
+  footer{padding:36px 0 44px;border-top:1px solid var(--line);font-size:14px;color:var(--faint)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer .mark svg{width:24px;height:24px}
+  footer .wordmark{font-size:20px}
+  footer .tag{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--dim)}
 
-  @media (max-width:960px){
-    .hero .wrap{grid-template-columns:1fr;gap:52px}
-    .weekbox{grid-template-columns:1fr;gap:36px}
-    .legend{flex-direction:row;flex-wrap:wrap}
-    .legend div{flex:1 1 180px}
-    .beat{grid-template-columns:1fr;gap:14px}
-    .beat .track{margin:6px 0 22px}
-    .lib{grid-template-columns:1fr}
+  /* apparition */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .no-js .rv{opacity:1;transform:none}
+
+  @media (max-width:980px){
+    nav.links{display:none}
+    .hero{padding-top:96px}
+    .hero .wrap{grid-template-columns:minmax(0,1fr);gap:30px}
+    .weekbox,.radar{grid-template-columns:1fr;gap:40px}
+    .beats{grid-template-columns:1fr}
     .vows{grid-template-columns:1fr 1fr}
+    .vow:nth-child(3){padding-left:0;border-left:0}
+    .vow:nth-child(n+3){border-top:1px solid var(--line);margin-top:30px;padding-top:30px}
   }
   @media (max-width:560px){
-    .wrap{padding:0 18px}
-    .hero{padding:44px 0 72px}
-    .top .pill{padding:9px 14px;font-size:14px}
-    .reader .scroll{height:400px;padding:12px 20px 36px}
-    .reader .meta{padding:16px 20px 0}
-    .reader h2{font-size:26px}
-    .reader .text{font-size:18px}
     section.block{padding:76px 0}
-    .days{gap:5px;height:200px}
-    .labels{gap:5px}
-    .labels .fn{font-size:13px}
-    .vows{grid-template-columns:1fr;gap:30px}
-    form.join{flex-direction:column;border-radius:18px}
+    .days{gap:5px;height:210px}.labels{gap:5px}.labels .fn{font-size:11px}
+    .vows{grid-template-columns:1fr}
+    .vow,.vow+.vow{padding:26px 0 0;border-left:0}
+    .vow+.vow{border-top:1px solid var(--line);margin-top:26px}
+    form.join{flex-direction:column;border-radius:20px}
     form.join input{padding:12px 14px}
+    .header-cta{display:none}
+    .news .row{grid-template-columns:1fr;gap:6px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .d .col,.reader .bar i{transition:none}
+    .rv{opacity:1;transform:none;transition:none}
+    .d .col{transition:none}
   }
 </style>
 </head>
-<body>
+<body class="no-js">
 
 <header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="OPSIS, accueil">
-      <svg viewBox="-110 -110 220 220" aria-hidden="true">
-        <circle r="96" fill="none" stroke="#161A22" stroke-width="12"/>
-        <circle r="30" fill="#A8141A"/>
-      </svg>
-      OPSIS
-    </a>
-    <a class="pill" href="#inscription">Recevoir l'histoire du jour</a>
+    <a class="mark" href="#" aria-label="OPSIS, accueil"><svg viewBox="-100 -100 200 200" aria-hidden="true"><defs><radialGradient id="blH" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puH" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puH)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="94.5" fill="none" stroke="#EDE6DA" stroke-width="18"/></svg><span class="wordmark" aria-hidden="true">PSIS</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#rituel">Le rituel</a>
+      <a href="#methode">La méthode</a>
+      <a href="#radar">Radar</a>
+      <a href="#series">Les séries</a>
+    </nav>
+    <a class="pill header-cta" href="#inscription">Être prévenu du lancement</a>
   </div>
 </header>
 
 <main>
 
-  <!-- Ouverture : la page est déjà l'app -->
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1>Une histoire vraie, chaque matin.</h1>
-        <p class="lead">Écrite pour divertir autant que pour apprendre. Destins, arnaques, inventions, exploits : de 3 à 6 minutes de lecture, gratuitement.</p>
+        <p class="eyebrow">Gratuit · App et site · Dès le 4 janvier 2027</p>
+        <h1>Une histoire vraie,<br><em>chaque matin.</em></h1>
+        <p class="lead">Destins, arnaques, inventions, exploits. Racontées comme des films, vérifiées comme des enquêtes, écrites pour divertir autant que pour apprendre.</p>
         <div class="actions">
-          <a class="pill" href="#inscription">Recevoir l'histoire du jour</a>
-          <span class="when">Premier épisode le lundi 4 janvier 2027</span>
+          <a class="pill big" href="#inscription">Être prévenu du lancement</a>
+          <span class="when">De 3 à 6 minutes de lecture</span>
+        </div>
+        <div class="stats">
+          <div><b>365</b><span>histoires par an</span></div>
+          <div><b>80</b><span>séries en préparation</span></div>
+          <div><b>0 €</b><span>pour lire</span></div>
         </div>
       </div>
-
-      <article class="reader" id="reader" aria-label="Exemple d'histoire OPSIS">
-        <div class="bar" aria-hidden="true"><i id="readbar"></i></div>
-        <div class="meta"><span class="fmt">Flash</span><span id="readtime">3 min de lecture</span></div>
-        <div class="scroll" id="readscroll" tabindex="0">
-          <h2>L'homme qui a vendu la tour Eiffel</h2>
-          <p class="series">Série L'arnaque parfaite</p>
-          <div class="text">
-            <p>Paris, 1925. Dans un salon de l'hôtel de Crillon, quelques ferrailleurs écoutent un homme qui se présente comme un haut fonctionnaire.</p>
-            <p>Il leur demande le secret absolu. La tour Eiffel coûte trop cher à entretenir, explique-t-il. L'État veut s'en débarrasser, et il cherche un acheteur pour sa ferraille.</p>
-            <p>La demande a de quoi surprendre, mais elle n'a rien d'absurde à l'époque. La tour avait été construite pour l'Exposition universelle de 1889, et personne ne l'avait conçue pour rester debout éternellement.</p>
-            <p>L'homme s'appelle Victor Lustig. Il n'a jamais travaillé pour l'État. Il parle plusieurs langues, change de nom selon les villes, et a compris une chose avant tout le monde : on croit plus facilement un secret qu'une annonce.</p>
-            <p>Dans la pièce, l'un des ferrailleurs se met déjà à faire ses calculs.</p>
-          </div>
-          <div class="end"><b>La suite le jour de sa sortie.</b> Chaque histoire se termine par ses sources et trois choses à retenir.</div>
+      <div class="device">
+        <div class="stage" id="stage">
+          <iframe id="app" src="app.html" title="Prototype de l'application OPSIS" loading="lazy" allow="autoplay"></iframe>
         </div>
-        <div class="fade" aria-hidden="true"></div>
-      </article>
+        <p class="hint">Le prototype est jouable. Touchez une couverture.</p>
+      </div>
     </div>
   </section>
 
-  <!-- La semaine -->
-  <section class="block white" id="semaine">
+  <section class="block alt" id="rituel">
     <div class="wrap">
-      <div class="head">
+      <div class="head rv">
+        <p class="eyebrow">Le rituel</p>
         <h2>Une histoire par jour. Pas toujours la même longueur.</h2>
-        <p>Le rituel est quotidien, la durée suit le récit. Une semaine par mois, une grande histoire se raconte en cinq épisodes.</p>
+        <p>Le rendez-vous est quotidien, la durée suit le récit. Une semaine par mois, une grande histoire se raconte en cinq épisodes.</p>
       </div>
-      <div class="weekbox">
+      <div class="weekbox rv">
         <div>
           <div class="seg" role="group" aria-label="Choisir la semaine affichée">
             <button type="button" data-mode="type" aria-pressed="true">Semaine ordinaire</button>
@@ -287,25 +270,28 @@
     </div>
   </section>
 
-  <!-- La structure -->
   <section class="block" id="methode">
     <div class="wrap">
-      <div class="head">
+      <div class="head rv">
+        <p class="eyebrow">La méthode</p>
         <h2>Racontées comme des films. Vérifiées comme des enquêtes.</h2>
         <p>Chaque histoire suit la même construction, du premier mot au dernier. Les faits sont sourcés, aucun dialogue n'est inventé.</p>
       </div>
-      <div class="beats">
+      <div class="beats rv">
         <div class="beat">
+          <div class="no">01</div>
           <h3>Une scène d'abord</h3>
-          <div class="track" aria-hidden="true"><i style="width:4%"></i><b style="left:4%"></b><span style="left:0;transform:none">premières lignes</span></div>
+          <div class="track" aria-hidden="true"><i style="width:4%"></i><b style="left:4%"></b><span style="left:0;transform:none;margin-top:0">premières lignes</span></div>
           <p>On entre au cœur de l'action, sans préambule. Le contexte vient quand vous en avez besoin.</p>
         </div>
         <div class="beat">
+          <div class="no">02</div>
           <h3>Le basculement</h3>
           <div class="track" aria-hidden="true"><i style="width:62%"></i><b style="left:62%"></b><span style="left:62%">aux deux tiers</span></div>
           <p>Le moment précis où tout se retourne. Toute l'histoire est construite pour y mener.</p>
         </div>
         <div class="beat">
+          <div class="no">03</div>
           <h3>Ce qu'on retient</h3>
           <div class="track" aria-hidden="true"><i style="width:100%"></i><b style="left:100%"></b><span style="left:auto;right:0;transform:none">à la fin</span></div>
           <p>Trois idées assez claires pour les raconter à quelqu'un le soir même, puis les sources.</p>
@@ -314,10 +300,24 @@
     </div>
   </section>
 
-  <!-- Bibliothèque des séries -->
-  <section class="block white" id="series">
+  <section class="block alt" id="radar">
+    <div class="wrap radar">
+      <div class="rv">
+        <p class="eyebrow">Radar</p>
+        <h2>L'histoire derrière l'actu.</h2>
+        <p class="t">Quand un événement fait la une, OPSIS raconte ce que les titres n'ont pas le temps de dire : les faits d'avant, les personnages, le mécanisme. Pas de flux d'infos, une seule lecture qui donne du recul.</p>
+      </div>
+      <div class="news rv" aria-label="Exemple de Radar">
+        <div class="row"><span class="tag">Partout</span><span class="line">Un casse au Louvre fait la une<small>Le fil d'actualité, en quelques lignes</small></span></div>
+        <div class="row hot"><span class="tag r">OPSIS</span><span class="line"><b>L'homme qui a volé la Joconde</b><small>Le récit complet, en 6 minutes</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="series">
     <div class="wrap">
-      <div class="head">
+      <div class="head rv">
+        <p class="eyebrow">Les séries</p>
         <h2>80 séries en préparation, dans six territoires.</h2>
         <p>Une série garde le même angle et change d'histoire à chaque épisode. Choisissez un territoire pour voir ce qui vous attend.</p>
       </div>
@@ -327,24 +327,24 @@
     </div>
   </section>
 
-  <!-- Engagements -->
-  <section class="block" id="promesse">
+  <section class="block alt" id="promesse">
     <div class="wrap">
-      <div class="head">
+      <div class="head rv">
+        <p class="eyebrow">Nos engagements</p>
         <h2>Chaque histoire mérite votre temps.</h2>
       </div>
-      <div class="vows">
+      <div class="vows rv">
         <div class="vow"><h3>Tout est vrai</h3><p>Chaque histoire repose sur des sources solides, listées à la fin.</p></div>
         <div class="vow"><h3>Le temps est affiché</h3><p>Vous savez avant de commencer ce que l'histoire vous demande.</p></div>
-        <div class="vow"><h3>Vous apprenez quelque chose</h3><p>Une histoire qui divertit sans rien apprendre n'est pas publiée.</p></div>
+        <div class="vow"><h3>Vous apprenez</h3><p>Une histoire qui divertit sans rien apprendre n'est pas publiée.</p></div>
         <div class="vow"><h3>C'est gratuit</h3><p>Une histoire chaque matin, sans abonnement.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Inscription -->
   <section class="signup" id="inscription">
     <div class="wrap">
+      <div class="eye-big"><svg viewBox="-128 -128 256 256" aria-hidden="true"><defs><radialGradient id="blB" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puB" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puB)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="92" fill="none" stroke="#EDE6DA" stroke-width="13"/><g class="ticks" transform="rotate(0)"><path d="M106.0 0.0L114.0 0.0" stroke="#F04A50" stroke-opacity="1" stroke-width="1.8"/><path d="M108.6 9.5L113.6 9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M107.3 18.9L112.3 19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M105.3 28.2L110.1 29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M102.4 37.3L107.1 39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M98.8 46.1L103.3 48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M91.8 53.0L98.7 57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M89.3 62.5L93.4 65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M83.5 70.1L87.3 73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M77.1 77.1L80.6 80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M70.1 83.5L73.3 87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M62.5 89.3L65.4 93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M53.0 91.8L57.0 98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M46.1 98.8L48.2 103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M37.3 102.4L39.0 107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M28.2 105.3L29.5 110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M18.9 107.3L19.8 112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M9.5 108.6L9.9 113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M0.0 106.0L0.0 114.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-9.5 108.6L-9.9 113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-18.9 107.3L-19.8 112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-28.2 105.3L-29.5 110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-37.3 102.4L-39.0 107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-46.1 98.8L-48.2 103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-53.0 91.8L-57.0 98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-62.5 89.3L-65.4 93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-70.1 83.5L-73.3 87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-77.1 77.1L-80.6 80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-83.5 70.1L-87.3 73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-89.3 62.5L-93.4 65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-91.8 53.0L-98.7 57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-98.8 46.1L-103.3 48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-102.4 37.3L-107.1 39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-105.3 28.2L-110.1 29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-107.3 18.9L-112.3 19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-108.6 9.5L-113.6 9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-106.0 0.0L-114.0 0.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-108.6 -9.5L-113.6 -9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-107.3 -18.9L-112.3 -19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-105.3 -28.2L-110.1 -29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-102.4 -37.3L-107.1 -39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-98.8 -46.1L-103.3 -48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-91.8 -53.0L-98.7 -57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-89.3 -62.5L-93.4 -65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-83.5 -70.1L-87.3 -73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-77.1 -77.1L-80.6 -80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-70.1 -83.5L-73.3 -87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-62.5 -89.3L-65.4 -93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-53.0 -91.8L-57.0 -98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-46.1 -98.8L-48.2 -103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-37.3 -102.4L-39.0 -107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-28.2 -105.3L-29.5 -110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-18.9 -107.3L-19.8 -112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-9.5 -108.6L-9.9 -113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-0.0 -106.0L-0.0 -114.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M9.5 -108.6L9.9 -113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M18.9 -107.3L19.8 -112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M28.2 -105.3L29.5 -110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M37.3 -102.4L39.0 -107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M46.1 -98.8L48.2 -103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M53.0 -91.8L57.0 -98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M62.5 -89.3L65.4 -93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M70.1 -83.5L73.3 -87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M77.1 -77.1L80.6 -80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M83.5 -70.1L87.3 -73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M89.3 -62.5L93.4 -65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M91.8 -53.0L98.7 -57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M98.8 -46.1L103.3 -48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M102.4 -37.3L107.1 -39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M105.3 -28.2L110.1 -29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M107.3 -18.9L112.3 -19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M108.6 -9.5L113.6 -9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/></g></svg></div>
       <p class="days-left" id="daysleft">—</p>
       <p class="unit" id="daysunit">jours avant le premier épisode</p>
       <h2>Lundi 4 janvier 2027, la première Série commence.</h2>
@@ -352,7 +352,7 @@
       <form class="join" id="join" novalidate>
         <label class="sr" for="email">Votre adresse email</label>
         <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required>
-        <button class="pill" type="submit">Recevoir l'histoire du jour</button>
+        <button class="pill" type="submit">Être prévenu</button>
       </form>
       <p class="msg" id="msg" role="status"></p>
     </div>
@@ -362,14 +362,16 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 OPSIS</span>
+    <a class="mark" href="#" aria-label="OPSIS"><svg viewBox="-100 -100 200 200" aria-hidden="true"><defs><radialGradient id="blF" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puF" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puF)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="94.5" fill="none" stroke="#EDE6DA" stroke-width="18"/></svg><span class="wordmark" aria-hidden="true">PSIS</span></a>
     <span class="tag">La réalité, mise en scène.</span>
+    <span>© 2026 OPSIS</span>
   </div>
 </footer>
 
 <script>
 (function(){
   "use strict";
+  document.body.classList.remove('no-js');
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Adresse du service d'inscription (Brevo, Formspree, Tally…) qui accepte
@@ -377,26 +379,28 @@
      n'est enregistré et le formulaire le dit. */
   var FORM_ENDPOINT='';
 
-  /* ---------- barre du haut ---------- */
+  /* barre du haut */
   var top=document.getElementById('top');
   function onScroll(){ top.classList.toggle('scrolled',window.scrollY>8); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
-  /* ---------- panneau de lecture ---------- */
-  var reader=document.getElementById('reader'),scroller=document.getElementById('readscroll'),
-      bar=document.getElementById('readbar'),rt=document.getElementById('readtime');
-  var TOTAL=3;
-  function onRead(){
-    var max=scroller.scrollHeight-scroller.clientHeight;
-    var p=max>0?Math.min(1,scroller.scrollTop/max):1;
-    bar.style.width=(p*100)+'%';
-    reader.classList.toggle('done',p>.98);
-    var left=Math.ceil(TOTAL*(1-p));
-    rt.textContent=p<.02?TOTAL+' min de lecture':(left>0?'encore '+left+' min':'lu');
-  }
-  scroller.addEventListener('scroll',onRead,{passive:true}); onRead();
+  /* apparitions */
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    rv.forEach(function(el){io.observe(el);});
+  }else{rv.forEach(function(el){el.classList.add('in');});}
 
-  /* ---------- la semaine ---------- */
+  /* prototype adapté à la largeur de l'écran */
+  var stage=document.getElementById('stage'),app=document.getElementById('app');
+  function fit(){
+    var w=stage.parentNode.clientWidth,s=Math.min(1,w/420);
+    stage.style.width=(420*s)+'px';stage.style.height=(880*s)+'px';
+    app.style.transform='scale('+s+')';
+  }
+  fit();window.addEventListener('resize',fit);
+
+  /* la semaine */
   var WEEK={
     type:[['Lun','Flash',3],['Mar','Récit',6],['Mer','Flash',3],['Jeu','Récit',6],['Ven','Flash',3],['Sam','Récit',6],['Dim','Récit',6]],
     serie:[['Lun','Épisode 1',5,1],['Mar','Épisode 2',5,1],['Mer','Épisode 3',5,1],['Jeu','Épisode 4',5,1],['Ven','Épisode 5',5,1],['Sam','Flash',3],['Dim','Récit',6]]
@@ -433,7 +437,7 @@
     });
   });
 
-  /* ---------- bibliothèque des séries ---------- */
+  /* les séries */
   var T=['Destins','Arnaques','Inventions','Corps et science','Exploits','Coulisses'];
   var S=[
     [0,"Jusqu'à la chute","Des gens au sommet, suivis jusqu'à ce que leur réussite les détruise."],
@@ -534,28 +538,28 @@
     var list=S.filter(function(s){return current<0||s[0]===current;});
     var show=list;
     if(current<0 && !expanded){
-      /* aperçu : deux séries par territoire */
       show=[]; T.forEach(function(_,i){ show=show.concat(S.filter(function(s){return s[0]===i;}).slice(0,2)); });
     }
     libEl.innerHTML=show.map(function(s){
-      return '<div class="item"><h3>'+esc(s[1])+'</h3><span class="t">'+esc(T[s[0]])+'</span><p>'+esc(s[2])+'</p></div>';
+      var n=S.indexOf(s)+1;
+      return '<div class="item" data-n="'+(n<10?'0':'')+n+'"><span class="t">'+esc(T[s[0]])+'</span><h3>'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p></div>';
     }).join('');
     moreBtn.parentNode.style.display=(show.length<list.length)?'':'none';
   }
   moreBtn.addEventListener('click',function(){ expanded=true; renderLib(); });
   renderLib();
 
-  /* ---------- jours restants ---------- */
+  /* jours restants */
   var LAUNCH=new Date('2027-01-04T07:00:00+01:00').getTime();
   var dl=document.getElementById('daysleft'),du=document.getElementById('daysunit');
   function tick(){
     var days=Math.ceil(Math.max(0,LAUNCH-Date.now())/864e5);
-    if(days<=0){ dl.textContent='0'; du.textContent='La première Série est en cours.'; return; }
+    if(days<=0){ dl.textContent='0'; du.textContent='La première Série est en cours'; return; }
     dl.textContent=days; du.textContent=days>1?'jours avant le premier épisode':'jour avant le premier épisode';
   }
   tick(); setInterval(tick,600000);
 
-  /* ---------- inscription ---------- */
+  /* inscription */
   var form=document.getElementById('join'),msg=document.getElementById('msg'),email=document.getElementById('email');
   form.addEventListener('submit',function(e){
     e.preventDefault();
