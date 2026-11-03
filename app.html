@@ -108,7 +108,7 @@
   .rail::-webkit-scrollbar{display:none}
   .tile{flex:none;width:122px;scroll-snap-align:start}
   .tile .poster{width:122px;height:183px;border-radius:8px}
-  .tile .ttl{overflow-wrap:anywhere;hyphens:auto;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+  .tile .ttl{overflow-wrap:normal;word-break:normal;hyphens:none;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
   .tile .num{position:absolute;top:7px;right:8px;z-index:2;font-family:var(--disp);font-weight:800;font-size:13px;opacity:.85}
   .tile .read{position:absolute;top:7px;left:7px;z-index:2;font-size:11px;font-weight:700;background:var(--red);color:#fff;border-radius:4px;padding:2px 6px}
   .lens{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
@@ -248,7 +248,7 @@
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 20px 0}
   .grid .tile{width:auto}
   .grid .tile .poster{width:100%;height:auto;aspect-ratio:2/3}
-  .grid .tile .ttl{font-size:17px;overflow-wrap:anywhere;hyphens:auto}
+  .grid .tile .ttl{font-size:17px;overflow-wrap:normal;hyphens:none}
   .chips{display:flex;gap:8px;overflow-x:auto;padding:16px 20px 0;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
   .chips button{flex:none;height:34px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid var(--line)}
@@ -4416,6 +4416,25 @@ document.getElementById('skip').onclick=enter;splash.addEventListener('click',en
 playIntro();
 
 renderMain();
+})();
+</script>
+<script>
+/* titres : jamais coupés au milieu d'un mot, on réduit la taille jusqu'à ce que le plus long mot tienne */
+(function(){
+  function fit(el){
+    if(el.__fit)return;var w=el.clientWidth;if(!w)return;
+    var base=parseFloat(getComputedStyle(el).fontSize),s=base,guard=0;
+    var probe=document.createElement('span');probe.style.cssText='position:absolute;visibility:hidden;white-space:nowrap;font:inherit;text-transform:inherit;letter-spacing:inherit';
+    el.appendChild(probe);
+    var words=(el.textContent||'').trim().split(/\s+/);
+    function widest(){var m=0;words.forEach(function(x){probe.textContent=x;m=Math.max(m,probe.getBoundingClientRect().width);});return m;}
+    while(s>11&&widest()>w&&guard++<40){s-=0.5;el.style.fontSize=s+'px';}
+    el.removeChild(probe);el.__fit=1;
+  }
+  function run(){var l=document.querySelectorAll('.tile .ttl, .scard .q');for(var i=0;i<l.length;i++){try{fit(l[i]);}catch(e){}}}
+  var q=0;new MutationObserver(function(){if(q)return;q=setTimeout(function(){q=0;run();},60);}).observe(document.documentElement,{childList:true,subtree:true});
+  window.addEventListener('resize',function(){var l=document.querySelectorAll('.tile .ttl');for(var i=0;i<l.length;i++){l[i].__fit=0;l[i].style.fontSize='';}run();});
+  window.addEventListener('load',run);
 })();
 </script>
 </body>
