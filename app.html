@@ -54,10 +54,11 @@
   .splash .glow{position:absolute;left:50%;top:46%;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(closest-side,rgba(210,35,44,.38),rgba(210,35,44,0));opacity:0;transform:scale(.6);transition:opacity 1.4s ease,transform 1.6s ease}
   .splash.lit .glow{opacity:1;transform:none}
   .lockup{display:flex;align-items:center;gap:4px;margin-top:-52px}
-  .lens{flex:none;width:64px;height:64px;position:relative;will-change:transform}
+  .lens{flex:none;width:55px;height:55px;margin-top:0;position:relative;will-change:transform}
   .lens .eye{width:100%;height:100%;clip-path:inset(50% 0 50% 0 round 50%);transition:clip-path .75s cubic-bezier(.65,0,.25,1)}
   .splash.s2 .lens .eye{clip-path:inset(0 0 0 0 round 50%)}
   .lens svg{width:100%;height:100%;display:block;overflow:visible}
+  .splash .lens{margin-top:0}
   .lens.move{transition:transform .95s cubic-bezier(.7,0,.2,1)}
   .lens.plunge{transition:transform 1.05s cubic-bezier(.75,0,.6,1)}
   .lens .ticks{transition:opacity .4s ease}
