@@ -3665,7 +3665,7 @@ function saved(){
   var fol=follows.length?'<div class="rail">'+follows.map(function(k){
       var x=k==='serie'?{p:'chute',n:"Jusqu'à la chute",sub:'Un portrait chaque matin',go:'serie'}:SERIES[+k.slice(5)];
       return tile({p:x.p,t:x.n,s:x.sub||'Premier épisode bientôt',attr:'data-pick="'+(x.go||k)+'"'});
-    }).join('')+'</div>':'<p class="hint">Touchez « Me prévenir » sur une série pour la suivre.</p>';
+    }).join('')+'</div>':'<p class="hint">Les séries que vous suivez apparaîtront ici.</p>';
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Ma bibliothèque</span><button class="circle" data-settings aria-label="Réglages">'+IC.gear+'</button></div>'+
     '<h1 class="ptitle" style="padding-top:104px">Ma bibliothèque</h1>'+
     '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+saved+'</div>'+
@@ -3779,7 +3779,7 @@ function serieK(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('csserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · 30 HISTOIRES</p><h1>Le casse du siècle</h1><p class="m">Du train postal de 1963 aux coffres de Gelsenkirchen : trente vols spectaculaires, du repérage à la dernière erreur. Pour chacun, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'cs01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'cs01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3798,7 +3798,7 @@ function serieF(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('faserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · 30 HISTOIRES</p><h1>Faussaires</h1><p class="m">Du « Vermeer » de Göring aux fées de Cottingley : trente faux qui ont trompé des musées, des experts, des banques et des chanceliers. Pour chacun, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'fa01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'fa01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3818,7 +3818,7 @@ function serieA(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('arserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · 31 HISTOIRES</p><h1>L\'arnaque parfaite</h1><p class="m">De Victor Lustig à Billy McFarland : trente et une histoires vraies de faussaires, d\'imposteurs et de vendeurs de rêves. Pour chacune, ce qui est établi, ce qui relève de la légende, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'eiffel')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'eiffel')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3838,7 +3838,7 @@ function serieP(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('paserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · INVENTIONS · 31 HISTOIRES</p><h1>Par accident</h1><p class="m">De la pénicilline aux rayons X, du micro-ondes au trou d\'ozone : trente et une découvertes arrivées par hasard, ou qu\'on raconte ainsi. Pour chacune, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'penicilline')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'penicilline')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3858,7 +3858,7 @@ function serieS(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('svserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · SURVIVANTS · 30 HISTOIRES</p><h1>Survivants</h1><p class="m">Du pack de l\'Antarctique au fleuve Hudson : trente personnes qui n\'auraient pas dû s\'en sortir, et ce que leur survie a appris aux autres. Pour chaque récit, ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'sv01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'sv01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3878,7 +3878,7 @@ function serieB(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('cbserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · COBAYES · 30 HISTOIRES</p><h1>Cobayes</h1><p class="m">De l\'estomac de Barry Marshall à la puce de Kevin Warwick : trente personnes qui ont testé une idée sur leur propre corps. Pour chaque récit, ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'cb01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'cb01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3898,7 +3898,7 @@ function serieE(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('evserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · ÉVADÉS · 30 HISTOIRES</p><h1>Évadés</h1><p class="m">De Marie Stuart à Rédoine Faïd : trente évasions, et pour chacune ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ev01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ev01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3918,7 +3918,7 @@ function serieI(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('imserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · IMPOSTEURS · 30 HISTOIRES</p><h1>Imposteurs</h1><p class="m">De Martin Guerre à Misha Defonseca : trente impostures, et pour chacune ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'im01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'im01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3938,7 +3938,7 @@ function serieG(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('esserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · ESPIONS · 30 HISTOIRES</p><h1>Espions</h1><p class="m">De Mata Hari à Gouzenko : trente affaires de la guerre secrète, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'es01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'es01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3958,7 +3958,7 @@ function serieN(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('pnserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · PANNES · 30 HISTOIRES</p><h1>Pannes</h1><p class="m">Du vol 501 d’Ariane à la chute éclair de 2010 : trente pannes, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'pn01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'pn01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3978,7 +3978,7 @@ function serieX(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('exserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · EXPÉDITIONS · 30 HISTOIRES</p><h1>Expéditions</h1><p class="m">Des pôles aux abîmes : trente expéditions, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ex01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ex01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -3998,7 +3998,7 @@ function serieQ(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('ceserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · CODES ET ÉNIGMES · 30 HISTOIRES</p><h1>Codes et énigmes</h1><p class="m">D’Enigma aux messages envoyés aux étoiles : trente histoires de codes, d’écritures et d’énigmes, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ce01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ce01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4018,7 +4018,7 @@ function serieZ(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('fiserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · FIASCOS · 30 HISTOIRES</p><h1>Fiascos</h1><p class="m">Du Vasa à l’Emu War : trente échecs célèbres, et pour chacun ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'fi01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'fi01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4038,7 +4038,7 @@ function serieD(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('diserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · DISPARUS · 30 HISTOIRES</p><h1>Disparus</h1><p class="m">Du vol d’Amelia Earhart à la colonie de Roanoke : trente disparitions célèbres, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'di01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'di01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4058,7 +4058,7 @@ function serieR(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('prserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · PROCÈS · 30 HISTOIRES</p><h1>Procès</h1><p class="m">De Socrate à James Joyce : trente procès célèbres, et pour chacun ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'pr01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'pr01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4078,7 +4078,7 @@ function serieL(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('ldserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · DESTINS · 30 HISTOIRES</p><h1>Le dernier jour</h1><p class="m">De Lincoln à la navette Challenger : trente dernières journées, reconstituées d’après les sources. Pour chacune, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ld01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ld01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4098,7 +4098,7 @@ function serieV(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('vcserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · EXPLOITS · 30 HISTOIRES</p><h1>L\'impossible victoire</h1><p class="m">Du Leicester de 2016 à Apollo 13 : trente victoires que personne n’attendait, reconstituées d’après les sources. Pour chacune, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'vc01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'vc01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4118,7 +4118,7 @@ function serieU(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('duserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · EXPLOITS · 30 HISTOIRES</p><h1>Le duel</h1><p class="m">Du court de Wimbledon à l’Azteca : trente duels qui ont marqué leur sport, reconstitués d’après les sources. Pour chacun, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'du01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'du01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4138,7 +4138,7 @@ function serieT(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('tmserie')+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · COULISSES · 30 HISTOIRES</p><h1>Tournage maudit</h1><p class="m">Des films qui ont failli détruire ceux qui les faisaient : accidents, budgets explosés, plateaux en guerre, œuvres jamais finies et légendes de malédictions. Trente récits d’après les sources, avec ce qui est établi, ce qui reste discuté et ce que personne ne sait.</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'tm01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'tm01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4159,7 +4159,7 @@ function serieC(){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster(SERIE.p)+'<div class="shade"></div></div>'+
     '<div class="rhead"><p class="k">SÉRIE · DESTINS · 52 PORTRAITS</p><h1>Jusqu\'à la chute</h1><p class="m">'+esc(SERIE.desc)+'</p>'+
-    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'pt00')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button><button class="btn glass" data-notify>'+IC.bell+'Me prévenir</button></div>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'pt00')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lus sur '+BP.length+' portraits</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
@@ -4250,67 +4250,67 @@ function hashN(str){var h=0;for(var i=0;i<str.length;i++)h=(h*31+str.charCodeAt(
 function pickData(key){
   if(key==='serie'){return {p:'chute',c:'#F04A50',no:'S01',front:"Jusqu'à la chute",title:"Jusqu'à la chute",
     meta:'Série · Destins · 52 portraits',syn:SERIE.desc,tag:'Ils ont gagné. Voici ce que ça leur a coûté.',fmt:'Série',
-    acts:'<button class="btn light" data-go="serie">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie">'+IC.play+'Voir la série</button>'};}
   if(key==='serieK'){return {p:'csserie',c:'#9FD3EA',no:'S03',front:"Le casse du siècle",title:"Le casse du siècle",
     meta:'Série · Arnaques · 30 histoires',syn:"Trente vols spectaculaires, du train postal de 1963 aux coffres de Gelsenkirchen en 2025. Chacun sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le plan était parfait. Presque.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="casse">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="casse">'+IC.play+'Voir la série</button>'};}
   if(key==='serieT'){return {p:'tmserie',c:'#FF9A2E',no:'S20',front:"Tournage maudit",title:"Tournage maudit",
     meta:"Série · Tournage maudit · 30 histoires",syn:"Trente tournages qui ont failli tout détruire : accidents, budgets, guerres de plateau, films inachevés et malédictions. Chaque récit sépare l’établi du discuté.",tag:"Le film a survécu. Pas tout le monde.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="tournage">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="tournage">'+IC.play+'Voir la série</button>'};}
   if(key==='serieU'){return {p:'duserie',c:'#D2232C',no:'S19',front:"Le duel",title:"Le duel",
     meta:"Série · Le duel · 30 histoires",syn:"Du court de Wimbledon à l’Azteca, trente duels qui ont marqué leur sport. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Il fallait que l’un des deux perde.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="duel">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="duel">'+IC.play+'Voir la série</button>'};}
   if(key==='serieV'){return {p:'vcserie',c:'#F2C14E',no:'S18',front:"L'impossible victoire",title:"L'impossible victoire",
     meta:"Série · L'impossible victoire · 30 histoires",syn:"Du Leicester de 2016 à Apollo 13, trente victoires que personne n’attendait. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Personne n'avait parié sur eux.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="victoire">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="victoire">'+IC.play+'Voir la série</button>'};}
   if(key==='serieL'){return {p:'ldserie',c:'#E8B04A',no:'S17',front:"Le dernier jour",title:"Le dernier jour",
     meta:"Série · Le dernier jour · 30 histoires",syn:"De Lincoln à la navette Challenger, trente dernières journées. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Personne ne savait que c'était la dernière.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="dernier">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="dernier">'+IC.play+'Voir la série</button>'};}
   if(key==='serieR'){return {p:'prserie',c:'#D9B26A',no:'S16',front:"Procès",title:"Procès",
     meta:'Série · Procès · 30 histoires',syn:"De Socrate à James Joyce, trente procès célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a été jugé, et ce qu’on en sait.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="proces">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="proces">'+IC.play+'Voir la série</button>'};}
   if(key==='serieD'){return {p:'diserie',c:'#8FB8C8',no:'S15',front:"Disparus",title:"Disparus",
     meta:'Série · Disparus · 30 histoires',syn:"Du vol d’Amelia Earhart à la colonie de Roanoke, trente disparitions célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a disparu, et ce qu’on en sait.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="disparus">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="disparus">'+IC.play+'Voir la série</button>'};}
   if(key==='serieZ'){return {p:'fiserie',c:'#F0705A',no:'S14',front:"Fiascos",title:"Fiascos",
     meta:'Série · Fiascos · 30 histoires',syn:"Du Vasa à l’Emu War, trente échecs célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a raté, et ce qu’on en dit.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="fiascos">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="fiascos">'+IC.play+'Voir la série</button>'};}
   if(key==='serieQ'){return {p:'ceserie',c:'#B48CF0',no:'S13',front:"Codes et énigmes",title:"Codes et énigmes",
     meta:'Série · Codes et énigmes · 30 histoires',syn:"D'Enigma aux messages envoyés aux étoiles, trente histoires de codes. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'on a lu, et ce qu'on lit encore.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="codes">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="codes">'+IC.play+'Voir la série</button>'};}
   if(key==='serieX'){return {p:'exserie',c:'#5FC8E8',no:'S12',front:"Expéditions",title:"Expéditions",
     meta:'Série · Expéditions · 30 histoires',syn:"Des pôles aux abîmes, trente expéditions. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'ils ont trouvé, et ce qu'ils n'ont pas dit.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="expeditions">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="expeditions">'+IC.play+'Voir la série</button>'};}
   if(key==='serieN'){return {p:'pnserie',c:'#F08A4B',no:'S11',front:"Pannes",title:"Pannes",
     meta:'Série · Pannes · 30 histoires',syn:"Un entier trop grand, une unité oubliée, une commande mal saisie. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a cassé, et ce qu'on a compris.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="pannes">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="pannes">'+IC.play+'Voir la série</button>'};}
   if(key==='serieG'){return {p:'esserie',c:'#4FC3C0',no:'S10',front:"Espions",title:"Espions",
     meta:'Série · Espions · 30 histoires',syn:"Des agents, des traîtres, des opérations. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'ils savaient, ce qu'on a su.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="espions">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="espions">'+IC.play+'Voir la série</button>'};}
   if(key==='serieI'){return {p:'imserie',c:'#C58BE8',no:'S09',front:"Imposteurs",title:"Imposteurs",
     meta:'Série · Imposteurs · 30 histoires',syn:"Des gens qui ont vécu sous un autre nom, et ceux qui les ont crus. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Ils n'étaient pas ceux qu'ils disaient.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="imposteurs">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="imposteurs">'+IC.play+'Voir la série</button>'};}
   if(key==='serieE'){return {p:'evserie',c:'#E0B070',no:'S08',front:"Évadés",title:"Évadés",
     meta:'Série · Évadés · 30 histoires',syn:"Des gens qui ont forcé une porte qu'on disait infranchissable. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"La porte était fermée. Ils sont passés.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="evades">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="evades">'+IC.play+'Voir la série</button>'};}
   if(key==='serieB'){return {p:'cbserie',c:'#5FD0B4',no:'S07',front:"Cobayes",title:"Cobayes",
     meta:'Série · Cobayes · 30 histoires',syn:"Des scientifiques qui ont pris le plus grand des risques pour prouver qu'ils avaient raison : se servir d'eux-mêmes comme sujet d'expérience. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Pour le prouver, il fallait le tester sur soi.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="cobayes">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="cobayes">'+IC.play+'Voir la série</button>'};}
   if(key==='serieS'){return {p:'svserie',c:'#F2E3B3',no:'S06',front:"Survivants",title:"Survivants",
     meta:'Série · Survivants · 30 histoires',syn:"Trente personnes qui n'auraient pas dû s'en sortir, de la banquise de l'Antarctique au fleuve Hudson. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Ils avaient une chance sur mille.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="survivants">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="survivants">'+IC.play+'Voir la série</button>'};}
   if(key==='serieP'){return {p:'paserie',c:'#7FD49A',no:'S05',front:"Par accident",title:"Par accident",
     meta:'Série · Inventions · 31 histoires',syn:"Trente et une découvertes arrivées par hasard, ou qu'on raconte ainsi, des rayons X à la couche d'ozone. Chacune sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le hasard n'offre rien à qui ne regarde pas.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="accident">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="accident">'+IC.play+'Voir la série</button>'};}
   if(key==='serieF'){return {p:'faserie',c:'#E8B04A',no:'S04',front:"Faussaires",title:"Faussaires",
     meta:'Série · Arnaques · 30 histoires',syn:"Trente faux qui ont trompé des musées, des experts et des chanceliers, de van Meegeren à Cottingley. Chacun sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le faux le plus réussi est celui qu'on veut croire.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="faussaires">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="faussaires">'+IC.play+'Voir la série</button>'};}
   if(key==='serieA'){return {p:'arserie',c:'#E8B04A',no:'S02',front:"L'arnaque parfaite",title:"L'arnaque parfaite",
     meta:'Série · Arnaques · 31 histoires',syn:"Trente et une histoires vraies de faussaires, d'imposteurs et de vendeurs de rêves, de Victor Lustig à Billy McFarland. Chacune sépare ce qui est établi, ce qui relève de la légende et ce qui reste inconnu.",tag:"Le plus beau mensonge est celui qu'on veut croire.",fmt:'Série',
-    acts:'<button class="btn light" data-go="serie" data-key="arnaque">'+IC.play+'Voir la série</button><button class="btn glass" data-go="notify">'+IC.bell+'Me prévenir</button>'};}
+    acts:'<button class="btn light" data-go="serie" data-key="arnaque">'+IC.play+'Voir la série</button>'};}
   if(key.indexOf('soon:')===0){var x=SERIES[+key.slice(5)];return {p:x.p,c:x.c||'#F04A50',no:SNO[x.p]||String(60+(+key.slice(5))).padStart(3,'0'),front:x.n,title:x.n,
     meta:'Série · '+T[x.t]+' · bientôt',syn:x.syn,tag:x.tag,fmt:'Série',
-    acts:'<button class="btn light" data-go="soon" data-name="'+esc(x.n)+'">'+IC.bell+'Me prévenir</button><button class="btn glass" data-go="close">Plus tard</button>'};}
+    acts:'<button class="btn glass" data-go="close">Plus tard</button>'};}
   var s=STORIES[key],sv=!!S.saved[key],fmt=s.fmt||(s.kind.indexOf('Série')===0?'Série':s.kind);
   return {p:s.p,c:s.c,no:s.no,front:s.title,title:s.title,meta:s.kind+' · '+s.min+' min · '+s.terr+' · série '+s.series,syn:s.syn,tag:s.quote,fmt:fmt,
     acts:'<button class="btn red" data-go="read" data-id="'+key+'">'+IC.play+(S.read[key]?'Relire':'Lire')+'</button><button class="btn glass" data-go="save" data-id="'+key+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'};
