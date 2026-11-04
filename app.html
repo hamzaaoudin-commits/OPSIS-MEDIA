@@ -4170,7 +4170,13 @@ function serieC(){
 function renderMain(){
   main.innerHTML={home:home,library:library,saved:saved}[S.tab]();
 }
-function layerHTML(top){return top.type==='read'?reader(top.id):(top.type==='lib'?saved():serie(top.key));}
+function themeLayer(i){
+  var list=SERIES.filter(function(x){return x.t===i;});
+  var grid=list.map(function(x){return tile({p:x.p,t:x.n,s:x.go?'Disponible':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'':'<span class="soon">Bientôt</span>'});}).join('');
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span></div>'+
+    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+list.length+' séries</p><div class="grid" style="padding-top:16px">'+grid+'</div><div class="bottomspace"></div>';
+}
+function layerHTML(top){return top.type==='read'?reader(top.id):(top.type==='lib'?saved():(top.type==='theme'?themeLayer(top.i):serie(top.key)));}
 function renderLayer(){
   var top=S.stack[S.stack.length-1];
   if(!top){layer.classList.remove('in');return;}
@@ -4209,7 +4215,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(b.hasAttribute('data-serie')){push({type:'serie',key:b.getAttribute('data-serie')||'chute'});return;}
   if(b.hasAttribute('data-back')){back();return;}
   if(d.soon){toast(d.soon+' : bientôt sur OPSIS');return;}
-  if(d.terr!==undefined){var el=document.getElementById('terr-'+d.terr);if(el)main.scrollTo({top:el.offsetTop-60,behavior:'smooth'});return;}
+  if(d.terr!==undefined){push({type:'theme',i:+d.terr});return;}
   if(b.hasAttribute('data-explore')){var ex=document.getElementById('explore');main.scrollTo({top:ex.offsetTop-60,behavior:'smooth'});return;}
   if(d.filter!==undefined){S.filter=+d.filter;renderMain();return;}
   if(d.save){var was=!!S.saved[d.save];S.saved[d.save]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
