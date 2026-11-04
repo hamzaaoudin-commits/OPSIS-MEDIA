@@ -3636,7 +3636,7 @@ function home(){
     T.map(function(t,i){
       var list=SERIES.filter(function(x){return x.t===i;});
       var tiles=list.map(function(x){
-        return tile({p:x.p,t:x.n,s:x.go?'Disponible':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'<span class="read" style="background:var(--bone);color:#111">Lire</span>':'<span class="soon">Bientôt</span>'});
+        return tile({p:x.p,t:x.n,s:x.go?'Disponible':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'':'<span class="soon">Bientôt</span>'});
       }).join('');
       return '<div class="shelf" id="terr-'+i+'"><h2>'+t+' <small>'+list.length+' séries</small></h2><div class="rail">'+tiles+'</div></div>';
     }).join('')+
