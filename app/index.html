@@ -308,6 +308,7 @@
   .scard .poster{position:absolute;inset:0}
   .scard .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.15) 40%,rgba(0,0,0,.9));z-index:1}
   .scard .in{position:absolute;inset:0;z-index:2;padding:22px;display:flex;flex-direction:column;justify-content:flex-end}
+  .scard.img{aspect-ratio:auto;text-align:center;background:none;overflow:visible}.scard.img img{height:min(52vh,540px);max-width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.5)}.sprep{padding:60px 0;color:var(--dim);font-size:14px}
   .scard .q{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:34px;line-height:.95}
   .scard .f{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:13px;color:var(--dim)}
   .scard .f b{font-family:var(--disp);font-weight:900;font-size:20px;letter-spacing:.12em;color:var(--red-type)}
@@ -1366,7 +1367,7 @@ function reader(id){
   var head='<div class="rhead"><p class="k">'+(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase()))+'</p><h1>'+esc(s.title)+'</h1>'+(s.sub?'<p class="sb">'+esc(s.sub)+'</p>':'')+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+lenMin(V.arr)+' minutes de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var tail=''+
     ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+
-    '<div class="ract"><button class="btn glass" data-share="'+id+'">'+IC.share+'Partager</button><button class="btn glass'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'+
+    '<div class="ract"><button class="btn glass full" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass full'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'+
     '<button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button></div>'+up;
   if(S.mode==='book')return bar+'<div class="bkwrap" id="bkw"><div class="bk rtext" id="bk"><section class="bkcover"><div class="bkpost">'+poster(s.p)+'</div>'+head+'</section>'+body+'<section class="bkend">'+tail+'</section></div></div>'+
     '<div class="bkfoot"><button class="bkb" data-bk="-1" aria-label="Page précédente">‹</button><span class="bkbar"><i id="bkprog"></i></span><button class="bkb" data-bk="1" aria-label="Page suivante">›</button></div>';
@@ -2064,11 +2065,57 @@ setBox.parentNode.addEventListener('click',function(e){if(e.target===setBox.pare
 
 /* ---------- partage ---------- */
 var sheet=document.getElementById('sheet');
-function openShare(id){var s=STORIES[id];
-  document.getElementById('scard').innerHTML=poster(s.p)+'<span class="grad"></span><div class="in"><p class="q">'+esc(s.quote)+'</p><div class="f"><b>OPSIS</b><span>'+esc(s.kind)+' · '+s.min+' min</span></div></div>';
-  sheet.classList.add('show');}
+/* ---------- partage en story : une image 1080×1920 (affiche + titre + accroche), envoyée par la feuille de partage du téléphone ---------- */
+var storyBlob=null,storyId=null,storyUrl=null;
+function storyImage(id){
+  var s=STORIES[id],W=1080,H=1920,c=s.c||'#F2643C';
+  var hook=(BLURB[id]&&BLURB[id].h)||s.quote||s.sub||'';
+  var cv=document.createElement('canvas');cv.width=W;cv.height=H;var g=cv.getContext('2d');
+  var disp=(getComputedStyle(document.documentElement).getPropertyValue('--disp')||'Impact').trim()||'Impact';
+  var serif=(getComputedStyle(document.documentElement).getPropertyValue('--serif')||'Georgia').trim()||'Georgia';
+  var load=(document.fonts&&document.fonts.load)?Promise.all([document.fonts.load('900 100px "Big Shoulders Display"'),document.fonts.load('italic 40px "Newsreader"'),document.fonts.load('40px "Newsreader"')]).catch(function(){}):Promise.resolve();
+  return load.then(function(){
+    var svg=art(id);if(svg.indexOf('xmlns=')<0)svg=svg.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" ');
+    svg=svg.replace(/<svg /,'<svg width="660" height="990" ');
+    return new Promise(function(res){var im=new Image();im.onload=function(){res(im);};im.onerror=function(){res(null);};im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
+  }).then(function(im){
+    var bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,c);bg.addColorStop(.62,'#140C0B');bg.addColorStop(1,'#070506');g.fillStyle=bg;g.fillRect(0,0,W,H);
+    var rg=g.createRadialGradient(W/2,560,60,W/2,560,820);rg.addColorStop(0,'rgba(255,255,255,.16)');rg.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=rg;g.fillRect(0,0,W,H);
+    g.textAlign='center';g.textBaseline='alphabetic';
+    g.fillStyle='#F4EEE4';g.font='700 44px '+disp;if('letterSpacing' in g)g.letterSpacing='22px';g.fillText('OPSIS',W/2+11,150);if('letterSpacing' in g)g.letterSpacing='0px';
+    var px=(W-660)/2,py=230,pw=660,ph=990,r=34;
+    g.save();g.shadowColor='rgba(0,0,0,.6)';g.shadowBlur=70;g.shadowOffsetY=34;g.fillStyle='#000';g.beginPath();g.moveTo(px+r,py);g.arcTo(px+pw,py,px+pw,py+ph,r);g.arcTo(px+pw,py+ph,px,py+ph,r);g.arcTo(px,py+ph,px,py,r);g.arcTo(px,py,px+pw,py,r);g.closePath();g.fill();g.restore();
+    g.save();g.beginPath();g.moveTo(px+r,py);g.arcTo(px+pw,py,px+pw,py+ph,r);g.arcTo(px+pw,py+ph,px,py+ph,r);g.arcTo(px,py+ph,px,py,r);g.arcTo(px,py,px+pw,py,r);g.closePath();g.clip();
+    if(im)g.drawImage(im,px,py,pw,ph);else{g.fillStyle=c;g.fillRect(px,py,pw,ph);}
+    g.restore();
+    g.fillStyle='rgba(244,238,228,.62)';g.font='600 32px '+disp;if('letterSpacing' in g)g.letterSpacing='6px';
+    g.fillText((s.kind+' · '+s.min+' MIN · '+(s.terr||'')).toUpperCase(),W/2,1306);if('letterSpacing' in g)g.letterSpacing='0px';
+    function wrap(t,font,maxW){g.font=font;var w=t.split(' '),l=[],cur='';w.forEach(function(x){var tt=cur?cur+' '+x:x;if(g.measureText(tt).width>maxW&&cur){l.push(cur);cur=x;}else cur=tt;});if(cur)l.push(cur);return l;}
+    var title=(s.title||'').toUpperCase(),fs=116,lines;
+    for(;fs>=64;fs-=6){lines=wrap(title,'900 '+fs+'px '+disp,900);if(lines.length<=2)break;}
+    g.fillStyle='#F4EEE4';var y=1306+36+fs*.86;lines.slice(0,3).forEach(function(t){g.font='900 '+fs+'px '+disp;g.fillText(t,W/2,y);y+=fs*.9;});
+    var hl=wrap('« '+hook+' »','italic 40px '+serif,880).slice(0,3);
+    g.fillStyle='rgba(244,238,228,.82)';g.font='italic 40px '+serif;y=Math.max(y+34,1660);
+    hl.forEach(function(t){g.fillText(t,W/2,y);y+=54;});
+    g.fillStyle='rgba(244,238,228,.45)';g.font='600 28px '+disp;if('letterSpacing' in g)g.letterSpacing='5px';g.fillText('UNE HISTOIRE VRAIE PAR JOUR',W/2,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
+    return new Promise(function(res){cv.toBlob(function(b){res(b);},'image/png');});
+  });
+}
+function openShare(id){var s=STORIES[id];storyId=id;storyBlob=null;
+  var box=document.getElementById('scard');box.className='scard img';box.innerHTML='<p class="sprep">Préparation de la story…</p>';
+  sheet.classList.add('show');
+  storyImage(id).then(function(b){if(storyId!==id)return;storyBlob=b;if(storyUrl)URL.revokeObjectURL(storyUrl);storyUrl=b?URL.createObjectURL(b):null;box.innerHTML=storyUrl?'<img alt="Aperçu de la story" src="'+storyUrl+'">':'<p class="sprep">Aperçu indisponible</p>';});}
 document.getElementById('sclose').onclick=function(){sheet.classList.remove('show');};
-document.getElementById('sgo').onclick=function(){sheet.classList.remove('show');toast('Story prête à publier');};
+document.getElementById('sgo').onclick=function(){
+  var s=STORIES[storyId];if(!s)return;
+  var go=function(b){
+    var f;try{f=new File([b],'opsis-'+storyId+'.png',{type:'image/png'});}catch(e){f=null;}
+    var data={files:f?[f]:[],title:s.title,text:s.title+' — une histoire vraie sur OPSIS'};
+    if(f&&navigator.share&&navigator.canShare&&navigator.canShare({files:[f]})){navigator.share(data).then(function(){sheet.classList.remove('show');}).catch(function(e){if(e&&e.name!=='AbortError')save(b);});}
+    else save(b);};
+  var save=function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='opsis-'+storyId+'.png';document.body.appendChild(a);a.click();a.remove();toast('Image enregistrée : ajoute-la à ta story');};
+  if(storyBlob)go(storyBlob);else storyImage(storyId).then(function(b){storyBlob=b;if(b)go(b);});
+};
 sheet.addEventListener('click',function(e){if(e.target===sheet)sheet.classList.remove('show');});
 
 /* ---------- intro : l'œil s'ouvre, le diaphragme devient le O, puis on plonge dans la pupille ---------- */
