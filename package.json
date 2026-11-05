@@ -1,0 +1,13 @@
+{
+  "name": "opsis",
+  "private": true,
+  "version": "0.2.0",
+  "description": "OPSIS — une histoire vraie chaque jour",
+  "scripts": {
+    "build": "node tools/build.js",
+    "dev": "node tools/build.js && node tools/dev-server.js",
+    "test": "node tools/build.js && node tests/e2e.js",
+    "seed": "node tools/seed.js"
+  },
+  "devDependencies": { "playwright": "^1.45.0" }
+}

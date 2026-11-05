@@ -1,0 +1,5 @@
+{
+  "supabaseUrl": "https://VOTRE-PROJET.supabase.co",
+  "supabaseAnonKey": "eyJ... (clé « anon / publishable », publique par conception)",
+  "launchDate": "2027-01-04"
+}
