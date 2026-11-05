@@ -1325,7 +1325,10 @@ function lenWords(a){var w=0;a.forEach(function(t){if('#@*'.indexOf(t.charAt(0))
 function lenMin(a){return Math.max(1,Math.round(lenWords(a)/200));}
 function lenAv(s){var bl=lenWords(s.body)>=800?5:3;return {3:s.b3||(bl===3?s.body:null),5:s.b5||s.body,10:s.b10||null};}
 function lenPick(s,L){var av=lenAv(s);if(av[L])return {arr:av[L],got:L};var ks=L===10?[5,3]:L===5?[3,10]:[5,10];for(var i=0;i<ks.length;i++){if(av[ks[i]])return {arr:av[ks[i]],got:ks[i],miss:L};}return {arr:s.body,got:3,miss:L};}
-function lensUI(s,V){var cur=S.len||3,av=lenAv(s),btn=[3,5,10].map(function(k){var has=!!av[k];return '<button data-len="'+k+'" aria-pressed="'+(cur===k)+'"'+(has?'':' class="na"')+'>'+k+' min</button>';}).join('');
+function lensUI(s,V){
+  /* une seule version écrite : on n'affiche pas de choix 3 / 5 / 10 min qui donnerait trois fois le même texte */
+  if(!s.b3&&!s.b10){var m=Math.max(1,Math.round(lenWords(s.body)/200));return '<div class="lens"><span class="ll">Durée de lecture</span><span class="ll">environ '+m+' min</span></div>';}
+  var cur=S.len||3,av=lenAv(s),btn=[3,5,10].map(function(k){var has=!!av[k];return '<button data-len="'+k+'" aria-pressed="'+(cur===k)+'"'+(has?'':' class="na"')+'>'+k+' min</button>';}).join('');
   return '<div class="lens"><span class="ll">Durée de lecture</span><span class="seg">'+btn+'</span></div>'+(V.miss?'<p class="lnote">La version de '+V.miss+' minutes de cette histoire arrive bientôt. Vous lisez la version de '+V.got+' minutes.</p>':'');}
 function reader(id){
   var s=STORIES[id],sv=!!S.saved[id],done=!!S.read[id];

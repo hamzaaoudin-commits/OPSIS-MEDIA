@@ -1,5 +1,5 @@
-/* OPSIS service worker — généré, version a5025ba47f */
-const V='opsis-a5025ba47f',SHELL=['./','index.html','manifest.webmanifest','icons/icon-192.png'];
+/* OPSIS service worker — généré, version c99fabb77e */
+const V='opsis-c99fabb77e',SHELL=['./','index.html','manifest.webmanifest','icons/icon-192.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x.startsWith('opsis-')&&x!==V).map(x=>caches.delete(x)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{
