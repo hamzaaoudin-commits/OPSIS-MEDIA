@@ -3356,6 +3356,224 @@ HC.du30=function(){return hxb2('#4AA0F0','#04142A',100,110,
   hxp('M52 250 L54 176 Q54 150 72 148 L76 112 Q78 100 90 104 L92 138 L96 100 Q98 90 108 94 L108 132 L116 98 Q120 90 130 96 L124 140 Q146 146 150 170 L148 250Z','#B8805A')+
   hxp('M52 250 L148 250','', '#0B0B0C',0)+hxr(50,232,100,18,'#4AA0F0',0));};
 
+/* ---- Victoires impossibles ---- */
+function hxtroph(x,y,s,f,g){return '<g transform="translate('+x+' '+y+') scale('+s+')"><path d="M-34 -70 H34 V-40 Q34 -4 0 6 Q-34 -4 -34 -40Z" fill="'+f+'"/><path d="M-34 -62 Q-62 -62 -56 -36 Q-50 -16 -28 -14 M34 -62 Q62 -62 56 -36 Q50 -16 28 -14" fill="none" stroke="'+f+'" stroke-width="7"/><rect x="-8" y="4" width="16" height="30" fill="'+f+'"/><rect x="-30" y="34" width="60" height="12" rx="3" fill="'+g+'"/><rect x="-22" y="46" width="44" height="14" rx="3" fill="'+f+'"/></g>';}
+function hxwreath(x,y,r,f){var o='';for(var i=0;i<14;i++){var a=Math.PI*.62+i*(Math.PI*1.76/13);var px=x+Math.cos(a)*r,py=y+Math.sin(a)*r;o+='<ellipse cx="'+px.toFixed(1)+'" cy="'+py.toFixed(1)+'" rx="'+(r*.2)+'" ry="'+(r*.09)+'" fill="'+f+'" transform="rotate('+((a*180/Math.PI)+90+(i%2?28:-28)).toFixed(0)+' '+px.toFixed(1)+' '+py.toFixed(1)+')"/>';}return o;}
+HC.vc01=function(){return hxb2('#2A5AE8','#050A1E',100,110,
+  hxc(100,110,92,'#8AB0FF',null,0,.22)+hxtroph(100,150,1.9,'#F2C14E','#8A5A10')+hxt(100,282,24,'5000 / 1','#EDE6DA',.95));};
+HC.vc02=function(){return hxb2('#2A8AE8','#04182A',100,110,
+  hxc(100,120,86,'#EDE6DA',null,0,.14)+hxwreath(100,120,70,'#8AE8A0')+hxt(100,140,58,'1–0','#EDE6DA')+hxp('M0 236 H200','', '#EDE6DA',10)+hxp('M0 256 H200','', '#2A8AE8',10)+hxp('M0 276 H200','', '#EDE6DA',10));};
+HC.vc03=function(){return hxb2('#E83A3A','#12060A',100,110,
+  hxc(100,100,90,'#FFB0A0',null,0,.3)+hxr(24,84,152,116,'#F4F4F6',16)+hxr(24,84,152,116,'none',16,'#B8BCC8',3)+hxp('M72 84 V64 Q72 52 84 52 H116 Q128 52 128 64 V84','', '#F4F4F6',9)+hxr(90,84,20,116,'#E83A3A',0)+hxr(24,132,152,20,'#E83A3A',0)+hxp('M24 132 H176','', '#F4F4F6',0)+hxc(100,142,20,'#F4F4F6')+hxc(100,142,12,'#E83A3A')+hxp('M42 200 V224 M158 200 V224','', '#0B0B0C',9)+hxt(100,272,24,'JUIN 1992','#EDE6DA',.9));};
+HC.vc04=function(){return hxb2('#2A6AE8','#06101E',100,110,
+  hxc(100,110,90,'#EAF4FF',null,0,.28)+hxp('M44 30 L120 190 Q124 200 136 200 H176 Q184 200 184 190 Q184 180 172 180 H146 L74 26Z','#F4F4F6')+hxp('M44 30 L120 190 Q124 200 136 200 H176 Q184 200 184 190 Q184 180 172 180 H146 L74 26Z','none','#C21A22',0)+hxp('M52 40 L128 198','', '#C21A22',6)+
+  hxr(26,226,70,26,'#0B0B0C',4)+hxp('M26 226 H96 V252 H26Z','none')+hxp('M26 236 Q61 214 96 236','', '#0B0B0C',0)+hxr(26,214,70,14,'#2A2A32',7)+hxt(150,260,40,'4–3','#EDE6DA'));};
+HC.vc05=function(){return hxb2('#F2C14E','#04140A',100,110,
+  hxc(100,130,98,'#14502A')+hxc(100,130,76,'#F2C14E')+hxc(100,130,54,'#14502A')+hxc(100,130,32,'#F2C14E')+hxc(100,130,12,'#0B0B0C')+
+  hxp('M2 130 H198 M100 32 V228','', '#0B0B0C',0)+hxt(100,270,26,'200 000','#EDE6DA',.9));};
+HC.vc06=function(){return hxb2('#2A5AE8','#080C1E',100,110,
+  hxt(100,150,130,'42','#F2C14E',.9)+hxglove(100,176,1.8,-14,'#2A5AE8','#EDE6DA')+hxt(100,282,26,'1','#EDE6DA',.9));};
+HC.vc07=function(){return hxb2('#2AB04A','#04120A',100,110,
+  hxc(100,100,98,'#F2C14E',null,0,.3)+hxc(100,112,78,'#0B0B0C','#EDE6DA',6)+hxp('M100 112 V58 M100 112 L134 112','', '#EDE6DA',9)+hxc(100,112,9,'#E8B04A')+
+  hxp('M0 244 L200 224','', '#C21A22',9)+hxp('M0 264 L200 244','', '#EDE6DA',9)+hxp('M0 284 L200 264','', '#C21A22',9));};
+HC.vc08=function(){return hxb2('#14502A','#04100A',100,110,
+  '<g transform="rotate(-8 100 130)">'+hxr(14,60,172,140,'#E8E0B8',10,'#2A5A3A',5)+hxr(26,72,148,116,'none',6,'#2A5A3A',2)+hxc(100,130,38,null,'#2A5A3A',3)+hxt(100,146,46,'$','#2A5A3A')+hxt(40,98,20,'367','#2A5A3A')+hxt(160,176,20,'367','#2A5A3A')+'</g>'+hxt(100,272,22,'10 CONTRE 1','#EDE6DA',.9));};
+HC.vc09=function(){return hxb2('#C21A22','#12040A',100,110,
+  hxc(100,120,90,'#F2C14E')+hxc(100,120,70,'#C21A22')+hxc(100,120,34,'#F2C14E')+hxt(100,140,46,'1–0','#12040A')+hxt(100,282,22,'SYDNEY 2000','#EDE6DA',.9));};
+HC.vc10=function(){return hxb2('#3A3A48','#06060A',100,110,
+  hxc(100,100,84,'#C21A22',null,0,.35)+hxglove(100,100,1.6,-30,'#0B0B0C','#EDE6DA')+hxp('M150 150 V230 M130 210 L150 236 L170 210','', '#C21A22',9)+hxt(100,282,22,'LA MAIN BASSE','#EDE6DA',.9));};
+HC.vc11=function(){return hxb2('#E8801A','#1A0A04',100,110,
+  hxc(100,110,92,'#FFD08A',null,0,.4)+
+  hxp('M34 130 Q34 40 100 36 Q166 40 166 130 V204 Q166 214 156 214 H140 L134 188 Q130 168 126 168 H74 Q70 168 66 188 L60 214 H44 Q34 214 34 204Z','#0B0B0C')+hxp('M100 36 Q100 10 130 6 Q106 22 108 36Z','#0B0B0C')+hxp('M72 112 H128 L120 156 H80Z','#E8801A')+hxp('M100 112 V156','', '#0B0B0C',8)+hxt(100,272,22,'490 AV. J.-C.','#EDE6DA',.9));};
+HC.vc12=function(){return hxb2('#8A5A2A','#0A0604',100,110,
+  hxc(100,60,70,'#FFD08A',null,0,.3)+
+  Array.from({length:9},function(_,i){return hxp('M'+(100+(i-4)*8)+' 150 L'+(100+(i-4)*46)+' 300','', '#2A1608',5);}).join('')+hxr(0,150,200,5,'#0B0B0C',0)+
+  Array.from({length:12},function(_,i){var x=14+i*15.5,y=10+((i*37)%70);return hxp('M'+x+' '+y+' L'+(x-8)+' '+(y+54),'', '#0B0B0C',3)+hxp('M'+(x-8)+' '+(y+54)+' l-4 -10 l8 2Z','#0B0B0C');}).join(''));};
+HC.vc13=function(){return hxb2('#E8B04A','#14100A',100,110,
+  hxc(100,90,80,'#FFE9B8',null,0,.5)+
+  hxp('M70 230 L84 110 H116 L130 230Z','#0B0B0C')+hxp('M80 110 L100 74 L120 110Z','#0B0B0C')+hxp('M100 80 L40 40 M100 80 L160 40 M100 80 L48 134 M100 80 L152 134','', '#0B0B0C',8)+hxp('M30 30 L50 50 M150 50 L170 30 M38 144 L58 124 M142 124 L162 144','', '#0B0B0C',0)+hxr(94,74,12,12,'#0B0B0C',0)+
+  hxp('M92 70 Q100 40 108 70Z','#C21A22')+hxp('M0 240 H200 V300 H0Z','#0B0B0C'));};
+HC.vc14=function(){return hxb2('#14204A','#04060E',100,110,
+  hxc(150,60,38,'#EDE6DA',null,0,.9)+
+  Array.from({length:4},function(_,r){return Array.from({length:6-r},function(_,c){var x=22+r*14+c*28,y=210-r*32;return hxr(x,y,26,30,(r+c)%2?'#C9A15A':'#B88A40',3,'#6A4A18',2)+hxp('M'+(x+4)+' '+(y+10)+' H'+(x+22)+' M'+(x+4)+' '+(y+18)+' H'+(x+22),'', '#6A4A18',1.6);}).join('');}).join('')+
+  hxp('M0 240 H200 V300 H0Z','#0B0B0C')+hxt(100,282,22,'150 HOMMES','#EDE6DA',.9));};
+HC.vc15=function(){return hxb2('#8AC8F0','#06142A',100,110,
+  hxr(20,150,160,30,'#F4F4F6',10)+hxr(40,120,110,36,'#F4F4F6',8)+hxr(150,132,50,10,'#F4F4F6',3)+hxr(70,96,44,26,'#F4F4F6',6)+hxr(0,180,200,36,'#2A6AE8',18)+
+  Array.from({length:8},function(_,i){return hxc(22+i*22,196,11,'#06142A');}).join('')+
+  hxt(100,262,50,'32','#EDE6DA')+hxp('M0 220 H200','', '#F4F4F6',0));};
+HC.vc16=function(){return hxb2('#E8E8EC','#14141C',100,110,
+  hxp('M20 60 Q70 40 100 60 T180 60 V150 Q130 170 100 150 T20 150Z','#1A3AAA')+hxp('M20 150 Q70 170 100 150 T180 150 V240 Q130 260 100 240 T20 240Z','#C21A22')+hxp('M20 60 V300','', '#6A4A18',6)+
+  hxc(100,150,26,'#0B0B0C')+hxt(100,282,22,'1803','#EDE6DA',.9));};
+HC.vc17=function(){return hxb2('#E8801A','#0A0604',100,110,
+  hxc(100,90,84,'#FFD08A',null,0,.4)+
+  hxp('M20 214 V104 Q20 72 52 72 H148 Q180 72 180 104 V214Z','#0B0B0C')+hxr(34,90,132,56,'#E8801A',8)+hxp('M100 90 V146','', '#0B0B0C',5)+hxc(52,214,18,'#E8801A','#0B0B0C',5)+hxc(148,214,18,'#E8801A','#0B0B0C',5)+hxc(40,176,8,'#FFE29A')+hxc(160,176,8,'#FFE29A')+
+  hxt(100,274,56,'381','#EDE6DA'));};
+HC.vc18=function(){return hxb2('#2A8A3A','#04120A',100,110,
+  hxr(0,0,200,100,'#2A8A3A',0)+hxr(0,100,200,100,'#F2C14E',0)+hxr(0,200,200,100,'#C21A22',0)+
+  hxp('M0 300 V210 L50 120 L100 190 L150 100 L200 190 V300Z','#0B0B0C')+hxp('M80 300 L100 190 L120 300Z','#F2C14E',null,0,.0)+hxc(100,110,26,'#0B0B0C')+hxc(100,110,16,'#F2C14E'));};
+HC.vc19=function(){return hxb2('#2A5AE8','#04060E',100,110,
+  Array.from({length:44},function(_,i){var a=i*Math.PI*2/44;return hxc(100+Math.cos(a)*76,112+Math.sin(a)*76,5.5,i%2?'#EDE6DA':'#0B0B0C','#EDE6DA',1.4);}).join('')+
+  Array.from({length:30},function(_,i){var a=i*Math.PI*2/30;return hxc(100+Math.cos(a)*50,112+Math.sin(a)*50,4.5,'#EDE6DA');}).join('')+
+  hxc(100,112,26,'#EDE6DA',null,0,.2)+hxp('M92 126 V96 L114 90 V120','', '#EDE6DA',5)+hxc(90,128,7,'#EDE6DA')+hxc(112,122,7,'#EDE6DA')+hxt(100,272,22,'300 000 VOIX','#EDE6DA',.9));};
+HC.vc20=function(){return hxb2('#C21A22','#12040A',100,110,
+  hxr(34,28,132,190,'#F4F4F6',6)+
+  [60,88,116,144,172,196].map(function(y,i){return hxr(48,y-10+4,104,6,'#B8BCC8',0)+(i<4?hxp('M44 '+(y-3)+' H156','', '#C21A22',8):'');}).join('')+hxp('M150 214 L190 160 L196 170 L158 226Z','#0B0B0C'));};
+HC.vc21=function(){return hxb2('#14204A','#04060E',100,110,
+  hxc(100,80,12,'#FFF3C0')+Array.from({length:30},function(_,i){var q=hashN('a'+i);return hxc(q%200,(q>>8)%140,1.4,'#EDE6DA',null,0,.7);}).join('')+
+  hxp('M100 20 L140 130 H60Z','#C9C9D0')+hxr(60,130,80,22,'#8A8A96',4)+hxr(74,152,52,20,'#6A6A78',4)+hxr(80,184,44,36,'#E8B04A',4)+hxp('M80 184 L124 220 M124 184 L80 220','', '#0B0B0C',3)+hxp('M102 172 V184 M102 220 V236','', '#EDE6DA',8)+hxp('M80 202 H124','', '#EDE6DA',7)+hxt(100,282,22,'13','#EDE6DA',.9));};
+HC.vc26=function(){return hxb2('#6A8AB0','#080A12',100,110,
+  hxr(30,72,140,100,'#0B0B0C',18,'#EDE6DA',6)+hxr(66,54,40,24,'#0B0B0C',6,'#EDE6DA',6)+hxc(100,122,32,'#0B0B0C','#EDE6DA',6)+hxc(100,122,14,'#EDE6DA')+hxc(100,122,92,null,'#E82A2A',14)+hxp('M36 192 L164 52','', '#E82A2A',14)+hxt(100,282,24,'REYKJAVIK','#EDE6DA',.9));};
+HC.vc27=function(){return hxb2('#E84A9A','#14040E',100,110,
+  hxc(100,100,62,null,'#F4F4F6',10)+hxp('M100 162 V226 M72 194 H128','', '#F4F4F6',10)+
+  hxp('M64 70 L136 130 M136 70 L64 130 M100 38 V162 M54 100 H146','', '#F4F4F6',2,.65)+hxc(100,100,6,'#E8F020')+hxt(100,282,24,'55 ANS','#EDE6DA',.9));};
+HC.vc28=function(){return hxb2('#F2C14E','#0A0A12',100,110,
+  hxc(100,100,90,'#FFE9B8',null,0,.4)+hxp('M30 150 Q36 62 112 50 Q164 46 190 100 Q176 152 130 156 Q84 160 54 190 Q30 190 30 150Z','#E84A9A')+hxp('M54 190 Q110 168 170 124','', '#0B0B0C',0)+hxp('M120 70 Q160 70 178 100','', '#FFF',6,.8)+hxt(100,252,100,'8','#EDE6DA')+hxp('M0 280 H200','', '#EDE6DA',0));};
+HC.vc29=function(){return hxb2('#E8801A','#1A0806',100,110,
+  hxc(100,100,84,'#FFD08A',null,0,.35)+
+  hxp('M72 30 H128 V50 Q150 66 156 110 Q162 164 130 204 Q116 220 100 222 Q84 220 70 204 Q38 164 44 110 Q50 66 72 50Z','#0B0B0C')+hxp('M72 30 Q40 40 44 80 M128 30 Q160 40 156 80','', '#0B0B0C',9)+hxr(60,222,80,10,'#0B0B0C',3)+
+  hxp('M56 120 H144','', '#E8801A',4)+hxp('M56 160 H144','', '#E8801A',4)+hxp('M100 124 L110 138 L100 152 L90 138Z','#E8801A')+hxt(100,272,22,'1896','#EDE6DA',.9));};
+HC.vc30=function(){return hxb2('#C21A22','#12040A',100,110,
+  hxp('M100 20 L124 82 L190 86 L138 128 L156 192 L100 156 L44 192 L62 128 L10 86 L76 82Z','#F4F4F6')+hxc(100,112,40,'#1A3AAA')+hxc(100,112,26,'#F4F4F6')+hxp('M100 90 L108 106 L100 120 L92 106Z','#12121A')+hxt(100,282,28,'1–0','#EDE6DA'));};
+
+/* ---- Dernières heures ---- */
+function hxray(x,y,r1,r2,n,col,w,o,rot){var s='';for(var i=0;i<n;i++){var a=(rot||0)+i*Math.PI*2/n;s+='<path d="M'+(x+Math.cos(a)*r1).toFixed(1)+' '+(y+Math.sin(a)*r1).toFixed(1)+' L'+(x+Math.cos(a)*r2).toFixed(1)+' '+(y+Math.sin(a)*r2).toFixed(1)+'" stroke="'+col+'" stroke-width="'+w+'" opacity="'+(o||1)+'" fill="none"/>';}return s;}
+HC.ld01=function(){return hxb2('#8A1A1A','#12040A',100,110,
+  hxc(100,110,92,'#FF8A6A',null,0,.18)+hxp('M30 190 Q100 214 170 190 L174 204 Q100 232 26 204Z','#0B0B0C')+hxr(58,60,84,136,'#0B0B0C',10)+hxr(58,150,84,18,'#8A1A1A',0)+hxp('M0 0 Q40 80 0 140 M200 0 Q160 80 200 140','', '#C21A22',18,.6)+hxt(100,272,22,'14 AVRIL 1865','#EDE6DA',.9));};
+HC.ld02=function(){return hxb2('#E8B04A','#14100A',100,110,
+  hxc(100,112,82,null,'#0B0B0C',14)+hxc(100,112,12,'#0B0B0C')+hxray(100,112,12,82,10,'#0B0B0C',8)+hxc(100,112,100,'#FFE9B8',null,0,.15)+hxp('M0 236 H200 V300 H0Z','#0B0B0C')+hxt(100,280,22,'RUE DE LA FERRONNERIE','#EDE6DA',.9).replace('font-size="22"','font-size="13"'));};
+HC.ld03=function(){return hxb2('#2A5AE8','#06081A',100,110,
+  hxc(100,100,90,'#8AB0FF',null,0,.2)+hxp('M70 220 V120 Q70 60 100 24 Q130 60 130 120 V220Z','#F2C14E')+hxp('M100 4 V28 M92 14 H108','', '#F2C14E',5)+hxp('M70 120 H130 M70 160 H130','', '#8A5A10',4)+hxr(40,220,120,18,'#8A5A10',0)+hxt(100,276,22,'13 MARS 1881','#EDE6DA',.9));};
+HC.ld04=function(){return hxb2('#E8801A','#14080A',100,110,
+  hxc(100,100,92,'#FFD08A',null,0,.35)+hxc(58,112,40,null,'#0B0B0C',9)+hxc(142,112,40,null,'#0B0B0C',9)+hxp('M98 108 Q100 100 102 108','', '#0B0B0C',7)+hxp('M18 104 L4 94 M182 104 L196 94','', '#0B0B0C',7)+hxp('M0 236 H200','', '#0B0B0C',0)+hxt(100,250,70,'10','#0B0B0C',.95)+hxt(100,282,22,'MINUTES','#EDE6DA',.9));};
+HC.ld05=function(){return hxb2('#6A7A8A','#0A0E14',100,110,
+  '<g stroke="#D8E4EE" stroke-width="2" opacity=".7">'+Array.from({length:30},function(_,i){return '<path d="M'+(i*7)+' 0 l-10 300"/>';}).join('')+'</g>'+
+  '<g transform="rotate(-14 100 130)">'+hxp('M20 130 H170 Q184 130 186 136 Q184 142 170 142 H110 L82 180 H66 L82 142 H40 L24 166 H12 L22 142Z','#F4F4F6')+hxp('M100 130 L96 96 H108 L124 130Z','#F4F4F6')+hxc(60,136,3,'#2A6AE8')+'</g>'+hxt(100,272,22,'22 NOV. 1963','#EDE6DA',.9));};
+HC.ld06=function(){return hxb2('#8A2A5A','#12040E',100,110,
+  hxc(100,110,92,'#E86AB0',null,0,.2)+hxp('M40 80 Q100 30 160 80 Q166 150 130 190 Q100 214 70 190 Q34 150 40 80Z','#F2E8D0')+hxp('M40 80 Q60 20 100 40 Q140 20 160 80 Q100 50 40 80Z','#F4F4F6')+hxp('M54 100 Q76 84 92 104 Q74 112 54 100Z M146 100 Q124 84 108 104 Q126 112 146 100Z','#0B0B0C')+hxp('M72 148 Q100 176 128 148 Q100 160 72 148Z','#C21A22')+hxt(100,262,40,'IV','#EDE6DA'));};
+HC.ld07=function(){return hxb2('#3A3A5A','#06060E',100,110,
+  hxp('M120 0 L74 108 H104 L80 210 L146 90 H114 L140 0Z','#F2E8A0')+hxc(100,110,92,'#F2E8A0',null,0,.14)+
+  hxr(10,222,180,50,'#F4F4F6',0)+Array.from({length:9},function(_,i){return hxr(10+i*20,222,20,50,'none',0,'#0B0B0C',1.6);}).join('')+Array.from({length:6},function(_,i){return hxr(24+(i<2?i:i+1)*20,222,12,30,'#0B0B0C',0);}).join(''));};
+HC.ld08=function(){return hxb2('#8AA0D0','#0A0E1E',100,110,
+  hxc(100,70,70,'#FFFFFF',null,0,.3)+hxr(74,70,52,170,'#4A4A5A',0)+Array.from({length:6},function(_,i){return hxp('M74 '+(90+i*26)+' Q100 '+(80+i*26)+' 126 '+(90+i*26),'', '#2A2A38',3);}).join('')+hxr(66,50,68,24,'#4A4A5A',0)+hxr(60,236,80,16,'#4A4A5A',0)+hxp('M100 50 V30 M90 40 H110','', '#4A4A5A',0)+hxc(100,26,10,'#4A4A5A')+hxp('M88 36 H112 L106 50 H94Z','#4A4A5A')+hxt(100,282,20,'PLUS MAINTENANT','#EDE6DA',.9));};
+HC.ld09=function(){return hxb2('#C21A22','#12040A',100,110,
+  hxc(96,150,70,null,'#0B0B0C',9)+hxray(96,150,8,70,12,'#0B0B0C',2.4)+hxc(96,150,8,'#0B0B0C')+hxp('M130 40 V150 H180 M130 150 L120 230','', '#0B0B0C',10)+hxc(150,36,16,'#F4F4F6')+hxp('M138 38 Q150 22 168 30 Q158 44 142 46Z','#F4F4F6')+hxt(100,282,22,'POR LA PAZ','#EDE6DA',.92));};
+HC.ld10=function(){return hxb2('#C9A15A','#1A1006',100,110,
+  hxc(100,120,92,'#FFE9B8',null,0,.4)+hxp('M20 150 Q20 56 100 40 Q180 56 180 150 Q150 130 100 138 Q50 130 20 150Z','#E8B04A')+hxray(100,196,10,150,0,'#fff',1)+
+  Array.from({length:9},function(_,i){var a=Math.PI*(1.08+i*.105);return hxp('M100 196 L'+(100+Math.cos(a)*150).toFixed(1)+' '+(196+Math.sin(a)*150).toFixed(1),'', '#8A5A10',3,.9);}).join('')+hxc(100,196,14,'#8A5A10')+hxr(0,236,200,64,'#0B0B0C',0)+hxt(100,282,22,'16 H 30','#EDE6DA',.9));};
+HC.ld11=function(){return hxb2('#3A4A6A','#06080E',100,110,
+  '<g stroke="#BFD0E8" stroke-width="2" opacity=".65">'+Array.from({length:26},function(_,i){return '<path d="M'+(i*8)+' 0 l-10 230"/>';}).join('')+'</g>'+
+  hxp('M14 120 Q100 -14 186 120Q168 108 150 120 Q134 106 116 120 Q100 104 84 120 Q66 106 50 120 Q32 108 14 120Z','#0B0B0C')+hxp('M100 118 V200 Q100 220 116 216','', '#0B0B0C',8)+hxr(0,250,200,50,'#0B0B0C',0)+Array.from({length:8},function(_,i){return hxp('M'+(i*26)+' 250 V300','', '#4A5A7A',2);}).join(''));};
+HC.ld12=function(){return hxb2('#0A3A1A','#020A06',100,110,
+  hxc(100,170,90,'#5AFF8A',null,0,.28)+hxc(100,170,60,'#5AFF8A',null,0,.28)+hxp('M82 30 H118 V90 L170 200 Q180 224 156 224 H44 Q20 224 30 200 L82 90Z','#0B1A10','#7AFFA0',5)+hxp('M62 170 H138 L170 204 Q176 218 156 218 H44 Q24 218 30 204Z','#5AFF8A')+hxc(80,150,5,'#EAFFF0')+hxc(110,130,4,'#EAFFF0')+hxc(124,152,3,'#EAFFF0')+hxt(100,272,22,'4 JUILLET 1934','#7AFFA0',.92));};
+HC.ld13=function(){return hxb2('#1A2A3A','#04080C',100,110,
+  hxr(10,40,180,170,'#0F1A22',6,'#6A4A2A',6)+hxt(100,140,50,'E = mc²','#F4F4F6',1,0)+hxp('M24 70 H80 M30 90 H70 M120 62 q20 -10 36 4','', '#8AB0D8',2,.5)+hxp('M24 190 H100','', '#EDE6DA',2,.4)+hxt(100,272,22,'1955','#EDE6DA',.9));};
+HC.ld14=function(){return hxb2('#2A8A3A','#04120A',100,110,
+  hxc(100,110,92,'#C8F0A0',null,0,.22)+hxp('M14 190 Q14 70 100 60 Q186 70 186 190Z','#6A5A2A')+
+  [[100,86,18],[62,104,18],[138,104,18],[34,146,16],[100,128,20],[166,146,16],[66,160,18],[134,160,18]].map(function(h,i){var x=h[0],y=h[1],r=h[2];return hxp('M'+(x-r)+' '+y+' L'+(x-r/2)+' '+(y-r*.85)+' H'+(x+r/2)+' L'+(x+r)+' '+y+' L'+(x+r/2)+' '+(y+r*.85)+' H'+(x-r/2)+'Z','#3A2A10','#A8924A',2);}).join('')+hxp('M0 190 H200 V300 H0Z','#14301E')+hxp('M14 190 H186 V204 H14Z','#4A3A18')+hxt(100,262,22,'19 AVRIL 1882','#EDE6DA',.9));};
+HC.ld15=function(){return hxb2('#3A1A8A','#06040E',100,110,
+  hxc(100,90,70,'#8A6AFF',null,0,.3)+hxr(86,100,28,130,'#6A6A78',3)+hxr(70,224,60,16,'#4A4A58',3)+hxp('M40 100 Q100 40 160 100 Q100 74 40 100Z','#C9C9D0')+hxp('M44 100 Q100 140 156 100','', '#8A8A96',7)+
+  hxp('M44 100 L8 40 L34 70 L22 14 L60 80 M156 100 L194 50 L168 76 L182 20 L146 80 M100 78 L100 8 L90 34 L110 30Z','', '#CFE8FF',3.4)+hxt(100,276,22,'1943','#EDE6DA',.9));};
+HC.ld16=function(){return hxb2('#5A7AA0','#080C14',100,110,
+  hxp('M0 0 H200 V300 H0Z','#F4F4F6',null,0,.1)+hxp('M0 220 H200 V300 H0Z','#E8EEF4')+
+  hxp('M30 220 L100 90 L170 220Z','#E8801A')+hxp('M100 90 V20','', '#0B0B0C',4)+hxp('M100 20 H132 L124 30 L132 40 H100','#C21A22')+hxp('M84 220 L100 160 L116 220Z','#0B0B0C')+
+  '<g stroke="#F4F4F6" stroke-width="3" opacity=".8">'+Array.from({length:16},function(_,i){return '<path d="M'+(i*14)+' '+(10+(i*47)%120)+' l-22 14"/>';}).join('')+'</g>'+hxt(100,276,22,'29 MARS 1912','#0B0B0C',.9));};
+HC.ld17=function(){return hxb2('#2A3A6A','#060A18',100,110,
+  hxc(160,40,28,'#EDE6DA',null,0,.9)+hxp('M0 260 L70 150 L120 100 L150 150 L200 260Z','#F4F4F6')+hxp('M120 100 L108 150 L120 260 L150 150Z','#B8C8E0',null,0,.7)+hxp('M0 260 L70 150 L98 196 L60 260Z','#8AA0C0')+hxc(112,118,4,'#0B0B0C')+hxp('M0 260 H200 V300 H0Z','#14182A')+hxt(100,282,22,'8 JUIN 1924','#EDE6DA',.9));};
+HC.ld18=function(){return hxb2('#E8801A','#0A1A3A',100,110,
+  hxc(100,70,60,'#FFD08A',null,0,.5)+hxp('M0 200 H200 V300 H0Z','#06204A')+hxp('M0 220 H200 M0 244 H200 M0 268 H200','', '#2A6AE8',2,.7)+
+  '<g transform="translate(100 150) rotate(-12)">'+hxp('M-90 0 L-30 -8 L-24 -34 H-12 L-10 -8 H10 L12 -34 H24 L30 -8 L90 0 L30 8 H-30Z','#0B0B0C')+hxp('M-12 -8 V8 M12 -8 V8','', '#0B0B0C',0)+hxp('M-4 -4 L4 4','', '#fff',0)+'</g>'+hxp('M100 30 L103 40 L113 40 L105 46 L108 56 L100 50 L92 56 L95 46 L87 40 L97 40Z','#FFF3C0')+hxt(100,282,22,'31 JUIL. 1944','#EDE6DA',.9));};
+HC.ld19=function(){return hxb2('#2AB0C2','#04141A',100,110,
+  hxc(100,90,84,'#FFE9B8',null,0,.3)+hxp('M100 20 V210','', '#0B0B0C',7)+hxp('M100 30 Q40 50 34 150 Q70 170 100 160Z','#F4F4F6','#6A6A78',2)+hxp('M100 30 Q160 50 166 150 Q130 170 100 160Z','#F4F4F6','#6A6A78',2)+hxp('M100 56 V140 M70 98 H130','', '#C21A22',14)+hxp('M30 210 H170 L150 240 H50Z','#4A2A10')+hxp('M0 250 H200 V300 H0Z','#06303A')+hxp('M0 270 Q50 258 100 270 T200 270','', '#2AB0C2',3));};
+HC.ld20=function(){return hxb2('#E8401A','#14060A',100,110,
+  hxc(100,112,84,'#0B0B0C','#F2C14E',6)+hxray(100,112,40,78,16,'#F2C14E',2.4)+hxp('M100 112 L120 60 L100 100 L80 60Z','#C21A22')+hxp('M100 112 L120 164 L100 124 L80 164Z','#F4F4F6')+hxp('M100 112 L152 92 L112 112 L152 132Z','#F4F4F6')+hxp('M100 112 L48 92 L88 112 L48 132Z','#F4F4F6')+hxc(100,112,8,'#F2C14E')+hxt(100,272,22,'14 FÉV. 1779','#EDE6DA',.9));};
+HC.ld21=function(){return hxb2('#3A2A6A','#060410',100,110,
+  hxc(100,100,90,'#8A6AFF',null,0,.28)+hxr(78,40,44,94,'#C9C9D0',22)+hxp('M82 70 H118 M82 86 H118 M82 102 H118','', '#6A6A78',3)+hxp('M62 100 Q62 156 100 156 Q138 156 138 100','', '#C9C9D0',6)+hxp('M100 156 V224','', '#C9C9D0',9)+hxr(66,224,68,12,'#C9C9D0',4)+hxp('M146 24 L120 94 H140 L124 150 L166 78 H146 L162 24Z','#F2E8A0',null,0,.0)+hxt(100,276,22,'4 AVRIL 1968','#EDE6DA',.9));};
+HC.ld22=function(){return hxb2('#E8801A','#04060E',100,110,
+  Array.from({length:6},function(_,i){var s=1-i*.16;var w=88*s,h=130*s,x=100-w,y=150-h;return '<path d="M'+(100-w)+' '+(150+h*.7)+' V'+(150-h*.2)+' Q'+(100-w)+' '+(150-h)+' 100 '+(150-h)+' Q'+(100+w)+' '+(150-h)+' '+(100+w)+' '+(150-h*.2)+' V'+(150+h*.7)+'" fill="none" stroke="'+(i%2?'#EDE6DA':'#FFD08A')+'" stroke-width="'+(10*s)+'"/>';}).join('')+hxr(14,160,28,90,'#0B0B0C',0)+hxr(158,160,28,90,'#0B0B0C',0)+hxt(100,238,56,'13','#EDE6DA')+hxp('M80 250 L100 290 L120 250Z','#0B0B0C',null,0,.0));};
+HC.ld23=function(){return hxb2('#14502A','#04100A',100,110,
+  hxc(100,110,92,'#4AE070',null,0,.2)+hxp('M24 150 Q24 66 112 60 Q176 60 176 110 Q180 150 164 164 Q100 184 24 150Z','#0B0B0C')+hxp('M24 150 Q100 190 164 164','', '#1A1A22',0)+hxp('M100 76 L106 94 L126 94 L110 106 L116 124 L100 114 L84 124 L90 106 L74 94 L94 94Z','#F2C14E')+hxc(100,22,6,'#0B0B0C')+hxt(100,262,22,'9 OCT. 1967','#EDE6DA',.9));};
+HC.ld24=function(){return hxb2('#9A9AA6','#06060A',100,110,
+  hxc(100,118,92,'#0B0B0C','#4A4A58',3)+Array.from({length:7},function(_,i){return hxc(100,118,90-i*11,null,'#1F1F28',2);}).join('')+hxc(100,118,38,'#E8B04A')+hxc(100,118,5,'#0B0B0C')+hxp('M72 112 Q84 96 92 118 Q100 134 108 112 Q116 92 130 120','', '#0B0B0C',3)+hxt(100,272,22,'8 DÉC. 1980','#EDE6DA',.9));};
+HC.ld25=function(){return hxb2('#E83A3A','#12040A',100,110,
+  hxp('M20 60 Q70 44 100 60 T180 60 V250 Q130 266 100 250 T20 250Z','#F4F4F6')+hxp('M20 60 Q70 44 100 60 T180 60 V120 Q130 136 100 120 T20 120Z','#C21A22')+hxp('M20 190 Q70 206 100 190 T180 190 V250 Q130 266 100 250 T20 250Z','#C21A22')+hxp('M20 60 V300','', '#6A4A18',6)+hxt(100,282,22,'1ER MAI 1994','#EDE6DA',.9));};
+HC.ld26=function(){return hxb2('#C21A22','#0A0406',100,110,
+  hxc(100,70,70,'#FF8A4A',null,0,.4)+hxp('M0 250 L70 160 L90 140 H110 L130 160 L200 250V300H0Z','#2A1A14')+hxp('M96 140 Q70 100 90 70 Q50 50 90 30 Q100 6 110 30 Q150 50 110 70 Q130 100 104 140Z','#4A4A52')+hxp('M96 140 Q100 60 104 140Z','#FF8A2A')+hxt(100,282,24,'79','#EDE6DA'));};
+HC.ld27=function(){return hxb2('#8AC8F0','#041424',100,110,
+  hxp('M0 150 H200 V300 H0Z','#06304A')+hxp('M10 150 L50 90 L74 112 L104 60 L136 110 L160 92 L190 150Z','#F4F4F6')+hxp('M10 150 L50 170 L40 240 L90 280 L150 250 L160 180 L190 150Z','#8AC8F0',null,0,.65)+hxp('M0 150 H200','', '#EDE6DA',3)+hxp('M150 150 V120 L184 150Z','#0B0B0C',null,0,.0)+Array.from({length:7},function(_,i){return '<path d="M'+(100+(i-3)*10)+' 28 l3 8 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1Z" fill="#FFF3C0"/>';}).join('').replace(/<path/g,'<path transform="scale(.8) translate(24 4)"'));};
+HC.ld28=function(){return hxb2('#3A3A44','#0A0A0E',100,110,
+  hxc(100,118,84,'#0B0B0C','#8A8A96',7)+hxray(100,118,70,80,12,'#EDE6DA',3)+hxp('M100 118 V58','', '#EDE6DA',8)+hxp('M100 118 L142 106','', '#C21A22',8)+hxc(100,118,9,'#EDE6DA')+hxp('M30 60 L170 190','', '#8A8A96',3,.6)+hxt(100,272,26,'8 H 15','#EDE6DA',.95));};
+HC.ld29=function(){return hxb2('#3A3A3A','#0A0A0A',100,110,
+  hxr(30,70,140,170,'#14120F',0)+hxp('M54 200 V110 Q54 62 100 62 Q146 62 146 110 V200Z','#F2E8B0')+hxp('M100 62 V200 M54 110 H146 M54 150 H146','', '#14120F',8)+hxp('M30 70 H170 M30 240 H170','', '#6A6A78',0)+hxr(30,240,140,16,'#4A4A52',0)+hxt(100,282,20,'NUIT DU 16 AU 17 JUILLET','#EDE6DA',.9).replace('font-size="20"','font-size="13"'));};
+HC.ld30=function(){return hxb2('#8AC8F0','#06142A',100,110,
+  hxc(100,120,84,null,'#0B0B0C',34)+hxp('M70 120 Q100 70 130 120','', '#C21A22',0)+hxp('M36 98 L60 112 M44 150 L70 140 M160 96 L140 112','', '#EDE6DA',5)+hxp('M92 36 L100 64 L112 44 L108 72','', '#F4F4F6',6)+hxt(100,278,26,'–2 °C','#0B0B0C',.95).replace('#0B0B0C','#F4F4F6'));};
+
+/* ---- Procès ---- */
+function hxbal(x,y,s,f){return '<g transform="translate('+x+' '+y+') scale('+s+')"><rect x="-4" y="-70" width="8" height="120" fill="'+f+'"/><rect x="-34" y="50" width="68" height="10" rx="3" fill="'+f+'"/><path d="M-70 -50 H70" stroke="'+f+'" stroke-width="7"/><path d="M-70 -50 L-92 0 H-48Z M70 -50 L48 0 H92Z" fill="'+f+'"/><path d="M-70 -50 L-92 0 M-70 -50 L-48 0 M70 -50 L48 0 M70 -50 L92 0" stroke="'+f+'" stroke-width="2"/></g>';}
+HC.pr01=function(){return hxb2('#E8B04A','#14100A',100,110,
+  hxc(100,100,90,'#FFE9B8',null,0,.4)+hxp('M30 90 H170 Q170 170 100 180 Q30 170 30 90Z','#0B0B0C')+hxp('M30 100 Q10 100 12 130 Q16 150 40 150 M170 100 Q190 100 188 130 Q184 150 160 150','', '#0B0B0C',9)+hxr(92,178,16,34,'#0B0B0C',0)+hxr(60,210,80,12,'#0B0B0C',4)+hxp('M40 122 H160','', '#E8B04A',4)+hxt(100,272,26,'501','#EDE6DA'));};
+HC.pr02=function(){return hxb2('#E8401A','#0A0404',100,110,
+  hxp('M100 12 Q70 70 78 100 Q56 82 62 56 Q20 110 40 160 Q46 210 100 218 Q154 210 160 160 Q176 110 138 60 Q140 84 124 98 Q140 56 100 12Z','#FF8A1A')+hxp('M100 56 Q82 104 90 128 Q70 120 74 100 Q54 140 74 176 Q86 200 100 202 Q120 198 130 176 Q146 140 124 108 Q122 126 110 128 Q122 90 100 56Z','#FFD070')+hxp('M100 100 V200 M82 134 H118','', '#0B0B0C',9)+hxt(100,272,22,'ROUEN 1431','#EDE6DA',.9));};
+HC.pr03=function(){return hxb2('#C9A15A','#14100A',100,110,
+  hxc(100,110,92,'#FFE9B8',null,0,.4)+hxr(40,50,120,150,'#F2E8C8',6,'#8A6A30',3)+hxr(28,40,144,16,'#D8C898',8)+hxr(28,194,144,16,'#D8C898',8)+hxp('M56 84 H144 M56 104 H144 M56 124 H134','', '#8A6A30',3,.6)+hxc(100,160,26,'#C21A22')+hxp('M100 142 V178 M82 160 H118','', '#7A0A10',6)+hxt(100,272,22,'1307','#EDE6DA',.9));};
+HC.pr04=function(){return hxb2('#1A2A5A','#04060E',100,110,
+  Array.from({length:40},function(_,i){var q=hashN('g'+i);return hxc(q%200,(q>>8)%200,1.4,'#EDE6DA',null,0,.8);}).join('')+
+  '<g transform="rotate(-34 100 150)">'+hxr(8,134,150,32,'#8A5A2A',3)+hxr(150,126,40,48,'#C9A15A',5)+hxr(2,128,14,44,'#C9A15A',3)+hxp('M40 134 V166 M80 134 V166','', '#E8B04A',5)+'</g>'+
+  hxc(150,56,20,'#E8B04A')+hxc(120,36,5,'#F4F4F6')+hxc(176,72,4,'#F4F4F6')+hxc(168,34,3,'#F4F4F6')+hxc(132,76,4,'#F4F4F6')+hxt(100,282,24,'7 / 10','#EDE6DA',.92));};
+HC.pr05=function(){return hxb2('#3A1A5A','#08040E',100,110,
+  hxc(100,90,90,'#8A4AFF',null,0,.22)+hxp('M100 6 L130 120 H70Z','#0B0B0C')+hxp('M46 150 Q100 110 154 150 Q100 134 46 150Z','#0B0B0C')+hxp('M70 120 H130 V132 H70Z','#4A2A6A')+hxr(88,114,24,22,'#0B0B0C',3,'#E8B04A',3)+hxp('M0 250 H200 V300 H0Z','#0B0B0C')+hxt(100,282,22,'SALEM 1692','#EDE6DA',.9));};
+HC.pr06=function(){return hxb2('#C21A22','#0A0406',100,110,
+  hxc(100,110,90,'#FF8A6A',null,0,.2)+hxp('M30 190 L22 90 L62 130 L100 56 L138 130 L178 90 L170 190Z','#0B0B0C')+hxr(28,190,144,24,'#0B0B0C',3)+hxc(22,84,8,'#0B0B0C')+hxc(100,48,9,'#0B0B0C')+hxc(178,84,8,'#0B0B0C')+hxp('M62 130 L88 190 M138 130 L112 190','', '#C21A22',3)+hxp('M0 250 H200','', '#EDE6DA',0)+hxt(100,272,26,'135','#EDE6DA'));};
+HC.pr07=function(){return hxb2('#4A4A5A','#06060A',100,110,
+  hxr(30,30,140,200,'#2A2A34',6,'#6A6A78',5)+hxp('M100 30 V230','', '#0B0B0C',5)+hxr(40,50,52,70,'none',3,'#6A6A78',3)+hxr(108,50,52,70,'none',3,'#6A6A78',3)+hxc(86,170,16,'#8A8A96')+hxc(86,170,6,'#0B0B0C')+hxp('M86 176 V190','', '#0B0B0C',5)+hxc(114,170,16,'#8A8A96')+hxc(114,170,6,'#0B0B0C')+hxp('M42 140 H158 M42 210 H158','', '#6A6A78',3)+hxt(100,272,22,'1793','#EDE6DA',.9));};
+HC.pr08=function(){return hxb2('#5A2A6A','#080410',100,110,
+  hxc(100,110,90,'#E86AB0',null,0,.2)+hxp('M54 34 H146 M54 214 H146','', '#E8B04A',10)+hxp('M62 38 Q62 110 100 124 Q138 110 138 38Z','#F4F4F6',null,0,.2)+hxp('M62 38 Q62 76 86 100 H114 Q138 76 138 38Z','#E8B04A',null,0,.35)+hxp('M62 210 Q62 150 100 124 Q138 150 138 210Z','#E8B04A')+hxp('M100 124 V160','', '#E8B04A',3)+hxp('M62 38 Q62 110 100 124 Q138 110 138 38','none','#EDE6DA',4)+hxp('M62 210 Q62 140 100 124 Q138 140 138 210','none','#EDE6DA',4)+hxt(100,272,22,'MOINS D’UN JOUR','#EDE6DA',.9).replace('font-size="22"','font-size="17"'));};
+HC.pr09=function(){return hxb2('#8A2A2A','#0A0404',100,110,
+  hxp('M50 60 H150 L164 120 H36Z','#2A2A34')+hxr(36,120,128,22,'#4A4A58',0)+hxr(60,142,80,86,'#2A2A34',0)+hxr(50,228,100,14,'#4A4A58',0)+hxc(100,34,20,'#E8B04A')+hxp('M80 34 H120','', '#0B0B0C',5)+hxp('M30 20 L170 130 M170 20 L30 130','', '#C21A22',0)+hxt(100,282,22,'AVRIL 1794','#EDE6DA',.9));};
+HC.pr10=function(){return hxb2('#2A5A8A','#06101A',100,110,
+  hxc(100,110,92,'#8AC8FF',null,0,.22)+hxbal(100,130,1.45,'#F2C14E')+hxt(100,282,22,'8 MAI 1794','#EDE6DA',.9));};
+HC.pr11=function(){return hxb2('#6A4A2A','#0A0604',100,110,
+  hxc(100,100,90,'#FFD08A',null,0,.35)+hxp('M160 20 Q130 60 100 130 Q80 170 40 190 Q64 160 78 120 Q104 56 160 20Z','#F4F4F6')+hxp('M160 20 Q140 50 120 70 Q130 50 160 20Z','#C9C9D0')+hxp('M40 190 L36 214','', '#F4F4F6',3)+hxc(30,230,10,'#0B0B0C')+hxp('M34 224 Q24 210 36 200','', '#0B0B0C',0)+hxc(150,250,26,null,'#0B0B0C',8)+hxc(150,250,6,'#0B0B0C')+hxray(150,250,6,26,8,'#0B0B0C',4)+hxt(100,282,22,'8 CONTRE 5','#EDE6DA',.9).replace('font-size="22"','font-size="18"'));};
+HC.pr12=function(){return hxb2('#4A5A6A','#06080C',100,110,
+  hxc(100,110,90,'#F2C14E',null,0,.18)+hxp('M40 34 L96 126 L88 140 L34 50Z','#C9C9D0')+hxp('M160 34 L110 130 L122 142 L170 54Z','#8A8A96')+hxp('M96 126 L110 130 L104 152 L88 148Z','#0B0B0C')+hxp('M30 70 L50 60 M150 66 L170 56','', '#E8B04A',0)+hxp('M92 160 L84 230 M112 158 L124 230','', '#C9C9D0',6)+hxp('M82 212 H128','', '#E8B04A',8)+hxp('M92 146 l-8 -10 M104 150 l6 -12 M96 150 v-14','', '#F2C14E',3)+hxt(100,282,22,'1894','#EDE6DA',.9));};
+HC.pr13=function(){return hxb2('#2A8A5A','#04120A',100,110,
+  hxc(100,110,92,'#8AF0B0',null,0,.2)+'<g transform="rotate(-10 100 110)">'+hxr(24,60,152,100,'#F4F4F6',6,'#C8CCD6',3)+hxp('M44 100 H156','', '#B8BCC8',4,.6)+hxp('M44 120 H130','', '#B8BCC8',3,.5)+hxp('M44 140 H110','', '#B8BCC8',3,.4)+'</g>'+
+  hxp('M126 170 Q110 130 130 110 Q142 126 150 106 Q172 128 150 168Z','#2AB04A')+hxc(138,168,8,'#2AB04A')+hxp('M138 170 V228','', '#14502A',5)+hxt(100,272,22,'LONDRES 1895','#EDE6DA',.9));};
+HC.pr14=function(){return hxb2('#3A3A44','#06060A',100,110,
+  [[56,0],[144,0]].map(function(h,i){return '<g transform="translate('+h[0]+' 110) scale(1.05)">'+hxp('M-46 40 Q-40 -60 0 -60 Q40 -60 46 40Z','#0B0B0C')+hxr(-46,36,92,10,'#0B0B0C',0)+hxp('M-40 24 H40','', i?'#C21A22':'#E8B04A',9)+hxp('M-60 48 H60','', '#0B0B0C',9)+'</g>';}).join('')+hxp('M10 190 H190','', '#6A6A78',3,.6)+hxt(100,262,24,'1920 – 1977','#EDE6DA',.92));};
+HC.pr15=function(){return hxb2('#8A5A2A','#0A0604',100,110,
+  hxc(100,70,70,'#FFD08A',null,0,.35)+hxp('M0 170 L60 126 H140 L200 170Z','#2A1A0A',null,0,.0)+hxr(24,90,152,80,'#4A2A1A',4,'#2A1608',4)+Array.from({length:7},function(_,i){return hxp('M'+(40+i*20)+' 92 V168','', '#2A1608',3);}).join('')+hxp('M10 214 H190','', '#0B0B0C',6)+hxp('M30 194 H170','', '#0B0B0C',0)+hxc(56,188,18,'#0B0B0C','#6A6A78',4)+hxc(144,188,18,'#0B0B0C','#6A6A78',4)+
+  Array.from({length:9},function(_,i){return hxc(34+i*16.5,250,5,'#EDE6DA');}).join('')+hxt(100,282,20,'1931','#EDE6DA',.9));};
+HC.pr16=function(){return hxb2('#C9A15A','#14100A',100,110,
+  hxp('M20 60 Q60 40 98 66 V210 Q60 186 20 206Z','#F4F4F6')+hxp('M180 60 Q140 40 102 66 V210 Q140 186 180 206Z','#E8DCB8')+hxp('M98 66 V210','', '#8A6A30',4)+hxp('M60 96 V150 M38 118 H82','', '#0B0B0C',8)+hxp('M140 140 m-24 0 a24 24 0 1 1 24 24 a16 16 0 1 1 -16 -16 a8 8 0 1 1 8 8','none','#8A5A2A',5)+hxt(100,264,22,'DAYTON 1925','#EDE6DA',.9));};
+HC.pr17=function(){return hxb2('#2A4A8A','#04081A',100,110,
+  hxp('M34 150 V110 Q34 28 100 28 Q166 28 166 110 V150','', '#EDE6DA',12)+hxr(18,126,38,70,'#EDE6DA',16)+hxr(144,126,38,70,'#EDE6DA',16)+hxr(26,138,22,46,'#C21A22',9)+hxr(152,138,22,46,'#2A6AE8',9)+hxp('M50 196 Q56 236 100 236','', '#EDE6DA',5)+hxc(104,236,8,'#EDE6DA')+hxt(100,282,22,'4 LANGUES','#EDE6DA',.9));};
+HC.pr18=function(){return hxb2('#6A8AB0','#080A12',100,110,
+  hxr(40,40,120,200,'#CFE4F8',10,'#F4F4F6',6)+hxr(40,40,120,200,'#8AB0D8',10)+hxp('M56 60 L104 40 H130 L56 120Z','#FFFFFF',null,0,.5)+hxp('M60 220 L150 100 H162 L72 230Z','#FFFFFF',null,0,.28)+hxr(40,236,120,14,'#4A5A6A',0)+hxt(100,282,22,'JÉRUSALEM 1961','#EDE6DA',.9));};
+HC.pr19=function(){return hxb2('#F2C14E','#0A0A0E',100,110,
+  hxc(100,100,88,'#FFE9B8',null,0,.55)+hxr(0,40,200,200,'#0B0B0C',0,null,0,.0)+Array.from({length:7},function(_,i){return hxr(18+i*25,10,10,230,'#0B0B0C',3);}).join('')+hxr(0,10,200,14,'#0B0B0C',0)+hxr(0,226,200,14,'#0B0B0C',0)+hxt(100,282,24,'1963 – 1964','#EDE6DA',.92));};
+HC.pr20=function(){return hxb2('#8A2A2A','#0A0404',100,110,
+  hxc(100,100,88,'#E86A6A',null,0,.2)+'<g transform="rotate(-28 100 110)">'+hxr(42,60,116,50,'#8A5A2A',8)+hxr(88,110,24,100,'#6A4A1A',5)+hxr(34,70,12,30,'#C9A15A',3)+hxr(154,70,12,30,'#C9A15A',3)+'</g>'+hxr(40,236,120,16,'#6A4A1A',5)+hxt(100,282,22,'LYON 1987','#EDE6DA',.9));};
+HC.pr21=function(){return hxb2('#4A5A8A','#060812',100,110,
+  hxc(160,50,24,'#EDE6DA',null,0,.9)+'<g transform="rotate(14 100 150)">'+hxr(54,10,12,270,'#C9A15A',3)+hxr(134,10,12,270,'#C9A15A',3)+Array.from({length:9},function(_,i){return hxr(54,30+i*28,92,8,'#8A5A2A',2);}).join('')+'</g>'+hxt(100,282,24,'RAIL 16','#EDE6DA',.92));};
+HC.pr22=function(){return hxb2('#C9A15A','#14100A',100,110,
+  hxc(150,60,34,'#FFF3C0')+hxp('M0 200 Q60 150 120 170 Q170 186 200 160 V300 H0Z','#6A8A3A')+hxp('M0 240 Q80 200 200 250 V300 H0Z','#3A5A22')+hxr(40,138,70,54,'#E8DCB8',3)+hxp('M34 140 L75 104 L116 140Z','#8A3A1A')+hxr(66,164,18,28,'#6A4A2A',0)+hxp('M120 300 Q140 250 200 240','', '#E8DCB8',12)+hxt(100,282,22,'LURS 1952','#EDE6DA',.9));};
+HC.pr23=function(){return hxb2('#8A2AC2','#0A0414',100,110,
+  hxc(100,100,90,'#E86AE8',null,0,.2)+hxp('M40 30 Q100 60 160 30 L180 230 H20Z','#0B0B0C')+hxp('M78 30 L100 120 L122 30Z','#F4F4F6')+hxp('M84 30 L100 90 L116 30','none','#C8CCD6',0)+hxp('M88 50 H112 M92 74 H108','', '#C8CCD6',3)+hxt(100,282,24,'16 ANS','#EDE6DA',.92));};
+HC.pr24=function(){return hxb2('#C21A22','#0A0404',100,110,
+  hxp('M30 100 L120 60 V170 L30 140Z','#F4F4F6')+hxr(20,96,26,50,'#C8CCD6',6)+hxp('M120 60 L170 40 V190 L120 170Z','#C21A22')+hxp('M24 146 L40 214 H62 L52 148Z','#C8CCD6')+hxp('M134 70 Q166 60 168 110 M134 100 Q154 96 156 120','', '#F4F4F6',4)+hxt(100,282,48,'159','#EDE6DA'));};
+HC.pr25=function(){return hxb2('#6A4A8A','#0A0612',100,110,
+  hxc(100,110,90,'#B28AFF',null,0,.2)+hxp('M48 210 Q36 150 50 100 Q54 88 66 92 L72 124 L72 50 Q74 38 86 40 L92 110 L96 34 Q98 24 110 28 L112 106 L122 40 Q126 32 136 38 L130 120 L146 92 Q156 88 160 98 Q158 150 146 190 L140 214Z','#0B0B0C')+hxp('M60 120 Q80 112 90 150 M96 120 V170 M122 118 L116 168','', '#2A2A32',2)+hxr(46,208,100,26,'#1A1A22',4)+hxt(100,272,24,'1994 – 1997','#EDE6DA',.9));};
+HC.pr26=function(){return hxb2('#C21A22','#0A0406',100,110,
+  hxc(100,200,10,'#E8B04A')+Array.from({length:9},function(_,i){var a=Math.PI*(1.12+i*.095);var x=100+Math.cos(a)*160,y=200+Math.sin(a)*160;return hxp('M100 200 L'+x.toFixed(1)+' '+y.toFixed(1),'', '#E8B04A',3)+hxp('M100 200 L'+x.toFixed(1)+' '+y.toFixed(1),'', '#0B0B0C',0);}).join('')+
+  hxp('M100 200 L'+(100+Math.cos(Math.PI*1.12)*150)+' '+(200+Math.sin(Math.PI*1.12)*150)+' Q100 40 '+(100+Math.cos(Math.PI*1.9)*150)+' '+(200+Math.sin(Math.PI*1.9)*150)+'Z','#F2E8D0',null,0,.9)+
+  Array.from({length:9},function(_,i){var a=Math.PI*(1.12+i*.095);return hxp('M100 200 L'+(100+Math.cos(a)*150).toFixed(1)+' '+(200+Math.sin(a)*150).toFixed(1),'', '#C21A22',3);}).join('')+hxc(100,200,10,'#0B0B0C')+hxt(100,282,22,'1857','#EDE6DA',.9));};
+HC.pr27=function(){return hxb2('#14041A','#04020A',100,110,
+  hxc(100,110,92,'#8A1AC2',null,0,.28)+Array.from({length:8},function(_,i){return '<ellipse cx="100" cy="70" rx="17" ry="52" fill="'+(i%2?'#0B0B0C':'#3A0A4A')+'" stroke="#C21A22" stroke-width="2" transform="rotate('+(i*45)+' 100 112)"/>';}).join('')+hxc(100,112,14,'#C21A22')+hxp('M100 160 V260','', '#0B0B0C',8)+hxp('M100 210 L132 196 M100 232 L72 222','', '#2A6A3A',7)+hxt(100,282,22,'6 POÈMES','#EDE6DA',.9));};
+HC.pr28=function(){return hxb2('#E8E0C0','#6A5A3A',100,110,
+  hxr(16,24,168,230,'#F4EEDA',3,'#8A7A5A',3)+hxp('M26 70 H174 M26 74 H174','', '#14100A',2)+hxt(100,64,22,'L’AURORE','#14100A')+hxt(100,128,30,'J’ACCUSE','#C21A22')+hxt(100,162,38,'…!','#C21A22')+Array.from({length:7},function(_,i){return hxp('M30 '+(180+i*10)+' H100 M108 '+(180+i*10)+' H170','', '#8A7A5A',3,.6);}).join('')+hxt(100,282,20,'13 JANVIER 1898','#14100A',.9));};
+HC.pr29=function(){return hxb2('#E8801A','#14080A',100,110,
+  hxr(44,28,112,188,'#F4F4F6',4)+hxr(44,28,112,52,'#E8801A',0)+hxr(44,162,112,54,'#E8801A',0)+hxt(100,60,20,'LADY','#fff')+hxt(100,198,12,'1960','#fff')+hxp('M70 112 Q100 84 130 112 Q130 142 100 150 Q70 142 70 112Z','#2A6A3A')+hxp('M100 98 V150 M84 112 L100 126 L116 112','', '#14502A',2)+hxr(30,216,140,14,'#C9A15A',3)+hxt(100,272,22,'OLD BAILEY','#EDE6DA',.9));};
+
 /* HC:END */
 function hexRGB(c){c=c.replace('#','');if(c.length===3)c=c[0]+c[0]+c[1]+c[1]+c[2]+c[2];return [parseInt(c.substr(0,2),16),parseInt(c.substr(2,2),16),parseInt(c.substr(4,2),16)];}
 function mixHex(c1,c2,t){var a=hexRGB(c1),b=hexRGB(c2),o=a.map(function(v,i){return Math.round(v+(b[i]-v)*t);});return '#'+o.map(function(v){return ('0'+v.toString(16)).slice(-2);}).join('');}
