@@ -1041,6 +1041,26 @@ var PRSN="Procès",PRIDS=[];
     PRIDS.push(d.id);
   });
 })();
+var MQD=DATA.D.MQD,MQSN="Marques",MQIDS=[];
+(function(){
+  function mins(w){return Math.max(3,Math.round(w/230));}
+  function syn(body){
+    for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
+      if(t.charAt(0)==='!')t=t.slice(1);
+      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      return (o||t).trim();}
+    return '';
+  }
+  var MQA=['#E8B04A','#6C94E0','#C77AD6','#D8C75A','#F08AA8'];
+  MQD.forEach(function(d,k){
+    if(GONE[d.id])return;
+    var w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
+    STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:MQSN,terr:'Marques',title:d.name,sub:d.sub,
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'MARQUES · '+('0'+(k+1)).slice(-2),
+      body:d.body,quote:d.sub,no:'MQ'+('0'+(k+1)).slice(-2),c:MQA[k%5],syn:syn(d.body),mq:1,src:d.src,g:0,next:null};
+    MQIDS.push(d.id);
+  });
+})();
 var LDD=DATA.D.LDD;
 var LDGROUPS=[{"t":"Le pouvoir visé","e":"Deux présidents, un roi, un tsar, un homme de paix : la dernière journée de ceux que l’on visait."},{"t":"Les artistes","e":"Un comédien, deux musiciens, une peintre, un romancier : des créateurs au travail jusqu’au bout."},{"t":"Les savants","e":"Deux physiciens mariés, un autre physicien, un naturaliste, un inventeur : des esprits à la dernière heure."},{"t":"Les explorateurs","e":"Un officier polaire, deux alpinistes, un écrivain-aviateur, deux navigateurs : partis sans savoir qu’ils ne reviendraient pas."},{"t":"Les icônes du XXᵉ siècle","e":"Un pasteur, une princesse, un guérillero, un musicien, un pilote : cinq vies que le monde regardait."},{"t":"L’histoire collective","e":"Une cité, un paquebot, une ville, une famille, une navette : des journées vécues par des centaines ou des milliers de personnes."}];
 var LDSN="Le dernier jour",LDIDS=[];
@@ -1360,7 +1380,7 @@ function reader(id){
   var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':lenMin(V.arr)+' min')+'</span><span style="display:flex;gap:8px"><button class="circle" data-rmode aria-label="'+(S.mode==='book'?'Lire en défilement':'Lire comme un livre')+'">'+(S.mode==='book'?IC.scrollm:IC.bookm)+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var head='<div class="rhead"><p class="k">'+(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase()))+'</p><h1>'+esc(s.title)+'</h1>'+(s.sub?'<p class="sb">'+esc(s.sub)+'</p>':'')+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+lenMin(V.arr)+' minutes de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var tail=''+
-    ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+
+    ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+
     '<div class="ract"><button class="btn glass full" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass full'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'+
     '<button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button></div>'+up;
   if(S.mode==='book')return bar+'<div class="bkwrap" id="bkw"><div class="bk rtext" id="bk"><section class="bkcover"><div class="bkpost">'+poster(s.p)+'</div>'+head+'</section>'+body+'<section class="bkend">'+tail+'</section></div></div>'+
