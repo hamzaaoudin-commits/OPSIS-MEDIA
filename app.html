@@ -260,8 +260,10 @@
 
   /* ---------- bibliothèque ---------- */
   .ptitle{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:44px;line-height:1;padding:62px 20px 0}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 20px 0}
-  .grid .tile{width:auto}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px 20px 0}
+  .grid .tile{width:auto;min-width:0}
+  .grid .tile .poster{width:100%;height:auto;aspect-ratio:2/3}
+  .grid .tile .ttl{font-size:clamp(15px,4.6vw,21px)}
   .grid .tile .poster{width:100%;height:auto;aspect-ratio:2/3}
   .grid .tile .ttl{font-size:17px;overflow-wrap:normal;hyphens:none}
   .chips{display:flex;gap:8px;overflow-x:auto;padding:16px 20px 0;scrollbar-width:none}
@@ -3610,6 +3612,31 @@ function tile(o){
   return '<button class="tile" '+o.attr+'><div class="poster">'+art(o.p)+'<span class="grad"></span>'+(o.badge||'')+'<span class="ttl">'+esc(o.t)+'</span></div><p class="sub">'+esc(o.s)+'</p></button>';
 }
 
+/* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
+var EPX=null;
+function epIndex(){
+  if(EPX)return EPX;
+  var bySerie={},order=[];
+  SERIES.forEach(function(x,k){if(x.go){bySerie[x.n]={k:k,t:x.t,ids:[]};order.push(x.n);}});
+  Object.keys(STORIES).forEach(function(id){
+    if(GONE[id])return;
+    var b=bySerie[STORIES[id].series];if(b)b.ids.push(id);
+  });
+  function mix(lists){var out=[],i=0,more=true;while(more){more=false;lists.forEach(function(l){if(i<l.length){out.push(l[i]);more=true;}});i++;}return out;}
+  var byT=T.map(function(_,ti){return mix(order.filter(function(n){return bySerie[n].t===ti;}).map(function(n){return bySerie[n].ids;}));});
+  EPX={bySerie:bySerie,order:order,byT:byT,all:mix(byT)};
+  return EPX;
+}
+function epTile(id){
+  var st=STORIES[id];
+  return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
+}
+function serieTile(x){
+  var n=epIndex().bySerie[x.n],c=n?n.ids.length:0;
+  return tile({p:x.p,t:x.n,s:c?c+' épisodes':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'':'<span class="soon">Bientôt</span>'});
+}
+function nextOf(n){var b=epIndex().bySerie[n];if(!b)return null;for(var i=0;i<b.ids.length;i++)if(!S.read[b.ids[i]])return b.ids[i];return b.ids[0]||null;}
+
 /* =====================================================================
    ÉCRANS
    ===================================================================== */
@@ -3644,37 +3671,32 @@ function home(){
     '<p class="meta">Flash · '+st.min+' min · Série L\'arnaque parfaite</p>'+
     '<div class="cta"><button class="btn light" data-open="eiffel">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="eiffel">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+
-    '<div class="shelf"><h2>La Série du mois <small>Un portrait chaque matin</small></h2>'+
-      '<button class="wide" data-pick="serie">'+poster('chute')+'<span class="grad"></span><span class="inf"><span class="lab">SÉRIE · DESTINS</span><span class="wt" style="display:block">Jusqu\'à la chute</span><span class="ws" style="display:block">'+(nRead?nRead+' lus sur '+BP.length:'52 portraits · quatre actes')+'</span><span class="segs" style="grid-template-columns:repeat(10,1fr)">'+segs+'</span></span></button></div>'+
-    '<div class="shelf"><h2>Nouvelle série <small>Trente histoires, six parties</small></h2>'+
-      '<button class="wide" data-pick="serieA">'+poster('arserie')+'<span class="grad"></span><span class="inf"><span class="lab">SÉRIE · ARNAQUES</span><span class="wt" style="display:block">L\'arnaque parfaite</span><span class="ws" style="display:block">'+(arRead?arRead+' lues sur '+ARIDS.length:'31 histoires · de Lustig à Fyre')+'</span><span class="segs" style="grid-template-columns:repeat(6,1fr)">'+arSegs+'</span></span></button></div>'+
+    '<div class="shelf"><h2>À lire maintenant <small>Un épisode de chaque série</small></h2><div class="rail">'+epIndex().order.map(nextOf).filter(Boolean).map(epTile).join('')+'</div></div>'+
     '<div class="shelf"><h2>Radar <small>L\'histoire derrière l\'actu</small></h2>'+
       '<button class="radar" data-pick="joconde">'+poster('joconde')+'<span class="rb"><span class="live"><i></i>DERRIÈRE L\'ACTU</span>'+
       '<span class="ra" style="display:block">L\'actu : <b>'+esc(STORIES.joconde.radar)+'</b>. L\'histoire qui l\'éclaire :</span>'+
       '<span class="rt2" style="display:block">La Joconde a disparu</span><span class="rm" style="display:block">Récit · 6 min · 1911</span></span></button></div>'+
     '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+
-    '<div class="explore" id="explore"><h2 class="exh">Explorer par thème</h2><p class="exs">80 séries en préparation, dans six territoires</p>'+
-      '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
+    '<div class="explore" id="explore"><h2 class="exh">Séries et thèmes</h2><p class="exs">'+epIndex().order.length+' séries, '+epIndex().all.length+' épisodes, six territoires</p>'+
+      '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div>'+
+      '<div class="shelf" style="padding:0"><h2>Les séries <small>'+epIndex().order.length+'</small></h2><div class="rail">'+SERIES.filter(function(x){return x.go;}).map(serieTile).join('')+'</div></div></div>'+
     T.map(function(t,i){
-      var list=SERIES.filter(function(x){return x.t===i;});
-      var tiles=list.map(function(x){
-        return tile({p:x.p,t:x.n,s:x.go?'Disponible':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'':'<span class="soon">Bientôt</span>'});
-      }).join('');
-      return '<div class="shelf" id="terr-'+i+'"><h2>'+t+' <small>'+list.length+' séries</small></h2><div class="rail">'+tiles+'</div></div>';
+      var ids=epIndex().byT[i].slice(0,30);
+      if(!ids.length)return '';
+      return '<div class="shelf" id="terr-'+i+'"><h2>'+t+' <small>'+epIndex().byT[i].length+' épisodes</small></h2><div class="rail">'+ids.map(epTile).join('')+'</div></div>';
     }).join('')+
     '<div class="bottomspace"></div>';
 }
 
 function library(){
-  var f=S.filter;
+  var f=S.filter,X=epIndex();
   var chips='<button data-filter="-1" aria-pressed="'+(f<0)+'">Tout</button>'+T.map(function(t,i){return '<button data-filter="'+i+'" aria-pressed="'+(f===i)+'">'+t+'</button>';}).join('');
-  var list=SERIES.filter(function(x){return f<0||x.t===f;});
-  var grid=list.map(function(x){
-    var attr='data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"';
-    return tile({p:x.p,t:x.n,s:T[x.t],attr:attr,badge:x.go?'':'<span class="soon">Bientôt</span>'});
-  }).join('');
+  var ids=(f<0?X.all:X.byT[f]),cap=90;
+  var ser=SERIES.filter(function(x){return x.go&&(f<0||x.t===f);});
+  var grid=ids.slice(0,cap).map(epTile).join('');
   return '<h1 class="ptitle">Bibliothèque</h1><div class="chips">'+chips+'</div>'+
-    (list.length?'<div class="grid">'+grid+'</div>':'<div class="empty"><b>Bientôt</b>Les premières séries de ce territoire arrivent après le lancement.</div>')+'<div class="bottomspace"></div>';
+    (ser.length?'<div class="shelf"><h2>Séries <small>'+ser.length+'</small></h2><div class="rail">'+ser.map(serieTile).join('')+'</div></div>':'')+
+    (ids.length?'<div class="shelf"><h2>Épisodes <small>'+ids.length+(ids.length>cap?' · '+cap+' affichés':'')+'</small></h2></div><div class="grid">'+grid+'</div>':'<div class="empty"><b>Bientôt</b>Les premières séries de ce territoire arrivent après le lancement.</div>')+'<div class="bottomspace"></div>';
 }
 
 function saved(){
@@ -4205,10 +4227,13 @@ function legalLayer(k){
     '<h1 class="ptitle" style="padding-top:104px">'+d[0]+'</h1><p class="hint">Dernière mise à jour : '+LEGAL_DATE+'</p><div class="lgw">'+body+'<div class="lgl">'+links+'</div></div><div class="bottomspace"></div>';
 }
 function themeLayer(i){
-  var list=SERIES.filter(function(x){return x.t===i;});
-  var grid=list.map(function(x){return tile({p:x.p,t:x.n,s:x.go?'Disponible':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'':'<span class="soon">Bientôt</span>'});}).join('');
+  var X=epIndex(),list=SERIES.filter(function(x){return x.t===i;}),av=list.filter(function(x){return x.go;});
+  var eps=X.byT[i].slice(0,60);
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span></div>'+
-    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+list.length+' séries</p><div class="grid" style="padding-top:16px">'+grid+'</div><div class="bottomspace"></div>';
+    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+av.length+' séries · '+X.byT[i].length+' épisodes</p>'+
+    '<div class="shelf"><h2>Séries</h2></div><div class="grid" style="padding-top:4px">'+list.map(serieTile).join('')+'</div>'+
+    (eps.length?'<div class="shelf" style="margin-top:12px"><h2>Épisodes'+(X.byT[i].length>60?' <small>60 premiers</small>':'')+'</h2></div><div class="grid" style="padding-top:4px">'+eps.map(epTile).join('')+'</div>':'')+
+    '<div class="bottomspace"></div>';
 }
 function layerHTML(top){return top.type==='read'?reader(top.id):(top.type==='lib'?saved():(top.type==='theme'?themeLayer(top.i):(top.type==='legal'?legalLayer(top.k):serie(top.key))));}
 function renderLayer(){
