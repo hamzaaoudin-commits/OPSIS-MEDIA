@@ -29,7 +29,7 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     const ctx=await b.newContext({viewport:{width:430,height:900}});
     const p=await page(ctx);await boot(p,'/app.html');
     ok(p.errs.length===0,'aucune erreur au démarrage ('+p.errs.join('|')+')');
-    const n=await p.evaluate(()=>Object.keys(OPSIS.stories()).length);ok(n>500,'plus de 500 histoires chargées ('+n+')');
+    const n=await p.evaluate(()=>Object.keys(OPSIS.stories()).length);ok(n>350,'plus de 350 histoires chargées ('+n+')');
     const cov=await p.evaluate(()=>OPSIS.art('ar01').indexOf('<svg')===0);ok(cov,'couverture rendue depuis les données');
     /* réglages par l'interface */
     await p.evaluate(()=>OPSIS.ui.openSettings());
@@ -137,7 +137,7 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     const off=await p.evaluate(()=>({src:OPSIS.data.source,t:(OPSIS.stories().dj002||{}).title}));
     eq(off,{src:'cache',t:'Le récit du jour'},'sans réseau : contenu récupéré depuis le cache local');
     const ctx2=await b.newContext();const q=await page(ctx2,LIVE);await ctx2.route(BASE+'/rest/v1/**',r=>r.abort());await boot(q,'/app.html');
-    ok(await q.evaluate(()=>OPSIS.data.source==='snapshot'&&Object.keys(OPSIS.stories()).length>500),'premier lancement hors ligne : instantané embarqué');
+    ok(await q.evaluate(()=>OPSIS.data.source==='snapshot'&&Object.keys(OPSIS.stories()).length>350),'premier lancement hors ligne : instantané embarqué');
     ok(p.errs.length+q.errs.length===0,'aucune erreur ('+p.errs.concat(q.errs).join('|')+')');
     await ctx.close();await ctx2.close();
   }
