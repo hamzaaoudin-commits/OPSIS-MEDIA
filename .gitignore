@@ -1,3 +1,4 @@
 node_modules/
 opsis.config.json
 .env
+data/blurb_todo/
