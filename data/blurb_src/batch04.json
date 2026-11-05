@@ -1,0 +1,154 @@
+{
+ "sv27": {
+  "blurb": "En 1978, à Protvino, en Union soviétique, Anatoli Bugorski, physicien, vérifie un équipement défectueux de l'accélérateur de particules de son institut. Il passe la tête dans le faisceau de protons alors que la machine tourne, car les voyants de sécurité sont éteints. Il ne sent aucune douleur, mais les médecins le croient condamné. On ne sait pas combien de temps a duré l'exposition.",
+  "hook": "Un éclair plus brillant que mille soleils, et aucune douleur."
+ },
+ "sv28": {
+  "blurb": "Aron Ralston, ingénieur de 27 ans devenu alpiniste, descend seul un canyon étroit de l'Utah en avril 2003, sans avoir dit où il allait. Un rocher roule sur son bras droit et le coince contre la paroi. Il a peu d'eau, deux burritos, des nuits glaciales et un canif émoussé. Le nombre exact de jours qu'il passe prisonnier dépend de la façon de compter.",
+  "hook": "Personne ne sait où il est, et le rocher ne bougera pas."
+ },
+ "sv29": {
+  "blurb": "En avril 1970, trois astronautes américains, Jim Lovell, Fred Haise et Jack Swigert, volent vers la Lune à bord d'Apollo 13. À environ 320 000 kilomètres de la Terre, une explosion détruit un réservoir d'oxygène et prive le vaisseau de son énergie. L'équipage doit se réfugier dans le module lunaire, prévu pour deux hommes, et tenter le retour malgré le froid et l'air qui s'épuise.",
+  "hook": "Le canot de sauvetage est un atterrisseur lunaire conçu pour deux hommes."
+ },
+ "sv30": {
+  "blurb": "Le 15 janvier 2009, l'Airbus A320 du vol 1549 décolle de LaGuardia, à New York, avec 155 personnes à bord. Moins de deux minutes plus tard, un groupe d'oies heurte l'avion et les deux moteurs perdent leur poussée. Le commandant Chesley Sullenberger juge impossible de rejoindre une piste et choisit le fleuve Hudson. L'eau est à environ 5 °C, et l'air à -7 °C.",
+  "hook": "Deux moteurs éteints, une piste hors d'atteinte, un fleuve gelé en dessous."
+ },
+ "cb01": {
+  "blurb": "En 1984, à Perth, en Australie, le jeune médecin Barry Marshall soutient qu'une bactérie courbe, repérée par le pathologiste Robin Warren, cause les ulcères de l'estomac. Ses confrères refusent d'y croire, et la bactérie n'infecte aucun animal de laboratoire. Marshall boit alors une culture de ce microbe, après avoir vérifié qu'un antibiotique le tue. Il prévient seulement quelques collègues de confiance.",
+  "hook": "Faute de cobaye, le médecin avale lui-même la bactérie."
+ },
+ "cb02": {
+  "blurb": "En 1892, à Munich, Max von Pettenkofer, professeur d'hygiène de 73 ans, conteste l'idée du célèbre bactériologiste Robert Koch selon laquelle un seul microbe suffit à causer le choléra. Le 7 octobre, devant témoins, il boit une culture de la bactérie envoyée par Koch, après avoir neutralisé l'acidité de son estomac. Il déjeune ensuite avec appétit. Que prouve cette journée sans maladie ?",
+  "hook": "Il boit le choléra, puis déjeune de bon cœur, champagne compris."
+ },
+ "cb03": {
+  "blurb": "En 1885, à Lima, au Pérou, Daniel Carrión, étudiant en médecine de 28 ans, est convaincu que deux maladies du pays, la fièvre de la Oroya et la verruga, n'en font qu'une. Pour le prouver, il se fait inoculer le sang d'une malade et tient un cahier. Quand il est trop faible pour écrire, ses camarades reprennent la plume. Ses derniers mots sont en français.",
+  "hook": "Il note sa propre agonie, puis ses camarades prennent la plume."
+ },
+ "cb04": {
+  "blurb": "En 1802, à Philadelphie, Stubbins Ffirth, étudiant en médecine, veut prouver que la fièvre jaune ne se transmet pas d'un malade à l'autre. Neuf ans après une épidémie qui a tué jusqu'à 5 000 habitants, il s'entaille le bras, respire des vapeurs et finit par avaler le vomi noir des mourants. Il reste en bonne santé, mais sa preuve a un défaut.",
+  "hook": "Il boit le vomi des mourants, et la preuve ne vaut rien."
+ },
+ "cb06": {
+  "blurb": "En 1799, à Bristol, en Angleterre, le jeune chimiste Humphry Davy supervise les expériences d'une clinique où l'on soigne des malades incurables avec des gaz. Il commence par respirer le protoxyde d'azote, que beaucoup croient mortel. Ses amis poètes l'essaient à leur tour. Davy remarque que le gaz semble pouvoir détruire la douleur, mais personne n'en fait rien avant des décennies.",
+  "hook": "Le gaz fait rire les poètes, et supprime la douleur sans que personne l'utilise."
+ },
+ "cb07": {
+  "blurb": "Le 11 décembre 1844, à Hartford, dans le Connecticut, le dentiste Horace Wells fait respirer du protoxyde d'azote à un volontaire, puis un confrère lui arrache une dent de sagesse. Le patient ne sent presque rien. Quelques semaines plus tard, à Boston, Wells tente la démonstration devant des étudiants en médecine et échoue. Deux ans après, un ancien associé s'attribue la gloire de l'anesthésie.",
+  "hook": "Il découvre l'anesthésie un jour, et les étudiants le huent le suivant."
+ },
+ "cb08": {
+  "blurb": "En novembre 1847, à Édimbourg, l'obstétricien James Young Simpson et deux assistants testent chaque soir des produits chimiques dans sa salle à manger. Le soir du 4 novembre, ils respirent du chloroforme, rient, puis s'effondrent et ne se réveillent que le lendemain matin. Simpson comprend qu'il tient un anesthésique. Une dose plus forte les aurait peut-être tués.",
+  "hook": "Trois médecins s'endorment autour d'une table, et l'anesthésie moderne est née."
+ },
+ "cb09": {
+  "blurb": "En septembre 1884, à Vienne, Karl Koller, interne de 26 ans à l'hôpital général, cherche un produit qui rende l'œil insensible pour opérer. Il teste la cocaïne sur une grenouille, puis sur ses collègues, qui ne sentent pas les épingles sur leur cornée. Une cataracte est opérée sous cocaïne le 11 septembre. À Heidelberg, un autre médecin présente sa découverte à sa place.",
+  "hook": "Une grenouille laisse toucher son œil, et la chirurgie change."
+ },
+ "cb10": {
+  "blurb": "Le 16 août 1898, à Kiel, en Allemagne, le chirurgien August Bier injecte de la cocaïne dans le canal rachidien d'un patient, qui reste conscient mais ne sent aucune douleur pendant l'opération. Bier veut ensuite le vérifier sur lui-même, mais l'injection rate. Son assistant August Hildebrandt reçoit alors la cocaïne. Tous deux auront de violents maux de tête.",
+  "hook": "Un coup de marteau sur les tibias, et l'assistant ne sent presque rien."
+ },
+ "cb11": {
+  "blurb": "En 1929, en Allemagne, Werner Forssmann, jeune interne, pense qu'on peut guider un tuyau fin jusqu'au cœur par une veine du bras, alors que tout le monde juge cela mortel. Son chef refuse. Avec l'aide d'une infirmière, il s'enfonce un cathéter dans le bras, puis descend au service de radiologie pour le faire photographier. Sa découverte lui vaut d'abord d'être renvoyé.",
+  "hook": "Il se glisse un tuyau jusqu'au cœur, puis descend le faire radiographier."
+ },
+ "cb12": {
+  "blurb": "Le 10 décembre 1954, sur la base de Holloman, au Nouveau-Mexique, John Paul Stapp, médecin de l'armée de l'air américaine, monte sur un traîneau-fusée lancé sur des rails. Il veut savoir ce que le corps humain supporte lors d'un crash ou d'une éjection. Le traîneau atteint 1 017 kilomètres par heure et s'arrête en 1,4 seconde. Stapp craint d'être aveugle.",
+  "hook": "De 1 017 kilomètres par heure à zéro en une seconde et demie."
+ },
+ "cb13": {
+  "blurb": "Le 25 avril 1903, à Londres, le neurologue Henry Head, bientôt 42 ans, se fait sectionner deux nerfs du bras gauche, puis recoudre. Les malades décrivent mal ce qu'ils sentent, alors il se propose comme sujet. Pendant des années, il retrouve le psychologue William Rivers, qui note la sensibilité de sa peau. Une observation le surprend : plus il se concentre, plus il se trompe.",
+  "hook": "Il fait couper ses propres nerfs pour apprendre à ressentir."
+ },
+ "cb14": {
+  "blurb": "En 1916, aux États-Unis, Joseph Goldberger, médecin de santé publique, enquête sur la pellagre, qui a tué des dizaines de milliers de personnes. Il soupçonne le régime alimentaire, mais les médecins du Sud croient à une maladie contagieuse. Pour les convaincre, il organise des fêtes où une quinzaine d'invités, dont sa femme Mary, avalent des pilules faites de croûtes et de selles de malades.",
+  "hook": "Sa femme et ses amis avalent des pilules de croûtes et de selles."
+ },
+ "cb15": {
+  "blurb": "Le 16 juillet 1962, dans un gouffre glacé des Alpes, Michel Siffre, géologue de 23 ans, s'installe sous terre sans montre ni lumière du jour, avec un téléphone relié à son équipe. Il compte remonter deux mois plus tard. Quand on l'appelle pour lui dire que c'est fini, il croit être au 20 août. Son sentiment du temps s'est déréglé.",
+  "hook": "Il croit être au 20 août alors que septembre est déjà là."
+ },
+ "cb17": {
+  "blurb": "À Moscou, entre 1923 et 1928, Alexandre Bogdanov, médecin, ancien bolchevik et romancier, organise des échanges de sang avec ses amis. Dans son roman de 1908, des Martiens se rajeunissent ainsi. Certains participants disent se sentir plus jeunes, sans aucune mesure. Bogdanov meurt en 1928, et les sources ne s'accordent pas sur ce qui l'a tué.",
+  "hook": "Le romancier met en pratique le rajeunissement imaginé pour les Martiens."
+ },
+ "cb18": {
+  "blurb": "Bill Haast, né en 1910 aux États-Unis, ouvre en 1947 un parc de serpents près de Miami. Dès 1948, il s'injecte chaque semaine du venin dilué, et sera mordu des dizaines de fois par des cobras et autres. Quand l'antivenin manque, il donne son sang à des mordus. Plus de vingt patients se rétablissent, mais on ne sait pas quelle part revient à son immunisation.",
+  "hook": "Mordu par les pires serpents, il offre son sang aux mordus."
+ },
+ "cb20": {
+  "blurb": "Nicolae Minovici, médecin légiste roumain né en 1868, veut comprendre ce que ressent une personne pendue. Il a étudié 172 cas de suicides et d'exécutions, puis mène une douzaine d'expériences sur lui-même, assisté d'aides, vers 1900. La dernière s'arrête au bout de quelques secondes. Il garde ensuite pendant un mois une gorge douloureuse. On ne sait pas le nombre exact d'expériences.",
+  "hook": "Un légiste étudie la pendaison depuis l'intérieur, et la dernière épreuve tourne court."
+ },
+ "cb22": {
+  "blurb": "Alexander Shulgin, chimiste américain né en 1925, quitte l'entreprise Dow Chemical en 1966 pour installer un laboratoire chez lui, en Californie. Il teste sur lui-même ses créations, puis avec un petit groupe d'amis qui notent les effets. Il conseille aussi la police et l'agence antidrogue, avant une descente dans son laboratoire en 1994. Le nombre total de ses essais ne repose que sur ses carnets.",
+  "hook": "Le chimiste conseille la police tout en testant ses créations sur lui-même."
+ },
+ "cb23": {
+  "blurb": "En 1954, au National Institute of Mental Health, dans le Maryland, le neurophysiologiste John Lilly met au point un caisson sombre, insonorisé et rempli d'eau salée tiède. Il veut savoir si un cerveau reste conscient quand on le coupe de toute stimulation. Lui et un collègue en sont les premiers sujets. Les rapports décrivent des états altérés, sans durées ni résultats précis.",
+  "hook": "Flotter dans le noir pour voir ce que fait un cerveau sans le monde."
+ },
+ "cb24": {
+  "blurb": "En 1884, à Vienne, Sigmund Freud, 28 ans, est un jeune médecin pauvre qui espère se faire un nom. Il découvre la cocaïne, la prend lui-même et en vante les mérites dans un article. Il la fait aussi essayer à son ami Ernst von Fleischl-Marxow, dépendant de la morphine, avec de mauvais résultats. Un autre médecin, Carl Koller, en tirera une anesthésie de l'œil.",
+  "hook": "Freud fait connaître la poudre, un autre en tire la gloire."
+ },
+ "cb25": {
+  "blurb": "En 1901, à Paris, le physicien Henri Becquerel garde environ six heures un tube de radium dans la poche de son gilet et se retrouve avec une plaie. Son confrère Pierre Curie refait volontairement l'expérience : il applique pendant environ dix heures un sel de radium faiblement actif sur son bras. La brûlure s'ouvre en plaie, encore visible au bout de cinquante-deux jours.",
+  "hook": "Une poche de gilet, six heures, et la peau s'ouvre en plaie."
+ },
+ "cb26": {
+  "blurb": "En 1900, à Cuba, Jesse Lazear, médecin militaire de 34 ans, étudie la fièvre jaune avec trois collègues et élève des moustiques pour tester l'idée qu'ils la transmettent. Le 8 septembre, il écrit à sa femme être sur la piste du vrai germe. Il meurt de la maladie le 25 septembre. On dit d'abord qu'il s'est trompé de moustique ; la vérité sort en 1947.",
+  "hook": "Sa mort est attribuée à une erreur de moustique pendant quarante-sept ans."
+ },
+ "cb27": {
+  "blurb": "En 1892, pendant une épidémie de choléra en France, Ilya Metchnikoff, zoologiste russe installé à l'Institut Pasteur, boit une culture de la bactérie et ne tombe pas malade. Un volontaire de son laboratoire fait de même, avec le même résultat. Il se demande pourquoi certains résistent et pense à l'intestin. Il recommande ensuite le lait caillé aux bacilles bulgares, une idée ignorée pendant des décennies.",
+  "hook": "Il boit le choléra sans broncher, puis se met au lait caillé."
+ },
+ "cb28": {
+  "blurb": "Waldemar Haffkine, bactériologiste né à Odessa et formé à l'Institut Pasteur, arrive à Bombay en octobre 1896 pendant une épidémie de peste. Son vaccin ne marche que sur les animaux. Un médecin accepte de l'inoculer en secret. Fiévreux, Haffkine travaille toute la journée, puis décrit ses symptômes au personnel. Des centaines de volontaires se présentent ensuite.",
+  "hook": "Fiévreux, il assiste en silence à une réunion, puis rassure les étudiants."
+ },
+ "cb29": {
+  "blurb": "Justin Schmidt, entomologiste américain né en 1947, étudie les défenses des fourmis, abeilles et guêpes. Il classe leurs piqûres sur une échelle de douleur de 1 à 4, publiée en 1983 puis élargie à 83 espèces dans son livre de 2016. La fourmi balle y figure parmi les pires, et il renonce au frelon japonais géant. Le nombre de ses piqûres reste inconnu.",
+  "hook": "La douleur d'une piqûre, comparée à un sèche-cheveux tombé dans un bain."
+ },
+ "ev01": {
+  "blurb": "En 1567, en Écosse, la reine Marie Stuart se rend à des seigneurs révoltés qui l'enferment au château de Lochleven, sur une île au milieu d'un lac. Elle tente d'abord de fuir déguisée en blanchisseuse, mais le batelier la reconnaît et la ramène. En 1568, déguisée en servante, elle traverse le lac jusqu'à un jeune Douglas qui l'attend avec des cavaliers.",
+  "hook": "Le batelier reconnaît la reine à ses mains blanches."
+ },
+ "ev02": {
+  "blurb": "En 1621, aux Pays-Bas, le juriste Hugo de Groot, dit Grotius, purge une peine de prison à vie au château de Loevestein. Ses livres arrivent et repartent dans un grand coffre, sans que personne y prête attention. Sa femme Maria imagine d'y cacher son mari, et leur servante accompagne la caisse sur le bateau. Les gardes ne comprennent qu'en voyant la chambre sombre.",
+  "hook": "Le prisonnier sort de la forteresse dans le coffre à livres."
+ },
+ "ev03": {
+  "blurb": "À Londres, en 1724, Jack Sheppard, un apprenti charpentier de vingt-deux ans devenu voleur, est condamné pour cambriolage. Il s'évade de deux prisons, puis de Newgate déguisé en femme, avant d'être repris. Une dernière évasion le voit détacher ses chaînes et traverser les toits. Jonathan Wild, qui dirige un réseau criminel et veut son butin, est son ennemi.",
+  "hook": "Quatre prisons n'ont pas suffi à retenir un apprenti charpentier."
+ },
+ "ev04": {
+  "blurb": "En 1756, à Venise, Giacomo Casanova, trente ans, est enfermé sous les Plombs, les cellules du toit du Palais des Doges, sans procès ni explication. Il cache une barre de fer qu'il aiguise en pic. Un prêtre voisin perce les plafonds, puis ils sortent par le toit avant de traverser le palais. Tout le récit vient de Casanova lui-même.",
+  "hook": "Un pic caché dans une Bible, sous une assiette de pâtes."
+ },
+ "ev06": {
+  "blurb": "En 1941, à Colditz, en Allemagne, un château-prison jugé impossible à quitter, le Britannique Airey Neave rate une première tentative d'évasion. La seconde réunit Neave et le lieutenant néerlandais Anthony Luteyn, déguisés en officiers allemands avec des uniformes faits de manteaux teints et de plomb fondu. Plusieurs gardes les saluent. Ils marchent ensuite vers la frontière suisse.",
+  "hook": "Des gardes saluent les deux faux officiers, et les laissent passer."
+ },
+ "ev07": {
+  "blurb": "En 1942, le général français Henri Giraud est prisonnier des Allemands à la forteresse de Königstein, sur l'Elbe, depuis mai 1940. Avec deux confidents, il noue une corde d'environ 45 mètres avec des ficelles de colis. Un complice l'attend en ville avec de faux papiers. Il rejoint la Suisse, puis la France. Les sources divergent sur la manière dont il quitte la forteresse.",
+  "hook": "Une corde de ficelles de colis, et un général s'envole."
+ },
+ "ev08": {
+  "blurb": "En septembre 1940, à Varsovie, Witold Pilecki, officier polonais, est arrêté dans une rafle et arrive à Auschwitz sous une fausse identité. Pour beaucoup de textes, il s'y est fait enfermer volontairement. Il y organise des cellules secrètes et envoie des rapports sur le camp à l'extérieur. Dans la nuit du 26 au 27 avril 1943, il s'évade avec deux compagnons par la boulangerie.",
+  "hook": "Il entre dans le camp pour le raconter, puis en sort par la boulangerie."
+ },
+ "ev09": {
+  "blurb": "En 1943, au camp allemand de Stalag Luft III, des gardes posent des microphones le long de la clôture pour détecter les tunnels. Michael Codner, Eric Williams et Oliver Philpot placent près des barbelés un cheval d'arçons, sur lequel des prisonniers sautent des heures durant. Sous le bruit, un homme creuse. Le soir du 29 octobre, les trois sortent par le tunnel.",
+  "hook": "Pendant que des hommes sautent, un autre creuse sous le cheval."
+ },
+ "ev10": {
+  "blurb": "Dans la nuit du 24 au 25 mars 1944, au camp allemand de Stalag Luft III, des aviateurs alliés dirigés par le commandant Roger Bushell sortent par un tunnel nommé Harry, creusé pendant plus d'un an. Le tunnel est trop court, et la forêt reste hors d'atteinte. Soixante-seize hommes rampent dehors avant qu'un garde repère le dernier. Trois seulement atteignent la liberté.",
+  "hook": "Soixante-seize sortent, trois seulement échappent aux poursuites."
+ }
+}

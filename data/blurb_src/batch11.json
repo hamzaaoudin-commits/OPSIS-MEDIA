@@ -4,8 +4,8 @@
   "hook": "Karpov mène 5-0, Kasparov revient à 5-3, et le match s'arrête sans vainqueur."
  },
  "du23": {
-  "blurb": "À Séoul, en mars 2016, Lee Sedol, joueur professionnel de go de haut niveau, affronte en direct le programme AlphaGo, de Google DeepMind, dans un match de cinq parties. Il pensait gagner 5-0 ou 4-1, mais perd les trois premières. À la quatrième, un coup inattendu de sa part déroute la machine. Une seule victoire humaine dans le match.",
-  "hook": "Il s'attendait à gagner 5-0. Il a perdu quatre fois, mais battu la machine une fois."
+  "blurb": "À Séoul, en mars 2016, Lee Sedol, joueur professionnel de go, affronte en direct le programme AlphaGo, de Google DeepMind, dans un match de cinq parties. Il pensait gagner 5-0 ou 4-1, mais perd les trois premières. À la quatrième, un coup inattendu déroute la machine. Ce sera sa seule victoire.",
+  "hook": "Il s'attendait à gagner 5-0. Il a battu la machine une seule fois."
  },
  "du26": {
   "blurb": "En mars 1979, à Salt Lake City, Magic Johnson, avec Michigan State, bat Larry Bird et Indiana State 75-64 en finale du championnat universitaire de basket. Bird, un pouce cassé, rate 14 tirs sur 21 face à une défense qui le prend à deux. Sur le banc, il pleure dans une serviette. Leur rivalité ne s'arrêtera qu'avec leur retraite.",
@@ -36,11 +36,11 @@
   "hook": "Un revolver chargé à blanc tue l'acteur à trois jours de la fin."
  },
  "tm03": {
-  "blurb": "En octobre 2021, sur le plateau du film Rust, au Nouveau-Mexique, l'acteur Alec Baldwin tient un revolver qui tire une cartouche réelle pendant une répétition. La directrice de la photographie, Halyna Hutchins, 42 ans, meurt. Baldwin et l'armurière Hannah Gutierrez-Reed sont inculpés. Elle est condamnée, lui voit son affaire classée en plein procès. On ne sait pas comment les cartouches réelles sont arrivées là.",
-  "hook": "Une arme jugée sans danger tue une femme, et personne ne sait d'où venait la balle."
+  "blurb": "En octobre 2021, sur le plateau du film Rust, au Nouveau-Mexique, le revolver de l'acteur Alec Baldwin tire une cartouche réelle pendant une répétition. La directrice de la photographie, Halyna Hutchins, 42 ans, meurt. Baldwin et l'armurière Hannah Gutierrez-Reed sont inculpés ; elle est condamnée, son affaire à lui est classée en plein procès. On ignore comment les balles sont arrivées là.",
+  "hook": "Une arme jugée sans danger tue une femme. D'où venait la balle ?"
  },
  "tm05": {
-  "blurb": "En janvier 2008, l'acteur Heath Ledger meurt à New York, environ un mois après le début du tournage de L'Imaginarium du docteur Parnassus, de Terry Gilliam. Il jouait Tony, et la production est suspendue. Gilliam réorganise le film : Johnny Depp, Jude Law et Colin Farrell jouent chacun une version transformée du personnage dans l'Imaginarium, alors que Ledger reste le visage de Tony dans le monde réel.",
+  "blurb": "En janvier 2008, l'acteur Heath Ledger meurt à New York, environ un mois après le début du tournage de L'Imaginarium du docteur Parnassus, de Terry Gilliam. Il jouait Tony, et la production est suspendue. Gilliam fait jouer à Johnny Depp, Jude Law et Colin Farrell chacun une version transformée de Tony dans l'Imaginarium ; Ledger reste le visage du personnage dans le monde réel.",
   "hook": "Trois acteurs se partagent un seul rôle pour finir le film d'un absent."
  },
  "tm06": {
@@ -56,8 +56,8 @@
   "hook": "Un film tourné sur l'eau coule son budget, puis finit par rapporter."
  },
  "tm10": {
-  "blurb": "George Miller conçoit Mad Max: Fury Road comme une poursuite presque continue. Pendant des années, le film recule : le 11 septembre fait chuter le dollar américain face au dollar australien, et la guerre d'Irak menace le tournage prévu en Namibie. Mel Gibson se retire, Tom Hardy le remplace. Le tournage a lieu dans le désert du Namib en 2012, avec des tensions entre Charlize Theron et Hardy.",
-  "hook": "Un film de poursuite qui a mis plus de dix ans à démarrer."
+  "blurb": "George Miller conçoit Mad Max: Fury Road comme une poursuite presque continue. Le film recule : le 11 septembre fait chuter le dollar américain face à l'australien, et la guerre d'Irak menace le tournage prévu en Namibie. Mel Gibson se retire, Tom Hardy est choisi. Le tournage a lieu dans le désert du Namib en 2012, avec des tensions entre Charlize Theron et Hardy.",
+  "hook": "Un film de poursuite qui n'a cessé de reculer avant de démarrer."
  },
  "tm11": {
   "blurb": "Le tournage du Magicien d'Oz, en couleurs, va d'octobre 1938 au 16 mars 1939, et quatre réalisateurs se succèdent. Un feu enflamme le maquillage vert de Margaret Hamilton, qui est brûlée aux mains et au visage. Sous les projecteurs, les décors dépassent 100 °F, et l'équipe travaille parfois de 4 heures à 19 heures. Judy Garland est gifflée par Victor Fleming pendant une scène.",
@@ -68,7 +68,7 @@
   "hook": "Le requin tombe en panne dans l'eau salée, et le film y gagne peut-être."
  },
  "tm16": {
-  "blurb": "Dans les années 1960, le réalisateur Henri-Georges Clouzot prépare L'Enfer, un film sur la jalousie, avec des moyens illimités accordés par Columbia. Il mène des essais d'image expérimentaux, avec Romy Schneider aux lèvres bleues. Le film est abandonné. Des décennies plus tard, Serge Bromberg retrouve plusieurs heures de pellicule et en tire un documentaire en 2009. On ne sait pas ce qu'aurait été le film terminé.",
+  "blurb": "Dans les années 1960, le réalisateur Henri-Georges Clouzot prépare L'Enfer, un film sur la jalousie, avec des moyens illimités accordés par Columbia. Il mène des essais d'image expérimentaux, où Romy Schneider a les lèvres bleues. Le film est abandonné. Serge Bromberg retrouve plusieurs heures de pellicule et en tire un documentaire. On ne sait pas ce qu'aurait été le film terminé.",
   "hook": "Des heures de pellicule oubliées montrent un film que personne n'a vu."
  },
  "tm17": {
@@ -76,7 +76,7 @@
   "hook": "Dix-sept ans séparent le premier jour de tournage du dernier."
  },
  "tm18": {
-  "blurb": "Orson Welles commence en 1970 le tournage de The Other Side of the Wind, un film sur une fête chez un réalisateur joué par John Huston. Le tournage continue par intermittence jusqu'en 1976 ou 1977, quand l'argent manque. Welles meurt en 1985 sans l'avoir terminé. En 2018, Netflix finance son achèvement, et le film sort le 2 novembre. On ne sait pas s'il reste un film de Welles.",
+  "blurb": "Orson Welles commence en 1970 le tournage de The Other Side of the Wind, film sur une fête chez un réalisateur joué par John Huston. Le tournage continue par intermittence jusqu'en 1976 ou 1977, quand l'argent manque. Welles meurt en 1985 sans l'avoir terminé. En 2018, Netflix finance son achèvement. On ne sait pas si le résultat reste un film de Welles.",
   "hook": "Le film d'un mort sort trente-trois ans après lui, monté par d'autres."
  },
  "tm19": {
@@ -88,27 +88,27 @@
   "hook": "Une scène d'escalier refaite 127 fois, un incendie dont personne ne connaît la cause."
  },
  "pt01": {
-  "blurb": "En 1968, dans un cabaret chic de Londres, Judy Garland, 46 ans, doit chanter pendant cinq semaines. Aux États-Unis, plus personne ne veut l'engager, et elle doit de l'argent au fisc. Une jeune assistante, Rosalyn Wilder, doit la faire monter sur scène, parfois en vain. Un soir, elle arrive avec une heure vingt de retard, et la salle lui lance des déchets.",
+  "blurb": "Dans un cabaret chic de Londres, la chanteuse Judy Garland, 46 ans, doit se produire cinq semaines. Aux États-Unis, plus personne ne veut l'engager, et elle doit des sommes énormes au fisc. Une jeune assistante, Rosalyn Wilder, doit la faire monter sur scène, parfois en vain. Un soir, elle arrive avec une heure vingt de retard, et la salle lui lance des déchets.",
   "hook": "Trente ans après Dorothy, on lui lance des petits pains et des déchets."
  },
  "pt02": {
-  "blurb": "Le 25 juin 2009, à Los Angeles, Michael Jackson, 50 ans, rentre de répétition, dix-neuf jours avant le début de ses cinquante concerts à Londres. Il ne dort plus. Son médecin, Conrad Murray, lui administre un anesthésiant, le propofol. Michael s'endort, puis ne respire plus. L'appel aux secours ne part qu'à 12 h 21, et il est déclaré mort à 14 h 26.",
+  "blurb": "Michael Jackson, 50 ans, rentre de répétition dix-neuf jours avant le début de ses cinquante concerts à Londres. Il ne dort plus. Son médecin, Conrad Murray, lui administre un anesthésiant, le propofol. Michael s'endort, puis ne respire plus. L'appel aux secours ne part qu'à 12 h 21, et il est déclaré mort à 14 h 26.",
   "hook": "L'homme le plus célèbre de la planète ne dormait plus sans anesthésie."
  },
  "pt03": {
-  "blurb": "En juin 2021, la chanteuse Britney Spears, 39 ans, parle par téléphone devant la juge Brenda Penny, à Los Angeles. Depuis 2008, la loi la considère comme incapable de gérer sa vie. Elle raconte qu'on l'a forcée à partir en tournée, qu'on lui a imposé un médicament et un stérilet. Des centaines de personnes l'attendent dehors. Elle demande une chose : récupérer sa vie.",
-  "hook": "Treize ans sans le droit de décider, pour une star vue par le monde entier."
+  "blurb": "La chanteuse Britney Spears, 39 ans, parle par téléphone devant la juge Brenda Penny. Depuis 2008, la loi la considère comme incapable de gérer sa vie. Elle raconte qu'on l'a forcée à partir en tournée, qu'on lui a imposé du lithium et qu'on refuse de retirer son stérilet. Des centaines de personnes l'attendent dehors. Elle demande une chose : récupérer sa vie.",
+  "hook": "Treize ans sans droit de décider, pour une star mondiale."
  },
  "pt04": {
-  "blurb": "Macaulay Culkin, 43 ans, reçoit son étoile sur le Walk of Fame, à Hollywood, aux côtés de Catherine O'Hara, qui jouait sa mère dans Maman, j'ai raté l'avion. Enfant, il a été l'acteur le mieux payé de Hollywood, et sa famille s'est déchirée autour de son argent. À 14 ans, il a dû se protéger de ses parents par un acte juridique. Son père est absent de la cérémonie.",
-  "hook": "Le garçon que ses parents oublient à l'écran a dû les fuir pour de vrai."
+  "blurb": "Macaulay Culkin, 43 ans, reçoit son étoile sur le Walk of Fame, à côté de Catherine O'Hara, qui jouait sa mère dans Maman, j'ai raté l'avion. Enfant, il a été l'acteur le mieux payé de Hollywood, et sa famille s'est déchirée autour de son argent. À 14 ans, il a dû se protéger de ses parents par un acte juridique. Son père est absent.",
+  "hook": "Oublié à l'écran par ses parents, il a dû les fuir pour de vrai."
  },
  "pt05": {
-  "blurb": "À 13 ans, Drew Barrymore, devenue célèbre enfant dans E.T. l'extra-terrestre, est enfermée dans un hôpital psychiatrique de la vallée de San Fernando, en Californie. C'est sa propre mère qui l'y a fait interner, pour dix-huit mois. Fille d'une famille d'acteurs célèbre, avec un père violent et alcoolique, elle racontera plus tard que cet internement lui a peut-être sauvé la vie.",
-  "hook": "Sa mère la fait interner à 13 ans. Elle dira que ça l'a peut-être sauvée."
+  "blurb": "À 13 ans, Drew Barrymore, devenue célèbre enfant avec E.T. l'extra-terrestre, est enfermée dans un hôpital psychiatrique de la vallée de San Fernando, en Californie. C'est sa propre mère qui l'y a fait interner, pour dix-huit mois. Adulte, elle racontera que cela lui a peut-être sauvé la vie.",
+  "hook": "Sa mère la fait interner à 13 ans. Cela l'a peut-être sauvée."
  },
  "pt06": {
-  "blurb": "Le 25 novembre 2020, dans une maison louée près de Buenos Aires, Diego Maradona est retrouvé mort, à 60 ans, trois semaines après une opération du cerveau. L'Argentine décrète trois jours de deuil, et des centaines de milliers de personnes descendent dans la rue. Sept soignants sont jugés pour l'avoir laissé mourir. Un premier procès est annulé, un second s'ouvre en 2026.",
+  "blurb": "Diego Maradona est retrouvé mort, à 60 ans, dans une maison louée, trois semaines après une opération du cerveau. L'Argentine décrète trois jours de deuil, et des centaines de milliers de personnes descendent dans la rue. Sept soignants sont jugés pour l'avoir laissé mourir. Un premier procès est annulé, un second s'ouvre en 2026.",
   "hook": "Le héros de deux pays meurt seul, et sept soignants sont jugés."
  },
  "pt07": {
@@ -116,11 +116,11 @@
   "hook": "L'homme invincible cherche à tâtons son protège-dents sur le tapis."
  },
  "pt08": {
-  "blurb": "Le 14 février 2004, à Rimini, en Italie, le cycliste Marco Pantani, 34 ans, est retrouvé mort dans une chambre de la résidence Le Rose. Six ans plus tôt, il avait gagné le Tour de France et le Tour d'Italie la même année. L'enquête conclut à une overdose de cocaïne, mais sa mère se bat vingt ans pour la faire rouvrir. Beaucoup d'Italiens pensent qu'il était mort un 5 juin 1999.",
+  "blurb": "À Rimini, en Italie, le cycliste Marco Pantani, 34 ans, est retrouvé mort dans la chambre d'une résidence hôtelière. Six ans plus tôt, il avait gagné le Tour de France et le Tour d'Italie la même année. L'enquête conclut à une overdose de cocaïne, mais sa mère se bat vingt ans pour la faire rouvrir. Beaucoup d'Italiens le croient mort dès le 5 juin 1999.",
   "hook": "Le dernier héros du cyclisme meurt seul, six ans après son plus grand exploit."
  },
  "pt09": {
-  "blurb": "En 2015, à la cérémonie d'entrée au Hall of Fame du football américain, le joueur Junior Seau est honoré trois ans après sa mort, à 43 ans. Sa fille Sydney, 22 ans, devait le présenter, mais les organisateurs lui interdisent de parler. Des médecins ont trouvé dans son cerveau les traces d'une maladie causée par les coups répétés à la tête.",
+  "blurb": "Lors de la cérémonie d'entrée au Hall of Fame du football américain, le joueur Junior Seau est honoré trois ans après sa mort, à 43 ans. Sa fille Sydney, 22 ans, devait le présenter, mais les organisateurs lui interdisent de parler. Des médecins ont trouvé dans son cerveau les traces d'une maladie causée par les coups répétés à la tête.",
   "hook": "Sa fille devait le présenter. On lui a interdit de prendre la parole."
  },
  "pt10": {
@@ -128,7 +128,7 @@
   "hook": "Un gardien parfait, apprécié de tous, cachait une dépression depuis des années."
  },
  "pt11": {
-  "blurb": "En juin 2011, à Belgrade, près de vingt mille personnes attendent Amy Winehouse pour le premier concert de sa tournée européenne. La chanteuse arrive avec près d'une heure de retard, titube, oublie les paroles et laisse le public chanter à sa place. La foule la hue, et la tournée est annulée trois jours plus tard. Cinq semaines après, elle meurt, à 27 ans.",
+  "blurb": "À Belgrade, près de vingt mille personnes attendent Amy Winehouse pour le premier concert de sa tournée européenne. La chanteuse arrive avec près d'une heure de retard, titube, oublie les paroles et laisse le public chanter à sa place. La foule la hue, et la tournée est annulée trois jours plus tard. Cinq semaines après, elle meurt, à 27 ans.",
   "hook": "Vingt mille personnes huent la plus belle voix de sa génération."
  },
  "pt12": {
@@ -136,7 +136,7 @@
   "hook": "Une lettre adressée à un ami imaginaire d'enfance, près du corps."
  },
  "pt13": {
-  "blurb": "Le 11 février 2012, la veille de la cérémonie des Grammy Awards, la chanteuse Whitney Houston, 48 ans, est retrouvée inanimée dans la baignoire de son hôtel, à quelques étages de la grande fête du producteur Clive Davis. Elle est déclarée morte à 15 h 55. En bas, la soirée a lieu quand même. Le légiste conclut à une noyade accidentelle.",
+  "blurb": "La veille de la cérémonie des Grammy Awards, la chanteuse Whitney Houston, 48 ans, est retrouvée inanimée dans la baignoire de son hôtel, à quelques étages de la grande fête du producteur Clive Davis. Elle est déclarée morte à 15 h 55. En bas, la soirée a lieu quand même. Le légiste conclut à une noyade accidentelle.",
   "hook": "En bas, on dresse les tables. En haut, la plus grande voix est morte."
  },
  "pt14": {
@@ -148,7 +148,7 @@
   "hook": "Deux photographes déguisés en infirmiers entrent dans la chambre de l'enfant mort."
  },
  "pt16": {
-  "blurb": "Devant l'hôtel Ritz, à Paris, des photographes attendent Diana, 36 ans, la femme la plus photographiée du monde, et son compagnon Dodi Al-Fayed. Pour leur échapper, la Mercedes part par l'arrière avec le chauffeur Henri Paul. Quelques photographes suivent. Dans le tunnel du pont de l'Alma, la voiture percute un pilier. Diana meurt vers 4 heures du matin, à l'hôpital.",
+  "blurb": "Devant l'hôtel Ritz, des photographes attendent Diana, 36 ans, la femme la plus photographiée du monde, et son compagnon Dodi Al-Fayed. Pour leur échapper, une Mercedes part par l'arrière avec le chauffeur Henri Paul. Quelques photographes suivent. Dans le tunnel du pont de l'Alma, la voiture percute un pilier. Diana meurt vers 4 heures du matin, à l'hôpital.",
   "hook": "Une ruse pour semer les photographes, et un tunnel au bout."
  }
 }
