@@ -327,6 +327,12 @@
   .fxs-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .95s cubic-bezier(.45,.05,.2,1)}
   .fxs-card.flip .fxs-in{transform:rotateY(180deg)}
   .fxs-face{position:absolute;inset:0;border-radius:8px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 30px 60px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
+  /* Safari iOS laisse parfois transparaître la face cachée : on cache aussi chaque face au milieu du retournement */
+  .fxs-face,.fxs-face *{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+  .fxs-front{transform:translateZ(0);transition:visibility 0s linear .475s}
+  .fxs-card.flip .fxs-front{visibility:hidden}
+  .fxs-back{visibility:hidden;transition:visibility 0s linear .475s}
+  .fxs-card.flip .fxs-back{visibility:visible}
   .fxs-front .poster{position:absolute;inset:0}
   .fxs-front .grad{position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));z-index:2}
   .fxs-front .ft{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:36px;line-height:.9;overflow-wrap:anywhere}
