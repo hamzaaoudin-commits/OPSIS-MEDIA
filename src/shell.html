@@ -2067,15 +2067,15 @@ var sheet=document.getElementById('sheet');
 /* ---------- partage en story : une image 1080×1920 (affiche + titre + accroche), envoyée par la feuille de partage du téléphone ---------- */
 var storyBlob=null,storyId=null;
 function storyCanvas(id){
-  var s=STORIES[id],W=1080,H=1920,c=s.c||'#F2643C';
+  var s=STORIES[id],W=1080,H=1920,K=2,c=s.c||'#F2643C';
   var hook=(BLURB[id]&&BLURB[id].h)||s.quote||s.sub||'';
-  var cv=document.createElement('canvas');cv.width=W;cv.height=H;var g=cv.getContext('2d');
+  var cv=document.createElement('canvas');cv.width=W*K;cv.height=H*K;var g=cv.getContext('2d');g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.scale(K,K);
   var disp=(getComputedStyle(document.documentElement).getPropertyValue('--disp')||'Impact').trim()||'Impact';
   var serif=(getComputedStyle(document.documentElement).getPropertyValue('--serif')||'Georgia').trim()||'Georgia';
   var load=(document.fonts&&document.fonts.load)?Promise.race([Promise.all([document.fonts.load('900 100px "Big Shoulders Display"'),document.fonts.load('italic 40px "Newsreader"'),document.fonts.load('40px "Newsreader"')]).catch(function(){}),new Promise(function(r){setTimeout(r,1500);})]):Promise.resolve();
   return load.then(function(){
     var svg=art(id);if(svg.indexOf('xmlns=')<0)svg=svg.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" ');
-    svg=svg.replace(/<svg /,'<svg width="660" height="990" ');
+    svg=svg.replace(/<svg /,'<svg width="'+660*K+'" height="'+990*K+'" ');
     return new Promise(function(res){var im=new Image(),done=false,end=function(v){if(!done){done=true;res(v);}};im.onload=function(){end(im);};im.onerror=function(){end(null);};setTimeout(function(){end(null);},4000);im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
   }).then(function(im){
     var bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,c);bg.addColorStop(.62,'#140C0B');bg.addColorStop(1,'#070506');g.fillStyle=bg;g.fillRect(0,0,W,H);
@@ -2100,11 +2100,15 @@ function storyCanvas(id){
     return cv;
   });
 }
+/* aperçu net : réduction par paliers (un grand canvas affiché très petit crénelle sur certains navigateurs) */
+function storyPreview(cv){var w=720,h=1280,cur=cv;
+  while(cur.width/2>=w){var t=document.createElement('canvas');t.width=Math.round(cur.width/2);t.height=Math.round(cur.height/2);var x=t.getContext('2d');x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';x.drawImage(cur,0,0,t.width,t.height);cur=t;}
+  var o=document.createElement('canvas');o.width=w;o.height=h;var y=o.getContext('2d');y.imageSmoothingEnabled=true;y.imageSmoothingQuality='high';y.drawImage(cur,0,0,w,h);return {prev:o,full:cv};}
 function storyImage(id){return storyCanvas(id).then(function(cv){return new Promise(function(res){try{cv.toBlob(function(b){res(b);},'image/png');}catch(e){res(null);}});});}
 function openShare(id){var s=STORIES[id];storyId=id;storyBlob=null;
   var box=document.getElementById('scard');box.className='scard img';box.innerHTML='<p class="sprep">Préparation de la story…</p>';
   sheet.classList.add('show');
-  storyCanvas(id).then(function(cv){if(storyId!==id)return;box.innerHTML='';cv.className='sprev';cv.setAttribute('aria-label','Aperçu de la story');box.appendChild(cv);
+  storyCanvas(id).then(function(full){if(storyId!==id)return;var pv=storyPreview(full).prev,cv=full;box.innerHTML='';pv.className='sprev';pv.setAttribute('aria-label','Aperçu de la story');box.appendChild(pv);
     try{cv.toBlob(function(b){if(storyId===id)storyBlob=b;},'image/png');}catch(e){}
   }).catch(function(){box.innerHTML='<p class="sprep">Aperçu indisponible</p>';});}
 document.getElementById('sclose').onclick=function(){sheet.classList.remove('show');};
