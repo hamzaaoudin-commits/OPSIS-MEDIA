@@ -4472,7 +4472,7 @@ function enrichLite(raw,key,n){
 function art(key){
   var f=P[key]||P.theranos;
   /* identifiants de dégradés uniques pour chaque affiche affichée */
-  var n=++uid,raw=HC[key]?HC[key]():f();
+  var n=++uid,raw=HC[key]?HC[key]().replace(/<text [^>]*? y="(\d+(?:\.\d+)?)"[^>]*>[^<]*<\/text>/g,function(m,y){return +y>=186?'':m}):f();
   if(!HC[key]&&raw.indexOf('translate(30 6) scale(.7)')>=0)raw=enrichCover(raw,key,n);
   else if(!HC[key]&&/^pt\d+$/.test(key))raw=enrichLite(raw,key,n);
   return '<svg viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+raw.replace(/id="(g\w)"/g,'id="$1'+n+'"').replace(/url\(#(g\w)\)/g,'url(#$1'+n+')')+'</svg>';
