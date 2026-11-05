@@ -121,6 +121,10 @@
   .shelf h2 small{font-size:13px;font-weight:500;color:var(--faint)}
   .rail{display:flex;gap:10px;overflow-x:auto;padding:12px 20px 4px;scroll-snap-type:x mandatory;scrollbar-width:none}
   .rail::-webkit-scrollbar{display:none}
+  .rail{cursor:grab}.rail.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}.rail.drag .tile{pointer-events:none}
+  .shelf h2 .rn{display:inline-flex;gap:6px;align-items:center}
+  .shelf h2 .rn button{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--fg,#fff);font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+  .shelf h2 .rn .all{width:auto;border-radius:14px;padding:0 11px;font-size:12px;font-weight:600}
   .tile{flex:none;width:122px;scroll-snap-align:start}
   .tile .poster{width:122px;height:183px;border-radius:8px}
   .tile .ttl{overflow-wrap:normal;word-break:normal;hyphens:none;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
@@ -3671,7 +3675,7 @@ function home(){
     '<p class="meta">Flash · '+st.min+' min · Série L\'arnaque parfaite</p>'+
     '<div class="cta"><button class="btn light" data-open="eiffel">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="eiffel">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+
-    '<div class="shelf"><h2>À lire maintenant <small>Un épisode de chaque série</small></h2><div class="rail">'+epIndex().order.map(nextOf).filter(Boolean).map(epTile).join('')+'</div></div>'+
+    '<div class="shelf"><h2><span>À lire maintenant <small>Un épisode de chaque série</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+epIndex().order.map(nextOf).filter(Boolean).map(epTile).join('')+'</div></div>'+
     '<div class="shelf"><h2>Radar <small>L\'histoire derrière l\'actu</small></h2>'+
       '<button class="radar" data-pick="joconde">'+poster('joconde')+'<span class="rb"><span class="live"><i></i>DERRIÈRE L\'ACTU</span>'+
       '<span class="ra" style="display:block">L\'actu : <b>'+esc(STORIES.joconde.radar)+'</b>. L\'histoire qui l\'éclaire :</span>'+
@@ -3679,11 +3683,11 @@ function home(){
     '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+
     '<div class="explore" id="explore"><h2 class="exh">Séries et thèmes</h2><p class="exs">'+epIndex().order.length+' séries, '+epIndex().all.length+' épisodes, six territoires</p>'+
       '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div>'+
-      '<div class="shelf" style="padding:0"><h2>Les séries <small>'+epIndex().order.length+'</small></h2><div class="rail">'+SERIES.filter(function(x){return x.go;}).map(serieTile).join('')+'</div></div></div>'+
+      '<div class="shelf" style="padding:0"><h2><span>Les séries <small>'+epIndex().order.length+'</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+SERIES.filter(function(x){return x.go;}).map(serieTile).join('')+'</div></div></div>'+
     T.map(function(t,i){
       var ids=epIndex().byT[i].slice(0,30);
       if(!ids.length)return '';
-      return '<div class="shelf" id="terr-'+i+'"><h2>'+t+' <small>'+epIndex().byT[i].length+' épisodes</small></h2><div class="rail">'+ids.map(epTile).join('')+'</div></div>';
+      return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+' <small>'+epIndex().byT[i].length+' épisodes</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(epTile).join('')+'</div></div>';
     }).join('')+
     '<div class="bottomspace"></div>';
 }
@@ -4228,11 +4232,11 @@ function legalLayer(k){
 }
 function themeLayer(i){
   var X=epIndex(),list=SERIES.filter(function(x){return x.t===i;}),av=list.filter(function(x){return x.go;});
-  var eps=X.byT[i].slice(0,60);
+  var eps=X.byT[i];
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span></div>'+
     '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+av.length+' séries · '+X.byT[i].length+' épisodes</p>'+
     '<div class="shelf"><h2>Séries</h2></div><div class="grid" style="padding-top:4px">'+list.map(serieTile).join('')+'</div>'+
-    (eps.length?'<div class="shelf" style="margin-top:12px"><h2>Épisodes'+(X.byT[i].length>60?' <small>60 premiers</small>':'')+'</h2></div><div class="grid" style="padding-top:4px">'+eps.map(epTile).join('')+'</div>':'')+
+    (eps.length?'<div class="shelf" style="margin-top:12px"><h2>Épisodes <small>'+eps.length+'</small></h2></div><div class="grid" style="padding-top:4px">'+eps.map(epTile).join('')+'</div>':'')+
     '<div class="bottomspace"></div>';
 }
 function layerHTML(top){return top.type==='read'?reader(top.id):(top.type==='lib'?saved():(top.type==='theme'?themeLayer(top.i):(top.type==='legal'?legalLayer(top.k):serie(top.key))));}
@@ -4270,6 +4274,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(b.hasAttribute('data-rmode')){S.mode=S.mode==='book'?'scroll':'book';rerenderMode();toast(S.mode==='book'?'Lecture en livre : touchez les bords ou glissez':'Lecture en défilement');return;}
   if(d.bk){bkgo(+d.bk);return;}
   if(b.hasAttribute('data-random')){randomPick();return;}
+  if(d.rail){var sh=b.closest('.shelf'),rl=sh&&sh.querySelector('.rail');if(rl)rl.scrollBy({left:(+d.rail)*rl.clientWidth*.85,behavior:'smooth'});return;}
   if(d.pick){pick(d.pick);return;}
   if(d.open){push({type:'read',id:d.open});return;}
   if(b.hasAttribute('data-serie')){push({type:'serie',key:b.getAttribute('data-serie')||'chute'});return;}
@@ -4293,6 +4298,18 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.rm){S.mode=d.rm;renderSettings();rerenderMode();return;}
   if(d.len){S.len=+d.len;var tq2=S.stack[S.stack.length-1];if(tq2&&tq2.type==='read')S.bpage[tq2.id]=0;if(document.querySelector('.sth'))renderSettings();if(tq2&&tq2.type==='read')rerenderMode();return;}
 });
+(function(){
+  var rl=null,sx=0,sl=0,mv=false;
+  document.getElementById('phone').addEventListener('pointerdown',function(e){
+    if(e.pointerType!=='mouse'||e.button!==0)return;var r=e.target.closest('.rail');if(!r)return;
+    rl=r;sx=e.clientX;sl=r.scrollLeft;mv=false;});
+  window.addEventListener('pointermove',function(e){
+    if(!rl)return;var dx=e.clientX-sx;if(!mv&&Math.abs(dx)>5){mv=true;rl.classList.add('drag');}
+    if(mv)rl.scrollLeft=sl-dx;});
+  window.addEventListener('pointerup',function(){
+    if(!rl)return;var r=rl;rl=null;if(mv){var sup=function(ev){ev.stopPropagation();ev.preventDefault();};
+      r.addEventListener('click',sup,{capture:true,once:true});setTimeout(function(){r.classList.remove('drag');r.removeEventListener('click',sup,true);},0);}});
+})();
 (function(){
   var x0=null,moved=false;
   lv.addEventListener('pointerdown',function(e){x0=bookMode()&&e.target.closest('.bkwrap')?e.clientX:null;moved=false;});
