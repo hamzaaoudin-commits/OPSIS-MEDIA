@@ -120,14 +120,14 @@
   .shelf{margin-top:30px}
   .shelf h2{font-size:19px;font-weight:700;padding:0 20px;display:flex;justify-content:space-between;align-items:baseline}
   .shelf h2 small{font-size:13px;font-weight:500;color:var(--faint)}
-  .rail{display:flex;gap:10px;overflow-x:auto;padding:12px 20px 4px;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .rail{display:flex;gap:10px;overflow-x:auto;padding:12px 20px 4px;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
   .rail::-webkit-scrollbar{display:none}
   .rail{cursor:grab}.rail.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}.rail.drag .tile{pointer-events:none}
   .shelf h2 .rn{display:inline-flex;gap:6px;align-items:center}
   .shelf h2 .rn button{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--fg,#fff);font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
   .shelf h2 .rn .all{width:auto;border-radius:14px;padding:0 11px;font-size:12px;font-weight:600}
   .tile{flex:none;width:122px;scroll-snap-align:start}
-  .tile .poster{width:122px;height:183px;border-radius:8px}
+  .tile .poster{width:122px;height:183px;border-radius:8px;contain:layout paint style;background:#16161a}
   .tile .ttl{overflow-wrap:normal;word-break:normal;hyphens:none;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
   .tile .num{position:absolute;top:7px;right:8px;z-index:2;font-family:var(--disp);font-weight:800;font-size:13px;opacity:.85}
   .tile .read{position:absolute;top:7px;left:7px;z-index:2;font-size:11px;font-weight:700;background:var(--red);color:#fff;border-radius:4px;padding:2px 6px}
@@ -453,6 +453,12 @@ function art(key){
   var raw=COVERS[key]||dailyCover(key),n=++uid;
   return raw.replace(/(id="|url\(#)([gz]\w)(\d*)/g,function(m,p,q,r){return p+q+r+'_'+n;});
 }
+/* les affiches des vignettes ne sont dessinées que lorsqu'elles approchent de l'écran, quelques-unes par image : défilement fluide */
+var artQ=[],artRaf=0;
+function artFlush(){artRaf=0;var n=0;while(artQ.length&&n<4){var el=artQ.shift();if(el.__done)continue;el.__done=1;el.insertAdjacentHTML('afterbegin',art(el.getAttribute('data-art')));n++;}if(artQ.length)artRaf=requestAnimationFrame(artFlush);}
+var artIO=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){artIO.unobserve(e.target);artQ.push(e.target);}});if(artQ.length&&!artRaf)artRaf=requestAnimationFrame(artFlush);},{rootMargin:'350px 450px'}):null;
+function artScan(){var l=document.querySelectorAll('[data-art]:not([data-seen])');for(var i=0;i<l.length;i++){l[i].setAttribute('data-seen','1');if(artIO)artIO.observe(l[i]);else if(!l[i].__done){l[i].__done=1;l[i].insertAdjacentHTML('afterbegin',art(l[i].getAttribute('data-art')));}}}
+new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){var t=ms[i].target;if(t.nodeType===1&&t.hasAttribute&&t.hasAttribute('data-art'))continue;if(ms[i].addedNodes.length){artScan();return;}}}).observe(document.body,{childList:true,subtree:true});
 function poster(key){ return '<div class="poster">'+art(key)+'</div>'; }
 
 /* =====================================================================
@@ -1173,7 +1179,7 @@ IC.scrollm='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 function dayLabel(iso){var d=new Date(iso);if(isNaN(d))return '';return ['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'][d.getDay()]+' '+d.getDate();}
 function tile(o){
   var L=String(o.t).length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile" '+o.attr+'><div class="poster">'+art(o.p)+'<span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(o.t)+'</span></div><p class="sub">'+esc(o.s)+'</p></button>';
+  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(o.t)+'</span></div><p class="sub">'+esc(o.s)+'</p></button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
