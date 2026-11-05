@@ -517,14 +517,14 @@ var THEMES=[
  {k:'personnes',n:'Personnes',d:'Escrocs, imposteurs, grands caractères : des gens dont on ne se lasse pas de raconter la vie.'},
  {k:'vie',n:'Une vie',d:'Un destin entier en un long récit : l\'ascension, la chute, ce qui reste.'},
  {k:'jour',n:'Le jour qui a tout changé',d:'Vingt-quatre heures, parfois moins, après lesquelles plus rien n\'est comme avant.'},
- {k:'date',n:'Une date, une histoire',d:'Toutes les histoires rangées dans le temps, de l\'Antiquité à aujourd\'hui.'},
+ {k:'date',n:'Une date, une histoire',d:'Les dates qui ont marqué l\'histoire : un jour précis, ce qui s\'est passé ce jour-là et pourquoi on s\'en souvient.'},
  {k:'arts',n:'Arts',d:'Les coulisses du cinéma, des livres et des faux : ce que l\'art a coûté à ceux qui l\'ont fait.'},
  {k:'sport',n:'Sport',d:'Des duels, des exploits et des victoires que personne n\'attendait.'},
  {k:'aventure',n:'Aventure',d:'Survivre, s\'évader, aller plus loin que personne : ce que des gens ont fait pour rester en vie ou arriver les premiers.'},
  {k:'crimes',n:'Crimes et mystères',d:'Casses, disparitions et secrets d\'État : ce que l\'on sait et ce que l\'on ignore encore.'}
 ];
 var T=THEMES.map(function(x){return x.n;});
-var TH=DATA.TH||{},YR=DATA.YR||{};
+var TH=DATA.TH||{},YR=DATA.YR||{},DTL={};(DATA.DT||[]).forEach(function(x){DTL[x[0]]=x[1];});
 TH.eiffel='personnes';YR.eiffel=1925;
 var SERIES=[
   {n:"Jusqu'à la chute",t:0,p:'chute',go:'serie'},
@@ -1228,10 +1228,8 @@ function epIndex(){
     if(THEMES[ti].k==='vie'){return (g[Object.keys(g)[0]]||[]).slice().sort();}
     return mix(Object.keys(g).sort().map(function(n){return g[n];}));
   });
-  var di=ki.date,dl=[];
-  Object.keys(STORIES).forEach(function(id){var st=STORIES[id];if(GONE[id]||st.book||st.daily||YR[id]===undefined)return;dl.push(id);});
-  dl.sort(function(a,b){return YR[a]-YR[b]||(a<b?-1:1);});
-  byT[di]=dl;
+  var di=ki.date;
+  byT[di]=(DATA.DT||[]).map(function(x){return x[0];}).filter(function(id){return STORIES[id]&&!GONE[id];});
   /* enchaînement « à lire ensuite » au sein du thème (hors portraits, qui gardent leur ordre) */
   byT.forEach(function(l,ti){if(ti===di)return;l.forEach(function(id,j){var st=STORIES[id];if(st.book)return;st.series=THEMES[ti].n;st.next=l[j+1]||null;});});
   var all=[];var seen={};byT.forEach(function(l,ti){if(ti===di)return;l.forEach(function(id){if(!seen[id]){seen[id]=1;all.push(id);}});});
@@ -1240,7 +1238,7 @@ function epIndex(){
 }
 function yrLabel(id){var y=YR[id];if(y===undefined)return '';return y<0?(-y)+' av. J.-C.':String(y);}
 function epTile(id,withYear){
-  var st=STORIES[id],lab=(withYear===true&&YR[id]!==undefined)?yrLabel(id):(st.series||st.kind);
+  var st=STORIES[id],lab=(withYear===true&&DTL[id])?DTL[id]:(st.series||st.kind);
   return tile({p:st.p,t:st.title,s:lab+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
 }
 function nextOf(ti){var l=epIndex().byT[ti]||[];for(var i=0;i<l.length;i++)if(!S.read[l[i]])return l[i];return l[0]||null;}
