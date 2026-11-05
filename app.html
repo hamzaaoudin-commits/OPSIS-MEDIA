@@ -2903,11 +2903,43 @@ P.ep5=function(){return '<rect width="200" height="300" fill="#1A0F0A"/><rect x=
   '<g stroke="#F2C14E" stroke-width="2" opacity=".7"><path d="M58 206 l-16-8M70 198 l-6-16M48 222 l-18 0"/></g>';};
 
 var uid=0;
+/* Covers d'épisodes : même scène, mais plus grande, avec lumière, rayons, texture et cadre */
+function enrichCover(raw,key,n){
+  var m=raw.match(/<circle cx="170" cy="274" r="5" fill="(#[0-9A-Fa-f]{3,8})"/),ac=m?m[1]:'#E8B04A';
+  var h=hashN(key),gx=64+(h%72),gy=82+((h>>3)%44),rot=((h>>6)%36)-18,i,rays='',dots='';
+  for(i=0;i<9;i++){var a=(-90+rot+(i-4)*13)*Math.PI/180;rays+='<path d="M'+gx+' '+(gy-70)+'L'+(gx+Math.cos(a-.045)*320).toFixed(0)+' '+(gy-70+Math.sin(a-.045)*320).toFixed(0)+'L'+(gx+Math.cos(a+.045)*320).toFixed(0)+' '+(gy-70+Math.sin(a+.045)*320).toFixed(0)+'Z" fill="url(#zR'+n+')"/>';}
+  for(i=0;i<26;i++){var q=hashN(key+'d'+i);dots+='<circle cx="'+(q%200)+'" cy="'+((q>>8)%190)+'" r="'+(.5+(q%3)*.35).toFixed(2)+'" fill="#FFF" opacity="'+(.12+(q%5)*.05).toFixed(2)+'"/>';}
+  var defs='<defs><radialGradient id="zG'+n+'" cx="'+gx/200+'" cy="'+gy/300+'" r=".62"><stop offset="0" stop-color="'+ac+'" stop-opacity=".62"/><stop offset=".45" stop-color="'+ac+'" stop-opacity=".2"/><stop offset="1" stop-color="'+ac+'" stop-opacity="0"/></radialGradient>'+
+    '<radialGradient id="zR'+n+'" cx="'+gx/200+'" cy="'+(gy-70)/300+'" r=".9"><stop offset="0" stop-color="'+ac+'" stop-opacity=".24"/><stop offset="1" stop-color="'+ac+'" stop-opacity="0"/></radialGradient>'+
+    '<linearGradient id="zT'+n+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF" stop-opacity=".16"/><stop offset=".35" stop-color="#FFF" stop-opacity="0"/></linearGradient>'+
+    '<radialGradient id="zV'+n+'" cx=".5" cy=".42" r=".78"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></radialGradient>'+
+    '<radialGradient id="zP'+n+'" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="'+ac+'" stop-opacity=".5"/><stop offset="1" stop-color="'+ac+'" stop-opacity="0"/></radialGradient></defs>';
+  var under=defs+'<rect width="200" height="300" fill="url(#zG'+n+')"/>'+rays+dots+'<ellipse cx="'+gx+'" cy="196" rx="86" ry="14" fill="url(#zP'+n+')"/>';
+  var over='<rect width="200" height="300" fill="url(#zT'+n+')"/><rect width="200" height="300" fill="url(#zV'+n+')"/>'+
+    '<rect x="6" y="6" width="188" height="288" rx="7" fill="none" stroke="'+ac+'" stroke-opacity=".34" stroke-width=".9"/>'+
+    '<path d="M6 22V6H22M178 6H194V22M194 278V294H178M22 294H6V278" fill="none" stroke="'+ac+'" stroke-opacity=".85" stroke-width="1.6" stroke-linecap="round"/>';
+  raw=raw.replace(/(<rect width="200" height="300" fill="url\(#g\w\)"\/>)/,'$1'+under);
+  raw=raw.replace(/translate\(30 6\) scale\(\.7\)/,'translate(20 0) scale(.8)');
+  return raw+over;
+}
+function enrichLite(raw,key,n){
+  var ac='#FF7A64',h=hashN(key),gx=70+(h%60),gy=80+((h>>3)%40),i,dots='';
+  for(i=0;i<22;i++){var q=hashN(key+'d'+i);dots+='<circle cx="'+(q%200)+'" cy="'+((q>>8)%190)+'" r="'+(.5+(q%3)*.35).toFixed(2)+'" fill="#FFF" opacity="'+(.12+(q%5)*.05).toFixed(2)+'"/>';}
+  var defs='<defs><radialGradient id="zG'+n+'" cx="'+gx/200+'" cy="'+gy/300+'" r=".6"><stop offset="0" stop-color="'+ac+'" stop-opacity=".5"/><stop offset="1" stop-color="'+ac+'" stop-opacity="0"/></radialGradient>'+
+    '<linearGradient id="zT'+n+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF" stop-opacity=".14"/><stop offset=".35" stop-color="#FFF" stop-opacity="0"/></linearGradient>'+
+    '<radialGradient id="zV'+n+'" cx=".5" cy=".42" r=".78"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient></defs>';
+  var over='<rect width="200" height="300" fill="url(#zG'+n+')" style="mix-blend-mode:screen"/>'+dots+'<rect width="200" height="300" fill="url(#zT'+n+')"/><rect width="200" height="300" fill="url(#zV'+n+')"/>'+
+    '<rect x="6" y="6" width="188" height="288" rx="7" fill="none" stroke="'+ac+'" stroke-opacity=".34" stroke-width=".9"/>'+
+    '<path d="M6 22V6H22M178 6H194V22M194 278V294H178M22 294H6V278" fill="none" stroke="'+ac+'" stroke-opacity=".85" stroke-width="1.6" stroke-linecap="round"/>';
+  return defs+raw+over;
+}
 function art(key){
   var f=P[key]||P.theranos;
   /* identifiants de dégradés uniques pour chaque affiche affichée */
-  var n=++uid;
-  return '<svg viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+f().replace(/id="(g\w)"/g,'id="$1'+n+'"').replace(/url\(#(g\w)\)/g,'url(#$1'+n+')')+'</svg>';
+  var n=++uid,raw=f();
+  if(raw.indexOf('translate(30 6) scale(.7)')>=0)raw=enrichCover(raw,key,n);
+  else if(/^pt\d+$/.test(key))raw=enrichLite(raw,key,n);
+  return '<svg viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+raw.replace(/id="(g\w)"/g,'id="$1'+n+'"').replace(/url\(#(g\w)\)/g,'url(#$1'+n+')')+'</svg>';
 }
 function poster(key){ return '<div class="poster">'+art(key)+'</div>'; }
 
@@ -3613,7 +3645,8 @@ var IC={
 IC.bookm='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5 2-1.5 5-1.9 8-1.5V5c-3-.4-6 0-8 1.5zM12 6.5V19.5"/></svg>';
 IC.scrollm='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M8 8l4-4 4 4M8 16l4 4 4-4"/></svg>';
 function tile(o){
-  return '<button class="tile" '+o.attr+'><div class="poster">'+art(o.p)+'<span class="grad"></span>'+(o.badge||'')+'<span class="ttl">'+esc(o.t)+'</span></div><p class="sub">'+esc(o.s)+'</p></button>';
+  var L=String(o.t).length,fs=L>26?15:L>18?18:L>12?21:0;
+  return '<button class="tile" '+o.attr+'><div class="poster">'+art(o.p)+'<span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(o.t)+'</span></div><p class="sub">'+esc(o.s)+'</p></button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
