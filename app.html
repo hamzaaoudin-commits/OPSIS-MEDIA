@@ -307,7 +307,7 @@
   .scard .poster{position:absolute;inset:0}
   .scard .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.15) 40%,rgba(0,0,0,.9));z-index:1}
   .scard .in{position:absolute;inset:0;z-index:2;padding:22px;display:flex;flex-direction:column;justify-content:flex-end}
-  .scard.img{aspect-ratio:auto;text-align:center;background:none;overflow:visible}.scard.img img{height:min(52vh,540px);max-width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.5)}.sprep{padding:60px 0;color:var(--dim);font-size:14px}
+  .scard.img{aspect-ratio:auto;text-align:center;background:none;overflow:visible}.scard.img .sprev{display:block;margin:0 auto;height:min(52vh,540px);width:auto;aspect-ratio:9/16;max-width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.5)}.sprep{padding:60px 0;color:var(--dim);font-size:14px}
   .scard .q{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:34px;line-height:.95}
   .scard .f{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:13px;color:var(--dim)}
   .scard .f b{font-family:var(--disp);font-weight:900;font-size:20px;letter-spacing:.12em;color:var(--red-type)}
@@ -2065,18 +2065,18 @@ setBox.parentNode.addEventListener('click',function(e){if(e.target===setBox.pare
 /* ---------- partage ---------- */
 var sheet=document.getElementById('sheet');
 /* ---------- partage en story : une image 1080×1920 (affiche + titre + accroche), envoyée par la feuille de partage du téléphone ---------- */
-var storyBlob=null,storyId=null,storyUrl=null;
-function storyImage(id){
+var storyBlob=null,storyId=null;
+function storyCanvas(id){
   var s=STORIES[id],W=1080,H=1920,c=s.c||'#F2643C';
   var hook=(BLURB[id]&&BLURB[id].h)||s.quote||s.sub||'';
   var cv=document.createElement('canvas');cv.width=W;cv.height=H;var g=cv.getContext('2d');
   var disp=(getComputedStyle(document.documentElement).getPropertyValue('--disp')||'Impact').trim()||'Impact';
   var serif=(getComputedStyle(document.documentElement).getPropertyValue('--serif')||'Georgia').trim()||'Georgia';
-  var load=(document.fonts&&document.fonts.load)?Promise.all([document.fonts.load('900 100px "Big Shoulders Display"'),document.fonts.load('italic 40px "Newsreader"'),document.fonts.load('40px "Newsreader"')]).catch(function(){}):Promise.resolve();
+  var load=(document.fonts&&document.fonts.load)?Promise.race([Promise.all([document.fonts.load('900 100px "Big Shoulders Display"'),document.fonts.load('italic 40px "Newsreader"'),document.fonts.load('40px "Newsreader"')]).catch(function(){}),new Promise(function(r){setTimeout(r,1500);})]):Promise.resolve();
   return load.then(function(){
     var svg=art(id);if(svg.indexOf('xmlns=')<0)svg=svg.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" ');
     svg=svg.replace(/<svg /,'<svg width="660" height="990" ');
-    return new Promise(function(res){var im=new Image();im.onload=function(){res(im);};im.onerror=function(){res(null);};im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
+    return new Promise(function(res){var im=new Image(),done=false,end=function(v){if(!done){done=true;res(v);}};im.onload=function(){end(im);};im.onerror=function(){end(null);};setTimeout(function(){end(null);},4000);im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
   }).then(function(im){
     var bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,c);bg.addColorStop(.62,'#140C0B');bg.addColorStop(1,'#070506');g.fillStyle=bg;g.fillRect(0,0,W,H);
     var rg=g.createRadialGradient(W/2,560,60,W/2,560,820);rg.addColorStop(0,'rgba(255,255,255,.16)');rg.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=rg;g.fillRect(0,0,W,H);
@@ -2097,13 +2097,16 @@ function storyImage(id){
     g.fillStyle='rgba(244,238,228,.82)';g.font='italic 40px '+serif;y=Math.max(y+34,1660);
     hl.forEach(function(t){g.fillText(t,W/2,y);y+=54;});
     g.fillStyle='rgba(244,238,228,.45)';g.font='600 28px '+disp;if('letterSpacing' in g)g.letterSpacing='5px';g.fillText('UNE HISTOIRE VRAIE PAR JOUR',W/2,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
-    return new Promise(function(res){cv.toBlob(function(b){res(b);},'image/png');});
+    return cv;
   });
 }
+function storyImage(id){return storyCanvas(id).then(function(cv){return new Promise(function(res){try{cv.toBlob(function(b){res(b);},'image/png');}catch(e){res(null);}});});}
 function openShare(id){var s=STORIES[id];storyId=id;storyBlob=null;
   var box=document.getElementById('scard');box.className='scard img';box.innerHTML='<p class="sprep">Préparation de la story…</p>';
   sheet.classList.add('show');
-  storyImage(id).then(function(b){if(storyId!==id)return;storyBlob=b;if(storyUrl)URL.revokeObjectURL(storyUrl);storyUrl=b?URL.createObjectURL(b):null;box.innerHTML=storyUrl?'<img alt="Aperçu de la story" src="'+storyUrl+'">':'<p class="sprep">Aperçu indisponible</p>';});}
+  storyCanvas(id).then(function(cv){if(storyId!==id)return;box.innerHTML='';cv.className='sprev';cv.setAttribute('aria-label','Aperçu de la story');box.appendChild(cv);
+    try{cv.toBlob(function(b){if(storyId===id)storyBlob=b;},'image/png');}catch(e){}
+  }).catch(function(){box.innerHTML='<p class="sprep">Aperçu indisponible</p>';});}
 document.getElementById('sclose').onclick=function(){sheet.classList.remove('show');};
 document.getElementById('sgo').onclick=function(){
   var s=STORIES[storyId];if(!s)return;
