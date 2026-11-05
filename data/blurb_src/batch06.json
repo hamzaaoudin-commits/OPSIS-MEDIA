@@ -1,0 +1,154 @@
+{
+ "es11": {
+  "blurb": "Kim Philby, officier du service secret britannique MI6, est en réalité un agent soviétique depuis les années 1930. En 1956, il s'installe à Beyrouth comme journaliste, grâce à son ami Nicholas Elliott, du MI6. Le 23 janvier 1963, il disparaît. On ne sait pas combien d'agents sont morts à cause de lui, ni comment il a quitté la ville.",
+  "hook": "Soupçonné depuis 1951, blanchi au Parlement, il s'évanouit de Beyrouth en 1963."
+ },
+ "es12": {
+  "blurb": "Klaus Fuchs, physicien allemand devenu britannique, transmet à l'URSS dès 1942 des secrets de la bombe atomique, dont la théorie de l'implosion, y compris depuis Los Alamos, aux États-Unis. Le contre-espionnage britannique, le MI5, n'a aucune preuve utilisable au tribunal. Il charge l'enquêteur William Skardon de le faire avouer. L'aveu vient, mais il reste partiel.",
+  "hook": "Aucune preuve ne tient devant un tribunal ; il ne reste que sa parole."
+ },
+ "es13": {
+  "blurb": "En 1950, aux États-Unis, l'aveu du chimiste Harry Gold mène à David Greenglass, ancien soldat de Los Alamos, puis à son beau-frère Julius Rosenberg. Julius et sa femme Ethel nient tout et sont exécutés en 1953. Le rôle de Julius est appuyé par des câbles soviétiques déclassifiés. On ne sait pas si Ethel connaissait l'activité de son mari.",
+  "hook": "Le pape demande la grâce, le président refuse ; ils meurent à dix minutes d'écart."
+ },
+ "es14": {
+  "blurb": "Le colonel soviétique Rudolf Abel, espion à New York, est arrêté en 1957 et condamné. En 1960, le pilote américain Francis Gary Powers est abattu en URSS à bord d'un U-2 et condamné à dix ans. Le 10 février 1962, à Berlin, ils sont échangés sur un pont, en même temps qu'un étudiant américain, Frederic Pryor.",
+  "hook": "Deux espions et un étudiant jamais inculpé traversent un pont en même temps."
+ },
+ "es15": {
+  "blurb": "Oleg Penkovsky, colonel du renseignement militaire soviétique, déçu par le système, propose en 1960 d'espionner pour les États-Unis. De 1961 à 1962, il remet plus de 5 000 photographies de documents classifiés à la CIA et au MI6 britannique, par l'intermédiaire de l'homme d'affaires Greville Wynne. On ne sait pas comment il a été démasqué.",
+  "hook": "Il aborde des étudiants américains sur un pont de Moscou pour trahir son pays."
+ },
+ "es16": {
+  "blurb": "Oleg Gordievski, colonel du KGB, les services secrets soviétiques, travaille en secret pour le MI6 britannique depuis les années 1970. En 1985, promu chef du KGB à Londres, il est rappelé à Moscou. Le rappel est un piège : on le drogue et on l'interroge cinq heures. Il s'évade caché dans un coffre de voiture, mais on ne sait pas où il passe la frontière.",
+  "hook": "Margaret Thatcher le connaissait sous le nom de « M. Collins »."
+ },
+ "es17": {
+  "blurb": "Aldrich Ames, officier de la CIA, vend des secrets au KGB à partir de 1985. Ses déjeuners avec un contact de l'ambassade soviétique lui rapportent entre 20 000 et 50 000 dollars chacun. Il identifie plus de dix sources de haut niveau, dont plusieurs sont exécutées. La CIA sait en 1990 qu'il y a une taupe, mais il réussit deux fois le détecteur de mensonges.",
+  "hook": "Un rapport signale son train de vie ; il réussit pourtant le détecteur de mensonges."
+ },
+ "es18": {
+  "blurb": "Robert Hanssen, agent spécial du FBI, vend des secrets aux Soviétiques puis aux Russes sous le nom de Ramon Garcia, dès 1979 ou 1985 selon les sources. Plusieurs informateurs américains sont arrêtés, puis exécutés. Après l'arrestation de l'espion Aldrich Ames, les enquêteurs soupçonnent pendant près de deux ans un officier de la CIA, Brian Kelley. Ce n'était pas lui.",
+  "hook": "Il signe Ramon Garcia ; le FBI soupçonne un innocent pendant près de deux ans."
+ },
+ "es21": {
+  "blurb": "À Téhéran, le 4 novembre 1979, des révolutionnaires prennent l'ambassade américaine, mais six Américains échappent à la prise et trouvent refuge chez des diplomates canadiens. Pour les sortir du pays, Tony Mendez, spécialiste de la CIA, les fait passer pour une équipe canadienne qui repère des lieux de tournage pour un film de science-fiction, Argo. Le groupe passe l'aéroport fin janvier 1980.",
+  "hook": "Un film qui n'existe pas, un bureau fictif, de vraies publicités dans la presse."
+ },
+ "es22": {
+  "blurb": "Vladimir Vetrov, colonel du KGB chargé de se procurer les technologies occidentales, se propose à la France vers la fin de 1980. Les Français le nomment Farewell. Ses documents exposent des agents soviétiques glissés dans des délégations en Occident, et François Mitterrand en informe le président américain Ronald Reagan en juillet 1981. Vetrov sera exécuté.",
+  "hook": "Un gazoduc sibérien aurait explosé en 1982 ; on discute même de l'explosion."
+ },
+ "es25": {
+  "blurb": "En 1960, à Buenos Aires, des agents israéliens guettent Adolf Eichmann, qui a organisé la déportation des Juifs de Hongrie et vit en Argentine sous le nom de Ricardo Klement. Le 11 mai, ils le saisissent en un peu plus de vingt secondes, puis le retiennent neuf jours dans une villa avant de l'emmener en Israël par avion. Qui l'a retrouvé en premier reste discuté.",
+  "hook": "Vingt secondes dans la rue, puis neuf jours menotté à un lit."
+ },
+ "es29": {
+  "blurb": "En juillet 1985, le Rainbow Warrior, navire de l'organisation Greenpeace, fait escale à Auckland, en Nouvelle-Zélande, en route vers les essais nucléaires français de Moruroa. Deux mines explosent contre la coque et tuent le photographe Fernando Pereira. L'opération vient des services secrets français, mais Paris dénonce l'idée. Environ deux mois plus tard, le Premier ministre Laurent Fabius admet l'implication de l'État.",
+  "hook": "Les faux Suisses auraient hésité à partir sans récupérer leur dépôt de garantie."
+ },
+ "es30": {
+  "blurb": "En septembre 1945, à Ottawa, Igor Gouzenko, chiffreur de l'ambassade soviétique, quitte les lieux avec des documents sur un réseau d'espions. Il cherche quelqu'un qui l'écoute : le journal et le ministère de la Justice ne le reçoivent pas. Des hommes de l'ambassade forcent la porte de son appartement, mais il s'est caché avec sa famille de l'autre côté du palier.",
+  "hook": "Les portes se ferment une à une, pendant que l'ambassade vient le chercher."
+ },
+ "pn01": {
+  "blurb": "Le 4 juin 1996, à Kourou, la fusée européenne Ariane 5 s'élance pour son tout premier vol, avec quatre satellites de recherche. Trente-sept secondes après l'allumage, tout bascule : dans le logiciel de guidage, hérité d'Ariane 4, un nombre trop grand pour la case prévue déclenche une erreur. L'ordinateur de secours, identique, tombe en panne au même instant.",
+  "hook": "Une fonction inutile, gardée par habitude, ruine dix ans de travail."
+ },
+ "pn02": {
+  "blurb": "En décembre 1998, la NASA lance la sonde Mars Climate Orbiter, qui doit se placer en orbite autour de Mars. Pendant neuf mois et demi tout va bien, mais un fichier exprime les poussées en livres-force, l'unité américaine, alors que le contrat demandait des newtons. La sonde dérive vers une altitude trop basse. La commission d'enquête ajoute huit autres causes.",
+  "hook": "Un fichier compte en livres-force, l'autre en newtons, et personne ne relit."
+ },
+ "pn03": {
+  "blurb": "Le 25 février 1991, pendant la guerre du Golfe, un missile Scud irakien arrive sur la base américaine de Dhahran, en Arabie saoudite. La batterie antimissile Patriot qui la protège ne le voit pas et ne tire pas : vingt-huit soldats sont tués. La cause est une horloge qui arrondit un dixième de seconde, une erreur minuscule qui s'additionne pendant plus de cent heures.",
+  "hook": "Un dixième de seconde mal arrondi, et un demi-kilomètre d'écart."
+ },
+ "pn09": {
+  "blurb": "Le 2 novembre 1988, Robert Tappan Morris, étudiant en informatique à Cornell, lance sur le réseau un programme de 99 lignes qui passe seul de machine en machine. Il se propage dans l'Internet de l'époque, qui compte environ 60 000 ordinateurs. Morris est le premier poursuivi sous la loi américaine contre la fraude informatique. Personne n'a compté combien de machines ont été touchées.",
+  "hook": "Le chiffre célèbre de 6 000 machines infectées n'est qu'une extrapolation."
+ },
+ "pn16": {
+  "blurb": "Le Therac-25 est un appareil de radiothérapie qui confie au logiciel une sécurité jusque-là assurée par des verrous matériels. Entre 1985 et 1987, aux États-Unis et au Canada, six patients reçoivent des doses massives. Le fabricant répond que c'est impossible et refuse le verrou indépendant demandé par un consultant. Le logiciel contenait pourtant des défauts, que plus rien ne cachait.",
+  "hook": "Aux patients brûlés, on répond que la machine ne peut pas se tromper."
+ },
+ "pn17": {
+  "blurb": "Le 16 septembre 2020, une commission de la Chambre des représentants américaine publie son rapport sur le Boeing 737 MAX, impliqué dans deux accidents, en Indonésie en octobre 2018 puis en Éthiopie en mars 2019, qui ont fait 346 morts. Le rapport accuse Boeing d'échecs de conception et l'agence de l'aviation, la FAA, d'une supervision insuffisante. Il est rédigé par la majorité démocrate.",
+  "hook": "Des employés de Boeing agissaient au nom de l'agence censée les contrôler."
+ },
+ "pn18": {
+  "blurb": "Le 23 juillet 1983, le vol 143 d'Air Canada décolle de Montréal à bord d'un Boeing 767 neuf, dont l'indicateur de carburant est en panne. L'équipage calcule le carburant à la main avec un mauvais coefficient et en embarque bien moins que nécessaire. L'avion se retrouve sans moteurs. Le commandant, pilote de planeur, vise une ancienne base militaire du Manitoba, où se tient une course de voitures.",
+  "hook": "Un pilote de planeur pose un Boeing sans moteurs devant une course de voitures."
+ },
+ "pn21": {
+  "blurb": "En avril 1990, la NASA lance le télescope spatial Hubble, censé voir l'univers plus nettement que tout télescope terrestre. Deux mois plus tard, les images sont floues : le miroir principal est trop plat, d'une fraction de l'épaisseur d'un cheveu. Il a été poli très précisément, mais avec un instrument de mesure mal réglé. En décembre 1993, une mission de la navette le répare.",
+  "hook": "On ne peut pas polir un miroir en orbite, mais on peut lui donner des lunettes."
+ },
+ "pn22": {
+  "blurb": "Lancé le 3 janvier 1999, l'atterrisseur Mars Polar Lander doit chercher de la glace d'eau près du pôle sud de Mars. Selon un comité d'enquête, la secousse du déploiement de ses jambes a été prise par le logiciel pour un contact avec le sol, et les moteurs se sont coupés vers quarante mètres de hauteur. L'engin n'ayant rien transmis pendant la descente, on ne sait pas ce qui s'est vraiment passé.",
+  "hook": "À quarante mètres du sol, l'engin croit déjà être posé."
+ },
+ "pn25": {
+  "blurb": "Le 20 juillet 1969, le module lunaire d'Apollo 11 descend vers la Lune quand l'ordinateur de bord affiche une alarme inconnue des astronautes, 1202, puis 1201. À Houston, l'officier de guidage Steve Bales et son équipe ont quelques secondes pour décider de continuer. Puis l'astronaute Neil Armstrong voit l'ordinateur viser une zone de rochers et reprend en partie les commandes.",
+  "hook": "Eagle se pose avec à peine 98 kilos de carburant utilisable."
+ },
+ "pn26": {
+  "blurb": "Le pont suspendu des Narrows de Tacoma, dans l'État de Washington, ouvre le 1er juillet 1940. Son tablier très élancé oscille si visiblement qu'on le surnomme Galloping Gertie. Le 7 novembre, par vent modéré, il se tord et s'effondre. Pendant des décennies, on a expliqué la chute par la résonance, ce qui est faux. On ne sait pas pourquoi le mouvement est passé de vertical à torsion.",
+  "hook": "Le pont tombe, et l'explication enseignée pendant des décennies est fausse."
+ },
+ "pn28": {
+  "blurb": "En septembre 1983, le lieutenant-colonel Stanislav Petrov est officier de quart dans un bunker près de Moscou, chargé de surveiller le système d'alerte soviétique. Peu après minuit, l'alarme annonce un missile américain, puis un deuxième, cinq au total, alors que la tension entre les deux blocs est extrême. Petrov décide de ne pas y croire. Son rôle n'est révélé qu'en 1998.",
+  "hook": "Félicité puis réprimandé : il n'avait pas rempli correctement le journal de bord."
+ },
+ "ex03": {
+  "blurb": "En 1910, le Norvégien Roald Amundsen, qui préparait une dérive dans l'Arctique, vise le pôle Sud après les annonces de Peary et Cook sur le pôle Nord. Il prévient son équipage à Madère, mais pas son rival britannique Scott. Il part avec 52 chiens, dont une partie seulement continue jusqu'au sommet. Au pôle, il laisse une tente et une lettre pour Scott.",
+  "hook": "Sa base est à 96 kilomètres plus près du pôle que celle de Scott."
+ },
+ "ex04": {
+  "blurb": "En 1845, deux navires, l'Erebus et le Terror, quittent l'Angleterre sous les ordres de John Franklin pour franchir le passage du Nord-Ouest, dans l'Arctique. Pris par la glace en 1846, ils sont abandonnés en 1848, et les survivants partent vers le continent. En 2014, un sonar repère une épave. On ne sait pas de quoi sont morts les hommes.",
+  "hook": "Les Inuits parlaient d'un navire à la dérive, que beaucoup d'experts écartaient."
+ },
+ "ex05": {
+  "blurb": "En 1893, le Norvégien Fridtjof Nansen veut laisser un navire dériver avec la glace à travers l'océan Arctique, d'après des objets d'un navire américain, le Jeannette, retrouvés sur la côte du Groenland. Le Fram quitte Christiania en juin et est pris par les glaces en octobre. Le courant ne va pas toujours dans le sens attendu, et Nansen décide d'un voyage sur skis.",
+  "hook": "Un navire construit pour que la glace le soulève au lieu de l'écraser."
+ },
+ "ex07": {
+  "blurb": "En 1953, l'expédition britannique du colonel John Hunt compte plus de quatre cents hommes pour gravir l'Everest par le côté népalais. Le 26 mai, deux alpinistes font demi-tour à une centaine de mètres du sommet. Les deux suivants, Hillary et Tenzing, y arrivent le 29. Ils sont convenus de ne jamais dire lequel a posé le pied le premier.",
+  "hook": "Quatre cents hommes, deux au sommet, et un silence convenu entre eux."
+ },
+ "ex08": {
+  "blurb": "En 1950, une expédition française dirigée par Maurice Herzog, alpiniste amateur, tente l'Annapurna, dans l'Himalaya. Herzog et Louis Lachenal atteignent le sommet, le premier de plus de 8 000 mètres jamais gravi. Dans la descente, une tempête éclate, ils gèlent gravement, et un médecin doit amputer. Les récits divergent, et on ne sait pas ce qui s'est passé pendant la nuit en crevasse.",
+  "hook": "Un livre vendu à environ onze millions d'exemplaires, et un compagnon qui raconte autrement."
+ },
+ "ex09": {
+  "blurb": "Le 3 juillet 1953, l'alpiniste Hermann Buhl atteint seul et sans oxygène le sommet du Nanga Parbat, alors que le chef de l'expédition, Karl Herrligkoffer, a ordonné par radio de redescendre. La nuit tombe vers 7 900 mètres : il la passe debout contre un rocher, sans nourriture ni matériel de bivouac. Il revient au camp V environ 41 heures plus tard, après avoir pris un stimulant, le Pervitin.",
+  "hook": "Une nuit debout à près de 7 900 mètres, avec une seule prise."
+ },
+ "ex10": {
+  "blurb": "Le 6 mai 1978, l'alpiniste Reinhold Messner, 33 ans, et son compagnon Peter Habeler, 35 ans, partent du camp II vers l'Everest, côté népalais, sans oxygène. Une croyance scientifique voulait qu'un être humain ne survive pas au-dessus de 8 500 mètres. Ils arrivent au sommet et y restent environ quinze minutes. Deux ans plus tard, Messner y retourne seul, toujours sans oxygène.",
+  "hook": "Quinze minutes au sommet, là où la science disait qu'on ne survit pas."
+ },
+ "ex11": {
+  "blurb": "En 1947, le Norvégien Thor Heyerdahl veut prouver que des Sud-Américains ont pu peupler la Polynésie avec les matériaux de leur époque. Il part du Pérou avec cinq compagnons sur un radeau de neuf troncs de balsa, sans aucun métal. Des experts prédisaient qu'il se disloquerait en deux semaines. Le voyage dure cent un jours et se termine par un naufrage sur un récif.",
+  "hook": "Neuf troncs, de la corde de chanvre, aucun métal, et un perroquet."
+ },
+ "ex12": {
+  "blurb": "En 1519, cinq navires quittent l'Espagne sous les ordres du Portugais Magellan, qui cherche une route maritime vers l'Asie par l'Amérique. Magellan est tué en 1521 aux Philippines. Un seul navire revient. Les sources divergent sur le crédit du premier tour du monde, entre Elcano et ses compagnons d'un côté, et Enrique, l'esclave de Magellan, de l'autre.",
+  "hook": "Les épices rapportées valent plus que toute la flotte partie d'Espagne."
+ },
+ "ex15": {
+  "blurb": "Le 23 janvier 1960, le lieutenant de la marine américaine Don Walsh et l'ingénieur suisse Jacques Piccard descendent dans la fosse des Mariannes à bord du Trieste, un bathyscaphe. À environ 9 400 mètres, un fort bang secoue la cabine : une vitre en Plexiglas se fêle. Ils passent environ vingt minutes au fond. La profondeur exacte reste incertaine, entre 10 911 et 10 994 mètres.",
+  "hook": "Au fond, l'atterrissage soulève la vase comme un bol de lait."
+ },
+ "ex16": {
+  "blurb": "En 1804, après l'achat de la Louisiane, le président Jefferson envoie le Corps de la découverte, mené par Lewis et Clark, chercher une voie d'eau vers le Pacifique. L'expédition dure 862 jours. Un seul homme y meurt, Charles Floyd. Une femme shoshone, Sacagawea, accompagne le groupe, et l'histoire a souvent exagéré son rôle.",
+  "hook": "862 jours de route, un seul mort, probablement d'une appendicite."
+ },
+ "ex17": {
+  "blurb": "En 1860, l'expédition de Robert O'Hara Burke et William Wills part de Royal Park, en Australie, avec 19 hommes, des chevaux et des chameaux. Un membre du groupe, Brahe, reste garder le dépôt de Cooper Creek. Le 21 avril 1861, Burke, Wills et King reviennent affamés : Brahe est parti le matin même, laissant une cache de vivres et un message sur un arbre.",
+  "hook": "La cache était si bien dissimulée que rien ne semblait avoir changé."
+ },
+ "ex18": {
+  "blurb": "En 1870, le journal américain New York Herald envoie le reporter Henry Morton Stanley en Afrique retrouver l'explorateur britannique David Livingstone, sans nouvelles depuis 1869. Après environ huit mois de traversée, Stanley le retrouve à Ujiji, malade et à court de vivres. La phrase célèbre qu'il dit avoir prononcée est absente de son journal. On ne sait pas ce qu'ils se sont vraiment dit.",
+  "hook": "Deux pages arrachées dans le journal de Stanley, et une phrase passée à l'histoire."
+ }
+}
