@@ -3676,10 +3676,6 @@ function home(){
     '<div class="cta"><button class="btn light" data-open="eiffel">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="eiffel">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+
     '<div class="shelf"><h2><span>À lire maintenant <small>Un épisode de chaque série</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+epIndex().order.map(nextOf).filter(Boolean).map(epTile).join('')+'</div></div>'+
-    '<div class="shelf"><h2>Radar <small>L\'histoire derrière l\'actu</small></h2>'+
-      '<button class="radar" data-pick="joconde">'+poster('joconde')+'<span class="rb"><span class="live"><i></i>DERRIÈRE L\'ACTU</span>'+
-      '<span class="ra" style="display:block">L\'actu : <b>'+esc(STORIES.joconde.radar)+'</b>. L\'histoire qui l\'éclaire :</span>'+
-      '<span class="rt2" style="display:block">La Joconde a disparu</span><span class="rm" style="display:block">Récit · 6 min · 1911</span></span></button></div>'+
     '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+
     '<div class="explore" id="explore"><h2 class="exh">Séries et thèmes</h2><p class="exs">'+epIndex().order.length+' séries, '+epIndex().all.length+' épisodes, six territoires</p>'+
       '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div>'+
