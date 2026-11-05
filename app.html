@@ -2904,6 +2904,307 @@ P.ep5=function(){return '<rect width="200" height="300" fill="#1A0F0A"/><rect x=
 
 var uid=0;
 /* Covers d'épisodes : même scène, mais plus grande, avec lumière, rayons, texture et cadre */
+/* HC:START */
+/* Covers d'épisodes dessinées à la main : HC[id] remplace le gabarit automatique */
+var HC={};
+function hxp(d,f,s,w,o){return '<path d="'+d+'" fill="'+(f||'none')+'"'+(s?' stroke="'+s+'" stroke-width="'+(w||1)+'" stroke-linejoin="round" stroke-linecap="round"':'')+(o!=null?' opacity="'+o+'"':'')+'/>';}
+function hxc(x,y,r,f,s,w,o){return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+(f||'none')+'"'+(s?' stroke="'+s+'" stroke-width="'+(w||1)+'"':'')+(o!=null?' opacity="'+o+'"':'')+'/>';}
+function hxr(x,y,w,h,f,rx,s,sw,o){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(rx||0)+'" fill="'+(f||'none')+'"'+(s?' stroke="'+s+'" stroke-width="'+(sw||1)+'"':'')+(o!=null?' opacity="'+o+'"':'')+'/>';}
+function hxbg(c1,c2,gx,gy,body){gx=gx==null?100:gx;gy=gy==null?110:gy;
+  return '<defs><linearGradient id="gX" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B0B0C"/><stop offset="1" stop-color="'+c1+'"/></linearGradient><radialGradient id="gY" cx="'+gx/200+'" cy="'+gy/300+'" r=".62"><stop offset="0" stop-color="'+c2+'" stop-opacity=".6"/><stop offset="1" stop-color="'+c2+'" stop-opacity="0"/></radialGradient></defs><rect width="200" height="300" fill="url(#gX)"/><rect width="200" height="300" fill="url(#gY)"/>'+body;}
+/* HC:SERIES */
+/* ---- Tournage maudit ---- */
+HC.tm01=function(){ /* La dernière nuit : hélicoptère, nuit, lueur */
+  return hxbg('#2A1208','#FF7A1A',100,150,
+  hxc(150,40,16,'#EDE6DA',null,0,.9)+hxc(150,40,26,null,'#EDE6DA',1,.25)+
+  hxp('M0 190 L22 150 L30 172 L52 138 L74 176 L96 150 L120 180 L146 142 L170 174 L200 148 V300 H0Z','#120A08')+
+  hxp('M50 120 Q60 100 100 100 L140 104 Q152 108 150 120 Q148 134 130 136 L74 138 Q54 136 50 120Z','#1B1B22','#FFB066',1.6)+
+  hxp('M146 112 L186 106 L188 112 L148 120Z','#1B1B22','#FFB066',1.4)+hxp('M178 98 V120','','#FFB066',2.4)+
+  hxp('M64 96 H132 M98 96 V86','','#FFB066',2.6)+hxp('M62 142 H136','','#FFB066',2)+
+  hxp('M70 124 Q84 112 108 114 L110 126 L72 130Z','#FFB066',null,0,.55)+
+  hxp('M20 232 Q60 190 100 214 Q140 180 182 226 L182 300 H20Z','#FF5A1A',null,0,.55)+
+  hxp('M44 250 Q70 214 100 236 Q130 206 160 248 L160 300 H44Z','#FFC36B',null,0,.55)+
+  hxc(100,250,22,'#FFF3D0',null,0,.7));};
+HC.tm02=function(){ /* The Crow */
+  return hxbg('#12122A','#7B5CE0',100,100,
+  hxc(100,96,56,'#EDE6DA',null,0,.95)+hxc(100,96,68,null,'#EDE6DA',1,.25)+
+  '<g stroke="#9FB4E8" stroke-width="1" opacity=".5">'+Array.from({length:14},function(_,i){return '<path d="M'+(10+i*14)+' 0 l-8 40"/>';}).join('')+'</g>'+
+  hxp('M100 76 Q112 80 116 96 Q120 110 108 122 L124 150 L100 136 L76 150 L92 122 Q80 110 84 96 Q88 80 100 76Z','#08080C')+
+  hxp('M84 100 Q40 56 8 70 Q30 78 36 96 Q16 92 6 106 Q34 108 50 122 Q34 128 24 142 Q60 140 84 124Z','#08080C')+
+  hxp('M116 100 Q160 56 192 70 Q170 78 164 96 Q184 92 194 106 Q166 108 150 122 Q166 128 176 142 Q140 140 116 124Z','#08080C')+
+  hxp('M94 90 L100 96 L106 90','', '#D2232C',1.6)+hxc(96,92,2,'#D2232C')+hxc(104,92,2,'#D2232C')+hxp('M96 98 L100 108 L104 98Z','#C9A15A')+
+  hxp('M0 220 H20 V176 L34 160 L48 176 V214 H70 V190 H84 V220 H116 V180 L130 166 L144 180 V220 H170 V198 H200 V300 H0Z','#0A0A10')+
+  hxr(26,190,6,8,'#FFD070')+hxr(124,188,6,8,'#FFD070')+hxr(176,214,6,8,'#FFD070'));};
+HC.tm03=function(){ /* Rust : le western */
+  return hxbg('#3A1A08','#E8803A',100,150,
+  hxp('M0 160 H200 V300 H0Z','#2A1408')+hxc(100,156,70,'#F2A04A',null,0,.9)+
+  hxp('M0 178 Q40 150 80 176 Q120 140 160 172 Q184 160 200 170 V300 H0Z','#5A2A10')+
+  hxp('M0 206 Q50 190 100 210 Q150 192 200 204 V300 H0Z','#3A1A0A')+
+  hxp('M44 86 Q50 52 100 50 Q150 52 156 86 Q176 90 190 104 Q150 96 100 98 Q50 96 10 104 Q24 90 44 86Z','#0E0806')+
+  hxp('M56 82 Q100 70 144 82','', '#C9A15A',3)+
+  hxp('M96 192 V252 M82 206 H112 M88 212 L70 246 M108 212 L128 246','', '#0E0806',5)+
+  hxp('M30 270 L40 252 H64 L72 270Z','#0E0806')+hxp('M150 262 l6-18 4 18M162 262 l4-14 4 14','', '#0E0806',3));};
+HC.tm04=function(){ /* Fast & Furious 7 */
+  return hxbg('#3A1008','#FF6A3A',100,170,
+  hxc(100,150,64,'#FFB066',null,0,.55)+
+  hxp('M0 200 L100 156 L200 200 V300 H0Z','#1A0C0A')+hxp('M92 160 L108 160 L156 300 H44Z','#2A2230')+
+  hxp('M100 174 V190 M100 206 V226 M100 242 V270','', '#F2C14E',3)+
+  hxp('M44 214 Q48 190 74 186 H126 Q152 190 156 214 L160 236 H40Z','#C21A22')+
+  hxp('M60 190 L72 172 H128 L140 190Z','#1B1B22','#FFB066',1.6)+hxp('M74 176 H126 L134 188 H66Z','#7FB0E0',null,0,.45)+
+  hxc(60,222,9,'#FFF3C0')+hxc(140,222,9,'#FFF3C0')+hxc(60,222,20,'#FFF3C0',null,0,.22)+hxc(140,222,20,'#FFF3C0',null,0,.22)+
+  hxr(80,226,40,8,'#0E0E12',2)+
+  hxp('M20 70 Q60 40 100 34 Q140 40 180 70','', '#FFE9B8',1.4,.6)+hxc(100,34,2,'#FFE9B8'));};
+HC.tm05=function(){ /* Parnassus : le miroir */
+  return hxbg('#2A1038','#C06AF0',100,110,
+  hxp('M34 200 V84 Q34 28 100 28 Q166 28 166 84 V200Z','#1A0E24','#E8B04A',5)+
+  hxp('M46 200 V86 Q46 40 100 40 Q154 40 154 86 V200Z','#3A2A5A',null,0,.9)+
+  hxc(78,100,26,'#F2C14E',null,0,.9)+hxc(122,100,26,'#F0626A',null,0,.9)+hxc(100,132,26,'#7FB0E0',null,0,.9)+
+  hxc(100,100,18,'#FFF',null,0,.2)+
+  '<g fill="#12121A"><circle cx="70" cy="96" r="3"/><circle cx="86" cy="96" r="3"/><circle cx="114" cy="96" r="3"/><circle cx="130" cy="96" r="3"/><circle cx="92" cy="128" r="3"/><circle cx="108" cy="128" r="3"/></g>'+
+  hxp('M68 108 Q78 116 88 108 M112 108 Q122 116 132 108 M92 140 Q100 148 108 140','', '#12121A',2)+
+  hxp('M14 214 H186 V228 H14Z','#E8B04A')+hxp('M24 228 L14 262 H186 L176 228Z','#8A5A20')+
+  hxc(100,20,4,'#F2C14E')+hxp('M92 24 L100 12 L108 24','', '#F2C14E',2));};
+HC.tm06=function(){ /* Apocalypse Now */
+  return hxbg('#2A1A06','#E8701A',100,120,
+  hxc(100,120,74,'#E8501A',null,0,.9)+hxc(100,120,54,'#FFA040')+hxc(100,120,30,'#FFE29A')+
+  '<g fill="#0A0806">'+hxp('M20 70 Q40 62 56 68 L72 66 L70 72 L56 74 Q38 82 20 70Z')+hxp('M34 56 H60 M47 56 V64','', '#0A0806',2.4)+
+  hxp('M120 52 Q140 44 156 50 L174 48 L172 54 L156 56 Q138 64 120 52Z')+hxp('M134 38 H160 M147 38 V46','', '#0A0806',2.4)+
+  hxp('M146 106 Q162 98 176 104 L192 102 L190 108 L176 110 Q160 118 146 106Z')+'</g>'+
+  hxp('M0 206 Q60 180 100 204 Q150 176 200 202 V300 H0Z','#14100A')+
+  hxp('M30 230 V150 Q22 140 6 150 M30 150 Q34 134 52 128 M30 150 Q44 150 56 164 M30 150 Q22 134 14 128','', '#0A0806',4)+
+  hxp('M170 240 V164 Q162 154 148 160 M170 164 Q176 148 192 144 M170 164 Q184 164 194 176','', '#0A0806',4)+
+  hxp('M70 218 Q100 206 132 218 L124 232 H80Z','#2A2418'));};
+HC.tm07=function(){ /* Fitzcarraldo : le bateau sur la colline */
+  return hxbg('#0E2A18','#6EE0A0',100,90,
+  hxc(150,44,18,'#F2E8B0',null,0,.85)+
+  hxp('M0 220 Q40 150 90 130 Q130 116 160 90 Q180 80 200 76 V300 H0Z','#14402A')+
+  hxp('M0 250 Q60 190 120 176 Q170 164 200 140 V300 H0Z','#0C2A1A')+
+  hxp('M40 130 L152 92 L166 100 Q100 116 48 150Z','#8A5A30','#E8D8A0',1.4)+
+  hxp('M70 120 V70 M112 106 V54','', '#E8D8A0',2.6)+hxp('M70 70 L96 100 H70Z M112 54 L140 90 H112Z','#EDE6DA',null,0,.9)+
+  hxr(84,86,20,14,'#B9AE97',2,null,0)+hxp('M126 66 V40','', '#E8D8A0',2.2)+
+  hxp('M160 94 L186 82 M170 100 L196 92','', '#C9A15A',1.6,.8)+
+  hxp('M20 210 V176 M20 176 Q4 170 0 180 M20 176 Q30 160 44 160 M20 192 Q32 184 44 190','', '#08140C',4)+
+  hxp('M166 190 V150 M166 150 Q154 142 144 150 M166 150 Q176 138 190 144','', '#08140C',4));};
+HC.tm08=function(){ /* Waterworld */
+  return hxbg('#06304A','#4AC8F0',100,100,
+  hxc(100,96,48,'#FFB066',null,0,.9)+hxp('M0 150 H200','', '#FFE29A',1,.5)+
+  hxp('M0 150 Q25 140 50 150 T100 150 T150 150 T200 150 V300 H0Z','#0A5A7A')+
+  hxp('M0 172 Q25 162 50 172 T100 172 T150 172 T200 172 V300 H0Z','#06405A')+
+  hxp('M0 198 Q25 188 50 198 T100 198 T150 198 T200 198 V300 H0Z','#042A40')+
+  hxp('M100 44 L100 150 M100 52 L150 140 H100Z M96 70 L58 140 H96Z','#EDE6DA','#EDE6DA',1.6)+
+  hxp('M96 70 L58 140 H96Z','#E8B04A',null,0,.9)+hxp('M100 52 L150 140 H100Z','#F2E8D0')+
+  hxp('M44 150 H160 L146 164 H58Z','#2A1A12')+hxp('M20 156 V140 M30 156 V136 M180 156 V138','', '#2A1A12',3)+
+  hxp('M0 140 L30 130 L60 140','', '#0A0A0A',0));};
+HC.tm09=function(){ /* Cléopâtre */
+  return hxbg('#3A2A08','#F2C14E',100,110,
+  hxc(100,106,76,'#F2C14E',null,0,.28)+
+  hxp('M30 120 Q100 50 170 120 Q100 172 30 120Z','#EDE6DA','#E8B04A',3)+
+  hxc(100,118,32,'#2FB3C6','#12121A',2)+hxc(100,118,14,'#0B0B0C')+hxc(108,110,5,'#FFF',null,0,.9)+
+  hxp('M30 120 L8 112 M170 120 L192 112','', '#E8B04A',6)+hxp('M100 150 Q100 188 130 204 L118 160','', '#2FB3C6',5)+
+  hxp('M36 94 Q100 22 164 94','', '#2FB3C6',9)+hxp('M36 94 Q100 22 164 94','', '#E8B04A',3)+
+  hxp('M100 30 L90 54 L110 54Z','#E8B04A')+
+  hxp('M0 226 Q40 214 80 226 T160 226 T200 224 V300 H0Z','#0A2A38')+hxp('M24 244 L54 214 L84 244Z M120 244 L150 202 L180 244Z','#E8B04A',null,0,.5));};
+HC.tm10=function(){ /* Mad Max Fury Road */
+  return hxbg('#4A1404','#FF7A1A',100,120,
+  hxc(100,116,80,'#FF8A2A',null,0,.75)+hxc(100,116,48,'#FFD070')+
+  hxp('M0 180 Q50 160 100 178 Q150 158 200 176 V300 H0Z','#2A0C04')+
+  hxp('M24 196 H150 V150 H112 V128 H72 V150 H24Z','#1B120E','#FFB066',2)+
+  hxp('M40 180 H140 V204 H40Z','#3A2418')+hxp('M118 134 H146 V150 H118Z','#7FB0E0',null,0,.55)+
+  hxp('M20 150 L12 128 M50 150 L44 122 M130 128 L138 104','', '#FFB066',3)+
+  hxc(52,210,18,'#12100E','#FFB066',3)+hxc(52,210,6,'#FFB066')+hxc(126,210,18,'#12100E','#FFB066',3)+hxc(126,210,6,'#FFB066')+
+  hxc(156,210,14,'#12100E','#FFB066',3)+
+  hxp('M0 230 H200','', '#FFB066',2,.6)+hxp('M156 100 Q164 80 156 62 Q176 74 172 96 Q166 104 156 100Z','#FF5A1A')+hxp('M160 96 Q164 84 162 74 Q172 82 168 94Z','#FFE29A'));};
+
+HC.tm11=function(){ /* Oz : la route de briques */
+  return hxbg('#0A3A22','#7BE05A',100,90,
+  hxp('M60 60 V30 L70 40 L80 24 L90 40 L100 16 L110 40 L120 24 L130 40 L140 30 V60Z','#2FD08A','#CFF5D8',1.6)+hxp('M54 60 H146 V74 H54Z','#1B8A5A')+
+  hxp('M0 220 Q60 190 100 150 Q116 126 100 104 Q96 98 100 92 L120 92 Q136 116 120 150 Q150 190 200 210 V300 H0Z','#0C2A1A')+
+  hxp('M70 300 Q130 250 112 206 Q86 176 112 150 Q120 134 108 112 L98 112 Q110 134 100 150 Q76 176 100 206 Q116 250 40 300Z','#F2C14E')+
+  hxp('M100 206 L130 214 M104 236 L136 244 M110 176 L96 184 M96 270 L120 278','', '#B8861A',2)+
+  hxp('M112 112 L126 104','', '#E8B04A',1)+
+  hxp('M26 150 Q34 126 52 130 L60 146 Q44 158 26 150Z','#E02A3A')+hxp('M30 146 Q40 136 52 138','', '#FF8A96',2)+
+  hxp('M138 164 Q146 140 164 144 L172 160 Q156 172 138 164Z','#E02A3A')+hxp('M142 160 Q152 150 164 152','', '#FF8A96',2)+
+  hxc(34,40,3,'#FFF')+hxc(166,52,2,'#FFF')+hxc(20,80,2,'#CFF5D8'));};
+HC.tm12=function(){ /* Les Dents de la mer */
+  return hxbg('#041A38','#2A8AD0',100,120,
+  hxc(100,70,50,'#FFD9A0',null,0,.4)+hxp('M0 126 H200','', '#FFD9A0',1,.6)+
+  hxp('M0 126 H200 V300 H0Z','#06284A')+
+  hxp('M70 126 Q96 70 124 44 Q130 84 138 126Z','#12202E','#6A8AA8',1.6)+hxp('M124 44 Q122 86 130 126','', '#050A12',2,.5)+
+  hxp('M40 126 Q100 110 160 126 Q100 118 40 126Z','#EDE6DA',null,0,.7)+
+  hxp('M0 146 Q50 134 100 146 T200 146','', '#6AB0F0',1.6,.5)+
+  hxp('M20 236 Q100 176 180 236 Q150 274 100 262 Q50 274 20 236Z','#0A1624')+
+  hxp('M34 232 Q100 200 166 232','', '#EDE6DA',0)+
+  '<g fill="#EDE6DA">'+Array.from({length:9},function(_,i){return '<path d="M'+(42+i*14)+' 232 l5 14 l5 -14Z"/>';}).join('')+Array.from({length:8},function(_,i){return '<path d="M'+(48+i*14)+' 252 l5 -12 l5 12Z"/>';}).join('')+'</g>'+
+  hxp('M20 236 Q100 218 180 236','', '#C21A22',3,.0)+hxc(66,224,4,'#D2232C'));};
+HC.tm13=function(){ /* L'Île du docteur Moreau */
+  return hxbg('#10281C','#9A6AE0',100,90,
+  hxc(100,80,56,'#E8E0F0',null,0,.9)+hxc(100,80,70,null,'#E8E0F0',1,.25)+
+  hxp('M0 180 Q40 130 80 150 Q100 110 124 146 Q160 120 200 176 V300 H0Z','#0A1E14')+
+  hxp('M70 160 Q100 120 130 160 Q132 190 100 194 Q68 190 70 160Z','#C9A15A','#0A1E14',2)+
+  hxp('M70 160 Q66 140 76 130 L84 146Z M130 160 Q134 140 124 130 L116 146Z','#7A5A2A')+
+  hxc(88,166,5,'#0A1E14')+hxc(112,166,5,'#0A1E14')+hxc(88,166,2,'#F2E8B0')+hxc(112,166,2,'#F2E8B0')+
+  hxp('M88 182 Q100 190 112 182','', '#0A1E14',2.4)+hxp('M92 184 l2 6 l2 -6 M104 184 l2 6 l2 -6','', '#EDE6DA',1.4)+
+  hxp('M0 220 Q50 196 100 214 Q150 192 200 214 V300 H0Z','#06120C')+
+  hxp('M12 230 V170 Q4 156 -6 160 M12 170 Q24 154 40 160 M12 190 Q26 180 36 190','', '#06120C',5)+
+  hxp('M188 232 V176 Q196 160 210 164 M188 176 Q176 160 160 166','', '#06120C',5));};
+HC.tm14=function(){ /* Titanic */
+  return hxbg('#1A1030','#FF8A4A',100,110,
+  hxc(100,120,70,'#FFB066',null,0,.7)+hxc(100,120,36,'#FFE9B8')+
+  hxp('M0 190 H200','', '#FFD9A0',1,.5)+
+  hxp('M20 180 Q44 150 60 142 L158 142 Q176 150 190 168 L196 188 Q100 206 4 188Z','#150E1E')+
+  hxp('M70 142 V102 H112 V142Z','#150E1E')+hxp('M74 102 V84 H108 V102Z','#1E1426')+
+  hxr(80,92,6,5,'#FFD070')+hxr(92,92,6,5,'#FFD070')+hxr(84,112,6,5,'#FFD070')+hxr(98,112,6,5,'#FFD070')+hxr(112,150,6,5,'#FFD070')+hxr(130,150,6,5,'#FFD070')+hxr(148,152,6,5,'#FFD070')+
+  hxp('M126 142 V74 H140 V142Z','#150E1E')+hxr(126,70,14,6,'#E8B04A')+
+  hxp('M150 142 V82 H162 V142Z','#150E1E')+hxr(150,78,12,6,'#E8B04A')+
+  hxp('M0 206 Q50 192 100 206 T200 204 V300 H0Z','#0A0A1A')+hxp('M0 226 Q60 212 120 228 T200 224 V300 H0Z','#06060E')+
+  hxp('M150 214 L168 160 L190 214Z','#CFE6F0',null,0,.9)+hxp('M168 160 L178 214 L190 214Z','#8AB0C8',null,0,.9));};
+HC.tm15=function(){ /* La Porte du paradis : 220 heures de pellicule */
+  var cans='';for(var i=0;i<5;i++){cans+=hxr(40+i*24,150+(i%2)*0,22,22,'#C9A15A',3,'#6A4A18',1.4)+hxr(40+i*24,134+(i%2)*0,22,16,'#E8D8A0',3,'#6A4A18',1.4);}
+  return hxbg('#3A1A08','#F2A04A',100,100,
+  hxc(100,86,60,'#FFB066',null,0,.75)+hxp('M0 150 Q50 130 100 148 Q150 128 200 146 V300 H0Z','#5A2A10')+
+  hxp('M0 176 Q60 160 120 178 T200 172 V300 H0Z','#2A1208')+
+  hxp('M70 80 Q72 56 100 54 Q128 56 130 80 Q146 84 156 96 Q128 90 100 92 Q72 90 44 96 Q54 84 70 80Z','#0E0806')+hxp('M76 74 Q100 64 124 74','', '#C9A15A',2.4)+
+  hxr(30,172,140,30,'#8A5A20',4,'#4A2A0A',1.4)+cans+
+  hxc(52,186,8,'#2A1A0A')+hxc(152,186,8,'#2A1A0A')+
+  hxp('M20 230 H180','', '#FFD9A0',1,.4)+hxp('M30 214 L40 204 H160 L170 214Z','#C9A15A',null,0,.7));};
+HC.tm16=function(){ /* L'Enfer de Clouzot : l'œil et la spirale */
+  var r='';for(var i=0;i<7;i++){r+=hxc(100,100,12+i*11,null,['#E8402A','#2A6AE0','#F2C14E','#B04AE0','#2FB3C6','#E8402A','#F2C14E'][i],4.2,.9);}
+  return hxbg('#10102A','#E8402A',100,100,
+  r+hxc(100,100,10,'#0B0B0C')+hxc(104,96,3,'#FFF')+
+  hxp('M4 100 Q100 20 196 100 Q100 180 4 100Z','','#EDE6DA',3)+
+  hxp('M70 206 Q100 190 130 206 Q100 232 70 206Z','#2A6AE0')+hxp('M70 206 Q100 214 130 206','', '#0A1A5A',2)+
+  hxp('M20 250 H180','', '#F2C14E',1,.0));};
+HC.tm17=function(){ /* Don Quichotte : le moulin et le chevalier */
+  return hxbg('#3A2A08','#E8B04A',100,120,
+  hxc(100,110,76,'#F2D080',null,0,.55)+
+  hxp('M0 206 Q60 190 120 204 T200 200 V300 H0Z','#2A1E0A')+hxp('M0 232 Q70 216 140 232 T200 228 V300 H0Z','#1A1206')+
+  hxp('M100 206 L88 118 H112Z','#E8D8A0','#6A4A18',2)+hxp('M86 118 H114 L100 94Z','#8A5A20')+
+  '<g transform="rotate(14 100 106)">'+hxp('M100 106 L92 22 L108 22Z','#EDE6DA','#6A4A18',1.4)+hxp('M100 106 L184 98 L186 114Z','#EDE6DA','#6A4A18',1.4)+hxp('M100 106 L108 190 L92 190Z','#EDE6DA','#6A4A18',1.4)+hxp('M100 106 L16 114 L14 98Z','#EDE6DA','#6A4A18',1.4)+'</g>'+hxc(100,106,7,'#6A4A18')+
+  hxp('M20 230 L24 200 Q34 190 46 200 L54 230Z','#0E0A06')+hxp('M30 200 L36 176 L42 200Z','#0E0A06')+hxp('M26 174 L72 150','', '#0E0A06',2.6)+hxp('M70 150 l6-2 -3 6Z','#0E0A06')+
+  hxp('M0 56 Q80 70 200 40','', '#FFF',1.6,.5));};
+HC.tm18=function(){ /* The Other Side of the Wind : le coffre et la bobine */
+  return hxbg('#0A1A26','#4A9AD0',100,110,
+  hxc(100,110,92,'#12202E','#4A9AD0',4,1)+hxc(100,110,76,'#1B3246','#8AB8E0',2)+
+  '<g>'+Array.from({length:12},function(_,i){var a=i*Math.PI/6;return hxc((100+Math.cos(a)*60).toFixed(1),(110+Math.sin(a)*60).toFixed(1),3,'#8AB8E0');}).join('')+'</g>'+
+  hxp('M100 110 L100 34 A76 76 0 0 1 166 72Z','#0B0B0C',null,0,.55)+
+  hxc(100,110,40,'#2A2A32','#EDE6DA',3)+hxc(100,110,8,'#EDE6DA')+
+  Array.from({length:5},function(_,i){var a=i*Math.PI*2/5-Math.PI/2;return hxc((100+Math.cos(a)*24).toFixed(1),(110+Math.sin(a)*24).toFixed(1),8,'#0B0B0C','#EDE6DA',1.6);}).join('')+
+  hxp('M166 110 H196','', '#EDE6DA',4)+hxr(160,102,12,16,'#EDE6DA',2)+
+  hxp('M20 240 H180 V262 H20Z','#C9A15A',null,0,.0)+hxp('M30 208 Q100 168 170 208','', '#F2C14E',2,.0));};
+HC.tm19=function(){ /* ¡Que viva México! */
+  return hxbg('#4A1A08','#FF8A2A',100,90,
+  hxc(100,80,56,'#FFC36B')+hxc(100,80,40,'#FFE29A')+hxp('M100 10 V150 M30 80 H170 M50 30 L150 130 M150 30 L50 130','', '#FF8A2A',2,.5)+
+  hxp('M44 200 L60 166 H140 L156 200Z','#8A3A1A')+hxp('M60 166 L72 140 H128 L140 166Z','#A44A22')+hxp('M72 140 L84 118 H116 L128 140Z','#BE5A2A')+hxp('M84 118 L94 100 H106 L116 118Z','#D26A32')+
+  hxr(92,176,16,24,'#2A1208',2)+
+  hxp('M0 206 H200 V300 H0Z','#2A1208')+
+  hxp('M20 236 Q14 200 30 180 Q34 206 38 236Z M30 236 Q30 196 50 188 Q46 214 40 236Z','#4AC08A')+
+  hxp('M170 236 Q176 200 160 180 Q156 206 152 236Z M160 236 Q160 196 140 188 Q144 214 150 236Z','#4AC08A')+
+  hxc(70,244,6,'#FFB020')+hxc(84,250,5,'#FF7A1A')+hxc(116,248,6,'#FFB020')+hxc(130,244,5,'#FF7A1A'));};
+HC.tm20=function(){ /* Queen Kelly : le rideau et la couronne */
+  return hxbg('#3A0A18','#E8402A',100,110,
+  hxp('M0 0 H200 V300 H0Z','#5A0E22',null,0,.5)+
+  hxp('M0 0 Q40 60 30 300 H0Z M200 0 Q160 60 170 300 H200Z','#8A1230')+hxp('M0 0 Q70 30 100 24 Q130 30 200 0 V20 Q140 56 100 44 Q60 56 0 20Z','#B01A3C')+
+  hxc(100,130,52,'#F2C14E',null,0,.35)+
+  hxp('M56 140 L48 90 L76 114 L100 76 L124 114 L152 90 L144 140Z','#F2C14E','#8A5A10',2.4)+hxr(56,140,88,14,'#E8B04A',3,'#8A5A10',2.4)+
+  hxc(48,88,6,'#E02A3A','#8A5A10',1.4)+hxc(100,74,6,'#2FB3C6','#8A5A10',1.4)+hxc(152,88,6,'#E02A3A','#8A5A10',1.4)+hxc(100,148,5,'#FFF',null,0,.9)+
+  hxr(20,176,160,10,'#0B0B0C',0)+Array.from({length:10},function(_,i){return hxr(24+i*16,178,8,6,'#EDE6DA',1);}).join(''));};
+
+HC.tm21=function(){ /* Shining : la hache dans la porte */
+  return hxbg('#3A0606','#E02A2A',100,110,
+  hxp('M30 20 H170 V300 H30Z','#2A1208','#7A3A18',3)+hxp('M46 36 H154 V160 H46Z','#3A1A0C','#7A3A18',2)+hxp('M46 176 H154 V270 H46Z','#3A1A0C','#7A3A18',2)+
+  hxp('M96 70 L112 56 L118 90 L104 120 L112 150 L92 140 L88 104Z','#0B0B0C')+
+  hxp('M92 60 L98 84 L84 112 L98 134','', '#FFB8A0',1.6,.7)+
+  hxp('M70 14 L56 40 L64 46 L34 98 L50 106 L84 52 L92 56 L100 28Z','#C9CCD2','#6A6E78',1.6)+
+  hxp('M34 98 L60 190 L72 186 L50 106Z','#6A3A18','#2A1208',1.6)+
+  hxp('M96 70 L112 56','', '#E02A2A',0)+hxc(104,92,4,'#FFE0D0')+hxc(104,92,10,'#FFE0D0',null,0,.3)+
+  hxp('M0 0 L30 20 V300 L0 300Z M200 0 L170 20 V300 L200 300Z','#0B0B0C',null,0,.6));};
+HC.tm22=function(){ /* Les Révoltés du Bounty */
+  return hxbg('#06304A','#E8B04A',100,100,
+  hxc(100,88,64,'#FFC36B',null,0,.65)+hxc(100,88,36,'#FFE9B8')+
+  hxp('M0 160 Q50 148 100 160 T200 160 V300 H0Z','#0A4A6A')+hxp('M0 186 Q50 174 100 186 T200 186 V300 H0Z','#06304A')+hxp('M0 214 Q50 202 100 214 T200 214 V300 H0Z','#041E34')+
+  hxp('M30 160 H168 L152 182 H46Z','#4A2A10','#C9A15A',2)+hxp('M30 160 L22 148','', '#C9A15A',3)+
+  hxp('M60 160 V54 M100 160 V34 M140 160 V60','', '#2A1A0A',4)+
+  hxp('M60 58 Q90 66 100 76 L100 150 Q76 156 60 150Z','#EDE6DA','#C9B890',1.4)+hxp('M100 40 Q130 50 140 62 L140 150 Q120 156 100 150Z','#F2E8D0','#C9B890',1.4)+hxp('M44 80 Q60 76 60 90 L60 140 Q50 144 44 140Z','#EDE6DA',null,0,.8)+
+  hxp('M140 64 L176 74 L140 100Z','#E02A3A')+hxp('M96 38 L96 26 L112 32 L96 36','', '#E02A3A',0)+
+  hxp('M170 220 Q180 190 176 164 Q190 176 196 196 L196 260 H168Z','#0A3A2A')+hxp('M184 200 q-14-12-26-8 M184 200 q10-14 22-12','', '#2FB36A',4)+hxp('M184 200 V250','', '#06201A',4));};
+HC.tm23=function(){ /* Les Désaxés : le mustang */
+  return hxbg('#4A2008','#F2A04A',100,110,
+  hxc(100,104,80,'#FFC36B',null,0,.65)+hxc(100,104,46,'#FFE29A')+
+  hxp('M0 206 Q60 192 120 206 T200 202 V300 H0Z','#6A3A18')+hxp('M0 236 Q70 222 140 238 T200 234 V300 H0Z','#3A1C0A')+
+  hxp('M34 206 L28 190 L40 160 Q50 120 76 110 L84 90 Q90 80 96 84 L98 100 Q110 100 124 112 Q150 114 168 136 L180 120 L176 146 Q172 170 160 190 L168 206 L154 206 L146 184 L132 168 L112 176 L104 206 H90 L88 180 L64 176 L50 206Z','#120A06')+
+  hxp('M96 84 L92 68 L102 76Z','#120A06')+hxp('M84 90 Q70 96 66 120','', '#120A06',6)+hxc(94,94,2,'#FFE29A')+
+  hxp('M176 126 Q196 130 198 160 Q188 150 178 150','', '#120A06',5)+
+  hxp('M20 90 Q60 60 100 70','', '#C9A15A',1.6,.6)+hxp('M14 90 q8 -20 20 -14','', '#C9A15A',1.6,.6));};
+HC.tm24=function(){ /* Blade Runner */
+  return hxbg('#06142A','#2AD0E8',100,100,
+  hxc(100,92,66,'#E02AA0',null,0,.35)+
+  '<g stroke="#7FD0F0" stroke-width="1" opacity=".45">'+Array.from({length:18},function(_,i){return '<path d="M'+(i*12)+' 0 l-10 90"/>';}).join('')+'</g>'+
+  hxp('M0 220 V132 H26 V104 H48 V150 H66 V74 H92 V170 H112 V96 H138 V160 H156 V116 H182 V190 H200 V220Z','#0A0E1C')+
+  hxp('M20 300 V176 H44 V300Z M150 300 V150 H178 V300Z','#06080F')+
+  Array.from({length:22},function(_,i){return hxr(70+(i%4)*20,86+Math.floor(i/4)*16,6,6,['#FFB020','#2AD0E8','#E02AA0'][i%3],0,null,0,.9);}).join('')+
+  hxp('M52 56 L60 50 H100 L108 56 L100 64 H60Z','#E8ECF0','#2AD0E8',2)+hxp('M68 50 L76 42 H92 L98 50','#2A3A50','#2AD0E8',1.6)+hxc(60,60,4,'#FF4A4A')+hxc(100,60,4,'#FFF')+hxp('M54 70 L28 96 M106 70 L132 96','', '#FFF',2,.35)+
+  hxp('M0 260 H200','', '#E02AA0',2,.7)+hxc(150,38,12,null,'#2AD0E8',2)+hxc(150,38,4,'#2AD0E8'));};
+HC.tm25=function(){ /* Autant en emporte le vent */
+  return hxbg('#5A0A08','#FF5A1A',100,130,
+  hxc(100,150,90,'#FF8A2A',null,0,.55)+
+  hxp('M0 190 Q30 140 50 170 Q70 120 96 168 Q120 100 150 164 Q170 130 200 170 V300 H0Z','#FF5A1A',null,0,.0)+
+  hxp('M20 200 Q40 120 70 150 Q84 90 106 140 Q130 80 150 150 Q170 120 190 200Z','#E8401A',null,0,.85)+hxp('M54 200 Q70 150 92 168 Q110 120 128 170 Q146 150 160 200Z','#FFB020')+hxp('M82 200 Q100 170 120 200Z','#FFE29A')+
+  hxp('M0 206 H200 V300 H0Z','#120606')+
+  hxp('M44 206 V150 H156 V206Z','#1A0A08')+hxp('M36 150 H164 L100 112Z','#1A0A08')+
+  Array.from({length:6},function(_,i){return hxr(52+i*20,154,8,52,'#1A0A08',0);}).join('')+
+  hxr(94,180,12,26,'#FFB020',1)+hxr(60,168,10,14,'#FFB020')+hxr(130,168,10,14,'#FFB020')+
+  hxp('M20 246 V206 M20 226 Q10 216 6 206 M180 246 V206 M180 226 Q190 216 194 206','', '#120606',4));};
+HC.tm26=function(){ /* Le Conquérant : casque mongol et nuage */
+  return hxbg('#4A2A0A','#E8A040',100,120,
+  hxc(150,90,46,'#E8501A',null,0,.5)+
+  hxp('M120 150 Q110 120 130 104 Q124 84 150 78 Q166 70 176 84 Q198 88 190 108 Q202 124 180 138 Q172 150 150 146Z','#B87A4A',null,0,.8)+
+  hxp('M138 150 V190 H162 V146Z','#8A5A30',null,0,.8)+
+  hxp('M0 200 Q50 186 100 198 T200 194 V300 H0Z','#7A4A20')+hxp('M0 230 Q70 214 140 232 T200 226 V300 H0Z','#4A2A10')+
+  hxp('M24 188 L24 130 Q24 96 56 84 L56 70 L60 56 L64 70 L64 84 Q96 96 96 130 L96 188Z','#2A2218','#C9A15A',2.4)+
+  hxp('M24 150 H96 M24 168 H96','', '#C9A15A',2)+hxp('M34 130 Q60 112 86 130 L86 150 H34Z','#0B0B0C')+hxp('M42 138 H78','', '#E8A040',2)+
+  hxp('M60 56 V40','', '#E02A2A',3)+hxp('M60 40 Q74 38 78 48 Q66 50 60 40Z','#E02A2A'));};
+HC.tm27=function(){ /* Poltergeist : le poste de télévision */
+  return hxbg('#06142A','#4A9AF0',100,110,
+  hxc(100,110,88,'#8AC8FF',null,0,.22)+
+  hxp('M30 70 H170 Q180 70 180 80 V176 Q180 186 170 186 H30 Q20 186 20 176 V80 Q20 70 30 70Z','#1A1A22','#6A6A78',3)+
+  hxp('M34 82 H166 V174 H34Z','#BFE0FF')+
+  hxp('M34 82 H166 V174 H34Z','#4A9AF0',null,0,.5)+
+  '<g stroke="#0B0B0C" stroke-width="2" opacity=".45">'+Array.from({length:10},function(_,i){return '<path d="M34 '+(88+i*9)+' H166"/>';}).join('')+'</g>'+
+  hxp('M100 174 Q96 150 100 140 Q104 120 98 110 L90 90 M100 140 Q114 138 120 124 M98 142 Q84 140 78 128 M100 150 Q108 160 114 154','', '#EDE6DA',5)+
+  hxc(90,90,5,'#EDE6DA')+hxc(98,86,4,'#EDE6DA')+hxc(106,88,4,'#EDE6DA')+hxc(112,94,4,'#EDE6DA')+
+  hxp('M70 186 L56 210 M130 186 L144 210','', '#6A6A78',5)+hxr(150,100,12,12,'#6A6A78',6,null,0,.0)+hxc(170,100,5,'#6A6A78')+hxc(170,118,5,'#6A6A78'));};
+HC.tm28=function(){ /* L'Exorciste : la lumière à la fenêtre */
+  return hxbg('#0A1220','#8AC8FF',100,80,
+  hxp('M100 4 L60 190 H140Z','#BFE0FF',null,0,.28)+
+  hxp('M0 220 H200 V300 H0Z','#06080F')+hxp('M0 200 Q60 190 100 200 T200 196 V230 H0Z','#6A7A8A',null,0,.35)+
+  hxp('M50 200 V104 L100 64 L150 104 V200Z','#14181F','#2A3240',2)+hxp('M44 104 L100 56 L156 104','', '#2A3240',3)+
+  hxr(86,96,28,40,'#E8F4FF',1,'#8AA8C8',2)+hxp('M100 96 V136 M86 116 H114','', '#8AA8C8',1.6)+
+  hxc(100,116,24,'#BFE0FF',null,0,.3)+hxr(62,150,16,24,'#2A3240',1)+hxr(122,150,16,24,'#2A3240',1)+hxr(90,166,20,34,'#0B0B0F',1)+
+  hxp('M156 236 V150 M156 150 Q164 150 164 142','', '#2A3240',4)+hxc(164,142,8,'#FFD070')+hxc(164,142,20,'#FFD070',null,0,.2)+
+  hxp('M96 230 Q94 206 104 196 Q114 206 112 230Z','#0B0B0F')+hxc(104,190,7,'#0B0B0F')+hxp('M94 186 H114 M98 182 Q104 174 110 182','#0B0B0F','#0B0B0F',2)+hxr(112,214,16,12,'#0B0B0F',2)+
+  hxp('M0 250 Q60 236 120 250 T200 246','', '#8AC8FF',1.6,.35));};
+HC.tm29=function(){ /* Superman */
+  return hxbg('#0A2A6A','#4AA0F0',100,100,
+  hxc(100,100,80,'#FFE29A',null,0,.28)+
+  hxp('M20 70 L100 44 L180 70 L180 150 Q180 190 100 232 Q20 190 20 150Z','#E02A2A','#F2C14E',4)+
+  hxp('M30 76 L100 52 L170 76 L170 148 Q170 182 100 218 Q30 182 30 148Z','#F2C14E',null,0,.0)+
+  hxp('M138 92 H72 Q58 92 58 108 Q58 122 74 126 L126 138 Q142 142 142 156 Q142 172 126 172 H58','', '#F2C14E',16)+
+  hxp('M138 92 H72 Q58 92 58 108 Q58 122 74 126 L126 138 Q142 142 142 156 Q142 172 126 172 H58','', '#0A2A6A',9)+
+  hxp('M0 260 Q50 236 100 260 T200 256 V300 H0Z','#0A1A3A')+
+  hxp('M20 70 L100 44 L180 70','', '#FFF3C0',2,.6));};
+HC.tm30=function(){ /* La Malédiction : l'éclair et le chien noir */
+  return hxbg('#1A0606','#E02A2A',100,100,
+  hxc(100,90,70,'#E02A2A',null,0,.25)+
+  hxp('M0 0 H200 V300 H0Z','#0B0B0C',null,0,.35)+
+  hxp('M112 0 L72 96 H104 L76 184 L146 70 H112 L134 0Z','#FFE9B8')+hxp('M112 0 L72 96 H104 L76 184 L146 70 H112 L134 0Z','#FFFFFF',null,0,.4)+
+  hxp('M0 210 H200 V300 H0Z','#06060A')+
+  hxp('M56 250 L64 220 Q70 204 88 200 L100 190 Q106 184 112 190 L118 200 Q132 200 140 212 L150 250 H136 L130 232 L120 250 H108 L100 236 L92 250 H76 L70 238Z','#0B0B0F')+
+  hxp('M106 190 L112 172 L118 192Z M96 192 L94 176 L104 190Z','#0B0B0F')+
+  hxc(100,200,2.4,'#FF3A3A')+hxc(112,200,2.4,'#FF3A3A')+hxc(100,200,7,'#FF3A3A',null,0,.3)+hxc(112,200,7,'#FF3A3A',null,0,.3)+
+  hxp('M14 236 V176 L24 160 L34 176 V236Z M164 236 V160 L176 140 L188 160 V236Z','#0B0B0F')+hxp('M24 160 V148 M20 152 H28','', '#0B0B0F',2)+
+  '<text x="100" y="140" text-anchor="middle" font-family="Archivo Black,Impact,sans-serif" font-size="40" fill="#E02A2A" opacity=".55">666</text>');};
+
+/* HC:END */
 function hexRGB(c){c=c.replace('#','');if(c.length===3)c=c[0]+c[0]+c[1]+c[1]+c[2]+c[2];return [parseInt(c.substr(0,2),16),parseInt(c.substr(2,2),16),parseInt(c.substr(4,2),16)];}
 function mixHex(c1,c2,t){var a=hexRGB(c1),b=hexRGB(c2),o=a.map(function(v,i){return Math.round(v+(b[i]-v)*t);});return '#'+o.map(function(v){return ('0'+v.toString(16)).slice(-2);}).join('');}
 /* Covers d'épisodes : sujet en grand, formes pleines teintées, fond saturé, lumière (même langage que les séries) */
@@ -2942,9 +3243,9 @@ function enrichLite(raw,key,n){
 function art(key){
   var f=P[key]||P.theranos;
   /* identifiants de dégradés uniques pour chaque affiche affichée */
-  var n=++uid,raw=f();
-  if(raw.indexOf('translate(30 6) scale(.7)')>=0)raw=enrichCover(raw,key,n);
-  else if(/^pt\d+$/.test(key))raw=enrichLite(raw,key,n);
+  var n=++uid,raw=HC[key]?HC[key]():f();
+  if(!HC[key]&&raw.indexOf('translate(30 6) scale(.7)')>=0)raw=enrichCover(raw,key,n);
+  else if(!HC[key]&&/^pt\d+$/.test(key))raw=enrichLite(raw,key,n);
   return '<svg viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+raw.replace(/id="(g\w)"/g,'id="$1'+n+'"').replace(/url\(#(g\w)\)/g,'url(#$1'+n+')')+'</svg>';
 }
 function poster(key){ return '<div class="poster">'+art(key)+'</div>'; }
