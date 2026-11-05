@@ -509,7 +509,22 @@ STORIES.joconde={p:'joconde',kind:'Radar · Récit',fmt:'Récit',min:6,series:"L
     next:'eiffel'};
 var SERIE={name:"Jusqu'à la chute",p:'chute',
   desc:"Cinquante-deux femmes et hommes ont gagné. Judy Garland, Mike Tyson, Amy Winehouse, Elizabeth Holmes, Eminem : voici ce que la réussite leur a fait, promis, permis, et ce qu'elle ne pouvait pas leur prendre. Un portrait complet à lire chaque matin, ou d'un trait."};
-var T=['Destins','Arnaques','Inventions','Corps et science','Exploits','Coulisses'];
+var THEMES=[
+ {k:'histoire',n:'Histoire',d:'Procès de rois, batailles, guerres secrètes et évasions qui ont pesé sur leur siècle.'},
+ {k:'science',n:'Science',d:'Des cobayes volontaires, des découvertes par accident et des pannes qui ont changé la façon de construire le monde.'},
+ {k:'marques',n:'Marques',d:'Ce qui se passe quand un nom, un logo ou une promesse de marque tourne mal ou fait date.'},
+ {k:'personnes',n:'Personnes',d:'Escrocs, imposteurs, grands caractères : des gens dont on ne se lasse pas de raconter la vie.'},
+ {k:'vie',n:'Une vie',d:'Un destin entier en un long récit : l\'ascension, la chute, ce qui reste.'},
+ {k:'jour',n:'Le jour qui a tout changé',d:'Vingt-quatre heures, parfois moins, après lesquelles plus rien n\'est comme avant.'},
+ {k:'date',n:'Une date, une histoire',d:'Toutes les histoires rangées dans le temps, de l\'Antiquité à aujourd\'hui.'},
+ {k:'arts',n:'Arts',d:'Les coulisses du cinéma, des livres et des faux : ce que l\'art a coûté à ceux qui l\'ont fait.'},
+ {k:'sport',n:'Sport',d:'Des duels, des exploits et des victoires que personne n\'attendait.'},
+ {k:'aventure',n:'Aventure',d:'Survivre, s\'évader, aller plus loin que personne : ce que des gens ont fait pour rester en vie ou arriver les premiers.'},
+ {k:'crimes',n:'Crimes et mystères',d:'Casses, disparitions et secrets d\'État : ce que l\'on sait et ce que l\'on ignore encore.'}
+];
+var T=THEMES.map(function(x){return x.n;});
+var TH=DATA.TH||{},YR=DATA.YR||{};
+TH.eiffel='personnes';YR.eiffel=1925;
 var SERIES=[
   {n:"Jusqu'à la chute",t:0,p:'chute',go:'serie'},
   {n:"Le dernier jour",t:0,p:'ldserie',go:'serieL',c:'#E8B04A',syn:"Lincoln, Molière, Marie Curie, Scott, Lennon, le Titanic : vingt-huit dernières journées, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Personne ne savait que c'était la dernière."},
@@ -1199,26 +1214,35 @@ function tile(o){
 var EPX=null;
 function epIndex(){
   if(EPX)return EPX;
-  var bySerie={},order=[];
-  SERIES.forEach(function(x,k){if(x.go){bySerie[x.n]={k:k,t:x.t,ids:[]};order.push(x.n);}});
+  var ki={};THEMES.forEach(function(x,i){ki[x.k]=i;});
+  var groups=THEMES.map(function(){return {};});
   Object.keys(STORIES).forEach(function(id){
-    if(GONE[id])return;
-    var b=bySerie[STORIES[id].series];if(b)b.ids.push(id);
+    if(GONE[id])return;var st=STORIES[id];
+    var k=st.book?'vie':TH[id];if(!k||ki[k]===undefined||st.daily)return;
+    var g=groups[ki[k]],sr=st.series||'x';(g[sr]=g[sr]||[]).push(id);
+    st.th=ki[k];
   });
   function mix(lists){var out=[],i=0,more=true;while(more){more=false;lists.forEach(function(l){if(i<l.length){out.push(l[i]);more=true;}});i++;}return out;}
-  var byT=T.map(function(_,ti){return mix(order.filter(function(n){return bySerie[n].t===ti;}).map(function(n){return bySerie[n].ids;}));});
-  EPX={bySerie:bySerie,order:order,byT:byT,all:mix(byT)};
+  var byT=groups.map(function(g,ti){
+    if(THEMES[ti].k==='vie'){return (g[Object.keys(g)[0]]||[]).slice().sort();}
+    return mix(Object.keys(g).sort().map(function(n){return g[n];}));
+  });
+  var di=ki.date,dl=[];
+  Object.keys(STORIES).forEach(function(id){var st=STORIES[id];if(GONE[id]||st.book||st.daily||YR[id]===undefined)return;dl.push(id);});
+  dl.sort(function(a,b){return YR[a]-YR[b]||(a<b?-1:1);});
+  byT[di]=dl;
+  /* enchaînement « à lire ensuite » au sein du thème (hors portraits, qui gardent leur ordre) */
+  byT.forEach(function(l,ti){if(ti===di)return;l.forEach(function(id,j){var st=STORIES[id];if(st.book)return;st.series=THEMES[ti].n;st.next=l[j+1]||null;});});
+  var all=[];var seen={};byT.forEach(function(l,ti){if(ti===di)return;l.forEach(function(id){if(!seen[id]){seen[id]=1;all.push(id);}});});
+  EPX={byT:byT,all:mix(byT.filter(function(_,ti){return ti!==di;})),ki:ki};
   return EPX;
 }
-function epTile(id){
-  var st=STORIES[id];
-  return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
+function yrLabel(id){var y=YR[id];if(y===undefined)return '';return y<0?(-y)+' av. J.-C.':String(y);}
+function epTile(id,withYear){
+  var st=STORIES[id],lab=(withYear===true&&YR[id]!==undefined)?yrLabel(id):(st.series||st.kind);
+  return tile({p:st.p,t:st.title,s:lab+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
 }
-function serieTile(x){
-  var n=epIndex().bySerie[x.n],c=n?n.ids.length:0;
-  return tile({p:x.p,t:x.n,s:c?c+' épisodes':'Bientôt',attr:'data-pick="'+(x.go||('soon:'+SERIES.indexOf(x)))+'"',badge:x.go?'':'<span class="soon">Bientôt</span>'});
-}
-function nextOf(n){var b=epIndex().bySerie[n];if(!b)return null;for(var i=0;i<b.ids.length;i++)if(!S.read[b.ids[i]])return b.ids[i];return b.ids[0]||null;}
+function nextOf(ti){var l=epIndex().byT[ti]||[];for(var i=0;i<l.length;i++)if(!S.read[l[i]])return l[i];return l[0]||null;}
 
 /* =====================================================================
    ÉCRANS
@@ -1252,18 +1276,17 @@ function home(){
     '<div class="topnav"><span class="mark" role="img" aria-label="OPSIS">'+logoSVG()+'<span class="wordmark" aria-hidden="true">PSIS</span></span><span class="tools"><button class="iconbtn" data-explore aria-label="Explorer par thème">'+IC.search+'</button><button class="iconbtn" data-lib aria-label="Ma bibliothèque">'+IC.lib+(libCount()?'<span class="count">'+libCount()+'</span>':'')+'</button></span></div>'+
     '<div class="heroinfo"><p class="kick"><b>Histoire du jour</b> · '+dateFr()+'</p>'+
     '<button data-pick="'+hid+'" style="display:block;width:100%;text-align:center"><h1 class="bigtitle">'+esc(st.title)+'</h1></button>'+
-    '<p class="meta">'+(hid==='eiffel'?'Flash · '+st.min+' min · Série L\'arnaque parfaite':esc(st.kind)+' · '+st.min+' min'+(st.meta?' · '+esc(st.meta.split(' · ')[0]):''))+'</p>'+
+    '<p class="meta">'+(hid==='eiffel'?'Flash · '+st.min+' min · Personnes':esc(st.kind)+' · '+st.min+' min'+(st.meta?' · '+esc(st.meta.split(' · ')[0]):''))+'</p>'+
     '<div class="cta"><button class="btn light" data-open="'+hid+'">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="'+hid+'">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+
-    '<div class="shelf"><h2><span>À lire maintenant <small>Un épisode de chaque série</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+epIndex().order.map(nextOf).filter(Boolean).map(epTile).join('')+'</div></div>'+
+    '<div class="shelf"><h2><span>À lire maintenant <small>Une histoire de chaque thème</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+T.map(function(_,i){return THEMES[i].k==='date'?null:nextOf(i);}).filter(Boolean).map(function(id){return epTile(id);}).join('')+'</div></div>'+
     '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+
-    '<div class="explore" id="explore"><h2 class="exh">Séries et thèmes</h2><p class="exs">'+epIndex().order.length+' séries, '+epIndex().all.length+' épisodes, six territoires</p>'+
-      '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div>'+
-      '<div class="shelf" style="padding:0"><h2><span>Les séries <small>'+epIndex().order.length+'</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+SERIES.filter(function(x){return x.go;}).map(serieTile).join('')+'</div></div></div>'+
+    '<div class="explore" id="explore"><h2 class="exh">Thèmes</h2><p class="exs">'+epIndex().all.length+' histoires, '+T.length+' thèmes</p>'+
+      '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
     T.map(function(t,i){
-      var ids=epIndex().byT[i].slice(0,30);
+      var ids=epIndex().byT[i].slice(0,30),dt=THEMES[i].k==='date';
       if(!ids.length)return '';
-      return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+' <small>'+epIndex().byT[i].length+' épisodes</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(epTile).join('')+'</div></div>';
+      return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+' <small>'+epIndex().byT[i].length+' histoires</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
     }).join('')+
     '<div class="bottomspace"></div>';
 }
@@ -1272,11 +1295,10 @@ function library(){
   var f=S.filter,X=epIndex();
   var chips='<button data-filter="-1" aria-pressed="'+(f<0)+'">Tout</button>'+T.map(function(t,i){return '<button data-filter="'+i+'" aria-pressed="'+(f===i)+'">'+t+'</button>';}).join('');
   var ids=(f<0?X.all:X.byT[f]),cap=90;
-  var ser=SERIES.filter(function(x){return x.go&&(f<0||x.t===f);});
-  var grid=ids.slice(0,cap).map(epTile).join('');
+  var dt=f>=0&&THEMES[f].k==='date';
+  var grid=ids.slice(0,cap).map(function(id){return epTile(id,dt);}).join('');
   return '<h1 class="ptitle">Bibliothèque</h1><div class="chips">'+chips+'</div>'+
-    (ser.length?'<div class="shelf"><h2>Séries <small>'+ser.length+'</small></h2><div class="rail">'+ser.map(serieTile).join('')+'</div></div>':'')+
-    (ids.length?'<div class="shelf"><h2>Épisodes <small>'+ids.length+(ids.length>cap?' · '+cap+' affichés':'')+'</small></h2></div><div class="grid">'+grid+'</div>':'<div class="empty"><b>Bientôt</b>Les premières séries de ce territoire arrivent après le lancement.</div>')+'<div class="bottomspace"></div>';
+    (ids.length?'<div class="shelf"><h2>Histoires <small>'+ids.length+(ids.length>cap?' · '+cap+' affichés':'')+'</small></h2></div><div class="grid">'+grid+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+'<div class="bottomspace"></div>';
 }
 
 function saved(){
@@ -1286,14 +1308,9 @@ function saved(){
   function railOf(list){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:st.kind+', '+st.min+' min',attr:'data-pick="'+id+'"'});}).join('')+'</div>';}
   var saved=ids.length?railOf(ids):'<p class="hint">Touchez « Ma liste » sur une histoire pour la garder ici.</p>';
   var read=readIds.length?railOf(readIds):'<p class="hint">Les histoires terminées apparaîtront ici.</p>';
-  var fol=follows.length?'<div class="rail">'+follows.map(function(k){
-      var x=k==='serie'?{p:'chute',n:"Jusqu'à la chute",sub:'Un portrait chaque matin',go:'serie'}:SERIES[+k.slice(5)];
-      return tile({p:x.p,t:x.n,s:x.sub||'Premier épisode bientôt',attr:'data-pick="'+(x.go||k)+'"'});
-    }).join('')+'</div>':'<p class="hint">Les séries que vous suivez apparaîtront ici.</p>';
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Ma bibliothèque</span><button class="circle" data-settings aria-label="Réglages">'+IC.gear+'</button></div>'+
     '<h1 class="ptitle" style="padding-top:104px">Ma bibliothèque</h1>'+
     '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+saved+'</div>'+
-    '<div class="shelf"><h2>Séries suivies <small>'+follows.length+'</small></h2>'+fol+'</div>'+
     '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+read+'</div>'+
     '<div class="bottomspace"></div>';
 }
@@ -1337,31 +1354,11 @@ function lensUI(s,V){
   var cur=S.len||3,av=lenAv(s),btn=[3,5,10].map(function(k){var has=!!av[k];return '<button data-len="'+k+'" aria-pressed="'+(cur===k)+'"'+(has?'':' class="na"')+'>'+k+' min</button>';}).join('');
   return '<div class="lens"><span class="ll">Durée de lecture</span><span class="seg">'+btn+'</span></div>'+(V.miss?'<p class="lnote">La version de '+V.miss+' minutes de cette histoire arrive bientôt. Vous lisez la version de '+V.got+' minutes.</p>':'');}
 function reader(id){
-  var s=STORIES[id],sv=!!S.saved[id],done=!!S.read[id];
+  epIndex();var s=STORIES[id],sv=!!S.saved[id],done=!!S.read[id];
   var V=lenPick(s,S.len||3),body=bodyHTML(V.arr);
   var nx=s.next?STORIES[s.next]:null;
   var up=nx?'<button class="upnext" data-open="'+s.next+'">'+poster(nx.p)+'<span><span class="uk" style="display:block">À LIRE ENSUITE</span><span class="ut" style="display:block">'+esc(nx.title)+'</span><span class="us" style="display:block">'+esc(nx.kind)+', '+nx.min+' min</span></span></button>'
-    :s.ar?'<button class="upnext" data-serie="arnaque">'+poster('arserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">L\'arnaque parfaite</span></span></button>'
-    :s.tm?'<button class="upnext" data-serie="tournage">'+poster('tmserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Tournage maudit</span></span></button>'
-    :s.du?'<button class="upnext" data-serie="duel">'+poster('duserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Le duel</span></span></button>'
-    :s.vc?'<button class="upnext" data-serie="victoire">'+poster('vcserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">L\'impossible victoire</span></span></button>'
-    :s.ld?'<button class="upnext" data-serie="dernier">'+poster('ldserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Le dernier jour</span></span></button>'
-    :s.pr?'<button class="upnext" data-serie="proces">'+poster('prserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Procès</span></span></button>'
-    :s.di?'<button class="upnext" data-serie="disparus">'+poster('diserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Disparus</span></span></button>'
-    :s.fi?'<button class="upnext" data-serie="fiascos">'+poster('fiserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Fiascos</span></span></button>'
-    :s.ce?'<button class="upnext" data-serie="codes">'+poster('ceserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Codes et énigmes</span></span></button>'
-    :s.ex?'<button class="upnext" data-serie="expeditions">'+poster('exserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Expéditions</span></span></button>'
-    :s.pn?'<button class="upnext" data-serie="pannes">'+poster('pnserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Pannes</span></span></button>'
-    :s.es?'<button class="upnext" data-serie="espions">'+poster('esserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Espions</span></span></button>'
-    :s.im?'<button class="upnext" data-serie="imposteurs">'+poster('imserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Imposteurs</span></span></button>'
-    :s.ev?'<button class="upnext" data-serie="evades">'+poster('evserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Évadés</span></span></button>'
-    :s.cb?'<button class="upnext" data-serie="cobayes">'+poster('cbserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Cobayes</span></span></button>'
-    :s.sv?'<button class="upnext" data-serie="survivants">'+poster('svserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Survivants</span></span></button>'
-    :s.pa?'<button class="upnext" data-serie="accident">'+poster('paserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Par accident</span></span></button>'
-    :s.fa?'<button class="upnext" data-serie="faussaires">'+poster('faserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Faussaires</span></span></button>'
-    :s.cs?'<button class="upnext" data-serie="casse">'+poster('csserie')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">Le casse du siècle</span></span></button>'
-    :s.book?'<button class="upnext" data-serie="chute">'+poster('chute')+'<span><span class="uk" style="display:block">FIN DE LA SÉRIE</span><span class="ut" style="display:block">Revoir tous les portraits</span><span class="us" style="display:block">Jusqu\'à la chute</span></span></button>'
-    :'<div class="upnext" style="opacity:.75">'+poster('ep2')+'<span><span class="uk" style="display:block">DEMAIN À 7 H</span><span class="ut" style="display:block">Épisode 2 : Ceux qui savaient</span><span class="us" style="display:block">Jusqu\'à la chute</span></span></div>';
+    :(s.th!==undefined?'<button class="upnext" data-terr="'+s.th+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU THÈME</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">'+esc(T[s.th])+'</span></span></button>':'');
   var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':lenMin(V.arr)+' min')+'</span><span style="display:flex;gap:8px"><button class="circle" data-rmode aria-label="'+(S.mode==='book'?'Lire en défilement':'Lire comme un livre')+'">'+(S.mode==='book'?IC.scrollm:IC.bookm)+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var head='<div class="rhead"><p class="k">'+(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase()))+'</p><h1>'+esc(s.title)+'</h1>'+(s.sub?'<p class="sb">'+esc(s.sub)+'</p>':'')+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+lenMin(V.arr)+' minutes de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var tail=''+
@@ -1830,12 +1827,11 @@ function legalLayer(k){
     '<h1 class="ptitle" style="padding-top:104px">'+d[0]+'</h1><p class="hint">Dernière mise à jour : '+LEGAL_DATE+'</p><div class="lgw">'+body+'<div class="lgl">'+links+'</div></div><div class="bottomspace"></div>';
 }
 function themeLayer(i){
-  var X=epIndex(),list=SERIES.filter(function(x){return x.t===i;}),av=list.filter(function(x){return x.go;});
-  var eps=X.byT[i];
+  var X=epIndex(),eps=X.byT[i],dt=THEMES[i].k==='date';
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span></div>'+
-    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+av.length+' séries · '+X.byT[i].length+' épisodes</p>'+
-    '<div class="shelf"><h2>Séries</h2></div><div class="grid" style="padding-top:4px">'+list.map(serieTile).join('')+'</div>'+
-    (eps.length?'<div class="shelf" style="margin-top:12px"><h2>Épisodes <small>'+eps.length+'</small></h2></div><div class="grid" style="padding-top:4px">'+eps.map(epTile).join('')+'</div>':'')+
+    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+eps.length+' histoires</p>'+
+    '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+
+    (eps.length?'<div class="grid" style="padding-top:8px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
     '<div class="bottomspace"></div>';
 }
 function layerHTML(top){return top.type==='read'?reader(top.id):(top.type==='lib'?saved():(top.type==='theme'?themeLayer(top.i):(top.type==='legal'?legalLayer(top.k):serie(top.key))));}
