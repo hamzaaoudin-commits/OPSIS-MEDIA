@@ -471,7 +471,7 @@ function poster(key){ return '<div class="poster">'+art(key)+'</div>'; }
 /* =====================================================================
    CONTENU DE DÉMONSTRATION
    ===================================================================== */
-var GONE={"pr30":1,"du24":1,"im15":1,"pa29":1,"theranos1":1,"pt54":1,"im17":1,"im05":1,"im08":1,"im07":1,"ex06":1,"di08":1,"di01":1,"vc22":1,"vc23":1,"vc24":1,"vc25":1,"cb21":1,"pn04":1,"pn07":1,"pn08":1,"pn10":1,"pn12":1,"pn13":1,"pn15":1,"pn29":1,"ce30":1,"ce24":1,"ce23":1,"ce21":1,"ce20":1,"ce18":1,"ce08":1,"fi04":1,"fi18":1,"fi19":1,"di15":1,"di27":1,"di28":1,"di29":1,"di30":1,"fa13":1,"fa14":1,"fa24":1,"fa25":1,"ar03":1,"ar30":1};
+var GONE={"pr30":1,"du24":1,"im15":1,"pa29":1,"theranos1":1,"pt54":1,"im17":1,"im05":1,"im08":1,"im07":1,"ex06":1,"di08":1,"di01":1,"vc22":1,"vc23":1,"vc24":1,"vc25":1,"cb21":1,"pn04":1,"pn07":1,"pn08":1,"pn10":1,"pn12":1,"pn13":1,"pn15":1,"pn29":1,"ce30":1,"ce24":1,"ce23":1,"ce21":1,"ce20":1,"ce18":1,"ce08":1,"fi04":1,"fi18":1,"fi19":1,"di15":1,"di27":1,"di28":1,"di29":1,"di30":1,"fa13":1,"fa14":1,"fa24":1,"fa25":1,"ar03":1,"ar30":1,"im18":1,"im13":1,"im14":1,"im12":1,"im04":1,"im03":1,"im22":1,"im21":1,"im11":1,"im20":1,"di25":1,"di07":1,"di14":1,"ex01":1,"ex02":1,"ex13":1,"ex14":1,"fi06":1,"fi08":1,"fi21":1,"fi02":1,"fi09":1,"fi20":1,"fi25":1,"pr12":1,"pr26":1,"pr21":1,"cb05":1,"cb16":1,"cb19":1,"cb30":1,"ce10":1,"ce11":1,"ce13":1,"ce15":1,"ce19":1,"ld26":1,"ld22":1,"du14":1,"du04":1,"du03":1,"du17":1,"du25":1,"es19":1,"es20":1,"es28":1,"ev05":1,"ev26":1,"ev15":1,"ev30":1,"pn20":1,"tm04":1,"tm26":1,"tm27":1,"tm28":1,"tm30":1,"tm29":1,"pa07":1,"pa08":1,"pa09":1,"pa10":1,"sv25":1,"vc21":1,"cs23":1,"cs26":1,"cs27":1};
 function vn(D,k){var c=0;for(var j=0;j<=k;j++)if(!GONE[D[j].id])c++;return c;}
 function vt(D){return vn(D,D.length-1);}
 function nx(D,k){for(var j=k+1;j<D.length;j++)if(!GONE[D[j].id])return D[j].id;return null;}
@@ -512,26 +512,26 @@ var SERIE={name:"Jusqu'à la chute",p:'chute',
 var T=['Destins','Arnaques','Inventions','Corps et science','Exploits','Coulisses'];
 var SERIES=[
   {n:"Jusqu'à la chute",t:0,p:'chute',go:'serie'},
-  {n:"Le dernier jour",t:0,p:'ldserie',go:'serieL',c:'#E8B04A',syn:"Lincoln, Molière, Marie Curie, Scott, Lennon, le Titanic : trente dernières journées, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Personne ne savait que c'était la dernière."},
+  {n:"Le dernier jour",t:0,p:'ldserie',go:'serieL',c:'#E8B04A',syn:"Lincoln, Molière, Marie Curie, Scott, Lennon, le Titanic : vingt-huit dernières journées, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Personne ne savait que c'était la dernière."},
   {n:"L'arnaque parfaite",t:1,p:'arnaque',go:'serieA'},
   {n:"Le casse du siècle",t:1,p:'csserie',go:'serieK'},
   {n:"Faussaires",t:1,p:'faserie',go:'serieF'},
-  {n:"Imposteurs",t:1,p:'imserie',go:'serieI',c:'#C58BE8',syn:"Des gens qui ont vécu sous un autre nom, et ceux qui les ont crus : vingt-cinq impostures, d'un paysan du XVIe siècle à une auteure de notre époque.",tag:"Ils n'étaient pas ceux qu'ils disaient."},
-  {n:"Espions",t:5,p:'esserie',go:'serieG',c:'#4FC3C0',syn:"Des agents, des traîtres, des opérations : trente affaires d'espionnage, d'une danseuse de 1917 à un chiffreur d'Ottawa, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qu'ils savaient, ce qu'on a su."},
-  {n:"Pannes",t:2,p:'pnserie',go:'serieN',c:'#F08A4B',syn:"Un entier trop grand, une unité oubliée, une commande mal saisie : vingt-deux pannes, d'Ariane 501 à la chute éclair de 2010, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qui a cassé, et ce qu'on a compris."},
-  {n:"Expéditions",t:4,p:'exserie',go:'serieX',c:'#5FC8E8',syn:"Les pôles, les sommets, les océans, les terres inconnues, le ciel et les abîmes : vingt-neuf expéditions, de Scott au Titanic de 1985, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qu'ils ont trouvé, et ce qu'ils n'ont pas dit."},
-  {n:"Codes et énigmes",t:2,p:'ceserie',go:'serieQ',c:'#B48CF0',syn:"Des machines de guerre, des écritures perdues, des énigmes toujours ouvertes, des théorèmes, des codes du quotidien et des messages aux étoiles : vingt-trois histoires de code, d'Enigma au signal Wow!, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qu'on a lu, et ce qu'on lit encore."},
-  {n:"Fiascos",t:5,p:'fiserie',go:'serieZ',c:'#F0705A',syn:"Un soda, une voiture, des lunettes, des films, des cartouches enterrées, un festival, une enveloppe : vingt-sept échecs célèbres, du Vasa à l’Emu War, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Ce qui a raté, et ce qu’on en dit."},
-  {n:"Disparus",t:0,p:'diserie',go:'serieD',c:'#8FB8C8',syn:"Un avion, un canot, un tableau, une romancière, un prince, une colonie, une civilisation : vingt-trois disparitions célèbres, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Ce qui a disparu, et ce qu’on en sait."},
-  {n:"Procès",t:0,p:'prserie',go:'serieR',c:'#D9B26A',syn:"Socrate, Galilée, Dreyfus, Eichmann, Mandela, O.J. Simpson, Flaubert, Joyce : vingt-neuf procès célèbres, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Ce qui a été jugé, et ce qu’on en sait."},
+  {n:"Imposteurs",t:1,p:'imserie',go:'serieI',c:'#C58BE8',syn:"Des gens qui ont vécu sous un autre nom, et ceux qui les ont crus : quinze impostures, d'un paysan du XVIe siècle à une auteure de notre époque.",tag:"Ils n'étaient pas ceux qu'ils disaient."},
+  {n:"Espions",t:5,p:'esserie',go:'serieG',c:'#4FC3C0',syn:"Des agents, des traîtres, des opérations : vingt-sept affaires d'espionnage, d'une danseuse de 1917 à un chiffreur d'Ottawa, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qu'ils savaient, ce qu'on a su."},
+  {n:"Pannes",t:2,p:'pnserie',go:'serieN',c:'#F08A4B',syn:"Un entier trop grand, une unité oubliée, une commande mal saisie : vingt et une pannes, d'Ariane 501 à la chute éclair de 2010, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qui a cassé, et ce qu'on a compris."},
+  {n:"Expéditions",t:4,p:'exserie',go:'serieX',c:'#5FC8E8',syn:"Les pôles, les sommets, les océans, les terres inconnues, le ciel et les abîmes : vingt-cinq expéditions, de Scott au Titanic de 1985, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qu'ils ont trouvé, et ce qu'ils n'ont pas dit."},
+  {n:"Codes et énigmes",t:2,p:'ceserie',go:'serieQ',c:'#B48CF0',syn:"Des machines de guerre, des écritures perdues, des énigmes toujours ouvertes, des théorèmes, des codes du quotidien et des messages aux étoiles : dix-huit histoires de code, d'Enigma au signal Wow!, avec pour chacune ce qui est établi, ce qui est discuté et ce qu'on ne sait pas.",tag:"Ce qu'on a lu, et ce qu'on lit encore."},
+  {n:"Fiascos",t:5,p:'fiserie',go:'serieZ',c:'#F0705A',syn:"Un soda, une voiture, des lunettes, des films, des cartouches enterrées, un festival, une enveloppe : vingt échecs célèbres, du Vasa à l’Emu War, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Ce qui a raté, et ce qu’on en dit."},
+  {n:"Disparus",t:0,p:'diserie',go:'serieD',c:'#8FB8C8',syn:"Un avion, un canot, un tableau, une romancière, un prince, une colonie, une civilisation : vingt disparitions célèbres, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Ce qui a disparu, et ce qu’on en sait."},
+  {n:"Procès",t:0,p:'prserie',go:'serieR',c:'#D9B26A',syn:"Socrate, Galilée, Dreyfus, Eichmann, Mandela, O.J. Simpson, Flaubert, Joyce : vingt-six procès célèbres, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Ce qui a été jugé, et ce qu’on en sait."},
   {n:"Par accident",t:2,p:'paserie',go:'serieP'},
   {n:"Survivants",t:3,p:'svserie',go:'serieS',c:'#F2E3B3',syn:"Des gens qui n'auraient jamais dû s'en sortir, et ce que leur survie a appris aux autres.",tag:"Ils avaient une chance sur mille."},
   {n:"Cobayes",t:3,p:'cbserie',go:'serieB',c:'#5FD0B4',syn:"Des scientifiques qui ont pris le plus grand des risques pour prouver qu'ils avaient raison : se servir d'eux-mêmes comme sujet d'expérience.",tag:"Pour le prouver, il fallait le tester sur soi."},
-  {n:"Évadés",t:4,p:'evserie',go:'serieE',c:'#E0B070',syn:"Des gens qui ont forcé une porte qu'on disait infranchissable : trente évasions, d'une reine prisonnière à la cour d'une prison moderne.",tag:"La porte était fermée. Ils sont passés."},
-  {n:"L'impossible victoire",t:4,p:'vcserie',go:'serieV',c:'#F2C14E',syn:"Leicester, Douglas–Tyson, Marathon, Valmy, Apollo 13, LeMond : vingt-six victoires que personne n’attendait, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Personne n'avait parié sur eux."},
-  {n:"Le duel",t:4,p:'duserie',go:'serieU',c:'#D2232C',syn:"Borg–McEnroe, Hagler–Hearns, Senna–Prost, Kasparov–Deep Blue, Maradona–Angleterre : vingt-neuf duels célèbres, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Il fallait que l’un des deux perde."},
+  {n:"Évadés",t:4,p:'evserie',go:'serieE',c:'#E0B070',syn:"Des gens qui ont forcé une porte qu'on disait infranchissable : vingt-six évasions, d'une reine prisonnière à la cour d'une prison moderne.",tag:"La porte était fermée. Ils sont passés."},
+  {n:"L'impossible victoire",t:4,p:'vcserie',go:'serieV',c:'#F2C14E',syn:"Leicester, Douglas–Tyson, Marathon, Valmy, Apollo 13, LeMond : vingt-cinq victoires que personne n’attendait, avec pour chacune ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Personne n'avait parié sur eux."},
+  {n:"Le duel",t:4,p:'duserie',go:'serieU',c:'#D2232C',syn:"Borg–McEnroe, Hagler–Hearns, Senna–Prost, Kasparov–Deep Blue, Maradona–Angleterre : vingt-quatre duels célèbres, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Il fallait que l’un des deux perde."},
   {n:"L'œuvre volée",t:5,p:'volee',go:'joconde'},
-  {n:"Tournage maudit",t:5,p:'tmserie',go:'serieT',c:'#FF9A2E',syn:"Twilight Zone, Apocalypse Now, Fitzcarraldo, Titanic, Blade Runner, Shining : trente tournages difficiles, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Le film a survécu. Pas tout le monde."}
+  {n:"Tournage maudit",t:5,p:'tmserie',go:'serieT',c:'#FF9A2E',syn:"Twilight Zone, Apocalypse Now, Fitzcarraldo, Titanic, Blade Runner, Shining : vingt-quatre tournages difficiles, avec pour chacun ce qui est établi, ce qui est discuté et ce qu’on ne sait pas.",tag:"Le film a survécu. Pas tout le monde."}
 ];
 SERIES=SERIES.concat([
   {n:"Renaissance",t:0,p:'ren',syn:"Partir du fond et raconter la remontée : des vies qui semblaient finies, et ce qui les a relancées.",tag:"Tout le monde les croyait finis."},
@@ -639,11 +639,12 @@ var CSSN="Le casse du siècle",CSIDS=[];
     return '';
   }
   CSD.forEach(function(d,k){
+    if(GONE[d.id])return;
     var g=Math.floor(k/5),w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
     STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:CSSN,terr:'Arnaques',title:d.name,sub:d.sub,
-      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+(k+1)+' SUR 30 · '+CSGROUPS[g].t.toUpperCase(),
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+vn(CSD,k)+' SUR '+vt(CSD)+' · '+CSGROUPS[g].t.toUpperCase(),
       body:d.body,quote:d.sub,no:'CS'+('0'+(k+1)).slice(-2),c:CGA[g],syn:syn(d.body),cs:1,src:d.src,g:g,
-      next:k<CSD.length-1?CSD[k+1].id:null};
+      next:nx(CSD,k)};
     CSIDS.push(d.id);
   });
 })();
@@ -726,11 +727,12 @@ var SVSN="Survivants",SVIDS=[];
     return '';
   }
   SVD.forEach(function(d,k){
+    if(GONE[d.id])return;
     var g=Math.floor(k/5),w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
     STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:SVSN,terr:'Corps et science',title:d.name,sub:d.sub,
-      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+(k+1)+' SUR 30 · '+SVGROUPS[g].t.toUpperCase(),
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+vn(SVD,k)+' SUR '+vt(SVD)+' · '+SVGROUPS[g].t.toUpperCase(),
       body:d.body,quote:d.sub,no:'SV'+('0'+(k+1)).slice(-2),c:SGA[g],syn:syn(d.body),sv:1,src:d.src,g:g,
-      next:k<SVD.length-1?SVD[k+1].id:null};
+      next:nx(SVD,k)};
     SVIDS.push(d.id);
   });
 })();
@@ -783,11 +785,12 @@ var EVSN="Évadés",EVIDS=[];
     return '';
   }
   EVD.forEach(function(d,k){
+    if(GONE[d.id])return;
     var g=Math.floor(k/5),w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
     STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:EVSN,terr:'Évasions',title:d.name,sub:d.sub,
-      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+(k+1)+' SUR 30 · '+EVGROUPS[g].t.toUpperCase(),
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+vn(EVD,k)+' SUR '+vt(EVD)+' · '+EVGROUPS[g].t.toUpperCase(),
       body:d.body,quote:d.sub,no:'EV'+('0'+(k+1)).slice(-2),c:EVA[g],syn:syn(d.body),ev:1,src:d.src,g:g,
-      next:k<EVD.length-1?EVD[k+1].id:null};
+      next:nx(EVD,k)};
     EVIDS.push(d.id);
   });
 })();
@@ -840,11 +843,12 @@ var ESSN="Espions",ESIDS=[];
     return '';
   }
   ESD.forEach(function(d,k){
+    if(GONE[d.id])return;
     var g=Math.floor(k/5),w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
     STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:ESSN,terr:'Espionnage',title:d.name,sub:d.sub,
-      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+(k+1)+' SUR 30 · '+ESGROUPS[g].t.toUpperCase(),
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+vn(ESD,k)+' SUR '+vt(ESD)+' · '+ESGROUPS[g].t.toUpperCase(),
       body:d.body,quote:d.sub,no:'ES'+('0'+(k+1)).slice(-2),c:ESA[g],syn:syn(d.body),es:1,src:d.src,g:g,
-      next:k<ESD.length-1?ESD[k+1].id:null};
+      next:nx(ESD,k)};
     ESIDS.push(d.id);
   });
 })();
@@ -1035,11 +1039,12 @@ var LDSN="Le dernier jour",LDIDS=[];
     return '';
   }
   LDD.forEach(function(d,k){
+    if(GONE[d.id])return;
     var g=Math.floor(k/5),w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
     STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:LDSN,terr:LDSN,title:d.name,sub:d.sub,
-      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+(k+1)+' SUR 30 · '+LDGROUPS[g].t.toUpperCase(),
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+vn(LDD,k)+' SUR '+vt(LDD)+' · '+LDGROUPS[g].t.toUpperCase(),
       body:d.body,quote:d.sub,no:'LD'+('0'+(k+1)).slice(-2),c:LDA[g],syn:syn(d.body),ld:1,src:d.src,g:g,
-      next:k<LDD.length-1?LDD[k+1].id:null};
+      next:nx(LDD,k)};
     LDIDS.push(d.id);
   });
 })();
@@ -1100,11 +1105,12 @@ var TMSN="Tournage maudit",TMIDS=[];
     return '';
   }
   TMD.forEach(function(d,k){
+    if(GONE[d.id])return;
     var g=Math.floor(k/5),w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
     STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:TMSN,terr:TMSN,title:d.name,sub:d.sub,
-      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+(k+1)+' SUR 30 · '+TMGROUPS[g].t.toUpperCase(),
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'HISTOIRE '+vn(TMD,k)+' SUR '+vt(TMD)+' · '+TMGROUPS[g].t.toUpperCase(),
       body:d.body,quote:d.sub,no:'TM'+('0'+(k+1)).slice(-2),c:TMA[g],syn:syn(d.body),tm:1,src:d.src,g:g,
-      next:k<TMD.length-1?TMD[k+1].id:null};
+      next:nx(TMD,k)};
     TMIDS.push(d.id);
   });
 })();
@@ -1223,10 +1229,10 @@ function home(){
   var chDone=BOOK.chapters.map(function(c){return c.items.every(function(id){return S.read[id];});}),nowCh=chDone.indexOf(false),nRead=BP.filter(function(id){return S.read[id];}).length;
   var segs=chDone.map(function(d,i){return '<i class="'+(d?'done':(i===nowCh?'now':''))+'"></i>';}).join('');
   var paRead=PAIDS.filter(function(id){return S.read[id];}).length,paSegs=PAGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[PAD[gi*5+k].id]||!!GONE[PAD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
-  var svRead=SVIDS.filter(function(id){return S.read[id];}).length,svSegs=SVGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&!!S.read[SVD[gi*5+k].id];}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
+  var svRead=SVIDS.filter(function(id){return S.read[id];}).length,svSegs=SVGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[SVD[gi*5+k].id]||!!GONE[SVD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var cbRead=CBIDS.filter(function(id){return S.read[id];}).length,cbSegs=CBGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[CBD[gi*5+k].id]||!!GONE[CBD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
-  var evRead=EVIDS.filter(function(id){return S.read[id];}).length,evSegs=EVGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&!!S.read[EVD[gi*5+k].id];}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
-  var esRead=ESIDS.filter(function(id){return S.read[id];}).length,esSegs=ESGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&!!S.read[ESD[gi*5+k].id];}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
+  var evRead=EVIDS.filter(function(id){return S.read[id];}).length,evSegs=EVGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[EVD[gi*5+k].id]||!!GONE[EVD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
+  var esRead=ESIDS.filter(function(id){return S.read[id];}).length,esSegs=ESGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[ESD[gi*5+k].id]||!!GONE[ESD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var prRead=PRIDS.filter(function(id){return S.read[id];}).length,prSegs=PRGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[PRD[gi*5+k].id]||!!GONE[PRD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var diRead=DIIDS.filter(function(id){return S.read[id];}).length,diSegs=DIGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[DID[gi*5+k].id]||!!GONE[DID[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var fiRead=FIIDS.filter(function(id){return S.read[id];}).length,fiSegs=FIGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[FID[gi*5+k].id]||!!GONE[FID[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
@@ -1235,7 +1241,7 @@ function home(){
   var pnRead=PNIDS.filter(function(id){return S.read[id];}).length,pnSegs=PNGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[PND[gi*5+k].id]||!!GONE[PND[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var imRead=IMIDS.filter(function(id){return S.read[id];}).length,imSegs=IMGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[IMD[gi*5+k].id]||!!GONE[IMD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var faRead=FAIDS.filter(function(id){return S.read[id];}).length,faSegs=FAGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[FAD[gi*5+k].id]||!!GONE[FAD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
-  var csRead=CSIDS.filter(function(id){return S.read[id];}).length,csSegs=CSGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&!!S.read[CSD[gi*5+k].id];}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
+  var csRead=CSIDS.filter(function(id){return S.read[id];}).length,csSegs=CSGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[CSD[gi*5+k].id]||!!GONE[CSD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var arRead=ARIDS.filter(function(id){return S.read[id];}).length,arSegs=AGROUPS.map(function(g,gi){var d=true;for(var k=0;k<5;k++){d=d&&(!!S.read[ARD[gi*5+k].id]||!!GONE[ARD[gi*5+k].id]);}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   var weekL=DJIDS.length?DJIDS.slice(-7).reverse().map(function(id,i){return [id,i===0?'Aujourd\'hui':i===1?'Hier':dayLabel(STORIES[id].at)];}):[['penicilline','Hier'],['pt33','Lundi'],['eiffel','Aujourd\'hui']];
   var week=weekL.map(function(x){
@@ -1398,12 +1404,13 @@ function serieK(){
   }
   var list='';
   CSGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=CSD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
-    for(var k=0;k<5;k++){var id=CSD[gi*5+k].id;list+=row(id,gi*5+k+1);}
+    for(var k=0;k<5;k++){var id=CSD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(CSD,gi*5+k));}
   });
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('csserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · 30 HISTOIRES</p><h1>Le casse du siècle</h1><p class="m">Du train postal de 1963 aux coffres de Gelsenkirchen : trente vols spectaculaires, du repérage à la dernière erreur. Pour chacun, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · '+vt(CSD)+' HISTOIRES</p><h1>Le casse du siècle</h1><p class="m">Du train postal de 1963 aux coffres de Gelsenkirchen : vingt-sept vols spectaculaires, du repérage à la dernière erreur. Pour chacun, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'cs01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1417,6 +1424,7 @@ function serieF(){
   }
   var list='';
   FAGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=FAD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=FAD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(FAD,gi*5+k)+0);}
   });
@@ -1436,13 +1444,14 @@ function serieA(){
   }
   var list='<div class="chead"><h2 class="acte">Pour ouvrir</h2></div>'+row('eiffel',1);
   AGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=ARD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=ARD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(ARD,gi*5+k)+1);}
   });
   var stripe=AGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[ARD[gi*5+k].id]||!!GONE[ARD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('arserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · '+vt(ARD)+' HISTOIRES</p><h1>L\'arnaque parfaite</h1><p class="m">De Victor Lustig à Billy McFarland : vingt-neuf histoires vraies de faussaires, d\'imposteurs et de vendeurs de rêves. Pour chacune, ce qui est établi, ce qui relève de la légende, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · ARNAQUES · '+vt(ARD)+' HISTOIRES</p><h1>L\'arnaque parfaite</h1><p class="m">De Victor Lustig à Billy McFarland : vingt-huit histoires vraies de faussaires, d\'imposteurs et de vendeurs de rêves. Pour chacune, ce qui est établi, ce qui relève de la légende, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'eiffel')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1456,13 +1465,14 @@ function serieP(){
   }
   var list='<div class="chead"><h2 class="acte">Pour ouvrir</h2></div>'+row('penicilline',1);
   PAGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=PAD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=PAD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(PAD,gi*5+k)+1);}
   });
   var stripe=PAGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[PAD[gi*5+k].id]||!!GONE[PAD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('paserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · INVENTIONS · '+vt(PAD)+' HISTOIRES</p><h1>Par accident</h1><p class="m">De la pénicilline aux rayons X, du micro-ondes au trou d\'ozone : trente découvertes arrivées par hasard, ou qu\'on raconte ainsi. Pour chacune, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · INVENTIONS · '+vt(PAD)+' HISTOIRES</p><h1>Par accident</h1><p class="m">De la pénicilline aux rayons X, du micro-ondes au trou d\'ozone : vingt-cinq découvertes arrivées par hasard, ou qu\'on raconte ainsi. Pour chacune, ce qui est établi, ce qui reste contesté, et ce que personne ne sait encore. Sources à la fin de chaque récit.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'penicilline')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1476,13 +1486,14 @@ function serieS(){
   }
   var list='';
   SVGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=SVD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
-    for(var k=0;k<5;k++){var id=SVD[gi*5+k].id;list+=row(id,gi*5+k+1);}
+    for(var k=0;k<5;k++){var id=SVD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(SVD,gi*5+k));}
   });
   var stripe=SVGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=!!S.read[SVD[gi*5+k].id];d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('svserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · SURVIVANTS · 30 HISTOIRES</p><h1>Survivants</h1><p class="m">Du pack de l\'Antarctique au fleuve Hudson : trente personnes qui n\'auraient pas dû s\'en sortir, et ce que leur survie a appris aux autres. Pour chaque récit, ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · SURVIVANTS · '+vt(SVD)+' HISTOIRES</p><h1>Survivants</h1><p class="m">Du pack de l\'Antarctique au fleuve Hudson : vingt-neuf personnes qui n\'auraient pas dû s\'en sortir, et ce que leur survie a appris aux autres. Pour chaque récit, ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'sv01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1496,13 +1507,14 @@ function serieB(){
   }
   var list='';
   CBGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=CBD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=CBD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(CBD,gi*5+k)+0);}
   });
   var stripe=CBGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[CBD[gi*5+k].id]||!!GONE[CBD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('cbserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · COBAYES · '+vt(CBD)+' HISTOIRES</p><h1>Cobayes</h1><p class="m">De l\'estomac de Barry Marshall à la puce de Kevin Warwick : vingt-neuf personnes qui ont testé une idée sur leur propre corps. Pour chaque récit, ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · COBAYES · '+vt(CBD)+' HISTOIRES</p><h1>Cobayes</h1><p class="m">De l\'estomac de Barry Marshall à la puce de Kevin Warwick : vingt-cinq personnes qui ont testé une idée sur leur propre corps. Pour chaque récit, ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||CBIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1516,13 +1528,14 @@ function serieE(){
   }
   var list='';
   EVGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=EVD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
-    for(var k=0;k<5;k++){var id=EVD[gi*5+k].id;list+=row(id,gi*5+k+1);}
+    for(var k=0;k<5;k++){var id=EVD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(EVD,gi*5+k));}
   });
   var stripe=EVGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=!!S.read[EVD[gi*5+k].id];d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('evserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · ÉVADÉS · 30 HISTOIRES</p><h1>Évadés</h1><p class="m">De Marie Stuart à Rédoine Faïd : trente évasions, et pour chacune ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · ÉVADÉS · '+vt(EVD)+' HISTOIRES</p><h1>Évadés</h1><p class="m">De Marie Stuart à Rédoine Faïd : vingt-six évasions, et pour chacune ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ev01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1536,13 +1549,14 @@ function serieI(){
   }
   var list='';
   IMGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=IMD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=IMD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(IMD,gi*5+k)+0);}
   });
   var stripe=IMGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[IMD[gi*5+k].id]||!!GONE[IMD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('imserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · IMPOSTEURS · '+vt(IMD)+' HISTOIRES</p><h1>Imposteurs</h1><p class="m">De Martin Guerre à Misha Defonseca : vingt-cinq impostures, et pour chacune ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · IMPOSTEURS · '+vt(IMD)+' HISTOIRES</p><h1>Imposteurs</h1><p class="m">De Martin Guerre à Misha Defonseca : quinze impostures, et pour chacune ce qui est établi, ce qui reste contesté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||IMIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1556,13 +1570,14 @@ function serieG(){
   }
   var list='';
   ESGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=ESD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
-    for(var k=0;k<5;k++){var id=ESD[gi*5+k].id;list+=row(id,gi*5+k+1);}
+    for(var k=0;k<5;k++){var id=ESD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(ESD,gi*5+k));}
   });
   var stripe=ESGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=!!S.read[ESD[gi*5+k].id];d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('esserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · ESPIONS · 30 HISTOIRES</p><h1>Espions</h1><p class="m">De Mata Hari à Gouzenko : trente affaires de la guerre secrète, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · ESPIONS · '+vt(ESD)+' HISTOIRES</p><h1>Espions</h1><p class="m">De Mata Hari à Gouzenko : vingt-sept affaires de la guerre secrète, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'es01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1576,13 +1591,14 @@ function serieN(){
   }
   var list='';
   PNGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=PND[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=PND[gi*5+k].id;if(!GONE[id])list+=row(id,vn(PND,gi*5+k)+0);}
   });
   var stripe=PNGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[PND[gi*5+k].id]||!!GONE[PND[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('pnserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · PANNES · '+vt(PND)+' HISTOIRES</p><h1>Pannes</h1><p class="m">Du vol 501 d’Ariane à la chute éclair de 2010 : vingt-deux pannes, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · PANNES · '+vt(PND)+' HISTOIRES</p><h1>Pannes</h1><p class="m">Du vol 501 d’Ariane à la chute éclair de 2010 : vingt et une pannes, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||PNIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1596,13 +1612,14 @@ function serieX(){
   }
   var list='';
   EXGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=EXD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=EXD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(EXD,gi*5+k)+0);}
   });
   var stripe=EXGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[EXD[gi*5+k].id]||!!GONE[EXD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('exserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · EXPÉDITIONS · '+vt(EXD)+' HISTOIRES</p><h1>Expéditions</h1><p class="m">Des pôles aux abîmes : vingt-neuf expéditions, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · EXPÉDITIONS · '+vt(EXD)+' HISTOIRES</p><h1>Expéditions</h1><p class="m">Des pôles aux abîmes : vingt-cinq expéditions, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||EXIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1616,13 +1633,14 @@ function serieQ(){
   }
   var list='';
   CEGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=CED[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=CED[gi*5+k].id;if(!GONE[id])list+=row(id,vn(CED,gi*5+k)+0);}
   });
   var stripe=CEGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[CED[gi*5+k].id]||!!GONE[CED[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('ceserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · CODES ET ÉNIGMES · '+vt(CED)+' HISTOIRES</p><h1>Codes et énigmes</h1><p class="m">D’Enigma aux messages envoyés aux étoiles : vingt-trois histoires de codes, d’écritures et d’énigmes, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · CODES ET ÉNIGMES · '+vt(CED)+' HISTOIRES</p><h1>Codes et énigmes</h1><p class="m">D’Enigma aux messages envoyés aux étoiles : dix-huit histoires de codes, d’écritures et d’énigmes, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||CEIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1636,13 +1654,14 @@ function serieZ(){
   }
   var list='';
   FIGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=FID[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=FID[gi*5+k].id;if(!GONE[id])list+=row(id,vn(FID,gi*5+k)+0);}
   });
   var stripe=FIGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[FID[gi*5+k].id]||!!GONE[FID[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('fiserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · FIASCOS · '+vt(FID)+' HISTOIRES</p><h1>Fiascos</h1><p class="m">Du Vasa à l’Emu War : vingt-sept échecs célèbres, et pour chacun ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · FIASCOS · '+vt(FID)+' HISTOIRES</p><h1>Fiascos</h1><p class="m">Du Vasa à l’Emu War : vingt échecs célèbres, et pour chacun ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||FIIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1656,13 +1675,14 @@ function serieD(){
   }
   var list='';
   DIGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=DID[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=DID[gi*5+k].id;if(!GONE[id])list+=row(id,vn(DID,gi*5+k)+0);}
   });
   var stripe=DIGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[DID[gi*5+k].id]||!!GONE[DID[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('diserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · DISPARUS · '+vt(DID)+' HISTOIRES</p><h1>Disparus</h1><p class="m">Du vol d’Amelia Earhart à la colonie de Roanoke : vingt-trois disparitions célèbres, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · DISPARUS · '+vt(DID)+' HISTOIRES</p><h1>Disparus</h1><p class="m">Du vol d’Amelia Earhart à la colonie de Roanoke : vingt disparitions célèbres, et pour chacune ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||DIIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1676,13 +1696,14 @@ function serieR(){
   }
   var list='';
   PRGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=PRD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=PRD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(PRD,gi*5+k)+0);}
   });
   var stripe=PRGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[PRD[gi*5+k].id]||!!GONE[PRD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('prserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · PROCÈS · '+vt(PRD)+' HISTOIRES</p><h1>Procès</h1><p class="m">De Socrate à James Joyce : vingt-neuf procès célèbres, et pour chacun ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · PROCÈS · '+vt(PRD)+' HISTOIRES</p><h1>Procès</h1><p class="m">De Socrate à James Joyce : vingt-six procès célèbres, et pour chacun ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||PRIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1696,13 +1717,14 @@ function serieL(){
   }
   var list='';
   LDGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=LDD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
-    for(var k=0;k<5;k++){var id=LDD[gi*5+k].id;list+=row(id,gi*5+k+1);}
+    for(var k=0;k<5;k++){var id=LDD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(LDD,gi*5+k));}
   });
   var stripe=LDGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=!!S.read[LDD[gi*5+k].id];d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('ldserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · DESTINS · 30 HISTOIRES</p><h1>Le dernier jour</h1><p class="m">De Lincoln à la navette Challenger : trente dernières journées, reconstituées d’après les sources. Pour chacune, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · DESTINS · '+vt(LDD)+' HISTOIRES</p><h1>Le dernier jour</h1><p class="m">De Lincoln à la navette Challenger : vingt-huit dernières journées, reconstituées d’après les sources. Pour chacune, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'ld01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1716,13 +1738,14 @@ function serieV(){
   }
   var list='';
   VCGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=VCD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=VCD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(VCD,gi*5+k)+0);}
   });
   var stripe=VCGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[VCD[gi*5+k].id]||!!GONE[VCD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('vcserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · EXPLOITS · '+vt(VCD)+' HISTOIRES</p><h1>L\'impossible victoire</h1><p class="m">Du Leicester de 2016 à Apollo 13 : vingt-six victoires que personne n’attendait, reconstituées d’après les sources. Pour chacune, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · EXPLOITS · '+vt(VCD)+' HISTOIRES</p><h1>L\'impossible victoire</h1><p class="m">Du Leicester de 2016 à Apollo 13 : vingt-cinq victoires que personne n’attendait, reconstituées d’après les sources. Pour chacune, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||VCIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1736,13 +1759,14 @@ function serieU(){
   }
   var list='';
   DUGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=DUD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
     for(var k=0;k<5;k++){var id=DUD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(DUD,gi*5+k)+0);}
   });
   var stripe=DUGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=(!!S.read[DUD[gi*5+k].id]||!!GONE[DUD[gi*5+k].id]);d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('duserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · EXPLOITS · '+vt(DUD)+' HISTOIRES</p><h1>Le duel</h1><p class="m">Du court de Wimbledon à l’Azteca : vingt-neuf duels qui ont marqué leur sport, reconstitués d’après les sources. Pour chacun, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · EXPLOITS · '+vt(DUD)+' HISTOIRES</p><h1>Le duel</h1><p class="m">Du court de Wimbledon à l’Azteca : vingt-quatre duels qui ont marqué leur sport, reconstitués d’après les sources. Pour chacun, ce qui est établi, ce qui reste discuté et ce que personne ne sait. Sources à la fin de chaque histoire.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||DUIDS[0])+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1756,13 +1780,14 @@ function serieT(){
   }
   var list='';
   TMGROUPS.forEach(function(g,gi){
+    var _a=false;for(var _k=0;_k<5;_k++){var _s=TMD[gi*5+_k];if(_s&&!GONE[_s.id])_a=true;}if(!_a)return;
     list+='<h3 class="chap"><small>PARTIE '+(gi+1)+' SUR 6</small>'+esc(g.t)+'</h3><p class="epi">'+esc(g.e)+'</p>';
-    for(var k=0;k<5;k++){var id=TMD[gi*5+k].id;list+=row(id,gi*5+k+1);}
+    for(var k=0;k<5;k++){var id=TMD[gi*5+k].id;if(!GONE[id])list+=row(id,vn(TMD,gi*5+k));}
   });
   var stripe=TMGROUPS.map(function(g,gi){var d=true,any=false;for(var k=0;k<5;k++){var r=!!S.read[TMD[gi*5+k].id];d=d&&r;any=any||r;}return '<i class="'+(d?'done':'')+'"></i>';}).join('');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
     '<div class="rhero">'+poster('tmserie')+'<div class="shade"></div></div>'+
-    '<div class="rhead"><p class="k">SÉRIE · COULISSES · 30 HISTOIRES</p><h1>Tournage maudit</h1><p class="m">Des films qui ont failli détruire ceux qui les faisaient : accidents, budgets explosés, plateaux en guerre, œuvres jamais finies et légendes de malédictions. Trente récits d’après les sources, avec ce qui est établi, ce qui reste discuté et ce que personne ne sait.</p>'+
+    '<div class="rhead"><p class="k">SÉRIE · COULISSES · '+vt(TMD)+' HISTOIRES</p><h1>Tournage maudit</h1><p class="m">Des films qui ont failli détruire ceux qui les faisaient : accidents, budgets explosés, plateaux en guerre, œuvres jamais finies et légendes de malédictions. Vingt-quatre récits d’après les sources, avec ce qui est établi, ce qui reste discuté et ce que personne ne sait.</p>'+
     '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||'tm01')+'">'+IC.play+(nRead?'Reprendre':'Commencer')+'</button></div>'+
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
@@ -1910,61 +1935,61 @@ function pickData(key){
     meta:'Série · Destins · 52 portraits',syn:SERIE.desc,tag:'Ils ont gagné. Voici ce que ça leur a coûté.',fmt:'Série',
     acts:'<button class="btn light" data-go="serie">'+IC.play+'Voir la série</button>'};}
   if(key==='serieK'){return {p:'csserie',c:'#9FD3EA',no:'S03',front:"Le casse du siècle",title:"Le casse du siècle",
-    meta:'Série · Arnaques · 30 histoires',syn:"Trente vols spectaculaires, du train postal de 1963 aux coffres de Gelsenkirchen en 2025. Chacun sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le plan était parfait. Presque.",fmt:'Série',
+    meta:'Série · Arnaques · 27 histoires',syn:"Vingt-sept vols spectaculaires, du train postal de 1963 aux coffres de Gelsenkirchen en 2025. Chacun sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le plan était parfait. Presque.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="casse">'+IC.play+'Voir la série</button>'};}
   if(key==='serieT'){return {p:'tmserie',c:'#FF9A2E',no:'S20',front:"Tournage maudit",title:"Tournage maudit",
-    meta:"Série · Tournage maudit · 30 histoires",syn:"Trente tournages qui ont failli tout détruire : accidents, budgets, guerres de plateau, films inachevés et malédictions. Chaque récit sépare l’établi du discuté.",tag:"Le film a survécu. Pas tout le monde.",fmt:'Série',
+    meta:"Série · Tournage maudit · 24 histoires",syn:"Vingt-quatre tournages qui ont failli tout détruire : accidents, budgets, guerres de plateau, films inachevés et malédictions. Chaque récit sépare l’établi du discuté.",tag:"Le film a survécu. Pas tout le monde.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="tournage">'+IC.play+'Voir la série</button>'};}
   if(key==='serieU'){return {p:'duserie',c:'#D2232C',no:'S19',front:"Le duel",title:"Le duel",
-    meta:"Série · Le duel · 29 histoires",syn:"Du court de Wimbledon à l’Azteca, vingt-neuf duels qui ont marqué leur sport. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Il fallait que l’un des deux perde.",fmt:'Série',
+    meta:"Série · Le duel · 24 histoires",syn:"Du court de Wimbledon à l’Azteca, vingt-quatre duels qui ont marqué leur sport. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Il fallait que l’un des deux perde.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="duel">'+IC.play+'Voir la série</button>'};}
   if(key==='serieV'){return {p:'vcserie',c:'#F2C14E',no:'S18',front:"L'impossible victoire",title:"L'impossible victoire",
-    meta:"Série · L'impossible victoire · 26 histoires",syn:"Du Leicester de 2016 à Apollo 13, vingt-six victoires que personne n’attendait. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Personne n'avait parié sur eux.",fmt:'Série',
+    meta:"Série · L'impossible victoire · 25 histoires",syn:"Du Leicester de 2016 à Apollo 13, vingt-cinq victoires que personne n’attendait. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Personne n'avait parié sur eux.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="victoire">'+IC.play+'Voir la série</button>'};}
   if(key==='serieL'){return {p:'ldserie',c:'#E8B04A',no:'S17',front:"Le dernier jour",title:"Le dernier jour",
-    meta:"Série · Le dernier jour · 30 histoires",syn:"De Lincoln à la navette Challenger, trente dernières journées. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Personne ne savait que c'était la dernière.",fmt:'Série',
+    meta:"Série · Le dernier jour · 28 histoires",syn:"De Lincoln à la navette Challenger, vingt-huit dernières journées. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Personne ne savait que c'était la dernière.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="dernier">'+IC.play+'Voir la série</button>'};}
   if(key==='serieR'){return {p:'prserie',c:'#D9B26A',no:'S16',front:"Procès",title:"Procès",
-    meta:'Série · Procès · 29 histoires',syn:"De Socrate à James Joyce, vingt-neuf procès célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a été jugé, et ce qu’on en sait.",fmt:'Série',
+    meta:'Série · Procès · 26 histoires',syn:"De Socrate à James Joyce, vingt-six procès célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a été jugé, et ce qu’on en sait.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="proces">'+IC.play+'Voir la série</button>'};}
   if(key==='serieD'){return {p:'diserie',c:'#8FB8C8',no:'S15',front:"Disparus",title:"Disparus",
-    meta:'Série · Disparus · 23 histoires',syn:"Du vol d’Amelia Earhart à la colonie de Roanoke, vingt-trois disparitions célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a disparu, et ce qu’on en sait.",fmt:'Série',
+    meta:'Série · Disparus · 20 histoires',syn:"Du vol d’Amelia Earhart à la colonie de Roanoke, vingt disparitions célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a disparu, et ce qu’on en sait.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="disparus">'+IC.play+'Voir la série</button>'};}
   if(key==='serieZ'){return {p:'fiserie',c:'#F0705A',no:'S14',front:"Fiascos",title:"Fiascos",
-    meta:'Série · Fiascos · 27 histoires',syn:"Du Vasa à l’Emu War, vingt-sept échecs célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a raté, et ce qu’on en dit.",fmt:'Série',
+    meta:'Série · Fiascos · 20 histoires',syn:"Du Vasa à l’Emu War, vingt échecs célèbres. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a raté, et ce qu’on en dit.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="fiascos">'+IC.play+'Voir la série</button>'};}
   if(key==='serieQ'){return {p:'ceserie',c:'#B48CF0',no:'S13',front:"Codes et énigmes",title:"Codes et énigmes",
-    meta:'Série · Codes et énigmes · 23 histoires',syn:"D'Enigma aux messages envoyés aux étoiles, vingt-trois histoires de codes. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'on a lu, et ce qu'on lit encore.",fmt:'Série',
+    meta:'Série · Codes et énigmes · 18 histoires',syn:"D'Enigma aux messages envoyés aux étoiles, dix-huit histoires de codes. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'on a lu, et ce qu'on lit encore.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="codes">'+IC.play+'Voir la série</button>'};}
   if(key==='serieX'){return {p:'exserie',c:'#5FC8E8',no:'S12',front:"Expéditions",title:"Expéditions",
-    meta:'Série · Expéditions · 29 histoires',syn:"Des pôles aux abîmes, vingt-neuf expéditions. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'ils ont trouvé, et ce qu'ils n'ont pas dit.",fmt:'Série',
+    meta:'Série · Expéditions · 25 histoires',syn:"Des pôles aux abîmes, vingt-cinq expéditions. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'ils ont trouvé, et ce qu'ils n'ont pas dit.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="expeditions">'+IC.play+'Voir la série</button>'};}
   if(key==='serieN'){return {p:'pnserie',c:'#F08A4B',no:'S11',front:"Pannes",title:"Pannes",
-    meta:'Série · Pannes · 22 histoires',syn:"Un entier trop grand, une unité oubliée, une commande mal saisie. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a cassé, et ce qu'on a compris.",fmt:'Série',
+    meta:'Série · Pannes · 21 histoires',syn:"Un entier trop grand, une unité oubliée, une commande mal saisie. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qui a cassé, et ce qu'on a compris.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="pannes">'+IC.play+'Voir la série</button>'};}
   if(key==='serieG'){return {p:'esserie',c:'#4FC3C0',no:'S10',front:"Espions",title:"Espions",
-    meta:'Série · Espions · 30 histoires',syn:"Des agents, des traîtres, des opérations. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'ils savaient, ce qu'on a su.",fmt:'Série',
+    meta:'Série · Espions · 27 histoires',syn:"Des agents, des traîtres, des opérations. Chaque récit sépare ce qui est établi, ce qui reste discuté et ce que personne ne sait.",tag:"Ce qu'ils savaient, ce qu'on a su.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="espions">'+IC.play+'Voir la série</button>'};}
   if(key==='serieI'){return {p:'imserie',c:'#C58BE8',no:'S09',front:"Imposteurs",title:"Imposteurs",
-    meta:'Série · Imposteurs · 25 histoires',syn:"Des gens qui ont vécu sous un autre nom, et ceux qui les ont crus. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Ils n'étaient pas ceux qu'ils disaient.",fmt:'Série',
+    meta:'Série · Imposteurs · 15 histoires',syn:"Des gens qui ont vécu sous un autre nom, et ceux qui les ont crus. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Ils n'étaient pas ceux qu'ils disaient.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="imposteurs">'+IC.play+'Voir la série</button>'};}
   if(key==='serieE'){return {p:'evserie',c:'#E0B070',no:'S08',front:"Évadés",title:"Évadés",
-    meta:'Série · Évadés · 30 histoires',syn:"Des gens qui ont forcé une porte qu'on disait infranchissable. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"La porte était fermée. Ils sont passés.",fmt:'Série',
+    meta:'Série · Évadés · 26 histoires',syn:"Des gens qui ont forcé une porte qu'on disait infranchissable. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"La porte était fermée. Ils sont passés.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="evades">'+IC.play+'Voir la série</button>'};}
   if(key==='serieB'){return {p:'cbserie',c:'#5FD0B4',no:'S07',front:"Cobayes",title:"Cobayes",
-    meta:'Série · Cobayes · 29 histoires',syn:"Des scientifiques qui ont pris le plus grand des risques pour prouver qu'ils avaient raison : se servir d'eux-mêmes comme sujet d'expérience. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Pour le prouver, il fallait le tester sur soi.",fmt:'Série',
+    meta:'Série · Cobayes · 25 histoires',syn:"Des scientifiques qui ont pris le plus grand des risques pour prouver qu'ils avaient raison : se servir d'eux-mêmes comme sujet d'expérience. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Pour le prouver, il fallait le tester sur soi.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="cobayes">'+IC.play+'Voir la série</button>'};}
   if(key==='serieS'){return {p:'svserie',c:'#F2E3B3',no:'S06',front:"Survivants",title:"Survivants",
-    meta:'Série · Survivants · 30 histoires',syn:"Trente personnes qui n'auraient pas dû s'en sortir, de la banquise de l'Antarctique au fleuve Hudson. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Ils avaient une chance sur mille.",fmt:'Série',
+    meta:'Série · Survivants · 29 histoires',syn:"Vingt-neuf personnes qui n'auraient pas dû s'en sortir, de la banquise de l'Antarctique au fleuve Hudson. Chaque récit sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait.",tag:"Ils avaient une chance sur mille.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="survivants">'+IC.play+'Voir la série</button>'};}
   if(key==='serieP'){return {p:'paserie',c:'#7FD49A',no:'S05',front:"Par accident",title:"Par accident",
-    meta:'Série · Inventions · 31 histoires',syn:"Trente et une découvertes arrivées par hasard, ou qu'on raconte ainsi, des rayons X à la couche d'ozone. Chacune sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le hasard n'offre rien à qui ne regarde pas.",fmt:'Série',
+    meta:'Série · Inventions · 25 histoires',syn:"Vingt-cinq découvertes arrivées par hasard, ou qu'on raconte ainsi, des rayons X à la couche d'ozone. Chacune sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le hasard n'offre rien à qui ne regarde pas.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="accident">'+IC.play+'Voir la série</button>'};}
   if(key==='serieF'){return {p:'faserie',c:'#E8B04A',no:'S04',front:"Faussaires",title:"Faussaires",
-    meta:'Série · Arnaques · 30 histoires',syn:"Trente faux qui ont trompé des musées, des experts et des chanceliers, de van Meegeren à Cottingley. Chacun sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le faux le plus réussi est celui qu'on veut croire.",fmt:'Série',
+    meta:'Série · Arnaques · 26 histoires',syn:"Vingt-six faux qui ont trompé des musées, des experts et des chanceliers, de van Meegeren à Cottingley. Chacun sépare ce qui est établi, ce qui reste contesté et ce que personne ne sait encore.",tag:"Le faux le plus réussi est celui qu'on veut croire.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="faussaires">'+IC.play+'Voir la série</button>'};}
   if(key==='serieA'){return {p:'arserie',c:'#E8B04A',no:'S02',front:"L'arnaque parfaite",title:"L'arnaque parfaite",
-    meta:'Série · Arnaques · 31 histoires',syn:"Trente et une histoires vraies de faussaires, d'imposteurs et de vendeurs de rêves, de Victor Lustig à Billy McFarland. Chacune sépare ce qui est établi, ce qui relève de la légende et ce qui reste inconnu.",tag:"Le plus beau mensonge est celui qu'on veut croire.",fmt:'Série',
+    meta:'Série · Arnaques · 28 histoires',syn:"Vingt-huit histoires vraies de faussaires, d'imposteurs et de vendeurs de rêves, de Victor Lustig à Billy McFarland. Chacune sépare ce qui est établi, ce qui relève de la légende et ce qui reste inconnu.",tag:"Le plus beau mensonge est celui qu'on veut croire.",fmt:'Série',
     acts:'<button class="btn light" data-go="serie" data-key="arnaque">'+IC.play+'Voir la série</button>'};}
   if(key.indexOf('soon:')===0){var x=SERIES[+key.slice(5)];return {p:x.p,c:x.c||'#F04A50',no:SNO[x.p]||String(60+(+key.slice(5))).padStart(3,'0'),front:x.n,title:x.n,
     meta:'Série · '+T[x.t]+' · bientôt',syn:x.syn,tag:x.tag,fmt:'Série',
