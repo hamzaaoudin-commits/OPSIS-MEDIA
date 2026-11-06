@@ -1225,9 +1225,12 @@ var IC={
 IC.bookm='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5 2-1.5 5-1.9 8-1.5V5c-3-.4-6 0-8 1.5zM12 6.5V19.5"/></svg>';
 IC.scrollm='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M8 8l4-4 4 4M8 16l4 4 4-4"/></svg>';
 function dayLabel(iso){var d=new Date(iso);if(isNaN(d))return '';return ['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'][d.getDay()]+' '+d.getDate();}
+function nb(t){return String(t).replace(/«\s+/g,'«\u00a0').replace(/\s+([»:?!;])/g,'\u00a0$1').replace(/–/g,'–\u200b');}
 function tile(o){
-  var L=String(o.t).length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(o.t)+'</span></div><p class="sub">'+esc(o.s)+'</p></button>';
+  var t=String(o.t),sub=o.s,m=/ : |, /.exec(t),i=m?m.index:-1;
+  if(i>2&&i<=28){sub=t.slice(i+m[0].length);sub=sub.charAt(0).toUpperCase()+sub.slice(1);t=t.slice(0,i);}
+  t=nb(t);var L=t.length,fs=L>26?15:L>18?18:L>12?21:0;
+  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div><p class="sub">'+esc(sub)+'</p></button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
@@ -2037,7 +2040,7 @@ function pick(key){
   fxs.style.setProperty('--c',d.c||'#D2232C');
   fxs.innerHTML='<button class="fxs-x" data-go="close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>'+
     '<div class="fxs-card" id="fxsCard" role="button" tabindex="0" aria-label="Retourner la couverture"><div class="fxs-in">'+
-      '<div class="fxs-face fxs-front">'+poster(d.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+d.no+'</span><span class="ft">'+esc(d.front)+'</span></div>'+
+      '<div class="fxs-face fxs-front">'+poster(d.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+d.no+'</span><span class="ft">'+esc(nb(d.front))+'</span></div>'+
       '<div class="fxs-face fxs-back"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+d.no+'</b></div>'+
         '<h3>'+esc(d.title)+'</h3><p class="fxs-meta">'+esc(d.meta)+'</p><p class="fxs-syn">'+esc(d.syn)+'</p>'+
         (d.tag?'<p class="fxs-tag">« '+esc(d.tag)+' »</p>':'')+
@@ -2201,9 +2204,10 @@ renderMain();
     var base=parseFloat(getComputedStyle(el).fontSize),s=base,guard=0;
     var probe=document.createElement('span');probe.style.cssText='position:absolute;visibility:hidden;white-space:nowrap;font:inherit;text-transform:inherit;letter-spacing:inherit';
     el.appendChild(probe);
-    var words=(el.textContent||'').trim().split(/\s+/);
+    var words=(el.textContent||'').trim().split(/[\s\u200b]+/);
     function widest(){var m=0;words.forEach(function(x){probe.textContent=x;m=Math.max(m,probe.getBoundingClientRect().width);});return m;}
     while(s>11&&widest()>w&&guard++<40){s-=0.5;el.style.fontSize=s+'px';}
+    guard=0;while(s>11&&el.getBoundingClientRect().height/(parseFloat(getComputedStyle(el).lineHeight)||s)>3.4&&guard++<40){s-=0.5;el.style.fontSize=s+'px';}
     el.removeChild(probe);el.__fit=1;
   }
   function run(){var l=document.querySelectorAll('.tile .ttl, .scard .q');for(var i=0;i<l.length;i++){try{fit(l[i]);}catch(e){}}}
