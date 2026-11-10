@@ -1,7 +1,7 @@
 /* OPSIS runtime — état utilisateur : sauvegarde locale, horodatage par clé (pour la synchro), série de jours */
 (function(){
 var OPSIS=window.OPSIS,KEY='opsis.state.v1';
-var SET=['len','mode','minutes','fs','notif','hour'];
+var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','lang','focus','speed','nNew','nResume','stats'];
 var store=OPSIS.store={S:null,flat:{},dirty:false};
 
 /* S -> table plate { "read.pt01": true, "saved.eiffel": true, "set.fs": 19, "day.2027-01-04": true } */
@@ -12,16 +12,20 @@ function flatten(S){
   Object.keys(S.follow||{}).forEach(function(k){if(S.follow[k])f['follow.'+k]=true;});
   SET.forEach(function(k){if(S[k]!==undefined)f['set.'+k]=S[k];});
   Object.keys(S.days||{}).forEach(function(d){f['day.'+d]=true;});
+  Object.keys(S.rate||{}).forEach(function(k){if(S.rate[k])f['rate.'+k]=S.rate[k];});
+  Object.keys(S.prog||{}).forEach(function(k){if(S.prog[k])f['prog.'+k]=S.prog[k];});
+  Object.keys(S.x||{}).forEach(function(k){if(S.x[k]!==undefined&&S.x[k]!==null)f['x.'+k]=JSON.stringify(S.x[k]);});
   return f;
 }
 /* table plate -> S (sans toucher à la navigation) */
 function inflate(S,f){
-  S.read={};S.saved={};S.follow={};S.days={};
+  S.read={};S.saved={};S.follow={};S.days={};S.rate={};S.prog={};S.x={};
   Object.keys(f).forEach(function(k){
     var v=f[k];if(v===null||v===undefined)return;
     var i=k.indexOf('.'),a=k.slice(0,i),b=k.slice(i+1);
     if(a==='read')S.read[b]=true;else if(a==='saved')S.saved[b]=true;else if(a==='follow')S.follow[b]=true;
     else if(a==='day')S.days[b]=true;else if(a==='set')S[b]=v;
+    else if(a==='rate')S.rate[b]=+v;else if(a==='prog')S.prog[b]=+v;else if(a==='x'){try{S.x[b]=JSON.parse(v);}catch(e){}}
   });
 }
 /* ledger : { clé: {v:valeur|null, t:ms} } — null = suppression (tombstone) */

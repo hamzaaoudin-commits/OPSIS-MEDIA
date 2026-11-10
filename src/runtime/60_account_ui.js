@@ -2,7 +2,7 @@
 (function(){
 var OPSIS=window.OPSIS,ui={step:'idle',email:'',busy:false,msg:'',confirmDel:false};
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-function rerender(){if(OPSIS.ui&&OPSIS.ui.renderSettings&&document.getElementById('settings')&&document.getElementById('settings').classList.contains('show'))OPSIS.ui.renderSettings();}
+function rerender(){if(OPSIS.ui&&OPSIS.ui.renderSettings)OPSIS.ui.renderSettings();}
 function streakHTML(){
   var n=OPSIS.store.streak(),b=OPSIS.store.best();
   return '<div class="opt"><span>Série en cours</span><b class="stk" data-streak="'+n+'">'+n+(n>1?' jours':' jour')+(b>n?' <i>record '+b+'</i>':'')+'</b></div>';

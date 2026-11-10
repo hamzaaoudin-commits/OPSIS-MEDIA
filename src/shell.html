@@ -363,6 +363,142 @@
   .fxs-acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:300px;opacity:0;transform:translateY(16px);transition:opacity .45s .55s,transform .45s .55s}
   .fxs.on .fxs-acts{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  /* ---------- fonctionnalités ---------- */
+  .pkick{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red-type);padding:104px 20px 0}
+  .pbar{position:absolute;left:8px;right:8px;bottom:6px;height:3px;border-radius:2px;background:rgba(255,255,255,.25);z-index:3;overflow:hidden}
+  .pbar i{display:block;height:100%;background:var(--red-type)}
+  .tile .pbar+.ttl,.tile .pbar~.ttl{bottom:16px}
+  .pbar.big{position:static;display:block;height:5px;background:var(--ash)}
+  .pprog{padding:16px 20px 0}.pprog small{display:block;font-size:13px;color:var(--faint);margin-top:8px}
+  .ccard{flex:none;width:214px;padding:12px;border-radius:14px;background:var(--coal);border:1px solid var(--line);display:block}
+  .ccard .cc3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;min-height:92px}
+  .ccard .cc3 .poster{aspect-ratio:2/3;border-radius:5px}
+  .ccard b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:21px;line-height:.98;margin-top:11px}
+  .ccard small{display:block;font-size:12px;color:var(--faint);margin-top:5px}
+  .rail .ccard{scroll-snap-align:start}
+  .qwrap{padding:104px 20px 0}
+  .qbox{display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;border-radius:12px;background:var(--coal);border:1px solid var(--line)}
+  .qbox svg{width:19px;height:19px;flex:none;color:var(--faint)}
+  .qbox input{flex:1;min-width:0;height:100%;background:none;border:0;outline:0;color:var(--bone);font:inherit;font-size:16px}
+  .qbox input::-webkit-search-cancel-button{filter:grayscale(1)}
+  .qbox:focus-within{border-color:var(--red-type)}
+  .qsec{padding:22px 20px 0}
+  .qsec h4{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+  .qsec h4 button{font-size:12px;color:var(--faint);text-transform:none;letter-spacing:0;font-weight:600}
+  .qchips{display:flex;flex-wrap:wrap;gap:8px}
+  .qchips button{height:34px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--coal)}
+  .qchips button[aria-pressed="true"]{background:var(--bone);color:var(--black);border-color:var(--bone)}
+  .qsug{padding:10px 20px 0}
+  .qrow{display:flex;align-items:baseline;gap:10px;width:100%;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+  .qrow i{flex:none;width:78px;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+  .chips button small{font-weight:500;opacity:.6;margin-left:2px}
+  .steps{padding:16px 20px 0}
+  .step{display:flex;align-items:center;gap:12px;width:100%;padding:10px 0;border-bottom:1px solid var(--line)}
+  .step .sn{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--dim)}
+  .step .sn svg{width:15px;height:15px}
+  .step.done .sn{background:var(--red);border-color:var(--red);color:#fff}
+  .step .poster{flex:none;width:46px;height:69px;border-radius:5px}
+  .step .sx{min-width:0}
+  .step b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:20px;line-height:1}
+  .step small{display:block;font-size:12.5px;color:var(--faint);margin-top:4px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:18px 20px 0}
+  .stats div{padding:14px 10px;border-radius:12px;background:var(--coal);border:1px solid var(--line);text-align:center}
+  .stats b{display:block;font-family:var(--disp);font-weight:900;font-size:34px;line-height:1}
+  .stats small{display:block;font-size:11.5px;color:var(--faint);margin-top:5px}
+  .badges{display:flex;gap:8px;overflow-x:auto;padding:12px 20px 2px;scrollbar-width:none}
+  .badges::-webkit-scrollbar{display:none}
+  .badge{flex:none;width:112px;padding:12px 10px;border-radius:12px;border:1px solid var(--line);text-align:center;opacity:.45}
+  .badge span{display:flex;align-items:center;justify-content:center;width:46px;height:46px;margin:0 auto 8px;border-radius:50%;border:2px solid var(--faint);font-family:var(--disp);font-weight:900;font-size:19px}
+  .badge.on{opacity:1;background:var(--coal)}.badge.on span{border-color:var(--red-type);color:var(--red-type)}
+  .badge b{display:block;font-size:13.5px}.badge small{display:block;font-size:11px;color:var(--faint);margin-top:3px;line-height:1.3}
+  .qpeek{display:block;width:calc(100% - 40px);margin:12px 20px 0;padding:16px;border-radius:14px;background:var(--coal);border:1px solid var(--line)}
+  .qpeek span{display:block;font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.45}
+  .qpeek small{display:block;font-size:13px;color:var(--red-type);font-weight:600;margin-top:10px}
+  .qlist{padding:14px 20px 0}
+  .qitem{padding:18px 0;border-bottom:1px solid var(--line)}
+  .qt{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5}
+  .qn{margin-top:10px;padding-left:12px;border-left:2px solid var(--gold);font-size:15px;line-height:1.5;color:var(--dim)}
+  .qs{margin-top:10px;font-size:13px;color:var(--faint)}.qs button{font-weight:700;color:var(--dim)}
+  .qa{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}.qa button{font-size:13px;font-weight:600;color:var(--red-type)}
+  .ta{display:block;width:100%;border-radius:12px;border:1px solid var(--line);background:var(--coal);color:var(--bone);padding:12px;font:inherit;font-size:16px;line-height:1.45;resize:none}
+  .selbar{position:absolute;left:50%;bottom:84px;z-index:57;transform:translate(-50%,20px);display:flex;gap:2px;padding:5px;border-radius:999px;background:#F4EEE4;color:#111;box-shadow:0 10px 30px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:.2s}
+  .selbar.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+  .selbar button{display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:700;color:#111}
+  .selbar button svg{width:16px;height:16px}
+  .selbar button+button{border-left:1px solid rgba(0,0,0,.12);border-radius:0}
+  .rateb{margin:26px 20px 0;padding:18px;border-radius:14px;border:1px solid var(--line);text-align:center}
+  .rateb h4,.quiz h4{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  .stars{display:flex;justify-content:center;gap:6px;margin-top:10px}
+  .stars button{width:42px;height:42px;display:flex;align-items:center;justify-content:center;color:var(--faint)}
+  .stars button svg{width:30px;height:30px}.stars button.on{color:var(--gold)}
+  .rateb p{font-size:13.5px;color:var(--faint);margin-top:8px}
+  .quiz{margin:14px 20px 0;padding:18px;border-radius:14px;border:1px solid var(--line)}
+  .quiz p{font-size:14px;color:var(--faint);margin:8px 0 12px}
+  .quiz .qzq{font-family:var(--serif);font-size:19px;line-height:1.35;color:var(--bone)}
+  .qzo{display:block;width:100%;padding:12px 14px;margin-top:8px;border-radius:10px;background:var(--coal);border:1px solid var(--line);font-size:15px;line-height:1.35}
+  .qzs b{font-family:var(--disp);font-weight:900;font-size:30px;color:var(--bone);margin-right:8px}
+  .qzr{padding-left:12px;border-left:3px solid var(--faint);margin:10px 0!important;color:var(--bone)!important;font-size:14.5px!important}
+  .qzr i{display:block;font-style:normal;font-size:12px;color:var(--faint)}
+  .qzr.ok{border-color:#3FA06B}.qzr.ko{border-color:var(--red-type)}
+  .btn.sm2{height:40px;font-size:14px;font-weight:600;color:var(--dim)}
+  .fxs-prog{flex:1 1 100%;grid-column:1/-1;text-align:center;font-size:13px;color:var(--gold);font-weight:600;margin-top:2px}
+  .aubar{position:absolute;left:12px;right:12px;bottom:22px;z-index:56;display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:16px;background:#1C1C1F;border:1px solid rgba(237,230,218,.14);color:#EDE6DA;box-shadow:0 12px 34px rgba(0,0,0,.55);transform:translateY(120%);opacity:0;transition:.28s;pointer-events:none}
+  .aubar.on{transform:none;opacity:1;pointer-events:auto}
+  .aub{flex:none;width:40px;height:40px;border-radius:50%;background:rgba(237,230,218,.12);display:flex;align-items:center;justify-content:center;color:#EDE6DA}
+  .aub svg{width:19px;height:19px}
+  .aus{flex:none;height:32px;padding:0 10px;border-radius:999px;background:rgba(237,230,218,.12);font-size:13px;font-weight:700;color:#EDE6DA}
+  .aut{flex:1;min-width:0}.aut b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.aut small{display:block;font-size:12px;color:#A39E95}
+  .rtext .speaking{background:rgba(211,168,94,.16);box-shadow:-8px 0 0 rgba(211,168,94,.16),8px 0 0 rgba(211,168,94,.16);border-radius:3px}
+  .view.focus:not(.peek) .rbar{opacity:0;pointer-events:none;transform:translateY(-100%)}
+  .view.focus .rbar{transition:opacity .25s,transform .25s,background .3s}
+  .view.focus:not(.peek) .bkfoot{opacity:0;pointer-events:none}
+  .view.focus:not(.peek) .lens,.view.focus:not(.peek) .lnote{display:none}
+  .slist{margin:18px 20px 0;border-radius:14px;background:var(--coal);border:1px solid var(--line);overflow:hidden}
+  .srow{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:15px 16px;font-size:16px}
+  .srow+.srow{border-top:1px solid var(--line)}
+  .srow small{display:block;font-size:13px;color:var(--faint);margin-top:3px}
+  .srow svg{flex:none;width:17px;height:17px;color:var(--faint)}
+  .sbox{margin:18px 20px 0;padding:4px 16px;border-radius:14px;background:var(--coal);border:1px solid var(--line)}
+  .sbox .seg{background:var(--ash)}.sbox .sz button{background:var(--ash)}
+  .opt>span:first-child{min-width:0;padding-right:12px}
+  .os{display:block;font-size:13px;line-height:1.4;color:var(--faint);margin-top:3px;font-weight:400}
+  .pill{flex:none;height:30px;padding:0 12px;border-radius:999px;border:1px solid var(--line);font-size:12.5px;font-weight:700;color:var(--dim);display:inline-flex;align-items:center}
+  .pill.on{background:rgba(210,35,44,.16);border-color:transparent;color:var(--red-type)}
+  .plan{margin:18px 20px 0;padding:20px;border-radius:14px;background:linear-gradient(135deg,rgba(210,35,44,.22),rgba(210,35,44,.04));border:1px solid var(--line)}
+  .plan h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:34px;line-height:1;margin:8px 0}
+  .plan p{font-size:14.5px;line-height:1.5;color:var(--dim)}
+  .wprev{padding:22px 20px 0;text-align:center}.wprev p{font-size:12px;color:var(--faint);margin-top:10px}
+  .wcard{display:flex;gap:14px;align-items:center;max-width:300px;margin:0 auto;padding:14px;border-radius:24px;background:#1C1C1F;color:#EDE6DA;text-align:left;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+  .wcard .poster{flex:none;width:74px;height:111px;border-radius:10px}
+  .wtx i{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F04A50}
+  .wtx b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:24px;line-height:.95;margin:6px 0}
+  .wtx small{font-size:12px;color:#A39E95}
+  #settings .box{max-height:88%;overflow-y:auto;scrollbar-width:none}#settings .box::-webkit-scrollbar{display:none}
+  .scard.img .sprev.card{aspect-ratio:4/5;height:min(46vh,470px)}
+  .tog{flex:none}.ptitle.long{font-size:35px}
+  .phone.f-sans .rtext{font-family:var(--ui);letter-spacing:.003em}
+  .phone.lh-l .rtext{line-height:1.95}.phone.lh-s .rtext{line-height:1.5}
+  /* ---------- apparence claire ---------- */
+  .phone.light{--black:#F6F1E7;--coal:#ECE5D7;--ash:#E0D8C8;--line:rgba(24,20,16,.14);--bone:#171512;--dim:#57524A;--faint:#857F74;--red-type:#C21F28;--gold:#8A6A22;background:var(--black)}
+  .phone.light .view,.phone.light .layer,.phone.light .layer .view{background:var(--black);color:var(--bone)}
+  .phone.light .hero{background:#09090A}
+  .phone.light .hero .btn.light{color:#111}.phone.light .hero .btn.glass{background:rgba(237,230,218,.14)}
+  .phone.light .hero,.phone.light .poster,.phone.light .fxs,.phone.light .splash,.phone.light .sbar{--bone:#EDE6DA;--dim:#A39E95;--faint:#6F6B65;--line:rgba(237,230,218,.12);--black:#09090A;--coal:#121214;--red-type:#F04A50;--gold:#D3A85E;color:#EDE6DA}
+  .phone.light .rhero .shade{background:linear-gradient(180deg,rgba(246,241,231,.5),rgba(246,241,231,0) 18%,rgba(246,241,231,.3) 40%,var(--black) 62%)}
+  .phone.light .rtext{color:#26221D}
+  .phone.light .rbar.solid{background:rgba(246,241,231,.94)}
+  .phone.light .circle{background:rgba(246,241,231,.72);color:#171512}
+  .phone.light .btn.light,.phone.light .seg button[aria-pressed="true"],.phone.light .chips button[aria-pressed="true"]{color:#F6F1E7}
+  .phone.light .btn.glass{background:rgba(24,20,16,.08)}
+  .phone.light .sheet .box{background:#F6F1E7;color:#171512}
+  .phone.light .grab{background:#C9C0AF}
+  .phone.light .tog{background:#C9C0AF}.phone.light .tog[aria-checked="true"]{background:var(--red)}
+  .phone.light .toast{background:#171512;color:#F6F1E7}
+  .phone.light .homebar{background:rgba(24,20,16,.55)}
+  .phone.light .tile .poster{color:#EDE6DA}
+  .phone.light .bkfoot{background:linear-gradient(0deg,var(--black) 60%,rgba(246,241,231,0))}
+  .phone.light .shelf h2 .rn button{background:rgba(24,20,16,.08);color:#171512}
+  .phone.light .rtext .turn{background:linear-gradient(90deg,rgba(210,35,44,.1),rgba(210,35,44,0))}
 </style>
 <script>if(window.self!==window.top){document.documentElement.classList.add("embed")}</script>
 <style>html.embed{background:#09090A}.embed body{background:transparent;padding:14px 0 0;overflow:hidden}.embed .caption{display:none}.embed .phone{max-height:none}
@@ -1169,7 +1305,7 @@ var DJIDS=[];
 /* =====================================================================
    ÉTAT (en mémoire)
    ===================================================================== */
-var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{penicilline:true},saved:{},follow:{},minutes:6,fs:19,notif:true,hour:'7 h',filter:-1,stack:[]};
+var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{penicilline:true},saved:{},follow:{},minutes:6,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
 OPSIS.hydrate(S);OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain};
 var main=document.getElementById('main'),layer=document.getElementById('layer'),lv=document.getElementById('layerview');
 /* ---------- le logo : un diaphragme à six lamelles, une pupille rouge, et c'est le O d'OPSIS ----------
@@ -1294,18 +1430,18 @@ function home(){
     return tile({p:s.p,t:s.title,s:x[1]+', '+s.min+' min',attr:'data-pick="'+x[0]+'"',badge:S.read[x[0]]?'<span class="read">Lu</span>':'<span class="num">'+s.min+' MIN</span>'});
   }).join('');
   return '<section class="hero">'+poster(hid)+'<div class="shade"></div>'+
-    '<div class="topnav"><span class="mark" role="img" aria-label="OPSIS">'+logoSVG()+'<span class="wordmark" aria-hidden="true">PSIS</span></span><span class="tools"><button class="iconbtn" data-explore aria-label="Explorer par thème">'+IC.search+'</button><button class="iconbtn" data-lib aria-label="Ma bibliothèque">'+IC.lib+(libCount()?'<span class="count">'+libCount()+'</span>':'')+'</button></span></div>'+
+    '<div class="topnav"><span class="mark" role="img" aria-label="OPSIS">'+logoSVG()+'<span class="wordmark" aria-hidden="true">PSIS</span></span><span class="tools"><button class="iconbtn" data-search aria-label="Rechercher">'+IC.search+'</button><button class="iconbtn" data-lib aria-label="Mon espace">'+IC.lib+(libCount()?'<span class="count">'+libCount()+'</span>':'')+'</button></span></div>'+
     '<div class="heroinfo"><p class="kick"><b>Histoire du jour</b> · '+dateFr()+'</p>'+
     '<button data-pick="'+hid+'" style="display:block;width:100%;text-align:center"><h1 class="bigtitle">'+esc(st.title)+'</h1></button>'+
     '<p class="meta">'+(hid==='eiffel'?'Flash · '+st.min+' min · Personnes':esc(st.kind)+' · '+st.min+' min'+(st.meta?' · '+esc(st.meta.split(' · ')[0]):''))+'</p>'+
     '<div class="cta"><button class="btn light" data-open="'+hid+'">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="'+hid+'">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
-    '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+
+    '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     '<div class="shelf"><h2><span>À lire maintenant <small>Une histoire de chaque thème</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+T.map(function(_,i){return THEMES[i].k==='date'?null:nextOf(i);}).filter(Boolean).map(function(id){return epTile(id);}).join('')+'</div></div>'+
-    '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+
+    '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+homeNew()+
     '<div class="explore" id="explore"><h2 class="exh">Thèmes</h2><p class="exs">'+epIndex().all.length+' histoires, '+T.length+' thèmes</p>'+
       '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
     T.map(function(t,i){
-      var ids=epIndex().byT[i].slice(0,30),dt=THEMES[i].k==='date';
+      var ids=hr(epIndex().byT[i]).slice(0,30),dt=THEMES[i].k==='date';
       if(!ids.length)return '';
       return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+' <small>'+epIndex().byT[i].length+' histoires</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
     }).join('')+
@@ -1323,16 +1459,22 @@ function library(){
 }
 
 function saved(){
-  var ids=Object.keys(S.saved).filter(function(k){return S.saved[k];});
-  var readIds=Object.keys(S.read).filter(function(k){return S.read[k];});
-  var follows=Object.keys(S.follow).filter(function(k){return S.follow[k];});
-  function railOf(list){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:st.kind+', '+st.min+' min',attr:'data-pick="'+id+'"'});}).join('')+'</div>';}
-  var saved=ids.length?railOf(ids):'<p class="hint">Touchez « Ma liste » sur une histoire pour la garder ici.</p>';
-  var read=readIds.length?railOf(readIds):'<p class="hint">Les histoires terminées apparaîtront ici.</p>';
-  return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Ma bibliothèque</span><button class="circle" data-settings aria-label="Réglages">'+IC.gear+'</button></div>'+
-    '<h1 class="ptitle" style="padding-top:104px">Ma bibliothèque</h1>'+
-    '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+saved+'</div>'+
-    '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+read+'</div>'+
+  var ids=Object.keys(S.saved).filter(function(k){return S.saved[k]&&vis(k);});
+  var readIds=Object.keys(S.read).filter(function(k){return S.read[k]&&vis(k);});
+  function railOf(list){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
+  var rc=recentIds(),cs=myCols(),q=quotes(),bn=badgeNow(),bx=badgeNext(),n=readCount(),sk=OPSIS.store.streak();
+  var started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length;});
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Mon espace</span><button class="circle" data-set="root" aria-label="Réglages">'+IC.gear+'</button></div>'+
+    '<h1 class="ptitle" style="padding-top:104px">Mon espace</h1>'+
+    '<div class="stats"><div><b>'+n+'</b><small>'+(n>1?'histoires lues':'histoire lue')+'</small></div><div><b>'+(S.minutes||0)+'</b><small>minutes de lecture</small></div><div><b>'+sk+'</b><small>'+(sk>1?'jours d\'affilée':'jour d\'affilée')+'</small></div></div>'+
+    '<div class="shelf"><h2>Badges <small>'+(bn?bn[1]:'Aucun pour l\'instant')+'</small></h2>'+(bx?'<p class="hint" style="padding-top:6px">Encore '+(bx[0]-n)+' '+(bx[0]-n>1?'histoires':'histoire')+' pour « '+bx[1]+' ».</p>':'')+badgesHTML()+'</div>'+
+    (rc.length?'<div class="shelf"><h2>Reprendre la lecture</h2><div class="rail">'+rc.map(progTile).join('')+'</div></div>':'')+
+    '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?railOf(ids):'<p class="hint">Touchez « Ma liste » sur une histoire pour la garder ici.</p>')+'</div>'+
+    '<div class="shelf"><h2>Mes collections <small>'+cs.length+'</small></h2>'+(cs.length?'<div class="rail">'+cs.map(function(c,i){var v=c.ids.filter(vis);return v.length?colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')):'<button class="ccard" data-mycol="'+i+'"><span class="cc3"></span><b>'+esc(c.n)+'</b><small>Vide</small></button>';}).join('')+'</div>':'<p class="hint">Rangez vos histoires par envie. Touchez « Collection » à la fin d\'une histoire pour créer la première.</p>')+'</div>'+
+    '<div class="shelf"><h2>Citations et notes <small>'+q.length+'</small></h2>'+(q.length?'<button class="qpeek" data-quotes><span>« '+esc(q[0].t.slice(0,120))+(q[0].t.length>120?'…':'')+' »</span><small>Voir mes '+q.length+(q.length>1?' citations':' citation')+'</small></button>':'<p class="hint">Dans une histoire, sélectionnez un passage pour l\'enregistrer, l\'annoter ou en faire une carte à partager.</p>')+'</div>'+
+    (started.length?'<div class="shelf"><h2>Parcours en cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"',pathDone(p)+' / '+p.ids.length+' étapes');}).join('')+'</div></div>':'')+
+    '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+(readIds.length?railOf(readIds):'<p class="hint">Les histoires terminées apparaîtront ici.</p>')+
+    '<div class="opt" style="margin:14px 20px 0"><span>Les masquer de l\'accueil</span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues de l\'accueil"></button></div></div>'+
     '<div class="bottomspace"></div>';
 }
 
@@ -1341,9 +1483,9 @@ function settings(){
   return '<div class="grab"></div><h3 class="sth">Réglages</h3>'+
     '<div class="opt"><span>Notification chaque matin</span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+
     '<div class="opt"><span>Heure de sortie</span><span class="seg">'+hours+'</span></div>'+
-    '<div class="opt"><span>Mode de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Défilement</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Livre</button></span></div>'+
-    '<div class="opt"><span>Durée de lecture</span><span class="seg">'+[3,5,10].map(function(k){return '<button data-len="'+k+'" aria-pressed="'+((S.len||3)===k)+'">'+k+' min</button>';}).join('')+'</span></div>'+
-    '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
+    '<div class="opt"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
+    '<div class="opt"><span>Format</span><span class="seg">'+[3,5,10].map(function(k){return '<button data-len="'+k+'" aria-pressed="'+((S.len||3)===k)+'">'+FM[k]+' min</button>';}).join('')+'</span></div>'+lookOpts()+
+    '<div class="opt lgrow"><button data-set="root">Tous les réglages</button></div>'+
     OPSIS.accountHTML()+
     '<div class="opt lgrow"><button data-legal="mentions">Mentions légales</button></div>'+
     '<div class="opt lgrow"><button data-legal="confidentialite">Politique de confidentialité</button></div>'+
@@ -1357,7 +1499,7 @@ function bodyHTML(arr){
     if(c==='!')return '<p class="turn">'+esc(p.slice(1))+'</p>';
     if(c==='#')return '<h3 class="sec">'+esc(p.slice(1))+'</h3>';
     if(c==='@')return '<p class="dl">'+esc(p.slice(1))+'</p>';
-    return '<p>'+esc(p)+'</p>';}).join('');
+    return '<p>'+esc(p)+'</p>';}).join('').replace(/\*([^*<>\n]{1,120})\*/g,'<em>$1</em>');
 }
 function srcHTML(t){
   if(!t)return '';
@@ -1372,20 +1514,21 @@ function lenPick(s,L){var av=lenAv(s);if(av[L])return {arr:av[L],got:L};var ks=L
 function lensUI(s,V){
   /* une seule version écrite : on n'affiche pas de choix 3 / 5 / 10 min qui donnerait trois fois le même texte */
   if(!s.b3&&!s.b10){var m=Math.max(1,Math.round(lenWords(s.body)/200));return '<div class="lens"><span class="ll">Durée de lecture</span><span class="ll">environ '+m+' min</span></div>';}
-  var cur=S.len||3,av=lenAv(s),btn=[3,5,10].map(function(k){var has=!!av[k];return '<button data-len="'+k+'" aria-pressed="'+(cur===k)+'"'+(has?'':' class="na"')+'>'+k+' min</button>';}).join('');
-  return '<div class="lens"><span class="ll">Durée de lecture</span><span class="seg">'+btn+'</span></div>'+(V.miss?'<p class="lnote">La version de '+V.miss+' minutes de cette histoire arrive bientôt. Vous lisez la version de '+V.got+' minutes.</p>':'');}
+  var cur=S.len||3,av=lenAv(s),btn=[3,5,10].map(function(k){var has=!!av[k];return '<button data-len="'+k+'" aria-pressed="'+(cur===k)+'"'+(has?'':' class="na"')+'>'+FM[k]+' min</button>';}).join('');
+  return '<div class="lens"><span class="ll">Format</span><span class="seg">'+btn+'</span></div>'+(V.miss?'<p class="lnote">Le format '+FM[V.miss]+' minutes de cette histoire arrive bientôt. Vous lisez le format '+FM[V.got]+' minutes.</p>':'');}
 function reader(id){
   epIndex();var s=STORIES[id],sv=!!S.saved[id],done=!!S.read[id];
   var V=lenPick(s,S.len||3),body=bodyHTML(V.arr);
   var nx=s.next?STORIES[s.next]:null;
   var up=nx?'<button class="upnext" data-open="'+s.next+'">'+poster(nx.p)+'<span><span class="uk" style="display:block">À LIRE ENSUITE</span><span class="ut" style="display:block">'+esc(nx.title)+'</span><span class="us" style="display:block">'+esc(nx.kind)+', '+nx.min+' min</span></span></button>'
     :(s.th!==undefined?'<button class="upnext" data-terr="'+s.th+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU THÈME</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">'+esc(T[s.th])+'</span></span></button>':'');
-  var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':lenMin(V.arr)+' min')+'</span><span style="display:flex;gap:8px"><button class="circle" data-rmode aria-label="'+(S.mode==='book'?'Lire en défilement':'Lire comme un livre')+'">'+(S.mode==='book'?IC.scrollm:IC.bookm)+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
-  var head='<div class="rhead"><p class="k">'+(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase()))+'</p><h1>'+esc(s.title)+'</h1>'+(s.sub?'<p class="sb">'+esc(s.sub)+'</p>':'')+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+lenMin(V.arr)+(lenMin(V.arr)>1?' minutes':' minute')+' de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
+  var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':lenMin(V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-audio="'+id+'" aria-label="Écouter cette histoire">'+IC.audio+'</button><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
+  var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
+  var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+(s.sub?'<p class="sb">'+esc(s.sub)+'</p>':'')+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+lenMin(V.arr)+(lenMin(V.arr)>1?' minutes':' minute')+' de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var tail=''+
     ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+
     '<div class="ract"><button class="btn glass full" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass full'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'+
-    '<button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button></div>'+up;
+    '<button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button></div>'+tailExtra(id)+up;
   if(S.mode==='book')return bar+'<div class="bkwrap" id="bkw"><div class="bk rtext" id="bk"><section class="bkcover"><div class="bkpost">'+poster(s.p)+'</div>'+head+'</section>'+body+'<section class="bkend">'+tail+'</section></div></div>'+
     '<div class="bkfoot"><button class="bkb" data-bk="-1" aria-label="Page précédente">‹</button><span class="bkbar"><i id="bkprog"></i></span><button class="bkb" data-bk="1" aria-label="Page suivante">›</button></div>';
   return bar+'<div class="rhero">'+poster(s.p)+'<div class="shade"></div></div>'+head+'<div class="rtext">'+body+'</div>'+tail+'<div style="height:60px"></div>';
@@ -1407,6 +1550,7 @@ function bkgo(d,quiet){
   var rt=document.getElementById('rt'),pg=document.getElementById('bkprog');
   if(rt)rt.textContent=(BK.p+1)+' / '+BK.n;
   if(pg)pg.style.width=((BK.p+1)/BK.n*100)+'%';
+  if(!quiet&&S.stats!==false&&BK.n>1)saveProg(BK.id,BK.p/(BK.n-1)*.96);
 }
 function bookMode(){var t=S.stack[S.stack.length-1];return !!t&&t.type==='read'&&S.mode==='book';}
 function rerenderMode(){var t=S.stack[S.stack.length-1];if(!t)return;lv.innerHTML=layerHTML(t);lv.scrollTop=0;bindLayer(t);}
@@ -1847,15 +1991,19 @@ function legalLayer(k){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+d[0]+'</span></div>'+
     '<h1 class="ptitle" style="padding-top:104px">'+d[0]+'</h1><p class="hint">Dernière mise à jour : '+LEGAL_DATE+'</p><div class="lgw">'+body+'<div class="lgl">'+links+'</div></div><div class="bottomspace"></div>';
 }
-function themeLayer(i){
-  var X=epIndex(),eps=X.byT[i],dt=THEMES[i].k==='date';
-  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span></div>'+
-    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+eps.length+' histoires</p>'+
-    '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+
-    (eps.length?'<div class="grid" style="padding-top:8px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
+function themeLayer(i,sub){
+  var X=epIndex(),all=X.byT[i],dt=THEMES[i].k==='date',cnt={},order=[];
+  all.forEach(function(id){var k=subKey(id);if(!k)return;if(!cnt[k]){cnt[k]=0;order.push(k);}cnt[k]++;});
+  var subs=order.filter(function(k){return cnt[k]>=2&&subName(k);});
+  var eps=sub?all.filter(function(id){return subKey(id)===sub;}):all;
+  var chips=(!dt&&subs.length>1)?'<div class="chips"><button data-subf="" aria-pressed="'+(!sub)+'">Tout</button>'+subs.map(function(k){return '<button data-subf="'+k+'" aria-pressed="'+(sub===k)+'">'+esc(subName(k))+' <small>'+cnt[k]+'</small></button>';}).join('')+'</div>':'';
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span><button class="circle" data-search aria-label="Rechercher">'+IC.search+'</button></div>'+
+    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+eps.length+' histoires'+(sub?' · '+esc(subName(sub)):'')+'</p>'+
+    '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+chips+
+    (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
     '<div class="bottomspace"></div>';
 }
-function layerHTML(top){return top.type==='read'?reader(top.id):(top.type==='lib'?saved():(top.type==='theme'?themeLayer(top.i):(top.type==='legal'?legalLayer(top.k):serie(top.key))));}
+function layerHTML(top){var t=top.type;return t==='read'?reader(top.id):t==='lib'?saved():t==='theme'?themeLayer(top.i,top.sub):t==='legal'?legalLayer(top.k):t==='search'?searchLayer():t==='col'?colLayer(top.k):t==='path'?pathLayer(top.k):t==='mycol'?myColLayer(top.i):t==='quotes'?quotesLayer():t==='set'?setLayer(top.k):serie(top.key);}
 function renderLayer(){
   var top=S.stack[S.stack.length-1];
   if(!top){layer.classList.remove('in');return;}
@@ -1865,16 +2013,18 @@ function renderLayer(){
   bindLayer(top);
 }
 function push(x){S.stack.push(x);renderLayer();}
-function back(){S.stack.pop();if(S.stack.length)renderLayer();else{layer.classList.remove('in');var y=main.scrollTop;renderMain();main.scrollTop=y;}}
+function back(){S.stack.pop();selBar.classList.remove('on');if(S.stack.length)renderLayer();else{if(AU.on)auStop();lv.classList.remove('focus','peek');layer.classList.remove('in');var y=main.scrollTop;renderMain();main.scrollTop=y;}}
 function bindLayer(top){
-  lv.classList.toggle('bookmode',top.type==='read'&&S.mode==='book');
+  lv.classList.toggle('bookmode',top.type==='read'&&S.mode==='book');lv.classList.toggle('focus',top.type==='read'&&!!S.focus);lv.classList.remove('peek');selBar.classList.remove('on');
+  if(AU.on&&(top.type!=='read'||top.id!==AU.id))auStop();
+  restoreProg(top);
   var bar=document.getElementById('rbar')||lv.querySelector('.rbar');
   var prog=document.getElementById('prog'),rt=document.getElementById('rt');
   lv.onscroll=function(){
     var y=lv.scrollTop;bar.classList.toggle('solid',y>300);
     if(prog&&top.type==='read'){
       var max=lv.scrollHeight-lv.clientHeight,p=max>0?Math.min(1,y/max):0,m=STORIES[top.id].min;
-      prog.style.width=(p*100)+'%';
+      prog.style.width=(p*100)+'%';if(S.stats!==false)saveProg(top.id,p);
       var l=Math.ceil(m*(1-p));rt.textContent=l>0?'Encore '+l+' min':'Terminé';
     }
   };
@@ -1886,6 +2036,7 @@ function rerenderKeepScroll(){var y=lv.scrollTop;var top=S.stack[S.stack.length-
 
 document.getElementById('phone').addEventListener('click',function(e){
   var b=e.target.closest('button');if(!b)return;var d=b.dataset;
+  if(featClick(b,d))return;
   if(b.hasAttribute('data-lib')){push({type:'lib'});return;}
   if(b.hasAttribute('data-rmode')){S.mode=S.mode==='book'?'scroll':'book';rerenderMode();toast(S.mode==='book'?'Lecture en livre : touchez les bords ou glissez':'Lecture en défilement');return;}
   if(d.bk){bkgo(+d.bk);return;}
@@ -1901,18 +2052,18 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.filter!==undefined){S.filter=+d.filter;renderMain();return;}
   if(d.save){var was=!!S.saved[d.save];S.saved[d.save]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
     if(S.stack.length)rerenderKeepScroll();else{var y=main.scrollTop;renderMain();main.scrollTop=y;}return;}
-  if(d.finish){var id=d.finish;if(!S.read[id]){S.read[id]=true;S.minutes+=STORIES[id].min;toast('Histoire terminée. À demain, '+S.hour);}
+  if(d.finish){var id=d.finish;if(!S.read[id]){var b0=badgeNow();S.read[id]=true;S.prog[id]=100;S.minutes+=STORIES[id].min;var b1=badgeNow();toast(b1&&(!b0||b1[0]!==b0[0])?'Nouveau badge : '+b1[1]:'Histoire terminée. À demain, '+S.hour);}
     renderMain();back();return;}
   if(d.share){openShare(d.share);return;}
   if(b.hasAttribute('data-notify')){S.follow.serie=true;toast('Série suivie : vous serez prévenu à chaque épisode');return;}
   if(b.hasAttribute('data-settings')){openSettings();return;}
   if(d.legal){setBox.parentNode.classList.remove('show');if(S.stack.length&&S.stack[S.stack.length-1].type==='legal'){S.stack[S.stack.length-1].k=d.legal;renderLayer();}else push({type:'legal',k:d.legal});return;}
   if(b.hasAttribute('data-closesettings')){setBox.parentNode.classList.remove('show');return;}
-  if(d.toggle){S[d.toggle]=!S[d.toggle];renderSettings();return;}
-  if(d.hour){S.hour=d.hour;renderSettings();toast('L\'histoire du jour arrivera à '+d.hour);return;}
-  if(d.fs){S.fs=Math.max(16,Math.min(24,S.fs+(+d.fs)));document.documentElement.style.setProperty('--fs',S.fs+'px');renderSettings();if(bookMode()){var tq=S.stack[S.stack.length-1];S.bpage[tq.id]=0;bookInit(tq.id);}return;}
-  if(d.rm){S.mode=d.rm;renderSettings();rerenderMode();return;}
-  if(d.len){S.len=+d.len;var tq2=S.stack[S.stack.length-1];if(tq2&&tq2.type==='read')S.bpage[tq2.id]=0;if(document.querySelector('.sth'))renderSettings();if(tq2&&tq2.type==='read')rerenderMode();return;}
+  if(d.toggle){S[d.toggle]=!S[d.toggle];reSet();return;}
+  if(d.hour){S.hour=d.hour;reSet();toast('L\'histoire du jour arrivera à '+d.hour);return;}
+  if(d.fs){S.fs=Math.max(16,Math.min(24,S.fs+(+d.fs)));document.documentElement.style.setProperty('--fs',S.fs+'px');reSet();if(bookMode()){var tq=S.stack[S.stack.length-1];S.bpage[tq.id]=0;bookInit(tq.id);}return;}
+  if(d.rm){S.mode=d.rm;reSet();if(isRead())rerenderMode();return;}
+  if(d.len){S.len=+d.len;var tq2=S.stack[S.stack.length-1];if(tq2&&tq2.type==='read')S.bpage[tq2.id]=0;reSet();if(tq2&&tq2.type==='read')rerenderMode();return;}
 });
 (function(){
   var rl=null,sx=0,sl=0,mv=false;
@@ -2012,7 +2163,7 @@ function pickData(key){
     meta:'Série · '+T[x.t]+' · bientôt',syn:x.syn,tag:x.tag,fmt:'Série',
     acts:'<button class="btn glass" data-go="close">Plus tard</button>'};}
   var s=STORIES[key],sv=!!S.saved[key],fmt=s.fmt||(s.kind.indexOf('Série')===0?'Série':s.kind);
-  return {p:s.p,c:s.c,no:s.no,front:s.title,title:s.title,meta:s.kind+' · '+s.min+' min · '+s.terr+' · série '+s.series,syn:(BLURB[s.p]&&BLURB[s.p].b)||s.syn,tag:(BLURB[s.p]&&BLURB[s.p].h)||s.quote,fmt:fmt,
+  return {p:s.p,c:s.c,no:s.no,front:s.title,title:s.title,meta:s.kind+' · '+s.min+' min · '+(s.series||s.terr)+(subName(subKey(key))&&subName(subKey(key))!==s.series?' · '+subName(subKey(key)):''),syn:(BLURB[s.p]&&BLURB[s.p].b)||s.syn,tag:(BLURB[s.p]&&BLURB[s.p].h)||s.quote,fmt:fmt,
     acts:'<button class="btn red" data-go="read" data-id="'+key+'">'+IC.play+(S.read[key]?'Relire':'Lire')+'</button><button class="btn glass" data-go="save" data-id="'+key+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'};
 }
 var SYN2={"serie": "Cinquante-deux femmes et hommes au sommet de leur art ou de leur pouvoir : Judy Garland, Mike Tyson, Amy Winehouse, Elizabeth Holmes, Eminem. Ce que la réussite leur a donné, promis, permis, et ce qu'elle n'a pas pu leur prendre. Un portrait complet par jour.", "serieK": "Du train postal de 1963 à Hatton Garden et aux coffres de Gelsenkirchen : dix-huit vrais cambriolages et braquages. Qui a préparé quoi, comment ça s'est passé, et ce qu'on ignore encore.", "serieF": "Tableaux, manuscrits, objets antiques, photos de fées : dix-huit faux célèbres et ceux qui les ont fabriqués, van Meegeren, Elmyr de Hory, Tom Keating, Mark Hofmann, les fées de Cottingley. Qui a été trompé, et comment on l'a su.", "serieA": "Victor Lustig a « vendu » la tour Eiffel, Billy McFarland un festival qui n'a pas eu lieu : vingt et une grandes escroqueries réelles. Escrocs, faux célèbres, canulars : la part de vérité et la part de légende dans chaque récit.", "serieP": "Les rayons X, les corn flakes, les pulsars : onze découvertes dues au hasard. Chaque récit sépare ce qui s'est vraiment passé de la légende qu'on en a faite.", "serieS": "Elles n'auraient pas dû s'en sortir, et pourtant : l'équipage de l'Endurance pris dans la banquise, un naufragé de soixante-seize jours en canot, les rescapés des Andes, les passagers de l'Hudson. Comment ils ont tenu, et ce que les sources divergent à dire.", "serieB": "Ils ont testé leur idée sur leur propre corps : Barry Marshall et la bactérie de l'ulcère, Pettenkofer et le choléra, Forssmann et son cathéter, Kevin Warwick et ses implants. Pourquoi, et ce que ça a prouvé.", "serieE": "De Marie Stuart en 1568 à Rédoine Faïd en 2018, vingt-quatre évasions réelles : Casanova aux Plombs, Latude à la Bastille, Papillon, la Grande Évasion de 1944. Comment ils sont sortis, et ce qui reste contesté.", "serieI": "Prendre la place d'un autre, ou s'inventer une identité : Martin Guerre, Clark Rockefeller, Misha Defonseca. Qui les a crus, jusqu'où ça a tenu, et ce qu'on sait de la supercherie.", "serieG": "De Mata Hari en 1917 à Gouzenko à Ottawa, vingt et une affaires d'espionnage réelles : agents doubles, traîtres, opérations secrètes (Garbo, l'homme qui n'a jamais existé, Argo, Farewell). Ce que les archives permettent d'affirmer.", "serieN": "Une erreur minuscule, des conséquences énormes : un entier trop grand (Ariane 501), une commande mal saisie. Sept pannes : ce qui a cassé, et ce qu'on a compris après.", "serieX": "Des pôles aux abîmes : Amundsen et Scott au pôle Sud, l'Endurance, Franklin, l'Everest en 1953, le Kon-Tiki, Gagarine, la fosse des Mariannes. Vingt-quatre expéditions : ce qu'ils cherchaient, ce qu'ils ont trouvé, ce qu'on ignore.", "serieQ": "Des messages que personne ne savait lire, ou que personne ne devait lire : Enigma, le linéaire B, Kryptos, Cicada 3301, le message d'Arecibo envoyé aux étoiles. Neuf histoires de codes : ce qui a été cassé, et ce qui résiste encore.", "serieZ": "Des projets énormes qui ont raté : le Vasa qui coule à son premier voyage, l'Emu War, des films, un festival. Onze échecs célèbres : pourquoi ça a raté, et ce qu'on en raconte à tort.", "serieD": "Du Mary Celeste à la colonie de Roanoke, seize disparitions célèbres : un navire, un avion, un tableau, un prince, une civilisation. Ce qu'on a retrouvé, ce qu'on suppose, et ce qui reste sans réponse.", "serieR": "De Socrate à James Joyce, vingt-quatre procès célèbres : Galilée, Dreyfus, Eichmann, Mandela, O.J. Simpson, Flaubert. Ce qui s'est dit au tribunal, ce que les juges ont décidé, et ce que les sources en retiennent.", "serieL": "Lincoln, Molière, Marie Curie, Scott, Lennon, le Titanic, la navette Challenger : leurs dernières vingt-quatre heures, reconstituées d'après les sources. Ce qui s'est passé ce jour-là, et ce qu'on ne sait pas.", "serieV": "Ils partaient perdants : Leicester champion en 2016, Douglas contre Tyson, le Miracle sur glace, Apollo 13, LeMond au Tour, l'Uruguay au Maracanã. Vingt-cinq victoires inattendues : les circonstances, et ce sur quoi les sources divergent.", "serieU": "Deux adversaires, un seul gagnant : Borg–McEnroe à Wimbledon, Hagler–Hearns, Senna–Prost, Kasparov contre Deep Blue, Maradona contre l'Angleterre. Vingt-quatre duels de légende : qui a gagné, comment, et ce que les témoins ne racontent pas pareil.", "serieT": "Des films qui ont failli détruire ceux qui les faisaient : Twilight Zone, Apocalypse Now, Fitzcarraldo, Shining. Treize tournages : accidents, budgets explosés, plateaux en guerre, et ce qui relève de la légende."};
@@ -2075,8 +2226,10 @@ fxs.addEventListener('click',function(e){
 
 /* ---------- réglages ---------- */
 var setBox=document.getElementById('settingsbox');
-function renderSettings(){setBox.innerHTML=settings();}
-function openSettings(){renderSettings();setBox.parentNode.classList.add('show');}
+function renderSettings(){var y=setBox.scrollTop;setBox.innerHTML=(SHEETFN||settings)();setBox.scrollTop=y;var t=S.stack[S.stack.length-1];if(t&&t.type==='set'&&!setBox.parentNode.classList.contains('show'))rerenderKeepScroll();}
+function openSettings(){SHEETFN=settings;renderSettings();setBox.parentNode.classList.add('show');}
+/* après un changement de réglage : la feuille si elle est ouverte, sinon la page de réglages */
+function reSet(){if(setBox.parentNode.classList.contains('show'))renderSettings();else{var t=S.stack[S.stack.length-1];if(t&&(t.type==='set'||t.type==='lib'))rerenderKeepScroll();}}
 setBox.parentNode.addEventListener('click',function(e){if(e.target===setBox.parentNode)setBox.parentNode.classList.remove('show');});
 
 /* ---------- partage ---------- */
@@ -2122,7 +2275,7 @@ function storyPreview(cv){var w=720,h=1280,cur=cv;
   while(cur.width/2>=w){var t=document.createElement('canvas');t.width=Math.round(cur.width/2);t.height=Math.round(cur.height/2);var x=t.getContext('2d');x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';x.drawImage(cur,0,0,t.width,t.height);cur=t;}
   var o=document.createElement('canvas');o.width=w;o.height=h;var y=o.getContext('2d');y.imageSmoothingEnabled=true;y.imageSmoothingQuality='high';y.drawImage(cur,0,0,w,h);return {prev:o,full:cv};}
 function storyImage(id){return storyCanvas(id).then(function(cv){return new Promise(function(res){try{cv.toBlob(function(b){res(b);},'image/png');}catch(e){res(null);}});});}
-function openShare(id){var s=STORIES[id];storyId=id;storyBlob=null;
+function openShare(id){var s=STORIES[id];storyId=id;storyBlob=null;document.getElementById('sgo').textContent='Partager en story';
   var box=document.getElementById('scard');box.className='scard img';box.innerHTML='<p class="sprep">Préparation de la story…</p>';
   sheet.classList.add('show');
   storyCanvas(id).then(function(full){if(storyId!==id)return;var pv=storyPreview(full).prev,cv=full;box.innerHTML='';pv.className='sprev';pv.setAttribute('aria-label','Aperçu de la story');box.appendChild(pv);
@@ -2130,6 +2283,7 @@ function openShare(id){var s=STORIES[id];storyId=id;storyBlob=null;
   }).catch(function(){box.innerHTML='<p class="sprep">Aperçu indisponible</p>';});}
 document.getElementById('sclose').onclick=function(){sheet.classList.remove('show');};
 document.getElementById('sgo').onclick=function(){
+  if(String(storyId).indexOf('card:')===0){shareCard();return;}
   var s=STORIES[storyId];if(!s)return;
   var go=function(b){
     var f;try{f=new File([b],'opsis-'+storyId+'.png',{type:'image/png'});}catch(e){f=null;}
@@ -2140,6 +2294,449 @@ document.getElementById('sgo').onclick=function(){
   if(storyBlob)go(storyBlob);else storyImage(storyId).then(function(b){storyBlob=b;if(b)go(b);});
 };
 sheet.addEventListener('click',function(e){if(e.target===sheet)sheet.classList.remove('show');});
+
+/* =====================================================================
+   FONCTIONNALITÉS : découverte, espace personnel, lecteur, réglages
+   ===================================================================== */
+var FM={3:3,5:7,10:12};
+var SUBS={ar:'Arnaques',cs:'Casses',fa:'Faussaires',pa:'Découvertes',sv:'Survivants',ev:'Évasions',im:'Imposteurs',es:'Espions',pn:'Pannes',ex:'Expéditions',ce:'Codes et énigmes',fi:'Fiascos',di:'Disparus',pr:'Procès',ld:'Derniers jours',vc:'Victoires impossibles',du:'Duels',tm:'Tournages maudits',mq:'Marques',cb:'Cobayes'};
+function subKey(id){var st=STORIES[id];if(!st)return '';if(st.book){var c=chOf(+String(id).slice(2));return c>=0?'ch'+c:'';}return String(id).slice(0,2);}
+function subName(k){if(!k)return '';if(k.indexOf('ch')===0){var c=BOOK.chapters[+k.slice(2)];return c?c.title:'';}return SUBS[k]||'';}
+function vis(id){return !!STORIES[id]&&!GONE[id];}
+function hr(ids){return S.hideRead?ids.filter(function(id){return !S.read[id];}):ids;}
+var COLLS=[
+ {k:'menteurs',n:'Ils ont menti à tout le monde',d:'Faux princes, faux médecins, fausses héritières : ceux qui ont vécu sous un mensonge, et ceux qui les ont crus.',ids:['ar01','ar10','ar11','ar13','ar15','im01','im10','im16','im28','fa01','fa08','pt33','pt41']},
+ {k:'nature',n:'Seuls contre la nature',d:'La banquise, l\'océan, la jungle, le désert. Des gens qui n\'auraient pas dû revenir.',ids:['sv01','sv02','sv03','sv06','sv09','sv14','sv15','sv18','sv19','sv28','ex23']},
+ {k:'froide',n:'La guerre froide',d:'Taupes, transfuges, tunnels et fausses alertes : quarante ans d\'une guerre qui ne disait pas son nom.',ids:['es30','es13','es14','es15','es11','es16','es17','es18','ev16','ev18','ev19','ev20','pn28','fi27','ex21','du22']},
+ {k:'ww2',n:'Seconde Guerre mondiale',d:'Les coulisses du conflit : agents doubles, évasions, faussaires et survivants.',ids:['es06','es07','es08','es09','es10','ev06','ev08','ev29','sv04','sv05','sv20','fa21','fa22','pr17','ld28','di23']},
+ {k:'elles',n:'Elles ont tout changé',d:'Espionnes, exploratrices, savantes, évadées : des femmes au centre du récit.',ids:['es09','es10','ev22','ev24','sv10','sv14','sv23','ex25','ld12','ld09','pr02','pr23','ar08','di16','pt51']},
+ {k:'hollywood',n:'Hollywood, l\'envers du décor',d:'Tournages qui déraillent, films maudits et enfants stars : ce que l\'écran ne montre pas.',ids:['tm01','tm02','tm06','tm11','tm12','tm21','tm18','fi07','fi10','pt01','pt04','pt23','pt48']},
+ {k:'argent',n:'L\'argent des autres',d:'Start-up, mines d\'or et pyramides : les grandes fraudes, de la promesse à la chute.',ids:['pt33','pt34','pt35','pt38','pt39','pt41','pt42','ar26','ar29','ar07']},
+ {k:'espace',n:'Vers l\'espace',d:'Des alarmes, des explosions et quelques miracles : la conquête spatiale racontée par ses minutes décisives.',ids:['ex21','pn25','sv29','ld30','pn01','ce27','pt28']}
+];
+var PATHS=[
+ {k:'gf',n:'La guerre froide en huit étapes',d:'De la défection d\'un chiffreur à Ottawa en 1945 à l\'exfiltration d\'un agent double en 1985, dans l\'ordre des événements.',ids:['es30','es13','es14','es15','ev19','es11','pn28','es16']},
+ {k:'faux',n:'L\'art du faux',d:'Deux siècles de faussaires, du Shakespeare inventé par un adolescent aux faux Rothko d\'une galerie new-yorkaise.',ids:['fa12','fa18','fa01','fa02','fa03','fa04','fa06','fa08']},
+ {k:'extremes',n:'Conquérir les extrêmes',d:'Les océans, les pôles, les sommets, les abysses, puis l\'espace : jusqu\'où l\'on est allé, étape par étape.',ids:['ex12','ex03','ld16','ex07','ex15','ex21','pn25','sv29']},
+ {k:'geants',n:'Naissance des géants',d:'Comment des marques sont nées, d\'un rivet sur une poche en 1873 à une entreprise au bord du gouffre en 1997.',ids:['mq20','mq16','mq19','mq11','mq15','mq04','mq01','mq02']},
+ {k:'revolution',n:'La Révolution au tribunal',d:'Cinq procès et un mystère pour traverser la Révolution française.',ids:['pr07','pr08','pr09','pr10','di22']},
+ {k:'evasion',n:'S\'évader',d:'Un coffre à livres, les toits de Venise, un tunnel sous le Mur : sept évasions, du XVIIe siècle à 1979.',ids:['ev02','ev04','ev21','ev06','ev11','ev19','ev28']},
+ {k:'chute',n:'Grandeur et chute',d:'Six ascensions fulgurantes, suivies jusqu\'au moment où tout se retourne.',ids:['pt33','pt34','pt35','pt41','pt43','pt47']}
+];
+COLLS.forEach(function(c){c.ids=c.ids.filter(vis);});PATHS.forEach(function(c){c.ids=c.ids.filter(vis);});
+COLLS=COLLS.filter(function(c){return c.ids.length>=4;});PATHS=PATHS.filter(function(c){return c.ids.length>=4;});
+var BADGES=[[1,'Premier regard','Une première histoire lue'],[5,'Curieux','Cinq histoires lues'],[10,'Lecteur','Dix histoires lues'],[25,'Explorateur','Vingt-cinq histoires lues'],[50,'Passionné','Cinquante histoires lues'],[100,'Érudit','Cent histoires lues'],[200,'Mémoire vive','Deux cents histoires lues']];
+function readCount(){var n=0;Object.keys(S.read).forEach(function(k){if(S.read[k]&&vis(k))n++;});return n;}
+function badgeNow(){var n=readCount(),b=null;BADGES.forEach(function(x){if(n>=x[0])b=x;});return b;}
+function badgeNext(){var n=readCount();for(var i=0;i<BADGES.length;i++)if(n<BADGES[i][0])return BADGES[i];return null;}
+IC.star='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/></svg>';
+IC.starOn='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/></svg>';
+IC.audio='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10.5v3"/></svg>';
+IC.aa='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18L8 6l5 12M5 14h6M15 18l3-7 3 7M16 16h4"/></svg>';
+IC.pause='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+IC.x='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+IC.chev='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg>';
+IC.gift='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M3 7h18v3H3zM12 7v13M12 7c-1.5-4-6-3.500-4.500-1 .9 1.300 4.500 1 4.500 1zm0 0c1.500-4 6-3.500 4.500-1-.9 1.300-4.500 1-4.500 1z"/></svg>';
+IC.flag='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>';
+IC.folder='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 7.5V18a1.500 1.500 0 0 0 1.500 1.500h15A1.500 1.500 0 0 0 21 18V9a1.500 1.500 0 0 0-1.500-1.500H12L10 5H4.500A1.500 1.500 0 0 0 3 6.500z"/></svg>';
+IC.quote='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 17v-5c0-3.300 1.700-5.300 4.500-6l.6 1.600C8.500 8.200 7.800 9.300 7.700 11H10v6zm9 0v-5c0-3.300 1.700-5.300 4.500-6l.6 1.600c-1.600.6-2.300 1.700-2.400 3.400H19v6z"/></svg>';
+
+/* ---------- applique l'apparence (thème, police, interligne) ---------- */
+function applyLook(){
+  var ph=document.getElementById('phone');
+  ph.classList.toggle('light',S.theme==='light');
+  ph.classList.toggle('f-sans',S.font==='sans');
+  ph.classList.toggle('lh-l',S.lh==='l');ph.classList.toggle('lh-s',S.lh==='s');
+  document.documentElement.style.setProperty('--fs',S.fs+'px');
+}
+
+/* ---------- recommandations ---------- */
+function recs(n){
+  var X=epIndex(),w={},sig=0;
+  function add(id,v){var st=STORIES[id];if(st&&st.th!==undefined&&v){w[st.th]=(w[st.th]||0)+v;sig++;}}
+  Object.keys(S.read).forEach(function(id){if(S.read[id])add(id,1);});
+  Object.keys(S.saved).forEach(function(id){if(S.saved[id])add(id,2);});
+  Object.keys(S.rate).forEach(function(id){var r=S.rate[id];add(id,r>=4?3:r<=2?-2:0);});
+  (S.x.prefs||[]).forEach(function(ti){w[ti]=(w[ti]||0)+4;sig++;});
+  var day=OPSIS.day(),pool=X.all.filter(function(id){return !S.read[id]&&!(S.prog[id]>3);});
+  var sc=pool.map(function(id){return [id,(w[STORIES[id].th]||0)+(hashN(id+day)%100)/100];});
+  sc.sort(function(a,b){return b[1]-a[1];});
+  var out=[],per={};
+  for(var i=0;i<sc.length&&out.length<n;i++){var th=STORIES[sc[i][0]].th;per[th]=(per[th]||0)+1;if(per[th]>3)continue;out.push(sc[i][0]);}
+  return {ids:out,personal:sig>0};
+}
+function recentIds(){return (S.x.recent||[]).filter(function(id){return vis(id)&&!S.read[id]&&S.prog[id]>=3&&S.prog[id]<97;});}
+function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
+  return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-open="'+id+'"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
+function colCard(c,attr,extra){
+  return '<button class="ccard" '+attr+'><span class="cc3">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span><b>'+esc(c.n)+'</b><small>'+(extra||c.ids.length+' histoires')+'</small></button>';
+}
+function pathDone(p){return p.ids.filter(function(id){return S.read[id];}).length;}
+function homeExtra(){
+  var h='',rc=recentIds();
+  if(rc.length)h+='<div class="shelf"><h2><span>Reprendre la lecture</span></h2><div class="rail">'+rc.slice(0,12).map(progTile).join('')+'</div></div>';
+  var r=recs(12);
+  if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
+  return h;
+}
+function homeNew(){
+  var ids=hr(MQIDS.slice().reverse().filter(vis));
+  var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
+  h+='<div class="shelf"><h2><span>Collections <small>Nos sélections</small></span></h2><div class="rail">'+COLLS.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+'</div></div>';
+  h+='<div class="shelf"><h2><span>Parcours de découverte <small>Un sujet, étape par étape</small></span></h2><div class="rail">'+PATHS.map(function(p){var d=pathDone(p);return colCard(p,'data-path="'+p.k+'"',d?d+' / '+p.ids.length+' étapes':p.ids.length+' étapes');}).join('')+'</div></div>';
+  return h;
+}
+
+/* ---------- recherche ---------- */
+function norm(t){return String(t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
+var SIX=null;
+function sIndex(){if(SIX)return SIX;var X=epIndex();SIX=X.all.map(function(id){var s=STORIES[id];return {id:id,t:norm(s.title),a:norm([s.title,s.sub,s.meta,T[s.th],subName(subKey(id)),(BLURB[id]&&BLURB[id].h)||''].join(' '))};});return SIX;}
+function sFind(q){q=norm(q).trim();if(!q)return [];var ws=q.split(/\s+/),r=[];
+  sIndex().forEach(function(e){if(ws.every(function(w){return e.a.indexOf(w)>=0;})){var i=e.t.indexOf(q);r.push([e.id,i===0?0:i>0?1:2]);}});
+  r.sort(function(a,b){return a[1]-b[1];});return r.map(function(x){return x[0];});}
+function addHist(q){q=String(q||'').trim();if(q.length<2)return;var h=(S.x.hist||[]).filter(function(x){return norm(x)!==norm(q);});h.unshift(q);S.x.hist=h.slice(0,8);}
+var QCUR='';
+function searchBody(q){
+  var X=epIndex();
+  if(!q.trim()){
+    var hist=S.x.hist||[];
+    return (hist.length?'<div class="qsec"><h4>Recherches récentes <button data-qclear>Effacer</button></h4><div class="qchips">'+hist.map(function(x){return '<button data-q="'+esc(x)+'">'+esc(x)+'</button>';}).join('')+'</div></div>':'')+
+      '<div class="qsec"><h4>Thèmes</h4><div class="qchips">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
+      '<div class="qsec"><h4>Collections</h4><div class="qchips">'+COLLS.map(function(c){return '<button data-col="'+c.k+'">'+esc(c.n)+'</button>';}).join('')+'</div></div>'+
+      '<div class="qsec"><h4>Idées de recherche</h4><div class="qchips">'+['Paris','espion','Titanic','1969','faussaire','évasion','procès','Tyson'].map(function(x){return '<button data-q="'+x+'">'+x+'</button>';}).join('')+'</div></div>';
+  }
+  var nq=norm(q).trim(),ids=sFind(q),sug='';
+  T.forEach(function(t,i){if(norm(t).indexOf(nq)>=0)sug+='<button class="qrow" data-terr="'+i+'"><i>Thème</i>'+t+'</button>';});
+  Object.keys(SUBS).forEach(function(k){if(norm(SUBS[k]).indexOf(nq)>=0){var ti=-1;X.byT.forEach(function(l,j){if(ti<0&&THEMES[j].k!=='date'&&l.some(function(id){return subKey(id)===k;}))ti=j;});if(ti>=0)sug+='<button class="qrow" data-terr="'+ti+'" data-sub="'+k+'"><i>Catégorie</i>'+SUBS[k]+'</button>';}});
+  COLLS.forEach(function(c){if(norm(c.n).indexOf(nq)>=0)sug+='<button class="qrow" data-col="'+c.k+'"><i>Collection</i>'+esc(c.n)+'</button>';});
+  PATHS.forEach(function(c){if(norm(c.n).indexOf(nq)>=0)sug+='<button class="qrow" data-path="'+c.k+'"><i>Parcours</i>'+esc(c.n)+'</button>';});
+  ids.slice(0,5).forEach(function(id){sug+='<button class="qrow" data-pick="'+id+'"><i>Histoire</i>'+esc(STORIES[id].title)+'</button>';});
+  if(!ids.length&&!sug)return '<div class="empty"><b>Aucun résultat</b>Essayez un nom, un lieu, une année ou un thème.</div>';
+  return (sug?'<div class="qsug">'+sug+'</div>':'')+(ids.length?'<div class="shelf"><h2>Histoires <small>'+ids.length+'</small></h2></div><div class="grid">'+ids.slice(0,60).map(function(id){return epTile(id);}).join('')+'</div>':'');
+}
+function searchLayer(){
+  return '<div class="rbar solid"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" style="opacity:1">Recherche</span><span style="width:38px"></span></div>'+
+    '<div class="qwrap"><label class="qbox">'+IC.search+'<input id="q" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Titre, personnage, événement, thème" aria-label="Rechercher une histoire" value="'+esc(QCUR)+'"></label></div><div id="qres">'+searchBody(QCUR)+'</div><div class="bottomspace"></div>';
+}
+lv.addEventListener('input',function(e){if(e.target&&e.target.id==='q'){QCUR=e.target.value;document.getElementById('qres').innerHTML=searchBody(QCUR);}
+  if(e.target&&e.target.id==='qnote'){/* saisie d'une note : rien à faire avant validation */}});
+lv.addEventListener('keydown',function(e){if(e.target&&e.target.id==='q'&&e.key==='Enter'){addHist(QCUR);e.target.blur();}
+  if(e.target&&e.target.id==='newcol'&&e.key==='Enter'){e.preventDefault();var b=document.querySelector('[data-colnew]');if(b)b.click();}});
+
+/* ---------- collections, parcours ---------- */
+function listLayer(title,desc,ids,opt){
+  opt=opt||{};
+  var body=opt.steps?'<div class="steps">'+ids.map(function(id,i){var st=STORIES[id],r=!!S.read[id];return '<button class="step'+(r?' done':'')+'" data-pick="'+id+'"><span class="sn">'+(r?IC.check:(i+1))+'</span><span class="poster" data-art="'+st.p+'"></span><span class="sx"><b>'+esc(st.title)+'</b><small>'+esc(st.series||'')+' · '+st.min+' min</small></span></button>';}).join('')+'</div>'
+    :(ids.length?'<div class="grid" style="padding-top:8px">'+ids.map(function(id){return epTile(id);}).join('')+'</div>':'<div class="empty"><b>Vide</b>'+(opt.empty||'Rien ici pour l\'instant.')+'</div>');
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+esc(title)+'</span>'+(opt.right||'<span style="width:38px"></span>')+'</div>'+
+    '<p class="pkick">'+(opt.kick||'Collection')+'</p><h1 class="ptitle" style="padding-top:6px">'+esc(title)+'</h1>'+(desc?'<p class="hint" style="padding:8px 20px 0;font-size:15px">'+esc(desc)+'</p>':'')+(opt.top||'')+body+'<div class="bottomspace"></div>';
+}
+function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';return listLayer(c.n,c.d,c.ids,{kick:'Collection · '+c.ids.length+' histoires'});}
+function pathLayer(k){var p=PATHS.filter(function(x){return x.k===k;})[0];if(!p)return '';var d=pathDone(p),nx=p.ids.filter(function(id){return !S.read[id];})[0];
+  var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/p.ids.length*100)+'%"></i></span><small>'+(d===p.ids.length?'Parcours terminé':d+' sur '+p.ids.length+' étapes')+'</small></div>'+(nx?'<div style="padding:14px 20px 0"><button class="btn red" style="width:100%" data-open="'+nx+'">'+IC.play+(d?'Continuer le parcours':'Commencer le parcours')+'</button></div>':'');
+  return listLayer(p.n,p.d,p.ids,{kick:'Parcours de découverte',steps:1,top:top});}
+function myCols(){return S.x.cols||(S.x.cols=[]);}
+function myColLayer(i){var c=myCols()[i];if(!c)return '';var ids=c.ids.filter(vis);
+  return listLayer(c.n,'',ids,{kick:'Ma collection · '+ids.length+(ids.length>1?' histoires':' histoire'),empty:'Ajoutez des histoires depuis leur fiche ou à la fin d\'une lecture.',right:'<button class="circle" data-coldel="'+i+'" aria-label="Supprimer la collection">'+IC.x+'</button>'});}
+/* feuille « ajouter à une collection » */
+var SHEETFN=null;
+function colSheet(id){
+  var cs=myCols();
+  return '<div class="grab"></div><h3 class="sth">Ajouter à une collection</h3>'+
+    (cs.length?cs.map(function(c,i){var on=c.ids.indexOf(id)>=0;return '<div class="opt"><span>'+esc(c.n)+' <small style="color:var(--faint)">'+c.ids.length+'</small></span><button class="tog" role="switch" aria-checked="'+on+'" data-coltog="'+i+'" data-id="'+id+'" aria-label="'+esc(c.n)+'"></button></div>';}).join(''):'<p class="hint" style="padding:0 0 12px">Vous n\'avez pas encore de collection. Créez-en une pour ranger vos histoires par envie : « à relire », « pour mes cours », « à raconter ».</p>')+
+    '<div class="opt acctrow"><input id="newcol" maxlength="40" placeholder="Nom d\'une nouvelle collection" aria-label="Nom d\'une nouvelle collection"><button class="btn red sm" data-colnew="'+id+'">Créer</button></div>'+
+    '<button class="btn light" data-closesettings style="width:100%;margin-top:18px">Terminé</button>';
+}
+function openSheet(fn){SHEETFN=fn;setBox.innerHTML=fn();setBox.parentNode.classList.add('show');setBox.scrollTop=0;}
+
+/* ---------- citations, notes, carte ---------- */
+function quotes(){return S.x.quotes||(S.x.quotes=[]);}
+function quotesLayer(){
+  var q=quotes();
+  var body=q.length?'<div class="qlist">'+q.map(function(x,i){var st=STORIES[x.id];return '<div class="qitem"><p class="qt">« '+esc(x.t)+' »</p>'+(x.n?'<p class="qn">'+esc(x.n)+'</p>':'')+'<p class="qs">'+(st?'<button data-pick="'+x.id+'">'+esc(st.title)+'</button>':'')+'</p><div class="qa"><button data-qcard="'+i+'">Carte à partager</button><button data-qnote="'+i+'">'+(x.n?'Modifier la note':'Annoter')+'</button><button data-qdel="'+i+'">Supprimer</button></div></div>';}).join('')+'</div>'
+    :'<div class="empty"><b>Aucune citation</b>Dans une histoire, sélectionnez un passage pour l\'enregistrer, l\'annoter ou en faire une carte à partager.</div>';
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">Citations et notes</span><span style="width:38px"></span></div>'+
+    '<p class="pkick">Mon espace</p><h1 class="ptitle" style="padding-top:6px">Citations et notes</h1>'+body+'<div class="bottomspace"></div>';
+}
+function noteSheet(i){var x=quotes()[i];return '<div class="grab"></div><h3 class="sth">Votre note</h3><p class="qt" style="font-size:16px;margin:0 0 12px">« '+esc(x.t)+' »</p><textarea id="qnote" class="ta" rows="4" maxlength="600" placeholder="Ce que ce passage vous inspire" aria-label="Votre note">'+esc(x.n||'')+'</textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-qsave="'+i+'">Enregistrer</button></div>';}
+/* carte graphique 1080×1350 d'un passage */
+var cardBlob=null;
+function quoteCanvas(text,id){
+  var s=STORIES[id]||{},W=1080,H=1350,c=s.c||'#D2232C';
+  var cv=document.createElement('canvas');cv.width=W;cv.height=H;var g=cv.getContext('2d');
+  var disp=(getComputedStyle(document.documentElement).getPropertyValue('--disp')||'Impact').trim(),serif=(getComputedStyle(document.documentElement).getPropertyValue('--serif')||'Georgia').trim();
+  var bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,'#141012');bg.addColorStop(1,'#070506');g.fillStyle=bg;g.fillRect(0,0,W,H);
+  var rg=g.createRadialGradient(W*.2,H*.12,40,W*.2,H*.12,900);rg.addColorStop(0,c);rg.addColorStop(1,'rgba(0,0,0,0)');g.globalAlpha=.42;g.fillStyle=rg;g.fillRect(0,0,W,H);g.globalAlpha=1;
+  g.fillStyle='#D2232C';g.fillRect(90,150,90,8);
+  g.fillStyle=c;g.font='900 260px '+disp;g.textBaseline='alphabetic';g.globalAlpha=.9;g.fillText('«',76,400);g.globalAlpha=1;
+  function wrap(t,font,maxW){g.font=font;var w=t.split(' '),l=[],cur='';w.forEach(function(x){var tt=cur?cur+' '+x:x;if(g.measureText(tt).width>maxW&&cur){l.push(cur);cur=x;}else cur=tt;});if(cur)l.push(cur);return l;}
+  var fs=76,lines;for(;fs>=34;fs-=4){lines=wrap(text,'italic '+fs+'px '+serif,W-180);if(lines.length*fs*1.32<=620)break;}
+  g.fillStyle='#F4EEE4';g.font='italic '+fs+'px '+serif;var y=470+fs*.2;lines.forEach(function(t){g.fillText(t,90,y);y+=fs*1.32;});
+  g.fillStyle='rgba(244,238,228,.5)';g.fillRect(90,H-270,W-180,2);
+  var tl=wrap((s.title||'').toUpperCase(),'900 54px '+disp,W-180).slice(0,2);g.fillStyle='#F4EEE4';g.font='900 54px '+disp;y=H-200;tl.forEach(function(t){g.fillText(t,90,y);y+=54;});
+  g.fillStyle='rgba(244,238,228,.6)';g.font='600 30px '+disp;if('letterSpacing' in g)g.letterSpacing='8px';g.fillText('OPSIS · UNE HISTOIRE VRAIE',90,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
+  return cv;
+}
+function openCard(text,id){
+  storyId='card:'+id;cardBlob=null;var box=document.getElementById('scard');box.className='scard img';box.innerHTML='<p class="sprep">Préparation de la carte…</p>';
+  document.getElementById('sgo').textContent='Partager la carte';sheet.classList.add('show');sheet._card={t:text,id:id};
+  var run=function(){var cv=quoteCanvas(text,id);cv.className='sprev card';cv.setAttribute('aria-label','Aperçu de la carte');box.innerHTML='';box.appendChild(cv);try{cv.toBlob(function(b){cardBlob=b;},'image/png');}catch(e){}};
+  if(document.fonts&&document.fonts.load)Promise.race([Promise.all([document.fonts.load('900 54px "Big Shoulders Display"'),document.fonts.load('italic 40px "Newsreader"')]).catch(function(){}),new Promise(function(r){setTimeout(r,1200);})]).then(run);else run();
+}
+/* sélection de texte dans le lecteur -> barre d'actions */
+var selBar=document.createElement('div');selBar.className='selbar';selBar.innerHTML='<button data-selq>'+IC.quote+'Citation</button><button data-seln>Annoter</button><button data-selc>Carte</button>';
+document.getElementById('phone').appendChild(selBar);
+var SEL='';
+function selText(){var s=window.getSelection&&window.getSelection();if(!s||s.isCollapsed||!s.rangeCount)return '';var a=s.anchorNode,el=a&&(a.nodeType===1?a:a.parentNode);if(!el||!el.closest||!el.closest('.rtext'))return '';if(el.closest('.srcb,.bkend,.rhead'))return '';return String(s).replace(/\s+/g,' ').trim();}
+document.addEventListener('selectionchange',function(){var top=S.stack[S.stack.length-1];if(!top||top.type!=='read'){selBar.classList.remove('on');return;}
+  var t=selText();if(t.length>=12&&t.length<=600){SEL=t;selBar.classList.add('on');}else if(!selBar.matches(':hover'))selBar.classList.remove('on');});
+selBar.addEventListener('pointerdown',function(e){e.preventDefault();});
+function saveSel(){var top=S.stack[S.stack.length-1];if(!SEL||!top)return -1;var q=quotes();q.unshift({id:top.id,t:SEL,n:'',at:OPSIS.day()});selBar.classList.remove('on');try{window.getSelection().removeAllRanges();}catch(e){}return 0;}
+
+/* ---------- note, quiz, signalement, cadeau ---------- */
+function starsHTML(id){var r=S.rate[id]||0,h='';for(var i=1;i<=5;i++)h+='<button data-rate="'+i+'" data-id="'+id+'" aria-label="'+i+(i>1?' étoiles':' étoile')+'" aria-pressed="'+(r===i)+'" class="'+(i<=r?'on':'')+'">'+(i<=r?IC.starOn:IC.star)+'</button>';
+  return '<div class="rateb"><h4>Votre note</h4><div class="stars" role="group" aria-label="Noter cette histoire sur 5">'+h+'</div><p>'+(r?['','Pas pour moi','Moyenne','Bonne histoire','Très bonne','Inoubliable'][r]:'Notez cette histoire pour affiner vos recommandations.')+'</p></div>';}
+function quizFor(id){
+  var s=STORIES[id];if(!s||s.th===undefined)return null;var X=epIndex(),pool=X.byT[s.th].filter(function(x){return x!==id;}),out=[];
+  function pickN(arr,n,seed){var a=arr.slice(),r=[];for(var i=0;i<n&&a.length;i++){var j=hashN(seed+i)%a.length;r.push(a.splice(j,1)[0]);}return r;}
+  function shuf(opts,seed){var a=opts.slice(),r=[];while(a.length){r.push(a.splice(hashN(seed+a.length)%a.length,1)[0]);}return r;}
+  var hk=BLURB[id]&&BLURB[id].h;
+  if(hk){var o=pool.filter(function(x){return BLURB[x]&&BLURB[x].h;});if(o.length>=3){var d=pickN(o,3,id+'h').map(function(x){return BLURB[x].h;});out.push({q:'Quelle phrase résume cette histoire ?',a:hk,o:shuf([hk].concat(d),id+'1')});}}
+  var parts=String(s.meta||'').split(' · '),country=parts[1],dates=parts[0];
+  if(country&&country.length<40){var seen={},oc=[];X.all.forEach(function(x){var c=String(STORIES[x].meta||'').split(' · ')[1];if(!c||c.length>=40||seen[c])return;var a=norm(country).split(/[^a-z]+/),b=norm(c).split(/[^a-z]+/);if(a.some(function(w){return w.length>3&&b.indexOf(w)>=0;}))return;seen[c]=1;oc.push(c);});
+    if(oc.length>=3)out.push({q:'Où se déroule cette histoire ?',a:country,o:shuf([country].concat(pickN(oc,3,id+'c')),id+'2')});}
+  var y=YR[id];
+  if(y!==undefined&&dates){var od=[],sd={};X.all.forEach(function(x){var yy=YR[x],dd=String(STORIES[x].meta||'').split(' · ')[0];if(yy===undefined||!dd||sd[dd]||Math.abs(yy-y)<25||dd===dates)return;sd[dd]=1;od.push(dd);});
+    if(od.length>=3)out.push({q:'Quelles dates correspondent à cette histoire ?',a:dates,o:shuf([dates].concat(pickN(od,3,id+'d')),id+'3')});}
+  return out.length>=2?out:null;
+}
+var QZ={};
+function quizHTML(id){
+  var qs=quizFor(id);if(!qs)return '';var st=QZ[id]||(QZ[id]={a:[]}),n=st.a.length;
+  if(!st.open&&!n)return '<div class="quiz"><h4>Ce que vous avez retenu</h4><p>'+qs.length+' questions facultatives sur cette histoire.</p><button class="btn glass" data-quiz="'+id+'" style="width:100%">Répondre</button></div>';
+  if(n>=qs.length){var ok=st.a.filter(function(v,i){return v===qs[i].a;}).length;return '<div class="quiz"><h4>Ce que vous avez retenu</h4><p class="qzs"><b>'+ok+' / '+qs.length+'</b> '+(ok===qs.length?'Tout est resté.':ok?'L\'essentiel est là.':'Une relecture s\'impose peut-être.')+'</p>'+qs.map(function(q,i){var good=st.a[i]===q.a;return '<p class="qzr '+(good?'ok':'ko')+'"><i>'+esc(q.q)+'</i>'+esc(q.a)+'</p>';}).join('')+'<button class="btn glass" data-quizre="'+id+'" style="width:100%;margin-top:10px">Recommencer</button></div>';}
+  var q=qs[n];
+  return '<div class="quiz"><h4>Question '+(n+1)+' sur '+qs.length+'</h4><p class="qzq">'+esc(q.q)+'</p>'+q.o.map(function(o,i){return '<button class="qzo" data-quizans="'+i+'" data-id="'+id+'">'+esc(o)+'</button>';}).join('')+'</div>';
+}
+function storyURL(id){var base=/^https?:/.test(location.protocol)?location.origin+location.pathname:'https://opsis-media.vercel.app/app.html';return base+'#h='+encodeURIComponent(id);}
+function gift(id){
+  var s=STORIES[id],url=storyURL(id),txt='Je t\'offre une histoire : « '+s.title+' ». Elle se lit en '+s.min+' minutes sur OPSIS, sans compte.';
+  if(navigator.share){navigator.share({title:s.title,text:txt,url:url}).catch(function(){});return;}
+  var done=function(){toast('Lien copié : envoyez-le à qui vous voulez');};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
+}
+function reportSheet(id){var s=STORIES[id];return '<div class="grab"></div><h3 class="sth">Signaler une erreur</h3><p class="hint" style="padding:0 0 12px">Une date, un nom, un fait vous semble inexact dans « '+esc(s.title)+' » ? Dites-nous lequel, avec votre source si vous en avez une. Nous vérifions chaque signalement.</p><textarea id="rpt" class="ta" rows="5" maxlength="1200" placeholder="Le passage concerné, et ce qui vous semble inexact" aria-label="Votre signalement"></textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-rptsend="'+id+'">Envoyer</button></div>';}
+function tailExtra(id){
+  var s=STORIES[id];
+  return starsHTML(id)+quizHTML(id)+
+    '<div class="ract" style="margin-top:14px"><button class="btn glass" data-gift="'+id+'">'+IC.gift+'Offrir</button><button class="btn glass" data-coladd="'+id+'">'+IC.folder+'Collection</button><button class="btn glass full sm2" data-report="'+id+'">'+IC.flag+'Signaler une information inexacte</button></div>'+
+    moreLike(id);
+}
+function moreLike(id){var s=STORIES[id];if(s.th===undefined)return '';var X=epIndex(),k=subKey(id);
+  var a=X.byT[s.th].filter(function(x){return x!==id&&x!==s.next&&!S.read[x]&&subKey(x)===k;}),b=X.byT[s.th].filter(function(x){return x!==id&&x!==s.next&&!S.read[x]&&subKey(x)!==k;});
+  var ids=a.concat(b).slice(0,8);if(!ids.length)return '';
+  return '<div class="shelf"><h2><span>Vous aimerez aussi</span></h2><div class="rail">'+ids.map(function(x){return epTile(x);}).join('')+'</div></div>';}
+
+/* ---------- progression et reprise ---------- */
+function markRecent(id){var r=(S.x.recent||[]).filter(function(x){return x!==id;});r.unshift(id);S.x.recent=r.slice(0,20);}
+function saveProg(id,p){p=Math.max(0,Math.min(100,Math.round(p*100)));if(p<3&&!(S.prog[id]>0))return;if(Math.abs((S.prog[id]||0)-p)<2)return;S.prog[id]=p;markRecent(id);}
+function restoreProg(top){
+  if(top.type!=='read'||top.resumed)return;top.resumed=1;var p=S.prog[top.id]||0;
+  if(S.read[top.id]||p<5||p>96)return;
+  if(S.mode==='book')return;
+  requestAnimationFrame(function(){var max=lv.scrollHeight-lv.clientHeight;if(max>0){lv.scrollTop=max*p/100;toast('Reprise à '+p+' %');}});
+}
+
+/* ---------- mode sans distraction ---------- */
+function setFocus(on){S.focus=!!on;lv.classList.toggle('focus',S.focus&&isRead());}
+function isRead(){var t=S.stack[S.stack.length-1];return !!t&&t.type==='read';}
+lv.addEventListener('click',function(e){
+  if(!isRead()||!S.focus||bookMode())return;if(e.target.closest('button,a,input,textarea'))return;
+  var s=window.getSelection&&window.getSelection();if(s&&!s.isCollapsed)return;
+  if(e.target.closest('.rtext,.rhero,.rhead'))lv.classList.toggle('peek');
+});
+
+/* ---------- mode audio (synthèse vocale du navigateur) ---------- */
+var AU={on:false,i:0,id:null,list:[],paused:false};
+var auBar=document.createElement('div');auBar.className='aubar';document.getElementById('phone').appendChild(auBar);
+function auOK(){return 'speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;}
+function auRender(){
+  if(!AU.on){auBar.classList.remove('on');return;}
+  var s=STORIES[AU.id];
+  auBar.innerHTML='<button class="aub" data-au="toggle" aria-label="'+(AU.paused?'Reprendre l\'écoute':'Mettre en pause')+'">'+(AU.paused?IC.play:IC.pause)+'</button><span class="aut"><b>'+esc(s?s.title:'')+'</b><small>'+(AU.i+1)+' / '+AU.list.length+' · voix de l\'appareil</small></span><button class="aus" data-au="speed" aria-label="Vitesse de lecture">'+String(S.speed||1).replace('.',',')+'×</button><button class="aub" data-au="stop" aria-label="Arrêter l\'écoute">'+IC.x+'</button>';
+  auBar.classList.add('on');
+}
+function auMark(){var ps=lv.querySelectorAll('.rtext>p,.rtext>h3,.bk>p,.bk>h3');for(var i=0;i<ps.length;i++)ps[i].classList.remove('speaking');var el=AU.list[AU.i]&&AU.list[AU.i].el;if(el&&document.body.contains(el)){el.classList.add('speaking');if(!bookMode())el.scrollIntoView({block:'center',behavior:'smooth'});}}
+function auSpeak(){
+  if(!AU.on)return;if(AU.i>=AU.list.length){auStop();toast('Lecture audio terminée');return;}
+  var it=AU.list[AU.i],u=new SpeechSynthesisUtterance(it.t);u.lang='fr-FR';u.rate=S.speed||1;
+  var vs=speechSynthesis.getVoices().filter(function(v){return /^fr/i.test(v.lang);});if(vs.length)u.voice=vs.filter(function(v){return /fr[-_]FR/i.test(v.lang);})[0]||vs[0];
+  var tok=AU.tok;u.onend=function(){if(AU.on&&AU.tok===tok&&!AU.skip){AU.i++;auSpeak();}};u.onerror=function(ev){if(ev&&(ev.error==='interrupted'||ev.error==='canceled'))return;if(AU.on&&AU.tok===tok){auStop();toast('La lecture audio n\'est pas disponible sur cet appareil');}};
+  auMark();auRender();speechSynthesis.speak(u);
+}
+function auStart(id){
+  if(!auOK()){toast('La lecture audio n\'est pas disponible sur cet appareil');return;}
+  var els=lv.querySelectorAll(bookMode()?'.bk>p,.bk>h3':'.rtext>p,.rtext>h3'),list=[];
+  for(var i=0;i<els.length;i++){var el=els[i];if(el.classList.contains('orn')||el.closest('.bkend,.bkcover'))continue;var t=el.textContent.trim();if(t)list.push({t:t,el:el});}
+  if(!list.length)return;
+  var s=STORIES[id];list.unshift({t:s.title+'. '+(s.sub||''),el:null});
+  speechSynthesis.cancel();AU={on:true,i:0,id:id,list:list,paused:false,tok:Date.now()};auSpeak();
+}
+function auStop(){AU.on=false;AU.tok=0;try{speechSynthesis.cancel();}catch(e){}var ps=lv.querySelectorAll('.speaking');for(var i=0;i<ps.length;i++)ps[i].classList.remove('speaking');auRender();}
+auBar.addEventListener('click',function(e){var b=e.target.closest('[data-au]');if(!b)return;e.stopPropagation();var a=b.dataset.au;
+  if(a==='stop'){auStop();return;}
+  if(a==='toggle'){if(AU.paused){speechSynthesis.resume();AU.paused=false;}else{speechSynthesis.pause();AU.paused=true;}auRender();return;}
+  if(a==='speed'){var sp=[0.8,1,1.2,1.5],k=sp.indexOf(S.speed||1);S.speed=sp[(k+1)%sp.length];AU.tok=Date.now();AU.skip=1;speechSynthesis.cancel();AU.paused=false;setTimeout(function(){AU.skip=0;auSpeak();},120);return;}
+});
+
+/* ---------- lecteur : réglages rapides ---------- */
+function quickSheet(){
+  return '<div class="grab"></div><h3 class="sth">Lecture</h3>'+
+    '<div class="opt"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
+    '<div class="opt"><span>Format</span><span class="seg">'+[3,5,10].map(function(k){return '<button data-len="'+k+'" aria-pressed="'+((S.len||3)===k)+'">'+FM[k]+' min</button>';}).join('')+'</span></div>'+
+    lookOpts()+
+    '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture. Touchez le texte pour les revoir.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
+    '<button class="btn light" data-closesettings style="width:100%;margin-top:18px">Terminé</button>';
+}
+function lookOpts(){
+  return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button></span></div>'+
+    '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
+    '<div class="opt"><span>Police</span><span class="seg"><button data-font="serif" aria-pressed="'+(S.font!=='sans')+'">Sérif</button><button data-font="sans" aria-pressed="'+(S.font==='sans')+'">Sans</button></span></div>'+
+    '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>';
+}
+
+/* ---------- pages de réglages ---------- */
+function row(k,label,sub){return '<button class="srow" data-set="'+k+'"><span>'+label+(sub?'<small>'+sub+'</small>':'')+'</span>'+IC.chev+'</button>';}
+function deviceName(){var u=navigator.userAgent||'',os=/iPhone|iPad/.test(u)?'iPhone ou iPad':/Android/.test(u)?'Android':/Mac OS X/.test(u)?'Mac':/Windows/.test(u)?'Windows':/Linux/.test(u)?'Linux':'Appareil',br=/Edg\//.test(u)?'Edge':/Firefox\//.test(u)?'Firefox':/Chrome\//.test(u)?'Chrome':/Safari\//.test(u)?'Safari':'Navigateur';return os+' · '+br;}
+var SETT={lecture:'Préférences de lecture',langue:'Langue',notifs:'Notifications',abo:'Abonnement et facturation',appareils:'Appareils et sessions',confid:'Confidentialité',widget:'Widget et raccourcis',compte:'Compte'};
+function setLayer(k){
+  var b='';
+  if(k==='root'){
+    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('lecture','Préférences de lecture','Sens, format, typographie, thèmes préférés')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Offre gratuite')+row('appareils','Appareils et sessions',deviceName())+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+'</div>'+
+      '<div class="slist"><button class="srow" data-legal="mentions"><span>Mentions légales</span>'+IC.chev+'</button><button class="srow" data-legal="confidentialite"><span>Politique de confidentialité</span>'+IC.chev+'</button><button class="srow" data-legal="conditions"><span>Conditions d\'utilisation</span>'+IC.chev+'</button></div>';
+  }else if(k==='compte'){
+    b='<div class="sbox">'+OPSIS.accountHTML()+(OPSIS.live?'':'<p class="hint" style="padding:12px 0 0">La connexion à un compte sera proposée à l\'ouverture d\'OPSIS. D\'ici là, vos lectures sont gardées sur cet appareil.</p>')+'</div>';
+  }else if(k==='lecture'){
+    var pf=S.x.prefs||[];
+    b='<div class="sbox"><div class="opt" style="border-top:0"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
+      '<div class="opt"><span>Format préféré</span><span class="seg">'+[3,5,10].map(function(x){return '<button data-len="'+x+'" aria-pressed="'+((S.len||3)===x)+'">'+FM[x]+' min</button>';}).join('')+'</span></div>'+lookOpts()+
+      '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
+      '<div class="opt"><span>Vitesse de la lecture audio</span><span class="seg">'+[0.8,1,1.2,1.5].map(function(v){return '<button data-speed="'+v+'" aria-pressed="'+((S.speed||1)===v)+'">'+String(v).replace('.',',')+'×</button>';}).join('')+'</span></div>'+
+      '<div class="opt"><span>Masquer les histoires déjà lues<small class="os">Sur l\'accueil. Elles restent dans votre bibliothèque.</small></span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues"></button></div></div>'+
+      '<p class="pkick" style="padding-top:26px">Vos thèmes préférés</p><p class="hint" style="padding-top:4px">Ils orientent la sélection « Pour vous ».</p><div class="qchips" style="padding:12px 20px 0">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>';
+  }else if(k==='langue'){
+    var w=S.x.langWish||[];
+    b='<div class="sbox"><div class="opt" style="border-top:0"><span>Français</span><span class="pill on">Active</span></div>'+
+      [['en','English'],['es','Español']].map(function(l){var on=w.indexOf(l[0])>=0;return '<div class="opt"><span>'+l[1]+'<small class="os">En préparation</small></span><button class="pill'+(on?' on':'')+'" data-langwish="'+l[0]+'">'+(on?'Vous serez prévenu':'Me prévenir')+'</button></div>';}).join('')+'</div>'+
+      '<p class="hint">Les histoires sont aujourd\'hui écrites en français. Les versions anglaise et espagnole seront de vraies adaptations, pas des traductions automatiques.</p>';
+  }else if(k==='notifs'){
+    var hours=['6 h','7 h','8 h'].map(function(h){return '<button data-hour="'+h+'" aria-pressed="'+(S.hour===h)+'">'+h+'</button>';}).join('');
+    b='<div class="sbox"><div class="opt" style="border-top:0"><span>L\'histoire du jour<small class="os">Une notification chaque matin.</small></span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+
+      '<div class="opt"><span>Heure</span><span class="seg">'+hours+'</span></div>'+
+      '<div class="opt"><span>Nouveautés dans mes thèmes<small class="os">Quand une histoire sort dans un thème que vous aimez.</small></span><button class="tog" role="switch" aria-checked="'+!!S.nNew+'" data-toggle2="nNew" aria-label="Nouveautés dans mes thèmes"></button></div>'+
+      '<div class="opt"><span>Lecture en cours<small class="os">Un rappel si une histoire reste inachevée.</small></span><button class="tog" role="switch" aria-checked="'+!!S.nResume+'" data-toggle2="nResume" aria-label="Rappel de lecture en cours"></button></div></div>'+
+      '<p class="hint">Sur le web, la notification du matin n\'arrive que si OPSIS est ouvert. Les deux autres seront envoyées par l\'application iOS et Android : vos choix sont déjà enregistrés.</p>';
+  }else if(k==='abo'){
+    var wp=!!S.x.plusWish;
+    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS Gratuit</h3><p>Toutes les histoires, les trois formats, la lecture audio, vos collections et vos citations. Sans carte bancaire.</p></div>'+
+      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">Aucun abonnement en cours.</small></span><span class="pill">Aucun</span></div>'+
+      '<div class="opt"><span>Moyen de paiement<small class="os">Aucun moyen de paiement enregistré.</small></span></div>'+
+      '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
+      '<div class="opt"><span>Résiliation<small class="os">Vous n\'avez rien à résilier. Quand une offre payante existera, elle se résiliera ici, en un geste, sans justification.</small></span></div>'+
+      '<div class="opt"><span>Offre payante<small class="os">Elle n\'existe pas encore. Vous pouvez demander à être prévenu.</small></span><button class="pill'+(wp?' on':'')+'" data-pluswish>'+(wp?'Vous serez prévenu':'Me prévenir')+'</button></div></div>';
+  }else if(k==='appareils'){
+    var tok=OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token();
+    b='<div class="sbox"><div class="opt" style="border-top:0"><span>'+esc(deviceName())+'<small class="os">Cet appareil · actif maintenant</small></span><span class="pill on">Ici</span></div>'+
+      (tok?'<div class="opt lgrow"><button data-acct="out">Se déconnecter de tous mes appareils</button></div>':'')+'</div>'+
+      '<p class="hint">'+(tok?'La déconnexion ferme votre session partout. Vos lectures restent dans votre compte.':'Vous n\'êtes pas connecté : vos lectures vivent uniquement sur cet appareil. Avec un compte, elles vous suivront sur vos autres appareils.')+' La liste détaillée de vos autres appareils arrivera avec les comptes.</p>';
+  }else if(k==='confid'){
+    b='<div class="sbox"><div class="opt" style="border-top:0"><span>Garder mon historique de lecture<small class="os">Sert à « Reprendre », aux badges et aux recommandations. Reste sur cet appareil tant que vous n\'avez pas de compte.</small></span><button class="tog" role="switch" aria-checked="'+(S.stats!==false)+'" data-toggle2="stats" aria-label="Garder mon historique de lecture"></button></div>'+
+      '<div class="opt lgrow"><button data-export>Télécharger mes données</button></div>'+
+      '<div class="opt lgrow"><button data-histclear>Effacer mon historique de recherche</button></div>'+
+      '<div class="opt lgrow"><button data-wipe class="danger">'+(setLayer.confirm?'Confirmer : tout effacer sur cet appareil':'Effacer toutes mes données sur cet appareil')+'</button></div>'+
+      '<div class="opt lgrow"><button data-legal="confidentialite">Lire la politique de confidentialité</button></div></div>'+
+      '<p class="hint">OPSIS n\'affiche pas de publicité et ne revend aucune donnée. Vos notes, citations et collections vous appartiennent.</p>';
+  }else if(k==='widget'){
+    var hid=DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel',st=STORIES[hid];
+    b='<div class="wprev"><div class="wcard"><span class="poster" data-art="'+st.p+'"></span><span class="wtx"><i>Histoire du jour</i><b>'+esc(st.title)+'</b><small>'+st.min+' min</small></span></div><p>Aperçu du widget</p></div>'+
+      '<div class="sbox"><div class="opt" style="border-top:0"><span>Widget d\'écran d\'accueil<small class="os">Il affichera l\'histoire du jour sans ouvrir l\'application. Il arrivera avec l\'application iOS et Android : un site web ne peut pas en installer.</small></span><span class="pill">Bientôt</span></div>'+
+      '<div class="opt"><span>Icône sur l\'écran d\'accueil<small class="os">Dès maintenant : dans votre navigateur, choisissez « Partager » puis « Sur l\'écran d\'accueil ». Sur Android, un appui long sur l\'icône ouvre deux raccourcis : l\'histoire du jour et une histoire au hasard.</small></span></div></div>';
+  }
+  var title=k==='root'?'Réglages':SETT[k];
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+title+'</span><span style="width:38px"></span></div>'+
+    (k==='root'?'':'<p class="pkick">Réglages</p>')+'<h1 class="ptitle'+(title.length>13?' long':'')+'" style="padding-top:'+(k==='root'?'104px':'6px')+'">'+title+'</h1>'+b+'<div class="bottomspace"></div>';
+}
+function badgesHTML(){var n=readCount();return '<div class="badges">'+BADGES.map(function(b){var on=n>=b[0];return '<div class="badge'+(on?' on':'')+'"><span>'+b[0]+'</span><b>'+b[1]+'</b><small>'+b[2]+'</small></div>';}).join('')+'</div>';}
+
+/* ---------- lien direct vers une histoire (cadeau, raccourcis) ---------- */
+function deepLink(){
+  var m=/[#&]h=([^&]+)/.exec(location.hash||''),q=/[?&]go=(\w+)/.exec(location.search||'');
+  if(m){var id=decodeURIComponent(m[1]);if(vis(id)){push({type:'read',id:id});return true;}}
+  if(q&&q[1]==='hasard'){randomPick();return true;}
+  if(q&&q[1]==='jour'){var hid=DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel';push({type:'read',id:hid});return true;}
+  return false;
+}
+function shareCard(){
+  var c=sheet._card;if(!c)return;
+  var save=function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='opsis-citation.png';document.body.appendChild(a);a.click();a.remove();toast('Carte enregistrée dans vos images');};
+  var go=function(b){if(!b)return;var f;try{f=new File([b],'opsis-citation.png',{type:'image/png'});}catch(e){f=null;}
+    if(f&&navigator.share&&navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:'OPSIS'}).then(function(){sheet.classList.remove('show');}).catch(function(e){if(e&&e.name!=='AbortError')save(b);});}else save(b);};
+  if(cardBlob)go(cardBlob);else{try{quoteCanvas(c.t,c.id).toBlob(go,'image/png');}catch(e){}}
+}
+function closeSheet(){setBox.parentNode.classList.remove('show');}
+/* clics des nouvelles fonctions : renvoie true si le clic est traité */
+function featClick(b,d){
+  var top=S.stack[S.stack.length-1];
+  function re(){if(S.stack.length)rerenderKeepScroll();else{var y=main.scrollTop;renderMain();main.scrollTop=y;}}
+  if(b.hasAttribute('data-search')){push({type:'search'});setTimeout(function(){var q=document.getElementById('q');if(q&&!QCUR)try{q.focus({preventScroll:true});}catch(e){}},460);return true;}
+  if(d.q!==undefined){QCUR=d.q;addHist(d.q);var qi=document.getElementById('q');if(qi)qi.value=d.q;document.getElementById('qres').innerHTML=searchBody(QCUR);lv.scrollTop=0;return true;}
+  if(b.hasAttribute('data-qclear')){S.x.hist=[];document.getElementById('qres').innerHTML=searchBody(QCUR);return true;}
+  if(top&&top.type==='search'&&(d.pick||d.col||d.path||d.terr!==undefined)&&QCUR.trim())addHist(QCUR);
+  if(d.col){push({type:'col',k:d.col});return true;}
+  if(d.path){push({type:'path',k:d.path});return true;}
+  if(d.mycol!==undefined){push({type:'mycol',i:+d.mycol});return true;}
+  if(b.hasAttribute('data-quotes')){push({type:'quotes'});return true;}
+  if(d.terr!==undefined&&d.sub){push({type:'theme',i:+d.terr,sub:d.sub});return true;}
+  if(d.subf!==undefined&&top&&top.type==='theme'){top.sub=d.subf||null;var y=lv.scrollTop;lv.innerHTML=layerHTML(top);lv.scrollTop=Math.min(y,200);bindLayer(top);return true;}
+  if(d.set){closeSheet();if(top&&top.type==='set'&&d.set==='root')return true;push({type:'set',k:d.set});return true;}
+  if(b.hasAttribute('data-quick')){openSheet(quickSheet);return true;}
+  if(d.theme){S.theme=d.theme;applyLook();reSet();return true;}
+  if(d.font){S.font=d.font;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
+  if(d.lh){S.lh=d.lh;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
+  if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
+  if(d.toggle2){var cur=d.toggle2==='stats'?S.stats!==false:!!S[d.toggle2];S[d.toggle2]=!cur;if(d.toggle2==='stats'&&!S.stats){S.prog={};S.x.recent=[];}reSet();if(d.toggle2==='hideRead')toast(S.hideRead?'Histoires lues masquées de l\'accueil':'Histoires lues de nouveau visibles');return true;}
+  if(d.speed){S.speed=+d.speed;reSet();return true;}
+  if(d.pref!==undefined){var pf=S.x.prefs||[],i=pf.indexOf(+d.pref);if(i>=0)pf.splice(i,1);else pf.push(+d.pref);S.x.prefs=pf;reSet();return true;}
+  if(d.langwish){var w=S.x.langWish||[],j=w.indexOf(d.langwish);if(j>=0)w.splice(j,1);else{w.push(d.langwish);toast('C\'est noté : vous serez prévenu');}S.x.langWish=w;reSet();return true;}
+  if(b.hasAttribute('data-pluswish')){S.x.plusWish=!S.x.plusWish;reSet();return true;}
+  if(b.hasAttribute('data-export')){var blob=new Blob([JSON.stringify({exporte_le:OPSIS.day(),lues:S.read,liste:S.saved,notes:S.rate,progression:S.prog,citations:S.x.quotes||[],collections:S.x.cols||[],recherches:S.x.hist||[],reglages:{format:FM[S.len||3],sens:S.mode,taille:S.fs,theme:S.theme,police:S.font}},null,2)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='opsis-mes-donnees.json';document.body.appendChild(a);a.click();a.remove();toast('Vos données sont téléchargées');return true;}
+  if(b.hasAttribute('data-histclear')){S.x.hist=[];toast('Historique de recherche effacé');return true;}
+  if(b.hasAttribute('data-wipe')){if(!setLayer.confirm){setLayer.confirm=1;reSet();return true;}setLayer.confirm=0;OPSIS.store.reset();location.reload();return true;}
+  if(d.audio){if(AU.on&&AU.id===d.audio)auStop();else auStart(d.audio);return true;}
+  if(d.rate){var id=d.id,r=+d.rate;S.rate[id]=S.rate[id]===r?0:r;if(S.rate[id])toast('Merci pour votre note');re();return true;}
+  if(d.quiz){(QZ[d.quiz]=QZ[d.quiz]||{a:[]}).open=1;re();return true;}
+  if(d.quizre){QZ[d.quizre]={a:[],open:1};re();return true;}
+  if(d.quizans!==undefined){var qs=quizFor(d.id),st=QZ[d.id];if(qs&&st){st.a.push(qs[st.a.length].o[+d.quizans]);if(st.a.length>=qs.length){var qz=S.x.quiz||{};qz[d.id]=st.a.filter(function(v,k){return v===qs[k].a;}).length+'/'+qs.length;S.x.quiz=qz;}}re();return true;}
+  if(d.gift){gift(d.gift);return true;}
+  if(d.report){openSheet(function(){return reportSheet(d.report);});return true;}
+  if(d.rptsend){var t=(document.getElementById('rpt')||{}).value||'';t=t.trim();if(t.length<10){toast('Décrivez l\'erreur en quelques mots');return true;}
+    var rp=S.x.reports||[];rp.unshift({id:d.rptsend,t:t,at:OPSIS.day()});S.x.reports=rp.slice(0,30);closeSheet();
+    var st2=STORIES[d.rptsend];try{window.open('mailto:hamza@gostrawberryprod.com?subject='+encodeURIComponent('OPSIS · signalement · '+st2.title)+'&body='+encodeURIComponent('Histoire : '+st2.title+' ('+d.rptsend+')\n\n'+t),'_self');}catch(e){}
+    toast('Merci. Votre signalement est prêt à être envoyé.');return true;}
+  if(d.coladd){openSheet(function(){return colSheet(d.coladd);});return true;}
+  if(d.colnew){var nm=((document.getElementById('newcol')||{}).value||'').trim();if(!nm){toast('Donnez un nom à la collection');return true;}myCols().push({n:nm.slice(0,40),ids:[d.colnew]});S.x.cols=myCols();renderSettings();toast('Collection créée');return true;}
+  if(d.coltog!==undefined){var c=myCols()[+d.coltog];if(c){var k=c.ids.indexOf(d.id);if(k>=0)c.ids.splice(k,1);else c.ids.push(d.id);S.x.cols=myCols();}renderSettings();return true;}
+  if(d.coldel!==undefined){if(!b._ok){b._ok=1;toast('Touchez encore pour supprimer cette collection');return true;}myCols().splice(+d.coldel,1);S.x.cols=myCols();back();return true;}
+  if(b.hasAttribute('data-selq')){if(saveSel()===0)toast('Citation enregistrée dans votre espace');return true;}
+  if(b.hasAttribute('data-seln')){if(saveSel()===0)openSheet(function(){return noteSheet(0);});return true;}
+  if(b.hasAttribute('data-selc')){var tx=SEL,tid=top&&top.id;if(saveSel()===0)openCard(tx,tid);return true;}
+  if(d.qcard!==undefined){var qq=quotes()[+d.qcard];if(qq)openCard(qq.t,qq.id);return true;}
+  if(d.qnote!==undefined){var qi2=+d.qnote;openSheet(function(){return noteSheet(qi2);});return true;}
+  if(d.qsave!==undefined){var qo=quotes()[+d.qsave];if(qo){qo.n=((document.getElementById('qnote')||{}).value||'').trim().slice(0,600);S.x.quotes=quotes();}closeSheet();if(top&&top.type==='quotes')rerenderKeepScroll();toast('Note enregistrée');return true;}
+  if(d.qdel!==undefined){quotes().splice(+d.qdel,1);S.x.quotes=quotes();rerenderKeepScroll();return true;}
+  return false;
+}
+selBar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;e.stopPropagation();featClick(b,b.dataset);});
 
 /* ---------- intro : l'œil s'ouvre, le diaphragme devient le O, puis on plonge dans la pupille ---------- */
 var splash=document.getElementById('splash'),lens=document.getElementById('lens'),lensSvg=document.getElementById('introLens'),entered=false,timers=[],raf=null;
@@ -2191,7 +2788,8 @@ function playIntro(){
 document.getElementById('skip').onclick=enter;splash.addEventListener('click',enter);
 playIntro();
 
-renderMain();
+applyLook();renderMain();
+try{if(deepLink())enter();}catch(e){}
 };
 </script>
 <!--OPSIS:DATA-->

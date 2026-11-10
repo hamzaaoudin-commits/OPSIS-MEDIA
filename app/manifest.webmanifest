@@ -9,6 +9,18 @@
   "background_color": "#09090A",
   "theme_color": "#09090A",
   "lang": "fr",
+  "shortcuts": [
+    {
+      "name": "L'histoire du jour",
+      "short_name": "Du jour",
+      "url": "./?go=jour"
+    },
+    {
+      "name": "Une histoire au hasard",
+      "short_name": "Au hasard",
+      "url": "./?go=hasard"
+    }
+  ],
   "icons": [
     {
       "src": "icons/icon-192.png",

@@ -30,7 +30,7 @@ wr('app.html',page(JSON.stringify(c),{serviceWorker:false}));
 wr('app/index.html',page(null,{lite:true,dataUrl:'data/'}));
 wr('app/data/content.json',content);
 wr('app/data/covers.json',covers);
-wr('app/manifest.webmanifest',JSON.stringify({name:'OPSIS',short_name:'OPSIS',description:'Une histoire vraie chaque jour.',start_url:'./',scope:'./',display:'standalone',orientation:'portrait',background_color:'#09090A',theme_color:'#09090A',lang:'fr',icons:[{src:'icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]},null,2));
+wr('app/manifest.webmanifest',JSON.stringify({name:'OPSIS',short_name:'OPSIS',description:'Une histoire vraie chaque jour.',start_url:'./',scope:'./',display:'standalone',orientation:'portrait',background_color:'#09090A',theme_color:'#09090A',lang:'fr',shortcuts:[{name:"L'histoire du jour",short_name:'Du jour',url:'./?go=jour'},{name:'Une histoire au hasard',short_name:'Au hasard',url:'./?go=hasard'}],icons:[{src:'icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]},null,2));
 ['favicon-192.png:icons/icon-192.png','favicon-512.png:icons/icon-512.png','apple-touch-icon.png:apple-touch-icon.png','favicon.svg:favicon.svg'].forEach(p=>{const [a,b]=p.split(':');fs.mkdirSync(path.dirname(path.join(root,'app',b)),{recursive:true});fs.copyFileSync(path.join(root,a),path.join(root,'app',b));});
 wr('app/sw.js',`/* OPSIS service worker — généré, version ${ver} */
 const V='opsis-${ver}',SHELL=['./','index.html','manifest.webmanifest','icons/icon-192.png'];
