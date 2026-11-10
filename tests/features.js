@@ -51,7 +51,7 @@ await p.evaluate(()=>document.getElementById('main').scrollTo(0,620));await shot
 await click('#main [data-lib]');await shot('20espace');await p.evaluate(()=>{document.getElementById('layerview').scrollTop=520;});await shot('21espace2');
 await click('#layerview [data-quotes]');await shot('22quotes');await click('#layerview [data-qcard="0"]');await p.waitForTimeout(1600);await shot('23card');await click('#sclose');await back();
 await click('#layerview [data-set="root"]');await shot('24settings');
-for(const k of ['lecture','langue','notifs','abo','appareils','confid','widget','compte']){await click('#layerview [data-set="'+k+'"]');await shot('25set_'+k);await back();}
+for(const k of ['lecture','langue','notifs','abo','confid','widget','compte']){await click('#layerview [data-set="'+k+'"]');await shot('25set_'+k);await back();}
 await back();await back();
 // dark again + resume
 await p.evaluate(()=>{OPSIS.store.S.theme='dark';OPSIS.store.S.font='serif';});

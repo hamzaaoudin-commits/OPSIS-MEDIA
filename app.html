@@ -2459,29 +2459,54 @@ function quotesLayer(){
     '<p class="pkick">Mon espace</p><h1 class="ptitle" style="padding-top:6px">Citations et notes</h1>'+body+'<div class="bottomspace"></div>';
 }
 function noteSheet(i){var x=quotes()[i];return '<div class="grab"></div><h3 class="sth">Votre note</h3><p class="qt" style="font-size:16px;margin:0 0 12px">« '+esc(x.t)+' »</p><textarea id="qnote" class="ta" rows="4" maxlength="600" placeholder="Ce que ce passage vous inspire" aria-label="Votre note">'+esc(x.n||'')+'</textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-qsave="'+i+'">Enregistrer</button></div>';}
-/* carte graphique 1080×1350 d'un passage */
+/* carte graphique 1080×1350 d'un passage : l'affiche de l'histoire en fond, la citation au centre */
 var cardBlob=null;
-function quoteCanvas(text,id){
-  var s=STORIES[id]||{},W=1080,H=1350,c=s.c||'#D2232C';
-  var cv=document.createElement('canvas');cv.width=W;cv.height=H;var g=cv.getContext('2d');
+function quoteCanvas(text,id,img){
+  var s=STORIES[id]||{},W=1080,H=1350,c=s.c||'#D2232C',M=96;
+  var cv=document.createElement('canvas');cv.width=W;cv.height=H;var g=cv.getContext('2d');g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';
   var disp=(getComputedStyle(document.documentElement).getPropertyValue('--disp')||'Impact').trim(),serif=(getComputedStyle(document.documentElement).getPropertyValue('--serif')||'Georgia').trim();
-  var bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,'#141012');bg.addColorStop(1,'#070506');g.fillStyle=bg;g.fillRect(0,0,W,H);
-  var rg=g.createRadialGradient(W*.2,H*.12,40,W*.2,H*.12,900);rg.addColorStop(0,c);rg.addColorStop(1,'rgba(0,0,0,0)');g.globalAlpha=.42;g.fillStyle=rg;g.fillRect(0,0,W,H);g.globalAlpha=1;
-  g.fillStyle='#D2232C';g.fillRect(90,150,90,8);
-  g.fillStyle=c;g.font='900 260px '+disp;g.textBaseline='alphabetic';g.globalAlpha=.9;g.fillText('«',76,400);g.globalAlpha=1;
+  function rr(x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath();}
+  /* fond : l'affiche agrandie et floutée (réduction puis agrandissement, compatible avec tous les navigateurs) */
+  g.fillStyle='#0B0809';g.fillRect(0,0,W,H);
+  if(img){var t=document.createElement('canvas');t.width=36;t.height=54;var tx=t.getContext('2d');tx.imageSmoothingEnabled=true;tx.drawImage(img,0,0,36,54);
+    var t2=document.createElement('canvas');t2.width=144;t2.height=216;var t2x=t2.getContext('2d');t2x.imageSmoothingEnabled=true;t2x.drawImage(t,0,0,144,216);
+    g.globalAlpha=.9;g.drawImage(t2,-140,-170,W+280,(W+280)*1.5);g.globalAlpha=1;}
+  else{var rg0=g.createRadialGradient(W*.25,H*.15,40,W*.25,H*.15,1100);rg0.addColorStop(0,c);rg0.addColorStop(1,'#0B0809');g.fillStyle=rg0;g.fillRect(0,0,W,H);}
+  var ov=g.createLinearGradient(0,0,0,H);ov.addColorStop(0,'rgba(8,6,7,.58)');ov.addColorStop(.45,'rgba(8,6,7,.74)');ov.addColorStop(1,'rgba(8,6,7,.95)');g.fillStyle=ov;g.fillRect(0,0,W,H);
+  /* cadre fin */
+  g.strokeStyle='rgba(244,238,228,.16)';g.lineWidth=2;rr(40,40,W-80,H-80,34);g.stroke();
+  /* en-tête */
+  g.textBaseline='alphabetic';g.textAlign='left';
+  g.fillStyle='#F4EEE4';g.font='800 40px '+disp;if('letterSpacing' in g)g.letterSpacing='16px';g.fillText('OPSIS',M,146);if('letterSpacing' in g)g.letterSpacing='0px';
+  g.textAlign='right';g.fillStyle='rgba(244,238,228,.6)';g.font='600 26px '+disp;if('letterSpacing' in g)g.letterSpacing='6px';g.fillText((s.th!==undefined?T[s.th]:'Histoire vraie').toUpperCase(),W-M,144);if('letterSpacing' in g)g.letterSpacing='0px';g.textAlign='left';
+  /* citation : la plus grande taille qui tient, centrée dans sa zone */
   function wrap(t,font,maxW){g.font=font;var w=t.split(' '),l=[],cur='';w.forEach(function(x){var tt=cur?cur+' '+x:x;if(g.measureText(tt).width>maxW&&cur){l.push(cur);cur=x;}else cur=tt;});if(cur)l.push(cur);return l;}
-  var fs=76,lines;for(;fs>=34;fs-=4){lines=wrap(text,'italic '+fs+'px '+serif,W-180);if(lines.length*fs*1.32<=620)break;}
-  g.fillStyle='#F4EEE4';g.font='italic '+fs+'px '+serif;var y=470+fs*.2;lines.forEach(function(t){g.fillText(t,90,y);y+=fs*1.32;});
-  g.fillStyle='rgba(244,238,228,.5)';g.fillRect(90,H-270,W-180,2);
-  var tl=wrap((s.title||'').toUpperCase(),'900 54px '+disp,W-180).slice(0,2);g.fillStyle='#F4EEE4';g.font='900 54px '+disp;y=H-200;tl.forEach(function(t){g.fillText(t,90,y);y+=54;});
-  g.fillStyle='rgba(244,238,228,.6)';g.font='600 30px '+disp;if('letterSpacing' in g)g.letterSpacing='8px';g.fillText('OPSIS · UNE HISTOIRE VRAIE',90,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
+  var top=250,bot=1010,box=bot-top,fs=92,lines,lh;text=String(text).replace(/^[«"“\s]+|[»"”\s]+$/g,'');
+  for(;fs>=32;fs-=3){lh=fs*1.26;lines=wrap(text,'italic 500 '+fs+'px '+serif,W-2*M);if(lines.length*lh+fs*.9<=box)break;}
+  var bh=lines.length*lh,y0=top+(box-bh)/2+fs*.5;
+  g.fillStyle=c;g.globalAlpha=.95;g.font='900 '+Math.round(fs*2.6)+'px '+disp;g.fillText('«',M-10,y0-fs*.35);g.globalAlpha=1;
+  g.fillStyle='#F4EEE4';g.font='italic 500 '+fs+'px '+serif;g.shadowColor='rgba(0,0,0,.45)';g.shadowBlur=18;var y=y0+fs*.7;lines.forEach(function(t2){g.fillText(t2,M,y);y+=lh;});g.shadowBlur=0;
+  g.fillStyle='#D2232C';g.fillRect(M,y-lh+fs*.55,96,7);
+  /* pied : la vignette de l'histoire, son titre, l'invitation */
+  var py=H-M-200,pw=132,ph=198;
+  if(img){g.save();g.shadowColor='rgba(0,0,0,.6)';g.shadowBlur=30;g.shadowOffsetY=12;rr(M,py,pw,ph,12);g.fillStyle='#000';g.fill();g.restore();g.save();rr(M,py,pw,ph,12);g.clip();g.drawImage(img,M,py,pw,ph);g.restore();}
+  var tx0=img?M+pw+34:M,tw=W-M-tx0;
+  g.fillStyle='rgba(244,238,228,.6)';g.font='600 24px '+disp;if('letterSpacing' in g)g.letterSpacing='6px';g.fillText('EXTRAIT DE',tx0,py+34);if('letterSpacing' in g)g.letterSpacing='0px';
+  var tf=52,tl;for(;tf>=36;tf-=4){tl=wrap((s.title||'').toUpperCase(),'900 '+tf+'px '+disp,tw);if(tl.length<=2)break;}
+  g.fillStyle='#F4EEE4';g.font='900 '+tf+'px '+disp;var ty=py+34+tf+2;tl.slice(0,2).forEach(function(t3){g.fillText(t3,tx0,ty);ty+=tf*.95;});
+  g.fillStyle='rgba(244,238,228,.72)';g.font='italic 28px '+serif;g.fillText('Une histoire vraie, à lire en '+(s.min||3)+' minutes.',tx0,py+ph-8);
   return cv;
+}
+function coverImage(id){
+  var s=STORIES[id];if(!s)return Promise.resolve(null);
+  var svg=art(s.p);if(svg.indexOf('xmlns=')<0)svg=svg.replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" ');svg=svg.replace(/<svg /,'<svg width="800" height="1200" ');
+  return new Promise(function(res){var im=new Image(),done=false,end=function(v){if(!done){done=true;res(v);}};im.onload=function(){end(im);};im.onerror=function(){end(null);};setTimeout(function(){end(null);},3000);im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
 }
 function openCard(text,id){
   storyId='card:'+id;cardBlob=null;var box=document.getElementById('scard');box.className='scard img';box.innerHTML='<p class="sprep">Préparation de la carte…</p>';
   document.getElementById('sgo').textContent='Partager la carte';sheet.classList.add('show');sheet._card={t:text,id:id};
-  var run=function(){var cv=quoteCanvas(text,id);cv.className='sprev card';cv.setAttribute('aria-label','Aperçu de la carte');box.innerHTML='';box.appendChild(cv);try{cv.toBlob(function(b){cardBlob=b;},'image/png');}catch(e){}};
-  if(document.fonts&&document.fonts.load)Promise.race([Promise.all([document.fonts.load('900 54px "Big Shoulders Display"'),document.fonts.load('italic 40px "Newsreader"')]).catch(function(){}),new Promise(function(r){setTimeout(r,1200);})]).then(run);else run();
+  var fonts=(document.fonts&&document.fonts.load)?Promise.race([Promise.all([document.fonts.load('900 54px "Big Shoulders Display"'),document.fonts.load('italic 500 40px "Newsreader"')]).catch(function(){}),new Promise(function(r){setTimeout(r,1200);})]):Promise.resolve();
+  Promise.all([coverImage(id),fonts]).then(function(r){if(storyId!=='card:'+id)return;var cv=quoteCanvas(text,id,r[0]);sheet._card.cv=cv;cv.className='sprev card';cv.setAttribute('aria-label','Aperçu de la carte');box.innerHTML='';box.appendChild(cv);try{cv.toBlob(function(b){cardBlob=b;},'image/png');}catch(e){}});
 }
 /* sélection de texte dans le lecteur -> barre d'actions */
 var selBar=document.createElement('div');selBar.className='selbar';selBar.innerHTML='<button data-selq>'+IC.quote+'Citation</button><button data-seln>Annoter</button><button data-selc>Carte</button>';
@@ -2560,34 +2585,63 @@ lv.addEventListener('click',function(e){
 var AU={on:false,i:0,id:null,list:[],paused:false};
 var auBar=document.createElement('div');auBar.className='aubar';document.getElementById('phone').appendChild(auBar);
 function auOK(){return 'speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;}
+/* choix de la voix : les voix « naturelles » de l'appareil d'abord, les voix compactes en dernier */
+function voiceScore(v){var n=v.name||'',s=0;
+  if(/fr[-_]FR/i.test(v.lang))s+=3;else if(/^fr/i.test(v.lang))s+=1;
+  if(/natural|neural/i.test(n))s+=12;if(/premium|enhanced|améliorée|amelioree|siri/i.test(n))s+=9;
+  if(/google/i.test(n))s+=5;if(/online/i.test(n))s+=3;if(v.localService===false)s+=1;
+  if(/compact|espeak|eloquence/i.test(n))s-=8;return s;}
+function frVoices(){if(!auOK())return [];return speechSynthesis.getVoices().filter(function(v){return /^fr/i.test(v.lang);}).sort(function(a,b){return voiceScore(b)-voiceScore(a);});}
+function pickVoice(){var vs=frVoices();if(!vs.length)return null;if(S.voice){for(var i=0;i<vs.length;i++)if(vs[i].name===S.voice)return vs[i];}return vs[0];}
+function voiceLabel(v){return String(v.name).replace(/^Microsoft\s+|^Google\s+/i,'').replace(/\s*\((French|Français)[^)]*\)|\s*-\s*French.*$|Online\s*\(Natural\)/gi,'').replace(/\s+/g,' ').trim()||v.name;}
+if(auOK()&&speechSynthesis.addEventListener)speechSynthesis.addEventListener('voiceschanged',function(){var t=S.stack[S.stack.length-1];if(t&&t.type==='set'&&t.k==='lecture')rerenderKeepScroll();});
+/* prépare le texte pour l'oreille : pas de guillemets ni de tirets lus à voix haute, des pauses à la place */
+function auClean(t){return String(t).replace(/[«»“”"]/g,'').replace(/\s[–—]\s/g,', ').replace(/\s*…/g,'.').replace(/\bn°\s*/gi,'numéro ').replace(/\b(\d{1,2})\s*h\s*(\d{2})\b/g,'$1 heures $2').replace(/\bXXIe\b/g,'vingt et unième').replace(/\bXXe\b/g,'vingtième').replace(/\bXIXe\b/g,'dix-neuvième').replace(/\bXVIIIe\b/g,'dix-huitième').replace(/\bXVIIe\b/g,'dix-septième').replace(/\bXVIe\b/g,'seizième').replace(/\s+/g,' ').trim();}
+/* une phrase à la fois : l'intonation retombe à chaque point, et les longs paragraphes ne sont plus coupés par le navigateur */
+function auSplit(t){var m=String(t).match(/[^.!?]+(?:[.!?]+(?=\s|$)|$)/g)||[t],out=[],cur='';
+  m.forEach(function(x){x=x.trim();if(!x)return;if((cur+' '+x).length<60&&cur){cur+=' '+x;}else{if(cur)out.push(cur);cur=x;}});if(cur)out.push(cur);return out;}
 function auRender(){
   if(!AU.on){auBar.classList.remove('on');return;}
-  var s=STORIES[AU.id];
-  auBar.innerHTML='<button class="aub" data-au="toggle" aria-label="'+(AU.paused?'Reprendre l\'écoute':'Mettre en pause')+'">'+(AU.paused?IC.play:IC.pause)+'</button><span class="aut"><b>'+esc(s?s.title:'')+'</b><small>'+(AU.i+1)+' / '+AU.list.length+' · voix de l\'appareil</small></span><button class="aus" data-au="speed" aria-label="Vitesse de lecture">'+String(S.speed||1).replace('.',',')+'×</button><button class="aub" data-au="stop" aria-label="Arrêter l\'écoute">'+IC.x+'</button>';
+  var s=STORIES[AU.id],pc=AU.list.length?Math.round(AU.i/AU.list.length*100):0;
+  auBar.innerHTML='<button class="aub" data-au="toggle" aria-label="'+(AU.paused?'Reprendre l\'écoute':'Mettre en pause')+'">'+(AU.paused?IC.play:IC.pause)+'</button><span class="aut"><b>'+esc(s?s.title:'')+'</b><small>'+pc+' % · '+esc(AU.vn||'voix de l\'appareil')+'</small></span><button class="aus" data-au="speed" aria-label="Vitesse de lecture">'+String(S.speed||1).replace('.',',')+'×</button><button class="aub" data-au="stop" aria-label="Arrêter l\'écoute">'+IC.x+'</button>';
   auBar.classList.add('on');
 }
-function auMark(){var ps=lv.querySelectorAll('.rtext>p,.rtext>h3,.bk>p,.bk>h3');for(var i=0;i<ps.length;i++)ps[i].classList.remove('speaking');var el=AU.list[AU.i]&&AU.list[AU.i].el;if(el&&document.body.contains(el)){el.classList.add('speaking');if(!bookMode())el.scrollIntoView({block:'center',behavior:'smooth'});}}
+function auMark(){var ps=lv.querySelectorAll('.speaking');for(var i=0;i<ps.length;i++)ps[i].classList.remove('speaking');var el=AU.list[AU.i]&&AU.list[AU.i].el;if(el&&document.body.contains(el)){el.classList.add('speaking');if(!bookMode()&&AU.lastEl!==el)el.scrollIntoView({block:'center',behavior:'smooth'});AU.lastEl=el;}}
 function auSpeak(){
-  if(!AU.on)return;if(AU.i>=AU.list.length){auStop();toast('Lecture audio terminée');return;}
-  var it=AU.list[AU.i],u=new SpeechSynthesisUtterance(it.t);u.lang='fr-FR';u.rate=S.speed||1;
-  var vs=speechSynthesis.getVoices().filter(function(v){return /^fr/i.test(v.lang);});if(vs.length)u.voice=vs.filter(function(v){return /fr[-_]FR/i.test(v.lang);})[0]||vs[0];
-  var tok=AU.tok;u.onend=function(){if(AU.on&&AU.tok===tok&&!AU.skip){AU.i++;auSpeak();}};u.onerror=function(ev){if(ev&&(ev.error==='interrupted'||ev.error==='canceled'))return;if(AU.on&&AU.tok===tok){auStop();toast('La lecture audio n\'est pas disponible sur cet appareil');}};
+  if(!AU.on||AU.paused)return;if(AU.i>=AU.list.length){auStop();toast('Lecture audio terminée');return;}
+  var it=AU.list[AU.i],u=new SpeechSynthesisUtterance(it.t),v=pickVoice();u.lang=v?v.lang:'fr-FR';if(v){u.voice=v;AU.vn=voiceLabel(v);}
+  /* un débit un peu posé et un titre légèrement plus lent sonnent moins mécaniques */
+  u.rate=(S.speed||1)*(it.h?0.9:0.96);u.pitch=1;u.volume=1;
+  var tok=AU.tok;
+  u.onend=function(){if(!AU.on||AU.tok!==tok||AU.paused)return;AU.i++;clearTimeout(AU.tm);AU.tm=setTimeout(auSpeak,it.gap||0);};
+  u.onerror=function(ev){if(ev&&(ev.error==='interrupted'||ev.error==='canceled'))return;if(AU.on&&AU.tok===tok){auStop();toast('La lecture audio n\'est pas disponible sur cet appareil');}};
   auMark();auRender();speechSynthesis.speak(u);
 }
 function auStart(id){
   if(!auOK()){toast('La lecture audio n\'est pas disponible sur cet appareil');return;}
   var els=lv.querySelectorAll(bookMode()?'.bk>p,.bk>h3':'.rtext>p,.rtext>h3'),list=[];
-  for(var i=0;i<els.length;i++){var el=els[i];if(el.classList.contains('orn')||el.closest('.bkend,.bkcover'))continue;var t=el.textContent.trim();if(t)list.push({t:t,el:el});}
+  for(var i=0;i<els.length;i++){var el=els[i];if(el.classList.contains('orn')||el.closest('.bkend,.bkcover'))continue;var t=auClean(el.textContent);if(!t)continue;
+    if(el.tagName==='H3'){list.push({t:t+'.',el:el,h:1,gap:650});continue;}
+    if(el.classList.contains('dl')){list.push({t:t,el:el,h:1,gap:450});continue;}
+    var ss=auSplit(t);ss.forEach(function(x,k){list.push({t:x,el:el,gap:k===ss.length-1?420:90});});}
   if(!list.length)return;
-  var s=STORIES[id];list.unshift({t:s.title+'. '+(s.sub||''),el:null});
-  speechSynthesis.cancel();AU={on:true,i:0,id:id,list:list,paused:false,tok:Date.now()};auSpeak();
+  var s=STORIES[id];list.unshift({t:auClean(s.title.replace(' : ',', '))+'.',el:null,h:1,gap:700});
+  try{speechSynthesis.cancel();}catch(e){}
+  AU={on:true,i:0,id:id,list:list,paused:false,tok:Date.now()};auSpeak();
 }
-function auStop(){AU.on=false;AU.tok=0;try{speechSynthesis.cancel();}catch(e){}var ps=lv.querySelectorAll('.speaking');for(var i=0;i<ps.length;i++)ps[i].classList.remove('speaking');auRender();}
+function auStop(){clearTimeout(AU.tm);AU.on=false;AU.tok=0;try{speechSynthesis.cancel();}catch(e){}var ps=lv.querySelectorAll('.speaking');for(var i=0;i<ps.length;i++)ps[i].classList.remove('speaking');auRender();}
+/* la pause coupe la phrase en cours et la reprend entière : plus fiable que la pause du navigateur, qui se bloque sur Android */
+function auRestart(){clearTimeout(AU.tm);AU.tok=Date.now();try{speechSynthesis.cancel();}catch(e){}AU.tm=setTimeout(auSpeak,140);}
 auBar.addEventListener('click',function(e){var b=e.target.closest('[data-au]');if(!b)return;e.stopPropagation();var a=b.dataset.au;
   if(a==='stop'){auStop();return;}
-  if(a==='toggle'){if(AU.paused){speechSynthesis.resume();AU.paused=false;}else{speechSynthesis.pause();AU.paused=true;}auRender();return;}
-  if(a==='speed'){var sp=[0.8,1,1.2,1.5],k=sp.indexOf(S.speed||1);S.speed=sp[(k+1)%sp.length];AU.tok=Date.now();AU.skip=1;speechSynthesis.cancel();AU.paused=false;setTimeout(function(){AU.skip=0;auSpeak();},120);return;}
+  if(a==='toggle'){if(AU.paused){AU.paused=false;auRestart();}else{AU.paused=true;clearTimeout(AU.tm);AU.tok=Date.now();try{speechSynthesis.cancel();}catch(e2){}}auRender();return;}
+  if(a==='speed'){var sp=[0.8,1,1.2,1.5],k=sp.indexOf(S.speed||1);S.speed=sp[(k+1)%sp.length];AU.paused=false;auRestart();auRender();return;}
 });
+function voiceOpts(){
+  var vs=frVoices().slice(0,8);if(!vs.length)return '<div class="opt"><span>Voix<small class="os">Aucune voix française trouvée sur cet appareil.</small></span></div>';
+  var cur=pickVoice();
+  return '<div class="opt" style="display:block"><span>Voix<small class="os">Ce sont les voix installées sur votre appareil, les plus naturelles en premier. Touchez-en une pour l\'écouter.</small></span><div class="qchips" style="margin-top:12px">'+vs.map(function(v){return '<button data-voice="'+esc(v.name)+'" aria-pressed="'+(cur&&cur.name===v.name)+'">'+esc(voiceLabel(v))+'</button>';}).join('')+'</div></div>';
+}
 
 /* ---------- lecteur : réglages rapides ---------- */
 function quickSheet(){
@@ -2607,12 +2661,11 @@ function lookOpts(){
 
 /* ---------- pages de réglages ---------- */
 function row(k,label,sub){return '<button class="srow" data-set="'+k+'"><span>'+label+(sub?'<small>'+sub+'</small>':'')+'</span>'+IC.chev+'</button>';}
-function deviceName(){var u=navigator.userAgent||'',os=/iPhone|iPad/.test(u)?'iPhone ou iPad':/Android/.test(u)?'Android':/Mac OS X/.test(u)?'Mac':/Windows/.test(u)?'Windows':/Linux/.test(u)?'Linux':'Appareil',br=/Edg\//.test(u)?'Edge':/Firefox\//.test(u)?'Firefox':/Chrome\//.test(u)?'Chrome':/Safari\//.test(u)?'Safari':'Navigateur';return os+' · '+br;}
-var SETT={lecture:'Préférences de lecture',langue:'Langue',notifs:'Notifications',abo:'Abonnement et facturation',appareils:'Appareils et sessions',confid:'Confidentialité',widget:'Widget et raccourcis',compte:'Compte'};
+var SETT={lecture:'Préférences de lecture',langue:'Langue',notifs:'Notifications',abo:'Abonnement et facturation',confid:'Confidentialité',widget:'Widget et raccourcis',compte:'Compte'};
 function setLayer(k){
   var b='';
   if(k==='root'){
-    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('lecture','Préférences de lecture','Sens, format, typographie, thèmes préférés')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Offre gratuite')+row('appareils','Appareils et sessions',deviceName())+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+'</div>'+
+    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('lecture','Préférences de lecture','Sens, format, typographie, thèmes préférés')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Offre gratuite')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+'</div>'+
       '<div class="slist"><button class="srow" data-legal="mentions"><span>Mentions légales</span>'+IC.chev+'</button><button class="srow" data-legal="confidentialite"><span>Politique de confidentialité</span>'+IC.chev+'</button><button class="srow" data-legal="conditions"><span>Conditions d\'utilisation</span>'+IC.chev+'</button></div>';
   }else if(k==='compte'){
     b='<div class="sbox">'+OPSIS.accountHTML()+(OPSIS.live?'':'<p class="hint" style="padding:12px 0 0">La connexion à un compte sera proposée à l\'ouverture d\'OPSIS. D\'ici là, vos lectures sont gardées sur cet appareil.</p>')+'</div>';
@@ -2621,7 +2674,7 @@ function setLayer(k){
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
       '<div class="opt"><span>Format préféré</span><span class="seg">'+[3,5,10].map(function(x){return '<button data-len="'+x+'" aria-pressed="'+((S.len||3)===x)+'">'+FM[x]+' min</button>';}).join('')+'</span></div>'+lookOpts()+
       '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
-      '<div class="opt"><span>Vitesse de la lecture audio</span><span class="seg">'+[0.8,1,1.2,1.5].map(function(v){return '<button data-speed="'+v+'" aria-pressed="'+((S.speed||1)===v)+'">'+String(v).replace('.',',')+'×</button>';}).join('')+'</span></div>'+
+      '<div class="opt"><span>Vitesse de la lecture audio</span><span class="seg">'+[0.8,1,1.2,1.5].map(function(v){return '<button data-speed="'+v+'" aria-pressed="'+((S.speed||1)===v)+'">'+String(v).replace('.',',')+'×</button>';}).join('')+'</span></div>'+voiceOpts()+
       '<div class="opt"><span>Masquer les histoires déjà lues<small class="os">Sur l\'accueil. Elles restent dans votre bibliothèque.</small></span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues"></button></div></div>'+
       '<p class="pkick" style="padding-top:26px">Vos thèmes préférés</p><p class="hint" style="padding-top:4px">Ils orientent la sélection « Pour vous ».</p><div class="qchips" style="padding:12px 20px 0">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>';
   }else if(k==='langue'){
@@ -2644,11 +2697,6 @@ function setLayer(k){
       '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
       '<div class="opt"><span>Résiliation<small class="os">Vous n\'avez rien à résilier. Quand une offre payante existera, elle se résiliera ici, en un geste, sans justification.</small></span></div>'+
       '<div class="opt"><span>Offre payante<small class="os">Elle n\'existe pas encore. Vous pouvez demander à être prévenu.</small></span><button class="pill'+(wp?' on':'')+'" data-pluswish>'+(wp?'Vous serez prévenu':'Me prévenir')+'</button></div></div>';
-  }else if(k==='appareils'){
-    var tok=OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token();
-    b='<div class="sbox"><div class="opt" style="border-top:0"><span>'+esc(deviceName())+'<small class="os">Cet appareil · actif maintenant</small></span><span class="pill on">Ici</span></div>'+
-      (tok?'<div class="opt lgrow"><button data-acct="out">Se déconnecter de tous mes appareils</button></div>':'')+'</div>'+
-      '<p class="hint">'+(tok?'La déconnexion ferme votre session partout. Vos lectures restent dans votre compte.':'Vous n\'êtes pas connecté : vos lectures vivent uniquement sur cet appareil. Avec un compte, elles vous suivront sur vos autres appareils.')+' La liste détaillée de vos autres appareils arrivera avec les comptes.</p>';
   }else if(k==='confid'){
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Garder mon historique de lecture<small class="os">Sert à « Reprendre », aux badges et aux recommandations. Reste sur cet appareil tant que vous n\'avez pas de compte.</small></span><button class="tog" role="switch" aria-checked="'+(S.stats!==false)+'" data-toggle2="stats" aria-label="Garder mon historique de lecture"></button></div>'+
       '<div class="opt lgrow"><button data-export>Télécharger mes données</button></div>'+
@@ -2681,7 +2729,7 @@ function shareCard(){
   var save=function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='opsis-citation.png';document.body.appendChild(a);a.click();a.remove();toast('Carte enregistrée dans vos images');};
   var go=function(b){if(!b)return;var f;try{f=new File([b],'opsis-citation.png',{type:'image/png'});}catch(e){f=null;}
     if(f&&navigator.share&&navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:'OPSIS'}).then(function(){sheet.classList.remove('show');}).catch(function(e){if(e&&e.name!=='AbortError')save(b);});}else save(b);};
-  if(cardBlob)go(cardBlob);else{try{quoteCanvas(c.t,c.id).toBlob(go,'image/png');}catch(e){}}
+  if(cardBlob)go(cardBlob);else if(c.cv){try{c.cv.toBlob(go,'image/png');}catch(e){}}
 }
 function closeSheet(){setBox.parentNode.classList.remove('show');}
 /* clics des nouvelles fonctions : renvoie true si le clic est traité */
@@ -2706,6 +2754,7 @@ function featClick(b,d){
   if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
   if(d.toggle2){var cur=d.toggle2==='stats'?S.stats!==false:!!S[d.toggle2];S[d.toggle2]=!cur;if(d.toggle2==='stats'&&!S.stats){S.prog={};S.x.recent=[];}reSet();if(d.toggle2==='hideRead')toast(S.hideRead?'Histoires lues masquées de l\'accueil':'Histoires lues de nouveau visibles');return true;}
   if(d.speed){S.speed=+d.speed;reSet();return true;}
+  if(d.voice){S.voice=d.voice;reSet();if(auOK()){try{speechSynthesis.cancel();}catch(e){}var uu=new SpeechSynthesisUtterance('Voici la voix qui vous lira les histoires.');var vv=pickVoice();if(vv){uu.voice=vv;uu.lang=vv.lang;}uu.rate=(S.speed||1)*0.96;speechSynthesis.speak(uu);}return true;}
   if(d.pref!==undefined){var pf=S.x.prefs||[],i=pf.indexOf(+d.pref);if(i>=0)pf.splice(i,1);else pf.push(+d.pref);S.x.prefs=pf;reSet();return true;}
   if(d.langwish){var w=S.x.langWish||[],j=w.indexOf(d.langwish);if(j>=0)w.splice(j,1);else{w.push(d.langwish);toast('C\'est noté : vous serez prévenu');}S.x.langWish=w;reSet();return true;}
   if(b.hasAttribute('data-pluswish')){S.x.plusWish=!S.x.plusWish;reSet();return true;}
@@ -2910,7 +2959,7 @@ OPSIS.loadContent=function(){
 /* OPSIS runtime — état utilisateur : sauvegarde locale, horodatage par clé (pour la synchro), série de jours */
 (function(){
 var OPSIS=window.OPSIS,KEY='opsis.state.v1';
-var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','lang','focus','speed','nNew','nResume','stats'];
+var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','lang','focus','speed','nNew','nResume','stats','voice'];
 var store=OPSIS.store={S:null,flat:{},dirty:false};
 
 /* S -> table plate { "read.pt01": true, "saved.eiffel": true, "set.fs": 19, "day.2027-01-04": true } */
