@@ -59,44 +59,45 @@ Raconter la réalité avec la puissance narrative de la fiction, sans jamais tro
 - Pensées et émotions : ne jamais attribuer avec certitude une pensée privée sans source. Montrer les actes.
 - Chronologie : ne pas la tordre pour fabriquer du suspense.
 - Incertitudes : quand un point important est discuté ou inconnu, le dire dans le fil du récit, simplement (« on ne saura jamais si… », « deux versions existent »), sans nommer de sites.
-- Chaque fait important doit être vérifié par une recherche web réelle (au moins 5 sources lues pour la version longue). Un fait non retrouvé n'entre pas dans le texte.
+- Pas de recherche web : tu réécris à partir des faits de la version actuelle et de tes connaissances solidement établies sur le sujet. N'écris aucun fait dont tu n'es pas sûr (date, chiffre, nom, citation) ; dans le doute, laisse-le de côté ou reste général. Mieux vaut une histoire un peu plus courte qu'un détail inventé.
 
 ## La conclusion
 
 Aussi soignée que l'ouverture ; on ne doit jamais sentir que l'auteur était pressé de finir. Elle peut être une révélation, une émotion, une réflexion, un fait marquant, une ouverture. Elle est développée, donne une vraie sensation d'achèvement, ne répète pas ce qu'on vient de lire, et laisse une impression durable.
 
-## Les trois formats
+## Un seul format par histoire : 3, 7 ou 12 minutes
 
-L'histoire est d'abord conçue dans sa version complète, puis adaptée. Les versions courtes ne sont pas des coupes : elles sont RÉÉCRITES pour rester de vraies histoires, avec leur accroche, leur progression et leur conclusion. La version 3 minutes est une histoire complète, pas une bande-annonce.
+Chaque histoire existe dans UNE seule durée, celle qui lui convient le mieux. C'est toi qui choisis. On n'écrit jamais pour remplir une durée : c'est la durée qui s'adapte à la richesse de l'histoire.
 
-Les trois versions préservent : l'essence de l'histoire, les faits essentiels, la cohérence du récit, son principal intérêt narratif, une conclusion satisfaisante.
-
-| Format | Mots (hors titres de section) | Expérience |
+| Format | Mots (hors intertitres) | Pour quelle histoire |
 |---|---|---|
-| 12 minutes | 2 300 à 2 600 | Immersion approfondie, toute la richesse narrative |
-| 7 minutes | 1 300 à 1 500 | Histoire développée : contexte, détails, progression |
-| 3 minutes | 560 à 660 | Découverte rapide, histoire condensée, impact immédiat |
+| 3 minutes | 560 à 660 | Un épisode net : une scène, un geste, un retournement. Impact immédiat. |
+| 7 minutes | 1 300 à 1 500 | Une histoire qui a un avant, un pendant, un après, plusieurs personnages ou étapes. |
+| 12 minutes | 2 300 à 2 600 | Un grand récit : un destin entier, un événement majeur aux nombreuses péripéties, que tu connais assez bien pour le nourrir sans rien inventer. |
 
-On n'écrit jamais pour remplir une durée : si le sujet ne nourrit pas honnêtement 2 300 mots, enrichis-le par la recherche (contexte, personnages, conséquences), pas par du remplissage.
+Choisis 12 minutes seulement si le sujet est assez riche ET si tu en connais solidement assez de faits. Si tu dois broder pour tenir la longueur, prends le format en dessous. Une histoire de 3 minutes est une histoire complète, avec son accroche, sa progression et sa conclusion.
 
 ## Format technique
 
-Chaque version est une liste de chaînes :
-- `"#Titre de section"` : un intertitre évocateur, court, sans point (3 à 4 sections en 3 min, 5 à 7 en 7 min, 7 à 10 en 12 min) ;
+Le texte est une liste de chaînes :
+- `"#Titre de section"` : un intertitre évocateur, court, sans point (3 à 4 sections en 3 min, 5 à 7 en 7 min, 7 à 10 en 12 min). La première chaîne est toujours un intertitre ;
 - `"@Lieu, date."` : une ligne de repère, facultative, juste après un intertitre, quand elle aide ;
-- `"!Phrase forte."` : une phrase tirée du récit, mise en exergue (1 en 3 min, 2 à 3 en 7 min, 3 à 4 en 12 min). Ce doit être une vraie phrase de l'histoire, qui tient seule ;
-- les autres chaînes sont des paragraphes. Paragraphes courts à moyens (40 à 110 mots).
-Pas de markdown, pas d'astérisques, pas de notes. Guillemets français « » avec espaces insécables si possible, apostrophes droites acceptées.
+- `"!Phrase forte."` : une phrase tirée du récit, mise en exergue (1 en 3 min, 2 à 3 en 7 min, 3 à 4 en 12 min). Une vraie phrase de l'histoire, qui tient seule ;
+- les autres chaînes sont des paragraphes, courts à moyens (40 à 110 mots).
+Pas de markdown, pas d'astérisques, pas de notes. Guillemets français « ».
 
-Le fichier de sortie est `data/opsis_v2/<id>.json` :
+Pour lire une histoire actuelle : `python3 tools/v2_show.py <id>` (depuis /home/claude/opsis-media).
+Écris chaque histoire dans son propre fichier `data/opsis_v2/<id>.json` :
 
 ```json
-{"id":"…","name":"Titre (≤ 44 caractères, forme « Sujet : accroche »)","sub":"Une phrase d'accroche de 110 à 180 caractères, au présent, qui donne envie sans tout dire",
- "dates":"…","country":"…","job":"…",
- "src":"Titre — URL || Titre — URL || … (uniquement des sources réellement lues)",
+{"id":"…","fmt":7,
+ "name":"Titre (≤ 44 caractères, de préférence « Sujet : accroche », le sujet en premier)",
+ "sub":"Une phrase d'accroche de 110 à 180 caractères, au présent, qui donne envie sans tout dire",
  "blurb":{"b":"Résumé de 45 à 65 mots","h":"Accroche de 6 à 14 mots"},
- "v12":["#…","@…","…"],"v7":[…],"v3":[…],
- "notes":"Pour l'éditeur : points incertains, faits de l'ancienne version retirés car non vérifiés, sites bloqués."}
+ "body":["#…","@…","…"],
+ "notes":"Pour l'éditeur, en une ou deux phrases : faits de l'ancienne version que tu as retirés, points que tu juges à vérifier."}
 ```
 
-Avant de rendre : relis chaque version comme un lecteur qui ne connaît rien au sujet. A-t-il envie de continuer après le premier paragraphe ? Voit-il les scènes ? A-t-il appris quelque chose ? La fin lui reste-t-elle ? Puis vérifie le JSON et le nombre de mots de chaque version avec python3.
+Puis contrôle : `python3 tools/v2_check.py <id>` et corrige jusqu'à obtenir OK.
+
+Avant de rendre : relis chaque version comme un lecteur qui ne connaît rien au sujet. A-t-il envie de continuer après le premier paragraphe ? Voit-il les scènes ? A-t-il appris quelque chose ? La fin lui reste-t-elle ? 
