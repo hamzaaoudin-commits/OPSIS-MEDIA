@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OPSIS · La réalité, mise en scène</title>
-<meta name="description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre. App et site gratuits. Premier épisode le 4 janvier 2027.">
+<title>OPSIS · Le monde est rempli d'histoires</title>
+<meta name="description" content="OPSIS réunit toutes les formes d'histoires : histoires vraies, histoires vécues et fictions. Racontées pour captiver, lues en quelques minutes. Ouverture le 4 janvier 2027.">
 <meta name="theme-color" content="#09090A">
-<meta property="og:title" content="OPSIS · La réalité, mise en scène.">
-<meta property="og:description" content="Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.">
+<meta property="og:title" content="OPSIS · The world is made of stories.">
+<meta property="og:description" content="Histoires vraies, histoires vécues, histoires imaginées : OPSIS réunit tous les récits au même endroit.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -285,6 +285,27 @@
     form.join input{padding:12px 14px}
     .heroact .pill{width:100%;max-width:320px}
   }
+
+  .tdesc{font-size:14px;color:var(--dim);margin:-4px 0 12px}
+  .icols ul{margin:0;padding:0}
+  .durees{margin-top:90px}
+  .durees .weeknote{margin-top:26px;max-width:36em}
+  .phil{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:64px;border-top:1px solid var(--line);text-align:left}
+  .phil>div{padding:26px 22px 0 0}
+  .phil>div+div{padding-left:22px;border-left:1px solid var(--line)}
+  .phil b{display:block;font-family:var(--disp);font-weight:900;font-size:72px;line-height:.9;color:var(--red-type)}
+  .phil h3{font-size:26px;margin:10px 0 8px}
+  .phil p{font-size:15px;color:var(--dim)}
+  .manif{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .manif .big{font-size:clamp(44px,6vw,92px)}
+  .mtext p{font-family:var(--serif);font-size:clamp(18px,1.8vw,21px);line-height:1.6;color:#CFC8BB;margin:0 0 20px}
+  .mtext .pull{font-size:clamp(21px,2.2vw,27px);color:var(--bone);font-style:italic;border-left:2px solid var(--red-type);padding-left:20px}
+  .vals{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin-top:64px;padding-top:36px;border-top:1px solid var(--line)}
+  .vals b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:24px;letter-spacing:.03em;margin-bottom:8px}
+  .vals span{font-size:15px;color:var(--dim)}
+  .promise{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2vw,24px);line-height:1.55;color:var(--bone);max-width:40em;margin:64px auto 0;text-align:center}
+  @media (max-width:1000px){.phil{grid-template-columns:1fr 1fr}.phil>div,.phil>div+div{padding:24px 18px 0 0;border-left:0}.manif{grid-template-columns:1fr;gap:28px}.vals{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.phil{grid-template-columns:1fr}.vals{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     .wall,.wall .row{animation:none}
@@ -302,9 +323,10 @@
     <a class="mark" href="#" aria-label="OPSIS, accueil"><svg viewBox="-106 -106 212 212" aria-hidden="true"><defs><radialGradient id="blH" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puH" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puH)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blH)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="94.5" fill="none" stroke="#EDE6DA" stroke-width="18"/></svg><span class="wordmark" aria-hidden="true">PSIS</span></a>
     <nav class="links" aria-label="Sections">
       <a href="#aujourdhui">L'histoire du jour</a>
-      <a href="#rituel">Le rituel</a>
-      <a href="#explorer">Explorer</a>
+      <a href="#univers">L'univers</a>
+      <a href="#explorer">Les thèmes</a>
       <a href="#app">L'app</a>
+      <a href="#manifeste">Manifeste</a>
     </nav>
     <a class="pill header-cta" href="#inscription">Être prévenu du lancement</a>
   </div>
@@ -317,8 +339,8 @@
     <div class="wall" id="wall" aria-hidden="true"></div>
     <div class="hero-in">
       <h1 class="lock" aria-label="OPSIS"><svg viewBox="-106 -106 212 212" aria-hidden="true"><defs><radialGradient id="blK" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puK" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puK)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blK)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blK)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blK)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blK)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blK)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blK)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="94.5" fill="none" stroke="#EDE6DA" stroke-width="18"/></svg><span aria-hidden="true">PSIS</span></h1>
-      <p class="tagline">La réalité, mise en scène.</p>
-      <p class="herolead">Chaque jour, une nouvelle histoire vraie à dévorer, écrite pour divertir autant que pour apprendre.</p>
+      <p class="tagline">Le monde est rempli d'histoires.</p>
+      <p class="herolead">Histoires vraies, histoires vécues, histoires imaginées : OPSIS réunit tous les récits au même endroit, à lire en quelques minutes.</p>
       <div class="heroact">
         <a class="pill lg" href="#inscription">Être prévenu du lancement</a>
         <a class="pill lg ghost" href="#aujourdhui">Lire un extrait</a>
@@ -334,68 +356,80 @@
       <div class="textcol rv">
         <p class="chap">L'histoire du jour</p>
         <h2>L'homme qui a vendu la tour Eiffel</h2>
-        <div class="meta"><span class="tag r">Flash · 3 min</span><span class="tag">Arnaques</span><span class="tag">Série L'arnaque parfaite</span></div>
+        <div class="meta"><span class="tag r">3 min</span><span class="tag">Personnes</span><span class="tag">Histoire vraie</span></div>
         <div class="excerpt">
           <p>Paris, 1925. Dans un salon de l'hôtel de Crillon, quelques ferrailleurs écoutent un homme qui se présente comme un haut fonctionnaire.</p>
           <p>Il leur demande le secret absolu. La tour Eiffel coûte trop cher à entretenir, explique-t-il. L'État veut s'en débarrasser, et il cherche un acheteur pour sa ferraille.</p>
           <p>Dans la pièce, l'un des ferrailleurs se met déjà à faire ses calculs.</p>
         </div>
-        <p class="fade-end">La suite le jour de sa sortie, avec ses sources et trois choses à retenir.</p>
+        <p class="fade-end">La suite à la lecture, avec ses sources listées à la fin.</p>
       </div>
     </div>
   </section>
 
-  <!-- LE RITUEL -->
-  <section class="sec alt" id="rituel">
+  <!-- L'UNIVERS -->
+  <section class="sec alt" id="univers">
     <div class="wrap">
-      <div class="weekhead rv">
-        <div>
-          <p class="chap">Le rituel</p>
-          <h2 class="big">Une histoire<br>chaque jour.</h2>
-          <p class="sub">Le rendez-vous est quotidien, la durée suit le récit. Une semaine par mois, une grande histoire se raconte en cinq épisodes.</p>
-        </div>
-        <div class="seg" role="group" aria-label="Choisir la semaine affichée">
-          <button type="button" data-mode="type" aria-pressed="true">Semaine ordinaire</button>
-          <button type="button" data-mode="serie" aria-pressed="false">Semaine de Série</button>
-        </div>
+      <div class="rv">
+        <p class="chap">Notre univers</p>
+        <h2 class="big">Le vrai.<br>Le vécu. L'imaginaire.</h2>
+        <p class="sub">Une plateforme dédiée aux histoires sous toutes leurs formes, pour rendre les récits captivants accessibles à tous. Trois territoires, une même expérience.</p>
       </div>
-      <div class="week rv" id="week"></div>
-      <p class="weeknote rv" id="weeknote"></p>
       <div class="formats rv">
-        <div><h3>Le Flash</h3><p>Un fait vrai stupéfiant, en une scène. 3 minutes.</p></div>
-        <div><h3>Le Récit</h3><p>Une histoire complète en trois actes. 6 minutes.</p></div>
-        <div class="s"><h3>La Série</h3><p>Cinq épisodes du lundi au vendredi, la première semaine du mois.</p></div>
+        <div class="s"><h3>OPSIS Originals</h3><p>Des histoires vraies, racontées comme des films. Destins, événements, affaires, découvertes : la culture générale transformée en divertissement narratif, avec l'intrigue, les personnages et les enjeux plutôt que l'accumulation de faits.</p></div>
+        <div><h3>Vos histoires</h3><p>Les expériences vécues et racontées par les lecteurs : anecdotes extraordinaires, rencontres, aventures, moments qui méritent d'être partagés. Chacun devient le narrateur de sa propre histoire. Bientôt.</p></div>
+        <div><h3>Sinbury</h3><p>Le territoire de la fiction : une ville imaginaire où des histoires, des personnages et des intrigues coexistent, se croisent et parfois se rejoignent. Bientôt.</p></div>
+      </div>
+      <div class="durees rv">
+        <p class="chap">Une histoire, trois durées</p>
+        <div class="formats">
+          <div><h3>3 minutes</h3><p>Une découverte rapide : une histoire condensée, à l'impact immédiat.</p></div>
+          <div><h3>7 minutes</h3><p>Une histoire développée, avec davantage de contexte, de détails et de progression.</p></div>
+          <div><h3>12 minutes</h3><p>Une immersion approfondie, avec toute la richesse narrative nécessaire.</p></div>
+        </div>
+        <p class="weeknote" style="opacity:1">Les versions courtes ne sont pas des coupes : elles sont réécrites pour rester de vraies histoires, avec un début, une fin et l'essentiel du récit.</p>
       </div>
     </div>
   </section>
 
-  <!-- SÉRIE DU MOIS -->
-  <section class="sec serie" id="serie">
+  <!-- PHILOSOPHIE -->
+  <section class="sec serie" id="philosophie">
     <div class="wrap">
       <div class="headc rv">
-        <p class="chap">La Série du mois</p>
-        <h2>Jusqu'à la chute<em>Theranos · cinq épisodes</em></h2>
-        <p class="sub">Des gens au sommet, suivis jusqu'à ce que leur réussite les détruise. Ce mois-ci, Elizabeth Holmes et la start-up qui promettait de lire la santé dans une goutte de sang.</p>
+        <p class="chap">La philosophie OPSIS</p>
+        <h2>Observer. Percevoir.<em>Raconter · Imaginer · Partager</em></h2>
+        <p class="sub">Cinq gestes pour raconter le monde : regarder ce que les autres ne remarquent pas, comprendre ce qui se cache derrière, en faire un récit, puis le transmettre.</p>
       </div>
-      <div class="fan rv" id="fan"></div>
-      <div class="eplist rv" id="eplist"></div>
+      <div class="phil rv">
+        <div><b>O</b><h3>Observe</h3><p>Regarder le monde avec curiosité. Chaque détail, chaque personne, chaque événement peut être le début d'une histoire.</p></div>
+        <div><b>P</b><h3>Perceive</h3><p>Aller au-delà des apparences et découvrir les perspectives qui composent le monde.</p></div>
+        <div><b>S</b><h3>Storytell</h3><p>Transformer les expériences, les découvertes et les idées en histoires.</p></div>
+        <div><b>I</b><h3>Imagine</h3><p>Explorer l'inconnu : créer des personnages, des possibilités et des mondes qui n'existent pas encore.</p></div>
+        <div><b>S</b><h3>Share</h3><p>Une histoire prend une nouvelle dimension lorsqu'elle est partagée.</p></div>
+      </div>
     </div>
   </section>
 
   <!-- EXPLORER -->
-  <section class="sec alt" id="explorer" style="padding-bottom:70px">
+  <section class="sec alt" id="explorer">
     <div class="wrap rv">
       <p class="chap">Explorer</p>
-      <h2 class="big">Six territoires.<br>Quatre-vingts séries.</h2>
-      <p class="sub">Une série garde le même angle et change d'histoire à chaque épisode. Touchez une couverture pour la retourner.</p>
-      <div class="terrnav" id="terrnav"></div>
-    </div>
-    <div id="rails"></div>
-    <div class="wrap">
-      <div class="index rv">
-        <h3>Le catalogue complet</h3>
-        <p class="lead">Les séries marquées d'un point rouge ont déjà leur affiche. Les autres arrivent.</p>
-        <div class="icols" id="icols"></div>
+      <h2 class="big">Onze thèmes.<br>Aucune limite.</h2>
+      <p class="sub">Tous les sujets peuvent devenir une histoire OPSIS. On ne choisit pas les plus importants, mais ceux qui méritent d'être racontés : un destin extraordinaire, un mystère, une rivalité, un événement improbable.</p>
+      <div class="index rv" style="margin-top:56px">
+        <div class="icols">
+<div><h4>Histoire</h4><p class="tdesc">Civilisations, guerres, empires.</p><ul><li class="has">Virginia Hall, la Dame qui boite</li><li class="has">Le procès du singe : neuf minutes</li><li class="has">L'homme qui n'a jamais existé</li><li class="has">Marie-Antoinette : moins d'un jour</li></ul></div>
+<div><h4>Science</h4><p class="tdesc">Découvertes, inventions, phénomènes.</p><ul><li class="has">Louis Le Prince : le train de Dijon</li><li class="has">Röntgen et la découverte des rayons X</li><li class="has">Kasparov–Deep Blue : un coup trop humain</li><li class="has">La carte du Vinland</li></ul></div>
+<div><h4>Marques</h4><p class="tdesc">Entreprises, fortunes, faillites.</p><ul><li class="has">Kodak : l'appareil photo enterré</li><li class="has">Chanel N°5 : le flacon numéro cinq</li><li class="has">Nike : le logo payé 35 dollars</li><li class="has">Nokia : la plateforme en feu</li></ul></div>
+<div><h4>Personnes</h4><p class="tdesc">Personnalités, destins, ambitions.</p><ul><li class="has">Frédéric Bourdin, le faux garçon du Texas</li><li class="has">La banquière de la Gazette</li><li class="has">George Psalmanazar, le faux Formosan</li><li class="has">Catch Me If You Can : ce qui est vrai</li></ul></div>
+<div><h4>Une vie</h4><p class="tdesc">Un destin, du premier rôle à la chute.</p><ul><li class="has">Sly Stone</li><li class="has">Romy Schneider</li><li class="has">Michael Phelps</li><li class="has">Kurt Cobain</li></ul></div>
+<div><h4>Le jour qui a tout changé</h4><p class="tdesc">Les vingt-quatre heures où tout bascule.</p><ul><li class="has">Le pont de Tacoma, surnommé Gertie</li><li class="has">Proust : quatre heures et demie</li><li class="has">Martin Luther King : pour moi, ce soir</li><li class="has">Pierre Curie : rue Dauphine</li></ul></div>
+<div><h4>Une date, une histoire</h4><p class="tdesc">Les dates qui font date.</p><ul><li class="has">Nuremberg : quatre langues, quatre juges</li><li class="has">Titanic : sept avertissements</li><li class="has">Amundsen au pôle Sud : Polheim</li><li class="has">Lee Sedol–AlphaGo : une seule victoire</li></ul></div>
+<div><h4>Arts</h4><p class="tdesc">Cinéma, musique, littérature.</p><ul><li class="has">Shining : cent vingt-sept fois</li><li class="has">Knoedler : la galerie aux faux Rothko</li><li class="has">Apocalypse Now : ce film, c'est le Viêt Nam</li><li class="has">La salamandre de Mark Hofmann</li></ul></div>
+<div><h4>Sport</h4><p class="tdesc">Exploits, rivalités, événements.</p><ul><li class="has">La Grèce de 2004 : un but à la fois</li><li class="has">Douglas–Tyson : quarante-deux contre un</li><li class="has">Karpov–Kasparov : quarante-huit parties</li><li class="has">Maradona : un peu de la main de Dieu</li></ul></div>
+<div><h4>Aventure</h4><p class="tdesc">Expéditions, survies, évasions.</p><ul><li class="has">Hermann Buhl, un homme debout</li><li class="has">Alcatraz : les têtes de papier</li><li class="has">Nobile et l'Italia : la tente rouge</li><li class="has">Ludger Sylbaris, la cellule de Saint-Pierre</li></ul></div>
+<div><h4>Crimes et mystères</h4><p class="tdesc">Enquêtes, disparitions, affaires.</p><ul><li class="has">Les grands-pères de Hatton Garden</li><li class="has">Kim Philby, le troisième homme</li><li class="has">Le pont des espions</li><li class="has">Gouzenko, le chiffreur d'Ottawa</li></ul></div>
+        </div>
       </div>
     </div>
   </section>
@@ -424,9 +458,11 @@
         <p class="sub">Une application faite pour lire, comme on entre dans un film : une couverture, une histoire, et rien d'autre à l'écran.</p>
         <div class="points">
           <div><b>Gratuite</b><span>Une histoire chaque matin, sans abonnement.</span></div>
-          <div><b>Le temps affiché</b><span>Vous savez avant de commencer ce que l'histoire vous demande.</span></div>
-          <div><b>Tout est vrai</b><span>Des sources solides, listées à la fin de chaque histoire.</span></div>
+          <div><b>Le temps affiché</b><span>Trois durées de lecture, et vous savez avant de commencer ce que l'histoire vous demande.</span></div>
+          <div><b>Deux façons de lire</b><span>Verticale, en défilant, ou horizontale, page après page, pour entrer dans le récit.</span></div>
+          <div><b>Tout est vrai</b><span>Des faits vérifiés, des reconstitutions signalées, et les sources listées à la fin de chaque histoire.</span></div>
           <div><b>Pas un jeu</b><span>Ni score, ni jours d'affilée à maintenir. Vous lisez quand vous voulez.</span></div>
+          <div><b>Bientôt en trois langues</b><span>Anglais, français et espagnol.</span></div>
         </div>
       </div>
       <div class="devwrap rv">
@@ -438,13 +474,45 @@
     </div>
   </section>
 
+  <!-- MANIFESTE -->
+  <section class="sec" id="manifeste">
+    <div class="wrap manif">
+      <div class="rv">
+        <p class="chap">Le manifeste</p>
+        <h2 class="big">The world is made of stories.</h2>
+      </div>
+      <div class="mtext rv">
+        <p>Certaines histoires ont changé le cours de l'Histoire. D'autres ont bouleversé une seule vie. Certaines se sont réellement produites, d'autres n'existent que dans l'imagination de ceux qui les racontent.</p>
+        <p>Toutes nous permettent de découvrir ce que nous ne connaissons pas, de comprendre ce que nous ne vivons pas et d'imaginer ce qui n'existe pas encore.</p>
+        <p>Nous croyons que chaque personne a une histoire à raconter, que la réalité est parfois plus extraordinaire que la fiction, et que l'imagination n'a pas de limites.</p>
+        <p class="pull">Des histoires vraies qui méritent d'être connues. Des histoires personnelles qui méritent d'être partagées. Des histoires fictives qui méritent d'être imaginées.</p>
+        <p>Notre ambition n'est pas de produire du contenu, mais de créer un espace où les histoires circulent, où les idées se rencontrent et où les imaginaires se développent.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="formats rv">
+        <div><h3>Pourquoi nous existons</h3><p>Les histoires sont l'un des meilleurs moyens de découvrir le monde, mais elles sont dispersées entre supports, formats et plateformes. Nous voulons les rendre plus accessibles et plus agréables à explorer, en quelques minutes.</p></div>
+        <div><h3>Notre mission</h3><p>Réunir toutes les formes d'histoires au sein d'une même destination, et faire de la découverte d'histoires une expérience à part entière : accessible, immersive et internationale.</p></div>
+        <div class="s"><h3>Notre vision</h3><p>Devenir la destination de référence pour découvrir et lire des histoires, comme d'autres le sont pour les films et les séries, et réunir des millions de lecteurs autour d'une même passion.</p></div>
+      </div>
+      <div class="vals rv">
+        <div><b>Curiosité</b><span>Chaque histoire est une occasion de découvrir quelque chose de nouveau.</span></div>
+        <div><b>Créativité</b><span>De nouvelles manières de raconter, de présenter et de faire vivre les histoires.</span></div>
+        <div><b>Authenticité</b><span>Les histoires vraies respectent les faits. Les témoignages respectent ceux qui les partagent.</span></div>
+        <div><b>Immersion</b><span>Chaque histoire est une expérience qui captive, émeut et donne envie de continuer.</span></div>
+        <div><b>Accessibilité</b><span>Des formats adaptés, une expérience simple, une plateforme ouverte à tous.</span></div>
+      </div>
+      <p class="promise rv">À la fin d'une histoire OPSIS, on a passé un bon moment, compris quelque chose qu'on ignorait, et retenu au moins une idée, un fait ou une émotion. On vient pour découvrir une histoire. On repart avec une nouvelle perspective.</p>
+    </div>
+  </section>
+
   <!-- INSCRIPTION -->
   <section class="signup" id="inscription">
     <div class="wrap">
       <div class="eye-big"><svg viewBox="-128 -128 256 256" aria-hidden="true"><defs><radialGradient id="blB" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puB" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puB)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blB)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="92" fill="none" stroke="#EDE6DA" stroke-width="13"/><g class="ticks" transform="rotate(0)"><path d="M106.0 0.0L114.0 0.0" stroke="#F04A50" stroke-opacity="1" stroke-width="1.8"/><path d="M108.6 9.5L113.6 9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M107.3 18.9L112.3 19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M105.3 28.2L110.1 29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M102.4 37.3L107.1 39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M98.8 46.1L103.3 48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M91.8 53.0L98.7 57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M89.3 62.5L93.4 65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M83.5 70.1L87.3 73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M77.1 77.1L80.6 80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M70.1 83.5L73.3 87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M62.5 89.3L65.4 93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M53.0 91.8L57.0 98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M46.1 98.8L48.2 103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M37.3 102.4L39.0 107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M28.2 105.3L29.5 110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M18.9 107.3L19.8 112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M9.5 108.6L9.9 113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M0.0 106.0L0.0 114.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-9.5 108.6L-9.9 113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-18.9 107.3L-19.8 112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-28.2 105.3L-29.5 110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-37.3 102.4L-39.0 107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-46.1 98.8L-48.2 103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-53.0 91.8L-57.0 98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-62.5 89.3L-65.4 93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-70.1 83.5L-73.3 87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-77.1 77.1L-80.6 80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-83.5 70.1L-87.3 73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-89.3 62.5L-93.4 65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-91.8 53.0L-98.7 57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-98.8 46.1L-103.3 48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-102.4 37.3L-107.1 39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-105.3 28.2L-110.1 29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-107.3 18.9L-112.3 19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-108.6 9.5L-113.6 9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-106.0 0.0L-114.0 0.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-108.6 -9.5L-113.6 -9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-107.3 -18.9L-112.3 -19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-105.3 -28.2L-110.1 -29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-102.4 -37.3L-107.1 -39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-98.8 -46.1L-103.3 -48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-91.8 -53.0L-98.7 -57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-89.3 -62.5L-93.4 -65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-83.5 -70.1L-87.3 -73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-77.1 -77.1L-80.6 -80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-70.1 -83.5L-73.3 -87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-62.5 -89.3L-65.4 -93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-53.0 -91.8L-57.0 -98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M-46.1 -98.8L-48.2 -103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-37.3 -102.4L-39.0 -107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-28.2 -105.3L-29.5 -110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-18.9 -107.3L-19.8 -112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-9.5 -108.6L-9.9 -113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M-0.0 -106.0L-0.0 -114.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M9.5 -108.6L9.9 -113.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M18.9 -107.3L19.8 -112.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M28.2 -105.3L29.5 -110.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M37.3 -102.4L39.0 -107.1" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M46.1 -98.8L48.2 -103.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M53.0 -91.8L57.0 -98.7" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M62.5 -89.3L65.4 -93.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M70.1 -83.5L73.3 -87.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M77.1 -77.1L80.6 -80.6" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M83.5 -70.1L87.3 -73.3" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M89.3 -62.5L93.4 -65.4" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M91.8 -53.0L98.7 -57.0" stroke="#EDE6DA" stroke-opacity="1" stroke-width="1.8"/><path d="M98.8 -46.1L103.3 -48.2" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M102.4 -37.3L107.1 -39.0" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M105.3 -28.2L110.1 -29.5" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M107.3 -18.9L112.3 -19.8" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/><path d="M108.6 -9.5L113.6 -9.9" stroke="#EDE6DA" stroke-opacity="0.55" stroke-width="1"/></g></svg></div>
       <p class="days-left" id="daysleft">—</p>
-      <p class="unit" id="daysunit">jours avant le premier épisode</p>
-      <h2>Lundi 4 janvier 2027, la première Série commence.</h2>
+      <p class="unit" id="daysunit">jours avant l'ouverture</p>
+      <h2>Lundi 4 janvier 2027, OPSIS ouvre.</h2>
       <p class="sub">Laissez votre email pour recevoir la première histoire le jour de sa sortie, puis une nouvelle chaque matin.</p>
       <form class="join" id="join" novalidate>
         <label class="sr" for="email">Votre adresse email</label>
@@ -460,7 +528,7 @@
 <footer>
   <div class="wrap">
     <a class="mark" href="#" aria-label="OPSIS"><svg viewBox="-106 -106 212 212" aria-hidden="true"><defs><radialGradient id="blF" cx="0" cy="0" r="86" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3C3B43"/><stop offset=".55" stop-color="#202027"/><stop offset="1" stop-color="#0E0E12"/></radialGradient><radialGradient id="puF" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="#FF6A70"/><stop offset=".5" stop-color="#D2232C"/><stop offset="1" stop-color="#6E0A10"/></radialGradient></defs><circle r="86" fill="#08080A"/><circle r="59.8" fill="#D2232C" opacity=".2"/><circle r="35.2" fill="url(#puF)"/><ellipse cx="-12.0" cy="-13.4" rx="9.1" ry="6.0" fill="#FFE1E2" opacity=".75" transform="rotate(-35 -12.0 -13.4)"/><path d="M17.13 -35.12 L76.51 -39.28 L80.19 -31.06 L83.00 -22.51 L84.90 -13.71 L85.87 -4.76 L85.90 4.24 L84.98 13.19 L83.14 22.00 L80.38 30.57 L76.75 38.81 L72.27 46.62 L38.98 -2.73Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M17.13 -35.12 L76.51 -39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M38.98 -2.73 L72.27 46.62 L67.00 53.92 L61.00 60.63 L54.33 66.67 L47.06 71.98 L39.28 76.51 L31.06 80.19 L22.51 83.00 L13.71 84.90 L4.76 85.87 L-4.24 85.90 L21.85 32.40Z" fill="#FFFFFF" opacity=".035"/><path d="M38.98 -2.73 L72.27 46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M21.85 32.40 L-4.24 85.90 L-13.19 84.98 L-22.00 83.14 L-30.57 80.38 L-38.81 76.75 L-46.62 72.27 L-53.92 67.00 L-60.63 61.00 L-66.67 54.33 L-71.98 47.06 L-76.51 39.28 L-17.13 35.12Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M21.85 32.40 L-4.24 85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-17.13 35.12 L-76.51 39.28 L-80.19 31.06 L-83.00 22.51 L-84.90 13.71 L-85.87 4.76 L-85.90 -4.24 L-84.98 -13.19 L-83.14 -22.00 L-80.38 -30.57 L-76.75 -38.81 L-72.27 -46.62 L-38.98 2.73Z" fill="#FFFFFF" opacity=".035"/><path d="M-17.13 35.12 L-76.51 39.28" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-38.98 2.73 L-72.27 -46.62 L-67.00 -53.92 L-61.00 -60.63 L-54.33 -66.67 L-47.06 -71.98 L-39.28 -76.51 L-31.06 -80.19 L-22.51 -83.00 L-13.71 -84.90 L-4.76 -85.87 L4.24 -85.90 L-21.85 -32.40Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-38.98 2.73 L-72.27 -46.62" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="url(#blF)" stroke="#060608" stroke-width="1.4" stroke-linejoin="round"/><path d="M-21.85 -32.40 L4.24 -85.90 L13.19 -84.98 L22.00 -83.14 L30.57 -80.38 L38.81 -76.75 L46.62 -72.27 L53.92 -67.00 L60.63 -61.00 L66.67 -54.33 L71.98 -47.06 L76.51 -39.28 L17.13 -35.12Z" fill="#FFFFFF" opacity=".035"/><path d="M-21.85 -32.40 L4.24 -85.90" stroke="#9A97A0" stroke-width="1.3" stroke-opacity=".75" stroke-linecap="round"/><path d="M-58 -58 A82 82 0 0 1 30 -77" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/><circle r="94.5" fill="none" stroke="#EDE6DA" stroke-width="18"/></svg><span class="wordmark" aria-hidden="true">PSIS</span></a>
-    <span class="tg">La réalité, mise en scène.</span>
+    <span class="tg">The world is made of stories.</span>
     <span>© 2026 OPSIS</span>
   </div>
 </footer>
@@ -835,78 +903,6 @@ SERIES=SERIES.concat([
     });},{threshold:.55});io2.observe(tc);
   }
 
-  /* fenêtre de couverture pour les séries */
-  var pick=document.getElementById('pick'),pickbody=document.getElementById('pickbody'),lastFocus=null;
-  function openPick(s){
-    var sy=SYN[s.n]||[s.syn||'',s.tag||''];
-    lastFocus=document.activeElement;
-    pickbody.innerHTML=cardHTML({p:s.p,kind:'Série',kick:T[s.t],title:s.n,syn:sy[0],tag:sy[1]||s.tag||'',meta:'Série · '+T[s.t],seed:s.n.length*13+5});
-    pick.classList.add('on');document.body.style.overflow='hidden';
-    var c=wireCard(pickbody,reduce?50:1150);c.focus();
-  }
-  function closePick(){pick.classList.remove('on');document.body.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus();}
-  document.getElementById('pickx').addEventListener('click',closePick);
-  pick.addEventListener('click',function(e){if(e.target===pick)closePick();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pick.classList.contains('on'))closePick();});
-
-  /* ---------- la semaine ---------- */
-  var WEEK={
-    type:[['Lun','Flash',3,'eiffel'],['Mar','Récit',6,'accident'],['Mer','Flash',3,'dernier'],['Jeu','Récit',6,'volee'],['Ven','Flash',3,'canular'],['Sam','Récit',6,'survivants'],['Dim','Récit',6,'victoire']],
-    serie:[['Lun','Épisode 1',5,'theranos',1],['Mar','Épisode 2',5,'ep2',1],['Mer','Épisode 3',5,'ep3',1],['Jeu','Épisode 4',5,'ep4',1],['Ven','Épisode 5',5,'ep5',1],['Sam','Flash',3,'casse'],['Dim','Récit',6,'album']]
-  };
-  var NOTE={type:'33 minutes de lecture sur la semaine, une histoire à la fois.',serie:'La Série se lit en cinq matins. Le week-end reprend le rythme ordinaire.'};
-  var weekEl=document.getElementById('week'),noteEl=document.getElementById('weeknote');
-  function renderWeek(mode,first){
-    var html='';
-    WEEK[mode].forEach(function(x){
-      html+='<div class="day'+(x[4]?' ep':'')+'"><div class="dn">'+x[0]+'<small>'+x[2]+' min</small></div><div class="poster">'+art(x[3])+'</div><div class="fmt">'+x[1]+'</div><div class="len"><i data-w="'+Math.round(x[2]/6*100)+'"></i></div></div>';
-    });
-    weekEl.innerHTML=html;noteEl.textContent=NOTE[mode];
-    setTimeout(function(){weekEl.querySelectorAll('.len i').forEach(function(i){i.style.width=i.dataset.w+'%';});},40);
-  }
-  renderWeek('type');
-  document.querySelectorAll('.seg button').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.seg button').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});
-      renderWeek(b.dataset.mode);
-    });
-  });
-
-  /* ---------- série du mois ---------- */
-  var EPS=[['Lundi','Quelques gouttes de sang','theranos'],['Mardi','Ceux qui savaient','ep2'],['Mercredi',"L'article",'ep3'],['Jeudi',"L'effondrement",'ep4'],['Vendredi','Le verdict','ep5']];
-  var rot=[-9,-4.5,0,4.5,9],yy=[26,8,0,8,26],zz=[1,2,5,2,1];
-  document.getElementById('fan').innerHTML=EPS.map(function(e,i){
-    return '<div class="ep" style="--r:'+rot[i]+'deg;--y:'+yy[i]+'px;--z:'+zz[i]+'"><div class="poster">'+art(e[2])+'</div></div>';
-  }).join('');
-  document.getElementById('eplist').innerHTML=EPS.map(function(e,i){return '<div>Épisode '+(i+1)+' · '+e[0]+'<b>'+esc(e[1])+'</b></div>';}).join('');
-
-  /* ---------- explorer : un rail par territoire ---------- */
-  var ARW={l:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',r:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>'};
-  var railsEl=document.getElementById('rails'),navEl=document.getElementById('terrnav'),rh='',nh='';
-  var byT=T.map(function(_,i){return SERIES.filter(function(s){return s.t===i;});});
-  T.forEach(function(t,i){
-    nh+='<a href="#terr'+i+'">'+esc(t)+'</a>';
-    var total=CAT.filter(function(c){return c[0]===i;}).length;
-    rh+='<div class="rail-block rv" id="terr'+i+'"><div class="rail-head"><h3>'+esc(t)+'<span>'+total+' séries</span></h3><div class="arrows"><button type="button" data-dir="-1" data-rail="'+i+'" aria-label="Précédent">'+ARW.l+'</button><button type="button" data-dir="1" data-rail="'+i+'" aria-label="Suivant">'+ARW.r+'</button></div></div><div class="rail" id="rail'+i+'">'+
-      byT[i].map(function(s,j){return '<button class="tile" type="button" data-t="'+i+'" data-j="'+j+'"><div class="poster">'+art(s.p)+'</div><h4>'+esc(s.n)+'</h4><small>Série · '+esc(t)+'</small></button>';}).join('')+'</div></div>';
-  });
-  navEl.innerHTML=nh;railsEl.innerHTML=rh;
-  railsEl.addEventListener('click',function(e){
-    var a=e.target.closest('[data-rail]');
-    if(a){var r=document.getElementById('rail'+a.dataset.rail);r.scrollBy({left:a.dataset.dir*r.clientWidth*.8,behavior:'smooth'});return;}
-    var t=e.target.closest('.tile');if(t)openPick(byT[+t.dataset.t][+t.dataset.j]);
-  });
-
-  /* catalogue complet */
-  var have={};SERIES.forEach(function(s){have[s.n]=1;});
-  var ih='';
-  T.forEach(function(t,i){
-    ih+='<div><h4>'+esc(t)+'</h4><ul>';
-    CAT.forEach(function(c,n){if(c[0]===i)ih+='<li class="'+(have[c[1]]?'has':'')+'"><i>'+(n<9?'0':'')+(n+1)+'</i>'+esc(c[1])+'</li>';});
-    ih+='</ul></div>';
-  });
-  document.getElementById('icols').innerHTML=ih;
-
   /* ---------- radar ---------- */
   document.getElementById('ours').innerHTML='<div class="poster">'+art('volee')+'</div><div><small>OPSIS · Radar</small><h3>L'+"'"+'homme qui a volé la Joconde</h3><p>Le récit complet, en 6 minutes.</p></div>';
 
@@ -932,7 +928,7 @@ SERIES=SERIES.concat([
   function tick(){
     var days=Math.ceil(Math.max(0,LAUNCH-Date.now())/864e5);
     if(days<=0){dl.textContent='0';du.textContent='La première Série est en cours';return;}
-    dl.textContent=days;du.textContent=days>1?'jours avant le premier épisode':'jour avant le premier épisode';
+    dl.textContent=days;du.textContent=days>1?'jours avant l\'ouverture':'jour avant l\'ouverture';
   }
   tick();setInterval(tick,600000);
 
