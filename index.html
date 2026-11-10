@@ -410,6 +410,19 @@
     </div>
   </section>
 
+  <!-- SÉRIE DU MOIS -->
+  <section class="sec serie" id="serie">
+    <div class="wrap">
+      <div class="headc rv">
+        <p class="chap">La Série du mois</p>
+        <h2>Jusqu'à la chute<em>Theranos · cinq épisodes</em></h2>
+        <p class="sub">Des gens au sommet, suivis jusqu'à ce que leur réussite les détruise. Ce mois-ci, Elizabeth Holmes et la start-up qui promettait de lire la santé dans une goutte de sang.</p>
+      </div>
+      <div class="fan rv" id="fan"></div>
+      <div class="eplist rv" id="eplist"></div>
+    </div>
+  </section>
+
   <!-- EXPLORER -->
   <section class="sec alt" id="explorer">
     <div class="wrap rv">
@@ -902,6 +915,14 @@ SERIES=SERIES.concat([
       if(e.isIntersecting&&!seen){seen=true;setTimeout(function(){tcard.classList.add('flip');},reduce?0:1500);}
     });},{threshold:.55});io2.observe(tc);
   }
+
+  /* ---------- série du mois ---------- */
+  var EPS=[['Lundi','Quelques gouttes de sang','theranos'],['Mardi','Ceux qui savaient','ep2'],['Mercredi',"L'article",'ep3'],['Jeudi',"L'effondrement",'ep4'],['Vendredi','Le verdict','ep5']];
+  var rot=[-9,-4.5,0,4.5,9],yy=[26,8,0,8,26],zz=[1,2,5,2,1];
+  document.getElementById('fan').innerHTML=EPS.map(function(e,i){
+    return '<div class="ep" style="--r:'+rot[i]+'deg;--y:'+yy[i]+'px;--z:'+zz[i]+'"><div class="poster">'+art(e[2])+'</div></div>';
+  }).join('');
+  document.getElementById('eplist').innerHTML=EPS.map(function(e,i){return '<div>Épisode '+(i+1)+' · '+e[0]+'<b>'+esc(e[1])+'</b></div>';}).join('');
 
   /* ---------- radar ---------- */
   document.getElementById('ours').innerHTML='<div class="poster">'+art('volee')+'</div><div><small>OPSIS · Radar</small><h3>L'+"'"+'homme qui a volé la Joconde</h3><p>Le récit complet, en 6 minutes.</p></div>';
