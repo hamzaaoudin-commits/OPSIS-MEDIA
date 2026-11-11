@@ -1,0 +1,29 @@
+{
+ "id": "cs08",
+ "fmt": 3,
+ "name": "Fortaleza 2005 : le tunnel de la Banque centrale",
+ "sub": "Brésil, 2005 : un tunnel de 78 mètres, de l'air conditionné et une fausse boutique de gazon synthétique sous le nez de la Banque centrale",
+ "blurb": {
+  "b": "En août 2005, des hommes louent une maison à Fortaleza et se font passer pour des vendeurs de gazon synthétique. Pendant trois mois, ils creusent un tunnel de 78 mètres jusqu'à la Banque centrale du Brésil. Le lundi, la chambre forte est vide : plusieurs tonnes de billets ont disparu.",
+  "h": "Un faux commerce de gazon, 78 mètres de tunnel, 3,5 tonnes de billets"
+ },
+ "body": [
+  "#Du gazon synthétique",
+  "@Fortaleza, Ceará, trois mois avant août 2005.",
+  "Dans une rue tranquille de Fortaleza, une petite maison est louée à des gens aimables. Peinture verte toute fraîche, prospectus proposant aux voisins des services de pelouse, camionnette blanche garée devant : l'entreprise s'appelle « Grama Sintética », gazon synthétique. Les passants croient voir une équipe de paysagistes qui démarre son activité, avec le désordre habituel d'un commerce neuf.",
+  "La rue, elle, est parallèle à celle de la succursale de la Banque centrale du Brésil. Les allées et venues, les camions, la terre emportée dans des sacs n'alarment personne. La boutique est un décor. Dessous, des hommes creusent.",
+  "#Soixante-dix-huit mètres",
+  "Pendant environ trois mois, ils avancent sous la ville, à quelques mètres de profondeur. Le tunnel, long de 78 mètres, fait à peine soixante-dix centimètres de haut et de large. Il est tapissé de toile et de bois, éclairé de l'intérieur et même climatisé. Chaque mètre gagné exige d'étayer, d'aérer, d'évacuer la terre, dans le silence.",
+  "Les sources divergent sur la profondeur exacte et sur l'épaisseur du béton à percer, entre un et deux mètres. Seule la longueur est constante. Ce qui frappe, c'est le soin : on dirait moins un repaire de voleurs qu'un chantier d'ingénieurs.",
+  "#Un week-end",
+  "La banque ferme le vendredi. Pendant le week-end, les hommes atteignent la chambre forte et percent le béton armé, environ 1,10 mètre d'après l'agence publique brésilienne. Le système d'alarme de la chambre ne fonctionnait pas. Ils laissent derrière eux, dit-on, des briques de jus et des canettes de boisson énergisante.",
+  "!Entre le vendredi soir et le lundi matin, le coffre a été vidé sans que rien ne se déclenche.",
+  "Le lundi 8 août, à l'ouverture, les employés découvrent un grand trou dans le sol de la chambre forte. Trois tonnes et demie de billets usagés, donc non traçables, ont disparu : environ 150 millions de reais, soit 65 millions de dollars. D'autres sources parlent de 160 millions de reais, ou de près de 70 millions de dollars. Le montant exact reste incertain.",
+  "À l'époque, l'affaire est présentée comme le plus gros vol de banque de l'histoire du Brésil. Le président de la Banque centrale, Henrique Meirelles, ordonne une enquête interne et dit sa curiosité de comprendre comment une telle somme a pu être déplacée sans que personne ne voie rien.",
+  "#La disparition du butin",
+  "La police affirme avoir des descriptions des hommes. La maison louée trois mois plus tôt pour un commerce de façade lui fournit une piste. Vingt-cinq personnes sont soupçonnées d'avoir participé. À la fin de 2005, huit arrestations ont eu lieu et 20 millions de reais ont été retrouvés.",
+  "D'autres totaux circulent, jusqu'à plus de cent arrestations et une trentaine de millions de reais récupérés, mais on ne sait pas à quelle date ils correspondent. Une grande partie de l'argent est restée introuvable.",
+  "Le tunnel a été un exploit de patience. Le plus difficile, pourtant, était de disparaître avec 3,5 tonnes de billets. Quant au sort de ceux qui ont conçu l'opération, il demeure en partie obscur. Plus de quinze ans plus tard, l'affaire est devenue un documentaire de Netflix, « 3 Tonelada$ : Assalto ao Banco Central ». Le décor de gazon synthétique, lui, a disparu depuis longtemps."
+ ],
+ "notes": "Retiré : enlèvements, rançons et meurtre présumé du cerveau (non sourcés), nom d'un prétendu organisateur, comparaison avec le casse anglais de 1987. À vérifier : profondeur et épaisseur du béton (versions différentes), montant (150 à 160 M de reais), totaux d'arrestations, détail des canettes et briques de jus, titre exact du documentaire Netflix."
+}
