@@ -1,0 +1,53 @@
+{
+ "id": "ar02",
+ "fmt": 3,
+ "name": "L'homme qui vendait le pont de Brooklyn",
+ "sub": "New York, vers 1900 — Comment George Parker a vendu des monuments qu'il ne possédait pas, avant de finir en prison pour un chèque de 150 dollars.",
+ "body": [
+  "#PROLOGUE — New York, vers 1900",
+  "Un homme bien mis aborde un voyageur à peine descendu du bateau.",
+  "Il parle du pont de Brooklyn. Des milliers de personnes le traversent chaque jour.",
+  "Il en est le propriétaire, ou son représentant. Et il doit s'en défaire vite : un héritage à régler, un besoin d'argent.",
+  "Il sort des papiers, dans un bureau monté pour l'occasion.",
+  "Le voyageur n'a aucune raison de douter. Si tant de gens passent sur ce pont, quelqu'un doit bien encaisser quelque chose.",
+  "Cet homme s'appelle George C. Parker. Du moins, c'est le nom que retient la légende.",
+  "#01 — LE PONT N'ÉTAIT PAS À VENDRE",
+  "Parker n'avait presque rien à inventer. Il lui suffisait de confirmer ce que sa victime pensait déjà.",
+  "Les prix qu'on lui prête vont de quelques dizaines à plusieurs dizaines de milliers de dollars. Un visiteur de l'Indiana aurait versé mille dollars comptant, avec quatre mille autres promis en versements trimestriels.",
+  "Il n'a jamais revu son vendeur.",
+  "Le calendrier de paiement rendait la vente plus crédible encore. Un vrai marché de cette taille ne se règle pas d'un seul coup.",
+  "!Certains acheteurs auraient voulu installer des barrières pour encaisser les péages. Il a fallu qu'un policier leur explique qu'ils avaient acheté du vent.",
+  "Le pont n'était que la pièce maîtresse. Parker aurait aussi proposé le Madison Square Garden, le Metropolitan Museum, et même le tombeau du général Grant.",
+  "En 1928, il vend dix terrains à Asbury Park, dans le New Jersey, à un agent immobilier, pour dix-sept mille dollars. Il n'en possédait aucun.",
+  "Combien de fois a-t-il vendu le pont ? Personne ne le sait. Les chiffres qu'on lui attribue sont probablement gonflés.",
+  "Mais l'histoire ne s'arrête pas là. Car l'escroc que la légende montre insaisissable a un dossier judiciaire bien rempli.",
+  "#02 — UN CHÈQUE DE 150 DOLLARS",
+  "Condamné en 1901 pour vol qualifié, Parker fait son premier séjour à Sing Sing.",
+  "D'autres condamnations suivent : faux, vol, chèque sans provision.",
+  "Il s'évade un jour, dit-on, en enfilant le manteau et le chapeau du directeur. Il sort devant des gardiens qui saluent leur chef.",
+  "Il est repris. Sa peine s'allonge.",
+  "En 1928, il est arrêté pour un chèque sans provision de cent cinquante dollars.",
+  "Une loi de l'État de New York, adoptée deux ans plus tôt, prévoit la prison à vie à la quatrième condamnation pour crime.",
+  "Parker retourne à Sing Sing. Pour ne plus en sortir.",
+  "Un homme qui avait vendu des monuments entiers est condamné à la perpétuité pour la somme la plus modeste de sa carrière.",
+  "Des journaux de l'époque ont saisi l'ironie. Ils l'ont appelé le dernier des vieux escrocs.",
+  "#ÉPILOGUE — Ce qu'il reste d'un nom",
+  "Parker meurt en prison, en 1936 ou en 1937 selon les récits.",
+  "Il ne laisse ni mémoires ni lettres connues, pas même un portrait dont on soit sûr. Sa date de naissance varie d'un récit à l'autre, et il a utilisé tant d'identités que son état civil a fini par s'y perdre.",
+  "D'autres avaient vendu des ponts avant lui, dit-on. La formule anglaise « I've got a bridge to sell you », qui désigne celui qu'on prend pour un naïf, a sans doute circulé sans lui.",
+  "Mais c'est son nom qu'on a gardé.",
+  "!Le pont n'a jamais été à vendre. Et chaque génération trouve quelqu'un pour croire qu'il l'était."
+ ],
+ "learned": [
+  "Le fonctionnement d'une vente frauduleuse fondée sur de faux papiers et un décor crédible.",
+  "Le rôle du calendrier de paiement dans la confiance d'une victime.",
+  "L'origine probable de l'expression « vendre un pont ».",
+  "La loi new-yorkaise qui a envoyé Parker en prison à vie."
+ ],
+ "retain": "George Parker n'a jamais possédé le pont de Brooklyn. Il a vendu aux gens ce qu'ils pensaient déjà, et il a fini condamné pour la plus petite de ses fraudes.",
+ "note": "On sait très peu de choses certaines sur Parker : sa date de naissance et celle de sa mort varient selon les récits. Le nombre de ventes du pont, les montants et l'anecdote de l'évasion en manteau de directeur viennent de récits rapportés et sont sans doute embellis. L'idée que beaucoup de victimes étaient des immigrants fraîchement arrivés repose sur peu de sources.",
+ "blurb": {
+  "b": "Un homme bien mis aborde les voyageurs qui descendent du bateau et leur propose d'acheter le pont de Brooklyn. Il n'en possède pas une pierre, mais il sait ce qu'ils veulent entendre. George Parker a vendu des monuments entiers à New York. Pourtant, c'est un simple chèque sans provision qui a fini par l'enfermer pour de bon.",
+  "h": "Il vendait le pont de Brooklyn, et un petit chèque l'a perdu."
+ }
+}
