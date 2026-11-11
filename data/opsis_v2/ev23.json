@@ -1,0 +1,29 @@
+{
+ "id": "ev23",
+ "fmt": 3,
+ "name": "Robert Smalls et le Planter",
+ "sub": "Charleston, 13 mai 1862 : un timonier réduit en esclavage sort un vapeur confédéré du port, sous le nez des forts, et le livre à la flotte de l'Union.",
+ "blurb": {
+  "b": "Dans la nuit du 12 au 13 mai 1862, Robert Smalls, timonier réduit en esclavage, prend le commandement du Planter, un vapeur confédéré. Coiffé du chapeau de paille du capitaine, il sort du port de Charleston sous les canons des forts, avec sa famille à bord, et remet le navire à la flotte de l'Union.",
+  "h": "Un esclave vole un navire de guerre et passe sous les canons du port"
+ },
+ "body": [
+  "#Un chapeau de paille",
+  "@Charleston, Caroline du Sud, 12 mai 1862.",
+  "Robert Smalls naît le 5 avril 1839 à Beaufort, en Caroline du Sud, dans une cabane derrière la maison de son propriétaire. À douze ans, il est loué à Charleston. Il y devient timonier et connaît le port dans ses moindres recoins, même si les esclaves n'ont pas le droit de porter le titre de pilote. Il épouse Hannah Jones, femme de chambre d'hôtel, le 24 décembre 1856.",
+  "À l'automne 1861, en pleine guerre de Sécession, il est affecté au Planter, un vapeur à aubes d'environ 45 mètres, construit pour le commerce du coton. Il travaille pour le gouvernement confédéré : relevés, mines, dépêches, troupes, approvisionnement. Smalls a vingt-trois ans en 1862. Son idée est simple : s'emparer du bateau et le livrer à la flotte de blocus de l'Union au large de Charleston, avec sa famille.",
+  "Il recrute les autres hommes réduits en esclavage à bord, qui acceptent lors d'une réunion secrète. Il se ferait passer pour le capitaine, en profitant de la nuit : il enfile le manteau du capitaine, Charles Relyea, et son chapeau de paille, car on dit qu'il lui ressemble. Relyea laissait parfois le navire à l'équipage pendant la nuit, malgré un ordre confédéré qui obligeait les officiers à rester à bord.",
+  "#Le soir du 12",
+  "Le 12 mai, l'équipage embarque quatre gros canons à Coles Island, puis des munitions et vingt cordes de bois à Charleston. Le soir, le Planter est amarré sous le quartier général du général Ripley, et ses trois officiers blancs sont à terre. Smalls avait demandé plus tôt que les familles de l'équipage puissent venir. Trois hommes feignent de raccompagner des proches, mais les cachent sur un autre vapeur, l'Etowah.",
+  "Vers trois heures du matin, le 13 mai, Smalls et sept des huit hommes de l'équipage sortent le Planter. Les gardes ne posent pas de question : le vapeur est censé livrer des canons ce matin-là. Le bateau passe par un wharf voisin pour embarquer les familles. Il y a Hannah, leur fille Elizabeth, quatre ans, et leur fils Robert, un bébé. Smalls avait prévenu Hannah qu'il pouvait être tué. Elle avait accepté.",
+  "#Fort Sumter",
+  "!Smalls fait les bons signaux au sifflet aux forts du port.",
+  "Il sonne le signal confédéré : deux coups longs et un court. Un factionnaire insulte les « Yankees ». Smalls reste dans son rôle et répond « Aye, aye ». Après une longue pause, le fort répond que tout va bien. Le passage devant Sumter se fait vers quatre heures et quart ou quatre heures et demie du matin. Une fois le fort derrière lui, il fait donner toute la vapeur et file vers l'escadre de l'Union. Il remplace les drapeaux confédérés par un drap de lit blanc que sa femme avait apporté.",
+  "Dans la brume, l'USS Onward, un clipper de trois mâts, prend d'abord le vapeur pour un cuirassé confédéré. Il est sur le point de tirer quand un homme d'équipage repère le drapeau blanc. Son capitaine, John Frederick Nickels, monte à bord. Smalls demande un drapeau américain et lui remet le navire. Il donne aussi à l'amiral Du Pont des informations sur les défenses de Charleston. Le livre de signaux du capitaine et une carte des mines du port comptent parmi les prises les plus précieuses. Une semaine plus tard, l'Union prend Coles Island sans combat.",
+  "#Un élu du Sud",
+  "Le Congrès accorde une prime à Smalls et à son équipage. Sa part est de 1 500 dollars. Il pilote ensuite d'autres navires de l'Union, dont le cuirassé Keokuk lors de l'attaque du 7 avril 1863 contre Fort Sumter. En août 1862, il va à Washington plaider pour l'enrôlement des Noirs, et le secrétaire à la Guerre autorise peu après jusqu'à 5 000 engagements à Port Royal.",
+  "!Après la guerre, il devient élu : représentant de l'État, sénateur de l'État, puis député au Congrès des États-Unis.",
+  "Il meurt à Beaufort le 23 février 1915, à soixante-quinze ans, après avoir racheté la maison de son ancien propriétaire, celle derrière laquelle il était né dans une cabane. On ne sait pas le nombre exact de personnes à bord : seize selon deux versions, car les récits ne comptent pas tous de la même façon l'équipage et les familles."
+ ],
+ "notes": "Retiré : rapport de 1883 et versement de 1900, évaluation du navire, heures détaillées. À vérifier : hypothèse sur la ressemblance avec Relyea, nombre de personnes à bord (seize), formulation du signal au sifflet, nom du général Ripley."
+}

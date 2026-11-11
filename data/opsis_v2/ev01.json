@@ -1,0 +1,41 @@
+{
+ "id": "ev01",
+ "fmt": 7,
+ "name": "Marie Stuart : le trousseau de Lochleven",
+ "sub": "Écosse, 1568 : une reine déchue, prisonnière sur une île, ne sortira que grâce aux clés qu'un jeune serviteur prendra sous le nez de son geôlier.",
+ "blurb": {
+  "b": "En 1567, Marie Stuart, reine d'Écosse, est enfermée par ses propres seigneurs dans un château au milieu d'un lac, forcée d'abdiquer en faveur de son fils d'un an. Deux tentatives de fuite échouent. La troisième tient à un jeune serviteur, à un trousseau de clés, et à une barque qui traverse l'eau en silence.",
+  "h": "Une reine déchue, un lac, et un jeune serviteur qui prend les clés"
+ },
+ "body": [
+  "#Une reine qui a tout perdu en un an",
+  "@Écosse, 1542–1567.",
+  "Marie Stuart naît le 8 décembre 1542 et devient reine d'Écosse six jours plus tard, à la mort de son père, Jacques V. Elle est couronnée à neuf mois. Pendant que des seigneurs rivaux gouvernent à sa place, on l'envoie en France, à cinq ans, où elle grandit à la cour. Elle y épouse le futur François II, qui meurt en 1560. Veuve à dix-huit ans, elle rentre en Écosse en 1561, dans un royaume que la Réforme a profondément divisé.",
+  "Elle épouse Lord Darnley en 1565 et met au monde un fils, James, en juin 1566. Mais en février 1567, Darnley est tué à Édimbourg, dans une maison ravagée par une explosion. Le principal suspect est le comte de Bothwell, que Marie épouse en mai, à peine trois mois plus tard. Pour beaucoup de seigneurs écossais, c'est trop. Ils lèvent une armée en son nom contre la leur.",
+  "#Une reine dans une tour",
+  "@Lochleven, Écosse, 1567.",
+  "Le 15 juin 1567, à Carberry Hill, Marie Stuart se rend aux seigneurs qui se sont dressés contre elle. Ils lui reprochent son mariage avec le comte de Bothwell, soupçonné d'avoir fait tuer son précédent époux. Il n'y a pas de bataille : ses troupes se débandent pendant les négociations, et Bothwell obtient de quitter le champ. On conduit la reine à Édimbourg, puis, peu après, au château de Lochleven, sur une île au milieu d'un lac.",
+  "Le lieu appartient à William Douglas, qui devient son geôlier. Dans la maison vivent sa mère, Lady Margaret Douglas, et d'autres membres de la famille, dont George Douglas, un frère cadet, et un jeune parent orphelin, Willie Douglas. Pour sortir de l'île, il faut une barque, et les barques sont gardées. Le lac est assez large pour qu'un nageur n'ose pas s'y risquer, et les rives, au loin, semblent hors de portée. Dans ce paysage, la reine apprend la patience, ou fait semblant.",
+  "Marie tombe malade peu après son arrivée. Entre le 20 et le 23 juillet, elle fait une fausse couche de jumeaux. Le 24 juillet, elle signe son abdication en faveur de son fils James, âgé d'un an. Son demi-frère, le comte de Moray, devient régent. Elle n'est plus reine que de nom, et son château est une prison. Les mois passent. Ce qui aurait pu être un lieu de passage devient un quotidien : les mêmes murs, la même île, la même vue sur l'eau.",
+  "#Deux tentatives qui échouent",
+  "Pendant des mois, Marie cherche une issue. Elle essaie d'abord de passer pour la blanchisseuse du château, qui vient et repart chaque jour en barque. Une de ses dames prend sa place dans la chambre. Dans la barque, le batelier la reconnaît, peut-être à ses mains blanches, selon la tradition, et la ramène à l'île.",
+  "Une autre idée consiste à franchir le mur extérieur, haut d'environ deux mètres. Une de ses dames, Jane Kennedy, se blesse pendant l'entraînement, et le plan est abandonné. Ces échecs ont un point commun : ils viennent de l'intérieur, de personnes que les gardes connaissent trop bien pour ne pas les remarquer.",
+  "!Le tournant viendra de dehors, et d'un garçon que personne ne regarde.",
+  "#Les deux Douglas",
+  "George Douglas, le plus jeune frère du geôlier, est tombé sous le charme de la reine, dit-on. Le régent Moray, qui se méfie de lui, l'a fait exclure de l'île. Il attend à Kinross, tout près, sur la rive du lac. Un certain John Drysdale porte en secret des lettres entre Marie et lui, et les messages passent.",
+  "À l'intérieur du château, il y a Willie Douglas. Il est jeune, orphelin, et d'un rang trop modeste pour qu'on se méfie de lui. Il circule partout, sert à table, surveille les barques. Les deux hommes, l'un dehors et l'autre dedans, vont devenir les deux pièces maîtresses d'un plan qui ne dépend plus de la reine seule.",
+  "#Le 2 mai 1568",
+  "@Lochleven, 2 mai 1568.",
+  "Le soir du 2 mai, Willie Douglas dérobe les clés. Il les prend, dit-on, pendant que son maître est à table. Marie sort déguisée en servante. Elle franchit la porte, Willie la referme derrière eux et la barque quitte l'île. On la rame à travers le lac jusqu'à George Douglas, qui l'attend avec des cavaliers sur l'autre rive. Le groupe file vers le château de Niddry, en Lothian.",
+  "Une version plus colorée circule. Willie aurait enfoncé des piquets dans toutes les barques sauf une, pour interdire toute poursuite. Il aurait jeté son mouchoir sur les clés pendant que le seigneur somnolait, ivre. Ce récit, très beau, n'a pas de source solide. Une autre tradition veut que des clés trouvées au fond du lac, quand son niveau a baissé au XIXe siècle, soient celles de Willie.",
+  "La reine est libre. Elle a quitté une prison qu'on disait imprenable, et ses partisans commencent à se rassembler. Pour la première fois depuis près d'un an, elle peut espérer redevenir ce qu'elle était. Mais cette liberté va durer onze jours, et c'est beaucoup moins que ce qu'elle a cru.",
+  "#Langside",
+  "Le 13 mai 1568, à Langside, l'armée de Marie, environ 6 000 hommes, affronte les forces de Moray, plus petites. Elle est battue. La reine comprend qu'elle n'a plus d'armée. Le 16 mai, après une nuit à l'abbaye de Dundrennan, elle traverse le Solway en barque de pêche et débarque à Workington, en Angleterre, où elle compte trouver l'aide de sa cousine Élisabeth Ire.",
+  "Elle ne la trouvera pas. Élisabeth ne la reçoit pas et la fait garder. Marie reste prisonnière en Angleterre pendant dix-neuf ans, de château en château. Le 8 février 1587, elle est exécutée à Fotheringhay. L'île de Lochleven, elle, n'aura été qu'une première cage.",
+  "#Ce que le lac a gardé",
+  "Le château continue sa vie après la reine. Le régent Morton s'y retire en 1578. Il n'a plus servi de résidence après 1675, puis il est tombé en ruine. Ses ruines sont consolidées en 1840 et confiées à l'État en 1939. L'île actuelle, plus vaste, date du début du XIXe siècle, quand on a canalisé la sortie de la rivière Leven et fait baisser le niveau du lac.",
+  "George Douglas accompagne la reine en Angleterre. Elle l'envoie ensuite comme messager en France et auprès d'Élisabeth Ire. Il est arrêté en 1582 comme conspirateur, puis devient membre du Conseil privé d'Écosse en 1602. Dans son roman L'Abbé, Walter Scott le fait mourir à Langside, ce qui est une fiction.",
+  "On ne sait pas l'identité du batelier, ni la parenté exacte de Willie Douglas. Les récits divergent sur le rôle de George, qui rame ou qui attend, sur le nombre de cavaliers, et même sur certains détails de l'évasion, que certains mélangent avec une tentative antérieure. Ce qui ne varie pas, c'est la scène : une reine qui traverse l'eau en silence, avec, dans la poche d'un garçon, le trousseau qui ouvrait la porte."
+ ],
+ "notes": "Retiré : détails des suivantes (Marie Courcelles, Estienne Hauet), détail d'une date de transfert, date du 16 mai des vêtements envoyés, chiffre de 200 cavaliers. À vérifier : le moment où Willie prend les clés, la durée « onze jours » entre évasion et Langside, le rôle de la blanchisseuse Margaret Aitkin, la date de transfert à Lochleven."
+}
