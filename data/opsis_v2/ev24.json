@@ -1,0 +1,29 @@
+{
+ "id": "ev24",
+ "fmt": 3,
+ "name": "Harriet Jacobs : sept ans dans un grenier",
+ "sub": "Caroline du Nord, 1835 : pour échapper à son maître, une femme se cache au-dessus de la maison de sa grand-mère, dans un espace où elle ne peut pas se tenir debout.",
+ "blurb": {
+  "b": "Harriet Jacobs a été réduite en esclavage à Edenton. Pour échapper à son maître et rester près de ses enfants, elle s'enferme dans un réduit sous le toit de sa grand-mère. Elle y reste près de sept ans avant de s'enfuir vers le Nord et d'écrire l'un des grands récits de l'esclavage.",
+  "h": "Elle se cache sept ans sous un toit pour rester près de ses enfants"
+ },
+ "body": [
+  "#Un maître",
+  "@Edenton, Caroline du Nord, 1835.",
+  "Harriet Jacobs naît à Edenton vers 1813. Sa mère, Delilah, est esclave, et son père, Elijah Knox, aussi, mais il travaille comme charpentier. Harriet et son frère John naissent donc esclaves. Après la mort de sa mère, quand elle a six ans, elle est confiée à la maîtresse de sa mère, Margaret Horniblow, qui lui apprend à lire, à coudre et à écrire.",
+  "En 1825, Horniblow meurt et Jacobs est léguée à une nièce de trois ans. Le père de la fillette, le docteur James Norcom, devient donc son maître de fait. Il la harcèle et lui interdit de fréquenter un homme noir libre qui voulait l'épouser. Cherchant une protection, elle a une relation avec un avocat blanc, Samuel Sawyer. Deux enfants naissent, Joseph et Louisa Matilda.",
+  "Elle vit chez sa grand-mère, Molly Horniblow, à environ 180 mètres de la maison de Norcom. Il continue de la harceler. En avril 1835, il l'envoie dans la plantation de son fils, à une dizaine de kilomètres, et menace de vendre ses enfants. En juin, elle s'enfuit.",
+  "#Le grenier",
+  "Elle se cache d'abord dans différents endroits, dont chez une femme blanche, puis dans un marais. Puis elle passe environ sept ans dans un espace minuscule au-dessus de la maison de sa grand-mère, à environ un pâté de maisons de celle de Norcom.",
+  "!Cet espace fait environ 9 pieds sur 7, et 3 pieds de haut au plus : elle ne peut pas se tenir debout.",
+  "Cela fait à peu près 2,7 mètres sur 2,1, et moins d'un mètre de hauteur. Son oncle Philip, charpentier, avait construit une trappe cachée. Elle perce de petits trous dans le mur pour avoir de l'air et voir dehors, et elle lit et coud à la faible lumière. Elle entend ses enfants grandir en bas : on rapporte qu'ils ne savaient pas qu'elle était si près.",
+  "Norcom vend les enfants et son frère à un négrier, comptant les séparer d'elle. Le négrier les revend en secret à Sawyer, qui les laisse vivre chez leur arrière-grand-mère, mais ne les affranchit jamais légalement, malgré sa promesse.",
+  "#1842",
+  "En 1842, elle part pour le nord. Elle monte sur un bateau à Edenton, à destination de Philadelphie, où elle retrouve son frère et sa fille. Elle va ensuite à New York, où elle travaille comme nourrice pour la famille de l'écrivain Nathaniel Parker Willis. Elle n'est pas à l'abri : après la loi de 1850 sur les esclaves fugitifs, elle fuit de nouveau, et en février 1852 la fille de Norcom arrive à New York pour la réclamer. Cornelia Willis achète sa liberté pour 300 dollars.",
+  "#Le livre",
+  "Amy Post l'encourage à écrire sa vie. Jacobs rédige le manuscrit à Idlewild, la maison de campagne des Willis, et sa fille Louisa le recopie. Lydia Maria Child révise le texte et signe la préface. Le livre, Incidents in the Life of a Slave Girl, paraît en janvier 1861 sous le pseudonyme de « Linda Brent ». Norcom devient « Dr. Flint ».",
+  "Pendant des générations, le livre passe pour un roman. Les recherches de Jean Fagan Yellin, dans les années 1970 et 1980, établissent que Jacobs en est l'autrice et que le récit est autobiographique. Harriet meurt à Washington le 7 mars 1897.",
+  "La durée de la cachette varie selon les versions, sept ans ou près d'une décennie. Elle n'avait pas choisi de fuir plus loin : elle avait choisi de rester près de ses enfants, dans un espace où elle ne pouvait pas se lever."
+ ],
+ "notes": "Retiré : divergence 1813/1815, dates de 1843-1844, école Jacobs, détails de New York. À vérifier : durée de la cachette (sept ans ou presque dix), « on rapporte que les enfants ne savaient pas », date de naissance."
+}
