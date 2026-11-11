@@ -1,0 +1,37 @@
+{
+ "id": "di16",
+ "fmt": 7,
+ "name": "Agatha Christie, onze jours sous un faux nom",
+ "sub": "Surrey et Yorkshire, décembre 1926 — Une romancière disparaît à bord de sa voiture, puis réapparaît dans un hôtel sous le nom de la maîtresse de son mari.",
+ "body": [
+  "@Newlands Corner, Surrey, samedi 4 décembre 1926, au matin.",
+  "#Une voiture au bord du vide",
+  "Jack Best a quinze ans, et ce matin-là il suit la crête de Newlands Corner, une colline de craie qui surplombe la campagne du Surrey, quand il voit une voiture arrêtée de travers au bord d'une pente. Une Morris Cowley, capote relevée, phares encore allumés. Personne à l'intérieur. Sur le siège, un manteau de fourrure, un sac avec des vêtements, un permis de conduire périmé. Devant, la pente descend vers un étang que l'on appelle la Silent Pool, et rien, ni traces de pas ni appel, ne dit ce qu'est devenu le conducteur.",
+  "Le permis est au nom d'Agatha Christie. Elle a trente-six ans, et en Angleterre, en 1926, c'est déjà un nom que l'on connaît : cinq ans plus tôt, Le Crime du golf et quelques romans l'ont installée parmi les auteurs que l'on lit dans le train. Et la veille au soir, elle s'est disputée avec son mari. La police comprend vite qu'elle a devant elle l'une de ces affaires que les journaux attendent.",
+  "#Une femme qui a perdu sa mère et son mari",
+  "Ce que l'on sait de l'année qui précède se laisse raconter sans rien inventer. En avril, la mère d'Agatha est morte, et la romancière, qui était très proche d'elle, s'est retrouvée seule dans la grande maison familiale à trier ses affaires. En août, Archie, un ancien aviateur de la Royal Flying Corps, lui a annoncé qu'il aimait une autre femme, une certaine Nancy Neele, et qu'il voulait divorcer. Le couple a une fille de sept ans, Rosalind. Le 3 décembre, après une querelle dont on ne connaît pas les termes, Archie est parti passer le week-end chez des amis, avec, d'après certains récits, Nancy. Agatha est montée dans sa voiture le soir même.",
+  "#Quinze mille volontaires",
+  "Dès le lendemain, la presse en fait l'affaire du moment. Plus de mille policiers fouillent les bois, quinze mille volontaires battent la campagne, et des avions survolent le Surrey. Le Daily Mail offre cent livres à qui la retrouvera. Archie est soupçonné, et il le sait : on lui demande où il était, avec qui, et ce qu'il avait dit à sa femme.",
+  "Chez ceux qui n'ont aucun indice, on cherche ailleurs. Arthur Conan Doyle, le père de Sherlock Holmes, un spirite convaincu, remet un gant d'Agatha à un médium pour qu'il le tienne entre ses mains et dise où elle est. Le médium, comme les policiers, ne trouve rien. Les journaux, eux, se partagent entre ceux qui pensent qu'elle s'est suicidée, ceux qui la croient assassinée, et ceux qui soupçonnent un coup monté pour vendre ses livres.",
+  "#Mrs Neele",
+  "Onze jours passent. Puis, le mardi 14 décembre, dans un grand hôtel de Harrogate, une station thermale du Yorkshire, quelqu'un regarde une cliente et croit la reconnaître. Les récits ne s'accordent pas sur qui a donné l'alerte, un musicien de l'orchestre ou le maître d'hôtel. Mais tous disent la même chose de la femme : elle est arrivée le soir de sa disparition, avec une petite valise, elle porte des robes d'un goût qui ne cherche pas à se cacher, elle fait du bridge, danse, lit les journaux qui parlent de la romancière disparue, et elle est inscrite dans le registre sous le nom de Mrs Teresa Neele, de Cape Town.",
+  "Neele est le nom de la femme que son mari voulait épouser.",
+  "La police prévient Archie, qui prend le train. Il vient s'asseoir dans le hall de l'hôtel et regarde la porte, derrière laquelle sa femme apparaît, descend l'escalier, passe devant lui sans paraître le reconnaître, puis s'arrête et lui dit quelque chose comme : « Tiens, mais c'est mon mari. »",
+  "#Deux médecins, deux théories",
+  "On n'a jamais su ce que Agatha Christie avait en tête pendant ces onze jours, parce qu'elle n'a jamais voulu le dire. Archie annonce aux journalistes que sa femme souffre d'amnésie. Deux médecins l'examinent et concluent à une perte de mémoire authentique. Quand elle publie son autobiographie, bien plus tard, elle passe l'épisode sous silence.",
+  "Les biographes ont écrit deux livres contraires. Pour Janet Morgan, il s'agit d'une fugue dissociative, un état où l'esprit, saturé par un deuil et une trahison, se coupe de sa propre identité sans que la personne l'ait décidé. Pour Jared Cade, tout a été calculé : Agatha aurait voulu punir Archie et lui faire porter le soupçon de l'avoir tuée, en laissant sous son nez le nom de sa maîtresse. Les deux hypothèses collent aux faits, et aucune ne les explique tous.",
+  "Le divorce est prononcé en 1928. Une semaine plus tard, Archie épouse Nancy Neele. Agatha, elle, reprend l'écriture, et ne reviendra plus jamais sur ces onze jours."
+ ],
+ "learned": [
+  "Comment la disparition a été découverte et l'ampleur de la battue.",
+  "Pourquoi Agatha Christie traversait une période d'effondrement personnel.",
+  "Comment elle a été reconnue à Harrogate sous le nom de Mrs Neele.",
+  "Les deux explications des biographes, et ce qu'elles ont de fragile."
+ ],
+ "retain": "Pendant onze jours, la romancière a vécu sous le nom de la maîtresse de son mari, et elle n'a jamais dit pourquoi.",
+ "note": "Les dates et les faits principaux sont bien établis. La personne qui l'a reconnue varie selon les versions, et la phrase prêtée à Agatha dans le hall de l'hôtel est rapportée par des récits et non par des archives. Les deux hypothèses sur ses motifs sont discutées et aucune n'est prouvée.",
+ "blurb": {
+  "b": "Décembre 1926 : une voiture abandonnée au bord d'une pente, phares allumés, et une romancière devenue introuvable. Quinze mille volontaires la cherchent. Onze jours plus tard, on la retrouve dans un hôtel, inscrite sous le nom de la maîtresse de son mari. Qu'avait-elle en tête ?",
+  "h": "Onze jours, un faux nom, et une explication qu'elle n'a jamais donnée."
+ }
+}
