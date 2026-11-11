@@ -42,7 +42,7 @@
   "Même ceux qui l'avaient applaudi lisent ces comptes rendus avec un malaise croissant.",
   "!Après trois jours, l'avocat de Wilde retire la plainte.",
   "Clarke lui a conseillé d'accepter un verdict sur la seule accusation d'avoir « posé ».",
-  "Queensberry est acquitté, la justification de ses accusations étant reconnue, et la salle applaudit.",
+  "Le verdict est une formalité. Queensberry est acquitté, la justification de ses accusations étant reconnue, et la salle applaudit.",
   "Wilde avait voulu laver son nom. Il l'a perdu devant tout Londres. Et c'est désormais l'État qui a de quoi le poursuivre.",
   "Le même après-midi, un inspecteur de Scotland Yard demande un mandat d'arrêt.",
   "#05 — L'ATTENTE",
@@ -50,8 +50,9 @@
   "Cette loi sert alors à poursuivre les relations entre hommes.",
   "La libération sous caution lui est refusée. Wilde passe environ trois semaines à la prison de Holloway. Il est accusé avec Alfred Taylor.",
   "Des amis lui conseillent de quitter le pays entre les procès. Il refuse.",
+  "Il reste à Londres, et il attend l'arrestation. Pour beaucoup, c'est la différence entre un homme qui s'enfuit et un homme qui affronte son procès.",
   "On discute encore de ce choix : orgueil, fatalisme, peur de la honte, ou conviction qu'il ne pouvait fuir sans donner raison au marquis.",
-  "Les presses continuent de publier les comptes rendus. Les amis s'éloignent. Les hôtels hésitent à le recevoir.",
+  "La presse continue de publier les comptes rendus. Les amis s'éloignent. Les hôtels hésitent à le recevoir.",
   "Le dossier de l'accusation se nourrit du premier procès : les jeunes hommes que la défense de Queensberry avait trouvés sont désormais cités par la Couronne.",
   "#06 — DEUX PROCÈS CRIMINELS",
   "Le premier procès criminel s'ouvre le 26 avril 1895 à l'Old Bailey. Wilde plaide non coupable de vingt-cinq chefs de grossière indécence.",
@@ -88,7 +89,7 @@
  "retain": "Wilde a lancé lui-même la procédure qui l'a détruit : un procès en diffamation perdu a ouvert la voie à ses procès criminels.",
  "note": "Le texte exact de la carte et plusieurs dates varient selon les récits. Les phrases attribuées à Wilde et au juge Wills sont rapportées par la tradition, sans certitude sur leur formulation exacte. On discute encore de la raison pour laquelle il n'a pas quitté le pays entre les procès.",
  "blurb": {
-  "b": "Février 1895. Oscar Wilde, auteur le plus applaudi de Londres, reçoit une carte de visite d'un marquis furieux. Il décide de le poursuivre en justice. Trois jours d'audience plus tard, il abandonne sa plainte, et c'est lui que la police vient chercher. Comment un procès gagné d'avance a-t-il pu se retourner ?",
+  "b": "Février 1895. Oscar Wilde, auteur le plus applaudi de Londres, reçoit une carte de visite d'un marquis furieux. Il décide de le poursuivre en justice. Trois jours d'audience plus tard, il abandonne sa plainte, et c'est lui que la police vient chercher. Comment un procès qu'il croyait pouvoir gagner a-t-il pu se retourner contre lui ?",
   "h": "Une carte de visite, un procès perdu, un écrivain condamné."
  }
 }
