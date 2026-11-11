@@ -1,22 +1,31 @@
-{"id":"ex17","fmt":7,
-"name":"Burke et Wills : l'arbre de Cooper Creek",
-"sub":"Cooper Creek, 21 avril 1861 : trois hommes affamés arrivent à un dépôt que l'équipe de soutien a quitté le matin même.",
-"blurb":{"b":"En 1860, l'expédition de Burke et Wills part de Melbourne pour traverser l'Australie du sud au nord. Elle atteint presque le golfe de Carpentarie, puis revient affamée à son dépôt de Cooper Creek, que ses compagnons ont quitté le matin même. Il restera, gravé sur un arbre, une inscription et un message mal compris.","h":"Ils arrivent au dépôt le soir, les autres sont partis le matin"},
-"body":[
+{
+"id": "ex17",
+"fmt": 7,
+"name": "Burke et Wills : l'arbre de Cooper Creek",
+"sub": "Cooper Creek, 21 avril 1861 : trois hommes affamés arrivent à un dépôt que l'équipe de soutien a quitté le matin même.",
+"blurb": {
+"b": "En 1860, l'expédition de Burke et Wills part de Melbourne pour traverser l'Australie du sud au nord. Elle atteint presque le golfe de Carpentarie, puis revient affamée à son dépôt de Cooper Creek, que ses compagnons ont quitté le matin même. Il restera, gravé sur un arbre, une inscription et un message mal compris.",
+"h": "Ils arrivent au dépôt le soir, les autres sont partis le matin"
+},
+"body": [
 "#Quinze mille spectateurs",
 "@Royal Park, Melbourne, 20 août 1860.",
 "Le 20 août 1860, l'expédition quitte Royal Park, à Melbourne, sous les yeux d'environ quinze mille spectateurs. Elle compte dix-neuf hommes, vingt-trois chevaux, six chariots et vingt-six chameaux. C'est l'une des expéditions les plus coûteuses de l'histoire australienne. Son but : traverser le continent du sud au nord, jusqu'au golfe de Carpentarie.",
 "Robert O'Hara Burke dirige. William John Wills est troisième en second au départ. L'expédition atteint Menindee, en Nouvelle-Galles du Sud, le 23 septembre, et la plus grande partie du matériel y est laissée. Burke prend les hommes, les chevaux et les chameaux les plus aptes devant, vers Cooper Creek. Les autres suivront plus tard, mais William Wright, qui garde les approvisionnements à Menindee, ne part vers Cooper Creek que le 26 janvier 1861.",
+"Burke est un ancien policier d'origine irlandaise, sans expérience de l'exploration. Wills, plus jeune, est géomètre et s'occupe des observations et du journal. La colonie de Victoria veut sa part de gloire : elle a financé la traversée en partie pour devancer les expéditions rivales venues d'Australie-Méridionale. Dès le début, la hâte pèse sur tout, et l'on sait que l'équipement est lourd pour des chevaux et des chameaux qui devront traverser des centaines de kilomètres sans point d'eau sûr.",
 "#Le dépôt",
 "@Cooper Creek, décembre 1860.",
 "Le groupe de tête atteint Cooper Creek le 11 novembre 1860. Le camp 65 est établi le 6 décembre. Brahe est laissé en charge du dépôt avec trois autres hommes, et Burke, Wills, King et Gray partent pour le golfe le 16 décembre. La durée de l'attente demandée à Brahe n'est pas claire : trois mois pour certains, treize semaines pour d'autres. Wills lui aurait dit en privé d'attendre quatre mois.",
+"Cooper Creek est une halte : de l'eau, de l'herbe, un endroit pour souffler avant la partie la plus dure, vers le nord. Burke ne veut pas attendre le reste de l'expédition, qui traîne loin derrière. Il décide d'avancer à quatre, avec quelques bêtes, laissant au dépôt Brahe et ses hommes avec pour mission de tenir jusqu'à son retour. Il pense revenir en trois mois.",
 "Vers le 9 février 1861, les quatre atteignent la Bynoe River, près du golfe. Wills note que l'eau est salée et à marée. Burke et Wills tentent de rejoindre l'océan à travers les mangroves, sans y parvenir. Le retour commence le 12 février. Il dure plus de deux mois, et les hommes s'affaiblissent à chaque étape.",
+"On discute encore pour savoir s'ils ont vraiment vu la mer. Ce qui est sûr, c'est qu'ils sont arrivés tout près, et que le retour est bien plus dur que l'aller : la saison des pluies a commencé, les bêtes s'épuisent, la nourriture s'amenuise. Ils tuent leurs chevaux et leurs chameaux pour manger. Gray est surpris à voler de la nourriture et il est puni. Il mourra peu après.",
 "#Neuf heures",
 "@Camp 65, 21 avril 1861.",
 "Gray meurt le 17 avril de malnutrition. Burke, Wills et King atteignent le camp 65 le 21 avril.",
 "!Brahe est parti le même matin, à 10 heures. Les trois survivants arrivent le soir.",
 "On parle de plusieurs heures d'écart, voire de neuf. Brahe a patienté environ dix-huit semaines. Il part parce que l'un de ses hommes, Patton, s'est blessé à la jambe, et parce que les vivres s'amenuisent.",
 "Il a laissé une cache, un message sur l'arbre et une lettre : environ 50 livres chacune de farine, de flocons d'avoine et de sucre, et 30 livres de riz, au pied d'un grand arbre marqué du mot « Dig ». Il emporte les chameaux, les chevaux et le plus gros des vivres. Il dira plus tard qu'il a surtout laissé la cache pour qu'un groupe venu de la rivière Darling sache ce qui était arrivé aux siens, et non parce qu'il attendait Burke.",
+"Brahe pense avoir fait ce qu'il fallait. Il a attendu bien plus longtemps que prévu, il a laissé des vivres et un message, et il a une blessure à soigner. Il ne sait pas que trois hommes, à quelques heures de lui, se traînent vers ce même arbre.",
 "#Une cache si bien cachée",
 "@Camp 65, 21 – 23 avril 1861.",
 "La cache était si bien dissimulée que rien ne semblait avoir changé. Les trois hommes la déterrent et trouvent la lettre de Brahe. Ils se reposent quelques jours. Wills et King veulent retourner vers Menindee en suivant l'itinéraire de l'aller. Burke refuse. Il choisit de gagner un élevage près du mont Hopeless, à quelque 240 kilomètres au sud-ouest, à travers le désert.",
@@ -24,12 +33,16 @@
 "#Le désert",
 "@Cooper Creek, mai – juin 1861.",
 "Les trois hommes progressent rarement de plus de huit kilomètres par jour, le plus souvent par des pistes aborigènes. Les chameaux meurent l'un après l'autre. Sans bêtes de charge, ils ne peuvent traverser le désert et restent près de Cooper Creek. Quand Wills retourne au camp, fin mai, il ne trouve aucune trace d'une recherche à leur intention.",
+"Wills tient son journal tant qu'il peut. Ses carnets, retrouvés ensuite, racontent la faim, la fatigue et la fin des forces d'un homme qui sait où il va. Ils disent aussi la décision de Burke de ne pas suivre le chemin du retour que les deux autres proposaient. C'est par ces pages que l'on connaît en grande partie les semaines de Cooper Creek, et la fin de l'expédition. ",
 "Les Yandruwandha leur donnent du poisson et du pain de nardoo, souvent contre du sucre. Les relations restent tendues : Burke et King tirent par-dessus leurs têtes à plusieurs reprises. Burke et Wills meurent fin juin 1861, probablement de malnutrition aggravée par un béribéri. Le comité d'exploration retient le 28 juin pour les deux décès.",
+"Le nardoo est une petite fougère dont les spores se broient en farine. Les Yandruwandha savent la préparer. Burke et Wills la mangent sans connaître le procédé, et l'on pense aujourd'hui que cette préparation défectueuse, en détruisant la vitamine B1, a pu contribuer à leur état, jusqu'au béribéri qui les emporte. Ils mangent à leur faim, mais ils ne se nourrissent pas.",
 "!King, recueilli par les Yandruwandha, survit.",
 "Alfred Howitt le retrouve le 15 septembre 1861. Sept hommes ont péri au total, dont Gray, et King est le seul à être revenu du golfe. Les restes de Burke et de Wills sont ramenés à Melbourne, où des obsèques nationales ont lieu le 21 janvier 1863, devant environ quarante mille personnes.",
+"Howitt trouve un homme maigre, vêtu de peu, qui vit avec les Yandruwandha depuis des semaines. King a survécu parce que les Yandruwandha lui ont donné à manger et un abri. Dans les semaines qui suivent, Howitt retrouve aussi les corps de Burke et de Wills, et c'est à lui que reviendra de les ramener.",
 "#L'arbre aujourd'hui",
 "@Queensland.",
 "L'arbre est un eucalyptus coolibah, vieux de 200 à 250 ans, au bord d'un trou d'eau de Cooper Creek, dans le Queensland. Les lettres « B » et « LXV », pour le camp 65, y sont toujours lisibles. L'inscription « DIG » figurait peut-être sur un arbre voisin plus petit, et non sur celui qui porte aujourd'hui son nom. Le nom « Dig Tree » s'impose au XXe siècle, notamment grâce au livre de Frank Clune, Dig, en 1937.",
 "On ne sait pas si Burke a cherché la cache ou des traces du départ ce jour-là. On ne saura pas non plus si une inscription plus visible, ou un autre geste, aurait changé quelque chose. Ce qui reste, c'est un arbre, une marque que l'on pouvait lire de loin, et un écart de quelques heures qui a décidé du sort de trois hommes."
 ],
-"notes":"Retiré : l'écart exact en heures (plusieurs ou neuf), la question de savoir si les explorateurs ont atteint le golfe, la date exacte de la mort de Burke et Wills. À vérifier : durée du repos au camp 65 (« quelques jours »), absence de traces vues par Brahe, 21 janvier 1863 obsèques."}
+"notes": "Retiré : l'écart exact en heures (plusieurs ou neuf), la question de savoir si les explorateurs ont atteint le golfe, la date exacte de la mort de Burke et Wills. À vérifier : durée du repos au camp 65 (« quelques jours »), absence de traces vues par Brahe, 21 janvier 1863 obsèques."
+}
