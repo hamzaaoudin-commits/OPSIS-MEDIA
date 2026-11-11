@@ -1,0 +1,35 @@
+{
+ "id": "tm11",
+ "fmt": 3,
+ "name": "Le Magicien d'Oz : poussière d'aluminium",
+ "sub": "Hollywood, 1938-1939 : quatre réalisateurs, un Homme de fer-blanc remplacé à l'hôpital, une Sorcière brûlée. Le tournage du Magicien d'Oz, entre faits établis et légendes.",
+ "blurb": {
+  "b": "Derrière les couleurs du Magicien d'Oz, un tournage éprouvant : plusieurs réalisateurs se succèdent, l'Homme de fer-blanc est hospitalisé après son maquillage à l'aluminium, la Sorcière est brûlée, la chaleur des projecteurs étouffe le plateau. Une histoire où la légende se mêle aux faits.",
+  "h": "Les accidents et les remplacements derrière un film de rêve"
+ },
+ "body": [
+  "#Un film, plusieurs mains",
+  "@Octobre 1938 – mars 1939.",
+  "Le film raconte l'histoire de Dorothy, une jeune fille du Kansas emportée par une tornade jusqu'au pays d'Oz, et son passage de l'image en noir et blanc à la couleur est devenu célèbre. Ce que le public ne voit pas, c'est l'état dans lequel les équipes ont produit ces couleurs, avec des moyens techniques lourds, des produits chimiques, des projecteurs, et une direction qui change presque à chaque étape.",
+  "Le tournage en Technicolor du Magicien d'Oz commence en octobre 1938. Il se termine le 16 mars 1939, et c'est un chantier qui change plusieurs fois de direction.",
+  "Richard Thorpe est le premier réalisateur. Il est remplacé après que Mervyn LeRoy a jugé qu'il pressait les acteurs. George Cukor passe pour donner des conseils, sans tourner aucune scène, et part le 3 novembre 1938 pour Autant en emporte le vent. Victor Fleming prend alors le relais. King Vidor dirige les dix derniers jours.",
+  "#L'Homme de fer-blanc",
+  "@Buddy Ebsen.",
+  "!Buddy Ebsen est hospitalisé dans un état critique et quitte le film.",
+  "Buddy Ebsen avait d'abord été choisi pour jouer l'Épouvantail, puis il avait échangé son rôle avec Ray Bolger pour devenir l'Homme de fer-blanc. Son maquillage est à base de poudre d'aluminium, et c'est en l'inhalant, d'après la version la plus courante, qu'il tombe malade. Jack Haley prend sa place. Son maquillage est cette fois fait d'une pâte d'aluminium appliquée sur du blanc de clown. Il attrape malgré tout une infection à l'œil.",
+  "Le studio parle alors d'une réaction allergique. Les récits ne s'accordent pas sur la cause de la maladie d'Ebsen, inhalation de poudre ou allergie, mais la méthode de maquillage est modifiée ensuite.",
+  "#La Sorcière",
+  "@Margaret Hamilton.",
+  "Un feu éclate à la sortie du décor de Munchkinland, au moment où Margaret Hamilton, la Méchante Sorcière de l'Ouest, disparaît dans un jaillissement de flammes. Son maquillage vert, à base de cuivre, s'enflamme et lui cause des brûlures aux mains et au visage. Elle se rétablit pendant plusieurs semaines, six ou trois mois selon les versions.",
+  "Sa doublure, Betty Danko, est blessée plus tard quand un balai explose pendant la scène où les sorcières exigent qu'on leur rende Dorothy.",
+  "#Chaleur et flocons",
+  "@Sur le plateau.",
+  "Le Technicolor demande une lumière énorme. L'éclairage porte les décors au-dessus de 100 °F, environ 38 °C, et la chaleur vient de jusqu'à 150 projecteurs. Des membres de l'équipe travaillent souvent de quatre heures du matin à dix-neuf heures ou plus.",
+  "Pour la scène du champ de pavots, la distribution est aspergée de flocons d'amiante, un matériau très utilisé dans les années 1930, comme neige artificielle. On ignorait alors ce que l'on sait aujourd'hui de ses dangers.",
+  "#Judy Garland",
+  "@Une jeune actrice.",
+  "Judy Garland, qui joue Dorothy, est une adolescente. Le studio modifie son apparence : sa poitrine est comprimée, on lui met des dents et des disques nasaux postiches, et on lui donne des médicaments. Fleming la gifle pendant la scène du Lion. Elle est moins payée que ses partenaires.",
+  "On ne sait pas si ce tournage a été plus dangereux que d'autres de son époque : aucune source ne le compare. Certaines anecdotes concernant Garland et les figurants circulent depuis longtemps sans avoir été vérifiées. Ce que l'on peut affirmer, c'est qu'il a fallu à ce film de rêve un plateau brûlant, des maquillages toxiques et des hommes et des femmes qui ont continué malgré tout."
+ ],
+ "notes": "Retiré : anecdotes non vérifiées sur Garland et les figurants. À vérifier : cause de la maladie d'Ebsen, durée de convalescence de Hamilton (six semaines ou trois mois), amiante comme neige."
+}

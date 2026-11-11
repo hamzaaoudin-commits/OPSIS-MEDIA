@@ -1,0 +1,33 @@
+{
+"id": "ex20",
+"fmt": 3,
+"name": "Machu Picchu : qui l'a découvert ?",
+"sub": "Andes péruviennes, 24 juillet 1911 : Hiram Bingham atteint des ruines que des familles paysannes habitent déjà, et le site devient mondialement célèbre.",
+"blurb": {
+"b": "Le 24 juillet 1911, un professeur de Yale gravit une crête des Andes guidé par des paysans du coin. Il y trouve Machu Picchu, des ruines que des familles connaissent et cultivent déjà. Sa « découverte » le rend célèbre, le site aussi. Puis des milliers d'objets partent pour New Haven, et un conflit commence.",
+"h": "Il « découvre » un site que des paysans habitent déjà"
+},
+"body": [
+"#Un historien sur la crête",
+"@Andes péruviennes, 24 juillet 1911.",
+"Hiram Bingham n'est pas archéologue. Il enseigne l'histoire de l'Amérique latine à Yale depuis 1907, il a publié un livre sur les Incas en 1910, et il a obtenu des fonds pour une expédition au Pérou en 1911. Il cherche une cité perdue.",
+"!Le 24 juillet 1911, il franchit une crête des Andes et atteint les ruines de Machu Picchu.",
+"Il n'y est pas arrivé seul. Des guides locaux, qui connaissent déjà le site, l'y conduisent. Un paysan nommé Melchor Arteaga le mène jusqu'au pied de la montagne, et un enfant du pays l'accompagne sur la dernière partie. Sur place, des familles cultivent des terrasses sur le versant.",
+"#Découvrir un site habité",
+"@Machu Picchu, 24 juillet 1911.",
+"Le mot « découvrir » n'est donc pas vraiment le bon. Des habitants vivaient sur le versant et dans les ruines à cette époque, et plusieurs missionnaires ont affirmé plus tard connaître le site depuis longtemps. Le site n'était connu que des agriculteurs locaux. Ce que Bingham apporte, c'est autre chose : une photographie, un récit, un public.",
+"Bingham lui-même se trompe sur ce qu'il a trouvé. Il croit tenir Vilcabamba, le dernier refuge des Incas face aux Espagnols. On pense aujourd'hui que Machu Picchu est autre chose : un domaine royal construit au milieu du XVe siècle, vraisemblablement pour l'empereur Pachacutec, puis abandonné à l'époque de la conquête espagnole. C'est peut-être même ce qui l'a préservé : les conquérants ne semblent jamais l'avoir trouvé.",
+"La notoriété vient ensuite. Bingham publie un article dans National Geographic en 1913, et le numéro d'avril est entièrement consacré à Machu Picchu. Son livre de 1948, The Lost City of the Incas, popularise le surnom du site. L'UNESCO l'inscrit au patrimoine mondial en 1983. C'est aujourd'hui la première attraction touristique du Pérou, et l'afflux de visiteurs la menace.",
+"#Les caisses pour New Haven",
+"@New Haven, 1912 – 1916.",
+"Les expéditions de 1912 et de 1914 sont financées par Yale, la National Geographic Society et la famille de l'épouse de Bingham, fondatrice de Tiffany & Co. Des milliers d'objets, dont des statues d'argent, des bijoux, des instruments de musique et des ossements humains, partent pour le Peabody Museum de Yale.",
+"La loi péruvienne interdit l'exportation, mais un accord spécial, sous le président Leguía, l'autorise. Il dit que les objets appartiennent au Pérou, qui se réserve le droit de les reprendre.",
+"!Prêt ou permission : tout se joue sur ce mot.",
+"Bingham décrit en 1916 les objets comme prêtés pour dix-huit mois, et des responsables péruviens parlent aussi de prêt. Yale soutient en être propriétaire, la permission ayant été donnée. Pour l'archéologue britannique Colin Renfrew, l'accord était très flou.",
+"#Un retour qui tarde",
+"@Lima et New Haven, 2008 – 2012.",
+"Le conflit entre le Pérou et Yale dure près d'un siècle. Il se règle, selon les comptes, en 2008 ou en 2010, par un accord qui prévoit le retour de la collection. On ne sait pas exactement ce que prévoient les termes de cet accord au-delà de ce retour, ni ce qui reste aujourd'hui à Yale. Le nombre d'objets lui-même varie beaucoup, de 4 000 à plus de 46 000, selon qu'on compte les pièces entières ou les fragments.",
+"Reste une montagne, un site que des familles avaient sous les yeux avant lui, et un homme qui y a ajouté son nom."
+],
+"notes": "Ajouté de mémoire : Melchor Arteaga comme guide et la mention d'un enfant sur la dernière partie, à vérifier ; Colin Renfrew précisé (l'ancienne version disait seulement Renfrew). Retiré : citation du New York Times sur la « plus grande découverte archéologique »."
+}
