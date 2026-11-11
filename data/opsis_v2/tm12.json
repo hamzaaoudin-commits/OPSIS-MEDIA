@@ -1,25 +1,31 @@
-{"id":"tm12","fmt":3,
-"name":"Les Dents de la mer : le requin ne marche pas",
-"sub":"Martha's Vineyard, 1974 : un tournage prévu pour 55 jours en dure 159 parce que le requin mécanique tombe en panne. Steven Spielberg se met alors à filmer autrement.",
-"blurb":{"b":"Sur l'île de Martha's Vineyard, le tournage des Dents de la mer vire au cauchemar : le requin mécanique coule, tombe en panne, et les jours s'accumulent. Contraint de cacher la bête, Steven Spielberg invente une peur plus efficace que l'image. Le film triple son budget et rapporte cent millions de dollars.","h":"Quand les pannes d'un requin mécanique créent un film de suggestion"},
-"body":[
-"#Un tournage en mer",
-"@Martha's Vineyard, mai 1974.",
-"Le tournage des Dents de la mer commence le 2 mai 1974, surtout à Martha's Vineyard, dans le Massachusetts. C'est le premier grand film tourné en mer. Il est prévu pour 55 jours. Il se termine le 6 octobre, après 159 jours, ce qui vaut à l'équipe un surnom, « Flaws », les défauts.",
-"Filmer en mer paraît simple sur le papier. En pratique, les voiliers dérivent dans le champ, les caméras sont trempées, et l'Orca, le bateau du film, a failli couler avec des acteurs à bord. Robert Shaw en veut à Richard Dreyfuss. Les nerfs sont à vif, et l'argent file.",
-"#Trois « Bruce »",
-"@Les requins.",
-"Le film repose sur un animal, et il faut le fabriquer. Trois requins pneumatiques sont construits, surnommés « Bruce » d'après l'avocat de Spielberg. Chacun mesure environ 7,5 mètres. Plus de quarante techniciens y travaillent, pour 150 000 à 250 000 dollars pièce.",
-"Dans l'eau salée, les machines tombent souvent en panne. Les tuyaux fuient, les cadres se fracturent, la peau en mousse se gorge d'eau, l'électrolyse ronge les mécanismes. Chaque matin, une partie de la journée se perd à réparer un animal qui ne veut pas nager.",
-"#Cacher le requin",
-"@Un choix de mise en scène.",
-"Spielberg n'a pas le choix : il suggère le requin plus qu'il ne le montre. Il filme les ailerons, les barils jaunes qui flottent et tirent sous l'eau, la mer vide. Il compare sa méthode à celle d'Hitchcock.",
-"!Le fait que le requin ne marche pas a été une aubaine.",
-"C'est ainsi que Spielberg le formule, même si la citation exacte varie selon les récits. Il dira avoir commencé à faire « un film d'Hitchcock au lieu d'un film de Godzilla ». La peur vient de ce que l'on ne voit pas, jusqu'au moment où l'on voit.",
-"#L'argent et le montage",
-"@Dépassements.",
-"Le budget estimé est de 3,5 à 4 millions de dollars. Le film finit par en coûter 9, dont environ 3 pour les seuls effets. Verna Fields, la monteuse, dispose de peu de matériel pendant le tournage et retravaille les scènes après le premier montage. Zanuck, le producteur, dira qu'elle a rendu terrifiantes des scènes qui étaient comiques, et l'inverse.",
-"Spielberg paie lui-même, de sa poche, 3 000 dollars pour la scène de la tête de Ben Gardner, que le studio Universal refusait de financer. Le film rapporte 100 millions de dollars aux États-Unis.",
-"On ne sait pas ce que le film serait devenu avec un requin fiable : Spielberg parle d'aubaine, sans qu'on puisse le vérifier. Le budget de départ, le coût de chaque requin et le sort de l'Orca, coulé ou presque, varient selon les récits. Ce qui reste, c'est un film que les pannes ont forcé à devenir plus intelligent que prévu."
-],
-"notes":"Retiré : rien de significatif. À vérifier : 'les barils tirent sous l'eau' (mécanisme), citation exacte de Spielberg, 'Zanuck, le producteur'."}
+{
+ "id": "tm12",
+ "fmt": 3,
+ "name": "Les Dents de la mer : le requin ne marche pas",
+ "sub": "Martha's Vineyard, 1974 : un tournage prévu pour 55 jours en dure 159 parce que le requin mécanique tombe en panne. Steven Spielberg se met alors à filmer autrement.",
+ "blurb": {
+  "b": "Sur l'île de Martha's Vineyard, le tournage des Dents de la mer vire au cauchemar : le requin mécanique coule, tombe en panne, et les jours s'accumulent. Contraint de cacher la bête, Steven Spielberg invente une peur plus efficace que l'image. Le film plus que double son budget et rapporte cent millions de dollars.",
+  "h": "Quand les pannes d'un requin mécanique créent un film de suggestion"
+ },
+ "body": [
+  "#Un tournage en mer",
+  "@Martha's Vineyard, mai 1974.",
+  "Le tournage des Dents de la mer commence le 2 mai 1974, surtout à Martha's Vineyard, dans le Massachusetts. C'est le premier grand film tourné en mer. Il est prévu pour 55 jours. Il se termine le 6 octobre, après 159 jours, ce qui vaut à l'équipe un surnom, « Flaws », les défauts. Le film adapte le roman de Peter Benchley : un requin attaque les baigneurs d'une station balnéaire, et trois hommes, joués par Roy Scheider, Robert Shaw et Richard Dreyfuss, partent le chasser en mer.",
+  "Filmer en mer paraît simple sur le papier. En pratique, les voiliers dérivent dans le champ, les caméras sont trempées, et l'Orca, le bateau du film, a failli couler avec des acteurs à bord. Robert Shaw en veut à Richard Dreyfuss. Les nerfs sont à vif, et l'argent file.",
+  "#Trois « Bruce »",
+  "@Les requins.",
+  "Le film repose sur un animal, et il faut le fabriquer. Trois requins pneumatiques sont construits, surnommés « Bruce » d'après l'avocat de Spielberg. Chacun mesure environ 7,5 mètres. Plus de quarante techniciens y travaillent, pour 150 000 à 250 000 dollars pièce.",
+  "Dans l'eau salée, les machines tombent souvent en panne. Les tuyaux fuient, les cadres se fracturent, la peau en mousse se gorge d'eau, l'électrolyse ronge les mécanismes. Chaque matin, une partie de la journée se perd à réparer un animal qui ne veut pas nager. Les journées s'allongent, et le calendrier prévu pour 55 jours n'a plus aucun sens.",
+  "#Cacher le requin",
+  "@Un choix de mise en scène.",
+  "Spielberg n'a pas le choix : il suggère le requin plus qu'il ne le montre. Il filme les ailerons, les barils jaunes qui flottent, la mer vide. Il compare sa méthode à celle d'Hitchcock. La musique de John Williams, avec ses deux notes graves répétées, annonce la présence de la bête à la place de l'image.",
+  "!Le fait que le requin ne marche pas a été une aubaine.",
+  "C'est ainsi que Spielberg le formule, même si la citation exacte varie selon les récits. Il dira avoir commencé à faire « un film d'Hitchcock au lieu d'un film de Godzilla ». La peur vient de ce que l'on ne voit pas, jusqu'au moment où l'on voit.",
+  "#L'argent et le montage",
+  "@Dépassements.",
+  "Le budget estimé est de 3,5 à 4 millions de dollars. Le film finit par en coûter 9, dont environ 3 pour les seuls effets. Verna Fields, la monteuse, dispose de peu de matériel pendant le tournage et retravaille les scènes après le premier montage. Zanuck, le producteur, dira qu'elle a rendu terrifiantes des scènes qui étaient comiques, et l'inverse.",
+  "Spielberg paie lui-même, de sa poche, 3 000 dollars pour la scène de la tête de Ben Gardner, que le studio Universal refusait de financer. Le film rapporte 100 millions de dollars aux États-Unis.",
+  "On ne sait pas ce que le film serait devenu avec un requin fiable : ce que Spielberg en dit ne se vérifie pas. Le budget de départ, le coût de chaque requin et le sort de l'Orca, coulé ou presque, varient selon les récits. Le film sort à l'été 1975. Ce qui reste, c'est une œuvre que les pannes ont forcée à devenir plus subtile que prévu : on a peur d'un animal que l'on voit à peine, parce que celui qui devait le montrer ne marchait pas."
+ ],
+ "notes": "Retiré : rien de significatif. À vérifier : 'les barils tirent sous l'eau' (mécanisme), citation exacte de Spielberg, 'Zanuck, le producteur'."
+}

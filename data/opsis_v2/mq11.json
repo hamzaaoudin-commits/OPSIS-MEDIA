@@ -1,0 +1,29 @@
+{
+ "id": "mq11",
+ "fmt": 3,
+ "name": "Ford et les cinq dollars par jour",
+ "sub": "Detroit, janvier 1914 : Henry Ford fait passer le salaire de ses ouvriers de 2,34 à 5 dollars, et des milliers d'hommes se pressent devant l'usine.",
+ "blurb": {
+  "b": "En janvier 1914, Henry Ford annonce un salaire de cinq dollars par jour, plus du double du tarif en vigueur. Des milliers d'hommes se pressent devant l'usine. Un contrôle des foyers accompagne la paye. Générosité, calcul ou réponse au départ massif des ouvriers : les historiens ne tranchent pas.",
+  "h": "Ford double les salaires. Pourquoi ? Les historiens ne tranchent pas."
+ },
+ "body": [
+  "#La foule de Highland Park",
+  "@Highland Park, Michigan, janvier 1914.",
+  "Devant l'usine Ford, rue Manchester, des hommes attendent par milliers. Ils veulent un emploi. Environ 10 000 personnes font la queue le lendemain de l'annonce, et la police est appelée pour contenir la foule.",
+  "La cause est une annonce du 5 janvier 1914 : le salaire minimum passe de 2,34 dollars pour neuf heures à 5 dollars pour huit heures. Un journal de Cleveland écrit que la nouvelle a « traversé comme une fusée aveuglante les sombres nuages de la dépression industrielle ». Aucun employeur n'avait encore offert autant pour un travail non qualifié. L'afflux de candidats est surnommé la « ruée vers l'or » et inquiète les autres industriels. Le nouveau tarif s'applique à partir du 12 janvier, à l'usine de Highland Park.",
+  "!Ford paie plus du double. Pour quoi faire ?",
+  "#Un personnel qui part",
+  "@Usine de Highland Park, fin 1913.",
+  "Fin 1913, le renouvellement du personnel atteint 380 %. Pour accroître l'effectif de 100 hommes, il faut en embaucher 963. Le travail à la chaîne, installé à Highland Park en octobre 1913, est répétitif et épuisant, et beaucoup partent vite : l'usine tourne avec des hommes qui se remplacent sans cesse. L'absentéisme atteint environ 10 % par jour. Ford dit qu'il tombe sous 1 % en 1916.",
+  "La somme n'est pourtant pas pour tout le monde. Ford l'appelle un partage des bénéfices, et il faut passer par un département sociologique d'une cinquantaine d'enquêteurs, qui visite les foyers. On y vérifie l'alcool, le jeu, le soutien donné à la famille. Il faut aussi six mois d'ancienneté ; les femmes, elles, doivent prouver un besoin réel, comme une veuve avec enfants. Les ouvriers acceptent cette intrusion parce que la paye est très haute : à ce prix, on laisse l'enquêteur entrer. Dans les deux ans, 90 % touchent le plein tarif. Ford renonce ensuite à ce contrôle : en 1922, dans ses mémoires, il le juge dépassé.",
+  "#« Pour qu'ils achètent des Ford »",
+  "C'est l'explication la plus répétée : de bons salaires permettraient aux ouvriers d'acheter les voitures qu'ils fabriquaient. Mais Ford a aussi dit qu'il avait voulu donner du travail à plus d'hommes, et qu'augmenter les salaires fut « l'une des meilleures économies que nous ayons faites ». Il résumait sa position ainsi : « Personne ne perd rien à augmenter les salaires dès qu'il le peut. »",
+  "Les historiens ne tranchent pas. Certains avancent que James Couzens, son associé, aurait pu le convaincre. L'historien Daniel Raff écarte les théories où un salaire élevé stimule le rendement et juge la baisse du renouvellement « un motif central peu probable ». Il propose plutôt un partage de la rente dicté par la menace d'une action collective des ouvriers.",
+  "D'autres y voient d'abord une réponse au départ massif du personnel. Une partie de l'effet était aussi publicitaire : l'annonce fait la une de la presse nationale.",
+  "#Ce qu'on retient",
+  "Les effets sont mieux établis que l'intention : le renouvellement baisse nettement, les meilleurs mécaniciens de Detroit affluent chez Ford, et les concurrents doivent suivre.",
+  "Le salaire a ses conditions, et le motif a ses versions. La phrase « pour qu'ils achètent des Ford » est une justification attribuée à Ford, pas un fait prouvé. On ne sait pas s'il a d'abord voulu retenir ses ouvriers, les récompenser ou apaiser leur colère. Peut-être les trois."
+ ],
+ "notes": "Retiré : les références aux sources (dépêche UPI de 1989, musée, école de commerce). À vérifier : 10 000 personnes, 90 % au plein tarif, six mois d'ancienneté (une seule source), absentéisme de 10 % puis moins de 1 %."
+}
