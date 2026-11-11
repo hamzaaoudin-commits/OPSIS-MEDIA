@@ -1,0 +1,29 @@
+{
+ "id": "ex25",
+ "fmt": 3,
+ "name": "Amelia Earhart : Howland",
+ "sub": "Pacifique, 2 juillet 1937 : Amelia Earhart et Fred Noonan cherchent une île de deux milles de long, et personne ne les reverra",
+ "blurb": {
+  "b": "Juillet 1937. Amelia Earhart et son navigateur, Fred Noonan, volent vers l'île Howland, un point minuscule au milieu du Pacifique. Un garde-côtes les attend, mais les messages ne passent pas. Une dernière transmission, puis le silence, et trois explications qui s'affrontent depuis près d'un siècle.",
+  "h": "Une île de deux milles de long, un avion, un silence"
+ },
+ "body": [
+  "#Un second essai",
+  "@Oakland, mai 1937.",
+  "En 1937, Amelia Earhart n'a plus rien à prouver, et elle repart pourtant. En 1932, elle est devenue la première femme à traverser seule l'Atlantique, du Canada à l'Irlande du Nord, en un peu plus de treize heures. En 1935, elle a relié Hawaï à l'Amérique du Nord en solo. Cette fois, elle veut faire le tour du monde en suivant l'équateur, à bord d'un Lockheed Electra bimoteur. Une première tentative, en mars, s'est terminée par un accident au décollage à Honolulu.",
+  "Elle repart donc à la fin de mai avec le navigateur Fred Noonan. Avant le départ, elle choisit d'alléger l'avion : elle retire l'émetteur télégraphique, qu'elle appelle du « poids mort », ainsi que l'antenne traînante. Elle comptera sur la voix pour communiquer.",
+  "#Cap sur Howland",
+  "@Lae, Nouvelle-Guinée, 2 juillet 1937.",
+  "Le 2 juillet, à 10 heures, l'Electra quitte Lae, en Nouvelle-Guinée. Devant eux, 4 113 kilomètres d'eau et une cible minuscule : l'île Howland, très basse sur l'eau, dont la longueur ne dépasse pas deux milles. La viser, c'est tenter de toucher un point au bout d'une nuit entière de navigation. Le vol doit durer environ vingt heures.",
+  "Un garde-côtes américain, l'Itasca, est posté là pour les guider, avec des relèvements radio et un panache de fumée. Mais la communication est sporadique, la coordination est mauvaise, et certaines transmissions du navire utilisent des fréquences qu'elle ne peut pas recevoir. Un message de 7 h 42 indique qu'ils manquent de carburant et volent à 1 000 pieds. Le dialogue dans les deux sens n'est jamais établi.",
+  "!À 8 h 43, la dernière transmission confirmée dit : « We are on the line 157 337 ».",
+  "C'est une ligne de position qui passe par Howland. Elle ne dit pas de quel côté de l'île ils se trouvent, et l'Itasca ne parvient à prendre aucun relèvement. Dans les dix jours suivants, des opérateurs captent des messages radio dont certains pourraient venir de l'Electra, jusqu'au 13 juillet. Rien de tout cela n'a conduit à l'avion.",
+  "#Trois explications",
+  "@Pacifique, depuis 1937.",
+  "La première est la plus simple : à court de carburant, l'avion s'est abîmé en mer près d'Howland, sans que personne ait pu le voir tomber. C'est la position officielle des États-Unis. Elle explique le silence, mais elle laisse un océan à fouiller. Des recherches sous-marines menées par Nauticos, puis par le Waitt Institute en 2009, n'ont rien trouvé.",
+  "La deuxième veut qu'ils aient atterri sur l'atoll de Nikumaroro. L'association TIGHAR y mène des expéditions depuis 1988 et y a relevé des fragments d'aluminium compatibles avec l'Electra. En 1940, un administrateur colonial britannique, Gerald Gallagher, y avait découvert des ossements près d'un foyer, avec des chaussures et une boîte de sextant. Les os, envoyés à Fidji, ont été perdus. Des mesures modernes suggèrent une femme de la taille d'Earhart, ce que des critiques jugent peu concluant.",
+  "La troisième les voit capturés par les Japonais et emmenés à Saipan. Elle repose sur des récits locaux et sur un article de 1960, de seconde main. Une photographie prise à Jaluit, présentée dans un documentaire, n'a jamais reçu d'identification confirmée.",
+  "On ne sait pas où repose l'avion, ni ce qui s'est passé après 8 h 43, ni ce qu'est devenu Noonan. Reste une décision prise sur un terrain, avant le départ, pour gagner du poids, et une île très basse, presque invisible, qu'il fallait trouver au bout d'une nuit de vol. Faute d'épave ou de preuve, chacune des trois histoires continue d'avoir ses défenseurs, et aucune n'a encore convaincu les autres."
+ ],
+ "notes": "Retiré : Harry Manning, décompte exact des messages (121 / 57), surface des fonds fouillés, année exacte des recherches Nauticos. Date de départ d'Oakland rendue vague (fin mai). À vérifier : 'dans les dix jours suivants' et 13 juillet ; formulation 'seule machine capable d'appeler à l'aide' (la voix restait possible) ; durée 13 h 30 de 1932 arrondie."
+}

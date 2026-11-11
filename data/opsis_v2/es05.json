@@ -1,0 +1,29 @@
+{
+ "id": "es05",
+ "fmt": 3,
+ "name": "Richard Sorge : l'espion que Moscou renia",
+ "sub": "Tokyo, 1933-1944 : un journaliste allemand, nazi de façade, renseigne Staline depuis le cœur de l'ambassade, puis Moscou affirme ne pas le connaître",
+ "blurb": {
+  "b": "Correspondant de la Frankfurter Zeitung à Tokyo, Richard Sorge est en réalité l'agent Ramsay du renseignement soviétique. En 1941, il avertit Moscou de l'attaque allemande, puis assure que le Japon ne frappera pas l'URSS. Arrêté en octobre, il est condamné à mort. Moscou répond qu'il ne le connaît pas.",
+  "h": "L'agent qui renseigna Staline fut pendu au Japon, et Moscou dit ne pas le connaître"
+ },
+ "body": [
+  "#Le correspondant",
+  "@Tokyo, 6 septembre 1933.",
+  "Richard Sorge arrive à Yokohama le 6 septembre 1933 comme correspondant de la Frankfurter Zeitung. Il est nazi convaincu, en apparence. Né en 1895 près de Bakou, d'un ingénieur minier allemand, il a été grièvement blessé en 1914, a lu Marx pendant sa convalescence et rejoint le Parti communiste allemand en 1919. Au service du Komintern à Moscou en 1924, il passe à la fin des années 1920 au renseignement de l'Armée rouge. Son nom de code : Ramsay.",
+  "Il est peut-être la seule personne à avoir appartenu à la fois aux deux partis, communiste soviétique et nazi. Il se rend indispensable à l'ambassadeur d'Allemagne, Eugen Ott, dont il rédige des câbles pour Berlin.",
+  "#Un réseau de journalistes",
+  "Son réseau compte Hotsumi Ozaki, journaliste à l'Asahi Shimbun, communiste de conviction, conseiller du Premier ministre Konoe Fumimaro. Ozaki recopie des documents secrets et le tient au courant des discussions du gouvernement japonais. Il y a aussi Max Clausen, opérateur radio, couvert par une petite entreprise de machines, dont la femme Anna sert parfois de courrier. Ces hommes lui ouvrent trois portes à la fois : l'ambassade, la presse et l'entourage du pouvoir japonais.",
+  "#Barbarossa, puis le Japon",
+  "En 1941, tout ce qu'il transmet tourne autour d'une question : qui va attaquer l'Union soviétique ? Le 30 mai, il rapporte que Berlin a informé Ott d'une attaque allemande à la fin juin. Le 20 juin, il écrit que la guerre est inévitable. On ne sait pas exactement ce qu'il a dit : un message du 15 juin, « La guerre commencera le 22 juin », a été publié par la presse soviétique en 1964, mais n'est pas tenu pour authentique.",
+  "Reste l'autre question. Le 2 juillet 1941, une conférence impériale approuve le renforcement de l'armée du Kwantung en vue d'une éventuelle attaque contre l'URSS. Mais les dirigeants japonais résistent à la pression allemande. Le 25 août, Sorge rapporte que le Japon a décidé de ne pas attaquer l'URSS cette année-là, et le 14 septembre, il confirme que l'attaque n'aura pas lieu. Un message porte les initiales de Staline, Molotov, Beria et Vorochilov, avec la note d'un officier : information « digne de foi ».",
+  "En octobre, son avant-dernier message dit que l'Extrême-Orient soviétique peut être considéré comme sûr. Le dernier demande son rappel.",
+  "#L'arrestation",
+  "Ozaki est arrêté le 14 octobre 1941. Sorge l'est le 18, à Tokyo, avec Clausen. Les récits diffèrent sur la manière dont la police a remonté la piste : des émissions radio illégales, ou les aveux d'un autre membre du réseau. Sorge fait à ses interrogateurs un récit complet de son activité. Il est condamné à mort. Le Japon propose à trois reprises de l'échanger contre un de ses espions.",
+  "!Moscou refuse à chaque fois et dit ne pas le connaître.",
+  "#Le silence de Moscou",
+  "Sa femme, Katia, est arrêtée par le NKVD en septembre 1942 et meurt au Goulag en 1943. Sorge est pendu le 7 novembre 1944 à la prison de Sugamo, quelques heures après Ozaki, et enterré dans une fosse commune. Quelques années plus tard, sa compagne japonaise, Hanako Ishii, retrouve sa dépouille, la fait incinérer et la transfère au cimetière de Tama, où elle entretient la tombe jusqu'à sa mort, en 2000.",
+  "En novembre 1964, vingt ans après sa mort, le gouvernement soviétique lui décerne le titre de Héros de l'Union soviétique. On ne sait pas ce que Staline a vraiment pensé de ses avertissements. Certains historiens estiment qu'il ne pouvait pas admettre avoir rejeté l'alerte de Sorge, d'où la distance gardée si longtemps."
+ ],
+ "notes": "Retiré : Vukelić, Miyagi comme membre, Scholl, le débat Prange, la version qui lui attribue le déplacement de troupes vers Moscou, la demande de libération des femmes du réseau. A vérifier : les messages du 25 août et du 14 septembre, les initiales sur la copie d'archives, la date de la récupération de la dépouille (1949 ou 1950), la qualité de la compagne Hanako Ishii."
+}
