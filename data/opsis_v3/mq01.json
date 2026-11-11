@@ -1,0 +1,53 @@
+{
+ "id": "mq01",
+ "fmt": 3,
+ "name": "Nike : le logo payé 35 dollars",
+ "sub": "Portland, 1971 — Une étudiante en design dessine le signe d'une petite marque de chaussures pour 35 dollars, avant même que cette marque ne s'appelle Nike.",
+ "body": [
+  "#PROLOGUE — Portland, Oregon, 1971",
+  "Carolyn Davidson présente ses dessins à trois hommes de Blue Ribbon Sports : Phil Knight, Bob Woodell et Jeff Johnson.",
+  "Elle a calqué une chaussure sur du papier fin et en a tiré cinq propositions.",
+  "Le dessin qui deviendra l'un des signes les plus reconnus du monde n'est alors qu'une proposition parmi d'autres, sur un papier fragile.",
+  "Blue Ribbon Sports a été fondée en 1964 par Phil Knight et Bill Bowerman. Elle distribue alors sur la côte ouest des chaussures japonaises de la marque Onitsuka Tiger.",
+  "Elle veut un signe bien à elle. Knight et son associé ont demandé une bande qui évoque le mouvement.",
+  "#01 — UNE VIRGULE NOIRE",
+  "Knight écarte quatre dessins. Il garde une virgule noire, le futur Swoosh.",
+  "Sa réaction, telle que Davidson la rapporte : « Je ne l'aime pas, mais peut-être que ça me plaira avec le temps. »",
+  "La formulation varie d'un récit à l'autre. C'est son souvenir, pas une phrase enregistrée.",
+  "#02 — UNE ÉTUDIANTE À 2 DOLLARS DE L'HEURE",
+  "Davidson étudie le design graphique à Portland State University. Knight y enseigne la comptabilité.",
+  "Il l'entend dire qu'elle ne peut pas payer le matériel d'un cours de peinture à l'huile, et lui propose du travail à 2 dollars de l'heure.",
+  "Il lui confie aussi des graphiques pour ses réunions avec des dirigeants japonais du secteur de la chaussure.",
+  "Combien demander pour une marque ?",
+  "#03 — LA FACTURE",
+  "Davidson dit qu'elle ne savait pas. Les versions diffèrent sur le calcul.",
+  "Dans l'une, l'entreprise lui a crédité 17,5 heures à 2 dollars, soit 35 dollars. Elle affirme avoir travaillé davantage. Dans une autre, elle a fixé elle-même le prix, sans savoir quoi demander.",
+  "!Elle avait facturé, il avait payé.",
+  "Elle dit avoir envoyé une facture, et que Knight l'a payée. Il a confirmé le montant devant Oprah Winfrey en 2011.",
+  "Le signe existe avant le nom. Blue Ribbon Sports devient Nike plus tard.",
+  "Le nom serait dû à Jeff Johnson. Il juge « Dimension 6 » trop lourd et propose celui de la déesse grecque de la victoire. Knight l'accepte à contrecœur. La date du changement diffère selon les récits : 1971 ou 1972.",
+  "Le Swoosh, lui, évoque l'aile de cette déesse.",
+  "#04 — 1983 : UNE BAGUE ET DES ACTIONS",
+  "En 1983, lors d'un déjeuner organisé pour elle, Nike lui remet une bague en or ornée d'un diamant, en forme de Swoosh, et des actions. Bob Woodell, alors président, l'y emmène.",
+  "Combien d'actions ? Davidson parle de 500, Knight de « quelques centaines ». Chacune valait alors environ 17 cents, soit 85 dollars au total.",
+  "Après plusieurs découpages du capital, ces titres ont atteint des milliers d'actions, pour une valeur qui se compte en centaines de milliers de dollars. Les chiffres varient, tout comme la question de savoir si elle a vendu une partie de ses titres.",
+  "#ÉPILOGUE — Un dessin parmi d'autres",
+  "Personne ne montre la facture elle-même. Les 35 dollars viennent de Davidson et de Knight.",
+  "Ni elle ni personne ne se souvient de la date exacte de la commande ni du nombre exact de dessins : cinq ou six.",
+  "Davidson obtient son diplôme en 1971, travaille quelques années pour Nike et démissionne en 1975 pour travailler en indépendante.",
+  "Elle dit être fière de son travail, mais n'y voir que « un dessin parmi d'autres ». Elle attribue le succès de la marque à Knight et aux employés."
+ ],
+ "learned": [
+  "Les débuts de Blue Ribbon Sports avant le nom Nike.",
+  "Le choix du Swoosh parmi plusieurs propositions.",
+  "Comment Davidson a été payée : 2 dollars de l'heure et une facture de 35 dollars.",
+  "La bague et les actions remises en 1983.",
+  "Les zones d'incertitude de l'histoire : prix, nombre de dessins, dates."
+ ],
+ "retain": "Le logo de Nike a été payé 35 dollars à une étudiante, mais le chiffre repose sur deux témoignages, pas sur une facture montrée.",
+ "note": "Les 35 dollars viennent de Davidson et de Knight : personne ne montre la facture. Le nombre de dessins, la date du changement de nom et le nombre d'actions varient selon les récits. La réaction de Knight est rapportée de mémoire par Davidson.",
+ "blurb": {
+  "b": "1971, Portland. Une étudiante en design présente cinq dessins à trois hommes d'une petite société de chaussures. Un seul sera gardé : une virgule noire. Elle l'a facturé 35 dollars, selon son récit comme celui de Phil Knight. Comment ce signe est-il devenu celui de Nike ?",
+  "h": "Un signe devenu mondial, payé 35 dollars à une étudiante."
+ }
+}

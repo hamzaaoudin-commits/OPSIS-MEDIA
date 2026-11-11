@@ -1,0 +1,52 @@
+{
+ "id": "tm18",
+ "fmt": 3,
+ "name": "Welles : un film en retard de 48 ans",
+ "sub": "États-Unis, 1970-2018 — The Other Side of the Wind, tourné par bribes, enfermé dans un coffre de banque, puis achevé par d'autres en 2018, trente-trois ans après la mort d'Orson Welles.",
+ "body": [
+  "#PROLOGUE — 1970 – 1976",
+  "Le tournage de The Other Side of the Wind commence en 1970. Il continue par intermittence jusqu'en 1976 ou 1977, quand l'argent manque.",
+  "Orson Welles, l'auteur de Citizen Kane, meurt en 1985 sans l'avoir terminé.",
+  "Ce film aurait été son vingt-huitième.",
+  "Le principe est celui d'un film dans le film. Il suit une fête chez le réalisateur Jake Hannaford, joué par John Huston, peu avant sa mort.",
+  "Hannaford est un vieux cinéaste qui tente de terminer son dernier projet. La fête est filmée par des équipes de journalistes et de caméras multiples.",
+  "Peter Bogdanovich joue un jeune cinéaste, Brooks Otterlake. Oja Kodar, qui a coécrit le scénario, apparaît dans un film dans le film.",
+  "#01 — UN COLLAGE DE FORMATS",
+  "Welles veut un collage qui mêle la couleur et le noir et blanc, le 35 mm, le 16 mm et le Super 8.",
+  "Il engage Huston trois ans après le début. Une scène de sexe de sept minutes prend deux ans à tourner, en trois lieux différents.",
+  "Welles parlait de « présider à des accidents divins ».",
+  "Cette façon de tourner explique en partie la longueur du chantier. On filme quand on peut, on s'arrête quand l'argent s'épuise.",
+  "Les années passent. Les acteurs vieillissent. L'œuvre reste en suspens.",
+  "Chaque interruption ajoute une page à ce chantier hors norme, qui avance et recule au gré des saisons.",
+  "#02 — LE COFFRE",
+  "!Un financier espagnol disparaît en pleine production.",
+  "Des proches du shah d'Iran reprennent alors le financement, puis se retirent. Ils enferment le film inachevé dans un coffre de banque. Leur rôle exact est discuté.",
+  "Filip Jan Rymsza obtient ensuite les droits en France et s'associe plus tard à Frank Marshall. La pellicule, elle, attend, stockée à Paris.",
+  "Pendant des années, le film est l'un des grands inachevés du cinéma. On en parle plus qu'on ne le voit.",
+  "#03 — TERMINÉ PAR D'AUTRES",
+  "Une campagne de financement participatif, deux ans plus tôt, avait réuni plus de 400 000 dollars. Netflix acquiert ensuite les droits mondiaux pour financer l'achèvement.",
+  "Les producteurs trient la pellicule stockée à Paris. Marshall dit : « Personne ne savait vraiment si nous avions assez de matière pour faire un film qui ait un sens. »",
+  "Rymsza ajoute : « C'était structurellement expérimental. »",
+  "Le film est présenté à Venise, puis sort le 2 novembre 2018. Les critiques de Venise et de Telluride sont globalement positives. Les réactions du public sont mitigées.",
+  "Netflix diffuse aussi, la même année, un documentaire sur la fabrication de ce film : They'll Love Me When I'm Dead, signé Morgan Neville.",
+  "#ÉPILOGUE — Un film de Welles ?",
+  "On ne sait pas ce que Welles aurait fait de cette pellicule. Ni si le film fini est un film de Welles ou une reconstruction. Il n'a pas pu en superviser le montage.",
+  "Les récits divergent sur la fin du tournage (1976 ou 1977), sur le rôle des proches du shah et sur le nombre d'heures de pellicule : plus de cent, d'après un seul récit.",
+  "Ce qui est sûr, c'est que des images tournées il y a près d'un demi-siècle sont arrivées jusqu'à l'écran.",
+  "Elles ont survécu à des financiers disparus, à des coffres de banque et à la mort de leur auteur.",
+  "Le film existe, avec toutes ses réserves. Chacun peut enfin juger de ce qu'il vaut."
+ ],
+ "learned": [
+  "Le principe d'un film dans le film et sa méthode de tournage en formats mêlés.",
+  "Les financements perdus et le coffre de banque.",
+  "Le rôle de Netflix et du financement participatif dans l'achèvement.",
+  "La question de l'auteur d'un film terminé après la mort du réalisateur.",
+  "Les points de divergence entre les récits."
+ ],
+ "retain": "Le film de Welles a survécu à la mort de son auteur, mais personne ne sait ce qu'il en aurait fait.",
+ "note": "Le rôle exact des proches du shah, la date de fin du tournage (1976 ou 1977) et le nombre d'heures de pellicule sont incertains. Les citations de Marshall et Rymsza sont rapportées comme telles. Welles n'a pas supervisé le montage final.",
+ "blurb": {
+  "b": "Tourné à partir de 1970, jamais terminé du vivant de son auteur, enfermé dans un coffre de banque après la disparition d'un financier. The Other Side of the Wind sort enfin en 2018. Mais est-ce vraiment un film d'Orson Welles, ou celui des gens qui l'ont fini ?",
+  "h": "Un film de Welles tourné en 1970, sorti en 2018."
+ }
+}
