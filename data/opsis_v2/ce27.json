@@ -1,0 +1,30 @@
+{
+ "id": "ce27",
+ "fmt": 3,
+ "name": "Voyager : une bouteille dans l'océan cosmique",
+ "sub": "Californie, 1977 : un comité présidé par Carl Sagan dispose de six mois pour choisir ce que l'humanité enverra aux étoiles sur deux disques de cuivre plaqués or",
+ "blurb": {
+  "b": "En 1977, une petite équipe autour de Carl Sagan doit décider, en quelques mois, ce qu'on gravera sur un disque embarqué à bord de Voyager : images, salutations, musiques, et l'activité cérébrale d'une femme qui pense à l'amour. Chaque choix est une dispute, et le disque est à peine fait pour être lu.",
+  "h": "Un disque pour les étoiles, choisi à la hâte, et une pensée d'amour"
+ },
+ "body": [
+  "#Un comité et six mois",
+  "@1977.",
+  "Le comité est présidé par Carl Sagan, de l'université Cornell. Linda Salzman et Frank Drake en font partie, Ann Druyan est directrice créative, Jon Lomberg artiste. Alan Lomax et Robert E. Brown, ethnomusicologues, et Timothy Ferris, producteur, travaillent à la sélection musicale. Druyan appelle le disque une « arche de Noé culturelle ». Ils ont environ six mois, même si la durée exacte varie selon les récits.",
+  "Le plan initial prévoyait que des délégués de l'ONU enregistrent des salutations. La bureaucratie bloque l'idée, et ce sont les départements de langues de Cornell qui font les enregistrements. Trouver de la musique est difficile, car il n'existe pas d'archives numériques : Druyan raconte avoir déniché un disque de raga indien dans une boîte, sous une table, dans un magasin d'électroménager.",
+  "#Ce qu'il contient",
+  "@Images, voix, musiques.",
+  "Le disque, de douze pouces, est en cuivre plaqué d'or. Il porte 116 images, qui montrent des mathématiques, le système solaire, l'ADN, l'anatomie humaine, des animaux, des paysages et des cultures du monde entier. Il contient aussi des salutations en 55 langues, dont une du secrétaire général de l'ONU, Kurt Waldheim, et une de Nick, le fils de Sagan, âgé de six ans, un message en morse, Per aspera ad astra, des chants de baleines, des sons naturels, un message imprimé du président Jimmy Carter et une heure d'ondes cérébrales. Côté musique, on y trouve Bach, Mozart, Beethoven, Stravinsky, Chuck Berry, des chants navajos, un chant de mariage péruvien et « Dark Was the Night, Cold Was the Ground » de Blind Willie Johnson. Les chants de baleines à bosse viennent de l'album de Roger Payne, sorti en 1970.",
+  "La pochette, en aluminium, est ornée d'un échantillon d'uranium 238, dont la demi-vie dépasse quatre milliards d'années : une horloge, pour qui saurait la lire. Elle porte aussi une carte de 14 pulsars.",
+  "!Dans le sillon de sortie, une phrase est gravée à la main : « To the makers of music – all worlds, all times ».",
+  "#Les ondes d'une pensée",
+  "@Ann Druyan.",
+  "Druyan propose d'enregistrer ses ondes cérébrales pendant environ une heure, pendant qu'elle pense à divers sujets, dont l'histoire de la Terre et ce que c'est que d'être humain. Elle pense aussi à l'idée de tomber amoureuse. Sagan et elle s'étaient fiancés peu avant.",
+  "Ed Stone, qui dirige le projet Voyager, juge très improbable que quelqu'un trouve un jour la sonde : pour lui, le disque est un message sur nous, pas pour eux. Sagan, lui, voit le lancement comme un geste d'espoir sur la vie sur Terre.",
+  "#Ce qu'on a écarté",
+  "@Les polémiques.",
+  "Pour « Johnny B. Goode », Lomax aurait dit que le rock était « adolescent » et Sagan aurait répondu : « Il y a beaucoup d'adolescents sur la planète. » Cette réponse n'est rapportée que par ouï-dire. Après les critiques sur la nudité de la plaque de Pioneer, la NASA n'autorise pas la photo d'un couple nu : on utilise une silhouette.",
+  "Pour les Beatles, les versions divergent : EMI aurait refusé de céder « Here Comes the Sun », ou la chanson n'aurait jamais été sérieusement envisagée. Dans les images, le personnage qui salue, un homme sur la plaque de Pioneer, devient une femme. Il reste un disque que personne ne lira peut-être jamais, et dont le sens tient, au fond, à ceux qui l'ont fait : des gens qui, en quelques mois, ont décidé de ce que l'humanité voulait dire."
+ ],
+ "notes": "Retiré : budget de 1 500 dollars et coût de 18 000 dollars, détails techniques de lecture (16 2/3 tours, encodage), nombre de pistes, rôle de Lennon/Iovine, caractérisation de la pochette. À vérifier : 'environ six mois', 'compressée en une minute' (non repris), dernière phrase."
+}
