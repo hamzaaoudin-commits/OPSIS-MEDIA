@@ -1,0 +1,53 @@
+{
+ "id": "cs03",
+ "fmt": 3,
+ "name": "Le casse de JFK dont personne n'a payé le prix",
+ "sub": "New York, décembre 1978 — Des hommes cagoulés emportent près de six millions de dollars dans un terminal cargo, et ceux qui en savent trop disparaissent un à un.",
+ "body": [
+  "#PROLOGUE — Aéroport JFK, New York, 11 décembre 1978",
+  "Entre 3 h et 4 h 30 du matin, des hommes pénètrent dans le terminal cargo de la compagnie allemande Lufthansa.",
+  "Ils ont coupé un cadenas. Ils portent des cagoules et prennent des otages parmi les employés.",
+  "Tout se passe vite, sans cris inutiles. La précision de l'opération laisse penser que chacun savait exactement où aller.",
+  "Dans la chambre forte, ils trouvent 72 cartons d'un peu plus de quinze livres chacun. Dedans, de l'argent liquide, environ cinq millions de dollars, et des bijoux pour 875 000 dollars.",
+  "Le total est estimé à 5,875 millions. C'est, à l'époque, le plus grand vol d'argent liquide commis aux États-Unis.",
+  "On ne retrouvera jamais cet argent.",
+  "#01 — LE TUYAU",
+  "Tout commence par un renseignement. Un bookmaker, Martin Krugman, parle à Henry Hill, un associé de la mafia, des importants transports d'argent liquide que Lufthansa reçoit.",
+  "Hill transmet l'information. Elle remonte la chaîne jusqu'à James Burke, réputé être le cerveau de l'opération, proche de la famille Lucchese. Burke ne sera jamais inculpé pour ce casse.",
+  "Il y a aussi un homme à l'intérieur. Louis Werner, employé de l'aéroport, fournit les renseignements. Il sera le seul à être condamné pour le vol : quinze ans de prison, en 1979.",
+  "L'équipe prévoyait un butin d'environ deux millions. Elle repart avec près de trois fois plus d'argent.",
+  "Et plus le butin est important, plus l'étau se resserre.",
+  "#02 — LES MORTS",
+  "Le fourgon utilisé pour le casse est retrouvé deux jours plus tard. Parnell « Stacks » Edwards devait s'en débarrasser, et ne l'a pas fait.",
+  "Le 18 décembre 1978, Edwards est abattu. On cite Tommy DeSimone et Angelo Sepe comme auteurs et Paul Vario, capitaine de la famille Lucchese, comme commanditaire.",
+  "Ce n'est que le début. Burke aurait ordonné l'assassinat de plusieurs participants et proches pour effacer les liens possibles.",
+  "Krugman, disparu le 6 janvier 1979 et jamais retrouvé, déclaré légalement mort en 1986. Richard Eaton, tué le 17 janvier 1979. Louis Cafora et sa femme Joanna, en mars. Joe Manri et Robert McMahon, les 15 et 16 mai.",
+  "Ces liens reposent en partie sur les déclarations de Hill.",
+  "Henry Hill devient informateur du FBI en 1980 et entre dans le programme de protection des témoins. Son témoignage contribuera à faire condamner Burke et Vario dans d'autres affaires.",
+  "Burke est condamné en 1985 pour le meurtre d'Eaton, à vingt ans de prison. Il meurt en prison en 1996.",
+  "#03 — UN MONUMENT DE CINÉMA",
+  "En 1990, le casse devient un moment clé des Affranchis, de Martin Scorsese. Il inspire ensuite deux téléfilms, en 1991 et en 2001.",
+  "Le public retient les images, la musique, les personnages. Le dossier judiciaire dit autre chose.",
+  "Le 23 janvier 2014, Vincent Asaro, capitaine de la famille Bonanno, est arrêté, soupçonné d'avoir participé au casse. Le 12 novembre 2015, un jury l'acquitte de toutes les charges liées au vol.",
+  "Son avocat avait qualifié le principal témoin à charge, Joseph Massino, de « l'un des pires témoins que j'aie jamais vus ».",
+  "!Au cinéma, l'événement est devenu un monument de la mafia. En vrai, personne n'a jamais été condamné pour l'avoir organisé.",
+  "#ÉPILOGUE — Cinq millions envolés",
+  "On ne sait pas quel fut le rôle exact de Burke, jamais jugé pour ce vol, ni si chacune des morts qui suivent est liée au casse.",
+  "On ne sait pas non plus qui a eu l'idée en premier. Les récits se contredisent.",
+  "Un butin de cette taille ne s'évapore pas de lui-même : il a été dépensé, caché, blanchi.",
+  "Reste un chiffre. Cinq millions de dollars, et aucun retrouvé."
+ ],
+ "learned": [
+  "Le rôle d'un tuyau et d'un homme de l'intérieur dans un casse.",
+  "L'engrenage des morts qui suivent un butin trop gros.",
+  "Le rôle de Henry Hill, de l'informateur aux Affranchis.",
+  "L'écart entre la légende de cinéma et le dossier judiciaire.",
+  "L'argent jamais retrouvé."
+ ],
+ "retain": "Le casse de Lufthansa est devenu un monument de la mafia, mais un seul homme a été condamné pour le vol. Le butin n'a jamais été retrouvé.",
+ "note": "Les chiffres et dates suivent les récits usuels. Plusieurs liens entre les morts et le casse reposent en partie sur les déclarations de Henry Hill et ne sont pas tous établis en justice. Le rôle exact de James Burke n'a jamais été jugé pour ce vol.",
+ "blurb": {
+  "b": "11 décembre 1978, aéroport JFK. Des hommes cagoulés vident la chambre forte de Lufthansa et repartent avec près de six millions de dollars, le plus gros vol d'argent liquide du pays. Dans les semaines qui suivent, ceux qui en savent trop disparaissent un à un. Pourquoi un seul homme a-t-il été condamné ?",
+  "h": "Près de six millions volés à JFK, et des complices qui disparaissent."
+ }
+}
