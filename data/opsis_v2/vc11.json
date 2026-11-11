@@ -1,0 +1,37 @@
+{
+ "id": "vc11",
+ "fmt": 3,
+ "name": "Marathon : deux kilomètres au pas de course",
+ "sub": "Marathon, 490 av. J.-C. : quelques milliers d'Athéniens chargent l'armée du Grand Roi, dans une bataille dont on ignore la date exacte et les effectifs",
+ "blurb": {
+  "b": "En 490 av. J.-C., une armée perse débarque à Marathon, à quarante kilomètres d'Athènes. Les Athéniens, seuls avec les Platéens, choisissent de charger plutôt que d'attendre Sparte. Cette victoire, et la légende d'un coureur qui n'en est pas tout à fait une, ont inventé le marathon.",
+  "h": "Quelques milliers d'Athéniens chargent la plus puissante armée du monde."
+ },
+ "body": [
+  "#Les cendres d'Érétrie",
+  "@Eubée, été 490 av. J.-C.",
+  "Quand les Perses débarquent en Eubée, ils ont déjà décidé du sort d'Athènes. Ils prennent Carystos, puis assiègent Érétrie, qui résiste six jours avant d'être détruite : ses temples sont incendiés, ses habitants réduits en esclavage. Le message envoyé aux Grecs est limpide. L'armée du Grand Roi Darius ne vient pas négocier, elle vient punir les cités qui ont soutenu la révolte des Grecs d'Ionie.",
+  "Il n'existe aucun chiffre sûr sur ses effectifs. Hérodote donne six cents trières pour la flotte, mais rien pour l'armée. Des auteurs plus tardifs parlent de 200 000, voire de 500 000 hommes. Les estimations modernes s'accordent plutôt sur environ 25 000 fantassins perses, face à environ 10 000 hoplites athéniens, avec, selon certains historiens, seulement 7 000 à 8 000 Athéniens.",
+  "#Un messager à Sparte",
+  "@Avant la bataille.",
+  "Les Perses débarquent à Marathon, une plaine côtière à quelque quarante kilomètres d'Athènes, sur les conseils d'Hippias, l'ancien tyran d'Athènes, exilé et qui espère retrouver sa cité. À Athènes, on envoie Phidippidès, un coureur, demander l'aide de Sparte. Selon Hérodote, le dieu Pan lui apparaît en chemin et lui reproche d'être négligé par les Athéniens, qui lui rendront un culte après la victoire.",
+  "Les Spartiates promettent leur aide, mais une loi religieuse leur interdit de partir avant la pleine lune. Ils arriveront trop tard pour combattre. Seuls les Platéens, venus avec leurs hoplites, rejoignent les Athéniens. On ne sait pas avec certitude à quelle date exacte la bataille a eu lieu : septembre ou août, selon le calendrier qu'on retient.",
+  "#Le vote de Callimaque",
+  "@Dans le camp athénien.",
+  "Face à la plaine, les dix généraux athéniens sont divisés. Certains veulent attendre les Spartiates, d'autres attaquer sans attendre. Miltiade, qui connaît les Perses pour avoir servi sous leurs ordres, presse d'engager le combat. C'est le polémarque Callimaque, magistrat chargé de la guerre, qui tranche d'un vote : on attaquera.",
+  "Les Athéniens sont informés, par des déserteurs ioniens, que la cavalerie perse n'est pas dans le camp. On ne saura jamais pourquoi elle était absente.",
+  "#La charge",
+  "@Dans la plaine.",
+  "!Les Athéniens courent sur près de deux kilomètres.",
+  "Les Perses, qui voient ces hoplites foncer vers eux sans cavalerie ni archers, y voient une folie suicidaire. Les Athéniens ont renforcé leurs ailes, sur huit rangs, et allégé leur centre, sur quatre. Quand le centre cède et recule, comme prévu ou non, les deux ailes mettent les ailes perses en fuite, puis se retournent contre le centre, qu'elles prennent à revers.",
+  "Il est impossible de dire si cet enveloppement était voulu dès le début. Mais le résultat est là : l'armée perse, prise en tenaille, se jette vers ses navires. On se bat encore sur la plage, où sept vaisseaux sont capturés.",
+  "#Le décompte",
+  "@Après la bataille.",
+  "Hérodote compte 192 morts athéniens et 6 400 morts perses. Le chiffre perse est sans doute exagéré. Callimaque est tué, avec le stratège Stésilaos. Mais la flotte perse reste menaçante : elle contourne le cap Sounion vers Phalère, le port d'Athènes, puis, en voyant l'armée athénienne déjà revenue, elle repart pour l'Asie.",
+  "#Le coureur qui n'a pas couru",
+  "@Plus tard.",
+  "Le récit que tout le monde connaît, celui du coureur qui annonce la victoire à Athènes, puis meurt d'épuisement, n'apparaît pas chez Hérodote. Il se trouve d'abord chez Plutarque, bien plus tard, qui nomme le coureur Thersippos ou Euclès, et il lui est attribué un autre nom encore chez d'autres auteurs. Ce que fait Phidippidès, lui, est établi : selon Hérodote, il court d'Athènes à Sparte avant la bataille.",
+  "Quand les premiers Jeux olympiques modernes, en 1896, cherchent une épreuve qui rappelle l'Antiquité, c'est cette légende, plus que l'histoire, qui l'emporte. Le marathon est né d'un récit tardif, sur une victoire qui, elle, n'était pas une légende : en 490, Athènes avait arrêté l'armée du plus puissant empire du monde."
+ ],
+ "notes": "Retiré : détails de la dent d'Hippias, date précise, raison du retard de Sparte (la loi religieuse est conservée). À vérifier : 'quarante kilomètres' (environ 40 km), culte de Pan après la bataille, '1896' et lien du marathon à Plutarque/Lucien, 'servi sous leurs ordres' pour Miltiade."
+}

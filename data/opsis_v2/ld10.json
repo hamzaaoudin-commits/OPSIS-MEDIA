@@ -1,0 +1,29 @@
+{
+ "id": "ld10",
+ "fmt": 3,
+ "name": "Proust : quatre heures et demie",
+ "sub": "Paris, 18 novembre 1922 : Proust travaille jusqu'à l'aube, tombe en délire et meurt vers 16 h 30, rue Hamelin, auprès de Céleste Albaret et de son frère Robert, médecin",
+ "blurb": {
+  "b": "Novembre 1922 : Marcel Proust, cloîtré rue Hamelin, corrige encore les épreuves de son roman. Il refuse de se soigner, travaille la nuit avec Céleste Albaret, tombe en délire. Son frère médecin accourt. Il meurt le 18, dans l'après-midi. Il avait écrit, quelques mois plus tôt, la mort d'un écrivain devant un tableau.",
+  "h": "Le dernier jour de Proust, entre épreuves corrigées et délire"
+ },
+ "body": [
+  "#La rue Hamelin",
+  "@Octobre – novembre 1922.",
+  "Pendant ses trois dernières années, Proust vit presque enfermé dans sa chambre du 44, rue Hamelin, à Chaillot. Il dort le jour et travaille la nuit pour achever son roman. Il souffrait déjà de vertiges, d'élocution lente et de troubles de la vue. Cet automne-là, il attrape un rhume et tombe, comme il le dit lui-même, désespérément malade. Il corrige des épreuves : il a terminé la révision de La Prisonnière et commencé celle d'Albertine disparue.",
+  "Dans La Prisonnière, un écrivain nommé Bergotte meurt en regardant un tableau de Vermeer, fasciné par un petit pan de mur jaune. Proust avait écrit cette scène après avoir visité lui-même une exposition de peintres hollandais, où il s'était senti mal. Il décrit ainsi, à moitié, sa propre fin.",
+  "#Les 16 et 17 novembre",
+  "@16 – 17 novembre 1922.",
+  "Le 16 novembre, rapporte Céleste Albaret, qui veille sur lui depuis des années, ses poumons faibles provoquent une grave crise. Le 17, il va mieux. Dans la nuit du 17 au 18, il lui demande de s'asseoir près de lui pour travailler, et il lui dit qu'il montrera aux médecins qu'il est plus fort qu'eux. Vers 3 h 30, il doit s'arrêter.",
+  "#Le billet",
+  "@18 novembre 1922, au matin.",
+  "Quelques heures avant sa mort, Proust écrit un billet daté du 18 novembre, qui sera conservé. Il tente ensuite de soulever un bol de café. Il devient délirant et dit qu'une grande figure noire se dresse près de la porte.",
+  "#Robert",
+  "@18 novembre 1922, journée.",
+  "Céleste appelle le docteur Bize et Robert Proust, frère de l'écrivain et médecin. Ils se relaient au chevet. On lui fait des injections de camphre, des ventouses, on lui apporte des ballons d'oxygène. Proust refuse longtemps tout ce qui l'oblige à rester allongé.",
+  "!Proust meurt vers 16 h 30, à cinquante et un ans : quatre heures et demie, dit Céleste.",
+  "Le nom de la maladie reste discuté : on parle le plus souvent de pneumonie. Le photographe Man Ray fait un portrait de son visage sur son lit de mort. Les obsèques ont lieu le 22 novembre, à l'église Saint-Pierre-de-Chaillot, et il est enterré au Père-Lachaise.",
+  "Il laisse un roman sans dernière relecture. Les volumes suivants paraissent après sa mort : La Prisonnière en 1923, Albertine disparue en 1925, Le Temps retrouvé en 1927, mis en forme par son frère Robert et par l'éditeur, d'après des cahiers et des épreuves qu'il n'a pas pu achever de corriger. Proust avait raconté la mort d'un écrivain avant la sienne. On ne saura jamais si le billet du matin était pour Céleste, ni quelles furent ses dernières paroles. Mais on sait qu'il a travaillé jusqu'à la nuit qui précède, comme un homme qui refuse de laisser l'ouvrage en suspens."
+ ],
+ "notes": "Retiré : tache de café sur le billet et sa citation, heure de la mort « le soir » (autre source), cause (abcès, bronchite), nature exacte des injections. À vérifier : « mis en forme par Robert Proust » (rôle exact de Robert et de l'éditeur), Man Ray, date des obsèques, exposition hollandaise de 1921."
+}

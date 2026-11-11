@@ -1,0 +1,32 @@
+{
+ "id": "tm01",
+ "fmt": 3,
+ "name": "La Quatrième Dimension : la dernière nuit",
+ "sub": "Californie, 23 juillet 1982 : un hélicoptère s'écrase sur le plateau de La Quatrième Dimension, trois personnes meurent, et un réalisateur est jugé pour la première fois à Hollywood",
+ "blurb": {
+  "b": "Dans la nuit du 23 juillet 1982, John Landis tourne une scène de guerre pour La Quatrième Dimension. Un hélicoptère perd le contrôle et tue l'acteur Vic Morrow et deux enfants. Landis est jugé pour homicide involontaire, et acquitté cinq ans plus tard.",
+  "h": "Un tournage de nuit, un hélicoptère, trois morts et un procès"
+ },
+ "body": [
+  "#La nuit du 23 juillet",
+  "@Indian Dunes, Valencia (Californie), 23 juillet 1982.",
+  "La Quatrième Dimension adapte quatre épisodes de la célèbre série, confiés à quatre réalisateurs : John Landis, Steven Spielberg, Joe Dante et George Miller. Le segment de Landis, « Time Out », met en scène un homme raciste, joué par Vic Morrow, qui se retrouve brutalement projeté dans la peau de ceux qu'il méprise, dont des victimes de la guerre du Viêt Nam.",
+  "Cette nuit-là, on tourne une scène de guerre à Indian Dunes. Vic Morrow, cinquante-trois ans, doit fuir avec deux enfants, Myca Dinh Le, sept ans, et Renee Shin-Yi Chen, six ans, devant un hélicoptère qui les poursuit. C'est le dernier jour de tournage prévu.",
+  "Morrow est un visage connu des Américains : il a joué pendant des années dans la série de guerre Combat !, et il est le père de la future actrice Jennifer Jason Leigh. Les deux enfants, eux, ont été engagés pour la scène sans que personne ne regarde de près les règles qui limitent la présence d'enfants sur un plateau en pleine nuit : c'est le point sur lequel l'enquête, plus tard, reviendra longuement.",
+  "!Des explosions d'effets spéciaux font perdre le contrôle de l'appareil à son pilote, Dorcey Wingo, vétéran du Viêt Nam.",
+  "Un effet à mortier explose alors que le rotor de queue est au-dessus ; des débris le touchent, il se détache, et l'hélicoptère part en vrille. Il retombe sur les trois acteurs, qui meurent. Six personnes à bord sont blessées.",
+  "#Ce que disent les rapports",
+  "@Octobre 1984.",
+  "L'enquête du NTSB, l'organisme fédéral chargé des accidents, attribue l'accident principalement aux explosions déclenchées trop près d'un hélicoptère volant bas, avec comme facteur aggravant l'absence de communication directe entre Wingo, qui commandait l'appareil, et Landis, qui dirigeait le tournage.",
+  "Une autre question se pose très vite : celle des enfants. Landis les avait engagés sans les permis requis, et les avait payés de la main à la main, pour échapper aux règles californiennes sur le travail de nuit des enfants, sans demander de dérogation. Le producteur associé George Folsey Jr. et le directeur de production Dan Allingham reconnaîtront avoir contourné ces règles. Personne ne sera poursuivi pour cet engagement.",
+  "#Le procès",
+  "@1986 – 1987.",
+  "Landis et quatre autres hommes, dont le pilote et l'artificier Paul Stewart, sont poursuivis pour homicide involontaire. C'est la première fois qu'un réalisateur est inculpé pour des faits survenus pendant un tournage. La défense plaide l'accident imprévisible. L'accusation parle d'imprudence et de non-respect de la loi sur les enfants.",
+  "Un témoin dit qu'Allingham avait demandé à Wingo de quitter la zone pendant que Landis, par radio, lui demandait de descendre plus bas. Après dix mois de procès, le jury acquitte les cinq accusés en mai 1987.",
+  "#Après",
+  "@Règles et amitié.",
+  "Les familles des victimes poursuivent Landis, Warner Bros. et Spielberg. Le nombre d'accidents de tournage baisse de près de 70 % entre 1982 et 1986, et la Californie met en place en 1987 un programme de contrôle de la pyrotechnie. Spielberg met fin à son amitié avec Landis.",
+  "En 1996, Landis dira qu'il n'y avait « absolument aucun bon côté à toute cette histoire ». On ne saura jamais si l'accident aurait été évité avec une coordination directe, ni ce qui s'est vraiment dit par radio avant l'explosion. Le film sort à l'été 1983, avec un accueil mitigé, et la scène du drame n'y figure pas : le segment de Landis est monté sans elle."
+ ],
+ "notes": "Retiré : orthographe du nom de la seconde enfant (versions divergentes), lien exact entre l'accident et les changements de règles (une seule source). À vérifier : synopsis de 'Time Out' (de mémoire), le chiffre 69,6 % arrondi à 'près de 70 %', 'Spielberg met fin à son amitié', sortie à l'été 1983. Ajouts de mémoire à vérifier : Morrow dans Combat ! et père de Jennifer Jason Leigh, scène absente du film."
+}

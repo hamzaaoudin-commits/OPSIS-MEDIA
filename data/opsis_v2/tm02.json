@@ -1,0 +1,34 @@
+{
+ "id": "tm02",
+ "fmt": 3,
+ "name": "The Crow : une cartouche factice",
+ "sub": "Wilmington, 31 mars 1993 : sur le plateau de The Crow, une balle restée dans le canon d'un revolver chargé à blanc tue Brandon Lee, à quelques jours de la fin du tournage",
+ "blurb": {
+  "b": "En mars 1993, Brandon Lee, fils de Bruce Lee, tourne à Wilmington le film The Crow. Pendant une scène, un revolver censé tirer à blanc projette une vraie balle. L'enquête remonte une chaîne de petites négligences, puis le film est terminé sans lui.",
+  "h": "Une scène de routine, un revolver, et un tournage presque fini"
+ },
+ "body": [
+  "#Un tournage presque fini",
+  "@Wilmington, février – mars 1993.",
+  "Le tournage de The Crow a commencé en février 1993, à Wilmington, en Caroline du Nord, pour cinquante-quatre jours prévus. Brandon Lee, vingt-huit ans, fils de Bruce Lee, y joue le rôle principal : un musicien assassiné qui revient d'entre les morts pour venger sa fiancée et lui-même. Il a déjà tourné l'essentiel de ses scènes. Il reste environ trois jours de tournage. Le film est tiré d'une bande dessinée de James O'Barr, et réalisé par Alex Proyas.",
+  "Brandon Lee n'avait que huit ans quand son père Bruce est mort, en 1973. Il avait fait un chemin à lui, d'abord dans des films d'action modestes. The Crow devait être celui qui le faisait connaître pour autre chose que son nom. Il devait se marier peu après la fin du tournage, avec sa fiancée Eliza Hutton.",
+  "#La scène",
+  "@31 mars 1993, vers minuit.",
+  "Aux studios EUE Screen Gems, on tourne une scène où le personnage de Michael Massee, l'un des meurtriers, tire sur celui de Lee avec un revolver .44 Magnum, à quatre ou cinq mètres de distance. L'arme est censée contenir des cartouches à blanc, qui produisent un éclair et un bruit, mais ne projettent rien.",
+  "!Une balle de calibre .44 touche Brandon Lee à l'abdomen.",
+  "Lee s'effondre, et très vite on comprend que ce n'est plus du cinéma. Il est conduit à l'hôpital et opéré, mais il meurt quelques heures plus tard, à vingt-huit ans.",
+  "#Une chaîne de négligences",
+  "@Ce que dit l'enquête.",
+  "La police conclut que le bout d'une cartouche factice, de celles qu'on utilise pour les gros plans de chargement, s'était détaché et logé dans le canon, avant d'être poussé par une cartouche à blanc. Ces cartouches factices avaient été fabriquées en retirant la balle et la poudre, mais en laissant l'amorce. Des témoins disent qu'un acteur sans surveillance en avait tiré une des semaines plus tôt, ce qui peut laisser une balle dans le canon.",
+  "Pour la scène, on avait remplacé les cartouches factices par des cartouches à blanc, mais personne n'avait vérifié le canon. Le spécialiste des armes était rentré chez lui plus tôt, et l'assistant accessoiriste ne connaissait pas la règle de sécurité qui impose de le faire.",
+  "#Les suites",
+  "@27 avril 1993.",
+  "Le procureur Jerry Spivey annonce que la mort résulte d'une négligence de l'équipe, sans acte criminel, et qu'il ne poursuivra pas la société de production. Il ne trouve pas de preuve de négligence volontaire ou délibérée. Le ministère du Travail de l'État inflige 84 000 dollars d'amende à Carolco pour conditions de travail dangereuses. La rumeur d'un complot ou d'une malédiction n'a rien donné : l'enquête n'a trouvé qu'un accident.",
+  "#Finir le film",
+  "@Après la mort de Lee.",
+  "Le tournage ne reprendra pas tout de suite. Paramount se retire, puis Miramax reprend le projet et ajoute 8 millions de dollars, pour un budget d'environ 23 millions. Des scénaristes réécrivent ce qui n'était pas tourné. La doublure Chad Stahelski remplace Lee dans les scènes manquantes, avec remplacement numérique du visage ; une scène dans l'appartement est reconstruite en images de synthèse à partir de séquences antérieures.",
+  "On ne sait pas pourquoi les vérifications prévues n'ont pas été faites ce soir-là. Brandon Lee ne verra jamais le film terminé.",
+  "Le film sort en mai 1994 et rencontre un vrai succès. Il est dédié à Brandon Lee et à sa fiancée. Lee, lui, a été enterré à Seattle, à côté de son père."
+ ],
+ "notes": "Retiré : détails du mécanisme exact discutés, société visée (Crowvision ou Carolco), Skull Cowboy coupé, portée des changements de règles. À vérifier : 'cinquante-quatre jours', résumé du scénario, 'opéré', sortie du film en 1994."
+}

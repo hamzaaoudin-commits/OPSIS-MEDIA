@@ -1,0 +1,32 @@
+{
+ "id": "pr10",
+ "fmt": 3,
+ "name": "Lavoisier : une expérience à finir",
+ "sub": "Paris, 8 mai 1794 : le chimiste Lavoisier est jugé comme fermier général et guillotiné le jour même. Sa célèbre demande de délai n'est probablement qu'une légende.",
+ "blurb": {
+  "b": "En 1794, Antoine Lavoisier, père de la chimie moderne, est jugé avec vingt-sept autres fermiers généraux. Le procès dure moins d'une journée, et la condamnation à mort est exécutée aussitôt. La phrase qu'on prête au tribunal, selon laquelle la République n'a pas besoin de savants, est sans doute postérieure.",
+  "h": "Le chimiste est guillotiné, mais la phrase célèbre n'a probablement jamais été dite."
+ },
+ "body": [
+  "#Un fermier général",
+  "@Paris, 1770 – novembre 1793.",
+  "Lavoisier est fermier général : un collecteur d'impôts sous l'Ancien Régime, qui a acheté sa charge en 1770. Elle le rend très riche, lui permet de mener grand train et de s'équiper d'un laboratoire bien doté. C'est un privilégié de l'Ancien Régime. C'est aussi un chimiste dont la République a eu besoin. Il a été l'un des commissaires de la poudre à l'Arsenal, de 1775 à 1792. Il a présidé la commission qui a recommandé le système métrique en mars 1791, dont il est écarté le 23 décembre 1793, avec Laplace, pour des raisons politiques.",
+  "Ses travaux ont changé la chimie. Il a montré le rôle de l'oxygène dans la combustion et dans la respiration, il a mis de l'ordre dans le vocabulaire de la discipline, et il a publié en 1789 son Traité élémentaire de chimie. À Paris, beaucoup le tiennent pour le premier savant du royaume. En 1794, cela ne pèse pas devant un tribunal qui juge des financiers.",
+  "Le 24 novembre 1793, l'arrestation de tous les anciens fermiers généraux est ordonnée. Lavoisier se cache d'abord, puis se constitue prisonnier au couvent de Port-Royal le 30 novembre.",
+  "#Vingt-huit accusés",
+  "@Paris, 8 mai 1794.",
+  "Les fermiers généraux sont jugés ensemble : Lavoisier et vingt-sept coaccusés, selon le décompte le plus courant. Neuf accusations sont portées, dont avoir fraudé l'État et avoir mouillé le tabac. Lavoisier rédige lui-même la défense commune. Il est jugé comme fermier général, non comme savant.",
+  "Les fermiers généraux détenaient certaines des plus grandes fortunes de France, et la confiscation des biens des condamnés au profit de l'État aurait motivé la rapidité. Le procès dure moins d'une journée. Un texte du Conseil consultatif des arts et métiers, rédigé par le chimiste Hallé, qui défend Lavoisier, n'est pas admis. Selon Lalande, il n'a même pas été lu.",
+  "#Une phrase célèbre",
+  "@Paris, 8 mai 1794.",
+  "On raconte que Lavoisier demande que son exécution soit repoussée pour qu'il termine une expérience sur l'oxygène dans la respiration humaine. Le président du tribunal, Coffinhal, lui répondrait : « La République n'a pas besoin de savants. »",
+  "!Cette phrase est probablement apocryphe.",
+  "Aucune trace de l'échange n'apparaît dans les procès-verbaux du procès. Delahante, l'un des fermiers présents et épargnés, n'en parle pas dans ses mémoires. Les premières mentions sont postérieures : un éloge de Fourcroy en 1796 y fait allusion, et un drame lyrique de Désaudray, la même année, attribue la réplique à Dumas. En 1801, Des Essarts nomme Coffinhal et donne un délai de quinze jours. D'autres parlent de quelques jours seulement. Au XIXe siècle, des historiens ont contesté l'authenticité de la phrase, d'autant que le gouvernement mobilisait alors fortement les scientifiques pour la guerre.",
+  "On range aussi parmi les légendes celle de la tête qui aurait cligné des yeux après la décapitation. Elle ne figure pas dans les récits de l'époque.",
+  "#Lagrange",
+  "@Paris, 8 – 9 mai 1794.",
+  "Lavoisier est guillotiné le jour même. Le lendemain, le mathématicien Lagrange aurait dit à l'astronome Delambre qu'il n'avait fallu qu'un instant pour couper cette tête, et qu'un siècle ne suffirait peut-être pas à en produire une semblable. La formulation varie d'un récit à l'autre.",
+  "Coffinhal est lui-même exécuté moins de trois mois plus tard. Le gouvernement innocente Lavoisier environ un an et demi après sa mort. Sa veuve, Marie-Anne Paulze, qu'il avait épousée en 1771 alors qu'elle avait treize ans, traduisait des textes anglais, l'aidait au laboratoire et a réédité ses mémoires. Après la Terreur, ses biens lui sont rendus, avec une note disant son mari « faussement condamné »."
+ ],
+ "notes": "Retiré : détails sur la date exacte de l'ordre d'arrestation et sur le nombre d'exécutés, jugés incertains. À vérifier : les 28 accusés, le délai demandé (quinze jours ou quelques jours), le rôle de Coffinhal, la date d'exécution (8 ou 9 mai), la source du texte de Lagrange."
+}

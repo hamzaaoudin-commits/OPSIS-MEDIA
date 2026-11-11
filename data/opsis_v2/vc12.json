@@ -1,0 +1,34 @@
+{
+ "id": "vc12",
+ "fmt": 3,
+ "name": "Azincourt : le champ labouré",
+ "sub": "Azincourt, 25 octobre 1415 : une armée anglaise malade, affamée et bien moins nombreuse brise la chevalerie française dans un champ labouré, sous la pluie",
+ "blurb": {
+  "b": "Octobre 1415. L'armée d'Henri V, malade et affamée, tente de rejoindre Calais quand elle est rattrapée par une armée française bien plus nombreuse. Entre deux bois, dans un champ labouré transformé en boue, les archers anglais brisent la charge. Une victoire qui change le cours de la guerre de Cent Ans.",
+  "h": "Dans la boue d'Azincourt, des archers anglais brisent la chevalerie française."
+ },
+ "body": [
+  "#Une armée qui rentre à pied",
+  "@Picardie, octobre 1415.",
+  "Henri V d'Angleterre n'a pas voulu cette bataille. Il a débarqué en Normandie à la fin de l'été, pris Harfleur après un siège long et coûteux, et s'est mis en route vers Calais, où il compte embarquer. Mais la dysenterie a décimé son armée devant Harfleur, et la marche est longue. Les hommes avancent fatigués, mal nourris, sous la pluie, avec la peur d'être rattrapés.",
+  "Ils le sont. Entre 6 000 et 9 000 Anglais, dont environ 5 000 archers et un millier d'hommes d'armes, se retrouvent face à une armée française bien plus nombreuse, entre 12 000 et 36 000 hommes, selon les estimations. Le Dauphin, malade, est absent ; le commandement revient au connétable Charles d'Albret.",
+  "#Le terrain",
+  "@Le matin du 25 octobre.",
+  "Le 25 octobre, jour de la Saint-Crépin, les Anglais s'installent entre deux bois, près du village d'Azincourt. L'endroit leur convient : il empêche les Français de les déborder par les côtés et les oblige à attaquer de front, sur un espace de 230 à 300 mètres seulement, trop étroit pour une armée aussi nombreuse.",
+  "La pluie est tombée la veille et la nuit. Les champs, fraîchement labourés, se sont transformés en une boue épaisse et lourde. Les Français attendent, puis s'avancent. Leurs chevaux, blessés dès les premières flèches, se débandent et retombent sur les rangs de ceux qui les suivent. Les hommes d'armes avancent à pied, en armure, dans une boue qui leur monte aux chevilles, et la lourdeur de leurs armures les épuise avant même d'arriver au contact.",
+  "#Les archers",
+  "@L'échange de flèches.",
+  "Les archers anglais, rangés en formation de V et protégés devant eux par une ligne de pieux taillés en pointe et plantés en biais, tirent des volées de flèches dont la cadence, selon les estimations, va de six à dix par minute. Les flèches ne traversent pas toujours l'acier, mais elles frappent les chevaux, les visages, les jointures des armures. Beaucoup de Français sont tués ou blessés avant d'atteindre la ligne.",
+  "Ceux qui y parviennent se heurtent, serrés les uns contre les autres, à une ligne qui tient. Quand les archers n'ont plus de flèches, ils prennent leurs épées courtes, leurs dagues, leurs maillets, et se jettent sur ces hommes tombés dans la boue, qu'ils ne peuvent plus relever.",
+  "#Les prisonniers",
+  "@Pendant la bataille.",
+  "!Henri ordonne de tuer une partie des prisonniers.",
+  "La raison est restée discutée. Il craignait peut-être une nouvelle attaque française, alors que ses hommes étaient trop peu nombreux pour garder autant de captifs. Il apprend aussi que des Français ont attaqué ses bagages, à l'arrière : les prisonniers risquaient de se libérer et de retourner la situation. On ne sait pas combien ont été tués, ni sur quel ordre exact. Beaucoup auraient hésité à obéir, car un prisonnier noble valait une rançon.",
+  "#Les morts",
+  "@Le soir.",
+  "Les pertes françaises sont lourdes : au moins 1 500 nobles tués, et selon d'autres estimations entre 6 000 et 10 000 morts, contre quelques centaines d'Anglais, et à peine une trentaine selon les évaluations les plus basses. Parmi les captifs, Charles d'Orléans, qui passera vingt-cinq ans en Angleterre.",
+  "La victoire renforce Henri V. Elle lui permet de conquérir la Normandie, puis d'obtenir, par le traité de Troyes en 1420, d'être reconnu héritier du trône de France.",
+  "On ne saura jamais combien de Français étaient présents. Une bonne partie de la réputation de cette bataille tient à Shakespeare, qui, dans sa pièce Henri V, a donné à ces hommes une éloquence et un nom : « band of brothers ». Ce que la pièce ne dit pas, c'est ce que le champ a gardé : des milliers de corps dans la boue, un jour d'automne."
+ ],
+ "notes": "Retiré : la citation de Shakespeare sur les prisonniers. À vérifier : Charles d'Orléans prisonnier 25 ans, refus d'obéir des hommes pour les rançons, conquête de la Normandie après Azincourt (1417-1419), 'pieux taillés en pointe' et cadences d'archers, siège de Harfleur, pertes (fourchettes de l'ancienne version)."
+}

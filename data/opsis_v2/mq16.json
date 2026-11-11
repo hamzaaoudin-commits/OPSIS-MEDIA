@@ -1,0 +1,32 @@
+{
+ "id": "mq16",
+ "fmt": 3,
+ "name": "Guide Michelin : gratuit, puis payant",
+ "sub": "En 1900, un fabricant de pneus offre un guide aux automobilistes. Vingt ans plus tard, il le fait payer, et une anecdote d'établi raconte pourquoi",
+ "blurb": {
+  "b": "En 1900, André et Édouard Michelin offrent un petit livre bleu aux acheteurs de pneus, dans un pays qui compte moins de 3 000 voitures. Vers 1920, la gratuité prend fin : on raconte qu'un livre servait à caler un établi. Puis viennent les étoiles. Une histoire dont la plus belle scène reste invérifiable.",
+  "h": "Un guide offert pour vendre des pneus devient le plus célèbre classement de tables."
+ },
+ "body": [
+  "#Un livre bleu, offert",
+  "@France, 1900.",
+  "Un automobiliste achète des pneus Michelin et repart avec un petit guide à couverture bleue, de quatre cents pages environ. Il n'a rien à payer. Selon la plupart des récits, 35 000 exemplaires ont été imprimés, chiffre qui reste à vérifier. La France ne compte alors que 2 897 voitures déclarées, et partir loin reste une aventure : trouver de l'essence, un mécanicien, un lit pour la nuit n'a rien d'évident.",
+  "Le guide recense ce dont le conducteur a besoin : dépôts d'essence, mécaniciens, fosses de réparation, hôtels, avec des cartes et même les heures de lever et de coucher du soleil. Ses éditeurs sont André et Édouard Michelin, fabricants de pneus à Clermont-Ferrand. Il paraît l'année de l'Exposition universelle de Paris.",
+  "On dit que leur raisonnement tenait en une ligne : un guide donne envie de rouler, et qui roule use ses pneus. Cette intention est rapportée de récit en récit, sans qu'aucune pièce d'époque la confirme.",
+  "!Un guide gratuit pour vendre plus de pneus.",
+  "#La cale de l'établi",
+  "Pendant vingt ans, le livre reste offert. Puis, selon l'anecdote que raconte la maison, André Michelin entre chez un marchand de pneus et découvre que des exemplaires du guide servent à caler un établi. Un livre gratuit, comprend-il, ne vaut rien pour celui qui le reçoit. On lui prête la phrase : « L'homme ne respecte que ce qu'il paye ».",
+  "La scène est fragile. Elle repose sur un récit publié par la marque elle-même, et aucune version ne donne le nom du marchand ni la date. Elle explique pourtant si bien le changement de cap qu'elle est devenue l'histoire officieuse du guide.",
+  "#Sept francs",
+  "Les récits situent la fin de la gratuité vers 1920, certains en 1922. Le guide est désormais vendu 7 francs et la publicité en disparaît. Elle avait déjà quitté ses pages vers 1907 ou 1908, au nom de l'indépendance. Un éditorial de l'époque le formulait ainsi : « Tout comme la femme de César, Bibendum ne doit pas être soupçonné. »",
+  "Les ventes déçoivent d'abord, mais la maison maintient son principe. Des exemplaires invendus de 1920 auraient été donnés à des écoliers. Le guide, lui, a déjà de l'avance : une première édition étrangère paraît en Belgique en 1904, et la même année un classement des hôtels, avec leurs prix, fait son apparition.",
+  "!Le guide gratuit devient un livre qu'on achète.",
+  "#Les étoiles",
+  "En 1926 apparaissent les « étoiles de bonne table ». La maison place en 1931 l'arrivée des deuxième et troisième étoiles, d'abord sur l'axe Paris-Lyon-Marseille ; d'autres sources parlent de 1933. Pour les inspecteurs, les récits divergent aussi : la maison fait naître le métier en 1933, tandis que d'autres les voient arriver dès 1922. Avant, le guide se serait appuyé sur des clients et des clubs automobiles.",
+  "Dans l'entre-deux-guerres, le guide met en avant de grands cuisiniers. André Terrail, Eugénie Brazier et Francis Carton obtiennent la troisième étoile. Interrompu pendant la Grande Guerre, il profite ensuite de l'essor du tourisme qu'ont favorisé les congés payés de 1936, puis reparaît en 1945.",
+  "#Ce qu'on ne sait pas",
+  "Les étoiles prolongent la logique de 1900 : elles donnent une raison de prendre la route, donc d'user des pneus. Michelin n'a jamais cessé d'être un fabricant de pneus qui édite un guide, et c'est peut-être la seule chose sur laquelle les récits s'accordent tous.",
+  "Le reste flotte : le calendrier des étoiles, celui des inspecteurs, le tirage de 1900. Et la scène de l'établi, qui explique si joliment la naissance du guide payant, reste invérifiable. On ne sait ni où elle a eu lieu, ni quand, ni si un marchand de pneus a vraiment, un jour, calé son établi avec un livre bleu."
+ ],
+ "notes": "Retiré : attributions de sources, liste des éditions de cartes et de rubriques de 1910 et 1923, chiffre de 30 millions d'exemplaires. À vérifier : tirage de 35 000, dates des 2e et 3e étoiles, date des inspecteurs, don aux écoliers."
+}

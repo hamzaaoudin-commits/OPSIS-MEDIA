@@ -1,0 +1,31 @@
+{
+ "id": "di22",
+ "fmt": 3,
+ "name": "Louis XVII : un cœur dans un bocal",
+ "sub": "8 juin 1795 : un garçon de dix ans meurt au Temple ; le médecin lui prélève le cœur, et un test ADN en 2000 règle en partie une affaire où une centaine de prétendants s'étaient présentés",
+ "blurb": {
+  "b": "Le 8 juin 1795, le fils de Louis XVI meurt au Temple, à dix ans. Le médecin chargé de l'autopsie prélève son cœur et le garde en secret. Pendant deux siècles, des prétendants se font passer pour le dauphin. En 2000, une analyse ADN du cœur donne une réponse, presque définitive.",
+  "h": "Un cœur d'enfant gardé en secret dans un bocal pendant deux siècles"
+ },
+ "body": [
+  "#Un enfant dans une tour",
+  "@Le Temple, Paris, 1792 – 1795.",
+  "Louis-Charles naît le 27 mars 1785 à Versailles. Après la mort de son frère aîné en 1789, il devient dauphin. Quand son père est exécuté, en janvier 1793, les royalistes le traitent comme Louis XVII, bien qu'il n'ait jamais régné. Depuis la chute de la monarchie, le 10 août 1792, la famille est enfermée au Temple.",
+  "Le 3 juillet 1793, alors qu'il n'a que huit ans, on sépare l'enfant de sa mère et on le confie à un cordonnier, Antoine Simon, désigné par le Comité de salut public. Il reste ensuite au Temple, dans des conditions dures. Sa santé se dégrade vite. Les récits divergent sur ce qu'il a subi : certains décrivent un cachot fermé, sale, et de graves négligences. Les accusations de sévices physiques ne sont pas étayées.",
+  "#Le 8 juin 1795",
+  "@Le Temple, juin 1795.",
+  "Louis-Charles meurt le 8 juin 1795 au Temple, à dix ans, d'une infection scrofuleuse, c'est-à-dire tuberculeuse, selon le rapport d'autopsie. Le médecin Philippe-Jean Pelletan supervise l'autopsie. Le corps est enterré le 10 juin au cimetière Sainte-Marguerite, sans marque. Les récits de l'enterrement se contredisent : fosse commune, fosse à part, ou ailleurs.",
+  "!Pelletan prélève le cœur de l'enfant.",
+  "Il ne le déclarera qu'en 1814. Le cœur est conservé dans l'alcool, et non embaumé comme d'autres cœurs princiers. Pelletan le remet à Mgr de Quélen, archevêque de Paris. Il passe ensuite par plusieurs mains, jusqu'à devenir, en 1975, une relique conservée au Mémorial de France, à Saint-Denis.",
+  "#Cent prétendants",
+  "@1800 – 1993.",
+  "Parce que l'enfant est mort au secret, on a cru qu'il s'était évadé. Une centaine de personnes se disent Louis XVII. Le plus connu est Karl Wilhelm Naundorff, un horloger, mort à Delft en 1845. Des tests ADN, en 1993, montrent qu'il n'était pas le dauphin. Certains auteurs ont soutenu que l'enfant était mort dès la fin de 1794 et qu'un substitut était mort en 1795. Les analyses menées plus tard contredisent cette thèse.",
+  "Des restes trouvés lors d'exhumations, en 1846 et en 1894, à Sainte-Marguerite, ont été attribués à un homme de plus de seize ans, d'environ 1,63 m : ils ne sont donc pas ceux de l'enfant. Des spécialistes pensent qu'ils auraient aussi pu appartenir à plusieurs personnes.",
+  "#Une analyse en 2000",
+  "@1999 – 2004.",
+  "En 1999, le gouvernement français autorise le prélèvement d'un échantillon de 500 milligrammes sur le cœur. Des équipes dirigées par Jean-Jacques Cassiman et Bernd Brinkmann comparent son ADN mitochondrial à celui de cheveux de membres de la famille royale, dont Marie-Antoinette. Il est identique à celui de la reine et de ses parents par les femmes.",
+  "L'annonce date du 19 avril 2000 : l'enfant mort au Temple était bien Louis XVII. L'historien Jean Tulard résume : « On ne peut jamais être sûr à 100 %, mais c'est à peu près aussi sûr que possible. » Un point reste à savoir : l'ADN mitochondrial ne suit que la lignée maternelle et ne peut pas, à lui seul, identifier un individu de façon unique. Les descendants de Naundorff rejettent la conclusion.",
+  "En 2004, le cœur est déposé dans la basilique de Saint-Denis, près des tombeaux de ses parents. Il était resté, pendant plus de deux siècles, dans un bocal, passant de main en main. On ne sait toujours pas où se trouve le corps de 1795, ni la chaîne exacte de conservation du cœur. Du garçon du Temple, il ne reste donc qu'un cœur, déposé auprès de sa famille, deux cent neuf ans après sa mort."
+ ],
+ "notes": "Retiré : généalogie détaillée des propriétaires du cœur, Desault, Lasne et Gomin, Beauchesne, Bordonove et Hastier, Dumont. À vérifier : la chaîne de conservation entre 1814 et 1975, les chiffres des restes de 1846 et 1894, la citation de Tulard, la date du 3 juillet 1793."
+}

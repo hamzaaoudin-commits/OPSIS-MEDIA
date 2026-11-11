@@ -1,0 +1,37 @@
+{
+ "id": "di21",
+ "fmt": 3,
+ "name": "Princes de la Tour : des os dans un coffre",
+ "sub": "Été 1483 : Édouard V, douze ans, et son frère Richard, neuf ans, entrent dans la Tour de Londres et cessent d'apparaître ; en 1674, des ouvriers y trouvent deux squelettes d'enfants",
+ "blurb": {
+  "b": "À la mort d'Édouard IV, son fils de douze ans doit devenir roi. Il est conduit à la Tour de Londres avec son petit frère, sous la garde de leur oncle Richard, qui se fait couronner. On les voit jouer, puis plus du tout. En 1674, des ouvriers trouvent deux squelettes d'enfants.",
+  "h": "Deux princes entrent dans la Tour, un oncle devient roi, nul ne les revoit"
+ },
+ "body": [
+  "#Des garçons dans le jardin",
+  "@Tour de Londres, été 1483.",
+  "Un jour de juin 1483, à la Tour de Londres, deux garçons tirent à l'arc dans le jardin. L'un a douze ans, c'est le roi d'Angleterre ; l'autre en a neuf, c'est son frère cadet. Un chroniqueur note qu'on les a vus ainsi, jouant, à plusieurs reprises. Puis, au fil des semaines, on les voit de moins en moins.",
+  "!Aucun témoignage fiable ne mentionne plus les princes après l'été 1483.",
+  "Voilà tout ce qui reste de certain : des enfants qui entrent dans une forteresse, et qui n'en sortent pas à la lumière du jour.",
+  "#Un roi de douze ans",
+  "@Avril – juin 1483.",
+  "Édouard IV meurt le 9 avril 1483, après environ trois semaines de maladie. Son fils aîné, Édouard V, a douze ans. Il est alors au château de Ludlow, loin de Londres. Son oncle Richard, duc de Gloucester, est à Middleham, dans le nord.",
+  "Le 29 avril, à Stony Stratford, les deux hommes se rencontrent. Gloucester fait arrêter l'entourage du jeune roi. La reine Élisabeth Woodville, mère des princes, se réfugie à l'abbaye de Westminster avec son plus jeune fils et ses filles.",
+  "Édouard V est logé à la Tour le 19 mai. Richard le rejoint le 16 juin. Le couronnement est repoussé, puis suspendu.",
+  "#Un oncle devient roi",
+  "@Juin – juillet 1483.",
+  "Le 22 juin, un prédicateur affirme à St Paul's Cross que Gloucester est le seul héritier légitime. Le Parlement déclare ensuite les deux princes illégitimes, au motif que leur père avait promis le mariage à une autre dame avant d'épouser Élisabeth Woodville. L'acte s'appelle le Titulus Regius.",
+  "Gloucester est couronné Richard III le 6 juillet 1483. Les princes, eux, restent à la Tour. Dominique Mancini, un frère italien présent à Londres cet été-là, rapporte que les garçons ont été transférés dans les appartements intérieurs de la Tour, qu'on les voit de moins en moins, et qu'un médecin disait qu'Édouard V se préparait à mourir.",
+  "En septembre 1483, un soulèvement tente de rétablir Édouard V. Son chef, Buckingham, est exécuté en novembre.",
+  "#Qui les a tués ?",
+  "@Après 1483.",
+  "L'hypothèse la plus courante est que Richard III a ordonné leur mort. Plusieurs historiens la soutiennent : il tenait mal le trône, les garçons pouvaient servir de figures de proue aux rebelles, et ils étaient sous sa garde. Buckingham est le second nom le plus souvent cité, mais la plupart des historiens rejettent l'idée qu'il ait agi seul. Certains envisagent même qu'Édouard V soit mort de maladie.",
+  "Le récit le plus célèbre est celui de Thomas More, écrit vers 1513-1518. Il accuse Richard et nomme Sir James Tyrrell. Selon More, Miles Forrest et John Dighton auraient étouffé les garçons dans leur lit, et les corps auraient été enterrés au pied d'un escalier, puis déplacés en un meilleur endroit. Les aveux de Tyrrell ne sont connus que par More, qui n'était qu'un enfant en 1483 : son récit s'appuie sur des rumeurs.",
+  "#Des os dans un coffre",
+  "@1674 – 1933.",
+  "Le 17 juillet 1674, des ouvriers qui démolissent un escalier de la chapelle de la Tour Blanche trouvent à environ trois mètres de profondeur une caisse en bois avec deux squelettes d'enfants. Le lieu correspond en partie au récit de More, mais l'escalier a été construit après l'époque de Richard, et More disait que les os avaient été déplacés. Charles II les fait placer dans une urne, à Westminster Abbey.",
+  "En 1933, Lawrence Tanner, William Wright et George Northcroft concluent que les os sont ceux de deux enfants d'âges proches de ceux des princes. Il manque beaucoup d'os. Les critiques estiment que l'étude partait du principe que c'étaient les princes. Aucun autre test scientifique n'a été fait depuis, et aucun test ADN n'a été tenté.",
+  "On ne sait pas comment ni quand les deux garçons sont morts, ni où se trouvent leurs corps. On ne sait pas si les os de 1674 sont les leurs. Ce qu'on sait tient en une image : deux enfants qui jouent dans un jardin, sous la garde de celui qui avait le plus à gagner de leur disparition, et une question qui dure depuis cinq siècles."
+ ],
+ "notes": "Retiré : Perkin Warbeck, Henri VII et autres suspects secondaires, Rochefort, Commynes, cercueils de Windsor, exécutions de Pontefract. À vérifier : le jardin et le tir à l'arc, la date du 17 juillet 1674, les avis des historiens."
+}

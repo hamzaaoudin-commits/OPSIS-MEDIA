@@ -1,0 +1,31 @@
+{
+ "id": "mq05",
+ "fmt": 3,
+ "name": "IKEA : la table dont on ôte les pieds",
+ "sub": "Älmhult, Suède, vers 1956 : un dessinateur d'IKEA démonte les pieds d'une table pour la caser dans sa voiture, et le fondateur y voit un modèle.",
+ "blurb": {
+  "b": "Une table à plateau en feuille ne rentre pas dans la voiture de Gillis Lundgren, qui en retire les pieds. Ingvar Kamprad comprend l'intérêt du meuble à plat, alors que son entreprise est boycottée en Suède. Une légende fondatrice, avec ses zones d'ombre.",
+  "h": "Une table trop grande pour une voiture, et un modèle économique."
+ },
+ "body": [
+  "#Une table qui ne rentre pas",
+  "@Älmhult, Suède, vers 1956.",
+  "Gillis Lundgren charge une petite table dans sa voiture. Son plateau a la forme d'une feuille, il est en bois de jacaranda et repose sur trois pieds. Elle ne rentre pas. Il doit pourtant l'apporter au studio où l'on photographie les meubles pour le catalogue d'IKEA.",
+  "Lundgren est dessinateur, l'un des premiers employés de la maison. Il se demande alors pourquoi ne pas enlever les pieds. Il les ôte, et la table passe. Sur place, il les remet.",
+  "Cette table s'appelle Lövet. Dans le catalogue, Ingvar Kamprad, le fondateur, la présente comme « une adorable petite chose, de design ultramoderne ».",
+  "!Un meuble à plat ne transporte pas de vide.",
+  "#Le patron comprend",
+  "Lundgren raconte l'épisode à Kamprad, qui est impressionné et recrute d'autres designers pour développer des idées du même genre. Le Livre Guinness des records retient cette table de 1956 comme le premier meuble en kit.",
+  "Le calcul est simple. Un meuble livré à plat coûte moins cher à expédier, et le montage passe au client. IKEA elle-même nuance pourtant : Lundgren n'a pas inventé le meuble à plat, il l'a popularisé chez elle.",
+  "#Une entreprise mise au ban",
+  "Le contexte pèse lourd. Dès 1952, l'association suédoise des détaillants de meubles menace les fournisseurs qui livrent IKEA : ses membres cesseront de leur acheter. D'autres récits datent le boycott de 1955. Certains fournisseurs contournent l'interdit : ils vendent des modèles arrêtés, changent de nom ou livrent à une adresse neutre à Älmhult. Kamprad crée aussi une société d'achat, Ikano, pour passer par un intermédiaire.",
+  "Faute de pouvoir acheter les mêmes meubles que ses concurrents, IKEA doit dessiner les siens. Le musée de l'entreprise y voit l'origine de son style. Les ventes passent de 1 à 6 millions de couronnes en trois ans.",
+  "Un réseau de fournisseurs danois ne suffit pas. En 1960, Kamprad apprend que le ministre polonais du Commerce extérieur doit passer par la chambre de commerce de Stockholm. Il lui écrit et reçoit une réponse favorable en quelques mois.",
+  "Il faut maintenant voir les usines. En janvier 1961, Kamprad, son père Feodor, l'acheteur Ragnar Sterte et le designer Bengt Ruda passent une semaine à Varsovie. D'abord, l'accès aux usines leur est refusé. Le lendemain, un responsable, Marian Grabinski, organise la visite d'une fabrique de chaises à Radomsko. IKEA cherche alors jusqu'à 40 000 chaises et en manque environ la moitié. La production polonaise revient presque 50 % moins cher que la production suédoise, même si la qualité reste à améliorer.",
+  "#Ce qu'il en reste",
+  "Une légende, donc, avec ses failles. Les récits ne se recoupent pas : l'un date la table de 1956, un autre de 1959 ; Lundgren scie les pieds ou les dévisse ; la table part vers un studio ou un plateau de prise de vues. Aucun document d'époque ne vient confirmer la scène. Et rien ne prouve que le boycott ait causé le meuble à plat : les deux appartiennent à la même décennie, et le lien reste une hypothèse.",
+  "La Lövet est produite jusqu'en 1962. En 2013, un développeur produit d'IKEA et Kamprad la retrouvent dans les archives. Elle revient sous le nom de Lövbacken, en peuplier, parce que le jacaranda est devenu une espèce protégée. Ses pieds, cette fois, sont détachables dès la conception.",
+  "Il ne reste, au fond, qu'une scène minuscule : un homme, une voiture trop petite, deux pieds que l'on dévisse."
+ ],
+ "notes": "Retiré : les détails sur les visites en Pologne de 1956 (chronologie en ligne non confirmée), l'affirmation de meubles à plat dès 1953, les contrats longs et l'aide technique à la Pologne. À vérifier : année de la table (1956 ou 1959), date du boycott."
+}

@@ -1,0 +1,35 @@
+{
+ "id": "ld17",
+ "fmt": 3,
+ "name": "Mallory et Irvine : un point noir sur la neige",
+ "sub": "Everest, 8 juin 1924 : deux alpinistes britanniques disparaissent près du sommet. Soixante-quinze ans plus tard, on retrouve Mallory ; l'appareil photo qui dirait tout reste introuvable.",
+ "blurb": {
+  "b": "Le 8 juin 1924, un géologue aperçoit Mallory et Irvine, minuscules, tout près du sommet de l'Everest. Puis les nuages se referment. En 1999, le corps de Mallory est retrouvé, avec ses lunettes dans la poche et des lettres de sa femme. L'appareil photo, lui, manque. En 2024, une botte sort de la glace.",
+  "h": "Ont-ils atteint le sommet de l'Everest avant de disparaître ?"
+ },
+ "body": [
+  "#Un tout petit point noir",
+  "@Everest, 8 juin 1924.",
+  "Les nuages se referment. C'est la dernière fois que l'un ou l'autre est vu vivant. La question va hanter l'alpinisme pendant un siècle : ont-ils atteint le sommet, près de trente ans avant Hillary et Tensing, avant de mourir à la descente ?",
+  "Les nuages se referment. C'est la dernière fois que l'un ou l'autre est vu vivant. La question va hanter l'alpinisme pendant un siècle : ont-ils atteint le sommet, trente ans avant Hillary et Tensing, avant de mourir à la descente ?",
+  "Mallory a trente-sept ans, et il est déjà une légende : un an plus tôt, à un journaliste qui lui demandait pourquoi gravir l'Everest, il avait répondu : « Parce qu'il est là. » Irvine, lui, n'a que vingt-deux ans. Il est le plus jeune de l'équipe, apprécié pour son ingéniosité mécanique, et chargé de veiller sur les appareils à oxygène.",
+  "En 1933, des alpinistes retrouveront un piolet à peu de distance de la route qu'ils ont dû suivre. C'est tout. Le reste de la montagne garde le secret.",
+  "Mallory aurait emporté un petit appareil Kodak, qui pourrait trancher. Il n'a jamais été retrouvé.",
+  "Pendant soixante-quinze ans, il n'y a donc que ce point noir, et le silence de la montagne. Les expéditions successives cherchent, sans trouver. Les deux hommes, eux, sont entrés dans l'histoire autant par leur disparition que par ce qu'ils étaient venus faire.",
+  "#1er mai 1999",
+  "@Face nord, 1er mai 1999, 11 h 45.",
+  "En 1999, une expédition américaine part sur les traces de la disparition. Elle s'attend à retrouver Irvine, pas Mallory. Mais vers 11 h 45, à environ 8 150 mètres, sur la face nord, Conrad Anker repère une tache blanche. C'est un corps. Andy Politz, qui le voit à son tour, dit : « Ce n'est pas lui », c'est-à-dire pas Irvine.",
+  "C'est Mallory. Il repose à plat ventre, intact sous l'effet du froid. Les marques d'une corde entourent son torse, ce qui laisse penser qu'il était encordé à Irvine. Les chercheurs le recouvrent de pierres et le laissent sur place.",
+  "Sur lui, un altimètre à verre brisé, des lunettes de neige intactes au fond d'une poche, des mouchoirs monogrammés, un couteau, une boîte d'allumettes et des lettres, dont une enveloppe de sa femme, intacte. Ces objets seront lus, comparés, discutés pendant des années.",
+  "#Ce qui manque",
+  "@Mai 1999.",
+  "Les équipes cherchent l'appareil Kodak le 1er et le 16 mai. Il n'est pas retrouvé. La photographie de Ruth, l'épouse de Mallory, qu'il comptait peut-être laisser au sommet, n'est pas non plus sur le corps.",
+  "Cela peut s'interpréter de deux façons. Si la photo a été laissée au sommet, alors ils l'ont atteint. Les lunettes dans la poche suggèrent une descente tardive, à la nuit. Mais elles ont pu aussi être ôtées pendant un blizzard, bien plus bas. Rien de tout cela ne tranche.",
+  "#La botte",
+  "@Rongbuk, septembre 2024.",
+  "!En septembre 2024, une équipe de tournage de National Geographic trouve une botte sortant de la glace.",
+  "C'est Jimmy Chin, Erich Roepke et Mark Fisher qui la découvrent sur le glacier central de Rongbuk, sous la face nord. À l'intérieur, une chaussette porte une étiquette rouge brodée : « A.C. IRVINE ».",
+  "On ne sait pas encore si ces restes sont bien ceux d'Irvine, ni où se trouve son corps, ni si l'appareil existe encore. Un siècle de questions a fini par trouver une botte. Peut-être, un jour, une pellicule : si elle a résisté au froid, ses images diraient si deux hommes ont posé, un jour de juin 1924, sur le toit du monde."
+ ],
+ "notes": "Retiré : altitude exacte du corps (26 760 ou 27 000 pieds), inventaire détaillé des objets, rumeur d'une découverte chinoise. À vérifier : piolet de 1933, enveloppe de Stella, identité de la botte (non confirmée), 800 pieds."
+}

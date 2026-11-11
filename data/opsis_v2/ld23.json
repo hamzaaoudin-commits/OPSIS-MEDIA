@@ -1,0 +1,32 @@
+{
+ "id": "ld23",
+ "fmt": 3,
+ "name": "Che Guevara : vous ne tuez qu'un homme",
+ "sub": "La Higuera, 9 octobre 1967 : capturé blessé la veille, Che Guevara est exécuté dans une école de village par un sergent volontaire, après un message codé arrivé de La Paz.",
+ "blurb": {
+  "b": "Octobre 1967, en Bolivie. Capturé blessé à la jambe, Che Guevara passe sa dernière nuit dans l'école d'un village. Un message codé arrive de La Paz : il faut l'exécuter. Un sergent se porte volontaire. Les versions de ses dernières paroles varient, et aucun récit n'a de témoin indépendant.",
+  "h": "Capturé blessé, Che Guevara attend un ordre de La Paz dans une école"
+ },
+ "body": [
+  "#La capture",
+  "@Bolivie, 7 – 8 octobre 1967.",
+  "Les forces spéciales boliviennes, accompagnées de l'agent de la CIA Félix Rodríguez, apprennent la position de Che Guevara le 7 octobre. Le lendemain, l'armée repère les guérilleros au ravin du Churo. Che est pris avec deux compagnons et conduit à l'école de La Higuera.",
+  "#L'école",
+  "@La Higuera, 8 octobre 1967.",
+  "Il est assis par terre, les mains attachées dans le dos, la jambe droite très blessée. Julia Cortez, une jeune institutrice de dix-neuf ans, lui apporte une soupe aux cacahuètes, qu'il dit être la meilleure depuis des mois. Il dit qu'il se souviendrait du village et qu'il essaierait d'améliorer la vie des paysans, s'il s'en sortait vivant.",
+  "Félix Rodríguez avait pour consigne de la CIA de le garder en vie pour l'interroger, mais les autorités boliviennes écartent ses arguments. Le gouvernement du président René Barrientos veut sa mort.",
+  "#Le message",
+  "@9 octobre 1967, vers 13 h.",
+  "Un message codé du quartier général de La Paz arrive : il dit « 500 », puis « 600 », ce qui signifie « exécuter ». Le chiffre « 700 » l'aurait gardé en vie. Selon Rodríguez, Che « est devenu blanc » en l'apprenant et aurait dit : « C'est mieux ainsi. Je n'aurais jamais dû être pris vivant. » Le sergent Mario Terán, vingt-sept ans, qui avait perdu trois amis face à la guérilla, se porte volontaire.",
+  "#Les derniers mots",
+  "@La Higuera, 9 octobre 1967.",
+  "Les versions varient. « Tire, lâche, tu ne tues qu'un homme », rapporte-t-on. Selon l'armée bolivienne : « Je suis Che. Ne me tuez pas. J'ai échoué. » Terán lui-même raconte plus tard que Che lui aurait dit d'être tranquille et de bien viser, car il allait tuer un homme, et que ce fut le pire moment de sa vie.",
+  "!Aucun de ces récits n'a de témoin indépendant.",
+  "#Le corps",
+  "@Vallegrande, 9 – 11 octobre 1967.",
+  "Un hélicoptère emporte le corps vers 14 h à Vallegrande, où il est exposé pendant vingt-quatre heures sur un évier de blanchisserie, dans un hôpital, comme pour prouver au monde qu'il est bien mort. Des photographies le comparent à un Christ. Vers 2 h du matin, le 11 octobre, il est enterré dans une fosse, près de la piste d'atterrissage.",
+  "Son lieu de sépulture reste secret pendant trente ans. En 1997, on retrouve ses restes à Vallegrande, puis on les transfère à Cuba. On ne sait pas qui, à La Paz, a signé l'ordre, ni si Terán était ivre, comme certains l'ont dit. On ne connaît pas non plus avec certitude la dernière phrase de Che : au moins quatre versions circulent.",
+  "Un homme est mort, dans une salle de classe, d'une manière que ni ses amis ni ses ennemis ne s'accordent à raconter."
+ ],
+ "notes": "Retiré : jour exact de la capture (7 ou 8), ordre des tirs, présence de Rodríguez à la morgue, sort des mains. À vérifier : institutrice (profession de Julia Cortez non précisée dans l'ancienne version), 1997 (restes retrouvés, transférés à Cuba), 'trente ans' de secret."
+}
