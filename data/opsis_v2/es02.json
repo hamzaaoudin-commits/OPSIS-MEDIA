@@ -1,0 +1,42 @@
+{
+ "id": "es02",
+ "fmt": 7,
+ "name": "L'affaire Dreyfus : douze ans pour une vérité",
+ "sub": "1894-1906 : un capitaine, un bordereau déchiré en six morceaux et douze ans de combat pour établir qu'il était innocent",
+ "blurb": {
+  "b": "En 1894, un papier déchiré trouvé à l'ambassade d'Allemagne désigne un traître dans l'armée française. Le capitaine Alfred Dreyfus, juif et alsacien, est condamné sur un dossier secret. Il faudra douze ans, un colonel qui refuse de se taire et la plume de Zola pour que la justice reconnaisse l'erreur.",
+  "h": "Un capitaine condamné sur un papier déchiré, et douze ans pour rétablir la vérité"
+ },
+ "body": [
+  "#Six morceaux de papier",
+  "@Paris, septembre 1894.",
+  "En septembre 1894, une femme de ménage que le service de renseignements a placée à l'ambassade d'Allemagne trouve un papier déchiré en six grands morceaux. Il n'est ni signé ni daté. Il est adressé à l'attaché militaire allemand et parle d'un « frein hydraulique de 120 », ce canon récent dont l'armée française est fière. C'est le bordereau. Quelqu'un, à l'intérieur de l'état-major, vend des secrets.",
+  "Les services de renseignements recomposent le document. Ils cherchent un homme qui aurait pu connaître ces informations. La recherche se limite aux officiers passés par l'état-major, et le raisonnement qui désigne Alfred Dreyfus est simple, quoique grossier : né le 10 octobre 1859, il est capitaine, il est alsacien, et il est juif.",
+  "Dreyfus est un fils de famille juive de Mulhouse. Quand l'Alsace est devenue allemande, en 1871, les siens ont choisi de rester français, et lui a fait carrière dans l'armée de la République, jusqu'à l'état-major, où il est alors stagiaire. C'est un officier brillant, peu liant, que beaucoup de ses camarades jugent froid. Dans une armée où l'antisémitisme est courant, il est une cible presque naturelle.",
+  "#Un coupable trop commode",
+  "On compare l'écriture du bordereau à celle du capitaine. Les experts se contredisent. Alphonse Bertillon, qui n'est pas expert en écritures, construit la théorie de l'« autoforgerie » : Dreyfus aurait imité sa propre écriture pour se couvrir. L'argument est invérifiable et il tient lieu de preuve.",
+  "Le 15 octobre 1894, Dreyfus est convoqué au ministère. On lui dicte une lettre, pour comparer son écriture à celle du bordereau, et l'officier qui l'interroge croit voir sa main trembler. Il n'avoue rien, et il est arrêté. On lui laisse entendre qu'il peut en finir avec ce qui lui arrive. Il refuse, parce qu'il veut vivre pour établir son innocence. Il n'a pas encore compris que la procédure qui commence n'a pas été conçue pour la lui laisser prouver.",
+  "Son arrestation devait rester secrète. Elle ne l'est pas : à la fin d'octobre, un journal antisémite, La Libre Parole, publie le nom du traître. Dreyfus est déjà jugé par une partie de la presse avant d'avoir comparu devant personne, et sa femme, Lucie, apprend l'affaire en même temps que le pays.",
+  "#Décembre 1894",
+  "Le procès a lieu à huis clos, du 19 au 22 décembre. Le commandant Henry jure qu'un accusateur anonyme a désigné Dreyfus comme le traître. Le ministre de la Guerre, Mercier, fait remettre aux juges un dossier secret, hors de toute procédure : ni l'accusé ni son défenseur n'en prennent connaissance. Le 22 décembre, sept officiers le condamnent à l'unanimité à la déportation perpétuelle.",
+  "!Dreyfus crie « Innocent ! » pendant qu'on lui arrache ses insignes.",
+  "La dégradation a lieu le 5 janvier 1895, dans la cour de l'École militaire. Devant les troupes et une foule venue regarder, on lui arrache boutons et galons, et on brise son sabre. Le condamné marche, dit-on, droit sous les cris de la foule. Il a trente-cinq ans, et sa carrière d'officier est détruite.",
+  "#L'île du Diable",
+  "Il quitte la France le 21 février 1895. On le conduit en Guyane, sur l'île du Diable, où il vit dans une case de pierre d'environ quatre mètres sur quatre, par des températures qui montent à 45 °C, avec une nourriture médiocre et des fièvres. Son courrier est censuré. Il est seul pour des années, sur un rocher où rien ne l'attend.",
+  "Pendant ce temps, son frère Mathieu engage l'avocat Edgar Demange et consacre son temps, son énergie et sa fortune à obtenir la révision. Les années passent, et rien ne bouge. Pour beaucoup de Français, l'affaire est classée : le traître est puni, l'armée est lavée.",
+  "Dreyfus écrit à Lucie et tient un journal. Dans ses lettres, il dit son désespoir et sa foi dans la justice de son pays, la même foi qui l'a condamné. Il demande à sa femme de ne pas perdre courage et de ne pas se cacher : il veut qu'elle porte son nom la tête haute.",
+  "#Picquart et Esterhazy",
+  "Le 1er juillet 1895, le lieutenant-colonel Georges Picquart prend la tête du service de renseignements. Quelque temps plus tard, il tombe sur une preuve qui ne colle pas : l'écriture du commandant Esterhazy, un officier criblé de dettes, correspond à celle du bordereau.",
+  "Picquart informe ses supérieurs, qui ne veulent rien savoir. Il insiste, et on l'éloigne, loin de Paris. Ce qu'il sait, il ne peut plus le taire : il confie à des proches ce qu'il a découvert, et l'information remonte, par des chemins détournés, jusqu'à Mathieu Dreyfus. En novembre 1897, Mathieu dénonce publiquement Esterhazy. Le commandant passe en conseil de guerre en janvier 1898. Il est acquitté.",
+  "Dans le même temps, en 1896, l'écrivain Bernard Lazare publie une brochure sur l'erreur judiciaire, et le vice-président du Sénat, Auguste Scheurer-Kestner, se convainc à son tour de l'innocence du capitaine. Zola, dans un article du Figaro, écrit alors que la vérité est en marche et que rien ne l'arrêtera.",
+  "#J'accuse",
+  "!Deux jours plus tard, le 13 janvier 1898, L'Aurore publie en une la lettre de Zola, « J'accuse… ! ».",
+  "Le romancier y accuse nommément l'état-major d'avoir fait condamner un innocent et couvert le coupable. Il sait qu'il sera poursuivi, il le veut : c'est la seule manière de forcer l'affaire devant un tribunal public. Zola est condamné et doit s'exiler en Angleterre. Mais la France est coupée en deux, entre ceux qui défendent l'armée et ceux qui réclament la révision.",
+  "Quelques mois plus tard, en 1898, le ministre de la Guerre lit à la Chambre une pièce censée prouver la culpabilité de Dreyfus. On l'examine de près : c'est un faux, fabriqué par le commandant Henry, le même qui avait juré devant les juges de 1894. Henry avoue. Arrêté, il se suicide le 31 août 1898 au Mont-Valérien.",
+  "La Cour de cassation annule le jugement de 1894 en 1899, et Dreyfus revient d'exil pour être rejugé à Rennes devant un nouveau conseil de guerre. Après des années de Guyane, il est maigre, fatigué, mais debout. Le conseil le condamne une seconde fois, avec des circonstances atténuantes. Le président de la République le gracie quelques jours plus tard. Dreyfus accepte, parce que sa santé ne lui laisse plus guère le choix, mais il veut toujours être reconnu innocent. Esterhazy, lui, finit par avouer, en Angleterre, qu'il est l'auteur du bordereau.",
+  "#Douze ans",
+  "L'affaire durera douze ans. Le 12 juillet 1906, la Cour de cassation annule le jugement de Rennes sans renvoi, et reconnaît Dreyfus innocent. Il est réintégré dans l'armée, et décoré de la Légion d'honneur dans la cour de l'École militaire, celle-là même où on l'avait dégradé onze ans plus tôt. Picquart, qui avait payé son courage de sa carrière, redevient général et entre au gouvernement.",
+  "On ne sait pas tout des motifs détaillés de l'arrêt de 1906. Mais la leçon est ailleurs : un homme est resté debout plus de dix ans parce que d'autres, un frère, un colonel, un romancier, ont refusé de laisser fermer le dossier. La vérité ne s'est pas imposée toute seule. Il a fallu l'obstination de quelques-uns pour qu'elle franchisse la porte."
+ ],
+ "notes": "Retiré : divergence sur la date d'arrivée à l'île du Diable. Ajouté de mémoire (a vérifier) : Esterhazy criblé de dettes, aveux d'Esterhazy en Angleterre, détails de Rennes (1899) et grâce, suicide d'Henry au Mont-Valérien, cérémonie de décoration de 1906 à l'École militaire, Picquart général et au gouvernement. Mercier est ministre de la Guerre. Détail non attesté retiré : dossier secret détails."
+}
