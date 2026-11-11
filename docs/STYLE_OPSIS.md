@@ -101,3 +101,10 @@ Pour lire une histoire actuelle : `python3 tools/v2_show.py <id>` (depuis /home/
 Puis contrôle : `python3 tools/v2_check.py <id>` et corrige jusqu'à obtenir OK.
 
 Avant de rendre : relis chaque version comme un lecteur qui ne connaît rien au sujet. A-t-il envie de continuer après le premier paragraphe ? Voit-il les scènes ? A-t-il appris quelque chose ? La fin lui reste-t-elle ? 
+
+## Compléments (document du 11 novembre)
+
+- Public : toute personne curieuse. Aucun prérequis, sujets complexes rendus compréhensibles, écriture élégante mais jamais élitiste, profondeur suffisante pour les plus curieux, aucune simplification qui déforme la réalité.
+- Personnalité : spectaculaire et divertissante, élégante et intelligente, immersive et cinématographique ; la proportion dépend de l'histoire.
+- Pendant la lecture : aucune référence, note ou lien. À la fin : rubrique « Sources ». En coulisses : chaque fait important vérifiable.
+- Reconstitution : tout élément qui pourrait être pris pour un fait établi est clairement signalé comme reconstitué.
