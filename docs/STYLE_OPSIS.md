@@ -82,7 +82,7 @@ Choisis 12 minutes seulement si le sujet est assez riche ET si tu en connais sol
 Le texte est une liste de chaînes :
 - `"#Titre de section"` : un intertitre évocateur, court, sans point (3 à 4 sections en 3 min, 5 à 7 en 7 min, 7 à 10 en 12 min). La première chaîne est toujours un intertitre ;
 - `"@Lieu, date."` : une ligne de repère, facultative, juste après un intertitre, quand elle aide ;
-- `"!Phrase forte."` : une phrase tirée du récit, mise en exergue (1 en 3 min, 2 à 3 en 7 min, 3 à 4 en 12 min). Une vraie phrase de l'histoire, qui tient seule ;
+- `"!Phrase forte."` : une phrase tirée du récit, mise en exergue (1 en 3 min, 2 à 3 en 7 min, 3 à 4 en 12 min). Cette phrase fait partie du récit et se lit à sa place dans le fil du texte : ne la répète PAS dans le paragraphe d'avant ou d'après ;
 - les autres chaînes sont des paragraphes, courts à moyens (40 à 110 mots).
 Pas de markdown, pas d'astérisques, pas de notes. Guillemets français « ».
 
