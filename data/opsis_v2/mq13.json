@@ -1,0 +1,29 @@
+{
+ "id": "mq13",
+ "fmt": 3,
+ "name": "Dyson : les 5 127 prototypes",
+ "sub": "Dans un abri anglais, de 1979 à 1984, James Dyson teste ses cyclones ; faute de fabricant, son G-Force sort au Japon en 1986.",
+ "blurb": {
+  "b": "Un aspirateur qui perd sa puissance pousse James Dyson à fabriquer, dit-il, 5 127 prototypes dans un abri derrière sa maison. Les fabricants britanniques n'en veulent pas : son G-Force sort au Japon en 1986, et finance l'entreprise qui porte aujourd'hui son nom.",
+  "h": "Des milliers de prototypes, et un aspirateur d'abord vendu au Japon."
+ },
+ "body": [
+  "#Un aspirateur qui s'essouffle",
+  "@Angleterre, fin des années 1970.",
+  "James Dyson ouvre son aspirateur Hoover Junior. Il perd de la puissance et il veut savoir pourquoi. Dans le sac, il trouve la réponse : la poussière a bouché les pores du tissu, et l'air ne passe plus.",
+  "Il a cofondé une petite entreprise qui fabrique la Ballbarrow, une brouette en plastique qui roule sur une boule. Dans l'usine, le système qui aspire la poudre de peinture est peu efficace. Il connaît un principe utilisé dans les scieries : le cyclone, qui sépare la poussière de l'air en le faisant tourner. Il en construit un d'environ 9 mètres pour l'atelier. Puis il colle un cône de carton sur un Hoover dont il a retiré le sac. Ça fonctionne bien.",
+  "!Un cône de carton scotché sur un aspirateur sans sac : tout part de là.",
+  "#Le hangar",
+  "Les administrateurs de la Ballbarrow l'écartent de l'entreprise. Il crée alors sa propre société de recherche, en 1979, avec l'argent de son départ, une seconde hypothèque sur sa maison et le salaire de sa femme, Deirdre, qui enseigne. Les essais se font dans un abri derrière sa maison. Le premier cyclone est en carton. Vers le 2 500e essai, il ajoute à l'intérieur un second cyclone, plus petit, pour retenir les peluches. Au 3 444e, le carton a laissé la place à du laiton roulé, puis plus tard à du plastique.",
+  "Le chiffre célèbre vient de James Dyson lui-même : dans une interview de 2007, il dit avoir fabriqué 5 127 prototypes avant de réussir, donc 5 126 échecs. Personne ne publie de décompte indépendant, et la durée varie selon les récits qui l'évoquent, de quatre à cinq ans.",
+  "#Personne ne veut le fabriquer",
+  "Les grands fabricants d'aspirateurs montrent peu d'intérêt. Les sacs de rechange sont pour eux un revenu rentable, et ils doutent que les clients veuillent voir la saleté dans un bac transparent. Aucun fabricant ni distributeur britannique ne veut du produit.",
+  "Un premier appareil, le Cyclon, sort pourtant en 1983. Zanussi le fabrique, il est vendu au Royaume-Uni par le réseau Kleeneze : quelques centaines d'exemplaires seulement. En avril 1984, Dyson dit avoir envoyé prototypes et plans à Amway pour un accord de licence. L'accord échoue. En janvier 1985, Amway commercialise un appareil que Dyson juge très proche du sien. Il l'attaque en justice, et le litige est réglé en 1991 : les deux parties deviennent co-licenciées.",
+  "#Le Japon",
+  "En 1985, la société japonaise Apex s'intéresse à la licence. En mars 1986, le G-Force entre en production. Rose vif, il se vend au Japon l'équivalent d'environ 2 000 dollars, avec un accessoire de table pensé pour les petits appartements. En 1991, il reçoit un prix à l'International Design Fair.",
+  "!Le Japon a financé l'entreprise qui allait porter son nom.",
+  "Les revenus de la licence japonaise servent à fonder Dyson Appliances en 1991. En janvier 1993, un sous-traitant produit au pays de Galles son modèle à double cyclone ; en mai, Dyson rompt avec lui. Le 1er juillet 1993, le premier aspirateur sort de sa propre usine du Wiltshire.",
+  "Le récit habituel dit que Dyson n'a trouvé personne en Europe et s'est tourné vers le Japon. La réalité est plus nuancée : un modèle sort au Royaume-Uni dès 1983, en petite série. Les dates varient d'ailleurs pour le G-Force, 1983 pour certains, mars 1986 pour l'historique de la société. Quant aux 5 127 prototypes, on peut les citer, pas les vérifier."
+ ],
+ "notes": "Retiré : détail sur l'associé Jeremy Fry (49 % de l'investissement), la comparaison entre notices. À vérifier : décompte des 5 127 prototypes (déclaration de Dyson), dates du G-Force."
+}
