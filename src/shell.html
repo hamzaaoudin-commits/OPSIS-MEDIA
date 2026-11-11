@@ -499,7 +499,7 @@
   .phone.light .bkfoot{background:linear-gradient(0deg,var(--black) 60%,rgba(246,241,231,0))}
   .phone.light .shelf h2 .rn button{background:rgba(24,20,16,.08);color:#171512}
   .phone.light .rtext .turn{background:linear-gradient(90deg,rgba(210,35,44,.1),rgba(210,35,44,0))}
-</style>
+.fin{margin:28px 0 8px;padding:20px;border-radius:16px;background:rgba(127,127,127,.08)}.fin h4{margin:0 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}.fin ul{margin:0 0 18px;padding-left:18px}.fin li{margin:6px 0;line-height:1.5}.fin p{margin:0;line-height:1.55}</style>
 <script>if(window.self!==window.top){document.documentElement.classList.add("embed")}</script>
 <style>html.embed{background:#09090A}.embed body{background:transparent;padding:14px 0 0;overflow:hidden}.embed .caption{display:none}.embed .phone{max-height:none}
   #boot{position:fixed;inset:0;z-index:99999;background:#09090A;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#EDE6DA;font-family:'Hanken Grotesk',system-ui,sans-serif}
@@ -1289,7 +1289,9 @@ var TMSN="Tournage maudit",TMIDS=[];
 
 var LENS=DATA.LENS;var BLURB=DATA.BLURB||{};
 Object.keys(LENS).forEach(function(id){var o=LENS[id];if(STORIES[id]){if(o["3"])STORIES[id].b3=o["3"];if(o["5"])STORIES[id].b5=o["5"];if(o["10"])STORIES[id].b10=o["10"];}});/*LENS-END*/
-var FMT=(typeof DATA!=='undefined'&&DATA.FMT)||{};Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
+var FMT=(typeof DATA!=='undefined'&&DATA.FMT)||{};var FIN=(typeof DATA!=='undefined'&&DATA.FIN)||{};
+function finBlock(id){var f=FIN[id];if(!f)return '';return '<div class="fin"><h4>Ce que vous venez de découvrir</h4><ul>'+f.l.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul><h4>À retenir</h4><p>'+esc(f.r)+'</p></div>';}
+function finNote(id){var f=FIN[id];return f&&f.n?'<p class="src"><b>Note éditoriale.</b> '+esc(f.n)+'</p>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
 function minOf(id,arr){return FMT[id]||lenMin(arr);}
 /* ---- Histoires du jour : publiées depuis la base, sans mise à jour de l'application ---- */
 var DJIDS=[];
@@ -1527,8 +1529,8 @@ function reader(id){
   var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-audio="'+id+'" aria-label="Écouter cette histoire">'+IC.audio+'</button><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+(s.sub?'<p class="sb">'+esc(s.sub)+'</p>':'')+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+(minOf(id,V.arr)>1?' minutes':' minute')+' de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
-  var tail=''+
-    ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+
+  var tail=finBlock(id)+
+    ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+
     '<div class="ract"><button class="btn glass full" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass full'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'+
     '<button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button></div>'+tailExtra(id)+up;
   if(S.mode==='book')return bar+'<div class="bkwrap" id="bkw"><div class="bk rtext" id="bk"><section class="bkcover"><div class="bkpost">'+poster(s.p)+'</div>'+head+'</section>'+body+'<section class="bkend">'+tail+'</section></div></div>'+
