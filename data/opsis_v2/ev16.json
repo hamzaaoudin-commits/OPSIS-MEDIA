@@ -1,29 +1,28 @@
-{"id":"ev16","fmt":7,
-"name":"Le ballon des deux familles est-allemandes",
-"sub":"Thuringe, 1979 : deux familles de la RDA cousent un ballon de taffetas dans un salon, puis traversent la frontière la plus gardée d'Europe en vingt-huit minutes.",
-"blurb":{"b":"En 1978, deux ouvriers d'une usine de Thuringe, Peter Strelzyk et Günter Wetzel, décident de fuir la RDA avec leurs familles. Ils choisissent le ballon. Un premier essai échoue, la Stasi enquête, et la peur monte. Quelques semaines plus tard, huit personnes s'envolent de nuit, dans une nacelle de fortune, au-dessus d'une frontière minée.","h":"Deux familles cousent un ballon et franchissent le rideau de fer en l'air"},
-"body":[
-"#Une idée de l'hiver 1978",
-"@Pößneck, Thuringe, 1978.",
-"Peter Strelzyk et Günter Wetzel travaillent dans la même usine de plastique de Pößneck, une petite ville de Thuringe, en République démocratique allemande. Ils sont amis, ils ont des familles, et la même envie de partir. Le 7 mars 1978, ils décident ensemble de préparer une évasion. La frontière avec l'Ouest passe à moins de quarante kilomètres, mais c'est une des frontières les plus gardées du monde, avec clôtures, mines, chiens et miradors.",
-"Ils écartent d'abord les solutions évidentes. Un tunnel serait trop long à creuser, un hélicoptère exigerait un moteur qu'ils n'ont pas trouvé. L'idée du ballon vient, dit-on, d'une émission de télévision ou d'un article de magazine sur la fête des ballons d'Albuquerque. Ce qui paraît fou devient vite le seul projet réaliste : la frontière est bloquée au sol, mais on ne l'a pas fermée dans le ciel.",
-"#Du tissu à la nacelle",
-"Les deux hommes ne sont pas des spécialistes. Ils apprennent en travaillant. Le premier tissu, du coton, est trop poreux : l'air chaud s'échapperait de partout. Ils achètent du taffetas, par petits lots, dans plusieurs villes, pour ne pas éveiller de soupçons. Les familles cousent les morceaux à la machine à coudre, dans la discrétion de leurs logements, et fabriquent avec des bouteilles de gaz un brûleur qui chauffera l'air.",
-"Le travail est lent, et il doit rester secret. Dans un pays où les voisins surveillent les voisins et où la police politique, la Stasi, lit les courriers, une pièce entière de taffetas dans un salon est un risque. À chaque achat, à chaque nuit de couture, il y a la possibilité qu'un voisin parle.",
-"#Un premier vol raté",
-"Le 3 juillet 1979, la famille Strelzyk décolle vers 1 h 30 d'une clairière dans la forêt. Le ballon monte à environ 2 000 mètres, mais la vapeur d'eau des nuages alourdit l'étoffe, qui redescend à environ 180 mètres de la frontière, dans la zone minée. La famille met neuf heures à en sortir sans être vue, puis marche quatorze kilomètres jusqu'à sa voiture.",
-"!Le ballon abandonné est retrouvé, et la Stasi se met en chasse.",
-"Elle vérifie 800 000 ordonnances de médecins dans le district de Gera, pour retrouver le propriétaire des objets laissés sur place. À la mi-août, elle publie dans un journal la liste de ce qu'elle a trouvé : un baromètre, un canif et une clé à tube. Cela ne donne rien non plus. Mais le temps presse : ils savent qu'on finira par remonter jusqu'à eux, et que les tests de la police se rapprochent.",
-"#Le deuxième ballon",
-"Les deux familles décident de recommencer, plus grand, plus solide. Ils construisent un ballon d'environ 4 000 mètres cubes, avec plus de 1 200 mètres carrés de taffetas, acheté par petits lots dans tout le pays. La charge utile est d'environ 550 kilos, pour huit passagers : les quatre membres de chaque famille, dont des enfants.",
-"Ils choisissent la nuit du 15 au 16 septembre 1979, un peu après 2 heures du matin, pour partir. Dès le décollage, tout ne se passe pas bien. Le tuyau du brûleur est trop long, la flamme monte trop haut et le tissu se déchire. Wetzel rallume le brûleur plusieurs fois. La température dans la nacelle descend à moins huit degrés.",
-"#Vingt-huit minutes",
-"!Le ballon atteint environ 2 500 mètres, puis franchit la frontière.",
-"Le vol dure environ vingt-huit minutes. Dans l'obscurité, ils ne distinguent rien de ce qui se trouve sous eux. Ils ne savent pas s'ils sont déjà passés. Le brûleur brûle, la flamme faiblit, l'altitude baisse lentement. À un moment, le ballon touche le sol. Ils sont à l'ouest, en Bavière, et ils ne le savent pas encore.",
-"Ce n'est qu'après avoir repéré des véhicules de police aux plaques de la RFA que Strelzyk et Wetzel comprennent qu'ils ont réussi. Les huit passagers sortent de la nacelle. Les enfants, épuisés, sont vivants. Derrière eux, de l'autre côté du ciel, la RDA continue d'exister, avec sa frontière, ses mines et ses chiens.",
-"#Ce qui reste",
-"Quelques années plus tard, l'histoire inspire un film américain, puis un film allemand en 2018. Mais l'essentiel tient à l'objet lui-même : un ballon cousu à la machine à coudre, sans formation, sans équipement, par deux ouvriers déterminés. Pour les autorités de la RDA, c'est une humiliation. Pour les Allemands de l'Est, c'est la preuve qu'on peut sortir autrement que par les murs.",
-"On ne sait pas jusqu'où le ballon aurait pu voler sans sa déchirure. Les récits divergent sur la date exacte de la nuit, la durée du vol, l'altitude maximale et le moment où le premier ballon est découvert. Mais ce qui est sûr, c'est l'image : huit personnes dans une nacelle, la nuit, au-dessus d'une frontière que personne ne passait vivant, et un ciel que personne n'avait songé à garder."
-],
-"notes":"Retiré : « la fête des ballons d'Albuquerque » reste attribuée au conditionnel ; détails de lieu de départ et d'arrivée. À vérifier : la composition des familles (quatre personnes chacune), le brûleur à bouteilles de gaz, la machine à coudre, la distance de moins de quarante kilomètres, la façon dont ils comprennent qu'ils sont à l'Ouest (voitures de police), les films américain et allemand, l'atterrissage en Bavière, le chiffre de 800 000 ordonnances."
+{
+ "id": "ev16",
+ "fmt": 3,
+ "name": "Le ballon des deux familles est-allemandes",
+ "sub": "Thuringe, 1979 : deux familles de la RDA cousent un ballon de taffetas dans un salon, puis traversent la frontière la plus gardée d'Europe en vingt-huit minutes.",
+ "blurb": {
+  "b": "En 1978, deux ouvriers d'une usine de Thuringe, Peter Strelzyk et Günter Wetzel, décident de fuir la RDA avec leurs familles. Ils choisissent le ballon. Un premier essai échoue, la Stasi enquête, la peur monte. En septembre 1979, huit personnes s'envolent de nuit dans une nacelle de fortune, au-dessus d'une frontière minée.",
+  "h": "Deux familles cousent un ballon et franchissent le rideau de fer par les airs"
+ },
+ "body": [
+  "#Une idée de l'hiver 1978",
+  "@Pößneck, Thuringe, 1978.",
+  "Peter Strelzyk et Günter Wetzel travaillent dans la même usine de plastique de Pößneck, en RDA. Ils sont amis, ils ont des familles, et la même envie de partir. Le 7 mars 1978, ils décident ensemble de préparer une évasion. Ils abandonnent l'idée d'un hélicoptère, faute de moteur adapté. L'idée du ballon viendrait d'une émission de télévision ou d'un article de magazine sur la fête des ballons d'Albuquerque.",
+  "Le premier tissu, du coton, est trop poreux : l'air chaud s'échapperait de partout. Ils achètent du taffetas par petits lots, dans plusieurs villes, pour ne pas éveiller les soupçons. Dans un pays où la Stasi lit le courrier et où les voisins se surveillent, chaque achat est un risque. Les morceaux sont assemblés à la machine à coudre, dans les logements des deux familles, et les bouteilles de gaz serviront de brûleur. Rien de tout cela ne peut se montrer : une pièce entière de taffetas dans un salon suffirait à les perdre.",
+  "#Un premier vol raté",
+  "Le 3 juillet 1979, la famille Strelzyk décolle vers 1 h 30 d'une clairière dans la forêt et monte à environ 2 000 mètres. La vapeur d'eau des nuages alourdit le ballon, qui redescend à environ 180 mètres de la frontière, dans la zone minée. La famille met neuf heures à en sortir sans être vue, puis marche 14 kilomètres jusqu'à sa voiture.",
+  "!Le ballon abandonné est découvert, et la Stasi enquête.",
+  "Elle vérifie 800 000 ordonnances dans le district de Gera, sans résultat. À la mi-août, elle publie dans un journal les objets retrouvés : un baromètre, un canif et une clé à tube. Cela ne donne rien non plus. Les deux familles savent pourtant que le temps joue contre elles.",
+  "#Le deuxième ballon",
+  "Ils en construisent un plus grand, d'environ 4 000 mètres cubes, avec plus de 1 200 mètres carrés de taffetas achetés par petits lots dans tout le pays. La charge utile est d'environ 550 kilos pour huit passagers, répartis entre les deux familles.",
+  "Ils décollent dans la nuit du 15 au 16 septembre 1979, un peu après 2 heures du matin. Tout ne se passe pas bien : le tuyau du brûleur est trop long, la flamme monte trop haut, et le tissu se déchire. Wetzel rallume le brûleur plusieurs fois. La température dans la nacelle descend à moins huit degrés.",
+  "Le ballon atteint environ 2 500 mètres, puis franchit la frontière. Le vol entier dure à peu près vingt-huit minutes. Dans l'obscurité, ils ne savent pas s'ils sont déjà passés. Quand le ballon se pose, ils sont à l'Ouest. Les huit passagers en sortent vivants, enfants compris.",
+  "#Ce qui reste",
+  "Plus tard, l'histoire inspirera deux films, l'un américain, l'autre allemand. L'essentiel tient pourtant à l'objet : un ballon cousu par des ouvriers sans formation, qui a franchi en une demi-heure ce que des clôtures, des mines et des chiens gardaient au sol. Pour la RDA, c'est une humiliation ; pour ceux qui l'apprennent, la preuve qu'on peut sortir autrement que par les murs.",
+  "On ne sait pas jusqu'où le ballon aurait pu voler sans sa déchirure. Les récits divergent sur la date exacte de la nuit, la durée du vol, l'altitude maximale et le moment où le premier ballon est découvert. Mais l'image demeure : huit personnes dans une nacelle, de nuit, au-dessus d'une frontière que personne ne croyait pouvoir passer par le haut."
+ ],
+ "notes": "Retiré : lieu précis d'atterrissage, détail des véhicules de police. À vérifier : composition des familles (quatre personnes chacune), les deux films (américain 1982, allemand 2018), distance à la frontière, origine de l'idée du ballon, durée du vol."
 }
