@@ -1,12 +1,16 @@
-{"id":"ex21","fmt":7,
-"name":"Gagarine : « Poïekhali ! »",
-"sub":"Baïkonour, 12 avril 1961 : Iouri Gagarine fait un tour de la Terre, s'éjecte de sa capsule avant l'atterrissage, et l'Union soviétique cache ce détail pendant des années.",
-"blurb":{"b":"Le 12 avril 1961, un pilote de 27 ans devient le premier humain dans l'espace. Il fait un tour de la Terre en moins de deux heures. Mais la capsule n'est pas faite pour atterrir avec lui à bord : il s'éjecte et finit en parachute, un détail que l'Union soviétique a longtemps tu.","h":"Il fait un tour de la Terre, puis tombe du ciel en parachute"},
-"body":[
+{
+"id": "ex21",
+"fmt": 3,
+"name": "Gagarine : « Poïekhali ! »",
+"sub": "Baïkonour, 12 avril 1961 : Iouri Gagarine fait un tour de la Terre, s'éjecte de sa capsule avant l'atterrissage, et l'Union soviétique cache ce détail pendant des années.",
+"blurb": {
+"b": "Le 12 avril 1961, un pilote de 27 ans devient le premier humain dans l'espace. Il fait un tour de la Terre en moins de deux heures. Mais la capsule n'est pas faite pour atterrir avec lui à bord : il s'éjecte et finit en parachute, un détail que l'Union soviétique a longtemps tu.",
+"h": "Il fait un tour de la Terre, puis tombe du ciel en parachute"
+},
+"body": [
 "#Un pilote de vingt-sept ans",
 "@Klouchino, 1934 – 1960.",
 "Iouri Gagarine naît le 9 mars 1934 à Klouchino, près de Gjatsk. À la fin de l'adolescence, il entre dans un aéroclub près de Saratov. À 21 ans, il commence sa formation de pilote militaire, et obtient ses ailes en 1957, l'année de Spoutnik. Il devient senior lieutenant en 1959, est sélectionné pour le programme spatial en 1960, et s'entraîne environ douze mois avant d'être choisi comme cosmonaute principal. Au moment du vol, il a 27 ans.",
-"Le choix n'est pas anodin. Il s'agit de désigner l'homme qui sera le premier de l'histoire à quitter la Terre, et le pays tout entier, bientôt, aura les yeux sur lui. Gagarine n'est pas encore une légende. Il est un jeune pilote que ses camarades appréciaient, et auquel on confie, sans lui promettre qu'il reviendra, une machine que personne n'a encore essayée avec un homme à bord.",
 "#Poïekhali",
 "@Baïkonour, 12 avril 1961.",
 "Le départ a lieu le 12 avril 1961 à 6 h 07 (UTC), depuis Baïkonour. À l'appel du lancement, Gagarine répond « Poïekhali ! », c'est-à-dire « Allons-y ! ». Son indicatif est « Cèdre », un pin de Sibérie. Le contrôle au sol, lui, s'appelle « Aube ». Les contrôleurs ne savent pas si une orbite stable est atteinte avant vingt-cinq minutes après le lancement.",
@@ -15,21 +19,20 @@
 "@Orbite terrestre, 12 avril 1961.",
 "Le vol fait un tour, entre 181 et 327 kilomètres d'altitude, sur une trajectoire d'environ 40 000 kilomètres, à une vitesse maximale de 28 260 kilomètres à l'heure. La durée varie selon ce qu'on mesure, de 106 à 118 minutes.",
 "Gagarine décrit ce qu'il voit : la Terre, ses horizons, la mince frontière de lumière autour d'elle. On rapporte qu'il dit combien tout cela est beau. C'est un moment de grâce dans un voyage où tout peut mal tourner.",
-"!Gagarine signale un voyant d'alerte, que les techniciens corrigent au sol.",
-"La durée de vie de l'orbite prévue aurait été de treize jours. L'orbite réelle n'aurait permis la descente qu'après une vingtaine de jours, ce qui rendait les provisions embarquées et la fiabilité du freinage décisives.",
+"La durée de vie de l'orbite prévue aurait été de treize jours, alors que l'orbite réelle n'aurait permis la descente qu'après une vingtaine de jours. Tout reposait donc sur le freinage.",
 "#La rentrée",
 "@Au-dessus de l'Afrique, 12 avril 1961.",
 "Le système automatique déclenche les rétrofusées à la hauteur de la côte ouest de l'Angola, à environ 8 000 kilomètres de chez lui. Un problème de séparation du module d'équipement provoque une dizaine de minutes de culbute avant que tout se détache.",
-"Dans la cabine, Gagarine subit une force de plusieurs fois son poids. Le revêtement de la capsule brûle, une lueur l'enveloppe. C'est le moment où tout dépend des machines, et où il n'a aucune prise sur rien.",
 "#Éjecté",
 "@Région de Saratov, 12 avril 1961.",
 "Il s'éjecte de sa capsule à environ sept kilomètres d'altitude et termine sa descente en parachute. Il atterrit près de Saratov, dans un champ, à proximité de personnes, une paysanne et une enfant, qui s'effraient devant ce géant en combinaison orange. On rapporte qu'il les rassure : il est soviétique, comme elles, il revient de l'espace et doit trouver un téléphone pour appeler Moscou.",
 "!L'Union soviétique cache ce détail pendant des années.",
-"Les règles internationales de l'époque exigent, pour homologuer un record, que le pilote revienne dans son appareil. L'Union soviétique ne dit donc rien de l'éjection et le détail ne sera reconnu que bien plus tard. Rien de cela n'enlève au vol son caractère : Gagarine a fait le tour de la Terre.",
+"Les règles internationales de l'époque exigent, pour homologuer un record, que le pilote revienne dans son appareil. Le récit officiel laisse donc de côté l'éjection, et le détail ne sera reconnu que bien plus tard. Rien de cela n'enlève au vol son caractère : Gagarine a fait le tour de la Terre.",
 "#Après",
 "@Moscou, 1961 – 1968.",
 "Gagarine devient un héros mondial. Il voyage, il est accueilli partout. Il ne retournera jamais dans l'espace. Il reprend l'entraînement comme pilote, et meurt le 27 mars 1968, à 34 ans, dans un accident d'avion d'entraînement, avec son instructeur.",
-"On ne sait pas pourquoi les câbles du module n'ont pas cédé tout de suite, ni la cause de l'indication du voyant. L'endroit précis de l'atterrissage reste discuté, entre Engels et Smelovka. La force de la rentrée aussi, entre 8 g et plus de 10 g. Quant au discours d'avant-départ, il serait spontané selon Gagarine, préenregistré selon l'historien Asif Siddiqi.",
+"On ne sait pas pourquoi les câbles du module n'ont pas cédé tout de suite. L'endroit précis de l'atterrissage reste discuté, entre Engels et Smelovka. La force de la rentrée aussi, entre 8 g et plus de 10 g. Quant au discours d'avant-départ, il serait spontané selon Gagarine, préenregistré selon l'historien Asif Siddiqi.",
 "Reste la phrase de départ. Elle est courte, familière, presque une invitation à un voyage de rien du tout : « Allons-y ! »"
 ],
-"notes":"Ajouté de mémoire : éjection à ~7 km, paysanne et enfant, phrase rapportée au téléphone, mort en 1968 avec son instructeur. Retiré : le hublot « non scellé » de l'ancienne version, remplacé par un « voyant » (formulation prudente, à vérifier). À vérifier : règles de la FAI sur l'homologation, durée du silence sur l'éjection."}
+"notes": "Ajouté de mémoire : éjection à ~7 km, paysanne et enfant, phrase rapportée au téléphone, mort en 1968 avec son instructeur. Retiré : l'épisode du hublot non scellé de l'ancienne version (incertain). À vérifier : règles de la FAI sur l'homologation, durée du silence sur l'éjection."
+}

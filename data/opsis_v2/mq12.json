@@ -1,0 +1,30 @@
+{
+ "id": "mq12",
+ "fmt": 3,
+ "name": "Airbnb : des céréales pour survivre",
+ "sub": "États-Unis, 2008 : à court d'argent, les fondateurs d'Airbnb vendent des céréales « Obama O's » et « Cap'n McCain's » pendant la campagne électorale.",
+ "blurb": {
+  "b": "En 2008, à court d'argent, Brian Chesky et Joe Gebbia vendent des céréales « Obama O's » et « Cap'n McCain's » pendant la campagne présidentielle. L'opération rapporte des dizaines de milliers de dollars et, selon eux, leur ouvre les portes de Y Combinator. Les chiffres divergent selon les récits.",
+  "h": "Des céréales de campagne pour sauver une start-up au bord de la faillite."
+ },
+ "body": [
+  "#La colle chaude",
+  "@San Francisco, été 2008.",
+  "Brian Chesky et Joe Gebbia collent des boîtes en carton à la colle chaude. Ils ont acheté des céréales ordinaires, fait imprimer des étiquettes et dessiné l'emballage eux-mêmes. Sur les boîtes : « Obama O's » et « Cap'n McCain's ».",
+  "Ils n'ont presque plus d'argent. Leur site de location de logements chez l'habitant, dont le nom d'alors, AirBed & Breakfast, rappelait les matelas gonflables et le petit-déjeuner du salon, a ouvert en août 2008. Il ne décolle pas. Depuis octobre 2007, Chesky et Gebbia louent des matelas pneumatiques à des participants d'une conférence de designers, dans leur salon. L'idée a fait un site. Elle n'a pas fait de chiffre d'affaires. Reste à payer les dettes, et la campagne présidentielle offre une idée absurde : vendre du petit-déjeuner.",
+  "#Une idée de campagne",
+  "Les deux boîtes se rattachent à l'élection présidentielle de 2008. L'essentiel des ventes se fait pendant la convention démocrate. La boîte se vend 40 dollars. Les Obama O's partent tous ; les Cap'n McCain's se vendent moins bien.",
+  "!Un produit absurde, un but précis : payer les dettes.",
+  "#Les chiffres divergent",
+  "La somme la plus répétée est 30 000 dollars. Pour certains, ce serait plutôt entre 20 000 et 30 000 ; Chesky et Gebbia auraient eu chacun environ 20 000 dollars de dette après la convention. Le nombre de boîtes change aussi : 1 000 dans plusieurs articles, 800 dans un autre, ce qui donnerait 32 000 dollars et non 30 000. Au moins un de ces chiffres est donc inexact. Personne ne publie de comptabilité précise.",
+  "#Les cafards",
+  "En janvier 2009, les trois fondateurs, avec Nathan Blecharczyk entré en février 2008, suivent la session d'hiver de Y Combinator. L'incubateur apporte 20 000 dollars contre 6 % de l'entreprise.",
+  "L'entretien de sélection se passe mal, raconte-t-on. Un cofondateur tend alors une boîte de céréales à Paul Graham, le fondateur de Y Combinator, et raconte comment ils ont financé leur entreprise. Chesky dit se souvenir que Graham les a comparés à des « cafards » et que c'est pour cela qu'il les a financés. L'image est cruelle, mais elle vise juste : un cafard survit à tout. Le contexte compte : les marchés venaient de s'effondrer, et Graham cherchait des équipes capables de survivre. Un autre récit ajoute que Graham a dit plus tard avoir investi en grande partie à cause de l'histoire des céréales.",
+  "L'investisseur Fred Wilson a refusé, mais il a demandé aux fondateurs de lui laisser une boîte, dont il a parlé sur son blog deux ans plus tard.",
+  "#La suite",
+  "En mars 2009, le nom est raccourci en Airbnb. Le site compte environ 10 000 utilisateurs et 2 500 annonces. En avril, Sequoia Capital investit environ 600 000 dollars.",
+  "Les débuts restent difficiles. En 2009, les réservations demeurent faibles à New York. D'après un récit, les fondateurs vont chez les hôtes photographier eux-mêmes les annonces avec un appareil à 500 dollars. Un programme de photographie professionnelle en naît à l'été 2010.",
+  "Ce qui est établi : les céréales ont existé et elles ont rapporté des dizaines de milliers de dollars. Les 30 000 dollars sont le chiffre repris par la plupart des récits, pas un chiffre audité. Cet argent a tenu l'entreprise quelques mois de plus. On ne sait pas combien de boîtes ont été vendues, ni ce qui a le plus pesé pour Graham : les céréales, l'équipe, ou le marché."
+ ],
+ "notes": "Retiré : slogans des boîtes (blog), 500 boîtes de chaque sorte, 585 000 dollars de Sequoia. À vérifier : le programme de photographie, 6 % pour 20 000 dollars chez Y Combinator, la réaction de Graham, l'allusion à Fred Wilson."
+}
