@@ -1,26 +1,32 @@
-{"id":"mq19","fmt":3,
-"name":"Gillette : 51 rasoirs, puis des millions",
-"sub":"Boston, 1903 : Gillette vend 51 rasoirs la première année. La guerre de 1914-1918 change l'échelle, et la légende du rasoir offert est peut-être fausse",
-"blurb":{"b":"Boston, 1903 : la société de King Camp Gillette vend 51 rasoirs et 168 lames. Un an plus tard, les ventes dépassent 90 000 rasoirs, à 5 dollars pièce. Puis l'armée américaine équipe ses soldats. Mais l'idée que Gillette donnait le rasoir pour vendre les lames pourrait n'être qu'un mythe.","h":"Un rasoir à 5 dollars, 51 acheteurs la première année, des millions en quinze ans."},
-"body":[
-"#Cinquante et un rasoirs",
-"@Boston, Massachusetts, 1903.",
-"La première année de vente, la société de King Camp Gillette vend 51 rasoirs et 168 lames. Presque rien. L'idée est pourtant simple : un rasoir à lame fine, que l'on jette quand elle ne coupe plus. Gillette s'est associé en 1901 à un mécanicien, William Nickerson, qui améliore le manche et conçoit les machines pour fabriquer les lames en série. Il faut environ 5 000 dollars pour lancer la production.",
-"Gillette est aussi un utopiste. Dans son livre The Human Drift, en 1894, il imagine que toute l'industrie américaine soit reprise par une seule société publique. En 1910, il propose à Theodore Roosevelt de présider cette « World Corporation » contre un million de dollars. Roosevelt refuse.",
-"#Un rasoir à cinq dollars",
-"@Washington, 15 novembre 1904.",
-"Le brevet américain n° 775 134 est délivré le 15 novembre 1904. Il protégera le rasoir pendant dix-sept ans. Le prix est élevé : le rasoir, vendu avec 12 lames, coûte 5 dollars, soit selon les sources entre un tiers et la moitié du salaire hebdomadaire d'un ouvrier. Un paquet de lames supplémentaires coûte 1 dollar.",
-"!Un rasoir à 5 dollars, et les clients viennent.",
-"Les ventes décollent pourtant. Pour 1904, plusieurs sources donnent 90 884 rasoirs. En 1905, une filiale s'ouvre à Londres. En 1909, la société a des usines à Paris, Montréal, Berlin et Leicester. En 1915, avant l'entrée en guerre des États-Unis, elle vend 450 000 rasoirs et plus de 70 millions de lames.",
-"#La guerre",
-"@États-Unis, 1917-1918.",
-"Les États-Unis entrent en guerre en 1917. Les règlements militaires obligent chaque soldat à fournir son nécessaire à raser, et un petit kit à lames jetables, sans cuir à repasser, bat les rasoirs concurrents. Cette année-là, la société vend 1,1 million de rasoirs. En 1918, l'armée fournit un kit à chaque militaire. Le Smithsonian conserve un coffret de 1917 « délivré par le gouvernement ».",
-"Les chiffres de la commande varient d'une source à l'autre : 3,5 millions de rasoirs et 32 à 36 millions de lames, selon les récits. La société embauche plus de 500 personnes pour y répondre.",
-"!Des millions d'hommes rentrent avec le rasoir de l'armée.",
-"L'explication courante veut que cette guerre ait créé chez ces hommes l'habitude du rasage quotidien, ensuite entretenue par la publicité. C'est un récit plausible, pas une mesure : on ne connaît pas d'enquête qui compare le rasage des anciens soldats à celui des autres.",
-"#Le mythe de la lame",
-"On attribue à Gillette la formule « donnez le rasoir, vendez les lames ». Le juriste Randal Picker soutient que c'est faux. Pendant la durée du brevet, Gillette garde son rasoir à 5 dollars et ne le subventionne pas. Ce sont des rivaux, comme Ever-Ready et Gem Junior, qui vendent des rasoirs à environ 1 dollar.",
-"Le brevet expire en novembre 1921. Gillette lance un rasoir amélioré à 5 dollars et reconditionne l'ancien, le « Brownie », à 1 dollar. Il vend 2 090 616 jeux de rasoirs en 1920, puis 4 248 069 en 1921. À l'automne 1921, un grand magasin vend un coffret Brownie 85 cents, contre 88 cents pour des coffrets comparables de ses concurrents.",
-"Picker laisse la question ouverte : qu'est-ce qui, au fond, retenait le client ? La qualité des lames, l'habitude, ou un autre verrou entre le rasoir et la lame ? Cinquante et un rasoirs vendus en 1903 ; quelques années plus tard, un pays en guerre en commande des millions. Entre les deux, une idée de rasoir jetable, un brevet, et une explication qui, elle, ne se jette toujours pas."
-],
-"notes":"Retiré : discordances de chiffres sur lames 1904, prix de 20 lames, noms de sites. À vérifier : 5 000 dollars de lancement, chiffres de commande militaire, ventes 1920-1921 et prix Sears (ici « grand magasin »)."}
+{
+ "id": "mq19",
+ "fmt": 3,
+ "name": "Gillette : 51 rasoirs, puis des millions",
+ "sub": "Boston, 1903 : Gillette vend 51 rasoirs la première année. La guerre de 1914-1918 change l'échelle, et la légende du rasoir offert est peut-être fausse",
+ "blurb": {
+  "b": "Boston, 1903 : la société de King Camp Gillette vend 51 rasoirs et 168 lames. Un an plus tard, les ventes dépassent 90 000 rasoirs, à 5 dollars pièce. Puis l'armée américaine équipe ses soldats. Mais l'idée que Gillette donnait le rasoir pour vendre les lames pourrait n'être qu'un mythe.",
+  "h": "Un rasoir à 5 dollars, 51 acheteurs la première année, des millions en quinze ans."
+ },
+ "body": [
+  "#Cinquante et un rasoirs",
+  "@Boston, Massachusetts, 1903.",
+  "La première année de vente, la société de King Camp Gillette vend 51 rasoirs et 168 lames. Presque rien. L'idée est pourtant simple : un rasoir à lame fine, que l'on jette quand elle ne coupe plus. Gillette s'est associé en 1901 à un mécanicien, William Nickerson, qui améliore le manche et conçoit les machines pour fabriquer les lames en série. Il faut environ 5 000 dollars pour lancer la production.",
+  "Gillette est aussi un utopiste. Dans son livre The Human Drift, en 1894, il imagine que toute l'industrie américaine soit reprise par une seule société publique. En 1910, il propose à Theodore Roosevelt de présider cette « World Corporation » contre un million de dollars. Roosevelt refuse.",
+  "#Un rasoir à cinq dollars",
+  "@Washington, 15 novembre 1904.",
+  "Le brevet américain n° 775 134 est délivré le 15 novembre 1904. Il protégera le rasoir pendant dix-sept ans. Le prix est élevé : le rasoir, vendu avec 12 lames, coûte 5 dollars, soit entre un tiers et la moitié du salaire hebdomadaire d'un ouvrier. Un paquet de lames supplémentaires coûte 1 dollar.",
+  "!Un rasoir à 5 dollars, et les clients viennent.",
+  "Les ventes décollent pourtant. Pour 1904, on compte 90 884 rasoirs vendus. En 1905, une filiale s'ouvre à Londres. En 1909, la société a des usines à Paris, Montréal, Berlin et Leicester. En 1915, avant l'entrée en guerre des États-Unis, elle vend 450 000 rasoirs et plus de 70 millions de lames.",
+  "#La guerre",
+  "@États-Unis, 1917-1918.",
+  "Les États-Unis entrent en guerre en 1917. Les règlements militaires obligent chaque soldat à fournir son nécessaire à raser, et un petit kit à lames jetables, sans cuir à repasser, bat les rasoirs concurrents. Cette année-là, la société vend 1,1 million de rasoirs. En 1918, l'armée fournit un kit à chaque militaire. Le Smithsonian conserve un coffret de 1917 « délivré par le gouvernement ».",
+  "Les chiffres de la commande varient : on parle de 3,5 millions de rasoirs et de 32 à 36 millions de lames. La société embauche plus de 500 personnes pour y répondre.",
+  "!Des millions d'hommes rentrent avec le rasoir de l'armée.",
+  "L'explication courante veut que cette guerre ait créé chez ces hommes l'habitude du rasage quotidien, ensuite entretenue par la publicité. C'est un récit plausible, pas une mesure : on ne connaît pas d'enquête qui compare le rasage des anciens soldats à celui des autres.",
+  "#Le mythe de la lame",
+  "On attribue à Gillette la formule « donnez le rasoir, vendez les lames ». Le juriste Randal Picker soutient que c'est faux. Pendant la durée du brevet, Gillette garde son rasoir à 5 dollars et ne le subventionne pas. Ce sont des rivaux, comme Ever-Ready et Gem Junior, qui vendent des rasoirs à environ 1 dollar.",
+  "Le brevet expire en novembre 1921. Gillette lance un rasoir amélioré à 5 dollars et reconditionne l'ancien, le « Brownie », à 1 dollar. Il vend 2 090 616 jeux de rasoirs en 1920, puis 4 248 069 en 1921. À l'automne 1921, un grand magasin vend un coffret Brownie 85 cents, contre 88 cents pour des coffrets comparables de ses concurrents.",
+  "Picker laisse la question ouverte : qu'est-ce qui, au fond, retenait le client ? La qualité des lames, l'habitude, ou un autre verrou entre le rasoir et la lame ? Cinquante et un rasoirs vendus en 1903 ; quelques années plus tard, un pays en guerre en commande des millions. Entre les deux, une idée de rasoir jetable, un brevet, et une explication que personne n'a encore tranchée."
+ ],
+ "notes": "Retiré : discordances de chiffres sur lames 1904, prix de 20 lames, noms de sites. À vérifier : 5 000 dollars de lancement, chiffres de commande militaire, ventes 1920-1921 et prix Sears (ici « grand magasin »)."
+}
