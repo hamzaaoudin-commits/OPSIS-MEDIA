@@ -1,0 +1,35 @@
+{
+ "id": "ld29",
+ "fmt": 3,
+ "name": "Nicolas II : le sous-sol de la maison Ipatiev",
+ "sub": "Iekaterinbourg, nuit du 16 au 17 juillet 1918 : la famille du dernier tsar est réveillée et conduite au sous-sol ; l'identification de ses restes ne s'achève qu'en 2009",
+ "blurb": {
+  "b": "Dans la nuit du 16 au 17 juillet 1918, à Iekaterinbourg, la famille du dernier tsar est réveillée et conduite au sous-sol de la maison Ipatiev. Onze personnes y sont tuées. Qui a donné l'ordre, où ont été cachés les corps : l'enquête se poursuivra jusqu'en 2009.",
+  "h": "Une nuit de juillet 1918, onze morts, et des corps cherchés pendant presque un siècle."
+ },
+ "body": [
+  "#Réveillés dans la nuit",
+  "@Iekaterinbourg, nuit du 16 au 17 juillet 1918.",
+  "Dans la maison Ipatiev, une demeure réquisitionnée au centre d'Iekaterinbourg, la famille du dernier tsar est réveillée en pleine nuit. Cela fait plusieurs semaines qu'elle y est prisonnière, sous la garde de Yakov Yurovsky, un bolchevik chargé de la surveiller. La guerre civile fait rage : les troupes blanches, hostiles au pouvoir bolchevique, approchent de la ville, et personne ne doit pouvoir libérer les Romanov.",
+  "Le docteur Eugène Botkin, médecin de la famille, transmet l'ordre de s'habiller : on va les déplacer, pour leur sécurité. Ils descendent au sous-sol, dans une petite pièce. Nicolas II est là, avec la tsarine Alexandra, leurs quatre filles, Olga, Tatiana, Maria, Anastasia, et leur fils Alexeï, treize ans, malade depuis toujours. Avec eux, quatre fidèles qui ont choisi de les suivre : Botkin, la femme de chambre Anna Demidova, le valet Alexeï Trupp et le cuisinier Ivan Kharitonov.",
+  "#Le sous-sol",
+  "@Quelques minutes plus tard.",
+  "Yurovsky lit l'ordre d'exécution. Nicolas, d'après son propre récit, aurait répondu par une exclamation de surprise, une question à peine formée, avant que les coups de feu ne partent. La scène est chaotique, très éloignée de l'exécution rapide qui était prévue. Les balles ricochent. On dit que des bijoux cousus dans les vêtements de la tsarine et des enfants ont dévié certains tirs, ce qui a prolongé l'agonie. Les récits diffèrent sur le détail.",
+  "Ce qui est sûr, c'est que personne n'en sort vivant : onze morts, dans une pièce de quelques mètres carrés.",
+  "!Le tsar, sa femme et leurs cinq enfants ne sont plus.",
+  "Les Romanov régnaient sur la Russie depuis plus de trois siècles. Leur dernier représentant avait abdiqué seize mois plus tôt, en mars 1917, et n'était plus qu'un prisonnier parmi d'autres, dont l'avenir dépendait d'un pouvoir qui hésitait.",
+  "#Qui a ordonné",
+  "@Juillet 1918.",
+  "Qui a donné l'ordre ? La question divise encore. Les comptes rendus soviétiques officiels ont rejeté la responsabilité sur le soviet régional de l'Oural, qui aurait agi seul. Beaucoup d'historiens occidentaux désignent Lénine et Iakov Sverdlov, président du Comité exécutif central. Une enquête russe menée en 2011 n'a trouvé aucun ordre écrit. On ne le saura peut-être jamais.",
+  "Les premiers communiqués officiels n'annoncent que l'exécution de Nicolas : sa famille aurait été « transférée en lieu sûr ». Le silence, puis la disparition secrète des corps, ont alimenté pendant des décennies des rumeurs de survie, et plusieurs femmes se sont présentées comme la grande-duchesse Anastasia. Anna Anderson, la plus célèbre, fut démentie par l'ADN après sa mort.",
+  "#Les récits de Yurovsky",
+  "@1920 à 1922.",
+  "Yurovsky a laissé plusieurs récits de la nuit, dont un mémoire de 1922. Les historiens les jugent contradictoires. Il aurait exprimé des remords devant un journaliste britannique en 1920, alors que la lettre qu'il écrira à ses enfants vers la fin de sa vie n'en exprime aucun. Qui était-il vraiment, un exécutant froid, un homme hanté ? Ses textes ne permettent pas de trancher.",
+  "#Les corps",
+  "@1918 à 2009.",
+  "Les corps sont emmenés dans la forêt, déplacés, puis enterrés sous une route à Porosenkov Log. En mai 1979, deux amateurs, Alexander Avdonin et Geli Ryabov, retrouvent la fosse principale et gardent longtemps le secret. En 1991, les autorités exhument les restes, dans une opération trop rapide qui abîme des indices. La maison Ipatiev, elle, a déjà été rasée en 1977.",
+  "Des analyses ADN permettent d'identifier le tsar, la tsarine et trois de leurs filles. En 1998, ces restes sont inhumés à Saint-Pétersbourg, dans la forteresse Pierre-et-Paul, avec les tsars qui les ont précédés. Une seconde fosse, découverte en 2007, contient les restes d'un garçon et d'une jeune fille, identifiés comme ceux d'Alexeï et de l'une de ses sœurs, Maria ou Anastasia, on ne sait pas laquelle avec certitude. Les analyses se terminent en 2009.",
+  "Aujourd'hui, une église se dresse sur l'emplacement de la maison Ipatiev. Elle porte un nom qui dit à elle seule ce que la Russie fait de ce passé : l'église sur le Sang."
+ ],
+ "notes": "Retiré : citation du télégramme de Yurovsky, mot de Nicolas (rapporté seulement dans le récit de Yurovsky), heure exacte du réveil. À vérifier : démolition de la maison en 1977, DNA d'Anna Anderson, détails de l'identification de 2007, nom 'Église sur le Sang'."
+}

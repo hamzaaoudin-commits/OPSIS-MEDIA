@@ -1,0 +1,39 @@
+{
+ "id": "ld25",
+ "fmt": 3,
+ "name": "Senna : un drapeau autrichien",
+ "sub": "Imola, 1er mai 1994 : la veille de la mort de Ratzenberger, Senna glisse un drapeau autrichien plié dans son cockpit ; au septième tour, à Tamburello, sa Williams quitte la piste",
+ "blurb": {
+  "b": "Imola, 1994. Après la mort de Roland Ratzenberger et l'accident de Barrichello, Ayrton Senna prend pourtant le départ avec un drapeau autrichien plié dans le cockpit. Quelques tours plus tard, à Tamburello, sa Williams quitte la piste. Un week-end qui a changé la sécurité en Formule 1.",
+  "h": "Un drapeau plié, un week-end fatal, une course qui n'a pas fini."
+ },
+ "body": [
+  "#Un drapeau plié",
+  "@Imola, dimanche 1er mai 1994.",
+  "Dans le cockpit de la Williams numéro 2, près du volant, un drapeau autrichien plié. On croit qu'Ayrton Senna comptait le déployer au tour d'honneur, s'il gagnait, en mémoire de Roland Ratzenberger, mort la veille. Personne ne saura jamais ce qu'il comptait en faire, car la course ne lui laissera pas le temps de le montrer.",
+  "Il a 34 ans, trois titres mondiaux, et il arrive à Imola avec une saison qui tourne mal : deux courses, deux abandons, au volant d'une voiture que Williams n'a pas encore réussi à rendre docile. Il a pourtant signé la pole position. Ce week-end-là, la piste lui a déjà pris beaucoup.",
+  "#Vendredi et samedi",
+  "@29 et 30 avril 1994.",
+  "Le vendredi, dans les essais, Rubens Barrichello, son jeune compatriote, s'envole à la chicane Variante Bassa, à plus de 200 km/h. Il s'en sort avec le nez et un bras cassés, soigné par le docteur Sid Watkins, médecin de la Formule 1. Senna court le voir à l'infirmerie.",
+  "Le samedi, c'est plus grave. Roland Ratzenberger, pilote autrichien débutant en Formule 1, sort de la piste à la courbe Villeneuve, à environ 300 km/h, après la rupture d'une partie de l'aileron avant de sa Simtek. Il meurt à l'hôpital. Senna, bouleversé, se fait conduire sur les lieux et y reste longtemps. Watkins, son ami, lui suggère de renoncer à courir, et même d'envisager de se retirer.",
+  "#Le départ",
+  "@1er mai 1994.",
+  "Il court. Au départ, Pedro Lamy percute la voiture de JJ Lehto, immobilisée sur la grille. Une roue et des débris sont projetés dans la tribune : huit spectateurs et un policier sont blessés. La voiture de sécurité entre en piste et mène le peloton pendant cinq tours.",
+  "Derrière elle, Senna roule au ralenti et, à plusieurs reprises, fait signe à son conducteur d'accélérer : à cette allure, ses pneus refroidissent et la voiture perd de l'adhérence. Le drapeau reste plié dans le cockpit.",
+  "#Tamburello",
+  "@Tour 7.",
+  "La course repart. Au septième tour, Senna aborde Tamburello, une courbe rapide à gauche qui longe une rivière, protégée seulement par un mur de béton. Selon les données de télémétrie, il y entre à 309 km/h. La Williams quitte la trajectoire, file tout droit et touche le mur à environ 211 km/h. La course est interrompue.",
+  "Dans la voiture médicale, Sid Watkins arrive parmi les premiers. Il comprend tout de suite que la situation est sans espoir.",
+  "!Watkins dira plus tard qu'il avait l'air serein.",
+  "L'hélicoptère se pose à l'hôpital Maggiore de Bologne vers 15 heures. Le décès est annoncé à 18 h 40. La justice italienne retiendra en 1997 une autre heure comme heure légale, 14 h 17, celle de la mort cérébrale au regard du droit italien.",
+  "#Le procès",
+  "@1994 à 2007.",
+  "Une expertise établit que la colonne de direction avait cédé : elle avait été coupée, rallongée avec un tube plus petit, puis soudée avec des plaques de renfort avant la course. Williams soutient qu'elle s'est brisée sous l'effet du choc. Le 16 décembre 1997, Frank Williams et cinq autres personnes sont acquittés.",
+  "Les procédures se poursuivent pourtant des années, jusqu'en 2007. Le Brésil, lui, a décrété trois jours de deuil national et suivi les obsèques de São Paulo comme celles d'un chef d'État.",
+  "#Ce qu'on ne saura pas",
+  "@Après Imola.",
+  "On ne saura pas ce que Senna ressentait dans la chicane, ni pourquoi la voiture a quitté la piste, ni si le drapeau avait un autre sens que celui qu'on lui prête. Seuls les faits restent : un week-end où deux pilotes sont morts à vingt-quatre heures d'écart.",
+  "Ils ont fait bouger les choses. Dès l'année suivante, la courbe de Tamburello disparaît du circuit, remplacée par une chicane ; les voitures et les circuits deviennent plus sûrs, et il faudra attendre vingt ans pour qu'un pilote soit de nouveau mortellement blessé en Grand Prix. Quant au drapeau autrichien, il appartient à ces objets minuscules qui, dans une histoire, finissent par porter tout le poids de ce qui n'a pas eu lieu."
+ ],
+ "notes": "Retiré : détails flous (vitesse exacte de Barrichello, tour 7 ou 8 tranché sur 7, 220 km/h). À vérifier : 14 h 17 / 18 h 40, accident de Bianchi (2014) comme repère des vingt ans, présence de Senna à l'infirmerie après l'accident de Barrichello."
+}

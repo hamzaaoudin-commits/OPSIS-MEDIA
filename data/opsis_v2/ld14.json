@@ -1,0 +1,32 @@
+{
+ "id": "ld14",
+ "fmt": 3,
+ "name": "Darwin : pas la moindre peur",
+ "sub": "Kent, avril 1882 : Darwin meurt à Down House, entouré des siens. Il voulait un cercueil de menuisier et une tombe au village ; l'abbaye de Westminster en décide autrement.",
+ "blurb": {
+  "b": "Le 19 avril 1882, Darwin meurt à Down House. Il avait demandé un cercueil simple, fait par le menuisier du village, et une tombe dans le cimetière de Downe. Mais l'Angleterre en a décidé autrement : en quelques jours, ses amis obtiennent pour lui une place à Westminster. Le récit d'un enterrement qui change de lieu.",
+  "h": "Darwin voulait la paix d'un village, l'Angleterre lui offre Westminster"
+ },
+ "body": [
+  "#La veille",
+  "@Down House, 18 avril 1882.",
+  "Depuis des décennies, Charles Darwin est malade d'une façon que personne n'a su expliquer : malaises, nausées, faiblesse. À Down House, dans le Kent, il a organisé sa vie autour de cette fatigue, sans cesser d'écrire. Son dernier livre, sur les vers de terre, a paru l'année précédente, et il comptait faire de nouvelles expériences si sa santé s'améliorait.",
+  "Le 18 avril 1882, une attaque cardiaque le frappe. Elle sera la dernière. Sa femme Emma et plusieurs de leurs enfants devenus adultes se rassemblent autour de lui.",
+  "#Les dernières paroles",
+  "@19 avril 1882.",
+  "On rapporte que, à Emma, il dit qu'il n'avait pas la moindre peur de la mort. Plus tard, quand elle est allée se reposer, ses dernières paroles cohérentes seraient allées à son fils Francis et à sa fille Henrietta : cela valait presque la peine d'être malade pour être soigné par eux. Les récits diffèrent sur celle des deux phrases qui fut la dernière.",
+  "!Il meurt à 16 heures, le mercredi 19 avril 1882, à soixante-treize ans.",
+  "Une rumeur courra bientôt, selon laquelle il se serait converti à la religion sur son lit de mort. Sa fille la démentira.",
+  "#Un cercueil de menuisier",
+  "@Downe, 19 – 21 avril 1882.",
+  "La famille avait tout prévu. Darwin serait enterré dans le cimetière de l'église Saint-Mary, à Downe, au milieu de ses voisins. Son corps est donc placé dans un cercueil simple, fabriqué par le menuisier du village, John Lewis, comme il le souhaitait. Une plaque de laiton porte son nom, la date de sa mort et son âge : soixante-treize ans. Tout est prêt pour une cérémonie de village, discrète, comme sa vie à Downe.",
+  "!Le 21 avril, un mémoire proposant l'abbaye de Westminster est préparé par Sir John Lubbock et d'autres députés.",
+  "Le doyen de l'abbaye, George Granville Bradley, alors en France, est consulté et télégraphie son accord. En quelques jours, le projet change d'échelle : ce qui devait être un enterrement de famille devient une affaire nationale. Darwin ne sera pas enterré dans le Kent, mais à Londres, au cœur de l'Angleterre.",
+  "#Westminster",
+  "@Abbaye de Westminster, 25 – 26 avril 1882.",
+  "Un second cercueil, plus coûteux, est livré par T. et W. Banting, et le corps y est transféré. Pour la nuit du 25, il repose dans la chapelle de Saint-Faith, à l'intérieur de l'abbaye. Les obsèques ont lieu à midi, le 26 avril. La cloche de l'abbaye sonne pendant environ quinze minutes.",
+  "Parmi ceux qui portent le cercueil figurent Thomas Huxley, qui avait défendu ses idées avec tant d'ardeur, le botaniste Joseph Hooker, son ami de longue date, et Alfred Russel Wallace, dont les travaux avaient croisé les siens. Darwin est enterré près de Newton, et près de l'astronome John Herschel.",
+  "Il avait voulu la simplicité d'une tombe de village, et sa famille l'avait préparée. Il aura eu le cercueil du menuisier, puis la cloche de Westminster. Une vie discrète, qui avait changé la manière dont les hommes se regardent, est finalement saluée par le pays entier. Sur son cercueil de campagne, on avait gravé son âge. Sur celui de Westminster, un pays a écrit tout le reste."
+ ],
+ "notes": "Retiré : cause exacte du décès, enfants présents, absence d'Emma aux obsèques, nombre précis de porteurs/signataires ; origine de l'idée de Westminster (Lubbock cité à titre prudent). À vérifier : liste des porteurs (Huxley, Hooker, Wallace), voisinage de la tombe (Herschel, Newton), nom de la maison Banting."
+}

@@ -1,0 +1,30 @@
+{
+ "id": "ld05",
+ "fmt": 3,
+ "name": "Kennedy : une matinée sous la pluie",
+ "sub": "Fort Worth et Dallas, 22 novembre 1963 : Kennedy parle sous la bruine, prend l'avion pour Dallas et entre dans Dealey Plaza à 12 h 30",
+ "blurb": {
+  "b": "Le 22 novembre 1963, John F. Kennedy parle sans imperméable sous la bruine de Fort Worth, puis s'envole pour Dallas, où le soleil s'est levé. Il voyage, sourit, serre des mains. À 12 h 30, sa voiture ouverte entre dans Dealey Plaza. Il lui reste quelques secondes avant la première détonation.",
+  "h": "Une matinée de pluie, un ciel dégagé, une voiture ouverte"
+ },
+ "body": [
+  "#Fort Worth",
+  "@Vendredi 22 novembre 1963, matin.",
+  "Il bruine ce matin-là à Fort Worth. À 8 h 45, Kennedy quitte l'hôtel Texas sans imperméable pour parler à environ 8 000 personnes dans le parking. Johnson, Yarborough et Connally se tiennent près de lui ; Mme Kennedy est restée dans la suite. Il parle de la défense et de l'espace, puis lance, sous l'eau : « Il n'y a pas de cœurs faibles à Fort Worth. »",
+  "Au petit-déjeuner de la chambre de commerce, il entre par la cuisine sous les applaudissements, et sa femme le rejoint à sa demande. On lui offre un chapeau et des bottes texans, qu'il ne porte pas. Les Kennedy regagnent leur suite peu après 10 heures, dans une période libre rare sur ce voyage au programme chargé.",
+  "#Vers Dallas",
+  "@Vers 11 h 25.",
+  "L'avion quitte Carswell à 11 h 25 pour un vol d'environ treize minutes. Air Force One atterrit à Love Field à 11 h 37 avec les Kennedy et le gouverneur et Mme Connally ; les Johnson arrivent par un autre avion. À Dallas, le ciel s'est dégagé. Le cortège doit parcourir environ seize kilomètres jusqu'au Trade Mart, où le discours est prévu pour 13 heures, en passant devant le dépôt de livres scolaires du Texas.",
+  "Sur le trajet, la foule est dense et chaleureuse. Kennedy est assis à l'arrière de la voiture découverte, Mme Kennedy à sa gauche, dans un tailleur rose ; les Connally sont devant eux.",
+  "#Dealey Plaza",
+  "@22 novembre 1963, 12 h 30.",
+  "!À 12 h 30, à hauteur du dépôt de livres scolaires, des coups de feu partent d'une fenêtre du sixième étage.",
+  "Quelques secondes plus tôt, rapporte-t-on, Nellie Connally s'était retournée pour dire au président qu'on ne pouvait pas prétendre que Dallas ne l'aimait pas. Il aurait répondu qu'en effet, on ne pouvait pas. La commission Warren dénombrera trois coups : deux atteignent le président, dont un à la tête ; le gouverneur Connally est grièvement touché, mais il survivra.",
+  "#Parkland",
+  "@Après-midi du 22 novembre 1963.",
+  "La voiture file vers l'hôpital Parkland, dont les médecins jugent l'état du président désespéré. Il est déclaré mort vers 13 heures, après les derniers sacrements. Kennedy avait quarante-six ans.",
+  "Dans l'après-midi, Lyndon Johnson prête serment à bord d'Air Force One, sur le tarmac de Love Field, Mme Kennedy debout à ses côtés dans le même tailleur. Un homme, Lee Harvey Oswald, est arrêté ; il sera tué deux jours plus tard sans avoir été jugé. La commission Warren conclura qu'il a agi seul. Une partie du public en doute encore.",
+  "On ne saura jamais ce que Kennedy aurait fait du pouvoir qui lui restait. Ce voyage avait été préparé comme une tournée de campagne, un exercice d'accueil et de sourires. Il y avait eu la pluie, la bouffée de soleil, la foule contente. Il avait refusé l'imperméable le matin, il n'en avait pas eu besoin l'après-midi."
+ ],
+ "notes": "Retiré : détails de seconde main du récit de Byrne (appel à Garner, remarque rapportée par Manchester), nom du prêtre, heure exacte de la prestation de serment de Johnson, composition du dispositif de sécurité, blessures exactes. À vérifier : propos de Nellie Connally, « tournée de campagne », tailleur rose."
+}

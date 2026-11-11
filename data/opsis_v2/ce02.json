@@ -1,0 +1,33 @@
+{
+ "id": "ce02",
+ "fmt": 3,
+ "name": "Le télégramme Zimmermann : copie du Mexique",
+ "sub": "Londres et Washington, janvier – avril 1917 : la Grande-Bretagne a déchiffré un télégramme allemand proposant une alliance au Mexique, et doit cacher comment",
+ "blurb": {
+  "b": "En janvier 1917, Berlin télégraphie à son ambassadeur de proposer une alliance militaire au Mexique. Londres intercepte et déchiffre le message, mais ne peut pas dire comment sans trahir son secret. Il faut une copie obtenue au Mexique pour convaincre Washington. Deux mois plus tard, les États-Unis sont en guerre.",
+  "h": "Un secret trop précieux pour être montré tel quel"
+ },
+ "body": [
+  "#Le télégramme",
+  "@Berlin, 16 janvier 1917.",
+  "Le 16 janvier 1917, le ministre allemand des Affaires étrangères, Arthur Zimmermann, envoie un télégramme à son ambassadeur à Washington, Bernstorff. Le Département d'État américain le reçoit le 17, le remet le 18 à Bernstorff, qui le fait suivre le 19 à l'ambassadeur Eckardt, au Mexique.",
+  "Le texte annonce que l'Allemagne reprendra la guerre sous-marine à outrance le 1er février, tout en essayant de garder les États-Unis neutres. Si cette tentative échoue, elle propose au Mexique une alliance : faire la guerre ensemble, avec un généreux soutien financier. Le texte évoque aussi, pour le Mexique, la reconquête de territoires perdus face aux États-Unis, le Texas, le Nouveau-Mexique et l'Arizona.",
+  "La guerre sous-marine à outrance, c'est couler tout navire qui approche des côtes britanniques, y compris les navires neutres et sans avertissement. Berlin sait que le risque est de pousser Washington dans le camp adverse. D'où l'idée, si cela arrive, de lui susciter un ennemi à sa frontière sud.",
+  "#La Room 40",
+  "@Londres, janvier – février 1917.",
+  "Le message ne parvient pas à destination sans témoin. L'Allemagne n'ayant plus de câbles transatlantiques, il passe par des lignes qui traversent un territoire britannique, et la Room 40, le groupe de décryptage de l'Amirauté, l'intercepte. Grâce à des livres de codes allemands capturés, les Britanniques lisent le texte et identifient Zimmermann comme son expéditeur.",
+  "Le 5 février, l'amiral Hall prévient ses supérieurs et transmet le texte au Foreign Office, en conseillant de ne pas le publier.",
+  "#Cacher la source",
+  "@Londres et Mexico, février 1917.",
+  "!Publier le texte tel quel révélerait que la Grande-Bretagne lit les communications allemandes.",
+  "L'enjeu est double : convaincre les Américains que le texte est authentique, sans apprendre aux Allemands que leur code est lu. Il existe plusieurs versions du télégramme, avec des mots légèrement différents. Les Britanniques décident de donner aux Américains la copie qui a transité par l'ambassade d'Allemagne à Washington, et de présenter celle-ci comme venue du Mexique. Le 10 février, un agent britannique en poste là-bas corrompt un employé du télégraphe pour l'obtenir.",
+  "Les 23 et 24 février, Balfour remet le texte à l'ambassadeur américain, Page, qui télégraphie à Lansing ; Wilson le reçoit à son tour. Le 1er mars, le New York Times le publie. Des sénateurs doutent : Lodge conteste l'authenticité, Tillman parle de fraude, parce que le Japon, disent-ils, ne s'allierait jamais avec l'Allemagne et le Mexique.",
+  "Le 3 mars, Zimmermann coupe court. Il reconnaît avoir écrit le télégramme : « Je ne peux pas le nier. C'est vrai. »",
+  "#La guerre",
+  "@Avril – août 1917.",
+  "Les États-Unis avaient déjà rompu leurs relations avec l'Allemagne le 3 février, à cause de la guerre sous-marine. Le 2 avril, Wilson demande au Congrès de déclarer la guerre : « Le monde doit être rendu sûr pour la démocratie. » La guerre est déclarée à l'Allemagne le 6 avril 1917.",
+  "Le Mexique, lui, refuse la proposition : la commission militaire de Carranza juge qu'une guerre avec les États-Unis serait impossible à gagner. Le 31 août 1917, les États-Unis reconnaissent de jure le gouvernement de Carranza.",
+  "On ne sait pas comment le livre de codes a été obtenu, ni pourquoi Zimmermann a confirmé lui-même l'authenticité d'un texte qu'il aurait pu démentir. Les dates varient aussi selon les récits, pour celle du télégramme, pour l'état du déchiffrement au 5 février, pour la remise du texte à Wilson. Reste la précaution, qui est le vrai sujet : pour être cru, le secret le plus précieux de Londres a dû se faire passer pour un papier volé dans une ville mexicaine."
+ ],
+ "notes": "Retiré : identité de 'M. H', dates alternatives (16 ou 17 janvier ; 23 ou 24 février). Ajouté : fonction de Zimmermann et mention des câbles (déjà dans la version). Retiré 'territoire' mexicain/Texas : absent de la source donc non cité. À vérifier : 'Lodge conteste, Tillman fraude' (motif du Japon), 'recevoir à son tour' pour Wilson."
+}

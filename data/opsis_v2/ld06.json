@@ -1,0 +1,29 @@
+{
+ "id": "ld06",
+ "fmt": 3,
+ "name": "Molière : la quatrième",
+ "sub": "Paris, 17 février 1673 : Molière joue Argan pour la quatrième fois dans Le Malade imaginaire, se sent mal, est ramené rue de Richelieu et meurt dans la soirée",
+ "blurb": {
+  "b": "Le 17 février 1673, Molière joue Argan, le malade imaginaire, pour la quatrième fois. Il est vraiment malade, on lui a conseillé de ne pas monter sur scène. Il joue pourtant, cache sa douleur derrière une grimace, et le public rit. Il meurt le soir même, sans prêtre. La légende fera de lui un mort sur scène.",
+  "h": "Un comédien malade joue un malade imaginaire jusqu'au bout"
+ },
+ "body": [
+  "#Le soir de la quatrième",
+  "@Palais-Royal, 17 février 1673.",
+  "Le Malade imaginaire est une comédie-ballet en trois actes, créée une semaine plus tôt par la Troupe du Roi, avec une musique de Marc-Antoine Charpentier. Molière y joue Argan, un homme qui se croit mourant et se livre aux médecins. Il est lui-même très malade depuis plusieurs années. Ses poumons le font souffrir, et des rumeurs de sa mort ont déjà couru à Paris. Il a enterré Madeleine Béjart l'année précédente. Les Femmes savantes ont été un échec, et Lully a pris sa place dans la faveur du roi.",
+  "Ce jour-là, rapporte-t-on, sa femme Armande et le jeune comédien Michel Baron le supplient de ne pas jouer. Il leur répond que tant de pauvres ouvriers n'ont que leur journée pour vivre, et qu'il se reprocherait de les priver de pain. Il monte sur scène.",
+  "#Argan",
+  "@Pendant la représentation.",
+  "La pièce se moque des médecins et de la passion d'Argan pour la médecine. Pendant la cérémonie burlesque du dernier intermède, on rapporte que Molière est pris de convulsions qu'il dissimule sous un rire forcé. Le public croit à un jeu d'acteur. Les récits divergent sur le moment du malaise et sur la fin de la représentation. Mais aucun ne place sa mort devant le public.",
+  "!Il n'est pas mort sur scène, mais dans son lit, rue de Richelieu.",
+  "#La rue de Richelieu",
+  "@Dans la soirée.",
+  "On le transporte chez lui, au second étage du 40, rue de Richelieu. Il crache du sang. Il demande un prêtre pour recevoir les derniers sacrements, mais les comédiens étaient excommuniés, et pour lever cette interdiction, il aurait dû renoncer par écrit à son métier. Madeleine Béjart l'avait fait un an plus tôt. Le seul prêtre qui accepte de se déplacer arrive trop tard. Molière meurt dans la soirée, vers dix heures selon certains, à cinquante et un ans, auprès de sa femme.",
+  "#Enterré de nuit",
+  "@21 février 1673.",
+  "Les comédiens n'ont pas droit à une inhumation religieuse. Sur l'intervention de Louis XIV, le corps est pourtant enterré de nuit, sans service solennel, au cimetière Saint-Joseph, en présence d'une foule.",
+  "Sept ans plus tard, en 1680, le roi ordonne la fusion de la troupe de Molière, installée à l'hôtel de Guénégaud, avec celle de l'Hôtel de Bourgogne. Cela donne la Comédie-Française, que l'on appelle encore aujourd'hui la Maison de Molière.",
+  "On ne saura jamais de quoi il est exactement mort, ni quels furent ses derniers mots. Il reste une ironie que ses contemporains ont déjà vue : un homme qui riait des malades imaginaires est mort d'être un vrai malade, et son dernier rôle a été celui d'un homme qui feint la maladie. La scène a fini par réclamer la légende qu'elle méritait, celle d'un comédien tombé en plein jeu."
+ ],
+ "notes": "Retiré : détails sur les trois versions de la musique, la redécouverte de 1980, les divergences sur le lieu d'inhumation (Saint-Joseph ou Saint-Eustache), l'heure de la mort. À vérifier : propos rapportés à Armande et Baron (récit tardif de Grimarest), « foule » à l'enterrement, « créée une semaine plus tôt » (10 février)."
+}

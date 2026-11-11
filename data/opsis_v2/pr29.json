@@ -1,0 +1,32 @@
+{
+ "id": "pr29",
+ "fmt": 3,
+ "name": "Lady Chatterley : épouses et domestiques",
+ "sub": "Londres, 1960 : pour avoir publié un roman en entier, Penguin Books comparaît à l'Old Bailey, où l'on demande aux jurés s'ils le feraient lire à leurs domestiques",
+ "blurb": {
+  "b": "En 1960, l'éditeur Penguin Books publie sans coupure L'Amant de lady Chatterley, interdit en Angleterre depuis plus de trente ans. Une loi toute neuve lui offre une défense : le mérite littéraire. À l'Old Bailey, trente-cinq témoins défilent, l'accusation brandit ses domestiques, et douze jurés décident ce que l'on peut lire.",
+  "h": "Un roman, un éditeur et douze jurés face à la censure"
+ },
+ "body": [
+  "#Trois shillings et six pence",
+  "@Londres, 1960.",
+  "Le livre que Penguin s'apprête à vendre trois shillings et six pence a déjà passé plus de trente ans en marge de la loi. D. H. Lawrence l'a écrit à la fin des années 1920. Il paraît d'abord à Florence en 1928, à deux mille exemplaires pour des souscripteurs, puis en 1932 en Angleterre dans une version très coupée, deux ans après la mort de l'auteur. L'histoire d'une aristocrate, de son mari paralysé et d'un garde-chasse n'a donc jamais circulé en entier dans son propre pays.",
+  "En 1959, une loi change les règles. L'Obscene Publications Act, entrée en vigueur à la fin de l'été, veut qu'une œuvre soit jugée dans son ensemble, et non sur quelques passages isolés. Elle ouvre surtout une défense nouvelle : un livre peut être publié s'il sert le bien public, au nom de la science, de la littérature, de l'art ou du savoir, et des experts peuvent venir le dire à la barre. Penguin y voit une occasion.",
+  "En août 1960, l'éditeur remet des exemplaires de l'édition intégrale à la police avant même la mise en vente. Une citation à comparaître est délivrée le 25 août à Bow Street. Beaucoup y ont vu la volonté de provoquer un procès-test, et c'est bien ce qu'il va obtenir.",
+  "#La salle numéro un",
+  "@Old Bailey, 20 octobre – 2 novembre 1960.",
+  "Le procès s'ouvre le 20 octobre dans la salle n° 1 de l'Old Bailey et durera six jours d'audience. Ce n'est pas Lawrence qui comparaît, mort depuis trente ans, mais la maison Penguin Books, accusée d'avoir publié un écrit obscène. Le juge est Laurence Byrne. Mervyn Griffith-Jones tient l'accusation ; Gerald Gardiner défend l'éditeur.",
+  "Gardiner fait défiler trente-cinq témoins, et la liste ressemble à un annuaire de la vie intellectuelle britannique : E. M. Forster, Rebecca West, l'universitaire Helen Gardner, le critique Richard Hoggart, l'évêque de Woolwich John Robinson. Hoggart présente Lawrence comme un puritain, au sens originel du mot. À la barre, il cite le terme le plus choquant du roman et explique que l'auteur voulait simplement dire ce que l'on fait, de façon simple et ordinaire.",
+  "#Épouses et domestiques",
+  "@20 octobre 1960.",
+  "Dès son exposé d'ouverture, Griffith-Jones soumet aux jurés un critère très simple, qui restera attaché au procès.",
+  "!« Est-ce un livre que vous voudriez même voir lire par votre épouse ou par vos domestiques ? »",
+  "La salle sourit, et la phrase fera le tour du pays. Elle dit beaucoup du monde que l'accusation croit défendre : un monde où l'on décide à la place des autres de ce qu'ils peuvent lire. Pour l'accusation, le livre excuse la promiscuité. Pour la défense, il la condamne, et il possède un vrai mérite littéraire, que les universitaires venus témoigner s'emploient à démontrer au nom de l'article 4 de la loi neuve.",
+  "#Douze jurés",
+  "@2 novembre 1960.",
+  "Les jurés sont neuf hommes et trois femmes. Le 2 novembre, après environ trois heures de délibération, ils rendent un verdict unanime : Penguin n'est pas coupable. On ne saura jamais ce qui les a convaincus, ni comment ils ont pesé les questions posées par le juge.",
+  "Le livre peut désormais être vendu ouvertement en Angleterre et au pays de Galles, ce qui n'était pas arrivé depuis 1928. Penguin le met en vente le 10 novembre. Il s'en écoulera vite trois millions d'exemplaires.",
+  "Ce qui s'est joué dans la salle n° 1 dépasse un roman. La loi de 1959 avait donné aux experts le droit de parler, et pourtant ce sont douze citoyens ordinaires qui ont tranché : des adultes pouvaient lire par eux-mêmes une histoire de désir écrite plus de trente ans plus tôt. Le livre cesse d'être un objet qu'on cache. Il redevient un roman qu'on peut lire, aimer ou détester, sans avoir à se justifier devant personne."
+ ],
+ "notes": "Retiré : détails de loi (dates de projets, comité), nombre d'exemplaires remis à la police, témoins de l'accusation, chiffres de vente du premier jour, dédicace aux jurés, nombre de gros mots. À vérifier : date exacte d'entrée en vigueur (fin août 1959), « trois millions » sans date."
+}

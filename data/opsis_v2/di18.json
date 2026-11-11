@@ -1,0 +1,32 @@
+{
+ "id": "di18",
+ "fmt": 3,
+ "name": "Majorana : la mer m'a refusé",
+ "sub": "Mars 1938 : le physicien Ettore Majorana, trente et un ans, laisse deux lettres, un télégramme et un billet de bateau entre Naples et Palerme, puis disparaît",
+ "blurb": {
+  "b": "Ettore Majorana est l'un des jeunes génies de la physique italienne. En mars 1938, il retire son argent, écrit à son directeur qu'il a pris une décision inévitable, puis envoie de Palerme un télégramme qui contredit la lettre. Il monte sur un bateau et n'en redescend jamais, à notre connaissance.",
+  "h": "Un physicien de génie, un bateau, deux lettres, et rien d'autre"
+ },
+ "body": [
+  "#Un génie qu'on ne voit plus",
+  "@Rome, via Panisperna, années 1930.",
+  "À Rome, dans un institut de physique de la via Panisperna, Enrico Fermi a réuni une équipe de jeunes chercheurs si brillants qu'on les surnomme « les garçons de la via Panisperna ». Parmi eux, Ettore Majorana, né le 5 août 1906 à Catane, passe pour le plus singulier. Il parle peu, il se tient à distance, et il comprend vite ce que les autres mettent des semaines à démêler. On rapporte que Fermi lui-même le plaçait parmi les plus grands esprits de la physique.",
+  "Son dernier article, publié en 1937, propose une théorie symétrique de l'électron et du positron. Il y décrit des particules qui seraient leur propre antiparticule, et le physicien qui les imaginera plus tard portera son nom. Il est alors nommé professeur de physique théorique à Naples. Sur le papier, tout s'ouvre devant lui.",
+  "#Une décision inévitable",
+  "@Janvier – mars 1938.",
+  "Pourtant, les gestes qui précèdent sa disparition ressemblent à des préparatifs. Le 22 janvier 1938, il demande à sa mère de faire retirer par son frère Luciano sa part d'un compte commun. Peu avant le 25 mars, il va chercher ses salaires non versés, d'octobre à février, et garde l'argent sur lui.",
+  "Le 25 mars, il écrit à Antonio Carrelli, directeur de l'institut de physique de Naples : « J'ai pris une décision devenue inévitable. » Il demande pardon. La lettre est postée le soir même.",
+  "!Le lendemain, Carrelli reçoit un télégramme de Palerme qui lui demande d'ignorer la lettre.",
+  "Le télégramme arrive avant la lettre. Puis la lettre arrive aussi. Une seconde lettre suit, écrite sur le papier à en-tête d'un hôtel de Palerme : Majorana y écrit que la mer l'a refusé. Il y parle d'abandonner l'enseignement. Le message ne dit pas qu'il est vivant, et ne dit pas qu'il ne l'est plus.",
+  "#Le bateau",
+  "@Entre Naples et Palerme, 25 – 28 mars 1938.",
+  "Les chronologies ne coïncident pas. Pour les uns, il disparaît le 25 mars à Palerme, après avoir acheté un billet pour Naples. Pour les autres, il quitte Naples le 25 pour une destination qu'il ne précise pas, arrive à Palerme le 26 au matin, y écrit le télégramme et la lettre. Un billet de retour a été remis au bureau de la compagnie Tirrenia, où l'on a fini par le retrouver.",
+  "Sur le bateau, on parle d'une cabine à trois, avec Vittorio Strazzeri, enseignant à Palerme, et un certain Charles Price, un Anglais que personne n'a jamais pu retrouver. Majorana était-il vraiment là ? Ce qu'on peut dire, c'est que le lundi 28 mars, Carrelli, sans nouvelles, téléphone à Fermi, à Rome. Fermi comprend aussitôt que la situation est grave.",
+  "#Une mer, un silence",
+  "@1938 – 2015.",
+  "On ne sait pas ce qu'est devenu Majorana après cette traversée. Un suicide en mer, un départ volontaire, une vie recommencée sous un autre nom : chaque hypothèse a eu ses défenseurs, aucune n'a de preuve décisive. Les lettres n'aident pas, puisque chacun y lit autre chose : un adieu, un aveu de renoncement, un homme qui hésite encore.",
+  "En 2015, un parquet italien a retenu qu'il aurait pu vivre au Venezuela entre 1955 et 1959, sans preuve formelle et sans identification certaine. Dans les faits, il reste un physicien de trente et un ans qui prend un bateau à la fin d'un mois de mars et dont on a gardé, de tout ce voyage, un billet, deux lettres et un télégramme.",
+  "Il avait écrit à Carrelli que la mer l'avait refusé. Ce qui se passe ensuite, personne ne l'a vu, et la mer, elle, n'a jamais répondu."
+ ],
+ "notes": "Retiré : le passeport, les détails de la première lettre, l'identité exacte du parquet de 2015. À vérifier : la nomination à Naples (1937), l'allusion à l'abandon de l'enseignement dans la seconde lettre, la définition des particules de Majorana, le détail du billet de retour."
+}

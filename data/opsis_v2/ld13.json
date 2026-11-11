@@ -1,0 +1,31 @@
+{
+ "id": "ld13",
+ "fmt": 3,
+ "name": "Einstein : je dois partir un jour",
+ "sub": "Princeton, avril 1955 : l'aorte d'Einstein se rompt. Il refuse l'opération, finit une page qu'il ne terminera pas, et meurt à 1 h 15 dans une chambre d'hôpital.",
+ "blurb": {
+  "b": "Avril 1955, Princeton. Un anévrisme d'Einstein vient de se rompre. Les médecins proposent une opération ; il la refuse. Il lit, parle politique, griffonne un discours qu'il n'achèvera pas, rassure sa secrétaire. Sa dernière phrase, dit-on, était en allemand, devant une infirmière qui ne la comprenait pas. Elle est perdue.",
+  "h": "Le plus célèbre des physiciens refuse d'être sauvé et meurt en paix"
+ },
+ "body": [
+  "#Une aorte qui lâche",
+  "@Princeton, avril 1955.",
+  "Albert Einstein a soixante-seize ans, et un problème qu'il connaît. Depuis la fin des années 1940, des chirurgiens ont enveloppé dans de la cellophane un anévrisme de son aorte abdominale, pour retarder le moment où il se rompra. En avril 1955, ce moment arrive. Il s'effondre chez lui. Helen Dukas, sa secrétaire et compagne de longue date, soupçonne une hémorragie interne. Lui répugne à aller à l'hôpital.",
+  "Il y est pourtant conduit, à l'hôpital de Princeton. Les médecins comprennent vite ce qui se passe : l'anévrisme est en train de céder, et seule une opération pourrait peut-être le sauver, avec de lourds risques. Quelques jours plus tôt, il avait signé le manifeste de Bertrand Russell mettant en garde contre les armes nucléaires. C'est l'une de ses dernières signatures.",
+  "#Le refus",
+  "@Hôpital de Princeton.",
+  "Il refuse. Il aurait dit qu'il voulait partir quand il le voudrait, et qu'il est de mauvais goût de prolonger la vie artificiellement. On lui prête aussi ces mots : il a fait sa part, il est temps de partir, et il le fera avec élégance. Rien, dans son attitude, n'a la couleur d'un défi. Il décide comme il a toujours décidé, sans théâtre.",
+  "Il a commencé à rédiger une allocution pour le septième anniversaire de la création d'Israël, et l'ébauche reste inachevée à l'hôpital. Pendant une accalmie, il lit le journal et parle de politique et de science. Quand la douleur revient, on lui donne parfois de la morphine ; il la supporte avec un sourire, sans se plaindre.",
+  "#Quelques heures",
+  "@Nuit du 17 au 18 avril 1955.",
+  "La nuit, Helen Dukas se lève pour aller le voir. Il lui aurait répondu qu'elle était vraiment hystérique, qu'il devait partir un jour, et que peu importait quand. La forme exacte de la phrase varie selon les récits, et Dukas en est l'unique témoin.",
+  "!Il meurt à 1 h 15, dans la nuit, le 18 avril.",
+  "L'infirmière Alberta Rozsel, qui veillait sur lui, a vu sa respiration changer vers 1 h 10. Elle a appelé de l'aide et lui a soulevé la tête. Il a respiré lourdement, deux fois. Puis plus rien. On dit qu'il a prononcé quelques mots en allemand juste avant de mourir ; l'infirmière ne comprenait pas cette langue, et personne n'a pu les recueillir. Ils sont perdus.",
+  "#Un cerveau qui disparaît",
+  "@Princeton, 18 avril 1955.",
+  "L'autopsie du pathologiste Thomas Harvey confirme le diagnostic : l'aorte, bombée comme une vieille chambre à air, avait fini par se rompre. Mais Harvey fait plus. Sans l'accord de la famille, il retire le cerveau d'Einstein, qu'il conserve pour l'étudier. Le corps est incinéré le jour même, et les cendres sont dispersées dans un lieu tenu secret, comme Einstein l'avait demandé, pour qu'aucune tombe ne devienne un lieu de pèlerinage.",
+  "Le cerveau, lui, a connu pendant des décennies un destin presque aussi étrange que sa vie. Il a été découpé en morceaux et partagé entre des chercheurs. L'homme qui refusait qu'on prolonge son existence a donc été, après sa mort, étudié au microscope par des gens qui cherchaient ce qui l'avait rendu unique.",
+  "Il laisse un discours inachevé et quelques mots en allemand que personne n'a su comprendre. Il avait refusé qu'on repousse sa mort ; il avait refusé aussi que sa tombe devienne un lieu de visite. Il n'avait pas prévu que son cerveau, lui, devienne un objet d'étude."
+ ],
+ "notes": "Retiré : la date exacte de l'effondrement (les versions diffèrent), la durée de l'hospitalisation, le nombre de médecins. À vérifier : formulation des phrases rapportées (Dukas, « fait sa part ») ; la phrase en allemand « Es ist schön » n'est pas reprise, jugée non fiable ; sort du cerveau (Harvey) et dispersion des cendres, à confirmer."
+}

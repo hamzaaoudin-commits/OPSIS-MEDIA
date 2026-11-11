@@ -1,0 +1,29 @@
+{
+ "id": "ld02",
+ "fmt": 3,
+ "name": "Henri IV : deux charrettes",
+ "sub": "Paris, 14 mai 1610 : Henri IV quitte le Louvre sans gardes pour voir Sully ; rue de la Ferronnerie, deux charrettes bloquent son carrosse, et Ravaillac frappe",
+ "blurb": {
+  "b": "Le 14 mai 1610, la veille du sacre de la reine, Henri IV, agité, monte dans son carrosse pour rendre visite à Sully, son ministre malade. Il refuse ses gardes. Dans l'étroite rue de la Ferronnerie, deux charrettes arrêtent la voiture. Un homme à la barbe rousse, qui le suit depuis le Louvre, s'avance.",
+  "h": "Un roi sans gardes, une rue trop étroite, un couteau"
+ },
+ "body": [
+  "#Un roi agité",
+  "@13 – 14 mai 1610.",
+  "Le sacre de la reine Marie de Médicis a eu lieu la veille à Saint-Denis, et l'entrée solennelle dans Paris est prévue quelques jours plus tard. Henri IV, lui, doit bientôt rejoindre l'armée, qui se rassemble déjà en Champagne pour une campagne contre les Habsbourg. Au Louvre, il est agité. Il veut voir les préparatifs de la fête, et parler de la guerre avec son ministre Sully, malade, qui l'attend à l'Arsenal. L'heure du départ varie selon les récits, entre le milieu et la fin de l'après-midi. Sully n'est pas seulement son ministre des Finances : c'est un compagnon des guerres de Religion, un ami de longue date, et le roi aime passer le voir quand il est souffrant.",
+  "#Le départ",
+  "@14 mai 1610, après-midi.",
+  "Le roi quitte le Louvre en carrosse avec quelques grands seigneurs, parmi lesquels le duc d'Épernon et le duc de Montbazon. Le capitaine des gardes lui demande s'il doit les faire accompagner. Henri refuse et part avec une petite compagnie de nobles.",
+  "Un homme à barbe rousse regarde partir la voiture. Il s'appelle François Ravaillac, il est né à Angoulême et a trente-deux ans. Il est monté à Paris à pied, il porte un couteau depuis trois semaines, et il s'est posté tôt le matin aux portes du Louvre. On rapporte qu'il avait cherché en vain à approcher le roi, qu'il disait avoir des visions et croyait que le roi voulait faire la guerre au pape. Il suit le carrosse. Le trajet passe par la Croix-du-Trahoir, la rue Saint-Honoré, puis l'étroite rue de la Ferronnerie.",
+  "#La rue de la Ferronnerie",
+  "@14 mai 1610.",
+  "Le carrosse n'a pas de vitres, seulement des rideaux de cuir, et le roi les a ouverts pour voir les décorations. La rue est étroite, bordée d'échoppes. Deux charrettes, l'une chargée de vin, l'autre de fourrage, bloquent le passage. La voiture s'arrête au pied d'une auberge dont l'enseigne figure un cœur couronné percé d'une flèche. Les laquais coupent par le cimetière voisin ; Épernon lit à voix haute une lettre que le roi vient de lui remettre, Henri ayant oublié ses lunettes.",
+  "!Ravaillac saute sur une roue et frappe le roi à la poitrine.",
+  "Le couteau frappe à plusieurs reprises. Ravaillac ne s'enfuit pas : il est arrêté sur place, avant que la foule ne le lynche, puis conduit à la Conciergerie. On ramène le roi, qui a cinquante-six ans, vers le Louvre. Il ne s'en relèvera pas. Dans la rue, les gentilshommes qui l'entouraient mesurent trop tard ce qu'ils ont laissé faire : un carrosse arrêté, des rideaux ouverts, un roi à portée de main.",
+  "#Après",
+  "@Mai 1610.",
+  "Interrogé, Ravaillac affirmera avoir agi seul. Il est exécuté en place de Grève, le 27 mai, écartelé. Le nouveau roi, Louis XIII, a huit ans, et sa mère assure la régence. Le royaume, qui sortait à peine de quarante ans de guerres civiles, retient son souffle.",
+  "Paris est frappée de stupeur. Henri IV avait mis fin aux guerres de Religion, signé l'édit de Nantes en 1598, et survécu à plusieurs attentats. On ne saura jamais si le blocage de la rue était voulu, ni si quelqu'un a armé le bras de Ravaillac. Les historiens ont débattu d'un complot sans rien trouver qui le prouve. Ce qui reste est plus simple et plus troublant : un roi sans gardes, dans une rue où il fallait ralentir, et le temps de lire une lettre, pour qu'un seul homme change le cours d'un règne."
+ ],
+ "notes": "Retiré : liste complète des seigneurs, heure exacte du départ, lieu de la mort, rôle d'Épernon après le coup, nombre exact de coups. À vérifier : « avait vu passer des dizaines de batailles » (reformuler en général si besoin), Ravaillac « avait agi seul » selon ses déclarations."
+}

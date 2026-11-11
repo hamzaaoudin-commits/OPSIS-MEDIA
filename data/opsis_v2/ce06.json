@@ -1,0 +1,31 @@
+{
+ "id": "ce06",
+ "fmt": 3,
+ "name": "Champollion : « Je tiens mon affaire »",
+ "sub": "Paris, 1822 : Champollion annonce qu'il sait lire les hiéroglyphes, et Thomas Young soutient qu'il a trouvé la clé en Angleterre",
+ "blurb": {
+  "b": "Pendant vingt siècles, les hiéroglyphes sont restés muets. En septembre 1822, Jean-François Champollion court annoncer à son frère qu'il tient la solution, puis s'évanouit. Mais un Anglais, Thomas Young, avait déjà fait un bout du chemin. À qui appartient la clé de l'Égypte ?",
+  "h": "Un cri, un évanouissement, et une dispute sur la clé"
+ },
+ "body": [
+  "#Une pierre près de Rashid",
+  "@Rosette, juillet 1799.",
+  "En juillet 1799, pendant l'expédition française en Égypte, Pierre-François Bouchard découvre près de Rashid, que les Européens appellent Rosette, une pierre gravée. Les hiéroglyphes ne se lisent plus depuis des siècles : plus personne ne sait ce que disent les temples et les papyrus d'Égypte. La pierre, elle, date de 196 avant notre ère et célèbre Ptolémée V. Son texte est écrit trois fois, en trois écritures : hiéroglyphes, démotique et grec.",
+  "Les Britanniques s'en emparent en 1801. Elle est au British Museum depuis 1802. Le grec est traduit dès 1803, mais le grec ne sert qu'à poser une question : les deux autres écritures disent-elles la même chose ?",
+  "#Deux hommes",
+  "@Paris et Londres, 1814 – 1822.",
+  "À Londres, Thomas Young est d'abord physicien et médecin. Il n'est jamais allé en Égypte, et travaille sur les hiéroglyphes d'environ 1815 à 1819. Il fonde en 1817 une Société égyptienne à Londres. En 1819, il publie une lecture partielle dans l'Encyclopaedia Britannica.",
+  "À Paris, Jean-François Champollion, né à Figeac en 1790, apprend très tôt les langues. Il connaît notamment le copte, dernier état de la langue égyptienne. Il avance à son rythme, et il annonce son déchiffrement en septembre 1822.",
+  "#Le 14 septembre",
+  "@Paris, 14 septembre 1822.",
+  "Ce jour-là, Champollion examine des textes d'Abou Simbel. Il a déjà isolé des valeurs sonores à partir des cartouches de Ptolémée et de Cléopâtre, ces ovales dans lesquels les Égyptiens enfermaient les noms de rois et de reines, en corrigeant les lectures de Young, et il reconnaît maintenant les noms de Ramsès et de Thoutmosis. La différence compte : Ptolémée et Cléopâtre sont des noms grecs, écrits phonétiquement pour des étrangers, alors que Ramsès et Thoutmosis sont de purs noms égyptiens. Si les sons servent là aussi, alors ce n'est pas un procédé réservé aux noms venus d'ailleurs.",
+  "!Il court vers son frère, crie « Je tiens mon affaire ! », et s'effondre.",
+  "Le 27 septembre, la Lettre à M. Dacier relative à l'alphabet des hiéroglyphes phonétiques est lue devant l'Académie des inscriptions et belles-lettres : un rapport de 55 pages. Il décrit l'alphabet qui sert à écrire les noms non égyptiens, et affirme, avec prudence, que les signes phonétiques appartiennent aussi à l'écriture hiéroglyphique « pure ». Deux ans plus tard, le Précis du système hiéroglyphique des anciens Égyptiens constitue l'étape décisive.",
+  "#À qui revient la clé ?",
+  "@1822 – 1829.",
+  "Young se sent non reconnu. Il écrit que Champollion « avait trouvé la clé en Angleterre », mais qu'il avait dû tourner une serrure très rouillée. Champollion ne reconnaîtra jamais de dette : dans une lettre, il dit qu'il ne « consentira jamais à reconnaître un autre alphabet original que le mien ». Il a été accusé de plagiat, et le camp de Young voit dans son propre travail le fondement de l'autre.",
+  "Champollion s'est aussi trompé. Sa première affirmation, selon laquelle l'écriture hiératique serait entièrement idéographique, était fausse, et il l'a corrigée. Il part pour une expédition en Égypte le 21 juillet 1828 depuis Toulon. Young meurt en 1829. Champollion meurt le 4 mars 1832, à 41 ans, d'une attaque d'apoplexie.",
+  "La pierre, elle, est toujours à Londres. L'Égypte en a demandé le retour ou le prêt, et le British Museum s'y oppose en général. On ne sait pas si la Lettre citait Young, ni si la proposition égyptienne de prêt de 2009 a abouti, et les historiens ne s'accordent ni sur la dette de Champollion ni sur la date exacte de l'annonce. Ce qui est sûr, c'est que la dispute, elle, n'a jamais été tranchée."
+ ],
+ "notes": "Retiré : note sur Bankes et le cartouche de Cléopâtre (on ne sait pas si Champollion l'a vue), version originale du décret. À vérifier : 'Pierre-François Bouchard' et expression 'que les Européens appellent Rosette', 'la dispute n'a jamais été tranchée' (phrase finale), 'le frère' (Jacques-Joseph) non nommé."
+}
