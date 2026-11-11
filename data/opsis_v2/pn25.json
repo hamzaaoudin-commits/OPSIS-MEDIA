@@ -1,0 +1,28 @@
+{
+ "id": "pn25",
+ "fmt": 3,
+ "name": "Apollo 11 : l'alarme 1202",
+ "sub": "Mer de la Tranquillité, 20 juillet 1969 : en pleine descente vers la Lune, l'ordinateur affiche un code que personne n'attendait, et Houston a quelques secondes pour trancher",
+ "blurb": {
+  "b": "Le 20 juillet 1969, le module lunaire d'Apollo 11 descend vers la Lune quand l'ordinateur de bord affiche une alarme inconnue, 1202. Des millions de gens regardent. À Houston, un jeune officier et son équipe ont quelques secondes pour décider de continuer ou d'abandonner. Puis Armstrong découvre un second problème.",
+  "h": "Une alarme inconnue, quelques secondes pour décider, une Lune à atteindre"
+ },
+ "body": [
+  "#Une alarme que personne n'attend",
+  "@Mer de la Tranquillité, 20 juillet 1969.",
+  "Ils sont deux à bord, Neil Armstrong et Buzz Aldrin. Le troisième homme de la mission, Michael Collins, tourne seul autour de la Lune dans le module de commande. Depuis la Terre, aucune main ne peut rien corriger directement : tout se joue dans une conversation radio, avec un léger décalage, entre des voix calmes qui annoncent des chiffres et des codes.",
+  "Le module lunaire d'Apollo 11 descend vers la Lune. À environ 1 800 mètres d'altitude, l'ordinateur de bord affiche un code que les astronautes n'attendaient pas : 1202. Quelques instants plus tard, un autre suit : 1201. Ces alarmes signalent que l'ordinateur est submergé et doit repousser certaines tâches.",
+  "Dans le monde entier, des millions de personnes regardent. À Houston, quelques hommes ont quelques secondes pour décider si l'on continue ou si l'on abandonne.",
+  "#Un ordinateur qui trie",
+  "L'ordinateur de bord ne s'effondre pourtant pas. Ses concepteurs l'avaient prévu pour redémarrer en abandonnant les tâches les moins importantes et en conservant l'essentiel, le guidage et le contrôle. Comme un cuisinier débordé qui laisse brûler la garniture pour sauver le plat principal.",
+  "Reste à savoir si ceux qui le surveillent le comprennent à temps. Dans la salle de contrôle, un ingénieur, Jack Garman, conseille à l'officier de guidage, Steve Bales, de poursuivre : l'alarme est sans danger tant qu'elle ne se répète pas trop. Bales et son équipe donnent leur feu vert, et la décision est transmise à l'équipage. Les mots exacts de Bales et l'heure précise ne sont pas connus avec certitude.",
+  "#Pourquoi l'ordinateur débordait",
+  "!Pendant la mission, on attribue l'alarme à la mauvaise position d'un interrupteur du radar de rendez-vous, un radar laissé en attente pendant la descente.",
+  "Des années plus tard, en 2005, l'un des programmeurs, Don Eyles, l'explique autrement, par un défaut de conception du matériel : le radar envoyait un flux constant de signaux parasites qui chargeaient l'ordinateur de plus de 10 %. Ajouté à une commande saisie par l'astronaute Buzz Aldrin, cela suffisait à le faire déborder. Les chiffres varient d'un récit à l'autre, et la part exacte du matériel, du logiciel et de la procédure reste discutée. On ignore aussi si le radar a été coupé ensuite.",
+  "#Un endroit pour se poser",
+  "Puis vient le second problème. Neil Armstrong voit que l'ordinateur les conduit vers une zone parsemée de rochers, près d'un cratère. Il reprend la main en mode semi-manuel et cherche un terrain plat. Le carburant diminue.",
+  "Eagle se pose le 20 juillet 1969 à 20 h 17 min 40 s, heure UTC, avec environ 98 kilos de carburant utilisable. La marge restante a été annoncée à 25 secondes pendant la mission, et estimée à 50 secondes lors de l'analyse faite ensuite. Armstrong annonce alors à Houston que l'Aigle a atterri, depuis la base de la Tranquillité. Dans la salle de contrôle, on respire enfin, après des minutes où chaque seconde de carburant comptait autant que chaque ligne de code.",
+  "Ainsi, le premier atterrissage sur la Lune tient à deux gestes de sang-froid. Un jeune officier et son équipe, à des centaines de milliers de kilomètres, ont choisi de faire confiance à une machine conçue pour se débarrasser de ce qui compte le moins. Et un pilote a regardé le sol de très près, au lieu de se fier à l'écran. Le rôle de la programmeuse Margaret Hamilton dans cet épisode est souvent évoqué, mais il est difficile de le décrire précisément."
+ ],
+ "notes": "Retiré : rien de factuel, j'ai seulement allégé les formulations de sources. À vérifier : 1 800 m, 98 kg, 25 s / 50 s de marge, et le rôle de Hamilton (volontairement laissé flou)."
+}

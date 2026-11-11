@@ -1,0 +1,31 @@
+{
+"id": "sv12",
+"fmt": 3,
+"name": "Alan Magee : le toit de verre de Saint-Nazaire",
+"sub": "France, 3 janvier 1943. Un mitrailleur américain, éjecté d'une forteresse volante sans parachute, atterrit à travers le toit vitré d'une gare.",
+"blurb": {
+"b": "Le 3 janvier 1943, au-dessus de Saint-Nazaire, un B-17 est touché par la défense antiaérienne. Alan Magee, mitrailleur de tourelle, tombe sans parachute et traverse le toit de verre de la gare. Il survit, blessé de partout, et un médecin allemand lui sauve le bras avant des années de captivité.",
+"h": "Tombé sans parachute, il survit grâce à un toit de verre"
+},
+"body": [
+"#Une septième mission",
+"@Saint-Nazaire, 3 janvier 1943.",
+"Alan Eugene Magee naît le 13 janvier 1919 à Plainfield, dans le New Jersey, le plus jeune de six enfants. Il s'engage dans l'armée de l'air américaine après l'attaque de Pearl Harbor. Il est mitrailleur de tourelle ventrale sur un B-17F surnommé Snap! Crackle! Pop!, du 303e groupe de bombardement.",
+"Le B-17, que l'on surnomme la forteresse volante, est l'un des grands bombardiers américains de la guerre. Magee tient la tourelle ventrale, une bulle sous le fuselage, l'un des postes les plus exposés de l'appareil. Il y passe ses missions replié sur ses mitrailleuses, à guetter les chasseurs ennemis.",
+"Le 3 janvier 1943, il vole sa septième mission. La cible est Saint-Nazaire, que les équipages appellent « Flak City », la ville de la défense antiaérienne : on y vise un dépôt de torpilles ou les bases de sous-marins, selon les récits. Les obus éclatent par grappes autour des bombardiers, et l'avion de Magee est touché.",
+"#Dans la vrille",
+"La tourelle ventrale devient inutilisable. Magee en sort et découvre que son parachute est déchiqueté par les éclats. Un second coup arrache une partie de l'aile droite. L'avion part en vrille. Magee passe de la soute à bombes vers la radio, perd connaissance par manque d'oxygène, et la vrille le jette dehors.",
+"!Il tombe de 6 700 mètres, sans parachute.",
+"On estime sa vitesse à 190 kilomètres à l'heure. Rien, dans ce qu'il connaît d'une chute, ne laisse prévoir qu'il se relèvera.",
+"Il perd connaissance en l'air, et ne verra pas arriver le sol. Ce qui le sépare de la mort, ce sont quelques mètres de verre et de ferraille : la verrière de la gare, large et fragile, que personne n'a bâtie pour recevoir un homme tombé du ciel.",
+"#Le toit",
+"Il traverse le toit de verre de la gare de Saint-Nazaire. Le verre absorbe une partie du choc. Il atterrit sur le sol de la gare, vivant. Des civils et des soldats allemands le tirent des décombres, beaucoup le croyaient déjà mort.",
+"Ses blessures sont lourdes : vingt-huit éclats d'obus, plusieurs fractures, le nez cassé, un œil abîmé, un poumon perforé, les reins touchés, la jambe droite fracturée, le bras droit presque sectionné.",
+"Il reprend connaissance dans un poste de secours, puis on l'emmène à l'hôpital. Un médecin militaire allemand lui sauve le bras. Magee ne saura jamais son nom. Il dira lui devoir une dette de reconnaissance. On rapporte que le médecin lui aurait dit qu'ils étaient ennemis, mais qu'il était d'abord médecin, et qu'il ferait de son mieux pour sauver ce bras.",
+"#Le reste de la guerre",
+"Magee et deux autres survivants de son équipage sont faits prisonniers. Sept de ses camarades sont morts. Il passe le reste de la guerre au Stalag 17B, près de Krems, en Autriche, jusqu'à la libération du camp en mai 1945.",
+"Il reçoit l'Air Medal et le Purple Heart. En 1993, pour le cinquantième anniversaire de la mission, la ville de Saint-Nazaire dresse un mémorial. Il passe son brevet de pilote, travaille dans l'aviation jusqu'en 1979, puis s'installe dans le nord du Nouveau-Mexique. Lors d'une visite en France, dans les années 1990, il aurait dit, en regardant la gare : « Je la croyais beaucoup plus petite. »",
+"Il meurt le 20 décembre 2003, à 84 ans, à San Angelo, au Texas. On ne sait pas qui l'a trouvé dans la gare, ni le nom du médecin, ni comment la hauteur a été reconstituée. Le seul fait certain est le plus étrange : un toit de verre, sous un ciel de guerre, a suffi à le garder en vie."
+],
+"notes": "Retiré : 'mémorial de 1,8 mètre', énumération des sources. À vérifier : cible (dépôt de torpilles ou bases de sous-marins), hauteur exacte (22 000 pieds) et vitesse, citation du médecin allemand, citation sur la gare, nombre de morts (sept), identité de l'équipage survivant, 'Flak City' glosé par moi (défense antiaérienne)."
+}

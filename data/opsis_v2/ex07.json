@@ -1,0 +1,30 @@
+{
+ "id": "ex07",
+ "fmt": 3,
+ "name": "Everest 1953 : le 29 mai",
+ "sub": "Everest, 29 mai 1953 : une expédition de plus de quatre cents hommes envoie deux d'entre eux au sommet, qui conviennent de ne jamais dire qui a posé le pied le premier",
+ "blurb": {
+  "b": "En 1953, le colonel John Hunt dirige une expédition de plus de quatre cents hommes vers l'Everest. Après un premier échec à une centaine de mètres du sommet, il envoie Edmund Hillary et Tenzing Norgay tenter leur chance. Le 29 mai, ils y parviennent, et se mettent d'accord pour ne jamais dire lequel est monté le premier.",
+  "h": "Quatre cents hommes, deux grimpeurs, et un secret gardé pour toujours"
+ },
+ "body": [
+  "#Quatre cents hommes",
+  "@Népal, 1953.",
+  "Pour conquérir le plus haut sommet du monde, il faut une armée. L'expédition conduite par le colonel John Hunt compte plus de quatre cents hommes, dont 362 porteurs et 20 guides sherpas, avec environ 10 000 livres de bagages. Tout cet effort a un but unique : mettre deux hommes au sommet.",
+  "La route passe par le côté sud, népalais : la cascade de glace du Khumbu, la face du Lhotse jusqu'au Col Sud, l'arête sud-est jusqu'au sommet sud, puis une arête étroite jusqu'au sommet. L'oxygène en bouteille est utilisé à partir du camp V.",
+  "#Un premier essai",
+  "Le 26 mai, Tom Bourdillon et Charles Evans atteignent le sommet sud à 13 heures, à environ 100 mètres du sommet. Ils font demi-tour, à cause de problèmes avec leurs appareils à oxygène et du manque de temps. C'est à une centaine de mètres de la gloire que s'arrête la première cordée, et c'est une déception qui pèse sur le camp.",
+  "Hunt envoie alors la seconde cordée : Edmund Hillary, un apiculteur néo-zélandais, et Tenzing Norgay, un sherpa expérimenté. Tenzing connaît la montagne mieux que personne : il y est déjà monté avec une expédition suisse en 1952, qui s'était arrêtée à une courte distance du sommet.",
+  "#Le 29 mai",
+  "La veille, une équipe de soutien est montée aussi haut qu'elle le pouvait pour installer le dernier camp, sur une pente exposée au vent, avant de redescendre. Les deux hommes y passent la nuit seuls, à une altitude où l'air est à peine respirable sans oxygène et où chaque geste se compte.",
+  "!Hillary et Tenzing se réveillent à 4 heures au camp IX, à environ 27 900 pieds.",
+  "Hillary a dû d'abord dégeler ses bottes, durcies par le froid de la nuit, au-dessus d'un réchaud. Ils partent à 6 h 30, atteignent le sommet sud à 9 heures, puis le sommet à 11 h 30. Le sommet est à 29 035 pieds. Entre les deux, une dernière difficulté les attend : une marche de 40 pieds, que l'on appellera plus tard le ressaut Hillary, qu'ils gravissent grâce à une fissure dans la roche.",
+  "Au sommet, le piolet de Tenzing porte des drapeaux : britannique, népalais, indien et celui des Nations unies. Les deux hommes prennent des photos, enterrent des sucreries et une petite croix. Hillary raconte qu'ils se serrent la main « à la bonne façon anglo-saxonne », puis que Tenzing l'embrasse.",
+  "En redescendant, il lance à George Lowe, qui les attend : « Well, George, we knocked the bastard off! »",
+  "#Qui était le premier ?",
+  "Le 2 juin, jour du couronnement d'Élisabeth II, la nouvelle arrive en Grande-Bretagne. Le pays y voit un cadeau pour la jeune reine. Hillary est fait chevalier, Hunt aussi. Tenzing reçoit la médaille George, un honneur moindre, et le contraste est discuté depuis.",
+  "Reste la question que tout le monde pose : lequel des deux a posé le pied le premier ? On ne le saura pas. Les deux hommes sont convenus de ne pas le dire. Ils ont préféré se présenter comme une cordée, au sens propre, attachés l'un à l'autre, plutôt que comme deux concurrents.",
+  "Le temps passé au sommet est lui aussi flou, environ dix ou quinze minutes. Ce qui est certain, c'est que l'expédition entière a été conçue pour ces quelques minutes, et que ceux qui ont rendu l'ascension possible, les porteurs et les guides, restent dans l'ombre de deux noms. Pendant quelques minutes, au sommet, il n'y a que deux hommes, deux piolets, et un panorama qu'aucun être humain n'avait encore contemplé de si haut."
+ ],
+ "notes": "Retiré : rien de factuel. Ajouté : Hillary « apiculteur » (attesté) et « Tenzing, sherpa expérimenté ». À vérifier : la formule « cadeau pour la jeune reine » (lecture de l'époque), l'écart d'honneurs, 362 porteurs/20 guides."
+}

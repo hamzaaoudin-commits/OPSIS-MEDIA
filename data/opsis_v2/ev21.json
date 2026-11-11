@@ -1,0 +1,27 @@
+{
+ "id": "ev21",
+ "fmt": 3,
+ "name": "Henry Box Brown : vingt-sept heures en caisse",
+ "sub": "Virginie, 1849 : un homme réduit en esclavage se fait clouer dans une caisse de bois et expédier par la poste jusqu'à la liberté, à Philadelphie.",
+ "blurb": {
+  "b": "Henry Brown a vu sa femme et ses enfants vendus. Il n'a plus rien à perdre, sauf sa vie. Avec deux complices, il se fait enfermer dans une caisse à peine plus grande qu'un coffre et expédier de Richmond à Philadelphie. Vingt-sept heures plus tard, quelqu'un frappe sur le couvercle. Est-il vivant ?",
+  "h": "Il se fait expédier par la poste vers la liberté, dans une caisse"
+ },
+ "body": [
+  "#Une famille vendue",
+  "@Richmond, Virginie, 1848.",
+  "Henry Brown est né vers 1815 dans une plantation du comté de Louisa, en Virginie. Loué à Richmond, il travaille dans une manufacture de tabac. Il se marie avec Nancy, et le couple a trois enfants. Il peut croire, un temps, qu'une vie supportable est possible à l'intérieur de ce système.",
+  "Puis Nancy, enceinte, et les trois enfants sont vendus à un pasteur de Caroline du Nord, malgré les paiements que Brown avait versés pour les garder. Du jour au lendemain, tout ce qui le retenait à Richmond disparaît. Cette perte précède et explique tout ce qui suit : ce n'est plus la peur de la vente qui le pousse, c'est la vente elle-même.",
+  "#Un plan à trois",
+  "Il met au point son plan avec un dentiste noir libre et un cordonnier blanc, Samuel A. Smith. Brown paie Smith 86 dollars, plus de la moitié de ses 166 dollars d'économies. Il lui reste une difficulté : s'absenter de la manufacture sans éveiller les soupçons. Il se brûle la main à l'acide sulfurique, pour ne pas avoir à travailler. Chaque détail du plan est pensé pour qu'un homme puisse disparaître dans un colis sans que personne y prête attention.",
+  "La caisse est petite : environ trois pieds de long, deux pieds et demi de haut, deux pieds de large, soit environ 90 centimètres sur 75 et 60. Elle compte trois trous d'aération et porte la mention « Ce côté vers le haut, avec précaution ». Brown mesure 1,78 mètre et pèse plus de 200 livres : il a peu de place. Il emporte de l'eau, des biscuits et un outil pour percer d'autres trous d'air.",
+  "#Le voyage",
+  "!Le trajet dure environ 27 heures, par chariot et bateau à vapeur.",
+  "Ce temps-là, il le passe plié dans le noir, à l'écoute des chocs et des voix. À deux reprises, la caisse est retournée tête en bas, et elle reste ainsi pendant 18 miles, soit près de trente kilomètres. Un homme enfermé dans un coffre, sur des routes et sur l'eau, dépend de la façon dont des inconnus manipulent ce qu'ils croient être un colis. Il a de l'eau et des biscuits, rien de plus, et la certitude que chaque heure gagnée le rapproche d'une ville où il n'a jamais mis les pieds.",
+  "La caisse est adressée à un membre du comité de vigilance de Philadelphie. À l'arrivée, quatre personnes verrouillent la porte du bureau, frappent sur la caisse, et l'ouvrent. Brown se lève et leur serre la main. Il est sorti vivant et libre. Ceux qui l'attendent ne savent pas ce qu'ils vont trouver dedans.",
+  "#Après la caisse",
+  "Il écrit un récit, publié à Boston en 1849. Il donne des conférences et monte un panorama animé avec l'artiste Josiah Wolcott. Il en fait un spectacle, et l'homme qui avait disparu dans un colis devient « Henry Box Brown », un nom que l'on retient. Son histoire voyage désormais bien plus loin que lui.",
+  "On ne sait pas ce que Brown a su de Nancy après la vente, ni si le « professeur Box Brown » apparu en 1896 est bien lui. Deux dates circulent pour l'expédition, le 23 ou le 29 mars 1849, et deux durées, 26 ou 27 heures. Quelle que soit la bonne, une chose reste : il avait traversé la frontière entre l'esclavage et la liberté sans faire un pas, enfermé, sans voir ni le chemin ni l'arrivée, avec pour seul espoir que quelqu'un, à l'autre bout, ouvre le couvercle."
+ ],
+ "notes": "Retiré : sentiment de Brown et récit des psaumes (non présents dans l'ancienne version). Conversions en mètres ajoutées. À vérifier : date de l'expédition (23 ou 29 mars 1849), durée (26 ou 27 heures), date du retour du « professeur Box Brown »."
+}
