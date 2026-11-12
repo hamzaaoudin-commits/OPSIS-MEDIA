@@ -1,0 +1,23 @@
+{
+ "id": "ld28",
+ "fmt": 3,
+ "name": "Hiroshima : huit heures quinze",
+ "sub": "Hiroshima, 6 août 1945 — Un matin d'été comme les autres pour 350 000 habitants, vu par ceux qui l'ont vécu et ont choisi de le raconter.",
+ "body": [
+  "Un peu après huit heures du matin, ce lundi 6 août 1945, la ville de Hiroshima commence sa journée. Des écoliers sont mobilisés pour démolir des maisons, afin de créer des coupe-feu qui ralentiraient les incendies en cas de bombardement. Des étudiants rejoignent leurs cours, des ouvriers leur usine. Le ciel est clair. Trois avions américains apparaissent très haut, comme on en a déjà vu : leur passage n'inquiète plus beaucoup, on les prend pour des appareils de reconnaissance.",
+  "Le premier de ces bombardiers s'appelle l'Enola Gay, et il est piloté par le colonel Paul Tibbets, qui est parti de l'île de Tinian. Il porte une seule bombe, d'un type que personne n'a jamais lâché sur une ville. Elle explose à 8 h 15, selon l'heure généralement retenue, à environ 600 mètres au-dessus du centre-ville. La puissance est d'environ quinze kilotonnes, mais ce chiffre ne dit rien de ce qui se passe en dessous : un éclair blanc, une chaleur qui brûle les peaux à plusieurs kilomètres, puis un souffle qui rase les maisons de bois. Tout près, l'armature métallique d'un grand bâtiment, le palais de la promotion industrielle, reste debout. On l'appellera le Dôme de Genbaku. Jusque-là, Hiroshima avait été en grande partie épargnée par les bombardements classiques, ce qui permettait ensuite de mesurer les effets de la nouvelle arme. En quelques secondes, la ville a disparu.",
+  "#Ceux qui ont vu",
+  "Sunao Tsuboi a vingt ans et marche vers son école quand il entend un grand bruit. Il est projeté à plusieurs mètres et se retrouve gravement brûlé. Tsutomu Yamaguchi, vingt-neuf ans, ingénieur naval chez Mitsubishi, rentre d'un voyage de travail. Il voit un avion et un objet qui descend au bout d'un parachute, se jette dans un fossé, et c'est le souffle qui le projette dans un champ. Il survivra. Trois jours plus tard, à Nagasaki, il vivra la même chose une seconde fois.",
+  "Les enfants racontent d'autres choses. Keiko Ogura a huit ans, et son père lui a défendu de sortir ce matin-là. Elle voit tout devenir blanc, puis le ciel se remplir de suie, puis tomber une pluie noire et grasse. Emiko Okada, du même âge, dira avoir eu l'impression que le soleil tombait sur elle. Seiko Komatsu, neuf ans, voit la pluie noire retomber sur ses grands-parents blessés. Hiroko Watanabe, treize ans, démolit des bâtiments à un kilomètre et demi du centre de l'explosion. Elle aperçoit un avion, un éclair, et perd connaissance.",
+  "Tous ces enfants ont raconté ce moment des décennies plus tard, souvent pour que d'autres ne l'oublient pas.",
+  "#Après",
+  "Les survivants marchent dans les ruines, vers les rivières, dans l'espoir d'y trouver de l'eau. Les hôpitaux sont détruits, et la plus grande partie du personnel médical est morte ou hors d'état de soigner. Il n'y a presque personne pour s'occuper des blessés.",
+  "On ne saura jamais le nombre exact des morts. Les estimations vont de 70 000 à 80 000 morts sur le coup, parmi les 350 000 habitants que comptait la ville. Ce chiffre a plus que doublé avant la fin de l'année, à cause des blessures et des effets des radiations. Des milliers de survivants, les hibakusha, garderont des séquelles et subiront la stigmatisation toute leur vie.",
+  "Le Dôme de Genbaku, resté debout au-dessus des ruines, est aujourd'hui inscrit au patrimoine mondial de l'humanité."
+ ],
+ "note": "Établi : bombe larguée par l'Enola Gay (colonel Paul Tibbets, parti de Tinian), explosion à 8 h 15 (heure généralement retenue) à environ 600 m au-dessus de la ville ; puissance d'environ 15 kilotonnes ; 70 000 à 80 000 morts sur le coup selon les estimations, chiffre plus que doublé à la fin de l'année. Témoignages rapportés : Tsuboi, Yamaguchi, Ogura, Okada, Komatsu, Watanabe. Omis car douteux : détail de la cantine de Tsuboi. À vérifier avant publication : âges, circonstances individuelles, distance du centre pour Watanabe, la mention d'une ville « en grande partie épargnée » par les bombardements classiques, l'inscription du Dôme au patrimoine mondial (1996).",
+ "blurb": {
+  "b": "Un lundi matin d'août, une ville part travailler. Des écoliers démolissent des maisons, des étudiants rejoignent leurs cours, trois avions passent très haut dans un ciel clair. À 8 h 15, tout change. Il reste ceux qui ont vu, et qui ont raconté, parfois des décennies plus tard, ce que chacun faisait à cet instant précis.",
+  "h": "Un matin ordinaire, raconté par ceux qui y étaient."
+ }
+}
