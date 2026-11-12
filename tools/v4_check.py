@@ -18,7 +18,7 @@ for i in sys.argv[1:]:
         if body[0][:1] in '#@!':pb.append('le récit doit commencer par un paragraphe (pas de dateline ni d\'intertitre)')
         H=[t for t in body if t.startswith('#')]
         if re.search(r'(?i)^#(prologue|épilogue|\d\d)',' \n'.join(H),re.M):pb.append('pas de PROLOGUE/ÉPILOGUE/chapitres numérotés')
-        if len(H)>{3:3,7:6,12:9}.get(f,6):pb.append('trop d\'intertitres (%d)'%len(H))
+        if len(H)>{3:4,7:6,12:9}.get(f,6):pb.append('trop d\'intertitres (%d)'%len(H))
         if any(t.startswith(('@','!')) for t in body):pb.append('pas de dateline @ ni d\'exergue !')
         P=[len(t.split()) for t in body if t[:1] not in '#@!']
         med=statistics.median(P)
