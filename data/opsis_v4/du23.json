@@ -1,0 +1,24 @@
+{
+ "id": "du23",
+ "fmt": 3,
+ "name": "Lee Sedol contre la machine : le coup 78",
+ "sub": "Séoul, mars 2016 — Un des meilleurs joueurs de go du monde affronte un programme de Google. Il perd trois parties d'affilée, puis joue un coup que la machine n'avait pas vu venir.",
+ "body": [
+  "Pendant des décennies, un jeu de plateau a résisté aux ordinateurs : le go, né en Asie il y a plusieurs milliers d'années. On y pose tour à tour des pierres noires et blanches sur un quadrillage de dix-neuf lignes sur dix-neuf, et le nombre de parties possibles dépasse de très loin celui des échecs. Impossible de tout calculer. Les meilleurs joueurs décident en grande partie au flair, et c'est justement ce flair que les machines n'arrivaient pas à imiter.",
+  "En mars 2016, à Séoul, un programme nommé AlphaGo, conçu par DeepMind, une société de Google, affronte Lee Sedol, l'un des meilleurs joueurs de sa génération, 9e dan professionnel, le rang le plus élevé. Cinq mois plus tôt, le programme a battu cinq à zéro le champion d'Europe, Fan Hui, mais celui-ci est très loin du niveau de Lee. Avant le match, Lee pense gagner cinq à zéro, ou quatre à un au pire. Les cinq parties sont diffusées en direct.",
+  "Le 9 mars, il perd la première. Le lendemain, il perd la deuxième, dans laquelle AlphaGo joue un coup que les commentateurs prennent d'abord pour une erreur, avant de comprendre qu'il est excellent. Le 12 mars, il perd la troisième. Le match se joue au meilleur des cinq : il est perdu. Pendant trois jours, l'idée que la machine ne peut pas être battue s'est installée dans la salle et dans les commentaires.",
+  "## Le coup 78",
+  "Le 13 mars, Lee joue la quatrième partie avec les blancs. Elle est longue, difficile. Vers le milieu de la partie, il pose une pierre à un endroit que personne n'attendait : c'est son 78e coup. Les commentateurs le jugent brillant, de ceux que l'on trouve dans les livres de problèmes. Un grand joueur chinois, Gu Li, l'appelle un coup divin et dit qu'il ne l'avait pas vu.",
+  "AlphaGo non plus. Au coup suivant, il se trompe, et il ne s'en rend compte que huit coups plus tard. Demis Hassabis, le patron de DeepMind, expliquera que l'évaluation interne du programme s'effondre d'un seul coup au 87e coup : jusque-là, il jugeait sa position nettement favorable. La machine tente alors de se rattraper, et n'y parvient pas. Elle abandonne.",
+  "« On ne m'a jamais autant félicité pour avoir gagné une seule partie », plaisante Lee après coup. Cette victoire ne change rien au score, il le sait. Mais pour la première fois, on a vu le programme jouer une position pour laquelle il n'était pas prêt, et se tromper comme un joueur.",
+  "## Ce qu'il reste",
+  "Dans la cinquième partie, AlphaGo reprend un léger avantage, et Lee abandonne un peu avant la fin, en comprenant qu'il perdra de peu. Le score final est de quatre à un. Un commentateur américain, Chris Garlock, dit qu'on étudiera ces parties pendant des années. Lee, lui, présente des excuses : il est désolé que le match se termine ainsi.",
+  "Le 19 novembre 2019, Lee Sedol annonce qu'il prend sa retraite. Il explique que, même s'il devenait numéro un mondial, il y aurait toujours une entité que l'on ne peut pas battre. Dans un entretien de 2024, il dit que perdre contre une intelligence artificielle lui avait donné l'impression que son monde s'effondrait.",
+  "On ne saura pas si Lee aurait gagné contre une version moins aboutie du programme. Reste le coup 78, la seule victoire humaine de ce match."
+ ],
+ "note": "Établi : dates des parties (9, 10, 12, 13 et 15 mars 2016), score final de 4-1, victoire de Lee à la quatrième partie, victoire 5-0 d'AlphaGo contre Fan Hui en octobre 2015, retraite annoncée le 19 novembre 2019. Rapporté : le pronostic de Lee avant le match (5-0 ou 4-1) ; la formule de Gu Li (« coup divin ») ; les explications de Demis Hassabis sur l'évaluation interne d'AlphaGo (effondrement vers le 87e coup) ; la plaisanterie de Lee sur les félicitations ; les propos de Chris Garlock ; la citation de Lee à sa retraite et son entretien de 2024 (paraphrasés). À vérifier avant publication : le numéro du coup de la deuxième partie qui avait surpris les commentateurs (le 37e, de mémoire) ; l'âge d'origine du go (« plusieurs milliers d'années ») ; les conditions exactes de l'abandon de Lee en cinquième partie.",
+ "blurb": {
+  "b": "Pendant des décennies, le go a résisté aux ordinateurs. En mars 2016, un programme de Google affronte à Séoul l'un des plus grands champions du jeu, qui pense l'emporter largement. Il perd les trois premières parties. Pourtant, dans la quatrième, il joue un coup que personne n'attendait, et la machine se met à douter.",
+  "h": "Trois défaites, puis un coup que la machine n'avait pas calculé."
+ }
+}

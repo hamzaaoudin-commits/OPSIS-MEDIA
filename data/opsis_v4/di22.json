@@ -1,0 +1,27 @@
+{
+ "id": "di22",
+ "fmt": 3,
+ "name": "Le cœur de l'enfant du Temple",
+ "sub": "Paris, 1795 — un médecin garde en secret le cœur d'un enfant de dix ans mort en prison. Deux siècles plus tard, son ADN doit dire s'il s'agit du fils de Louis XVI.",
+ "body": [
+  "Le 8 juin 1795, un enfant de dix ans meurt dans une tour de Paris, et un médecin supervise l'autopsie. À cette occasion, il fait ce que personne ne lui a demandé : il prélève le cœur de l'enfant et le garde. Il ne le déclarera qu'en 1814. Ce cœur va ensuite passer de main en main pendant plus de deux siècles, jusqu'à ce qu'une analyse, en l'an 2000, dise de qui il est.",
+  "#L'enfant du Temple",
+  "L'enfant s'appelle Louis-Charles. Il est né le 27 mars 1785 à Versailles, deuxième fils du roi Louis XVI et de Marie-Antoinette, et il devient dauphin, c'est-à-dire héritier du trône, à la mort de son frère aîné en 1789. Après la chute de la monarchie, le 10 août 1792, la famille royale est enfermée au Temple, une ancienne forteresse de Paris. Quand son père est exécuté, en janvier 1793, les royalistes le considèrent comme le nouveau roi, Louis XVII, bien qu'il n'ait jamais régné.",
+  "Le 3 juillet 1793, à huit ans, il est séparé de sa mère et confié à un cordonnier, Antoine Simon. Il reste ensuite au Temple dans des conditions dures, et sa santé se dégrade vite. Les récits divergent sur ce qu'il a subi : certains décrivent un cachot fermé, sale, et de graves négligences. Les accusations de sévices physiques, elles, ne sont pas étayées.",
+  "#Mort au secret",
+  "Il meurt le 8 juin 1795 d'une infection que le rapport d'autopsie décrit comme scrofuleuse, c'est-à-dire tuberculeuse. Le médecin Philippe-Jean Pelletan supervise l'autopsie. Le corps est enterré le 10 juin au cimetière Sainte-Marguerite, sans aucune marque, et les récits de cet enterrement se contredisent : fosse commune, fosse à part, ou ailleurs.",
+  "Le cœur, lui, est conservé dans l'alcool. Pelletan le remet à l'archevêque de Paris, et il passe ensuite par plusieurs mains. En 1975, il devient une relique, conservée au Mémorial de France, à Saint-Denis. Mais l'enfant est mort au secret, et l'on se met alors à croire qu'il s'est évadé.",
+  "#Cent prétendants",
+  "Une centaine de personnes se disent Louis XVII. Le plus connu est Karl Wilhelm Naundorff, un horloger mort à Delft en 1845. Des tests ADN, en 1993, montrent qu'il n'était pas le dauphin. Certains auteurs ont soutenu que l'enfant était mort dès la fin de 1794, et qu'un substitut était mort à sa place en 1795, mais les analyses menées plus tard contredisent cette thèse.",
+  "On a aussi cru trouver ses restes. Des squelettes exhumés en 1846 et en 1894 ont été attribués à Louis XVII, mais on a établi qu'ils appartenaient à un homme de plus de seize ans, ce qui les écarte. Pour trancher, il ne restait qu'une chose : le cœur.",
+  "#Une analyse en l'an 2000",
+  "En 1999, le gouvernement français autorise le prélèvement d'un échantillon de 500 milligrammes sur le cœur. Deux équipes comparent son ADN mitochondrial, que l'on reçoit uniquement de sa mère, à celui de cheveux de membres de la famille royale, dont Marie-Antoinette. Il est identique à celui de la reine et de ses parents par les femmes.",
+  "L'annonce date du 19 avril 2000 : l'enfant mort au Temple était bien Louis XVII. Une réserve s'impose pourtant, car l'ADN mitochondrial ne suit que la lignée maternelle, et il ne permet pas, à lui seul, d'identifier un individu de façon unique. Les descendants de Naundorff rejettent la conclusion.",
+  "En 2004, le cœur est déposé dans la basilique de Saint-Denis, près des tombeaux de ses parents, deux cent neuf ans après la mort de l'enfant. On ne sait toujours pas où se trouve son corps. On ne connaît pas non plus la chaîne exacte par laquelle l'organe a été conservé pendant ces deux siècles."
+ ],
+ "note": "Établi : naissance 27/03/1785, mort 8/06/1795, autopsie par Pelletan, cœur conservé, analyse ADN annoncée le 19/04/2000, dépôt à Saint-Denis en 2004. Discuté : conditions de détention (sévices non étayés), lieu de l'enterrement, thèse de la substitution (contredite), identification par ADN mitochondrial (limite : lignée maternelle) ; Naundorff (descendants contestent). À vérifier avant publication : « ne le déclarera qu'en 1814 » (ancien texte), la remise à l'archevêque de Paris, le passage par plusieurs mains, la relique de 1975, le prélèvement de 500 mg (1999), l'âge limite « plus de seize ans » pour les exhumations de 1846 et 1894, la phrase « les royalistes le considèrent comme Louis XVII ».",
+ "blurb": {
+  "b": "Le jour de sa mort, un enfant de dix ans voit son cœur prélevé et gardé en secret par le médecin qui l'autopsie. Il restera deux cents ans dans un bocal, pendant que se multiplient les prétendants se disant le fils de Louis XVI. En 2000, une analyse ADN doit enfin dire à qui il appartient. La réponse ne ferme pas toutes les questions.",
+  "h": "Un cœur de dix ans, gardé en secret pendant deux siècles."
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "id": "di23",
+ "fmt": 3,
+ "name": "Wallenberg, le prisonnier numéro 7",
+ "sub": "Hongrie, URSS, 1944-1952 — un diplomate suédois sauve des milliers de Juifs à Budapest, est emmené par les Soviétiques en janvier 1945 et disparaît dans leurs prisons.",
+ "body": [
+  "Janvier 1945. Budapest est assiégée, et un homme de trente-deux ans monte dans une voiture escortée par des soldats soviétiques. Il part pour Debrecen, une ville à l'est du pays où se trouve le quartier général du maréchal soviétique Malinovski. On dit que, avant de partir, il aurait demandé s'il y allait en invité ou en prisonnier. La réponse, personne ne l'a rapportée avec certitude. Ce qui est sûr, c'est que Raoul Wallenberg ne reviendra pas à Budapest.",
+  "#Un homme d'affaires à Budapest",
+  "Wallenberg est suédois, né le 4 août 1912 près de Stockholm. Il a étudié l'architecture aux États-Unis, puis, en 1936, il est entré dans une société d'import-export dont le propriétaire est un Juif hongrois, et il en est devenu copropriétaire un an plus tard. Rien ne le destine à devenir diplomate, et encore moins à tenir tête à une armée.",
+  "En 1944, la Hongrie est dominée par l'Allemagne nazie, et les Juifs de Budapest sont menacés de déportation. Les États-Unis cherchent quelqu'un de confiance à envoyer sur place, et un de leurs responsables chargé d'aider les réfugiés, Iver C. Olsen, choisit Wallenberg. Il arrive à la légation suédoise, c'est-à-dire à l'ambassade de la Suède, le 9 juillet 1944, comme envoyé spécial. Quelques mois plus tôt, il n'était qu'un homme d'affaires.",
+  "#Un papier qui protège",
+  "Avec deux collègues, Wallenberg distribue des passeports de protection, les Schutzpass. Ces documents suédois ne sont pas strictement légaux, mais ils sont généralement acceptés, et ils suffisent souvent à sauver celui qui les présente. Il place aussi une trentaine d'immeubles sous protection suédoise, où vivent près de 10 000 personnes, et il essaie encore d'aider ceux que l'on emmène dans les trains de déportation ou sur les marches de la mort.",
+  "On a longtemps parlé de 100 000 vies sauvées, mais les historiens jugent ce chiffre exagéré. Les estimations sérieuses vont de quelques milliers à quelques dizaines de milliers de personnes, selon qu'on compte ceux qui ont reçu des papiers ou ceux qui ont réellement échappé à la mort.",
+  "#Debrecen",
+  "Le 17 janvier 1945, Wallenberg est appelé au quartier général soviétique pour répondre à des soupçons d'espionnage. Il n'en reviendra pas. Des agents du SMERSH, le service de contre-espionnage de l'armée soviétique, le détiennent, puis il part en train pour Moscou et arrive à la prison de la Loubianka. Son chauffeur est détenu avec lui.",
+  "Pourquoi lui ? Les motifs de l'arrestation restent flous. Les Soviétiques le soupçonnent d'espionner pour les États-Unis. Sa situation inhabituelle a pu y contribuer : il avait de l'argent, une radio, et un statut diplomatique particulier. En 1945, les Soviétiques disent à la Suède que l'armée a « pris soin » de lui, puis qu'il « est parti ». Pendant environ cinq ans, ils affirment ne rien savoir.",
+  "#Ce que disait Moscou",
+  "Le 6 février 1957, Moscou publie un document daté du 17 juillet 1947. Il est signé du directeur de l'infirmerie de la Loubianka, et il dit que Wallenberg est mort subitement dans sa cellule, probablement d'un infarctus. Des anciens détenus affirment ensuite l'avoir vu vivant bien après 1947, entre 1949 et 1975. Aucun de ces récits n'est concluant.",
+  "Puis, en 2009, un registre de la prison est rendu public, et il contient une mention troublante : un « prisonnier n° 7 », interrogé le 23 juillet 1947. C'est six jours après la date officielle de la mort. Des archivistes du FSB, le service de sécurité russe, jugent qu'il s'agit très probablement de Wallenberg.",
+  "En 2000, une commission russo-suédoise avait conclu que sa détention avait une motivation politique et que des dossiers soviétiques avaient été détruits ou modifiés. Elle n'établit pas comment il est mort.",
+  "Yad Vashem, le mémorial israélien de la Shoah, l'a nommé Juste parmi les nations en 1963. En 1981, les États-Unis ont fait de lui un citoyen d'honneur, le deuxième après Winston Churchill. En 2016, l'agence fiscale suédoise le déclare mort, avec une date fixée par convention au 31 juillet 1952.",
+  "On ne sait pas pourquoi il a été arrêté, ni où ni comment il est mort, ni combien de personnes lui doivent la vie. Ce qu'on sait tient en peu de chose : un homme sans pouvoir réel, qu'une administration a respecté, et qui a disparu dans une autre."
+ ],
+ "note": "Établi : arrivée à Budapest le 9/07/1944, Schutzpass, immeubles protégés (~30, ~10 000 personnes), départ le 17/01/1945, Loubianka, document soviétique de 1957 (mort 17/07/1947), registre « prisonnier n° 7 » interrogé le 23/07/1947 (publié 2009, FSB : « très probablement Wallenberg »), commission russo-suédoise de 2000, Juste en 1963, citoyen d'honneur américain en 1981, déclaré mort en 2016 (date conventionnelle 31/07/1952). Discuté : nombre de vies sauvées (100 000 exagéré), motif de l'arrestation, sort final. À vérifier avant publication : la phrase « invité ou prisonnier » (rapportée), le rôle exact d'Iver Olsen (« responsable chargé d'aider les réfugiés » : de mémoire), la nature de la société d'import-export de 1936 (de mémoire), le détail « la Hongrie dominée par l'Allemagne » (de mémoire), « le deuxième après Churchill », le fait que la mention du registre vise bien le 23/07/1947.",
+ "blurb": {
+  "b": "Raoul Wallenberg, diplomate suédois, protège des milliers de Juifs à Budapest avec de simples papiers. En janvier 1945, il monte dans une voiture soviétique et disparaît. Moscou le dit mort en 1947, mais un registre carcéral parle d'un « prisonnier n° 7 » interrogé six jours plus tard. Que lui est-il arrivé ?",
+  "h": "Il a sauvé des milliers de vies. Moscou dit qu'il est mort en 1947."
+ }
+}
