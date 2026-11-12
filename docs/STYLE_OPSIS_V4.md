@@ -15,3 +15,13 @@
 9. **Structure dictée par l'histoire** : enquête, tragédie de survie, escroquerie, ascension… Pas de squelette commun, pas de PROLOGUE/ÉPILOGUE imposés. Intertitres libres, parcimonieux, sans effet.
 10. **Fin** : un fait, une conséquence, une image ou une question restée sans réponse. Jamais une leçon.
 11. **Rigueur** : tout fait vérifiable ; les reconstitutions et versions divergentes sont signalées dans la note éditoriale ; sources en fin de page seulement.
+
+## Profondeur narrative (ajout)
+- Concision ≠ précipitation : ne jamais empiler 5 révélations dans un paragraphe. La concision est une qualité quand elle élimine le superflu, un défaut quand elle élimine l'histoire. Viser la meilleure expérience de lecture dans le format, pas le maximum d'informations dans le minimum de mots.
+- Développer plutôt qu'énumérer : montrer le lien entre les événements, ce qui change après chacun, pourquoi.
+- Progression de découverte : une révélation doit modifier la perception de ce qui précède.
+- Moments décisifs (disparition, découverte, trahison, décision irréversible, retournement) = séquences narratives à part entière, construites sur le seul vérifiable.
+- Le contraste fait l'émotion (ex. deux messages écrits à un an d'écart, par des hommes qui n'en sont plus au même point).
+- Alterner : événements / information historique / détail concret / révélation / conséquence humaine / compréhension. Pas de paragraphes en fiche documentaire.
+- Quand l'histoire se prolonge par une question (ex. « qu'est-il arrivé aux 105 hommes ? »), l'organiser autour d'indices successifs qui font avancer la compréhension.
+- Distinguer précisément ce qui vient des récits, des chercheurs et des moyens techniques (ex. les Inuits n'ont pas « donné l'emplacement » des épaves).
