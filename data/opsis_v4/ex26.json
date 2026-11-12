@@ -1,0 +1,29 @@
+{
+ "id": "ex26",
+ "fmt": 3,
+ "name": "Le Titanic, retrouvé grâce à deux sous-marins",
+ "sub": "Atlantique Nord, 1982-1986 — Pour obtenir le droit de chercher le Titanic, Robert Ballard doit d'abord aller voir deux épaves de sous-marins nucléaires.",
+ "body": [
+  "Comment retrouver un navire de deux cent soixante-neuf mètres au fond de l'océan, quand on ne sait pas exactement où il repose et que plusieurs équipes sont passées à côté ? Pendant des années, le Titanic a défié ceux qui le cherchaient. Quand il apparaît enfin sur les écrans d'un bateau de recherche, dans la nuit du 1er septembre 1985, c'est au terme d'un chemin très détourné, qui commence par une condition posée par l'armée.",
+  "En 1982, un océanographe américain, Robert Ballard, va voir la marine des États-Unis. Il lui présente Argo, un robot d'exploration sous-marine, relié à un bateau par un câble, qui descend filmer le fond. Et il lui parle d'un projet qui lui tient à cœur : retrouver le Titanic. La marine ne veut pas payer pour cela seul. Elle pose une condition. Avant de chercher le paquebot, Ballard doit inspecter les épaves de deux sous-marins nucléaires américains coulés, l'USS Thresher et l'USS Scorpion, et évaluer l'effet de leurs réacteurs sur la radioactivité du milieu.",
+  "Selon une version de l'histoire, cette mission aurait été secrète et le Titanic n'aurait été qu'une couverture. Une autre décrit simplement une recherche rendue possible une fois les objectifs de la marine atteints. Ce qui est établi, c'est l'ordre des choses : les sous-marins d'abord, le paquebot ensuite.",
+  "#Ceux qui sont passés à côté",
+  "Beaucoup ont échoué avant lui. Des recherches au sonar, dont les expéditions américaines de 1980 et de 1981, dites expéditions Grimm, n'ont rien donné. En 1985, une équipe française de l'IFREMER, l'institut français de recherche sur la mer, dirigée par Jean-Louis Michel à bord du Suroît, balaie la zone juste avant les Américains. Elle passe à quelques centaines de mètres de l'épave sans la voir.",
+  "Le problème tient au sonar, qui envoie des sons vers le fond pour en dessiner le relief. Il ne distingue pas de façon fiable un objet fabriqué par l'homme d'un simple accident du terrain, et un paquebot enfoui à près de quatre kilomètres de profondeur ressemble, vu ainsi, à n'importe quelle bosse.",
+  "L'équipe de Ballard, qui travaille avec la Woods Hole Oceanographic Institution, un grand centre de recherche américain, prend le relais à bord du Knorr. Elle arrive avec une autre idée, tirée de ce qu'elle vient de voir sur les sous-marins.",
+  "#Chercher une traînée",
+  "Les deux sous-marins ont implosé en coulant, et ils ont laissé derrière eux de longues traînées de débris. Un paquebot qui s'est brisé en deux avant de couler en a certainement laissé aussi. Plutôt que de chercher un navire, Argo balaiera donc le fond en quête de morceaux : une piste de fragments qui, une fois repérée, mènerait au reste.",
+  "Concrètement, cela veut dire des heures de patience. Des équipes se relaient en quarts devant les écrans vidéo pour regarder défiler le sol, image après image, sans savoir si quelque chose finira par apparaître. Le Knorr arrive sur la zone le 22 août 1985, et le temps est compté, car d'autres scientifiques attendent de pouvoir utiliser le bateau.",
+  "Aux premières heures du 1er septembre, les écrans montrent encore du sol. Puis des cratères, puis des débris. Puis une chaudière. Et enfin une coque.",
+  "#Le paquebot brisé en deux",
+  "L'épave repose à environ 3 800 mètres de profondeur. La proue et la poupe sont séparées d'environ 600 mètres, et les chaudières gisent à environ 180 mètres à l'est de la poupe. Le paquebot que l'on disait insubmersible est là, brisé en deux, à l'endroit où aucun sonar n'avait su le distinguer.",
+  "L'équipe revient en juillet 1986 à bord de l'Atlantis II, avec un petit sous-marin habité, l'Alvin, et un robot plus petit encore, Jason Junior, capable de se glisser près de l'épave. La première plongée, longue de plus de deux heures, connaît des problèmes techniques. Les suivantes réussissent mieux et produisent un relevé photographique détaillé du site. Ballard considère l'épave comme un cimetière, et il refuse d'en retirer le moindre objet.",
+  "Les récits divergent sur plusieurs points : l'heure exacte de la découverte, le jour où l'épave principale a été identifiée, le rôle précis de chaque équipe dans la campagne du Suroît. On ne sait pas non plus ce que l'évaluation des réacteurs des deux sous-marins a donné.",
+  "Reste le paradoxe de départ. Pour obtenir le droit de chercher le plus célèbre des naufrages, il a fallu commencer par aller voir deux épaves militaires. Et c'est en cherchant ce que l'accident d'un sous-marin disperse sur le fond qu'on a fini par retrouver ce qu'un paquebot avait laissé."
+ ],
+ "note": "Établi (selon les sources de l'ancien texte) : condition posée par la marine américaine, ordre sous-marins puis Titanic, arrivée du Knorr le 22 août 1985, découverte le 1er septembre 1985, retour en juillet 1986 avec Atlantis II, Alvin et Jason Junior, refus de Ballard de récupérer des objets. Divergences signalées dans le texte : thèse de la couverture secrète, heure de découverte, rôle de chaque équipe, résultat de l'évaluation des réacteurs. À vérifier : longueur du Titanic (269 m, donnée de mémoire), détail des expéditions Grimm, distance exacte de passage du Suroît.",
+ "blurb": {
+  "b": "Pour avoir le droit de chercher le Titanic, un océanographe a dû d'abord inspecter les épaves de deux sous-marins nucléaires. Des équipes sont passées à quelques centaines de mètres du paquebot sans le voir. Ce sont ces deux épaves militaires qui ont fini par donner la bonne idée.",
+  "h": "Le Titanic, retrouvé grâce à deux sous-marins."
+ }
+}
