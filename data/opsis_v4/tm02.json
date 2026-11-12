@@ -1,11 +1,11 @@
 {
  "id": "tm02",
- "fmt": 7,
+ "fmt": 3,
  "name": "The Crow : une cartouche factice",
  "sub": "Caroline du Nord, 31 mars 1993 — À trois jours de la fin du tournage, un acteur de 28 ans est tué par un revolver censé ne tirer que des cartouches à blanc.",
  "body": [
-  "À trois jours de la fin d'un tournage, un acteur de vingt-huit ans est tué par un revolver qui n'aurait jamais dû contenir la moindre balle. Brandon Lee, le héros de The Crow, a déjà tourné l'essentiel de ses scènes. Il doit se marier peu après. Le soir du 31 mars 1993, vers minuit, une arme chargée à blanc tire sur lui, à quelques mètres.",
-  "Le tournage avait commencé en février, à Wilmington, en Caroline du Nord, pour cinquante-quatre jours prévus. Le film est tiré d'une bande dessinée de James O'Barr et réalisé par Alex Proyas. Lee y joue un musicien assassiné qui revient d'entre les morts pour venger sa fiancée et lui-même. Il est le fils de Bruce Lee, mort en 1973, quand Brandon avait huit ans, et il a fait son chemin dans des films d'action modestes. The Crow doit être celui qui le fera connaître pour autre chose que son nom. Il doit épouser sa fiancée, Eliza Hutton, quelques semaines plus tard, juste après la fin du tournage.",
+  "À trois jours de la fin d'un tournage, un acteur de vingt-huit ans est tué par un revolver qui n'aurait jamais dû contenir la moindre balle. Brandon Lee, le héros de The Crow, a déjà tourné l'essentiel de ses scènes. Le soir du 31 mars 1993, vers minuit, une arme chargée à blanc tire sur lui, à quelques mètres.",
+  "Le tournage avait commencé en février, à Wilmington, en Caroline du Nord, pour cinquante-quatre jours prévus. Le film est tiré d'une bande dessinée de James O'Barr et réalisé par Alex Proyas. Lee y joue un musicien assassiné qui revient d'entre les morts pour venger sa fiancée et lui-même. Il est le fils de Bruce Lee, mort en 1973, quand Brandon avait huit ans, et il a fait son chemin dans des films d'action modestes. The Crow doit être celui qui le fera connaître pour autre chose que son nom. Il doit épouser sa fiancée, Eliza Hutton, peu après la fin du tournage.",
   "#La scène",
   "Aux studios EUE Screen Gems, ce soir-là, on filme la scène où le personnage de Michael Massee, l'un des meurtriers, tire sur celui de Lee avec un revolver de calibre .44 Magnum, à quatre ou cinq mètres de distance. L'arme est censée contenir des cartouches à blanc, qui produisent un éclair et un bruit mais ne projettent rien.",
   "Une balle touche Lee à l'abdomen. Il s'effondre, et très vite l'équipe comprend que ce n'est plus du cinéma. Il est conduit à l'hôpital et opéré, mais il meurt quelques heures plus tard.",
@@ -18,7 +18,7 @@
  ],
  "note": "Établi : mort de Brandon Lee après le tir du 31 mars 1993, cartouche factice dont le projectile s'est logé dans le canon, conclusion du procureur Spivey le 27 avril 1993 (négligence, pas d'acte criminel), amende de 84 000 $ à Carolco, reprise par Miramax, sortie en mai 1994. Rapporté : le tir d'un acteur sans surveillance des semaines plus tôt (témoins), le fait que le spécialiste était parti plus tôt et que l'assistant ignorait la règle. À vérifier avant publication : heure (vers minuit) et distance (4-5 m), budget et rallonge de 8 M$, la formule 'cinquante-quatre jours prévus', date du mariage prévu (l'ancien texte dit 'peu après'), le nom exact du studio, les détails sur les effets numériques. Supprimé : l'ancien texte disait qu'il 'tirait une balle de calibre .44' sans nuancer ; ici on décrit la chaîne (cartouche factice, bout dans le canon, cartouche à blanc).",
  "blurb": {
-  "b": "Vingt-huit ans, deux jours de tournage restants, un mariage prévu : Brandon Lee est tué sur le plateau de The Crow par une balle qui n'aurait jamais dû être là. L'enquête dessine une succession d'oublis, de vérifications non faites et de règles de sécurité ignorées.",
+  "b": "Vingt-huit ans, trois jours de tournage restants, un mariage prévu : Brandon Lee est tué sur le plateau de The Crow par une balle qui n'aurait jamais dû être là. L'enquête dessine une succession d'oublis, de vérifications non faites et de règles de sécurité ignorées.",
   "h": "Une balle qui n'aurait jamais dû exister."
  }
 }
