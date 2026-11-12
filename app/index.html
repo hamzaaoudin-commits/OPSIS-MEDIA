@@ -1291,7 +1291,7 @@ var TMSN="Tournage maudit",TMIDS=[];
 var LENS=DATA.LENS;var BLURB=DATA.BLURB||{};
 Object.keys(LENS).forEach(function(id){var o=LENS[id];if(STORIES[id]){if(o["3"])STORIES[id].b3=o["3"];if(o["5"])STORIES[id].b5=o["5"];if(o["10"])STORIES[id].b10=o["10"];}});/*LENS-END*/
 var FMT=(typeof DATA!=='undefined'&&DATA.FMT)||{};var FIN=(typeof DATA!=='undefined'&&DATA.FIN)||{};
-function finBlock(id){var f=FIN[id];if(!f)return '';return '<div class="fin"><h4>Ce que vous venez de découvrir</h4><ul>'+f.l.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul><h4>À retenir</h4><p>'+esc(f.r)+'</p></div>';}
+function finBlock(id){var f=FIN[id];if(!f||!f.l||!f.l.length)return '';return '<div class="fin"><h4>Ce que vous venez de découvrir</h4><ul>'+f.l.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul><h4>À retenir</h4><p>'+esc(f.r)+'</p></div>';}
 function finNote(id){var f=FIN[id];return f&&f.n?'<p class="src"><b>Note éditoriale.</b> '+esc(f.n)+'</p>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
 function minOf(id,arr){return FMT[id]||lenMin(arr);}
 /* ---- Histoires du jour : publiées depuis la base, sans mise à jour de l'application ---- */
