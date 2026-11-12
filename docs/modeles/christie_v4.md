@@ -1,0 +1,50 @@
+# Agatha Christie, onze jours sous un faux nom
+
+Le matin du 4 décembre 1926, une voiture est retrouvée abandonnée dans la campagne anglaise.
+
+Elle est arrêtée au bord d'une pente, de travers, les phares encore allumés. À l'intérieur, personne, mais des affaires : un manteau de fourrure, des vêtements, des papiers. Tout laisse penser que la conductrice est partie précipitamment, ou qu'on l'a fait partir. Elle, en tout cas, n'est nulle part.
+
+Quand la police lit le nom sur les papiers, l'affaire change de dimension. La voiture appartient à Agatha Christie. Elle a trente-six ans, et ses romans policiers font d'elle l'une des auteures les plus lues du pays. La veille au soir, elle a quitté son domicile après une dispute avec son mari. Personne ne l'a revue depuis.
+
+## Une année qui s'effondre
+
+Pour ceux qui la connaissent, cette disparition arrive après une année très dure. En avril, sa mère, dont elle était très proche, est morte. En août, son mari, Archie, un ancien pilote de la Première Guerre mondiale, lui a annoncé qu'il aimait une autre femme, Nancy Neele, et qu'il voulait divorcer. Le couple a une fille de sept ans.
+
+Le 3 décembre, après une nouvelle dispute dont on ne connaît pas le contenu, Archie est parti passer le week-end chez des amis. Agatha, elle, a pris sa voiture, le soir même.
+
+## Toute l'Angleterre la cherche
+
+En quelques jours, la disparition devient l'événement dont tout le monde parle. Les journaux en font leur une. La police mobilise plus de mille hommes, auxquels se joignent quinze mille volontaires qui fouillent les bois et les étangs. Des avions survolent la région. Un journal promet cent livres à qui retrouvera la romancière.
+
+Faute de piste, on se tourne vers des méthodes plus étonnantes. Arthur Conan Doyle, le créateur de Sherlock Holmes, convaincu de l'existence des esprits, remet l'un des gants d'Agatha à un médium dans l'espoir qu'il « sente » où elle se trouve. Le médium ne trouve rien.
+
+Les journaux avancent trois explications : un suicide, un meurtre, ou une mise en scène pour vendre des livres. Beaucoup regardent Archie avec suspicion, parce qu'il était absent la nuit de la disparition et qu'il avait une maîtresse.
+
+Onze jours passent sans le moindre indice.
+
+## Un hôtel, une cliente
+
+Le 14 décembre, à Harrogate, une ville thermale du nord de l'Angleterre, un employé ou un musicien de l'hôtel remarque une cliente qui ressemble à la photographie publiée dans tous les journaux. Les récits divergent sur l'identité de celui qui a donné l'alerte.
+
+La femme est arrivée là le soir même de la disparition, avec une petite valise. Depuis, elle vit comme n'importe quel curiste : elle dîne à l'hôtel, lit les journaux, participe, d'après plusieurs récits, aux soirées dansantes. Elle lit peut-être, ces jours-là, les articles consacrés à sa propre disparition.
+
+On regarde alors le registre de l'hôtel. Elle s'y est inscrite sous le nom de Teresa Neele, venue du Cap.
+
+Neele est le nom de la maîtresse de son mari.
+
+La police prévient Archie, qui prend le train pour Harrogate. Les récits racontent qu'il retrouve sa femme dans l'hôtel, et qu'elle ne le reconnaît pas tout de suite, ou ne le montre pas. On cite souvent une phrase qu'elle aurait prononcée à ce moment-là, mais aucun document ne permet de la lui attribuer avec certitude.
+
+Ce que l'on sait, c'est que le couple quitte l'hôtel le lendemain, et qu'Archie explique à la presse que sa femme est victime d'une amnésie.
+
+## Une explication qui ne ferme rien
+
+Deux médecins examinent Agatha et concluent à une perte de mémoire réelle. Mais l'explication ne convainc pas tout le monde, et les biographes se sont longtemps opposés à son sujet.
+
+Pour l'une d'elles, Janet Morgan, Agatha a traversé ce que les médecins appellent une fugue dissociative : un état dans lequel l'esprit, écrasé par un deuil et une trahison, se coupe de sa propre identité sans que la personne le décide. Pour un autre, Jared Cade, tout était délibéré : elle aurait voulu punir son mari en laissant le nom de sa maîtresse sous ses yeux, et en le faisant soupçonner de l'avoir tuée.
+
+Les deux hypothèses collent aux faits connus. Aucune ne les explique tous.
+
+Le divorce est prononcé en 1928, et Archie épouse Nancy Neele une semaine plus tard. Quant à Agatha Christie, elle n'a jamais expliqué ces onze jours. Ils ne figurent pas dans son autobiographie, publiée après sa mort.
+
+---
+*Note éditoriale : Faits principaux établis. Les circonstances de l'identification (qui l'a reconnue) varient selon les récits, et la phrase qu'on lui prête à l'hôtel n'est attestée par aucun document. À vérifier avant publication : le détail des recherches, le nom de l'hôtel, la date d'arrivée à l'hôtel, les circonstances du retour. Les deux explications des biographes sont discutées et aucune n'est prouvée.*
