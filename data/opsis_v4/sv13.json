@@ -1,26 +1,26 @@
 {
- "id": "sv13",
- "fmt": 3,
- "name": "Alkemade, 5 490 mètres sans parachute",
- "sub": "Allemagne, 24 mars 1944 — Pour échapper aux flammes de son bombardier, un mitrailleur britannique saute sans parachute. La Gestapo refuse de croire qu'il a survécu.",
- "body": [
-  "Dans la tourelle arrière d'un bombardier britannique en flammes, Nicholas Alkemade, vingt et un ans, n'a plus que deux façons de mourir. Soit il reste, et le feu l'atteindra. Soit il saute, sans parachute, de plus de cinq mille mètres. Le 24 mars 1944, au-dessus de l'Allemagne, il choisit de sauter.",
-  "Avant la guerre, Alkemade était jardinier maraîcher à Loughborough, en Angleterre. Cette nuit-là, il est mitrailleur de queue d'un Lancaster surnommé Werewolf, au retour d'un raid sur Berlin. De forts vents du nord ont poussé l'appareil vers la Ruhr, une région industrielle de l'ouest de l'Allemagne, très défendue. Un peu avant minuit, un chasseur de nuit allemand, piloté par Heinz Rökker, l'attaque par en dessous. Le fuselage et l'aile droite sont touchés, la verrière de la tourelle arrière explose, l'avion prend feu et se met à tourner sur lui-même. Le pilote, James Arthur Newman, ordonne d'évacuer.",
-  "Mais la tourelle est si étroite qu'Alkemade ne peut pas y garder son parachute : le sac est rangé plus loin, dans le fuselage. Il s'avance pour aller le chercher, et les flammes le repoussent. Quand il parvient à le retrouver, le parachute brûle. Le feu gagne alors la tourelle, puis ses vêtements.",
-  "Il décide de sauter. Plus tard, il dira : « J'ai décidé de sauter et d'en finir aussi vite et aussi proprement que possible. » Il tombe la tête la première, à environ cent quatre-vingt-dix kilomètres à l'heure, depuis 5 490 mètres. Il estimera la chute à « trente secondes ou plus », et il perd probablement connaissance. Derrière lui, l'avion explose.",
-  "#Le bois de sapins",
-  "Trois heures plus tard, il se réveille dans un petit bois de sapins, enfoncé dans environ quarante-cinq centimètres de neige. À vingt mètres de là, le sol était nu, et il n'y aurait sans doute pas survécu. La neige et les jeunes branches l'ont amorti.",
-  "Il est brûlé au visage, aux poignets et aux mains, coupé à la tête et à la cuisse, couvert d'ecchymoses, un genou tordu. Il n'a aucun os cassé. Ses bottes de vol ont disparu. Il allume une cigarette, puis souffle dans son sifflet de détresse jusqu'à ce que quelqu'un vienne, et on l'emmène à l'hôpital de la ville de Meschede.",
-  "#Un espion tombé du ciel",
-  "Le lendemain, la Gestapo, la police secrète allemande, l'interroge. Un homme qui prétend être tombé de plus de cinq mille mètres sans parachute, et qui n'a pas un os cassé : elle le soupçonne d'être un espion. Les Allemands fouillent le bois et retrouvent son harnais. Puis l'épave du Werewolf, tombée à trente-deux kilomètres de là, apporte la preuve : le parachute d'Alkemade s'y trouve encore dans son sac, l'anneau d'ouverture toujours dans son étui.",
-  "Les Allemands lui délivrent un certificat, daté du 25 avril 1944, qui reconnaît la vérité de son récit. Il est photographié pour la presse allemande, puis envoyé dans un camp de prisonniers.",
-  "Sur les sept hommes de l'équipage, trois ont survécu : Alkemade, le navigateur John Cleary et l'opérateur radio Geoffrey Burwell. Les quatre autres, dont le pilote, sont enterrés au cimetière de guerre de Hanovre. Cleary retrouvera en 1998 Heinz Rökker, l'homme qui les avait attaqués.",
-  "Alkemade rentre en Angleterre en mai 1945, retourne à Loughborough, travaille dans l'industrie chimique puis devient vendeur de meubles. Il meurt le 22 juin 1987, à soixante-quatre ans, à Liskeard, en Cornouailles. Un musée, à Witchford, conserve son sifflet.",
-  "On ne connaît pas la durée exacte de sa chute. Et personne n'a su dire pourquoi, cette nuit-là, le hasard a choisi un jardinier maraîcher."
- ],
- "note": "Faits principaux documentés (certificat allemand du 25 avril 1944, parachute retrouvé dans l'épave). À vérifier avant publication : l'altitude (5 490 m) et la durée de la chute (sa propre estimation de trente secondes ou plus), la citation de Alkemade (rapportée), la distance exacte entre le bois et l'épave (32 km), la date de la rencontre Cleary-Rökker (1998). On ignore pourquoi il a survécu au-delà de l'amorti par la neige et les sapins.",
- "blurb": {
-  "b": "Dans la nuit du 24 mars 1944, un mitrailleur britannique de 21 ans saute d'un bombardier en flammes, sans parachute, pour échapper au feu. Il se réveille vivant dans un bois, et la police secrète allemande est persuadée qu'il ment.",
-  "h": "Il a sauté pour mourir plus vite. Il s'est réveillé dans la neige."
- }
+  "id": "sv13",
+  "fmt": 3,
+  "name": "Alkemade, 5 490 mètres sans parachute",
+  "sub": "Allemagne, 24 mars 1944 — Pour échapper aux flammes de son bombardier, un mitrailleur britannique saute sans parachute. La Gestapo refuse de croire qu'il a survécu.",
+  "body": [
+    "Dans la tourelle arrière d'un bombardier britannique en flammes, Nicholas Alkemade, vingt et un ans, n'a plus que deux façons de mourir. Soit il reste, et le feu l'atteindra. Soit il saute, sans parachute, de plus de cinq mille mètres. Le 24 mars 1944, au-dessus de l'Allemagne, il choisit de sauter.",
+    "Avant la guerre, Alkemade était jardinier maraîcher à Loughborough, en Angleterre. Cette nuit-là, il est mitrailleur de queue d'un Lancaster surnommé Werewolf, au retour d'un raid sur Berlin. De forts vents du nord ont poussé l'appareil vers la Ruhr, une région industrielle de l'ouest de l'Allemagne, très défendue. Un peu avant minuit, un chasseur de nuit allemand, piloté par Heinz Rökker, l'attaque par en dessous. Le fuselage et l'aile droite sont touchés, la verrière de la tourelle arrière explose, l'avion prend feu et se met à tourner sur lui-même. Le pilote, James Arthur Newman, ordonne d'évacuer.",
+    "Mais la tourelle est si étroite qu'Alkemade ne peut pas y garder son parachute : le sac est rangé plus loin, dans le fuselage. Il s'avance pour aller le chercher, et les flammes le repoussent. Quand il parvient à le retrouver, le parachute brûle. Le feu gagne alors la tourelle, puis ses vêtements.",
+    "Il décide de sauter. Plus tard, il dira : « J'ai décidé de sauter et d'en finir aussi vite et aussi proprement que possible. » Il tombe la tête la première, à environ cent quatre-vingt-dix kilomètres à l'heure, depuis 5 490 mètres. Il estimera la chute à « trente secondes ou plus », et il perd probablement connaissance. Derrière lui, l'avion explose.",
+    "#Le bois de sapins",
+    "Trois heures plus tard, il se réveille dans un petit bois de sapins, enfoncé dans environ quarante-cinq centimètres de neige. À vingt mètres de là, le sol était nu. La neige et les jeunes branches l'ont probablement amorti.",
+    "Il est brûlé au visage, aux poignets et aux mains, coupé à la tête et à la cuisse, couvert d'ecchymoses, un genou tordu. Il n'a aucun os cassé. Ses bottes de vol ont disparu. Il allume une cigarette, puis souffle dans son sifflet de détresse jusqu'à ce que quelqu'un vienne, et on l'emmène à l'hôpital de la ville de Meschede.",
+    "#Un espion tombé du ciel",
+    "Le lendemain, la Gestapo, la police secrète allemande, l'interroge. Un homme qui prétend être tombé de plus de cinq mille mètres sans parachute, et qui n'a pas un os cassé : elle le soupçonne d'être un espion. Les Allemands fouillent le bois et retrouvent son harnais. Puis l'épave du Werewolf, tombée à trente-deux kilomètres de là, apporte la preuve : le parachute d'Alkemade s'y trouve encore dans son sac, l'anneau d'ouverture toujours dans son étui.",
+    "Les Allemands lui délivrent un certificat, daté du 25 avril 1944, qui reconnaît la vérité de son récit. Il est photographié pour la presse allemande, puis envoyé dans un camp de prisonniers.",
+    "Sur les sept hommes de l'équipage, trois ont survécu : Alkemade, le navigateur John Cleary et l'opérateur radio Geoffrey Burwell. Les quatre autres, dont le pilote, sont enterrés au cimetière de guerre de Hanovre. Cleary retrouvera en 1998 Heinz Rökker, l'homme qui les avait attaqués.",
+    "Alkemade rentre en Angleterre en mai 1945, retourne à Loughborough, travaille dans l'industrie chimique puis devient vendeur de meubles. Il meurt le 22 juin 1987, à soixante-quatre ans, à Liskeard, en Cornouailles.",
+    "On ne connaît pas la durée exacte de sa chute, ni la raison précise pour laquelle il n'a aucun os brisé. Un musée, à Witchford, conserve son sifflet."
+  ],
+  "note": "Faits principaux documentés (certificat allemand du 25 avril 1944, parachute retrouvé dans l'épave). À vérifier avant publication : l'altitude (5 490 m) et la durée de la chute (sa propre estimation de trente secondes ou plus), la citation de Alkemade (rapportée), la distance exacte entre le bois et l'épave (32 km), la date de la rencontre Cleary-Rökker (1998). On ignore pourquoi il a survécu au-delà de l'amorti par la neige et les sapins.",
+  "blurb": {
+    "b": "Dans la nuit du 24 mars 1944, un mitrailleur britannique de 21 ans saute d'un bombardier en flammes, sans parachute, pour échapper au feu. Il se réveille vivant dans un bois, et la police secrète allemande est persuadée qu'il ment.",
+    "h": "Il a sauté pour mourir plus vite. Il s'est réveillé dans la neige."
+  }
 }
