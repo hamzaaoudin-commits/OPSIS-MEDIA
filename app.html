@@ -122,7 +122,9 @@
   .shelf h2 small{font-size:13px;font-weight:500;color:var(--faint)}
   .rail{display:flex;gap:10px;overflow-x:auto;padding:12px 20px 4px;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
   .rail::-webkit-scrollbar{display:none}
+  .terr{cursor:grab;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.terr.drag{cursor:grabbing}.terr.drag button{pointer-events:none}
   .rail{cursor:grab}.rail.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}.rail.drag .tile{pointer-events:none}
+  .explore h2 .rn{display:inline-flex;gap:6px;align-items:center;padding-right:20px}.explore h2 .rn button{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--fg,#fff);font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
   .shelf h2 .rn{display:inline-flex;gap:6px;align-items:center}
   .shelf h2 .rn button{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--fg,#fff);font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
   .shelf h2 .rn .all{width:auto;border-radius:14px;padding:0 11px;font-size:12px;font-weight:600}
@@ -1496,7 +1498,7 @@ function home(){
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     '<div class="shelf"><h2><span>À lire maintenant <small>Une histoire de chaque thème</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+T.map(function(_,i){return THEMES[i].k==='date'?null:nextOf(i);}).filter(Boolean).map(function(id){return epTile(id);}).join('')+'</div></div>'+
     '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+homeNew()+
-    '<div class="explore" id="explore"><h2 class="exh">Thèmes</h2>'+
+    '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Thèmes</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
       '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
     T.map(function(t,i){
       var ids=hr(epIndex().byT[i]).slice(0,30),dt=THEMES[i].k==='date';
@@ -2105,7 +2107,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(b.hasAttribute('data-rmode')){S.mode=S.mode==='book'?'scroll':'book';rerenderMode();toast(S.mode==='book'?'Lecture en livre : touchez les bords ou glissez':'Lecture en défilement');return;}
   if(d.bk){bkgo(+d.bk);return;}
   if(b.hasAttribute('data-random')){randomPick();return;}
-  if(d.rail){var sh=b.closest('.shelf'),rl=sh&&sh.querySelector('.rail');if(rl)rl.scrollBy({left:(+d.rail)*rl.clientWidth*.85,behavior:'smooth'});return;}
+  if(d.rail){var sh=b.closest('.shelf,.explore'),rl=sh&&sh.querySelector('.rail,.terr');if(rl)rl.scrollBy({left:(+d.rail)*rl.clientWidth*.85,behavior:'smooth'});return;}
   if(d.pick){pick(d.pick);return;}
   if(d.open){push({type:'read',id:d.open});return;}
   if(b.hasAttribute('data-serie')){push({type:'serie',key:b.getAttribute('data-serie')||'chute'});return;}
@@ -2132,7 +2134,7 @@ document.getElementById('phone').addEventListener('click',function(e){
 (function(){
   var rl=null,sx=0,sl=0,mv=false;
   document.getElementById('phone').addEventListener('pointerdown',function(e){
-    if(e.pointerType!=='mouse'||e.button!==0)return;var r=e.target.closest('.rail');if(!r)return;
+    if(e.pointerType!=='mouse'||e.button!==0)return;var r=e.target.closest('.rail,.terr');if(!r)return;
     rl=r;sx=e.clientX;sl=r.scrollLeft;mv=false;});
   window.addEventListener('pointermove',function(e){
     if(!rl)return;var dx=e.clientX-sx;if(!mv&&Math.abs(dx)>5){mv=true;rl.classList.add('drag');}
