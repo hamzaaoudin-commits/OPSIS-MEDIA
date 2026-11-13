@@ -1449,12 +1449,12 @@ function home(){
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     '<div class="shelf"><h2><span>À lire maintenant <small>Une histoire de chaque thème</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+T.map(function(_,i){return THEMES[i].k==='date'?null:nextOf(i);}).filter(Boolean).map(function(id){return epTile(id);}).join('')+'</div></div>'+
     '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+homeNew()+
-    '<div class="explore" id="explore"><h2 class="exh">Thèmes</h2><p class="exs">'+epIndex().all.length+' histoires, '+T.length+' thèmes</p>'+
+    '<div class="explore" id="explore"><h2 class="exh">Thèmes</h2>'+
       '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
     T.map(function(t,i){
       var ids=hr(epIndex().byT[i]).slice(0,30),dt=THEMES[i].k==='date';
       if(!ids.length)return '';
-      return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+' <small>'+epIndex().byT[i].length+' histoires</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
+      return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
     }).join('')+
     '<div class="bottomspace"></div>';
 }
@@ -2011,7 +2011,7 @@ function themeLayer(i,sub){
   var eps=sub?all.filter(function(id){return subKey(id)===sub;}):all;
   var chips=(!dt&&subs.length>1)?'<div class="chips"><button data-subf="" aria-pressed="'+(!sub)+'">Tout</button>'+subs.map(function(k){return '<button data-subf="'+k+'" aria-pressed="'+(sub===k)+'">'+esc(subName(k))+' <small>'+cnt[k]+'</small></button>';}).join('')+'</div>':'';
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span><button class="circle" data-search aria-label="Rechercher">'+IC.search+'</button></div>'+
-    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1><p class="exs" style="padding:0 20px">'+eps.length+' histoires'+(sub?' · '+esc(subName(sub)):'')+'</p>'+
+    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1>'+(sub?'<p class="exs" style="padding:0 20px">'+esc(subName(sub))+'</p>':'')+
     '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+chips+
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
     '<div class="bottomspace"></div>';
