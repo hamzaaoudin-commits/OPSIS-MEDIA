@@ -377,7 +377,10 @@
   .ccard .cc3 .poster{aspect-ratio:2/3;border-radius:5px}
   .ccard b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:21px;line-height:.98;margin-top:11px}
   .ccard small{display:block;font-size:12px;color:var(--faint);margin-top:5px}
-  .rail .ccard{scroll-snap-align:start}
+  .rail .ccard,.rail .ccw{scroll-snap-align:start}
+  .ccw{position:relative;flex:none}
+  .ccsave{position:absolute;top:18px;right:18px;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(10,10,10,.72);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+  .ccsave svg{width:15px;height:15px}.ccsave.on{background:var(--bone);color:#111}
   .qwrap{padding:104px 20px 0}
   .qbox{display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;border-radius:12px;background:var(--coal);border:1px solid var(--line)}
   .qbox svg{width:19px;height:19px;flex:none;color:var(--faint)}
@@ -2383,7 +2386,9 @@ function recentIds(){return (S.x.recent||[]).filter(function(id){return vis(id)&
 function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
   return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-open="'+id+'"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
 function colCard(c,attr,extra){
-  return '<button class="ccard" '+attr+'><span class="cc3">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span><b>'+esc(c.n)+'</b><small>'+(extra||c.ids.length+' histoires')+'</small></button>';
+  var card='<button class="ccard" '+attr+'><span class="cc3">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span><b>'+esc(c.n)+'</b><small>'+(extra||c.ids.length+' histoires')+'</small></button>',m=/^data-col="([^"]+)"$/.exec(attr||'');
+  if(!m)return card;var sv=colSaved(m[1]);
+  return '<div class="ccw">'+card+'<button class="ccsave'+(sv?' on':'')+'" data-colsave="'+m[1]+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?IC.check:IC.plus)+'</button></div>';
 }
 function pathDone(p){return p.ids.filter(function(id){return S.read[id];}).length;}
 function homeExtra(){
