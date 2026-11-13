@@ -18,8 +18,11 @@ const ver=crypto.createHash('sha1').update(shell+runtime+content.length+covers.l
 const safe=j=>j.replace(/<\//g,'<\\/').replace(/<!--/g,'<\\!--');
 const cfgTag=(extra)=>'<script>window.OPSIS_CONFIG=Object.assign('+JSON.stringify(Object.assign({},cfg,extra||{}))+',window.OPSIS_CONFIG||{});</script>';
 const rt='<script>\n'+runtime+'\n</script>';
+const fontsCss=rd('src/fonts.css');
+const fontsInline=()=>fontsCss.replace(/url\(fonts\/([^)]+)\)/g,(m,f)=>'url(data:font/woff2;base64,'+fs.readFileSync(path.join(root,'src/fonts',f)).toString('base64')+')');
 function page(inlineData,extra){
   let h=shell.replace('<!--OPSIS:CONFIG-->',cfgTag(extra)+(extra&&extra.lite?'\n<link rel="manifest" href="manifest.webmanifest">':'')).replace('<!--OPSIS:RUNTIME-->',()=>rt);
+  h=h.replace('<!--OPSIS:FONTS-->',()=>'<style>\n'+(inlineData?fontsInline():fontsCss)+'</style>');
   h=h.replace('<!--OPSIS:DATA-->',()=>inlineData?'<script type="application/json" id="opsis-data">'+safe(inlineData)+'</script>':'');
   return h;
 }
@@ -28,6 +31,7 @@ const c=JSON.parse(content);c.COVERS=JSON.parse(covers);
 wr('app.html',page(JSON.stringify(c),{serviceWorker:false}));
 /* 2) déployable */
 wr('app/index.html',page(null,{lite:true,dataUrl:'data/'}));
+fs.mkdirSync(path.join(root,'app/fonts'),{recursive:true});fs.readdirSync(path.join(root,'src/fonts')).forEach(f=>fs.copyFileSync(path.join(root,'src/fonts',f),path.join(root,'app/fonts',f)));
 wr('app/data/content.json',content);
 wr('app/data/covers.json',covers);
 wr('app/manifest.webmanifest',JSON.stringify({name:'OPSIS',short_name:'OPSIS',description:'Une histoire vraie chaque jour.',start_url:'./',scope:'./',display:'standalone',orientation:'portrait',background_color:'#09090A',theme_color:'#09090A',lang:'fr',shortcuts:[{name:"L'histoire du jour",short_name:'Du jour',url:'./?go=jour'},{name:'Une histoire au hasard',short_name:'Au hasard',url:'./?go=hasard'}],icons:[{src:'icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]},null,2));
