@@ -5,6 +5,7 @@
 var OPSIS=window.OPSIS,notif=OPSIS.notif={ids:[],horizon:14,timer:null};
 var BASE_ID=7000;
 notif.plugin=function(){var C=window.Capacitor;return C&&C.Plugins&&C.Plugins.LocalNotifications||null;};
+notif.minOf=function(S){var m=String(S&&S.hour||'').match(/(?::|h\s*)(\d{2})$/);return m&&+m[1]<60?+m[1]:0;};
 notif.hourOf=function(S){var h=parseInt(String(S&&S.hour||'7'),10);return h>=0&&h<24?h:7;};
 notif.launch=function(){return (OPSIS.cfg.launchDate||'2027-01-04');};
 
@@ -23,7 +24,7 @@ notif.plan=function(S,DATA,STORIES,nowMs){
   var h=notif.hourOf(S),now=new Date(nowMs==null?OPSIS.now():nowMs),out=[],today=OPSIS.day(now.getTime()),launch=notif.launch();
   var pre=today<launch,start=pre?launch:today,limit=pre?1:notif.horizon;   /* avant le lancement : seulement celle du jour J */
   for(var i=0;i<limit+2&&out.length<limit;i++){
-    var day=OPSIS.dayAdd(start,i),a=day.split('-'),at=new Date(+a[0],+a[1]-1,+a[2],h,0,0);
+    var day=OPSIS.dayAdd(start,i),a=day.split('-'),at=new Date(+a[0],+a[1]-1,+a[2],h,notif.minOf(S),0);
     if(at.getTime()<=now.getTime())continue;
     out.push({id:BASE_ID+out.length,at:at,day:day,title:'OPSIS · votre histoire du jour',body:notif.textForDay(day,DATA,STORIES)});
   }

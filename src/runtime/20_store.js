@@ -1,7 +1,7 @@
 /* OPSIS runtime — état utilisateur : sauvegarde locale, horodatage par clé (pour la synchro), série de jours */
 (function(){
 var OPSIS=window.OPSIS,KEY='opsis.state.v1';
-var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','lang','focus','speed','nNew','nResume','stats','voice'];
+var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','quizOn','lang','focus','speed','nNew','nResume','stats','voice'];
 var store=OPSIS.store={S:null,flat:{},dirty:false};
 
 /* S -> table plate { "read.pt01": true, "saved.eiffel": true, "set.fs": 19, "day.2027-01-04": true } */

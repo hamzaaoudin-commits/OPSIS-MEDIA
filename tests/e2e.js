@@ -33,12 +33,12 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     const cov=await p.evaluate(()=>OPSIS.art('ar01').indexOf('<svg')===0);ok(cov,'couverture rendue depuis les données');
     /* réglages par l'interface */
     await p.evaluate(()=>OPSIS.ui.openSettings());
-    await p.click('[data-hour="8 h"]');
+    await p.fill('[data-time]','08:00');await p.dispatchEvent('[data-time]','change');
     await p.evaluate(()=>{OPSIS.store.S.read.ar01=true;OPSIS.store.S.saved.cs03=true;});
     await sleep(500);await p.evaluate(()=>OPSIS.store.commit());
     await p.reload();await boot(p,'/app.html');
     const st=await p.evaluate(()=>({h:OPSIS.store.S.hour,r:!!OPSIS.store.S.read.ar01,s:!!OPSIS.store.S.saved.cs03}));
-    eq(st,{h:'8 h',r:true,s:true},'heure, lecture et liste retrouvées après rechargement');
+    eq(st,{h:'08:00',r:true,s:true},'heure, lecture et liste retrouvées après rechargement');
     ok(await p.evaluate(()=>OPSIS.store.streak())===1,'série : 1 jour après une lecture');
     await ctx.close();
   }

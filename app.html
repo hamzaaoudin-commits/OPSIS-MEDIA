@@ -206,6 +206,8 @@
   .rtext p.dl{font-family:var(--ui);font-size:.74em;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin:-.2em 0 1em}
   .rtext p.orn{text-align:center;color:var(--red-type);font-size:1.2em;margin:1.6em 0}
   .rtext h3.sec+p.dl+p,.rtext h3.sec+p:not(.dl){margin-top:0}
+  .tin{background:var(--glass,rgba(255,255,255,.08));color:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:15px;color-scheme:inherit}
+  .srctog{margin:22px 24px 0}.bkend .srctog{margin-left:0;margin-right:0}.srcwrap{display:none}.srcwrap.open{display:block}
   .srcb{margin:26px 24px 0;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.55;color:var(--faint);overflow-wrap:anywhere}
   .srcb h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
   .srcb p+p{margin-top:8px}.srcb b{color:var(--dim)}
@@ -1359,7 +1361,7 @@ var IC={
   mark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3.8h10v16.4l-5-3.6-5 3.6z"/></svg>',
   markOn:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3.8h10v16.4l-5-3.6-5 3.6z"/></svg>',
   lib:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="4" width="4" height="16" rx="1"/><rect x="9.5" y="4" width="4" height="16" rx="1"/><path d="M15.6 5.2l3.8-1 3.1 15.4-3.8 1z"/></svg>',
-  gear:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg>',
+  gear:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>',
   lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'
 };
 IC.bookm='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5 2-1.5 5-1.9 8-1.5V5c-3-.4-6 0-8 1.5zM12 6.5V19.5"/></svg>';
@@ -1482,11 +1484,13 @@ function saved(){
     '<div class="bottomspace"></div>';
 }
 
+function hourVal(){var h=String(S.hour||'7 h'),m=h.match(/^(\d{1,2})(?:\s*h\s*(\d{2})?|:(\d{2}))$/);if(!m)return '07:00';return ('0'+m[1]).slice(-2)+':'+(m[2]||m[3]||'00');}
+function timeIn(){return '<input type="time" class="tin" data-time value="'+hourVal()+'" aria-label="Heure de la notification">';}
 function settings(){
-  var hours=['6 h','7 h','8 h'].map(function(h){return '<button data-hour="'+h+'" aria-pressed="'+(S.hour===h)+'">'+h+'</button>';}).join('');
+  var hours=timeIn();
   return '<div class="grab"></div><h3 class="sth">Réglages</h3>'+
     '<div class="opt"><span>Notification chaque matin</span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+
-    '<div class="opt"><span>Heure de sortie</span><span class="seg">'+hours+'</span></div>'+
+    '<div class="opt"><span>Heure de sortie</span>'+hours+'</div>'+
     '<div class="opt"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
     lookOpts()+
     '<div class="opt lgrow"><button data-set="root">Tous les réglages</button></div>'+
@@ -1530,7 +1534,7 @@ function reader(id){
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+(minOf(id,V.arr)>1?' minutes':' minute')+' de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var tail=finBlock(id)+
-    ((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+
+    '<button class="btn glass full srctog" data-srctog aria-expanded="false">+ Sources</button><div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'</div>'+
     '<div class="ract"><button class="btn glass full" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass full'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>'+
     '<button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button></div>'+tailExtra(id)+up;
   if(S.mode==='book')return bar+'<div class="bkwrap" id="bkw"><div class="bk rtext" id="bk"><section class="bkcover"><div class="bkpost">'+poster(s.p)+'</div>'+head+'</section>'+body+'<section class="bkend">'+tail+'</section></div></div>'+
@@ -2064,7 +2068,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.legal){setBox.parentNode.classList.remove('show');if(S.stack.length&&S.stack[S.stack.length-1].type==='legal'){S.stack[S.stack.length-1].k=d.legal;renderLayer();}else push({type:'legal',k:d.legal});return;}
   if(b.hasAttribute('data-closesettings')){setBox.parentNode.classList.remove('show');return;}
   if(d.toggle){S[d.toggle]=!S[d.toggle];reSet();return;}
-  if(d.hour){S.hour=d.hour;reSet();toast('L\'histoire du jour arrivera à '+d.hour);return;}
+  
   if(d.fs){S.fs=Math.max(16,Math.min(24,S.fs+(+d.fs)));document.documentElement.style.setProperty('--fs',S.fs+'px');reSet();if(bookMode()){var tq=S.stack[S.stack.length-1];S.bpage[tq.id]=0;bookInit(tq.id);}return;}
   if(d.rm){S.mode=d.rm;reSet();if(isRead())rerenderMode();return;}
   if(d.len){S.len=+d.len;var tq2=S.stack[S.stack.length-1];if(tq2&&tq2.type==='read')S.bpage[tq2.id]=0;reSet();if(tq2&&tq2.type==='read')rerenderMode();return;}
@@ -2095,6 +2099,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   document.addEventListener('keydown',function(e){if(!bookMode())return;if(e.key==='ArrowRight'||e.key==='PageDown')bkgo(1);else if(e.key==='ArrowLeft'||e.key==='PageUp')bkgo(-1);});
   window.addEventListener('resize',function(){if(bookMode()){var t=S.stack[S.stack.length-1];bookInit(t.id);}});
 })();
+document.addEventListener('change',function(e){var t=e.target;if(t&&t.hasAttribute&&t.hasAttribute('data-time')&&t.value){S.hour=t.value;if(window.OPSIS&&OPSIS.store&&OPSIS.store.commit)try{OPSIS.store.commit();}catch(x){}toast('L\'histoire du jour arrivera à '+t.value.replace(':',' h '));}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(fxs.classList.contains('on'))closePick();else if(sheet.classList.contains('show'))sheet.classList.remove('show');else if(S.stack.length)back();}});
 
 /* =====================================================================
@@ -2541,7 +2546,7 @@ function quizFor(id){
 }
 var QZ={};
 function quizHTML(id){
-  var qs=quizFor(id);if(!qs)return '';var st=QZ[id]||(QZ[id]={a:[]}),n=st.a.length;
+  if(!S.quizOn)return '';var qs=quizFor(id);if(!qs)return '';var st=QZ[id]||(QZ[id]={a:[]}),n=st.a.length;
   if(!st.open&&!n)return '<div class="quiz"><h4>Ce que vous avez retenu</h4><p>'+qs.length+' questions facultatives sur cette histoire.</p><button class="btn glass" data-quiz="'+id+'" style="width:100%">Répondre</button></div>';
   if(n>=qs.length){var ok=st.a.filter(function(v,i){return v===qs[i].a;}).length;return '<div class="quiz"><h4>Ce que vous avez retenu</h4><p class="qzs"><b>'+ok+' / '+qs.length+'</b> '+(ok===qs.length?'Tout est resté.':ok?'L\'essentiel est là.':'Une relecture s\'impose peut-être.')+'</p>'+qs.map(function(q,i){var good=st.a[i]===q.a;return '<p class="qzr '+(good?'ok':'ko')+'"><i>'+esc(q.q)+'</i>'+esc(q.a)+'</p>';}).join('')+'<button class="btn glass" data-quizre="'+id+'" style="width:100%;margin-top:10px">Recommencer</button></div>';}
   var q=qs[n];
@@ -2669,7 +2674,7 @@ var SETT={lecture:'Préférences de lecture',langue:'Langue',notifs:'Notificatio
 function setLayer(k){
   var b='';
   if(k==='root'){
-    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('lecture','Préférences de lecture','Sens, format, typographie, thèmes préférés')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Offre gratuite')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+'</div>'+
+    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('lecture','Préférences de lecture','Sens, format, typographie, thèmes préférés')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Votre abonnement OPSIS')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+'</div>'+
       '<div class="slist"><button class="srow" data-legal="mentions"><span>Mentions légales</span>'+IC.chev+'</button><button class="srow" data-legal="confidentialite"><span>Politique de confidentialité</span>'+IC.chev+'</button><button class="srow" data-legal="conditions"><span>Conditions d\'utilisation</span>'+IC.chev+'</button></div>';
   }else if(k==='compte'){
     b='<div class="sbox">'+OPSIS.accountHTML()+(OPSIS.live?'':'<p class="hint" style="padding:12px 0 0">La connexion à un compte sera proposée à l\'ouverture d\'OPSIS. D\'ici là, vos lectures sont gardées sur cet appareil.</p>')+'</div>';
@@ -2677,6 +2682,7 @@ function setLayer(k){
     var pf=S.x.prefs||[];
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
       lookOpts()+
+      '<div class="opt"><span>Questions en fin d\'histoire<small class="os">Quelques questions facultatives pour vérifier ce que vous avez retenu.</small></span><button class="tog" role="switch" aria-checked="'+!!S.quizOn+'" data-toggle2="quizOn" aria-label="Questions en fin d\'histoire"></button></div>'+
       '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
       '<div class="opt"><span>Masquer les histoires déjà lues<small class="os">Sur l\'accueil. Elles restent dans votre bibliothèque.</small></span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues"></button></div></div>'+
       '<p class="pkick" style="padding-top:26px">Vos thèmes préférés</p><p class="hint" style="padding-top:4px">Ils orientent la sélection « Pour vous ».</p><div class="qchips" style="padding:12px 20px 0">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>';
@@ -2686,20 +2692,19 @@ function setLayer(k){
       [['en','English'],['es','Español']].map(function(l){var on=w.indexOf(l[0])>=0;return '<div class="opt"><span>'+l[1]+'<small class="os">En préparation</small></span><button class="pill'+(on?' on':'')+'" data-langwish="'+l[0]+'">'+(on?'Vous serez prévenu':'Me prévenir')+'</button></div>';}).join('')+'</div>'+
       '<p class="hint">Les histoires sont aujourd\'hui écrites en français. Les versions anglaise et espagnole seront de vraies adaptations, pas des traductions automatiques.</p>';
   }else if(k==='notifs'){
-    var hours=['6 h','7 h','8 h'].map(function(h){return '<button data-hour="'+h+'" aria-pressed="'+(S.hour===h)+'">'+h+'</button>';}).join('');
+    var hours=timeIn();
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>L\'histoire du jour<small class="os">Une notification chaque matin.</small></span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+
-      '<div class="opt"><span>Heure</span><span class="seg">'+hours+'</span></div>'+
+      '<div class="opt"><span>Heure<small class="os">Choisissez l\'heure exacte.</small></span>'+hours+'</div>'+
       '<div class="opt"><span>Nouveautés dans mes thèmes<small class="os">Quand une histoire sort dans un thème que vous aimez.</small></span><button class="tog" role="switch" aria-checked="'+!!S.nNew+'" data-toggle2="nNew" aria-label="Nouveautés dans mes thèmes"></button></div>'+
       '<div class="opt"><span>Lecture en cours<small class="os">Un rappel si une histoire reste inachevée.</small></span><button class="tog" role="switch" aria-checked="'+!!S.nResume+'" data-toggle2="nResume" aria-label="Rappel de lecture en cours"></button></div></div>'+
-      '<p class="hint">Sur le web, la notification du matin n\'arrive que si OPSIS est ouvert. Les deux autres seront envoyées par l\'application iOS et Android : vos choix sont déjà enregistrés.</p>';
+      '';
   }else if(k==='abo'){
     var wp=!!S.x.plusWish;
-    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS Gratuit</h3><p>Toutes les histoires, les trois formats, vos collections et vos citations. Sans carte bancaire.</p></div>'+
-      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">Aucun abonnement en cours.</small></span><span class="pill">Aucun</span></div>'+
+    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS</h3><p>Toutes les histoires, les trois formats, vos collections et vos citations.</p></div>'+
+      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">Le paiement n\'est pas encore ouvert : le tarif et le démarrage de l\'abonnement seront annoncés avant le lancement.</small></span><span class="pill">À venir</span></div>'+
       '<div class="opt"><span>Moyen de paiement<small class="os">Aucun moyen de paiement enregistré.</small></span></div>'+
       '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
-      '<div class="opt"><span>Résiliation<small class="os">Vous n\'avez rien à résilier. Quand une offre payante existera, elle se résiliera ici, en un geste, sans justification.</small></span></div>'+
-      '<div class="opt"><span>Offre payante<small class="os">Elle n\'existe pas encore. Vous pouvez demander à être prévenu.</small></span><button class="pill'+(wp?' on':'')+'" data-pluswish>'+(wp?'Vous serez prévenu':'Me prévenir')+'</button></div></div>';
+      '<div class="opt"><span>Résiliation<small class="os">L\'abonnement se résiliera ici, en un geste, sans justification.</small></span></div></div>';
   }else if(k==='confid'){
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Garder mon historique de lecture<small class="os">Sert à « Reprendre », aux badges et aux recommandations. Reste sur cet appareil tant que vous n\'avez pas de compte.</small></span><button class="tog" role="switch" aria-checked="'+(S.stats!==false)+'" data-toggle2="stats" aria-label="Garder mon historique de lecture"></button></div>'+
       '<div class="opt lgrow"><button data-export>Télécharger mes données</button></div>'+
@@ -2755,6 +2760,7 @@ function featClick(b,d){
   if(d.font){S.font=d.font;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(d.lh){S.lh=d.lh;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
+  if(d.srctog!==undefined){var w=b.nextElementSibling;if(w){var o=w.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=(o?'− ':'+ ')+'Sources';}return true;}
   if(d.toggle2){var cur=d.toggle2==='stats'?S.stats!==false:!!S[d.toggle2];S[d.toggle2]=!cur;if(d.toggle2==='stats'&&!S.stats){S.prog={};S.x.recent=[];}reSet();if(d.toggle2==='hideRead')toast(S.hideRead?'Histoires lues masquées de l\'accueil':'Histoires lues de nouveau visibles');return true;}
   if(d.speed){S.speed=+d.speed;reSet();return true;}
   if(d.voice){S.voice=d.voice;reSet();if(auOK()){try{speechSynthesis.cancel();}catch(e){}var uu=new SpeechSynthesisUtterance('Voici la voix qui vous lira les histoires.');var vv=pickVoice();if(vv){uu.voice=vv;uu.lang=vv.lang;}uu.rate=(S.speed||1)*0.96;speechSynthesis.speak(uu);}return true;}
@@ -2962,7 +2968,7 @@ OPSIS.loadContent=function(){
 /* OPSIS runtime — état utilisateur : sauvegarde locale, horodatage par clé (pour la synchro), série de jours */
 (function(){
 var OPSIS=window.OPSIS,KEY='opsis.state.v1';
-var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','lang','focus','speed','nNew','nResume','stats','voice'];
+var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','quizOn','lang','focus','speed','nNew','nResume','stats','voice'];
 var store=OPSIS.store={S:null,flat:{},dirty:false};
 
 /* S -> table plate { "read.pt01": true, "saved.eiffel": true, "set.fs": 19, "day.2027-01-04": true } */
@@ -3158,6 +3164,7 @@ OPSIS.on('hydrated',function(){if(OPSIS.auth.token())sync.run();});
 var OPSIS=window.OPSIS,notif=OPSIS.notif={ids:[],horizon:14,timer:null};
 var BASE_ID=7000;
 notif.plugin=function(){var C=window.Capacitor;return C&&C.Plugins&&C.Plugins.LocalNotifications||null;};
+notif.minOf=function(S){var m=String(S&&S.hour||'').match(/(?::|h\s*)(\d{2})$/);return m&&+m[1]<60?+m[1]:0;};
 notif.hourOf=function(S){var h=parseInt(String(S&&S.hour||'7'),10);return h>=0&&h<24?h:7;};
 notif.launch=function(){return (OPSIS.cfg.launchDate||'2027-01-04');};
 
@@ -3176,7 +3183,7 @@ notif.plan=function(S,DATA,STORIES,nowMs){
   var h=notif.hourOf(S),now=new Date(nowMs==null?OPSIS.now():nowMs),out=[],today=OPSIS.day(now.getTime()),launch=notif.launch();
   var pre=today<launch,start=pre?launch:today,limit=pre?1:notif.horizon;   /* avant le lancement : seulement celle du jour J */
   for(var i=0;i<limit+2&&out.length<limit;i++){
-    var day=OPSIS.dayAdd(start,i),a=day.split('-'),at=new Date(+a[0],+a[1]-1,+a[2],h,0,0);
+    var day=OPSIS.dayAdd(start,i),a=day.split('-'),at=new Date(+a[0],+a[1]-1,+a[2],h,notif.minOf(S),0);
     if(at.getTime()<=now.getTime())continue;
     out.push({id:BASE_ID+out.length,at:at,day:day,title:'OPSIS · votre histoire du jour',body:notif.textForDay(day,DATA,STORIES)});
   }

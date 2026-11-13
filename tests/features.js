@@ -22,6 +22,7 @@ await click('#layerview [data-subf="es"]');await log('sub es',()=>document.query
 await click('#main [data-col="froide"]');await shot('05col');await back();
 await click('#main [data-path="gf"]');await shot('06path');await back();
 // reader
+await p.evaluate(()=>{OPSIS.store.S.quizOn=true;});
 await p.evaluate(()=>{const ph=document.querySelector('#phone');const bt=document.createElement('button');bt.setAttribute('data-open','es11');ph.appendChild(bt);bt.click();bt.remove();});await p.waitForTimeout(700);await shot('07reader');
 await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=(v.scrollHeight-v.clientHeight)*0.4;});await p.waitForTimeout(400);
 await log('prog',()=>OPSIS.store.S.prog);
