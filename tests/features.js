@@ -38,9 +38,6 @@ await click('#layerview [data-quick]');await shot('12quick');
 await click('#settingsbox [data-theme="light"]');await click('#settingsbox [data-font="sans"]');await click('#settingsbox [data-closesettings]');
 await p.evaluate(()=>{document.getElementById('layerview').scrollTop=0;});await shot('13light_reader');
 await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=900;});await shot('14light_text');
-// audio
-await click('#layerview [data-audio]');await p.waitForTimeout(500);await log('audio',()=>[document.querySelector('.aubar').classList.contains('on'),'speechSynthesis' in window]);await shot('15audio');
-await click('.aubar [data-au="stop"]');
 // collection add
 await click('#layerview [data-coladd]');await p.fill('#newcol','À raconter');await click('#settingsbox [data-colnew]');await shot('16colsheet');await click('#settingsbox [data-closesettings]');
 await click('#layerview [data-report]');await shot('17report');await click('#settingsbox [data-closesettings]');

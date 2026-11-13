@@ -1527,7 +1527,7 @@ function reader(id){
   var nx=s.next?STORIES[s.next]:null;
   var up=nx?'<button class="upnext" data-open="'+s.next+'">'+poster(nx.p)+'<span><span class="uk" style="display:block">À LIRE ENSUITE</span><span class="ut" style="display:block">'+esc(nx.title)+'</span><span class="us" style="display:block">'+esc(nx.kind)+', '+nx.min+' min</span></span></button>'
     :(s.th!==undefined?'<button class="upnext" data-terr="'+s.th+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU THÈME</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">'+esc(T[s.th])+'</span></span></button>':'');
-  var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-audio="'+id+'" aria-label="Écouter cette histoire">'+IC.audio+'</button><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
+  var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+(minOf(id,V.arr)>1?' minutes':' minute')+' de lecture'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var tail=finBlock(id)+
@@ -2679,7 +2679,6 @@ function setLayer(k){
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
       lookOpts()+
       '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
-      '<div class="opt"><span>Vitesse de la lecture audio</span><span class="seg">'+[0.8,1,1.2,1.5].map(function(v){return '<button data-speed="'+v+'" aria-pressed="'+((S.speed||1)===v)+'">'+String(v).replace('.',',')+'×</button>';}).join('')+'</span></div>'+voiceOpts()+
       '<div class="opt"><span>Masquer les histoires déjà lues<small class="os">Sur l\'accueil. Elles restent dans votre bibliothèque.</small></span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues"></button></div></div>'+
       '<p class="pkick" style="padding-top:26px">Vos thèmes préférés</p><p class="hint" style="padding-top:4px">Ils orientent la sélection « Pour vous ».</p><div class="qchips" style="padding:12px 20px 0">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>';
   }else if(k==='langue'){
@@ -2696,7 +2695,7 @@ function setLayer(k){
       '<p class="hint">Sur le web, la notification du matin n\'arrive que si OPSIS est ouvert. Les deux autres seront envoyées par l\'application iOS et Android : vos choix sont déjà enregistrés.</p>';
   }else if(k==='abo'){
     var wp=!!S.x.plusWish;
-    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS Gratuit</h3><p>Toutes les histoires, les trois formats, la lecture audio, vos collections et vos citations. Sans carte bancaire.</p></div>'+
+    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS Gratuit</h3><p>Toutes les histoires, les trois formats, vos collections et vos citations. Sans carte bancaire.</p></div>'+
       '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">Aucun abonnement en cours.</small></span><span class="pill">Aucun</span></div>'+
       '<div class="opt"><span>Moyen de paiement<small class="os">Aucun moyen de paiement enregistré.</small></span></div>'+
       '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
