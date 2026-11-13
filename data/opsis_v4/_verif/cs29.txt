@@ -1,0 +1,37 @@
+VERIFIÉ — vol le 15 mai 1855, train de 20 h 30 de London Bridge vers Folkestone — Wikipédia EN ; Historic UK ; BTP (https://en.wikipedia.org/wiki/Great_Gold_Robbery)
+VERIFIÉ — 3 caisses, 224 lb (~102 kg), 12 000 £ — Wikipédia ; Historic UK ; KentOnline
+CORRIGÉ — « bordereau », « sceaux intacts, aucune serrure forcée », « sacs de plomb tassés avec soin » → coffres ouverts à Paris, grenaille de plomb ; écart de poids d'environ 40 lb relevé à Boulogne sans trace d'effraction — BTP ; Wikipédia
+CORRIGÉ — « les compagnies des deux côtés se renvoient la responsabilité » → la SER nie et suppose la France, les Français disent l'Angleterre, poids concordants à Paris — Wikipédia ; Historic UK
+VERIFIÉ — coffres Chubb à deux serrures, clés réparties Londres/Folkestone, personne n'a les deux — Wikipédia ; Historic UK ; BTP
+CORRIGÉ — « doubles sous clé », « pesées au départ » → ajout du capitaine du bateau détenteur d'une clé (BTP, KentOnline) ; pesées à Folkestone, Boulogne, Paris (Wikipédia)
+CORRIGÉ — Pierce « à l'impression des billets » → ancien employé SER renvoyé pour jeu et boisson (Historic UK ; Wikipédia) ; détail billets RETIRÉ
+RETIRÉ — Agar « presque jamais inquiété », « l'un des meilleurs spécialistes de Londres » — aucune source
+CORRIGÉ — Burgess « chef de train depuis des années, apprécié » → garde ~14 ans de service (Wikipédia) ; « apprécié » RETIRÉ
+CORRIGÉ — Tester « service du trafic » → employé de bureau à London Bridge, assistant du chef du trafic, accès aux plannings (Wikipédia ; Historic UK)
+RETIRÉ — « Agar pose sa condition : sans les clés… » ; « Pierce en trouve deux » — non documenté
+ATTRIBUÉ — épisode de la cire (Tooley Street, deux fois la même clé, empreinte à Folkestone) — récit d'Agar relayé par Wikipédia ; Historic UK confirme la double copie et la 2e empreinte
+CORRIGÉ — empreinte à Folkestone prise par Pierce et Agar « en voyageurs désœuvrés » → par Agar, en observant le responsable sortir la clé d'un placard (Wikipédia)
+CORRIGÉ — « pendant des mois, Agar monte dans le train avec Burgess et s'enferme » → sept ou huit trajets d'essai avril-mai 1855 selon Agar (Wikipédia) ; plomb ~2 quintaux acheté à la Shot Tower de Lambeth (Wikipédia)
+RETIRÉ — « confié à un porteur des sacs étonnamment lourds » — non sourcé
+ATTRIBUÉ — Agar caché dans le fourgon sous la blouse de Burgess, Pierce en compartiment, une seule serrure fermée, rivets, cachet fait par Agar, Redhill ~35 min après le départ, Tester repart à Londres — récit d'Agar (Wikipédia ; Historic UK pour Redhill et Tester)
+RETIRÉ — « à la lumière d'une lanterne », « souper tranquille à Douvres », « Burgess termine son service comme d'habitude » — non sourcés
+VERIFIÉ — descente à Douvres, clés et outils jetés à la mer, train de 2 h du matin (Wikipédia, d'après Agar) ; Historic UK confirme la sortie à Douvres
+CORRIGÉ — « soupçonne les Français / on interroge les employés » → récompense de 300 £ ; litige France/Angleterre ; ~18 mois sans résultat — Wikipédia ; Historic UK ; KentOnline
+VERIFIÉ — fonte en barres, creuset fendu qui brûle le plancher (Cambridge Villa), receleur James Saward 2 500 £, partage en quatre, pièces américaines changées le 16 mai — Wikipédia
+RETIRÉ — « Burgess et Tester continuent de travailler pour la compagnie » — non sourcé
+CORRIGÉ — arrestation d'Agar « été 1855, chèque falsifié » → jugé à l'Old Bailey le 22 octobre 1855 pour faux, déportation à vie (Convict Records ; Wikipédia donne septembre en texte, 22 oct. en note)
+VERIFIÉ — Fanny Kay compagne d'Agar, un enfant — Wikipédia ; BTP ; KentOnline
+CORRIGÉ — « confie sa part à Pierce » → somme remise via son avocat, Pierce ne la lui remet pas (Wikipédia : 3 000 £ ; BTP : 7 000 £ ; le juge : 15 000 £ — chiffres divergents, retirés)
+VERIFIÉ — Kay va voir le directeur de Newgate (John Weatherhead) — Wikipédia ; Historic UK ; KentOnline
+CORRIGÉ — « Agar apprend dans sa cellule… accepte de témoigner » (motif) → refus d'abord en octobre 1856, accord ~2 semaines plus tard (Wikipédia) ; motif non documenté, retiré
+VERIFIÉ — plancher brûlé et grains d'or retrouvés par la police — Wikipédia
+CORRIGÉ — arrestations : Pierce et Burgess le 5 nov. 1856 ; Tester en Suède, rentré et livré le 10 déc. — Wikipédia
+CORRIGÉ — procès « janvier 1857 » → 13-15 janvier 1857 ; trois jours ; jury ~10 minutes — Wikipédia ; The Leader 17/01/1857 (« ten » lecture OCR incertaine)
+VERIFIÉ — Burgess et Tester 14 ans de déportation ; Pierce 2 ans de travaux forcés pour vol simple car plus employé — Wikipédia ; The Leader ; Convict Records
+CORRIGÉ — « la salle a manifesté son indignation » → RETIRÉ ; remplacé par la remarque du juge (baron Martin) : « un plus grand scélérat n'existe pas » (The Leader ; Wikipédia pour Martin)
+ATTRIBUÉ — remarque du juge sur Agar (mauvais mais capacité extraordinaire) — Wikipédia (« most extraordinary ability »)
+CORRIGÉ — « fortune » avec une petite part de l'énergie → retiré (source unique : blog)
+CORRIGÉ — Agar « repart » → envoyé en Australie-Occidentale en septembre 1857 (Convict Records : Nile, 18 sept. ; Wikipédia : 23 sept.) ; Burgess et Tester embarquent en août 1858 (Edwin Fox, 26 août — Wikipédia)
+VERIFIÉ — Crichton : roman 1975, film 1978, Sean Connery — Wikipédia
+INCERTAIN — chiffre de la somme confiée à Pierce (3 000 / 7 000 / 15 000 £) — omis du texte, signalé dans la note
+INCERTAIN — Londonist (11 mai, 14 ans pour les trois) contredit les autres sources — écarté
