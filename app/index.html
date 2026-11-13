@@ -398,6 +398,32 @@
   .qrow{display:flex;align-items:baseline;gap:10px;width:100%;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
   .qrow i{flex:none;width:78px;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
   .chips button small{font-weight:500;opacity:.6;margin-left:2px}
+  .trail{padding:34px 0 0;overflow:hidden}
+  .tr{position:relative}
+  .tr .tl{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+  .tr .tl path{fill:none;stroke:var(--line);stroke-width:5;stroke-linecap:round;stroke-dasharray:1 11}
+  .tr .tl path.on{stroke:var(--red);stroke-dasharray:none;stroke-width:6}
+  .tn{position:absolute;top:0;transform:translateX(-50%);width:200px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .tn .tc{position:relative;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid var(--ash);background:var(--coal);box-shadow:0 6px 0 var(--ash);display:block}
+  .tn .tc .poster{position:absolute;left:50%;top:50%;width:70px;height:105px;transform:translate(-50%,-50%);border-radius:0}
+  .tn.todo .tc{filter:grayscale(.85);opacity:.55}
+  .tn.done .tc{border-color:var(--red);box-shadow:0 6px 0 #7d1319}
+  .tn.cur .tc{border-color:var(--bone);box-shadow:0 6px 0 #8c8579;animation:tpulse 1.8s ease-in-out infinite}
+  @keyframes tpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+  .tn .tk{position:absolute;top:-2px;right:44px;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;border:2px solid var(--ink,#0b0b0b)}
+  .tn .tk svg{width:14px;height:14px}
+  .tn .tnum{position:absolute;top:-2px;right:44px;width:26px;height:26px;border-radius:50%;background:var(--ash);color:var(--dim);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid var(--ink,#0b0b0b)}
+  .tn .tgo{position:absolute;top:-34px;left:50%;transform:translateX(-50%);background:var(--bone);color:#111;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:10px;white-space:nowrap;animation:tbob 1.8s ease-in-out infinite}
+  .tn .tgo::after{content:'';position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:var(--bone);transform:translateX(-50%) rotate(45deg)}
+  @keyframes tbob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-4px)}}
+  .tn .tl2{margin-top:12px;max-width:190px;text-shadow:0 0 8px #0b0b0b,0 0 8px #0b0b0b}
+  .tn .tl2 b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;line-height:1.05}
+  .tn .tl2 small{display:block;font-size:12px;color:var(--faint);margin-top:3px}
+  .tn.todo .tl2{opacity:.6}
+  .tend{display:flex;flex-direction:column;align-items:center}
+  .trophy{position:relative;transform:none;width:76px;height:76px;border-radius:50%;background:var(--ash);color:var(--dim);display:flex;align-items:center;justify-content:center;margin-top:-4px}
+  .trophy svg{width:34px;height:34px}.trophy.on{background:var(--red);color:#fff}
+  .tcap{font-size:13px;color:var(--faint);margin-top:10px}
   .steps{padding:16px 20px 0}
   .step{display:flex;align-items:center;gap:12px;width:100%;padding:10px 0;border-bottom:1px solid var(--line)}
   .step .sn{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--dim)}
@@ -2446,16 +2472,35 @@ lv.addEventListener('keydown',function(e){if(e.target&&e.target.id==='q'&&e.key=
 /* ---------- collections, parcours ---------- */
 function listLayer(title,desc,ids,opt){
   opt=opt||{};
-  var body=opt.steps?'<div class="steps">'+ids.map(function(id,i){var st=STORIES[id],r=!!S.read[id];return '<button class="step'+(r?' done':'')+'" data-pick="'+id+'"><span class="sn">'+(r?IC.check:(i+1))+'</span><span class="poster" data-art="'+st.p+'"></span><span class="sx"><b>'+esc(st.title)+'</b><small>'+esc(st.series||'')+' · '+st.min+' min</small></span></button>';}).join('')+'</div>'
+  var body=opt.html?opt.html:opt.steps?'<div class="steps">'+ids.map(function(id,i){var st=STORIES[id],r=!!S.read[id];return '<button class="step'+(r?' done':'')+'" data-pick="'+id+'"><span class="sn">'+(r?IC.check:(i+1))+'</span><span class="poster" data-art="'+st.p+'"></span><span class="sx"><b>'+esc(st.title)+'</b><small>'+esc(st.series||'')+' · '+st.min+' min</small></span></button>';}).join('')+'</div>'
     :(ids.length?'<div class="grid" style="padding-top:8px">'+ids.map(function(id){return epTile(id);}).join('')+'</div>':'<div class="empty"><b>Vide</b>'+(opt.empty||'Rien ici pour l\'instant.')+'</div>');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+esc(title)+'</span>'+(opt.right||'<span style="width:38px"></span>')+'</div>'+
     '<p class="pkick">'+(opt.kick||'Collection')+'</p><h1 class="ptitle" style="padding-top:6px">'+esc(title)+'</h1>'+(desc?'<p class="hint" style="padding:8px 20px 0;font-size:15px">'+esc(desc)+'</p>':'')+(opt.top||'')+body+'<div class="bottomspace"></div>';
 }
 function colSaved(k){return myCols().some(function(x){return x.from===k;});}
 function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k);return listLayer(c.n,c.d,c.ids,{kick:'Collection',right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'});}
-function pathLayer(k){var p=PATHS.filter(function(x){return x.k===k;})[0];if(!p)return '';var d=pathDone(p),nx=p.ids.filter(function(id){return !S.read[id];})[0];
-  var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/p.ids.length*100)+'%"></i></span><small>'+(d===p.ids.length?'Parcours terminé':d+' sur '+p.ids.length+' étapes')+'</small></div>'+(nx?'<div style="padding:14px 20px 0"><button class="btn red" style="width:100%" data-open="'+nx+'">'+IC.play+(d?'Continuer le parcours':'Commencer le parcours')+'</button></div>':'');
-  return listLayer(p.n,p.d,p.ids,{kick:'Parcours de découverte',steps:1,top:top});}
+function trailHTML(p){
+  var OFF=[0,56,84,56,0,-56,-84,-56],cur=-1,n=p.ids.length,H=184,rows='';
+  for(var q=0;q<n;q++)if(!S.read[p.ids[q]]){cur=q;break;}
+  p.ids.forEach(function(id,i){
+    var st=STORIES[id],done=!!S.read[id],isCur=i===cur,o=OFF[i%OFF.length],o2=OFF[(i+1)%OFF.length],
+      state=done?'done':isCur?'cur':'todo',last=i===n-1;
+    var path=last?'':'<svg class="tl" viewBox="0 0 430 '+H+'" preserveAspectRatio="none" aria-hidden="true"><path d="M'+(215+o)+' 44 C '+(215+o)+' '+(H*.62)+' '+(215+o2)+' '+(H*.38)+' '+(215+o2)+' '+(H+44)+'" class="'+(done?'on':'')+'" vector-effect="non-scaling-stroke"/></svg>';
+    rows+='<div class="tr" style="height:'+H+'px">'+path+
+      '<button class="tn '+state+'" data-pick="'+id+'" style="left:calc(50% + '+o+'px)" aria-label="'+esc(st.title)+(done?' (lue)':isCur?' (prochaine étape)':'')+'">'+
+        (isCur?'<span class="tgo">'+(cur===0?'Commencer':'Continuer')+'</span>':'')+
+        '<span class="tc"><span class="poster" data-art="'+st.p+'"></span></span>'+
+        (done?'<span class="tk">'+IC.check+'</span>':'<span class="tnum">'+(i+1)+'</span>')+
+        '<span class="tl2"><b>'+esc(st.title)+'</b><small>'+st.min+' min</small></span>'+
+      '</button></div>';
+  });
+  var all=cur<0;
+  rows+='<div class="tr tend" style="height:130px"><div class="trophy'+(all?' on':'')+'" style="left:50%">'+IC.check+'</div><p class="tcap">'+(all?'Parcours terminé. Bravo.':'Arrivée')+'</p></div>';
+  return '<div class="trail">'+rows+'</div>';
+}
+function pathLayer(k){var p=PATHS.filter(function(x){return x.k===k;})[0];if(!p)return '';var d=pathDone(p);
+  var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/p.ids.length*100)+'%"></i></span><small>'+(d===p.ids.length?'Parcours terminé':d+' sur '+p.ids.length+' étapes')+'</small></div>';
+  return listLayer(p.n,p.d,p.ids,{kick:'Parcours de découverte',top:top,html:trailHTML(p)});}
 function myCols(){return S.x.cols||(S.x.cols=[]);}
 function myColLayer(i){var c=myCols()[i];if(!c)return '';var ids=c.ids.filter(vis);
   return listLayer(c.n,'',ids,{kick:'Ma collection · '+ids.length+(ids.length>1?' histoires':' histoire'),empty:'Ajoutez des histoires depuis leur fiche ou à la fin d\'une lecture.',right:'<button class="circle" data-coldel="'+i+'" aria-label="Supprimer la collection">'+IC.x+'</button>'});}
