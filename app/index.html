@@ -8,7 +8,7 @@
 <title>OPSIS — Prototype navigable</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Literata:opsz,wght@7..72,400;7..72,500&family=EB+Garamond:wght@400;500&family=Merriweather:wght@300;400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --black:#09090A;--coal:#121214;--ash:#1C1C1F;--line:rgba(237,230,218,.12);
@@ -479,7 +479,12 @@
   #settings .box{max-height:88%;overflow-y:auto;scrollbar-width:none}#settings .box::-webkit-scrollbar{display:none}
   .scard.img .sprev.card{aspect-ratio:4/5;height:min(46vh,470px)}
   .tog{flex:none}.ptitle.long{font-size:35px}
-  .phone.f-sans .rtext{font-family:var(--ui);letter-spacing:.003em}
+  .phone .rtext{font-family:var(--rfont,var(--serif))}
+  .phone.f-sans .rtext{letter-spacing:.003em}
+  .fontgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .fontgrid button{padding:11px 10px;border-radius:12px;background:var(--ash);color:var(--faint);font-size:17px;text-align:left;line-height:1.2}
+  .fontgrid button small{display:block;font-family:var(--ui);font-size:11px;opacity:.7;margin-top:3px}
+  .fontgrid button[aria-pressed="true"]{background:var(--bone);color:#111}
   .phone.lh-l .rtext{line-height:1.95}.phone.lh-s .rtext{line-height:1.5}
   /* ---------- apparence claire ---------- */
   .phone.light{--black:#F6F1E7;--coal:#ECE5D7;--ash:#E0D8C8;--line:rgba(24,20,16,.14);--bone:#171512;--dim:#57524A;--faint:#857F74;--red-type:#C21F28;--gold:#8A6A22;background:var(--black)}
@@ -2355,7 +2360,7 @@ IC.quote='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 17v-5c0-3.300
 function applyLook(){
   var ph=document.getElementById('phone');
   ph.classList.toggle('light',S.theme==='light');
-  ph.classList.toggle('f-sans',S.font==='sans');
+  ph.classList.toggle('f-sans',fontDef()[3].indexOf('sans-serif')>0);ph.style.setProperty('--rfont',fontDef()[3]);
   ph.classList.toggle('lh-l',S.lh==='l');ph.classList.toggle('lh-s',S.lh==='s');
   document.documentElement.style.setProperty('--fs',S.fs+'px');
 }
@@ -2663,10 +2668,12 @@ function quickSheet(){
     '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture. Touchez le texte pour les revoir.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
     '<button class="btn light" data-closesettings style="width:100%;margin-top:18px">Terminé</button>';
 }
+var FONTS=[['serif','Newsreader','Classique, le style OPSIS',"'Newsreader',Georgia,serif"],['lora','Lora','Chaleureuse, calligraphique',"'Lora',Georgia,serif"],['literata','Literata','Conçue pour lire longtemps',"'Literata',Georgia,serif"],['garamond','EB Garamond','Livre ancien, élégante',"'EB Garamond',Georgia,serif"],['merri','Merriweather','Gros corps, très lisible',"'Merriweather',Georgia,serif"],['source','Source Serif','Sobre, éditoriale',"'Source Serif 4',Georgia,serif"],['georgia','Georgia','Police de l\'appareil',"Georgia,'Times New Roman',serif"],['sans','Hanken Grotesk','Moderne, sans empattement',"'Hanken Grotesk',system-ui,sans-serif"],['atkinson','Atkinson','Hyper lisible',"'Atkinson Hyperlegible',system-ui,sans-serif"],['lexend','Lexend','Aide à la fluidité',"'Lexend',system-ui,sans-serif"]];
+function fontDef(){var k=S.font||'serif';for(var i=0;i<FONTS.length;i++)if(FONTS[i][0]===k)return FONTS[i];return FONTS[0];}
 function lookOpts(){
   return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button></span></div>'+
     '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
-    '<div class="opt"><span>Police</span><span class="seg"><button data-font="serif" aria-pressed="'+(S.font!=='sans')+'">Sérif</button><button data-font="sans" aria-pressed="'+(S.font==='sans')+'">Sans</button></span></div>'+
+    '<div class="opt" style="display:block"><span>Police</span><div class="fontgrid">'+FONTS.map(function(f){return '<button data-font="'+f[0]+'" aria-pressed="'+((S.font||'serif')===f[0])+'" style="font-family:'+f[3]+'">'+f[1]+'<small>'+f[2]+'</small></button>';}).join('')+'</div></div>'+
     '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>';
 }
 
