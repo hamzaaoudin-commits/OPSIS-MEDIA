@@ -2445,7 +2445,8 @@ function listLayer(title,desc,ids,opt){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+esc(title)+'</span>'+(opt.right||'<span style="width:38px"></span>')+'</div>'+
     '<p class="pkick">'+(opt.kick||'Collection')+'</p><h1 class="ptitle" style="padding-top:6px">'+esc(title)+'</h1>'+(desc?'<p class="hint" style="padding:8px 20px 0;font-size:15px">'+esc(desc)+'</p>':'')+(opt.top||'')+body+'<div class="bottomspace"></div>';
 }
-function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';return listLayer(c.n,c.d,c.ids,{kick:'Collection · '+c.ids.length+' histoires'});}
+function colSaved(k){return myCols().some(function(x){return x.from===k;});}
+function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k);return listLayer(c.n,c.d,c.ids,{kick:'Collection',right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'});}
 function pathLayer(k){var p=PATHS.filter(function(x){return x.k===k;})[0];if(!p)return '';var d=pathDone(p),nx=p.ids.filter(function(id){return !S.read[id];})[0];
   var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/p.ids.length*100)+'%"></i></span><small>'+(d===p.ids.length?'Parcours terminé':d+' sur '+p.ids.length+' étapes')+'</small></div>'+(nx?'<div style="padding:14px 20px 0"><button class="btn red" style="width:100%" data-open="'+nx+'">'+IC.play+(d?'Continuer le parcours':'Commencer le parcours')+'</button></div>':'');
   return listLayer(p.n,p.d,p.ids,{kick:'Parcours de découverte',steps:1,top:top});}
@@ -2792,6 +2793,7 @@ function featClick(b,d){
   if(d.coladd){openSheet(function(){return colSheet(d.coladd);});return true;}
   if(d.colnew){var nm=((document.getElementById('newcol')||{}).value||'').trim();if(!nm){toast('Donnez un nom à la collection');return true;}myCols().push({n:nm.slice(0,40),ids:[d.colnew]});S.x.cols=myCols();renderSettings();toast('Collection créée');return true;}
   if(d.coltog!==undefined){var c=myCols()[+d.coltog];if(c){var k=c.ids.indexOf(d.id);if(k>=0)c.ids.splice(k,1);else c.ids.push(d.id);S.x.cols=myCols();}renderSettings();return true;}
+  if(d.colsave){var cc=COLLS.filter(function(x){return x.k===d.colsave;})[0];if(!cc)return true;if(colSaved(cc.k)){toast('Déjà dans vos collections');return true;}myCols().push({n:cc.n.slice(0,40),ids:cc.ids.slice(),from:cc.k});S.x.cols=myCols();toast('Ajoutée à vos collections');re();return true;}
   if(d.coldel!==undefined){if(!b._ok){b._ok=1;toast('Touchez encore pour supprimer cette collection');return true;}myCols().splice(+d.coldel,1);S.x.cols=myCols();back();return true;}
   if(b.hasAttribute('data-selq')){if(saveSel()===0)toast('Citation enregistrée dans votre espace');return true;}
   if(b.hasAttribute('data-seln')){if(saveSel()===0)openSheet(function(){return noteSheet(0);});return true;}
