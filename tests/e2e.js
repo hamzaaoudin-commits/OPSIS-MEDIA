@@ -120,7 +120,6 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     eq(after.src,'live','contenu récupéré depuis la base');
     eq([!!after.S.dj001,!!after.S.dj002,!!after.S.dj003],[true,true,false],'histoires du jour publiées visibles, celle de demain cachée');
     eq(after.hero,'Le récit du jour','la une de l’accueil affiche l’histoire du jour');
-    ok(after.week.includes('Le récit d’avant-hier')||after.week.some(x=>/avant-hier/.test(x)),'« Cette semaine » liste les dernières histoires du jour');
     ok(!after.S.ar99,'une série complète ignore l’ajout (30 places)');
     eq(after.S.ar01.title,'Titre corrigé à distance','correction d’une histoire existante appliquée sans republier');
     /* la couverture de secours est générée aux couleurs du thème */

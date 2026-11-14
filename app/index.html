@@ -1523,8 +1523,7 @@ function home(){
     '<p class="meta">'+(hid==='eiffel'?'Flash · '+st.min+' min · Personnes':esc(st.kind)+' · '+st.min+' min'+(st.meta?' · '+esc(st.meta.split(' · ')[0]):''))+'</p>'+
     '<div class="cta"><button class="btn light" data-open="'+hid+'">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="'+hid+'">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
-    '<div class="shelf"><h2><span>À lire maintenant <small>Une histoire de chaque thème</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+T.map(function(_,i){return THEMES[i].k==='date'?null:nextOf(i);}).filter(Boolean).map(function(id){return epTile(id);}).join('')+'</div></div>'+
-    '<div class="shelf"><h2>Cette semaine</h2><div class="rail">'+week+'</div></div>'+homeNew()+
+    homeNew()+
     '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Thèmes</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
       '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
     T.map(function(t,i){
