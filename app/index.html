@@ -1465,7 +1465,7 @@ function tile(o){
   var t=String(o.t),sub=o.s,m=/ : |, /.exec(t),i=m?m.index:-1;
   if(i>2&&i<=28){sub=t.slice(i+m[0].length);sub=sub.charAt(0).toUpperCase()+sub.slice(1);t=t.slice(0,i);}
   t=nb(t);var L=t.length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div><p class="sub">'+esc(sub)+'</p></button>';
+  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
@@ -1559,14 +1559,14 @@ function library(){
 function saved(){
   var ids=Object.keys(S.saved).filter(function(k){return S.saved[k]&&vis(k);});
   var readIds=Object.keys(S.read).filter(function(k){return S.read[k]&&vis(k);});
-  function railOf(list){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
+  function railOf(list,ns){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',nosub:ns,badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   var rc=recentIds(),cs=myCols(),q=quotes(),bn=badgeNow(),bx=badgeNext(),n=readCount(),sk=OPSIS.store.streak();
   var started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length;});
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Mon espace</span><button class="circle" data-set="root" aria-label="Réglages">'+IC.gear+'</button></div>'+
     '<div class="mglow"></div><p class="mkick" style="padding-top:98px">'+greet()+'</p><div class="bhead"><h1 class="ptitle">Mon espace</h1>'+(bn?'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mon badge : '+bn[1]+'">'+badgeSVG(BADGES.indexOf(bn),true,44)+'</button>':'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mes badges">'+badgeSVG(0,false,40)+'</button>')+'</div>'+
     '<div class="bwrap">'+(bx?'<div class="nextb">'+badgeSVG(BADGES.indexOf(bx),false,40)+'<div><b>Prochain badge : '+bx[1]+'</b><small>Encore '+(bx[0]-n)+' '+(bx[0]-n>1?'histoires':'histoire')+'</small><div class="bar"><i style="width:'+Math.round(Math.min(1,(n-(bn?bn[0]:0))/(bx[0]-(bn?bn[0]:0)))*100)+'%"></i></div></div></div>':'')+badgesHTML()+'</div>'+
     '<div class="stats"><div>'+eico('<path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/>').replace('<svg','<svg class="si"')+'<b>'+n+'</b><small>'+(n>1?'histoires lues':'histoire lue')+'</small></div><div>'+eico('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>').replace('<svg','<svg class="si"')+'<b>'+(S.minutes||0)+'</b><small>minutes de lecture</small></div><div>'+eico('<path d="M12 3c1 5 7 7 7 13a7 7 0 0 1-14 0c0-3.500 2-5.500 4-7.500 0 3 1 4 2.500 4.500C11.500 12 11 7 12 3z"/>').replace('<svg','<svg class="si'+(sk>0?' hot':'')+'"')+'<b>'+sk+'</b><small>'+(sk>1?'jours d\'affilée':'jour d\'affilée')+'</small></div></div>'+
-    '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?railOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
+    '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?railOf(ids,true):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
     (function(){var sc=[];cs.forEach(function(c,i){if(c.from){var v=c.ids.filter(vis);if(v.length)sc.push(colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')));}});return sc.length?'<div class="shelf"><h2>Collections enregistrées <small>'+sc.length+'</small></h2><div class="rail">'+sc.join('')+'</div></div>':'';})()+
     (started.length?'<div class="shelf"><h2>Parcours en cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"',pathDone(p)+' / '+p.ids.length+' étapes');}).join('')+'</div></div>':'')+
     '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+(readIds.length?railOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
