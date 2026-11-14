@@ -348,6 +348,24 @@
   .outro .of{font-family:var(--disp);font-weight:900;font-size:84px;line-height:1;letter-spacing:.55em;padding-left:.55em;color:var(--scx,var(--bone));transition:letter-spacing 1.6s cubic-bezier(.2,.8,.2,1),padding .6s}
   .outro.on .of{letter-spacing:.22em;padding-left:.22em}
   .outro .ot{margin-top:20px;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:18px;letter-spacing:.08em;color:var(--bone)}
+  .stk-card{margin:18px 20px 0;padding:16px 16px 14px;border-radius:16px;background:var(--coal);border:1px solid var(--line)}
+  .stk-card .sh{display:flex;align-items:center;gap:12px}
+  .stk-card .sf{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);color:var(--dim);flex:none}
+  .stk-card .sf svg{width:20px;height:20px;fill:currentColor}
+  .stk-card.hot .sf{background:rgba(255,120,40,.16);color:#ff8a3a}
+  .stk-card b{display:block;font-size:16px;font-weight:700}
+  .stk-card small{display:block;margin-top:2px;font-size:13px;color:var(--dim);line-height:1.4}
+  .stk-card .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}
+  .stk-card .wk span{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;color:var(--faint);font-weight:600}
+  .stk-card .wk i{width:100%;max-width:34px;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center}
+  .stk-card .wk i.on{background:#ff8a3a;border-color:#ff8a3a;color:#000}
+  .stk-card .wk i.on svg{width:14px;height:14px}
+  .stk-card .wk i.now{border-color:var(--bone)}
+  .stk-card .sb{margin-top:14px;width:100%}
+  .stk-card .mb{margin-top:12px;height:4px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden}.stk-card .mb i{display:block;height:100%;background:#ff8a3a}
+  .invite{margin:22px 20px 0;padding:18px;border-radius:16px;background:linear-gradient(135deg,rgba(229,9,20,.16),rgba(255,255,255,.03));border:1px solid var(--line)}
+  .invite b{display:block;font-size:17px;font-weight:700}.invite p{margin:6px 0 14px;font-size:13.5px;line-height:1.5;color:var(--dim)}
+  .outro .oq{margin-top:14px;font-size:13px;color:var(--dim);line-height:1.5}
   .outro .om{margin-top:6px;font-size:13px;color:var(--dim)}
   .bkend .outro{padding:10px 0 14px}.bkend .outro .of{font-size:52px}
   .ract{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 20px 0}
@@ -1620,7 +1638,7 @@ function home(){
       if(!ids.length)return '';
       return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
     }).join('')+
-    '<div class="bottomspace"></div>';
+    inviteCard()+'<div class="bottomspace"></div>';
 }
 
 function library(){
@@ -1705,7 +1723,7 @@ function reader(id){
   var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+' min'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
-  var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p></div>';
+  var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p><p class="oq">'+outroNext()+'</p></div>';
   var tail=outro+finBlock(id)+
     '<div class="ract"><button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button>'+
     '<button class="btn glass" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div>'+tailExtra(id)+up;
@@ -2181,7 +2199,7 @@ function themeLayer(i,sub){
     '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1>'+(sub?'<p class="exs" style="padding:0 20px">'+esc(subName(sub))+'</p>':'')+
     '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+chips+
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
-    '<div class="bottomspace"></div>';
+    inviteCard()+'<div class="bottomspace"></div>';
 }
 function layerHTML(top){var t=top.type;return t==='read'?reader(top.id):t==='lib'?saved():t==='theme'?themeLayer(top.i,top.sub):t==='legal'?legalLayer(top.k):t==='search'?searchLayer():t==='col'?colLayer(top.k):t==='path'?pathLayer(top.k):t==='mycol'?myColLayer(top.i):t==='quotes'?quotesLayer():t==='set'?setLayer(top.k):serie(top.key);}
 function renderLayer(){
@@ -2694,8 +2712,30 @@ function colCard(c,attr,extra){
   return '<div class="ccw">'+card+'<button class="ccsave'+(sv?' on':'')+'" data-colsave="'+m[1]+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?IC.check:IC.plus)+'</button></div>';
 }
 function pathDone(p){return p.ids.filter(function(id){return S.read[id];}).length;}
+
+var FLAME='<svg viewBox="0 0 24 24"><path d="M12 2c1 5 7 7 7 13a7 7 0 0 1-14 0c0-3.5 2-5.5 4-7.5 0 3 1 4 2.5 4.5C11.5 11.500 11 7 12 2z"/></svg>';
+function readDays(){return (window.OPSIS&&OPSIS.store&&OPSIS.store.S&&OPSIS.store.S.days)||{};}
+function outroNext(){var sk=0;try{sk=OPSIS.store.streak();}catch(e){}var h=String(S.hour||'7 h').replace(/\s*h\s*$/,' h');return (sk>1?sk+' jours d\'affilée. ':'')+'Une nouvelle histoire demain à '+h+'.';}
+function homeHid(){return DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel';}
+function streakCard(hid){
+  var d=readDays(),sk=OPSIS.store.streak(),today=OPSIS.day(),done=!!d[today],names=['L','M','M','J','V','S','D'];
+  var now=new Date(),dow=(now.getDay()+6)%7,cells='';
+  for(var i=0;i<7;i++){var iso=OPSIS.dayAdd(today,i-dow),on=!!d[iso];cells+='<span><i class="'+(on?'on ':'')+(i===dow?'now':'')+'">'+(on?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>':'')+'</i>'+names[i]+'</span>';}
+  var ms=[3,7,14,30,60,100],nx=0;for(var j=0;j<ms.length;j++){if(sk<ms[j]){nx=ms[j];break;}}
+  var title=sk>0?sk+(sk>1?' jours d\'affilée':' jour d\'affilée'):'Lancez votre série',
+      sub=done?'Série sauvegardée pour aujourd\'hui. Rendez-vous demain à '+String(S.hour||'7 h').replace(/\s*h\s*$/,' h')+'.':(sk>0?'Lisez une histoire aujourd\'hui pour ne pas perdre votre série.':'Une histoire par jour : lisez celle d\'aujourd\'hui pour commencer.');
+  return '<div class="stk-card'+(sk>0?' hot':'')+'"><div class="sh"><span class="sf">'+FLAME+'</span><div><b>'+title+'</b><small>'+sub+'</small></div></div><div class="wk">'+cells+'</div>'+
+    (nx&&sk>0?'<div class="mb"><i style="width:'+Math.round(sk/nx*100)+'%"></i></div><small style="margin-top:6px">Prochain palier : '+nx+' jours</small>':'')+
+    (!done&&hid?'<button class="btn light sb" data-pick="'+hid+'">Lire l\'histoire du jour</button>':'')+'</div>';
+}
+function inviteCard(){return '<div class="invite"><b>OPSIS se lit mieux à deux</b><p>Une histoire vraie par jour, ça se partage. Envoyez l\'application à quelqu\'un qui aime comprendre.</p><button class="btn light" data-invite style="width:100%">Inviter un ami</button></div>';}
+function inviteShare(){var url='https://opsis-media.vercel.app/app.html',txt='Je lis OPSIS : une histoire vraie par jour, qui se lit en quelques minutes. Essaie.';
+  if(navigator.share){navigator.share({title:'OPSIS',text:txt,url:url}).catch(function(){});return;}
+  var done=function(){toast('Lien copié : envoyez-le à qui vous voulez');};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);}
 function homeExtra(){
   var h='',rc=recentIds();
+  try{h+=streakCard(typeof homeHid==='function'?homeHid():'');}catch(e){}
   if(rc.length)h+='<div class="shelf"><h2><span>Reprendre la lecture</span></h2><div class="rail">'+rc.slice(0,12).map(progTile).join('')+'</div></div>';
   var r=recs(12);
   if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
@@ -2775,6 +2815,43 @@ function trailHTML(p){
   return '<div class="trail">'+rows+'</div>';
 }
 
+var PICONS={
+diamond:'<path d="M20 38L35 20H65L80 38L50 82Z M20 38H80 M35 20L42 38L50 20L58 38L65 20 M42 38L50 82L58 38"/>',
+crown:'<path d="M15 72L10 30L35 52L50 24L65 52L90 30L85 72Z M15 82H85"/>',
+safe:'<rect x="14" y="18" width="72" height="64" rx="5"/><circle cx="50" cy="50" r="17"/><circle cx="50" cy="50" r="4"/><path d="M50 33V40M50 60V67M33 50H40M60 50H67M22 82v6M78 82v6"/>',
+mask:'<path d="M16 24C34 18 66 18 84 24C86 56 72 82 50 84C28 82 14 56 16 24Z M28 40Q36 34 44 42Q36 48 28 40Z M56 42Q64 34 72 40Q64 48 56 42Z M38 64Q50 72 62 64"/>',
+mountain:'<path d="M5 82L36 28L50 50L62 34L95 82Z M62 34V16L78 23L62 28"/>',
+snow:'<path d="M50 8V92M12 29L88 71M12 71L88 29 M42 16L50 24L58 16M42 84L50 76L58 84"/>',
+buoy:'<circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="16"/><path d="M23 23L37 37M77 23L63 37M23 77L37 63M77 77L63 63"/>',
+question:'<path d="M32 34C32 10 68 10 68 34C68 52 50 50 50 66"/><circle cx="50" cy="84" r="3.5"/>',
+person:'<circle cx="50" cy="28" r="14" stroke-dasharray="4 4"/><path d="M22 90C22 54 78 54 78 90Z" stroke-dasharray="4 4"/>',
+candle:'<rect x="40" y="42" width="20" height="46" rx="2"/><path d="M50 38C38 28 50 20 50 10C60 22 64 30 50 38Z M30 88H70"/>',
+hourglass:'<path d="M26 12H74M26 88H74M30 12C30 40 50 44 50 50C50 56 30 60 30 88M70 12C70 40 50 44 50 50C50 56 70 60 70 88"/>',
+scales:'<path d="M50 14V84M28 84H72M20 28H80M20 28L8 56H32Z M80 28L68 56H92Z M8 56Q20 66 32 56 M68 56Q80 66 92 56"/>',
+gavel:'<rect x="10" y="22" width="44" height="22" rx="3" transform="rotate(-35 32 33)"/><path d="M48 46L82 82M56 90H92"/>',
+book:'<path d="M12 22Q30 16 50 26Q70 16 88 22V78Q70 72 50 82Q30 72 12 78Z M50 26V82"/>',
+chart:'<path d="M12 14V86H90M20 30L40 48L56 40L84 74M84 56V74H66"/>',
+dice:'<rect x="16" y="16" width="68" height="68" rx="12"/><circle cx="34" cy="34" r="4"/><circle cx="66" cy="34" r="4"/><circle cx="50" cy="50" r="4"/><circle cx="34" cy="66" r="4"/><circle cx="66" cy="66" r="4"/>',
+spy:'<path d="M12 46H88M28 46C28 20 72 20 72 46M20 68a14 12 0 1 0 28 0a14 12 0 1 0-28 0M52 68a14 12 0 1 0 28 0a14 12 0 1 0-28 0M48 66H52"/>',
+twoface:'<circle cx="50" cy="50" r="36"/><path d="M50 14V86M50 14C30 40 30 60 50 86"/>',
+wall:'<path d="M8 86V22H30V86M70 86V22H92V86M30 38H70M30 54H70M30 70H70 M38 22V14M50 22V14M62 22V14"/>',
+key:'<circle cx="30" cy="50" r="18"/><circle cx="30" cy="50" r="6"/><path d="M48 50H92M80 50V66M66 50V62"/>',
+chip:'<rect x="28" y="28" width="44" height="44" rx="4"/><rect x="40" y="40" width="20" height="20"/><path d="M38 12V28M50 12V28M62 12V28M38 72V88M50 72V88M62 72V88M12 38H28M12 50H28M12 62H28M72 38H88M72 50H88M72 62H88"/>',
+swords:'<path d="M18 14L72 68M82 14L28 68M10 80L30 60M90 80L70 60M60 78L78 94M40 78L22 94"/>',
+trophy:'<path d="M28 12H72V40Q72 62 50 64Q28 62 28 40Z M28 22H12Q12 44 30 48 M72 22H88Q88 44 70 48 M50 64V80M34 88H66M38 80H62"/>',
+flag:'<path d="M26 92V10M26 14H80L66 32L80 50H26"/>',
+clap:'<rect x="12" y="38" width="76" height="48" rx="3"/><path d="M12 38L20 14L88 24L80 38M32 17L40 36M52 19L60 37M72 22L80 38"/>',
+burst:'<path d="M50 8L58 32L84 28L66 48L86 68L58 64L50 92L42 64L14 68L34 48L16 28L42 32Z"/>',
+bulb:'<path d="M50 10C26 10 20 40 36 56V68H64V56C80 40 74 10 50 10Z M38 78H62M42 88H58"/>',
+hat:'<path d="M30 68V28H70V68M14 68H86M30 54H70 M44 18L50 8L56 18"/>',
+bill:'<rect x="8" y="26" width="84" height="48" rx="4"/><circle cx="50" cy="50" r="15"/><path d="M50 40V60M44 45Q50 38 56 45Q44 52 56 56Q50 63 44 56"/>',
+card:'<rect x="8" y="24" width="84" height="54" rx="6"/><path d="M8 40H92M18 64H44"/>',
+rings:'<circle cx="34" cy="50" r="22"/><circle cx="66" cy="50" r="22"/>',
+medal:'<circle cx="50" cy="62" r="24"/><path d="M32 8L46 40M68 8L54 40M50 50L54 60H64L56 66L59 76L50 70L41 76L44 66L36 60H46Z"/>',
+boat:'<path d="M12 64H88L76 84H24Z M50 64V12M50 18L82 58H50 M50 26L24 58H50"/>'
+};
+var PIC={casses:'safe',bijoux:'diamond',imposteurs:'mask',sommets:'mountain',polaire:'snow',naufrages:'buoy',vide:'question',oupasse:'person',dernierjour:'candle',pouvoir:'hourglass',procespeur:'scales',tribunal:'gavel',livres:'book',trebuchent:'chart',paris:'dice',agents:'spy',doublesvies:'twoface',rideau:'wall',codes:'key',machine:'chip',duels:'swords',impossibles:'flag',tournages:'clap',flops:'burst',decouvertes:'bulb',canulars:'hat',escrocs:'bill',escrocs20:'card',ensemble:'rings',champions:'medal'};
+
 function pathScene(p){
   if(!p.mo)return '';
   var W=430,H=1500,s=1;function rnd(){s=(s*16807)%2147483647;return s/2147483647;}
@@ -2789,6 +2866,11 @@ function pathScene(p){
   if(m==='curtain'){for(i=0;i<9;i++){x=i*54-10;o+='<path d="M'+x+' 0 Q '+(x+30)+' 300 '+x+' 700 L'+(x+54)+' 700 Q '+(x+84)+' 300 '+(x+54)+' 0Z" fill="#000" opacity="'+(i%2?.18:.34)+'"/>';}o+='<path d="M215 0 L90 760 L340 760Z" fill="'+pa+'" opacity=".09"/><circle cx="215" cy="520" r="200" fill="url(#gl)" opacity=".6"/>';}
   if(m==='rays'){for(i=0;i<16;i++){var a1=(-80+i*10.6)*Math.PI/180;o+='<path d="M215 -40 L'+(215+Math.cos(a1+.03)*1500).toFixed(0)+' '+(-40+Math.sin(a1+.03)*1500).toFixed(0)+' L'+(215+Math.cos(a1-.03)*1500).toFixed(0)+' '+(-40+Math.sin(a1-.03)*1500).toFixed(0)+'Z" fill="'+pa+'" opacity="'+(i%2?.05:.09)+'"/>';}o+='<circle cx="215" cy="120" r="150" fill="url(#gl)"/>';}
   if(m==='grid'){o+='<circle cx="320" cy="230" r="200" fill="url(#gl)" opacity=".7"/><g stroke="'+pa+'" stroke-width=".8" opacity=".14">';for(i=0;i<22;i++)o+='<path d="M0 '+(i*42)+' H'+W+'"/>';for(i=0;i<11;i++)o+='<path d="M'+(i*43)+' 0 V900"/>';o+='</g>';for(i=0;i<8;i++){x=Math.floor(rnd()*10)*43;y=Math.floor(rnd()*14)*42;o+='<rect x="'+x+'" y="'+y+'" width="43" height="42" fill="'+pa+'" opacity="'+(.05+rnd()*.08).toFixed(2)+'"/>';}}
+  var ic=PICONS[PIC[p.k]];
+  if(ic){var st='fill="'+pa+'" fill-opacity=".10" stroke="'+pa+'" stroke-opacity=".55" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" stroke-width="2.4"';
+    o+='<g transform="translate(246 40) scale(2.0)" '+st+'>'+ic+'</g>';
+    o+='<g transform="translate(20 560) scale(.9) rotate(-8 50 50)" '+st.replace('.10','.07').replace('.55','.28')+'>'+ic+'</g>';
+    o+='<g transform="translate(300 700) scale(.6) rotate(10 50 50)" '+st.replace('.10','.05').replace('.55','.2')+'>'+ic+'</g>';}
   var svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 1500" width="430" height="1500" preserveAspectRatio="xMidYMin slice">'+o+'</svg>';
   return "--b2:"+b2+";--pa:"+pa+";--scene:url('data:image/svg+xml;utf8,"+encodeURIComponent(svg).replace(/'/g,'%27').replace(/\(/g,'%28').replace(/\)/g,'%29')+"')";
 }
@@ -3220,6 +3302,7 @@ function featClick(b,d){
   if(d.quizre){QZ[d.quizre]={a:[],open:1};re();return true;}
   if(d.quizans!==undefined){var qs=quizFor(d.id),st=QZ[d.id];if(qs&&st){st.a.push(qs[st.a.length].o[+d.quizans]);if(st.a.length>=qs.length){var qz=S.x.quiz||{};qz[d.id]=st.a.filter(function(v,k){return v===qs[k].a;}).length+'/'+qs.length;S.x.quiz=qz;}}re();return true;}
   if(d.gift){gift(d.gift);return true;}
+  if(d.invite!==undefined){inviteShare();return true;}
   if(d.report){openSheet(function(){return reportSheet(d.report);});return true;}
   if(d.rptsend){var t=(document.getElementById('rpt')||{}).value||'';t=t.trim();if(t.length<10){toast('Décrivez l\'erreur en quelques mots');return true;}
     var rp=S.x.reports||[];rp.unshift({id:d.rptsend,t:t,at:OPSIS.day()});S.x.reports=rp.slice(0,30);closeSheet();
