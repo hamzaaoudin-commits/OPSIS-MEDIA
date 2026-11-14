@@ -607,7 +607,7 @@
   .qzr{padding-left:12px;border-left:3px solid var(--faint);margin:10px 0!important;color:var(--bone)!important;font-size:14.5px!important}
   .qzr i{display:block;font-style:normal;font-size:12px;color:var(--faint)}
   .qzr.ok{border-color:#3FA06B}.qzr.ko{border-color:var(--red-type)}
-  .btn.sm2{height:40px;font-size:14px;font-weight:600;color:var(--dim)}
+  .btn.sm2{height:40px;font-size:14px;font-weight:600;color:var(--dim)}.btn.srctog{grid-column:1/-1}
   .fxs-prog{flex:1 1 100%;grid-column:1/-1;text-align:center;font-size:13px;color:var(--gold);font-weight:600;margin-top:2px}
   .aubar{position:absolute;left:12px;right:12px;bottom:22px;z-index:56;display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:16px;background:#1C1C1F;border:1px solid rgba(237,230,218,.14);color:#EDE6DA;box-shadow:0 12px 34px rgba(0,0,0,.55);transform:translateY(120%);opacity:0;transition:.28s;pointer-events:none}
   .aubar.on{transform:none;opacity:1;pointer-events:auto}
@@ -3105,8 +3105,8 @@ function setLayer(k){
       '';
   }else if(k==='abo'){
     var wp=!!S.x.plusWish;
-    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS</h3><p>Toutes les histoires, les trois formats, vos collections et vos citations.</p></div>'+
-      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">Le paiement n\'est pas encore ouvert : le tarif et le démarrage de l\'abonnement seront annoncés avant le lancement.</small></span><span class="pill">À venir</span></div>'+
+    b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS</h3><p>Toutes les histoires, les trois formats, vos collections et vos citations. <b>3,99 € par mois</b>, résiliable à tout moment.</p></div>'+
+      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">3,99 € par mois, sans engagement. Le paiement ouvrira au lancement : rien ne vous est prélevé avant.</small></span><span class="pill">3,99 €/mois</span></div>'+
       '<div class="opt"><span>Moyen de paiement<small class="os">Aucun moyen de paiement enregistré.</small></span></div>'+
       '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
       '<div class="opt"><span>Résiliation<small class="os">L\'abonnement se résiliera ici, en un geste, sans justification.</small></span></div></div>';
