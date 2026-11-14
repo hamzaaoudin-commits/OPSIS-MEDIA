@@ -348,24 +348,6 @@
   .outro .of{font-family:var(--disp);font-weight:900;font-size:84px;line-height:1;letter-spacing:.55em;padding-left:.55em;color:var(--scx,var(--bone));transition:letter-spacing 1.6s cubic-bezier(.2,.8,.2,1),padding .6s}
   .outro.on .of{letter-spacing:.22em;padding-left:.22em}
   .outro .ot{margin-top:20px;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:18px;letter-spacing:.08em;color:var(--bone)}
-  .stk-card{margin:18px 20px 0;padding:16px 16px 14px;border-radius:16px;background:var(--coal);border:1px solid var(--line)}
-  .stk-card .sh{display:flex;align-items:center;gap:12px}
-  .stk-card .sf{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);color:var(--dim);flex:none}
-  .stk-card .sf svg{width:20px;height:20px;fill:currentColor}
-  .stk-card.hot .sf{background:rgba(255,120,40,.16);color:#ff8a3a}
-  .stk-card b{display:block;font-size:16px;font-weight:700}
-  .stk-card small{display:block;margin-top:2px;font-size:13px;color:var(--dim);line-height:1.4}
-  .stk-card .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}
-  .stk-card .wk span{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;color:var(--faint);font-weight:600}
-  .stk-card .wk i{width:100%;max-width:34px;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center}
-  .stk-card .wk i.on{background:#ff8a3a;border-color:#ff8a3a;color:#000}
-  .stk-card .wk i.on svg{width:14px;height:14px}
-  .stk-card .wk i.now{border-color:var(--bone)}
-  .stk-card .sb{margin-top:14px;width:100%}
-  .stk-card .mb{margin-top:12px;height:4px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden}.stk-card .mb i{display:block;height:100%;background:#ff8a3a}
-  .invite{margin:22px 20px 0;padding:18px;border-radius:16px;background:linear-gradient(135deg,rgba(229,9,20,.16),rgba(255,255,255,.03));border:1px solid var(--line)}
-  .invite b{display:block;font-size:17px;font-weight:700}.invite p{margin:6px 0 14px;font-size:13.5px;line-height:1.5;color:var(--dim)}
-  .outro .oq{margin-top:14px;font-size:13px;color:var(--dim);line-height:1.5}
   .outro .om{margin-top:6px;font-size:13px;color:var(--dim)}
   .bkend .outro{padding:10px 0 14px}.bkend .outro .of{font-size:52px}
   .ract{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 20px 0}
@@ -1638,7 +1620,7 @@ function home(){
       if(!ids.length)return '';
       return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
     }).join('')+
-    inviteCard()+'<div class="bottomspace"></div>';
+    '<div class="bottomspace"></div>';
 }
 
 function library(){
@@ -1723,7 +1705,7 @@ function reader(id){
   var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+' min'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
-  var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p><p class="oq">'+outroNext()+'</p></div>';
+  var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p></div>';
   var tail=outro+finBlock(id)+
     '<div class="ract"><button class="btn '+(done?'glass':'red')+' full" data-finish="'+id+'">'+(done?'Déjà lue':'J\'ai terminé')+'</button>'+
     '<button class="btn glass" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div>'+tailExtra(id)+up;
@@ -2199,7 +2181,7 @@ function themeLayer(i,sub){
     '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1>'+(sub?'<p class="exs" style="padding:0 20px">'+esc(subName(sub))+'</p>':'')+
     '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+chips+
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
-    inviteCard()+'<div class="bottomspace"></div>';
+    '<div class="bottomspace"></div>';
 }
 function layerHTML(top){var t=top.type;return t==='read'?reader(top.id):t==='lib'?saved():t==='theme'?themeLayer(top.i,top.sub):t==='legal'?legalLayer(top.k):t==='search'?searchLayer():t==='col'?colLayer(top.k):t==='path'?pathLayer(top.k):t==='mycol'?myColLayer(top.i):t==='quotes'?quotesLayer():t==='set'?setLayer(top.k):serie(top.key);}
 function renderLayer(){
@@ -2713,29 +2695,8 @@ function colCard(c,attr,extra){
 }
 function pathDone(p){return p.ids.filter(function(id){return S.read[id];}).length;}
 
-var FLAME='<svg viewBox="0 0 24 24"><path d="M12 2c1 5 7 7 7 13a7 7 0 0 1-14 0c0-3.5 2-5.5 4-7.5 0 3 1 4 2.5 4.5C11.5 11.500 11 7 12 2z"/></svg>';
-function readDays(){return (window.OPSIS&&OPSIS.store&&OPSIS.store.S&&OPSIS.store.S.days)||{};}
-function outroNext(){var sk=0;try{sk=OPSIS.store.streak();}catch(e){}var h=String(S.hour||'7 h').replace(/\s*h\s*$/,' h');return (sk>1?sk+' jours d\'affilée. ':'')+'Une nouvelle histoire demain à '+h+'.';}
-function homeHid(){return DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel';}
-function streakCard(hid){
-  var d=readDays(),sk=OPSIS.store.streak(),today=OPSIS.day(),done=!!d[today],names=['L','M','M','J','V','S','D'];
-  var now=new Date(),dow=(now.getDay()+6)%7,cells='';
-  for(var i=0;i<7;i++){var iso=OPSIS.dayAdd(today,i-dow),on=!!d[iso];cells+='<span><i class="'+(on?'on ':'')+(i===dow?'now':'')+'">'+(on?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>':'')+'</i>'+names[i]+'</span>';}
-  var ms=[3,7,14,30,60,100],nx=0;for(var j=0;j<ms.length;j++){if(sk<ms[j]){nx=ms[j];break;}}
-  var title=sk>0?sk+(sk>1?' jours d\'affilée':' jour d\'affilée'):'Lancez votre série',
-      sub=done?'Série sauvegardée pour aujourd\'hui. Rendez-vous demain à '+String(S.hour||'7 h').replace(/\s*h\s*$/,' h')+'.':(sk>0?'Lisez une histoire aujourd\'hui pour ne pas perdre votre série.':'Une histoire par jour : lisez celle d\'aujourd\'hui pour commencer.');
-  return '<div class="stk-card'+(sk>0?' hot':'')+'"><div class="sh"><span class="sf">'+FLAME+'</span><div><b>'+title+'</b><small>'+sub+'</small></div></div><div class="wk">'+cells+'</div>'+
-    (nx&&sk>0?'<div class="mb"><i style="width:'+Math.round(sk/nx*100)+'%"></i></div><small style="margin-top:6px">Prochain palier : '+nx+' jours</small>':'')+
-    (!done&&hid?'<button class="btn light sb" data-pick="'+hid+'">Lire l\'histoire du jour</button>':'')+'</div>';
-}
-function inviteCard(){return '<div class="invite"><b>OPSIS se lit mieux à deux</b><p>Une histoire vraie par jour, ça se partage. Envoyez l\'application à quelqu\'un qui aime comprendre.</p><button class="btn light" data-invite style="width:100%">Inviter un ami</button></div>';}
-function inviteShare(){var url='https://opsis-media.vercel.app/app.html',txt='Je lis OPSIS : une histoire vraie par jour, qui se lit en quelques minutes. Essaie.';
-  if(navigator.share){navigator.share({title:'OPSIS',text:txt,url:url}).catch(function(){});return;}
-  var done=function(){toast('Lien copié : envoyez-le à qui vous voulez');};
-  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);}
 function homeExtra(){
   var h='',rc=recentIds();
-  try{h+=streakCard(typeof homeHid==='function'?homeHid():'');}catch(e){}
   if(rc.length)h+='<div class="shelf"><h2><span>Reprendre la lecture</span></h2><div class="rail">'+rc.slice(0,12).map(progTile).join('')+'</div></div>';
   var r=recs(12);
   if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
@@ -3302,7 +3263,6 @@ function featClick(b,d){
   if(d.quizre){QZ[d.quizre]={a:[],open:1};re();return true;}
   if(d.quizans!==undefined){var qs=quizFor(d.id),st=QZ[d.id];if(qs&&st){st.a.push(qs[st.a.length].o[+d.quizans]);if(st.a.length>=qs.length){var qz=S.x.quiz||{};qz[d.id]=st.a.filter(function(v,k){return v===qs[k].a;}).length+'/'+qs.length;S.x.quiz=qz;}}re();return true;}
   if(d.gift){gift(d.gift);return true;}
-  if(d.invite!==undefined){inviteShare();return true;}
   if(d.report){openSheet(function(){return reportSheet(d.report);});return true;}
   if(d.rptsend){var t=(document.getElementById('rpt')||{}).value||'';t=t.trim();if(t.length<10){toast('Décrivez l\'erreur en quelques mots');return true;}
     var rp=S.x.reports||[];rp.unshift({id:d.rptsend,t:t,at:OPSIS.day()});S.x.reports=rp.slice(0,30);closeSheet();
