@@ -72,9 +72,8 @@
 
   /* ---------- affiches ---------- */
   .poster{position:relative;overflow:hidden;background:#111}
-  .vlist{padding:8px 20px 0}.vrow{display:flex;align-items:center;gap:14px;width:100%;padding:10px 0;text-align:left;color:inherit;background:none;border:0;border-bottom:1px solid var(--line);cursor:pointer}
-  .vlist .vrow:last-child{border-bottom:0}.vrow .poster{flex:none;width:60px;height:90px;border-radius:7px;background:#16161a}
-  .vrow .vt{flex:1;min-width:0}.vrow b{display:block;font-size:16.5px;line-height:1.25;font-weight:600}.vrow small{display:block;font-size:13px;color:var(--faint);margin-top:4px}.vrow svg.vch{flex:none;width:17px;height:17px;color:var(--faint)}
+  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 20px 0}
+  .cgrid .tile{width:auto;min-width:0}.cgrid .tile .poster{width:100%;height:auto;aspect-ratio:2/3}
   .poster svg{position:absolute;inset:0;width:100%;height:100%;display:block}
   .poster::after{content:none}
 
@@ -1560,7 +1559,7 @@ function library(){
 function saved(){
   var ids=Object.keys(S.saved).filter(function(k){return S.saved[k]&&vis(k);});
   var readIds=Object.keys(S.read).filter(function(k){return S.read[k]&&vis(k);});
-  function listOf(list){return '<div class="vlist">'+list.map(function(id){var st=STORIES[id];return '<button class="vrow" data-pick="'+id+'"><div class="poster" data-art="'+st.p+'"><span class="grad"></span></div><span class="vt"><b>'+esc(st.title)+'</b><small>'+esc((st.series||st.kind)+' · '+st.min+' min')+'</small></span>'+IC.chev.replace('<svg','<svg class="vch"')+'</button>';}).join('')+'</div>';}
+  function gridOf(list){return '<div class="cgrid">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:'',nosub:true,attr:'data-pick="'+id+'"',badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   function railOf(list,ns){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',nosub:ns,badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   var rc=recentIds(),cs=myCols(),q=quotes(),bn=badgeNow(),bx=badgeNext(),n=readCount(),sk=OPSIS.store.streak();
   var started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length;});
@@ -1568,7 +1567,7 @@ function saved(){
     '<div class="mglow"></div><div class="bhead" style="padding-top:104px"><h1 class="ptitle">Mon espace</h1>'+(bn?'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mon badge : '+bn[1]+'">'+badgeSVG(BADGES.indexOf(bn),true,44)+'</button>':'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mes badges">'+badgeSVG(0,false,40)+'</button>')+'</div>'+
     '<div class="bwrap">'+(bx?'<div class="nextb">'+badgeSVG(BADGES.indexOf(bx),false,40)+'<div><b>Prochain badge : '+bx[1]+'</b><small>Encore '+(bx[0]-n)+' '+(bx[0]-n>1?'histoires':'histoire')+'</small><div class="bar"><i style="width:'+Math.round(Math.min(1,(n-(bn?bn[0]:0))/(bx[0]-(bn?bn[0]:0)))*100)+'%"></i></div></div></div>':'')+badgesHTML()+'</div>'+
     '<div class="stats"><div>'+eico('<path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/>').replace('<svg','<svg class="si"')+'<b>'+n+'</b><small>'+(n>1?'histoires lues':'histoire lue')+'</small></div><div>'+eico('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>').replace('<svg','<svg class="si"')+'<b>'+(S.minutes||0)+'</b><small>minutes de lecture</small></div><div>'+eico('<path d="M12 3c1 5 7 7 7 13a7 7 0 0 1-14 0c0-3.500 2-5.500 4-7.500 0 3 1 4 2.500 4.500C11.500 12 11 7 12 3z"/>').replace('<svg','<svg class="si'+(sk>0?' hot':'')+'"')+'<b>'+sk+'</b><small>'+(sk>1?'jours d\'affilée':'jour d\'affilée')+'</small></div></div>'+
-    '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?listOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
+    '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?gridOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
     (function(){var sc=[];cs.forEach(function(c,i){if(c.from){var v=c.ids.filter(vis);if(v.length)sc.push(colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')));}});return sc.length?'<div class="shelf"><h2>Collections enregistrées <small>'+sc.length+'</small></h2><div class="rail">'+sc.join('')+'</div></div>':'';})()+
     (started.length?'<div class="shelf"><h2>Parcours en cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"',pathDone(p)+' / '+p.ids.length+' étapes');}).join('')+'</div></div>':'')+
     '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+(readIds.length?railOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
