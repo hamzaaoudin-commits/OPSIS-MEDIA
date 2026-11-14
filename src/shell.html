@@ -619,7 +619,6 @@
       <p class="word" aria-hidden="true"><span>P</span><span>S</span><span>I</span><span>S</span></p>
     </div>
     <p class="tag">The world is made of stories.</p>
-    <button class="skip" id="skip">Toucher pour entrer</button>
   </div>
   <div class="homebar" aria-hidden="true"></div>
 </div>
@@ -2988,7 +2987,7 @@ function playIntro(){
   },4550);
   later(enter,5520);
 }
-document.getElementById('skip').onclick=enter;splash.addEventListener('click',enter);
+splash.addEventListener('click',enter);
 playIntro();
 
 applyLook();renderMain();
