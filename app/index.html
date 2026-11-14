@@ -2419,7 +2419,7 @@ var PATHS=[
 ];
 COLLS.forEach(function(c){c.ids=c.ids.filter(vis);});PATHS.forEach(function(c){c.ids=c.ids.filter(vis);});
 COLLS=COLLS.filter(function(c){return c.ids.length>=4;});PATHS=PATHS.filter(function(c){return c.ids.length>=4;});
-var BADGES=[[1,'Premier regard','Une première histoire lue'],[5,'Curieux','Cinq histoires lues'],[10,'Lecteur','Dix histoires lues'],[25,'Explorateur','Vingt-cinq histoires lues'],[50,'Passionné','Cinquante histoires lues'],[100,'Érudit','Cent histoires lues'],[200,'Mémoire vive','Deux cents histoires lues']];
+var BADGES=[[1,'Premier regard','Une première histoire lue'],[5,'Curieux','Cinq histoires lues'],[10,'Lecteur','Dix histoires lues'],[25,'Explorateur','Vingt-cinq histoires lues'],[50,'Passionné','Cinquante histoires lues'],[100,'Érudit','Cent histoires lues'],[200,'Mémoire vive','Deux cents histoires lues'],[250,'Archiviste','Deux cent cinquante histoires lues'],[500,'Légende','Cinq cents histoires lues']];
 function readCount(){var n=0;Object.keys(S.read).forEach(function(k){if(S.read[k]&&vis(k))n++;});return n;}
 function badgeNow(){var n=readCount(),b=null;BADGES.forEach(function(x){if(n>=x[0])b=x;});return b;}
 function badgeNext(){var n=readCount();for(var i=0;i<BADGES.length;i++)if(n<BADGES[i][0])return BADGES[i];return null;}
@@ -2832,14 +2832,16 @@ function setLayer(k){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+title+'</span><span style="width:38px"></span></div>'+
     (k==='root'?'':'<p class="pkick">Réglages</p>')+'<h1 class="ptitle'+(title.length>13?' long':'')+'" style="padding-top:'+(k==='root'?'104px':'6px')+'">'+title+'</h1>'+b+'<div class="bottomspace"></div>';
 }
-var BG_COL=[['#f3c9a0','#c2824d','#6b3f1e'],['#f3c9a0','#c2824d','#6b3f1e'],['#f7f9fb','#b6c0cc','#5d6877'],['#f7f9fb','#b6c0cc','#5d6877'],['#fff2b8','#e9b93f','#8a5d0e'],['#fff2b8','#e9b93f','#8a5d0e'],['#ffa595','#e0291a','#7a0d06']];
+var BG_COL=[['#f3c9a0','#c2824d','#6b3f1e'],['#f3c9a0','#c2824d','#6b3f1e'],['#f7f9fb','#b6c0cc','#5d6877'],['#f7f9fb','#b6c0cc','#5d6877'],['#fff2b8','#e9b93f','#8a5d0e'],['#fff2b8','#e9b93f','#8a5d0e'],['#ffa595','#e0291a','#7a0d06'],['#f0faff','#86bfe3','#2f5f80'],['#f1d6ff','#a566ea','#4a1d86']];
 var BG_GLYPH=['<circle cx="24" cy="24" r="4.2" fill="#fff"/><path d="M10 24c4-7 9-10 14-10s10 3 14 10c-4 7-9 10-14 10s-10-3-14-10z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>',
 '<path d="M24 11l3 8.5 8.5 3-8.5 3-3 8.5-3-8.5-8.5-3 8.5-3z" fill="#fff"/>',
 '<path d="M10 14c5-1 10-1 14 2 4-3 9-3 14-2v20c-5-1-10-1-14 2-4-3-9-3-14-2z M24 16v20" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>',
 '<circle cx="24" cy="24" r="12" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M29.5 18.5l-3.5 7.5-7.5 3.5 3.5-7.5z" fill="#fff"/>',
 '<path d="M24 9c1 6 8 9 8 17a8 8 0 0 1-16 0c0-4 2-6 4-8 0 3 1 4 2.5 4.5C21 17 22 13 24 9z" fill="#fff"/>',
 '<path d="M10 36h28M13 36V22M21 36V22M29 36V22M37 36V22M9 21l15-10 15 10z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>',
-'<path d="M24 24c-3-5-6-7-9-7a7 7 0 0 0 0 14c3 0 6-2 9-7 3 5 6 7 9 7a7 7 0 0 0 0-14c-3 0-6 2-9 7z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>'];
+'<path d="M24 24c-3-5-6-7-9-7a7 7 0 0 0 0 14c3 0 6-2 9-7 3 5 6 7 9 7a7 7 0 0 0 0-14c-3 0-6 2-9 7z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>',
+'<path d="M14 12h20v24H14z M19 18h10M19 24h10M19 30h6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M34 16l4 2v22H18" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>',
+'<path d="M9 34l2-16 8 8 5-12 5 12 8-8 2 16z M10 39h28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="24" cy="14" r="2" fill="#fff"/>'];
 function bgPoly(n,r,rot,k){var o=[];for(var i=0;i<n;i++){var a=rot+i*2*Math.PI/n;o.push((32+r*Math.cos(a)).toFixed(1)+','+(32+r*Math.sin(a)).toFixed(1));if(k){a+=Math.PI/n;o.push((32+r*k*Math.cos(a)).toFixed(1)+','+(32+r*k*Math.sin(a)).toFixed(1));}}return o.join(' ');}
 function bgShape(i,r){var t=-Math.PI/2;
 if(i===0)return '<circle cx="32" cy="32" r="'+r+'"/>';
@@ -2848,7 +2850,9 @@ if(i===2){var q=r/30;return '<path transform="translate(32 32) scale('+q+') tran
 if(i===3)return '<polygon points="'+bgPoly(8,r,Math.PI/8)+'"/>';
 if(i===4)return '<polygon points="'+bgPoly(12,r,t,.86)+'"/>';
 if(i===5){var q2=r/30;return '<path transform="translate(32 33) scale('+q2+') translate(-32 -32)" d="M32 1l7 7h13l2 12c3 4 4 8 4 12 0 15-11 25-26 31C17 57 6 47 6 32c0-4 1-8 4-12l2-12h13z"/>';}
-return '<polygon points="'+bgPoly(16,r,t,.88)+'"/>';}
+if(i===6)return '<polygon points="'+bgPoly(16,r,t,.88)+'"/>';
+if(i===7)return '<polygon points="'+bgPoly(10,r,t,.8)+'"/>';
+return '<polygon points="'+bgPoly(24,r,t,.92)+'"/>';}
 function badgeSVG(i,on,sz){var c=BG_COL[i]||BG_COL[0],u='b'+i+sz+(on?'o':'x');
 return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 64 64" aria-hidden="true"><defs>'+
 '<linearGradient id="'+u+'r" x1=".15" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset=".5" stop-color="'+c[1]+'"/><stop offset="1" stop-color="'+c[2]+'"/></linearGradient>'+
@@ -2861,7 +2865,7 @@ return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 64 64" aria-hidden="tru
 '<circle cx="32" cy="30" r="21" fill="url(#'+u+'g)"/>'+
 '<g transform="translate(10 9.500) scale(.9)" fill="url(#'+u+'l)" stroke="url(#'+u+'l)">'+BG_GLYPH[i].replace(/fill="#fff"/g,'fill="inherit"').replace(/stroke="#fff"/g,'stroke="inherit"')+'</g>'+
 '<path d="M14 22A20 20 0 0 1 32 11" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.6" stroke-linecap="round"/>'+
-(i>=4?'<g fill="'+c[0]+'"><circle cx="32" cy="55" r="1.4"/><circle cx="26.500" cy="54" r="1"/><circle cx="37.500" cy="54" r="1"/></g>':'')+'</svg>';}
+(i>=4?'<g fill="'+c[0]+'"><circle cx="32" cy="55" r="1.4"/><circle cx="26.500" cy="54" r="1"/><circle cx="37.500" cy="54" r="1"/>'+(i>=7?'<circle cx="21.500" cy="52.500" r=".8"/><circle cx="42.500" cy="52.500" r=".8"/>':'')+'</g>':'')+'</svg>';}
 function badgesHTML(){var n=readCount();return '<div class="bgrid">'+BADGES.map(function(b,i){var on=n>=b[0];return '<div class="bdg'+(on?' on':'')+'">'+badgeSVG(i,on,72)+'<b>'+b[1]+'</b><small>'+b[2]+'</small></div>';}).join('')+'</div>';}
 
 /* ---------- lien direct vers une histoire (cadeau, raccourcis) ---------- */
