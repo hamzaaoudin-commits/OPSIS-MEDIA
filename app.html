@@ -284,6 +284,12 @@
   .rbar.solid{background:rgba(9,9,10,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
   .rbar .rt{font-size:14px;font-weight:600;color:var(--dim);opacity:0;transition:opacity .3s}
   .rbar.solid .rt{opacity:1}
+  .rbar.rd{position:sticky;top:0;height:0;padding:0 12px;align-items:flex-start;background:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  .rbar.rd>*:not(.prog){margin-top:52px;margin-left:0}.rbar.rd>.rt{line-height:38px}.rbar.rd>span[style]{margin-right:0}
+  .rbar.rd::before{content:'';position:absolute;left:0;right:0;top:0;height:98px;z-index:-1;transition:background .3s}
+  .rbar.rd.solid::before{background:rgba(9,9,10,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .phone.light .rbar.rd.solid::before{background:rgba(246,241,231,.94)}
+  .rbar.rd .prog{top:96px;bottom:auto}
   .circle{width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center}
   .circle svg{width:20px;height:20px}
   .prog{position:absolute;left:0;right:0;bottom:0;height:2px;background:transparent}
@@ -1722,7 +1728,7 @@ function reader(id){
       :'<button class="upnext" data-path="'+pc.p.k+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU PARCOURS</span><span class="ut" style="display:block">Revoir le parcours</span><span class="us" style="display:block">'+esc(pc.p.n)+'</span></span></button>'):
     nx?'<button class="upnext" data-open="'+s.next+'">'+poster(nx.p)+'<span><span class="uk" style="display:block">À LIRE ENSUITE</span><span class="ut" style="display:block">'+esc(nx.title)+'</span><span class="us" style="display:block">'+esc(nx.kind)+', '+nx.min+' min</span></span></button>'
     :(s.th!==undefined?'<button class="upnext" data-terr="'+s.th+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU THÈME</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">'+esc(T[s.th])+'</span></span></button>':'');
-  var bar='<div class="rbar'+(S.mode==='book'?' solid':'')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
+  var bar='<div class="rbar'+(S.mode==='book'?' solid':' rd')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+' min'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p></div>';
