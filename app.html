@@ -1611,12 +1611,12 @@ function srcHTML(t){
   return '<div class="srcb"><h4>Sources</h4>'+parts.map(function(p){return '<p>'+esc(p).replace(/^(Ouvrages et films|Presse et sources en ligne) :/,'<b>$1</b> :')+'</p>';}).join('')+'</div>';
 }
 function lenWords(a){var w=0;a.forEach(function(t){if('#@*'.indexOf(t.charAt(0))<0)w+=t.split(' ').length;});return w;}
-function lenMin(a){return Math.max(1,Math.round(lenWords(a)/200));}
+function lenMin(a){return Math.max(3,Math.round(lenWords(a)/200));}
 function lenAv(s){var bl=lenWords(s.body)>=800?5:3;return {3:s.b3||(bl===3?s.body:null),5:s.b5||s.body,10:s.b10||null};}
 function lenPick(s,L){var av=lenAv(s);if(av[L])return {arr:av[L],got:L};var ks=L===10?[5,3]:L===5?[3,10]:[5,10];for(var i=0;i<ks.length;i++){if(av[ks[i]])return {arr:av[ks[i]],got:ks[i],miss:L};}return {arr:s.body,got:3,miss:L};}
 function lensUI(s,V){
   /* une seule version écrite : on n'affiche pas de choix 3 / 5 / 10 min qui donnerait trois fois le même texte */
-  if(!s.b3&&!s.b10){if(s.fmt)return '';var m=Math.max(1,Math.round(lenWords(s.body)/200));return '<div class="lens"><span class="ll">Durée de lecture</span><span class="ll">environ '+m+' min</span></div>';}
+  if(!s.b3&&!s.b10){if(s.fmt)return '';var m=Math.max(3,Math.round(lenWords(s.body)/200));return '<div class="lens"><span class="ll">Durée de lecture</span><span class="ll">environ '+m+' min</span></div>';}
   var cur=S.len||3,av=lenAv(s),btn=[3,5,10].map(function(k){var has=!!av[k];return '<button data-len="'+k+'" aria-pressed="'+(cur===k)+'"'+(has?'':' class="na"')+'>'+FM[k]+' min</button>';}).join('');
   return '<div class="lens"><span class="ll">Format</span><span class="seg">'+btn+'</span></div>'+(V.miss?'<p class="lnote">Le format '+FM[V.miss]+' minutes de cette histoire arrive bientôt. Vous lisez le format '+FM[V.got]+' minutes.</p>':'');}
 function pathCtx(id){for(var q=S.stack.length-1;q>=0;q--){var e=S.stack[q];if(e&&e.type==='path'){var p=PATHS.filter(function(x){return x.k===e.k;})[0];if(p){var i=p.ids.indexOf(id);if(i>=0)return {p:p,i:i};}}}return null;}
