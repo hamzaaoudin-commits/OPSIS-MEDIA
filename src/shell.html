@@ -44,6 +44,9 @@
 
   /* ---------- affiches ---------- */
   .poster{position:relative;overflow:hidden;background:#111}
+  .rdhead{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:0 20px 0 0;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+  .rdhead h2{flex:1;display:flex;justify-content:space-between;align-items:baseline;padding:0;margin:0}.rdhead svg{flex:none;width:18px;height:18px;color:var(--faint);transition:transform .2s}
+  .rdsec.open .rdhead svg{transform:rotate(90deg)}.rdbody{display:none}.rdsec.open .rdbody{display:block}
   .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 20px 0}
   .cgrid .tile{width:auto;min-width:0}.cgrid .tile .poster{width:100%;height:auto;aspect-ratio:2/3}
   .poster svg{position:absolute;inset:0;width:100%;height:100%;display:block}
@@ -1542,8 +1545,8 @@ function saved(){
     '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?gridOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
     (function(){var sc=[];cs.forEach(function(c,i){if(c.from){var v=c.ids.filter(vis);if(v.length)sc.push(colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')));}});return sc.length?'<div class="shelf"><h2>Collections enregistrées <small>'+sc.length+'</small></h2><div class="rail">'+sc.join('')+'</div></div>':'';})()+
     (started.length?'<div class="shelf"><h2>Parcours en cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"',pathDone(p)+' / '+p.ids.length+' étapes');}).join('')+'</div></div>':'')+
-    '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+(readIds.length?railOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
-    '<div class="opt" style="margin:14px 20px 0"><span>Les masquer de l\'accueil</span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues de l\'accueil"></button></div></div>'+
+    '<div class="shelf rdsec"><button class="rdhead" data-readtog aria-expanded="false"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+IC.chev+'</button><div class="rdbody">'+(readIds.length?gridOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
+    '<div class="opt" style="margin:14px 20px 0"><span>Les masquer de l\'accueil</span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues de l\'accueil"></button></div></div></div>'+
     '<div class="bottomspace"></div>';
 }
 
@@ -2901,6 +2904,7 @@ function featClick(b,d){
   if(d.font){S.font=d.font;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(d.lh){S.lh=d.lh;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
+  if(d.readtog!==undefined){var rs=lv.querySelector('.rdsec');if(rs){b.setAttribute('aria-expanded',rs.classList.toggle('open'));}return true;}
   if(d.badgetog!==undefined){var bw=lv.querySelector('.bwrap');if(bw){b.setAttribute('aria-expanded',bw.classList.toggle('open'));}return true;}
   if(d.srctog!==undefined){var w=lv.querySelector('.srcwrap');if(w){var o=w.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=(o?'− ':'+ ')+'Sources';}return true;}
   if(d.toggle2){var cur=d.toggle2==='stats'?S.stats!==false:!!S[d.toggle2];S[d.toggle2]=!cur;if(d.toggle2==='stats'&&!S.stats){S.prog={};S.x.recent=[];}reSet();if(d.toggle2==='hideRead')toast(S.hideRead?'Histoires lues masquées de l\'accueil':'Histoires lues de nouveau visibles');return true;}
