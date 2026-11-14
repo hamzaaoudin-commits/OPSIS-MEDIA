@@ -1480,7 +1480,7 @@ var DJIDS=[];
    ÉTAT (en mémoire)
    ===================================================================== */
 var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{penicilline:true},saved:{},follow:{},minutes:6,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
-OPSIS.hydrate(S);OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain};
+OPSIS.hydrate(S);S.x=S.x||{};if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain};
 var main=document.getElementById('main'),layer=document.getElementById('layer'),lv=document.getElementById('layerview');
 /* ---------- le logo : un diaphragme à six lamelles, une pupille rouge, et c'est le O d'OPSIS ----------
    open : 0 = fermé, 1 = ouvert (au-delà, les lamelles s'effacent) ; pupil : taille de la pupille ;
@@ -2204,6 +2204,7 @@ function bindLayer(top){
   var prog=document.getElementById('prog'),rt=document.getElementById('rt');
   lv.onscroll=function(){
     var y=lv.scrollTop;bar.classList.toggle('solid',y>300);
+    if(lv.classList.contains('peek')&&Math.abs(y-(lv._py||0))>80)lv.classList.remove('peek');if(!lv.classList.contains('peek'))lv._py=y;
     if(prog&&top.type==='read'){
       var max=lv.scrollHeight-lv.clientHeight,p=max>0?Math.min(1,y/max):0,m=STORIES[top.id].min;
       prog.style.width=(p*100)+'%';if(S.stats!==false)saveProg(top.id,p);
@@ -2980,7 +2981,7 @@ function isRead(){var t=S.stack[S.stack.length-1];return !!t&&t.type==='read';}
 lv.addEventListener('click',function(e){
   if(!isRead()||!S.focus||bookMode())return;if(e.target.closest('button,a,input,textarea'))return;
   var s=window.getSelection&&window.getSelection();if(s&&!s.isCollapsed)return;
-  if(e.target.closest('.rtext,.rhero,.rhead'))lv.classList.toggle('peek');
+  if(e.target.closest('.rtext,.rhero,.rhead')){lv.classList.toggle('peek');lv._py=lv.scrollTop;}
 });
 
 /* ---------- mode audio (synthèse vocale du navigateur) ---------- */
