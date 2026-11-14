@@ -258,12 +258,14 @@
   .bk h3.sec{break-after:avoid;margin-top:1.2em}
   .bk p{orphans:2;widows:2}
   .bk .turn{margin:1.2em 0;padding:16px}
-  .bkcover{break-after:column;padding-top:6px}
+  .bkcover{break-after:column;position:relative;height:calc(100% - 8px);margin-top:2px}
   .bk .rhead p::first-letter{font:inherit;float:none;color:inherit;margin:0;line-height:inherit}
   .bkcover .rhead,.bkend{font-family:var(--ui)}
-  .bkcover .bkpost{width:46%;aspect-ratio:2/3;border-radius:10px;overflow:hidden;margin:0 0 18px;position:relative}
+  .bkcover .bkpost{position:absolute;inset:0;border-radius:14px;overflow:hidden}
+  .bkcover .bkpost::after{content:'';position:absolute;inset:38% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88));z-index:1}
   .bkcover .bkpost .poster{position:absolute;inset:0}
-  .bkcover .rhead{margin:0;padding:0}
+  .bkcover .rhead{position:absolute;left:0;right:0;bottom:0;z-index:2;margin:0;padding:0 20px 22px;color:#fff}
+  .bkcover .rhead h1{font-size:46px;text-shadow:0 2px 18px rgba(0,0,0,.5)}.bkcover .rhead .m{color:rgba(255,255,255,.8)}
   .bkend{break-before:column;font-family:var(--ui);font-size:14px;line-height:1.5;color:var(--dim)}
   .bkend .srcb,.bkend .ract,.bkend .upnext,.bkend .keep,.bkend .src{margin-left:0;margin-right:0}
   .bkfoot{position:absolute;left:0;right:0;bottom:0;height:66px;display:flex;align-items:center;gap:14px;padding:0 20px 10px;background:linear-gradient(0deg,var(--black) 60%,rgba(9,9,10,0))}
