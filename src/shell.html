@@ -799,7 +799,8 @@ var THEMES=[
  {k:'arts',n:'Arts',d:'Les coulisses du cinéma, des livres et des faux : ce que l\'art a coûté à ceux qui l\'ont fait.'},
  {k:'sport',n:'Sport',d:'Des duels, des exploits et des victoires que personne n\'attendait.'},
  {k:'aventure',n:'Aventure',d:'Survivre, s\'évader, aller plus loin que personne : ce que des gens ont fait pour rester en vie ou arriver les premiers.'},
- {k:'crimes',n:'Crimes et mystères',d:'Casses, disparitions et secrets d\'État : ce que l\'on sait et ce que l\'on ignore encore.'}
+ {k:'crimes',n:'Crimes et mystères',d:'Casses, disparitions et secrets d\'État : ce que l\'on sait et ce que l\'on ignore encore.'},
+ {k:'licences',n:'Licences',d:'Marvel, Star Wars, Batman, Mickey : les coulisses juridiques et financières des plus grandes propriétés de la fiction.'}
 ];
 var T=THEMES.map(function(x){return x.n;});
 var TH=DATA.TH||{},YR=DATA.YR||{},DTL={};(DATA.DT||[]).forEach(function(x){DTL[x[0]]=x[1];});
@@ -1338,6 +1339,26 @@ var MQD=DATA.D.MQD,MQSN="Marques",MQIDS=[];
       meta:[d.dates,d.country,d.job].join(' · '),klabel:'MARQUES · '+('0'+(k+1)).slice(-2),
       body:d.body,quote:d.sub,no:'MQ'+('0'+(k+1)).slice(-2),c:MQA[k%5],syn:syn(d.body),mq:1,src:d.src,g:0,next:null};
     MQIDS.push(d.id);
+  });
+})();
+var LCD=DATA.D.LCD,LCSN="Licences",LCIDS=[];
+(function(){
+  function mins(w){return Math.max(3,Math.round(w/230));}
+  function syn(body){
+    for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
+      if(t.charAt(0)==='!')t=t.slice(1);
+      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      return (o||t).trim();}
+    return '';
+  }
+  var LCA=['#E8B04A','#6C94E0','#C77AD6','#D8C75A','#F08AA8'];
+  LCD.forEach(function(d,k){
+    if(GONE[d.id])return;
+    var w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
+    STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:LCSN,terr:'Licences',title:d.name,sub:d.sub,
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'LICENCES · '+('0'+(k+1)).slice(-2),
+      body:d.body,quote:d.sub,no:'LC'+('0'+(k+1)).slice(-2),c:LCA[k%5],syn:syn(d.body),lc:1,src:d.src,g:0,next:null};
+    LCIDS.push(d.id);
   });
 })();
 var LDD=DATA.D.LDD;
@@ -2674,7 +2695,7 @@ function homeExtra(){
   return h;
 }
 function homeNew(){
-  var ids=hr(MQIDS.slice().reverse().filter(vis));
+  var ids=hr(LCIDS.concat(MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
   h+='<div class="shelf"><h2><span>Collections <small>Nos sélections</small></span></h2><div class="rail">'+COLLS.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+'</div></div>';
   h+='<div class="shelf"><h2><span>Parcours de découverte <small>Un sujet, étape par étape</small></span></h2><div class="rail">'+PATHS.map(function(p){var d=pathDone(p);return colCard(p,'data-path="'+p.k+'"',d?d+' / '+p.ids.length+' étapes':p.ids.length+' étapes');}).join('')+'</div></div>';
@@ -2925,7 +2946,7 @@ function gift(id){
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
 }
 function reportSheet(id){var s=STORIES[id];return '<div class="grab"></div><h3 class="sth">Signaler une erreur</h3><p class="hint" style="padding:0 0 12px">Une date, un nom, un fait vous semble inexact dans « '+esc(s.title)+' » ? Dites-nous lequel, avec votre source si vous en avez une. Nous vérifions chaque signalement.</p><textarea id="rpt" class="ta" rows="5" maxlength="1200" placeholder="Le passage concerné, et ce qui vous semble inexact" aria-label="Votre signalement"></textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-rptsend="'+id+'">Envoyer</button></div>';}
-function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'</div>';}
+function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.lc||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'</div>';}
 function tailExtra(id){
   var s=STORIES[id];
   return starsHTML(id)+quizHTML(id)+
