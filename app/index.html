@@ -1568,7 +1568,6 @@ function saved(){
     '<div class="stats"><div>'+eico('<path d="M2 5c3-1.5 7-1.5 10 1 3-2.5 7-2.5 10-1v14c-3-1.5-7-1.5-10 1-3-2.5-7-2.5-10-1z"/><path d="M12 6v14"/>').replace('<svg','<svg class="si"')+'<b>'+n+'</b><small>'+(n>1?'histoires lues':'histoire lue')+'</small></div><div>'+eico('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>').replace('<svg','<svg class="si"')+'<b>'+(S.minutes||0)+'</b><small>minutes de lecture</small></div><div>'+eico('<path d="M12 3c1 5 7 7 7 13a7 7 0 0 1-14 0c0-3.500 2-5.500 4-7.500 0 3 1 4 2.500 4.500C11.500 12 11 7 12 3z"/>').replace('<svg','<svg class="si'+(sk>0?' hot':'')+'"')+'<b>'+sk+'</b><small>'+(sk>1?'jours d\'affilée':'jour d\'affilée')+'</small></div></div>'+
     '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?railOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
     (function(){var sc=[];cs.forEach(function(c,i){if(c.from){var v=c.ids.filter(vis);if(v.length)sc.push(colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')));}});return sc.length?'<div class="shelf"><h2>Collections enregistrées <small>'+sc.length+'</small></h2><div class="rail">'+sc.join('')+'</div></div>':'';})()+
-    '<div class="shelf"><h2>Citations et notes <small>'+q.length+'</small></h2>'+(q.length?'<button class="qpeek" data-quotes><span>« '+esc(q[0].t.slice(0,120))+(q[0].t.length>120?'…':'')+' »</span><small>Voir mes '+q.length+(q.length>1?' citations':' citation')+'</small></button>':''+empty('<path d="M7 7h4v5c0 3-2 5-4 5M15 7h4v5c0 3-2 5-4 5"/>','Dans une histoire, sélectionnez un passage pour l\'enregistrer, l\'annoter ou en faire une carte à partager.')+'')+'</div>'+
     (started.length?'<div class="shelf"><h2>Parcours en cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"',pathDone(p)+' / '+p.ids.length+' étapes');}).join('')+'</div></div>':'')+
     '<div class="shelf"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+(readIds.length?railOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
     '<div class="opt" style="margin:14px 20px 0"><span>Les masquer de l\'accueil</span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues de l\'accueil"></button></div></div>'+
@@ -2635,7 +2634,7 @@ function openCard(text,id){
   Promise.all([coverImage(id),fonts]).then(function(r){if(storyId!=='card:'+id)return;var cv=quoteCanvas(text,id,r[0]);sheet._card.cv=cv;cv.className='sprev card';cv.setAttribute('aria-label','Aperçu de la carte');box.innerHTML='';box.appendChild(cv);try{cv.toBlob(function(b){cardBlob=b;},'image/png');}catch(e){}});
 }
 /* sélection de texte dans le lecteur -> barre d'actions */
-var selBar=document.createElement('div');selBar.className='selbar';selBar.innerHTML='<button data-selq>'+IC.quote+'Citation</button><button data-seln>Annoter</button><button data-selc>Carte</button>';
+var selBar=document.createElement('div');selBar.className='selbar';selBar.innerHTML='<button data-selc>'+IC.quote+'Créer une carte</button>';
 document.getElementById('phone').appendChild(selBar);
 var SEL='';
 function selText(){var s=window.getSelection&&window.getSelection();if(!s||s.isCollapsed||!s.rangeCount)return '';var a=s.anchorNode,el=a&&(a.nodeType===1?a:a.parentNode);if(!el||!el.closest||!el.closest('.rtext'))return '';if(el.closest('.srcb,.bkend,.rhead'))return '';return String(s).replace(/\s+/g,' ').trim();}
@@ -2956,9 +2955,7 @@ function featClick(b,d){
   if(d.coltog!==undefined){var c=myCols()[+d.coltog];if(c){var k=c.ids.indexOf(d.id);if(k>=0)c.ids.splice(k,1);else c.ids.push(d.id);S.x.cols=myCols();}renderSettings();return true;}
   if(d.colsave){var cc=COLLS.filter(function(x){return x.k===d.colsave;})[0];if(!cc)return true;if(colSaved(cc.k)){S.x.cols=myCols().filter(function(x){return x.from!==cc.k;});toast('Retirée de vos collections');re();return true;}myCols().push({n:cc.n.slice(0,40),ids:cc.ids.slice(),from:cc.k});S.x.cols=myCols();toast('Ajoutée à vos collections');re();return true;}
   if(d.coldel!==undefined){if(!b._ok){b._ok=1;toast('Touchez encore pour supprimer cette collection');return true;}myCols().splice(+d.coldel,1);S.x.cols=myCols();back();return true;}
-  if(b.hasAttribute('data-selq')){if(saveSel()===0)toast('Citation enregistrée dans votre espace');return true;}
-  if(b.hasAttribute('data-seln')){if(saveSel()===0)openSheet(function(){return noteSheet(0);});return true;}
-  if(b.hasAttribute('data-selc')){var tx=SEL,tid=top&&top.id;if(saveSel()===0)openCard(tx,tid);return true;}
+  if(b.hasAttribute('data-selc')){var tx=SEL,tid=top&&top.id;selBar.classList.remove('on');try{window.getSelection().removeAllRanges();}catch(e){}if(tx&&tid)openCard(tx,tid);return true;}
   if(d.qcard!==undefined){var qq=quotes()[+d.qcard];if(qq)openCard(qq.t,qq.id);return true;}
   if(d.qnote!==undefined){var qi2=+d.qnote;openSheet(function(){return noteSheet(qi2);});return true;}
   if(d.qsave!==undefined){var qo=quotes()[+d.qsave];if(qo){qo.n=((document.getElementById('qnote')||{}).value||'').trim().slice(0,600);S.x.quotes=quotes();}closeSheet();if(top&&top.type==='quotes')rerenderKeepScroll();toast('Note enregistrée');return true;}
