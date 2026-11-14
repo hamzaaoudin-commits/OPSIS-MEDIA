@@ -40,7 +40,7 @@ await click('#settingsbox [data-theme="light"]');await click('#settingsbox [data
 await p.evaluate(()=>{document.getElementById('layerview').scrollTop=0;});await shot('13light_reader');
 await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=900;});await shot('14light_text');
 // collection add
-await click('#layerview [data-coladd]');await p.fill('#newcol','À raconter');await click('#settingsbox [data-colnew]');await shot('16colsheet');await click('#settingsbox [data-closesettings]');
+
 await click('#layerview [data-report]');await shot('17report');await click('#settingsbox [data-closesettings]');
 await click('#layerview [data-finish]');await p.waitForTimeout(600);
 await shot('18light_home');
