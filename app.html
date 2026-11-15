@@ -711,6 +711,14 @@
   .fontgrid button[aria-pressed="true"]{background:var(--bone);color:#111}
   .phone.lh-l .rtext{line-height:1.95}.phone.lh-s .rtext{line-height:1.5}
   /* ---------- apparence claire ---------- */
+  /* mode nuit : fond brun très sombre, textes ambrés, et un voile multiplicateur qui supprime tout le bleu (images, logo, boutons compris) */
+  .phone.night{--black:#0A0603;--coal:#130C06;--ash:#1E140A;--line:rgba(255,190,110,.14);--bone:#F2D3A2;--dim:#B08E5C;--faint:#7A6240;--red-type:#E8693A;--gold:#E6B060;background:var(--black)}
+  .nightveil{display:none;position:absolute;inset:0;z-index:9999;pointer-events:none;background:rgb(255,184,0);mix-blend-mode:multiply}
+  .phone.night .nightveil{display:block}
+  .phone.night .rtext{color:#EBC890}
+  .fly{position:absolute;z-index:60;overflow:hidden;border-radius:8px;pointer-events:none;box-shadow:0 30px 60px rgba(0,0,0,.55);transition:left .62s cubic-bezier(.3,.8,.2,1),top .62s cubic-bezier(.3,.8,.2,1),width .62s cubic-bezier(.3,.8,.2,1),height .62s cubic-bezier(.3,.8,.2,1),border-radius .62s cubic-bezier(.3,.8,.2,1),opacity .45s ease,box-shadow .62s}
+  .fly .poster,.fly .poster svg{position:absolute;inset:0;width:100%;height:100%}
+  .fxs.fading{opacity:0;transition:opacity .5s ease .12s}
   .phone.light{--black:#F6F1E7;--coal:#ECE5D7;--ash:#E0D8C8;--line:rgba(24,20,16,.14);--bone:#171512;--dim:#57524A;--faint:#857F74;--red-type:#C21F28;--gold:#8A6A22;background:var(--black)}
   .phone.light .view,.phone.light .layer,.phone.light .layer .view{background:var(--black);color:var(--bone)}
   .phone.light .hero{background:#09090A}
@@ -754,6 +762,7 @@
 <div id="boot" role="status" aria-live="polite"><div class="bootlogo">OPSIS</div><div class="bootbar"><i></i></div></div>
 
 <div class="phone" id="phone">
+  <div class="nightveil" aria-hidden="true"></div>
   <div class="island" aria-hidden="true"></div>
   <div class="sbar" aria-hidden="true"><span>7:02</span><span class="ic">
     <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
@@ -2363,7 +2372,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.bk){bkgo(+d.bk);return;}
   if(b.hasAttribute('data-random')){randomPick();return;}
   if(d.rail){var sh=b.closest('.shelf,.explore'),rl=sh&&sh.querySelector('.rail,.terr');if(rl)rl.scrollBy({left:(+d.rail)*rl.clientWidth*.85,behavior:'smooth'});return;}
-  if(d.pick){pick(d.pick);return;}
+  if(d.pick){pick(d.pick,b.querySelector('.poster'));return;}
   if(d.open){push({type:'read',id:d.open});return;}
   if(b.hasAttribute('data-serie')){push({type:'serie',key:b.getAttribute('data-serie')||'chute'});return;}
   if(b.hasAttribute('data-back')){back();return;}
@@ -2505,7 +2514,7 @@ function randomPick(){
   var acts=fxs.querySelector('.fxs-acts');
   if(acts)acts.insertAdjacentHTML('beforeend','<button class="btn glass" data-random style="grid-column:1/-1;flex:1 1 100%;width:100%">Une autre</button>');
 }
-function pick(key){
+function pick(key,src){
   var d=pickData(key),h=hashN(key);
   if(SYN2[key]){d.syn=SYN2[key];var sx=SERIES.filter(function(z){return z.go===key;})[0];if(sx){var nn=(d.meta.match(/(\d+) (histoires|portraits)/)||[])[0];d.meta='Série · '+T[sx.t]+(nn?' · '+nn:'');}}
   var bars=Array.from({length:34},function(_,k){return '<i style="width:'+(1+(hashN(key+k)%3))+'px"></i>';}).join('');
@@ -2523,19 +2532,46 @@ function pick(key){
   var card=document.getElementById('fxsCard');
   card.onclick=function(){card.classList.toggle('flip');};
   card.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('flip');}};
-  fxs.classList.remove('on','shown');void fxs.offsetWidth;fxs.classList.add('on');
+  fxs.classList.remove('on','shown','fading');void fxs.offsetWidth;
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  fxs.classList.add('on');
+  if(fxs._src){fxs._src.style.visibility='';fxs._src=null;}
+  if(src&&!rm){
+    var pr=document.getElementById('phone').getBoundingClientRect(),sr=src.getBoundingClientRect(),cr=card.getBoundingClientRect();
+    if(sr.width>0&&cr.width>0&&sr.bottom>pr.top&&sr.top<pr.bottom){
+      var sc=sr.width/cr.width,dx=(sr.left+sr.width/2)-(cr.left+cr.width/2),dy=(sr.top+sr.height/2)-(cr.top+cr.height/2);
+      card.style.transition='none';card.style.opacity='1';card.style.transform='translate('+dx+'px,'+dy+'px) scale('+sc+')';
+      void card.offsetWidth;
+      card.style.transition='transform .6s cubic-bezier(.25,.85,.25,1)';card.style.transform='';
+      setTimeout(function(){card.style.transition='';card.style.opacity='';},650);
+      src.style.visibility='hidden';fxs._src=src;
+    }
+  }
   fitBack();
   clearTimeout(fxs._t);fxs._t=setTimeout(function(){card.classList.add('flip');fxs.classList.add('shown');},1150);
   fxs._key=key;
 }
 function refreshAfterChange(){var top=S.stack[S.stack.length-1];if(top&&top.type==='lib')rerenderKeepScroll();else if(!S.stack.length){var y=main.scrollTop;renderMain();main.scrollTop=y;}}
-function closePick(){fxs.classList.remove('on','shown');clearTimeout(fxs._t);}
+function closePick(){fxs.classList.remove('on','shown','fading');clearTimeout(fxs._t);if(fxs._src){fxs._src.style.visibility='';fxs._src=null;}}
 fxs.addEventListener('click',function(e){
   if(e.target===fxs){closePick();return;}
   var b=e.target.closest('[data-go]');if(!b)return;e.stopPropagation();
   var g=b.dataset.go;
   if(g==='close'){closePick();return;}
-  if(g==='read'){closePick();setTimeout(function(){push({type:'read',id:b.dataset.id});},180);return;}
+  if(g==='read'){
+    var rid=b.dataset.id,st0=STORIES[rid],fc=document.getElementById('fxsCard'),rm2=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!fc||!st0||rm2){closePick();setTimeout(function(){push({type:'read',id:rid});},180);return;}
+    var ph=document.getElementById('phone'),pr2=ph.getBoundingClientRect(),r0=fc.getBoundingClientRect();
+    var fly=document.createElement('div');fly.className='fly';
+    fly.style.cssText='left:'+(r0.left-pr2.left)+'px;top:'+(r0.top-pr2.top)+'px;width:'+r0.width+'px;height:'+r0.height+'px';
+    fly.innerHTML=poster(st0.p);ph.appendChild(fly);
+    fxs.classList.add('fading');
+    push({type:'read',id:rid});
+    void fly.offsetWidth;
+    fly.style.left='0px';fly.style.top='0px';fly.style.width=pr2.width+'px';fly.style.height='430px';fly.style.borderRadius='0';fly.style.boxShadow='none';
+    setTimeout(function(){fly.style.opacity='0';},560);
+    setTimeout(function(){if(fly.parentNode)fly.parentNode.removeChild(fly);closePick();},1050);
+    return;}
   if(g==='serie'){var sk=b.dataset.key||'chute';closePick();setTimeout(function(){push({type:'serie',key:sk});},180);return;}
   if(g==='save'){var id=b.dataset.id,was=!!S.saved[id];S.saved[id]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
     b.innerHTML=!was?IC.check+'Dans ma liste':IC.plus+'Ma liste';
@@ -2800,7 +2836,7 @@ IC.quote='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 17v-5c0-3.300
 /* ---------- applique l'apparence (thème, police, interligne) ---------- */
 function applyLook(){
   var ph=document.getElementById('phone');
-  ph.classList.toggle('light',S.theme==='light');
+  ph.classList.toggle('light',S.theme==='light');ph.classList.toggle('night',S.theme==='night');
   ph.classList.toggle('f-sans',fontDef()[3].indexOf('sans-serif')>0);ph.style.setProperty('--rfont',fontDef()[3]);
   ph.classList.toggle('lh-l',S.lh==='l');ph.classList.toggle('lh-s',S.lh==='s');
   document.documentElement.style.setProperty('--fs',S.fs+'px');
@@ -3343,7 +3379,7 @@ function quickSheet(){
 var FONTS=[['serif','Newsreader','Classique, le style OPSIS',"'Newsreader',Georgia,serif"],['lora','Lora','Chaleureuse, calligraphique',"'Lora',Georgia,serif"],['literata','Literata','Conçue pour lire longtemps',"'Literata',Georgia,serif"],['garamond','EB Garamond','Livre ancien, élégante',"'EB Garamond',Georgia,serif"],['merri','Merriweather','Gros corps, très lisible',"'Merriweather',Georgia,serif"],['source','Source Serif','Sobre, éditoriale',"'Source Serif 4',Georgia,serif"],['georgia','Georgia','Police de l\'appareil',"Georgia,'Times New Roman',serif"],['sans','Hanken Grotesk','Moderne, sans empattement',"'Hanken Grotesk',system-ui,sans-serif"],['atkinson','Atkinson','Hyper lisible',"'Atkinson Hyperlegible',system-ui,sans-serif"],['lexend','Lexend','Aide à la fluidité',"'Lexend',system-ui,sans-serif"]];
 function fontDef(){var k=S.font||'serif';for(var i=0;i<FONTS.length;i++)if(FONTS[i][0]===k)return FONTS[i];return FONTS[0];}
 function lookOpts(){
-  return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button></span></div>'+
+  return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light'&&S.theme!=='night')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button><button data-theme="night" aria-pressed="'+(S.theme==='night')+'">Nuit</button></span></div>'+(S.theme==='night'?'<p class="os" style="padding:0 0 8px;font-size:12px;color:var(--dim)">Mode nuit : aucune lumière bleue, tons ambrés. Idéal le soir, avant de dormir.</p>':'')+
     '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
     '<div class="opt" style="display:block"><span>Police</span><div class="fontgrid">'+FONTS.map(function(f){return '<button data-font="'+f[0]+'" aria-pressed="'+((S.font||'serif')===f[0])+'" style="font-family:'+f[3]+'">'+f[1]+'<small>'+f[2]+'</small></button>';}).join('')+'</div></div>'+
     '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>';
