@@ -462,12 +462,12 @@
 
   /* ---------- couverture qui se retourne ---------- */
   .fxs{position:absolute;inset:0;z-index:57;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:60px 22px 34px;
-    background:radial-gradient(ellipse at 50% 40%,color-mix(in srgb,var(--c) 30%,rgba(10,9,12,.92)),rgba(4,4,6,.97) 70%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    background:radial-gradient(ellipse at 50% 40%,color-mix(in srgb,var(--c) 30%,rgba(10,9,12,.92)),rgba(4,4,6,.97) 70%);
     opacity:0;pointer-events:none;transition:opacity .35s}
   .fxs.on{opacity:1;pointer-events:auto}
   .fxs-x{position:absolute;top:56px;right:16px;width:38px;height:38px;border-radius:50%;background:rgba(237,230,218,.12);display:flex;align-items:center;justify-content:center}
   .fxs-x svg{width:18px;height:18px}
-  .fxs-card{width:min(72vw,268px,calc((100vh - 330px) * .66));aspect-ratio:2/3;perspective:1400px;cursor:pointer;transform:scale(.55) translateY(40px);opacity:0;transition:transform .65s cubic-bezier(.2,.9,.25,1.05),opacity .4s}
+  .fxs-card{width:min(72vw,268px,calc((100vh - 330px) * .66));aspect-ratio:2/3;perspective:1400px;cursor:pointer;transform:scale(.55) translateY(40px);opacity:0;transition:transform .65s cubic-bezier(.2,.9,.25,1.05),opacity .4s;will-change:transform,opacity}
   .fxs.on .fxs-card{transform:none;opacity:1}
   .fxs-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .95s cubic-bezier(.45,.05,.2,1)}
   .fxs-card.flip .fxs-in{transform:rotateY(180deg)}
@@ -716,9 +716,10 @@
   .nightveil{display:none;position:absolute;inset:0;z-index:9999;pointer-events:none;background:rgb(255,184,0);mix-blend-mode:multiply}
   .phone.night .nightveil{display:block}
   .phone.night .rtext{color:#EBC890}
-  .fly{position:absolute;z-index:60;overflow:hidden;border-radius:8px;pointer-events:none;box-shadow:0 30px 60px rgba(0,0,0,.55);transition:left .62s cubic-bezier(.3,.8,.2,1),top .62s cubic-bezier(.3,.8,.2,1),width .62s cubic-bezier(.3,.8,.2,1),height .62s cubic-bezier(.3,.8,.2,1),border-radius .62s cubic-bezier(.3,.8,.2,1),opacity .45s ease,box-shadow .62s}
-  .fly .poster,.fly .poster svg{position:absolute;inset:0;width:100%;height:100%}
-  .fxs.fading{opacity:0;transition:opacity .5s ease .12s}
+  .fxs.fading{opacity:0;transition:opacity .45s ease .05s}
+  .fxs.fading .fxs-card{transform:translateY(var(--ly,0px)) scale(var(--ls,1.08));transition:transform .55s cubic-bezier(.3,.8,.2,1)}
+  .fxs.fading .fxs-x,.fxs.fading .fxs-acts,.fxs.fading .fxs-hint{opacity:0;transition:opacity .2s}
+  .layer.cover{will-change:opacity}
   .phone.light{--black:#F6F1E7;--coal:#ECE5D7;--ash:#E0D8C8;--line:rgba(24,20,16,.14);--bone:#171512;--dim:#57524A;--faint:#857F74;--red-type:#C21F28;--gold:#8A6A22;background:var(--black)}
   .phone.light .view,.phone.light .layer,.phone.light .layer .view{background:var(--black);color:var(--bone)}
   .phone.light .hero{background:#09090A}
@@ -2559,18 +2560,16 @@ fxs.addEventListener('click',function(e){
   var g=b.dataset.go;
   if(g==='close'){closePick();return;}
   if(g==='read'){
-    var rid=b.dataset.id,st0=STORIES[rid],fc=document.getElementById('fxsCard'),rm2=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(!fc||!st0||rm2){closePick();setTimeout(function(){push({type:'read',id:rid});},180);return;}
-    var ph=document.getElementById('phone'),pr2=ph.getBoundingClientRect(),r0=fc.getBoundingClientRect();
-    var fly=document.createElement('div');fly.className='fly';
-    fly.style.cssText='left:'+(r0.left-pr2.left)+'px;top:'+(r0.top-pr2.top)+'px;width:'+r0.width+'px;height:'+r0.height+'px';
-    fly.innerHTML=poster(st0.p);ph.appendChild(fly);
-    fxs.classList.add('fading');
-    push({type:'read',id:rid});
-    void fly.offsetWidth;
-    fly.style.left='0px';fly.style.top='0px';fly.style.width=pr2.width+'px';fly.style.height='430px';fly.style.borderRadius='0';fly.style.boxShadow='none';
-    setTimeout(function(){fly.style.opacity='0';},560);
-    setTimeout(function(){if(fly.parentNode)fly.parentNode.removeChild(fly);closePick();},1050);
+    var rid=b.dataset.id,fc=document.getElementById('fxsCard');
+    push({type:'read',id:rid});   /* le lourd (mise en page du texte) se fait avant que quoi que ce soit bouge */
+    if(!fc||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){closePick();return;}
+    /* la couverture grossit vers le haut de l'écran (transformation seule, fluide) pendant que l'histoire apparaît dessous */
+    var r0=fc.getBoundingClientRect(),pr2=document.getElementById('phone').getBoundingClientRect();
+    var k=pr2.width/r0.width,flipped=fc.classList.contains('flip');
+    fxs.style.setProperty('--ls',flipped?1.06:k);
+    fxs.style.setProperty('--ly',flipped?'0px':(((r0.height*k)/2-(r0.top-pr2.top+r0.height/2))+'px'));
+    requestAnimationFrame(function(){requestAnimationFrame(function(){fxs.classList.add('fading');});});
+    setTimeout(function(){closePick();fxs.style.removeProperty('--ls');fxs.style.removeProperty('--ly');},800);
     return;}
   if(g==='serie'){var sk=b.dataset.key||'chute';closePick();setTimeout(function(){push({type:'serie',key:sk});},180);return;}
   if(g==='save'){var id=b.dataset.id,was=!!S.saved[id];S.saved[id]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
