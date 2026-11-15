@@ -2263,7 +2263,8 @@ function renderLayer(){
   requestAnimationFrame(function(){layer.classList.add('in');});
   bindLayer(top);
 }
-function push(x){S.stack.push(x);renderLayer();try{history.pushState({o:S.stack.length},'');}catch(e){}}
+function push(x){var tp=S.stack[S.stack.length-1];if(x.type==='read'&&tp&&tp.type==='read'){S.stack[S.stack.length-1]=x;renderLayer();return;}   /* une histoire ouverte depuis une autre la remplace : retour ramène d'où l'on venait (accueil), pas à l'histoire d'avant */
+  S.stack.push(x);renderLayer();try{history.pushState({o:S.stack.length},'');}catch(e){}}
 /* retour : bouton, geste du bord de l'écran ou touche retour du navigateur font la même chose (revenir à l'écran précédent) */
 function back(){var hs=null;try{hs=history.state;}catch(e){}if(S.stack.length&&hs&&hs.o){try{history.back();return;}catch(e){}}doBack();}
 window.addEventListener('popstate',function(){if(S.stack.length)doBack();});
