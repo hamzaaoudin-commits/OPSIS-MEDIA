@@ -522,6 +522,7 @@
   .ccard .cfan .poster:nth-child(3){left:82px;transform:rotate(8deg);transform-origin:bottom left}
   .ccard b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:18px;line-height:.98;margin-top:auto;letter-spacing:.2px}
   .ccard small{display:block;font-size:11.5px;color:rgba(237,230,218,.62);margin-top:4px}
+  .ccard .cpill{position:absolute;left:10px;top:10px;z-index:3;font:700 9px/1 var(--ui);letter-spacing:1.4px;padding:5px 8px;border-radius:999px;background:rgba(9,9,10,.6);color:var(--bone);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
   .ccard.pcard{height:170px;padding:0;background:#0d0d0f;justify-content:flex-end}
   .ccard.pcard::before{display:none}
   .pcard .pbg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;border-radius:0;transform:scale(1.25);transform-origin:50% 28%;filter:saturate(1.1)}
@@ -572,6 +573,7 @@
   .tn .tl2 b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:15px;line-height:1.05}
   .tn .tl2 small{display:block;font-size:12px;color:var(--faint);margin-top:3px}
   .tn.todo .tl2{opacity:.6}
+  .tn.open .tc{filter:none;opacity:1;border-color:rgba(237,230,218,.5);box-shadow:0 6px 0 #3a3733}.tn.open .tl2{opacity:1}
   .tend{display:flex;flex-direction:column;align-items:center}
   .trophy{position:relative;transform:none;width:76px;height:76px;border-radius:50%;background:var(--ash);color:var(--dim);display:flex;align-items:center;justify-content:center;margin-top:-4px}
   .trophy svg{width:34px;height:34px}.trophy.on{background:var(--red);color:#fff}
@@ -1747,7 +1749,7 @@ function saved(){
   function gridOf(list){return '<div class="cgrid">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:'',nosub:true,attr:'data-pick="'+id+'"',badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   function railOf(list,ns){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',nosub:ns,badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   var rc=recentIds(),cs=myCols(),q=quotes(),bn=badgeNow(),bx=badgeNext(),n=readCount(),sk=OPSIS.store.streak();
-  var started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length;});
+  var started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length;}),startedC=COLLS.filter(function(p){var v=p.ids.filter(vis),d=pathDone({ids:v});return d>0&&d<v.length;});
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Mon espace</span><button class="circle" data-set="root" aria-label="Réglages">'+IC.gear+'</button></div>'+
     '<div class="mglow"></div><div class="bhead" style="padding-top:104px"><h1 class="ptitle">Mon espace</h1>'+(bn?'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mon badge : '+bn[1]+'">'+badgeSVG(BADGES.indexOf(bn),true,44)+'</button>':'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mes badges">'+badgeSVG(0,false,40)+'</button>')+'</div>'+
     '<div class="bwrap">'+(bx?'<div class="nextb">'+badgeSVG(BADGES.indexOf(bx),false,40)+'<div><b>Prochain badge : '+bx[1]+'</b><small>Encore '+(bx[0]-n)+' '+(bx[0]-n>1?'histoires':'histoire')+'</small><div class="bar"><i style="width:'+Math.round(Math.min(1,(n-(bn?bn[0]:0))/(bx[0]-(bn?bn[0]:0)))*100)+'%"></i></div></div></div>':'')+badgesHTML()+'</div>'+
@@ -1755,7 +1757,7 @@ function saved(){
     wrCard()+
     '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?gridOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
     (function(){var sc=[];cs.forEach(function(c,i){if(c.from){var v=c.ids.filter(vis);if(v.length)sc.push(colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')));}});return sc.length?'<div class="shelf"><h2>Collections enregistrées <small>'+sc.length+'</small></h2><div class="rail">'+sc.join('')+'</div></div>':'';})()+
-    (started.length?'<div class="shelf"><h2>Parcours en cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"',pathDone(p)+' / '+p.ids.length+' étapes');}).join('')+'</div></div>':'')+
+    ((started.length||startedC.length)?'<div class="shelf"><h2>En cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+startedC.map(function(p){return colCard(p,'data-col="'+p.k+'"');}).join('')+'</div></div>':'')+
     '<div class="shelf rdsec"><button class="rdhead" data-readtog aria-expanded="false"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+IC.chev+'</button><div class="rdbody">'+(readIds.length?gridOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
     '<div class="opt" style="margin:14px 20px 0"><span>Les masquer de l\'accueil</span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues de l\'accueil"></button></div></div></div>'+
     '<div class="bottomspace"></div>';
@@ -2803,11 +2805,9 @@ function recentIds(){return (S.x.recent||[]).filter(function(id){return vis(id)&
 function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
   return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-pick="'+id+'" data-rec="1"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
 function colCard(c,attr,extra){
-  var col=(STORIES[c.ids[0]]&&STORIES[c.ids[0]].c)||'#D2232C',isP=/data-path=/.test(attr||''),card;
-  if(isP){var n=c.ids.length,d=pathDone(c),nx=-1,dots='';c.ids.forEach(function(id,i){if(!S.read[id]&&nx<0)nx=i;});
-    c.ids.forEach(function(id,i){dots+='<i class="'+(S.read[id]?'d':i===nx?'n':'')+'"></i>';});
-    card='<button class="ccard pcard" '+attr+'><span class="poster pbg" data-art="'+STORIES[c.ids[0]].p+'"></span><span class="pk">'+n+' ÉTAPES</span><span class="pbody"><b>'+esc(c.n)+'</b><span class="pseg">'+dots+'</span><small>'+(d?(d===n?'Parcours terminé':d+' sur '+n+' lues'):'À suivre dans l\'ordre')+'</small></span></button>';}
-  else card='<button class="ccard" '+attr+' style="--c:'+col+'"><span class="cfan">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span><b>'+esc(c.n)+'</b><small>'+(extra||c.ids.length+' histoires')+'</small></button>';
+  var col=(STORIES[c.ids[0]]&&STORIES[c.ids[0]].c)||'#D2232C',isP=/data-path=/.test(attr||''),n=c.ids.length,d=pathDone(c);
+  var sub=extra||(d&&d<n?d+' sur '+n+' lues':d===n&&n?'Terminée':isP?n+' étapes':n+(n>1?' histoires':' histoire'));
+  var card='<button class="ccard" '+attr+' style="--c:'+col+'"><span class="cfan">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span>'+(isP?'<span class="cpill">PARCOURS · '+n+' ÉTAPES</span>':'')+'<b>'+esc(c.n)+'</b><small>'+esc(sub)+'</small></button>';
   var m=/^data-col="([^"]+)"$/.exec(attr||'');
   if(!m)return card;var sv=colSaved(m[1]);
   return '<div class="ccw">'+card+'<button class="ccsave'+(sv?' on':'')+'" data-colsave="'+m[1]+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?IC.check:IC.plus)+'</button></div>';
@@ -2824,8 +2824,7 @@ function homeExtra(){
 function homeNew(){
   var ids=hr(LCIDS.concat(MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
-  h+='<div class="shelf"><h2><span>Collections <small>Nos sélections</small></span></h2><div class="rail">'+COLLS.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+'</div></div>';
-  h+='<div class="shelf"><h2><span>Parcours de découverte <small>Étape par étape</small></span></h2><div class="rail">'+PATHS.map(function(p){var d=pathDone(p);return colCard(p,'data-path="'+p.k+'"',d?d+' / '+p.ids.length+' étapes':p.ids.length+' étapes');}).join('')+'</div></div>';
+  h+='<div class="shelf"><h2><span>Collections <small>Sélections et parcours</small></span></h2><div class="rail">'+COLLS.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+PATHS.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+'</div></div>';
   return h;
 }
 
@@ -2874,24 +2873,26 @@ function listLayer(title,desc,ids,opt){
     '<p class="pkick">'+(opt.kick||'Collection')+'</p><h1 class="ptitle" style="padding-top:6px">'+esc(title)+'</h1>'+(desc?'<p class="hint" style="padding:8px 20px 0;font-size:15px">'+esc(desc)+'</p>':'')+(opt.top||'')+body+'<div class="bottomspace"></div>';
 }
 function colSaved(k){return myCols().some(function(x){return x.from===k;});}
-function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k);return listLayer(c.n,c.d,c.ids,{kick:'Collection',right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'});}
+function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k),d=pathDone(c),n=c.ids.length;
+  var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/n*100)+'%"></i></span><small>'+(d===n?'Collection terminée':d+' sur '+n+' lues · dans l\'ordre que vous voulez')+'</small></div>';
+  return '<div class="pth">'+listLayer(c.n,c.d,c.ids,{kick:'Collection',top:top,html:trailHTML({ids:c.ids,free:true}),right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'})+'</div>';}
 function trailHTML(p){
-  var OFF=[0,56,84,56,0,-56,-84,-56],cur=-1,n=p.ids.length,H=184,rows='';
-  for(var q=0;q<n;q++)if(!S.read[p.ids[q]]){cur=q;break;}
+  var OFF=[0,56,84,56,0,-56,-84,-56],cur=-1,n=p.ids.length,H=p.free?160:184,rows='';
+  if(!p.free)for(var q=0;q<n;q++)if(!S.read[p.ids[q]]){cur=q;break;}
   p.ids.forEach(function(id,i){
     var st=STORIES[id],done=!!S.read[id],isCur=i===cur,o=OFF[i%OFF.length],o2=OFF[(i+1)%OFF.length],
-      state=done?'done':isCur?'cur':'todo',last=i===n-1;
+      state=done?'done':isCur?'cur':p.free?'todo open':'todo',last=i===n-1;
     var path=last?'':'<svg class="tl" viewBox="0 0 430 '+H+'" preserveAspectRatio="none" aria-hidden="true"><path d="M'+(215+o)+' 44 C '+(215+o)+' '+(H*.62)+' '+(215+o2)+' '+(H*.38)+' '+(215+o2)+' '+(H+44)+'" class="'+(done?'on':'')+'" vector-effect="non-scaling-stroke"/></svg>';
     rows+='<div class="tr" style="height:'+H+'px">'+path+
       '<button class="tn '+state+'" data-pick="'+id+'" style="left:calc(50% + '+o+'px)" aria-label="'+esc(st.title)+(done?' (lue)':isCur?' (prochaine étape)':'')+'">'+
         (isCur?'<span class="tgo">'+(cur===0?'Commencer':'Continuer')+'</span>':'')+
         '<span class="tc"><span class="poster" data-art="'+st.p+'"></span></span>'+
-        (done?'<span class="tk">'+IC.check+'</span>':'<span class="tnum">'+(i+1)+'</span>')+
+        (done?'<span class="tk">'+IC.check+'</span>':p.free?'':'<span class="tnum">'+(i+1)+'</span>')+
         '<span class="tl2"><b>'+esc(st.title)+'</b><small>'+st.min+' min</small></span>'+
       '</button></div>';
   });
-  var all=cur<0;
-  rows+='<div class="tr tend" style="height:130px"><div class="trophy'+(all?' on':'')+'" style="left:50%">'+IC.check+'</div><p class="tcap">'+(all?'Parcours terminé. Bravo.':'Arrivée')+'</p></div>';
+  var all=p.free?p.ids.every(function(id){return !!S.read[id];}):cur<0;
+  rows+='<div class="tr tend" style="height:130px"><div class="trophy'+(all?' on':'')+'" style="left:50%">'+IC.check+'</div><p class="tcap">'+(all?(p.free?'Collection terminée. Bravo.':'Parcours terminé. Bravo.'):(p.free?'Toutes lues':'Arrivée'))+'</p></div>';
   return '<div class="trail">'+rows+'</div>';
 }
 
