@@ -1570,7 +1570,7 @@ function tile(o){
   var t=String(o.t),sub=o.s,m=/ : |, /.exec(t),i=m?m.index:-1;
   if(i>2&&i<=28){sub=t.slice(i+m[0].length);sub=sub.charAt(0).toUpperCase()+sub.slice(1);t=t.slice(0,i);}
   t=nb(t);var L=t.length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
+  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+''+'</button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
