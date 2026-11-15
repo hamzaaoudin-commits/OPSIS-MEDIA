@@ -2291,13 +2291,13 @@ document.getElementById('phone').addEventListener('click',function(e){
 (function(){
   var x0=null,moved=false;
   lv.addEventListener('pointerdown',function(e){x0=bookMode()&&e.target.closest('.bkwrap')?e.clientX:null;moved=false;});
-  lv.addEventListener('pointerup',function(e){if(x0===null)return;var dx=e.clientX-x0;if(Math.abs(dx)>45){moved=true;bkgo(dx<0?1:-1);}x0=null;});
+  lv.addEventListener('pointerup',function(e){if(x0===null)return;var dx=e.clientX-x0;if(Math.abs(dx)>45){moved=true;lv.classList.remove('peek');bkgo(dx<0?1:-1);}x0=null;});
   lv.addEventListener('click',function(e){
     if(moved){moved=false;return;}
     if(!bookMode()||e.target.closest('button,a'))return;
     var w=e.target.closest('.bkwrap');if(!w)return;
     var r=w.getBoundingClientRect(),x=(e.clientX-r.left)/r.width;
-    if(x<.32)bkgo(-1);else if(x>.68)bkgo(1);
+    if(x<.32){lv.classList.remove('peek');bkgo(-1);}else if(x>.68){lv.classList.remove('peek');bkgo(1);}else if(S.focus)lv.classList.toggle('peek');
   });
   document.addEventListener('keydown',function(e){if(!bookMode())return;if(e.key==='ArrowRight'||e.key==='PageDown')bkgo(1);else if(e.key==='ArrowLeft'||e.key==='PageUp')bkgo(-1);});
   window.addEventListener('resize',function(){if(bookMode()){var t=S.stack[S.stack.length-1];bookInit(t.id);}});
