@@ -264,6 +264,14 @@
   .terr{display:flex;gap:8px;overflow-x:auto;padding:12px 20px 0;scrollbar-width:none}
   .terr::-webkit-scrollbar{display:none}
   .terr button{flex:none;height:38px;padding:0 16px;border-radius:999px;background:var(--coal);font-size:14px;font-weight:600;border:1px solid var(--line)}
+  .exs{padding:8px 20px 0;color:var(--dim);font-size:14px}
+  .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:18px 20px 0}
+  .tt{position:relative;display:block;aspect-ratio:1/1.08;border-radius:16px;overflow:hidden;background:var(--coal);text-align:left;border:1px solid var(--line)}
+  .tt .tp,.tt .tp>*{position:absolute;inset:0;width:100%;height:100%}.tt .tp{display:block}
+  .tt .tsh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 25%,rgba(0,0,0,.82))}
+  .tt .ttn{position:absolute;left:14px;right:12px;bottom:30px;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:22px;line-height:1;color:#fff}
+  .tt .ttc{position:absolute;left:14px;bottom:12px;font-size:12px;font-weight:600;color:rgba(255,255,255,.72)}
+  .tt:active{transform:scale(.98)}
   .explore{margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
   .exh{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:38px;line-height:1;padding:0 20px}
   .exs{font-size:14px;color:var(--faint);padding:6px 20px 0}
@@ -1639,13 +1647,12 @@ function home(){
     '<div class="cta"><button class="btn light" data-open="'+hid+'">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="'+hid+'">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     homeNew()+
-    '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Thèmes</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
-      '<div class="terr">'+T.map(function(t,i){return '<button data-terr="'+i+'">'+t+'</button>';}).join('')+'</div></div>'+
+    '<div class="explore" id="explore"><h2 class="exh">Thèmes</h2><p class="exs">Choisissez un monde. Vous ne verrez que celui-là.</p><div class="tgrid">'+
     T.map(function(t,i){
-      var ids=hr(epIndex().byT[i]).slice(0,30),dt=THEMES[i].k==='date';
-      if(!ids.length)return '';
-      return '<div class="shelf" id="terr-'+i+'"><h2><span>'+t+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button><button class="all" data-terr="'+i+'">Voir tout</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id,dt);}).join('')+'</div></div>';
-    }).join('')+
+      var l=hr(epIndex().byT[i]);if(!l.length)return '';
+      var id=nextOf(i)||l[0],n=epIndex().byT[i].length;
+      return '<button class="tt" data-terr="'+i+'" aria-label="'+esc(t)+', '+n+' histoires"><span class="tp">'+poster(STORIES[id].p)+'</span><span class="tsh"></span><span class="ttn">'+esc(t)+'</span><span class="ttc">'+n+' histoires</span></button>';
+    }).join('')+'</div></div>'+
     '<div class="bottomspace"></div>';
 }
 
@@ -2793,7 +2800,7 @@ function trailHTML(p){
     rows+='<div class="tr" style="height:'+H+'px">'+path+
       '<button class="tn '+state+'" data-pick="'+id+'" style="left:calc(50% + '+o+'px)" aria-label="'+esc(st.title)+(done?' (lue)':isCur?' (prochaine étape)':'')+'">'+
         (isCur?'<span class="tgo">'+(cur===0?'Commencer':'Continuer')+'</span>':'')+
-        '<span class="tc"><span class="poster" data-art="'+st.p+'"></span></span>'+
+        '<span class="ttc"><span class="poster" data-art="'+st.p+'"></span></span>'+
         (done?'<span class="tk">'+IC.check+'</span>':'<span class="tnum">'+(i+1)+'</span>')+
         '<span class="tl2"><b>'+esc(st.title)+'</b><small>'+st.min+' min</small></span>'+
       '</button></div>';
