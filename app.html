@@ -3666,7 +3666,7 @@ function enter(){
   setTimeout(function(){main.classList.remove('arrive');},1200);
 }
 function playIntro(){
-  var big=centerOffset(3),seen=false;try{seen=!!localStorage.getItem('opsis.intro');localStorage.setItem('opsis.intro','1');}catch(e){}
+  var big=centerOffset(3),seen=false;   /* l'intro complète se joue à chaque ouverture */
   if(seen){lens.style.transform='none';lens.style.transition='';lens.classList.add('small');drawLens(.82,.62,0,34);splash.classList.add('s2','s4','s5','lit');later(enter,900);return;}   /* l'intro complète ne se joue qu'au premier lancement */
   lens.style.transform=big;void lens.offsetWidth;lens.style.transition='';
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
