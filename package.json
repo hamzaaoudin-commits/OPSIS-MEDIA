@@ -2,7 +2,7 @@
   "name": "opsis",
   "private": true,
   "version": "0.2.0",
-  "description": "OPSIS — une histoire vraie chaque jour",
+  "description": "OPSIS — The world is made of stories",
   "scripts": {
     "build": "node tools/build.js",
     "dev": "node tools/build.js && node tools/dev-server.js",

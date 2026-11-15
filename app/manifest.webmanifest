@@ -1,7 +1,7 @@
 {
   "name": "OPSIS",
   "short_name": "OPSIS",
-  "description": "Une histoire vraie chaque jour.",
+  "description": "The world is made of stories.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

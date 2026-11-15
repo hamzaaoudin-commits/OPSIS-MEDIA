@@ -2587,7 +2587,7 @@ function storyCanvas(id){
     var hl=wrap('« '+hook+' »','italic 40px '+serif,880).slice(0,3);
     g.fillStyle='rgba(244,238,228,.82)';g.font='italic 40px '+serif;y=Math.max(y+34,1660);
     hl.forEach(function(t){g.fillText(t,W/2,y);y+=54;});
-    g.fillStyle='rgba(244,238,228,.45)';g.font='600 28px '+disp;if('letterSpacing' in g)g.letterSpacing='5px';g.fillText('UNE HISTOIRE VRAIE PAR JOUR',W/2,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
+    g.fillStyle='rgba(244,238,228,.45)';g.font='600 28px '+disp;if('letterSpacing' in g)g.letterSpacing='5px';g.fillText('THE WORLD IS MADE OF STORIES',W/2,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
     return cv;
   });
 }
@@ -2654,7 +2654,7 @@ function storyAnim(id,cv,rec){
         if(sx>=0&&ms>400&&ms<1700){var sp=cl((ms-400)/1200);g.save();rrect(g,-CW/2,-CH/2,CW,CH,28);g.clip();var sg=g.createLinearGradient(-CW/2+(sp*1.6-.3)*CW,0,-CW/2+(sp*1.6-.1)*CW,0);sg.addColorStop(0,'rgba(255,255,255,0)');sg.addColorStop(.5,'rgba(255,255,255,.2)');sg.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=sg;g.fillRect(-CW/2,-CH/2,CW,CH);g.restore();}
         g.restore();}
       var tx=cl((ms-3400)/600);
-      g.textAlign='center';g.globalAlpha=tx;g.fillStyle='rgba(244,238,228,.55)';g.font='600 30px '+disp;if('letterSpacing' in g)g.letterSpacing='6px';g.fillText('UNE HISTOIRE VRAIE PAR JOUR',W/2,H-110);g.globalAlpha=1;if('letterSpacing' in g)g.letterSpacing='0px';
+      g.textAlign='center';g.globalAlpha=tx;g.fillStyle='rgba(244,238,228,.55)';g.font='600 30px '+disp;if('letterSpacing' in g)g.letterSpacing='6px';g.fillText('THE WORLD IS MADE OF STORIES',W/2,H-110);g.globalAlpha=1;if('letterSpacing' in g)g.letterSpacing='0px';
     }
     return {frame:frame,T:T,still:function(){frame(T);}};
   });
@@ -3226,7 +3226,7 @@ function wrShare(){
     ims.forEach(function(im,i){if(!im)return;var p=pos[i];c.save();c.shadowColor='rgba(0,0,0,.55)';c.shadowBlur=40;c.shadowOffsetY=18;c.drawImage(im,p[0],p[1],p[2],p[3]);c.restore();c.fillStyle='#EDE6DA';c.font=ff(900,i?56:76,D);c.fillText(String(i+1),p[0]+14,p[1]+(i?52:70));});
     var sy=1440;c.fillStyle='#EDE6DA';
     [[String(w.n),'histoires lues'],[wrTime(w.min),'de lecture'],[String(w.days),'jours']].forEach(function(x,i){var px=80+i*330;c.font=ff(900,104,D);c.fillText(x[0],px,sy+60);c.fillStyle='#d8d2c7';c.font=ff(400,30,U);c.fillText(x[1],px,sy+108);c.fillStyle='#EDE6DA';});
-    c.font=ff(900,66,D);c.fillText('OPSIS',80,1830);c.fillStyle='#d8d2c7';c.font=ff(400,30,U);c.fillText('Une histoire vraie par jour',270,1826);
+    c.font=ff(900,66,D);c.fillText('OPSIS',80,1830);c.fillStyle='#d8d2c7';c.font=ff(400,30,U);c.fillText('The world is made of stories',270,1826);
     var save=function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='opsis-recap-'+w.ym+'.png';document.body.appendChild(a);a.click();a.remove();toast('Image enregistrée');};
     cv.toBlob(function(b){if(!b)return;var f=null;try{f=new File([b],'opsis-recap.png',{type:'image/png'});}catch(e){}
       if(f&&navigator.share&&navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:'Mon récap OPSIS'}).catch(function(e){if(e&&e.name!=='AbortError')save(b);});else save(b);},'image/png');

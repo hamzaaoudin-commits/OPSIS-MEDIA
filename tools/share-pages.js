@@ -27,7 +27,7 @@ const esc=t=>String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 <body><div class="w"><div class="logo">OPSIS</div><div class="cv">${covers[s.id]||''}</div>
 <div><p class="k">${esc((s.series||s.kind).toUpperCase())}</p><h1>${esc(s.title)}</h1><p class="m">${esc(s.kind)}${s.min?' · '+s.min+' min de lecture':''}</p></div>
 <p class="b">${esc(blurb)}</p><a class="cta" href="/#h=${encodeURIComponent(s.id)}">Lire cette histoire dans l'app</a>
-<p class="n">OPSIS, une histoire vraie chaque jour.<br>L'histoire complète se lit dans l'application.</p></div></body></html>`;
+<p class="n">OPSIS · The world is made of stories.<br>L'histoire complète se lit dans l'application.</p></div></body></html>`;
   let n=0;
   for(const s of list){
     const bl=(content.BLURB&&content.BLURB[s.id]&&content.BLURB[s.id].b)||s.sub||'Une histoire vraie à lire dans OPSIS.';
