@@ -150,7 +150,7 @@
   /* ---------- accueil ---------- */
   .hero{position:relative;height:620px}
   .hero .poster{position:absolute;inset:0}
-  .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,10,.55) 0%,rgba(9,9,10,0) 22%,rgba(9,9,10,0) 45%,rgba(9,9,10,.85) 78%,var(--black) 100%)}
+  .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,10,.55) 0%,rgba(9,9,10,0) 22%,rgba(9,9,10,0) 34%,rgba(9,9,10,.78) 62%,rgba(9,9,10,.94) 82%,var(--black) 100%)}
   .topnav{position:absolute;top:54px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 20px;z-index:3}
   .wordmark{font-family:var(--disp);font-weight:900;font-size:27px;letter-spacing:.16em;color:var(--bone);line-height:1}
   .topnav .tools{display:flex;gap:6px}
@@ -158,6 +158,7 @@
   .iconbtn svg{width:23px;height:23px}
   .iconbtn .count{position:absolute;top:3px;right:1px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--red);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px var(--black)}
   .iconbtn .badge{position:absolute;top:7px;right:7px;width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 2px var(--black)}
+  .heroinfo .kick{text-shadow:0 1px 12px rgba(0,0,0,.9);margin-bottom:10px}
   .heroinfo{position:absolute;left:0;right:0;bottom:22px;text-align:center;padding:0 24px;z-index:3}
   .kick{font-size:14px;font-weight:600;color:var(--bone);opacity:.85}
   .kick b{color:var(--red-type);font-weight:700}
@@ -2292,7 +2293,15 @@ function push(x){var tp=S.stack[S.stack.length-1];if(x.type==='read'&&tp&&tp.typ
   S.stack.push(x);renderLayer();try{history.pushState({o:S.stack.length},'');}catch(e){}}
 /* retour : bouton, geste du bord de l'écran ou touche retour du navigateur font la même chose (revenir à l'écran précédent) */
 function back(){var hs=null;try{hs=history.state;}catch(e){}if(S.stack.length&&hs&&hs.o){try{history.back();return;}catch(e){}}doBack();}
-window.addEventListener('popstate',function(){if(S.stack.length)doBack();});
+/* une feuille ouverte (réglages, partage, récap, couverture) se ferme d'abord : le geste retour ne doit pas quitter la page derrière elle */
+function closeOverlay(){
+  if(WR){wrClose();return true;}
+  if(fxs.classList.contains('on')){closePick();return true;}
+  if(sheet.classList.contains('show')){sheet.classList.remove('show');return true;}
+  var sp=setBox&&setBox.parentNode;if(sp&&sp.classList.contains('show')){sp.classList.remove('show');return true;}
+  return false;
+}
+window.addEventListener('popstate',function(){if(closeOverlay()){try{history.pushState({o:S.stack.length},'');}catch(e){}return;}if(S.stack.length)doBack();});
 function doBack(){S.stack.pop();selBar.classList.remove('on');if(S.stack.length)renderLayer();else{CEL=null;if(AU.on)auStop();lv.classList.remove('focus','peek');layer.classList.remove('in');var y=main.scrollTop;renderMain();main.scrollTop=y;}}
 function bindLayer(top){
   lv.classList.toggle('bookmode',top.type==='read'&&S.mode==='book');lv.classList.toggle('focus',top.type==='read'&&!!S.focus);lv.classList.remove('peek');selBar.classList.remove('on');
@@ -2376,7 +2385,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   window.addEventListener('resize',function(){if(bookMode()){var t=S.stack[S.stack.length-1];bookInit(t.id);}});
 })();
 document.addEventListener('change',function(e){var t=e.target;if(t&&t.hasAttribute&&t.hasAttribute('data-time')&&t.value){var v=t.value,hh=parseInt(v,10),night=false;if(hh<7){v='07:00';night=true;}else if(hh>=22){v='21:30';night=true;}S.hour=v;t.value=v;if(window.OPSIS&&OPSIS.store&&OPSIS.store.commit)try{OPSIS.store.commit();}catch(x){}toast(night?'Pas de notification la nuit : entre 7 h et 22 h':'L\'histoire du jour arrivera à '+v.replace(':',' h '));}});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(fxs.classList.contains('on'))closePick();else if(sheet.classList.contains('show'))sheet.classList.remove('show');else if(S.stack.length)back();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(!closeOverlay()&&S.stack.length)back();}});
 
 /* =====================================================================
    COUVERTURE : elle s'affiche en grand puis se retourne sur sa quatrième
@@ -3563,7 +3572,8 @@ function enter(){
   setTimeout(function(){main.classList.remove('arrive');},1200);
 }
 function playIntro(){
-  var big=centerOffset(3);
+  var big=centerOffset(3),seen=false;try{seen=!!localStorage.getItem('opsis.intro');localStorage.setItem('opsis.intro','1');}catch(e){}
+  if(seen){lens.style.transform='none';lens.style.transition='';lens.classList.add('small');drawLens(.82,.62,0,34);splash.classList.add('s2','s4','s5','lit');later(enter,900);return;}   /* l'intro complète ne se joue qu'au premier lancement */
   lens.style.transform=big;void lens.offsetWidth;lens.style.transition='';
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     lens.style.transform='none';lens.classList.add('small');drawLens(.82,.62,0,34);
