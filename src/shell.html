@@ -1542,7 +1542,7 @@ function tile(o){
   var t=String(o.t),sub=o.s,m=/ : |, /.exec(t),i=m?m.index:-1;
   if(i>2&&i<=28){sub=t.slice(i+m[0].length);sub=sub.charAt(0).toUpperCase()+sub.slice(1);t=t.slice(0,i);}
   t=nb(t);var L=t.length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+''+'</button>';
+  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
@@ -1571,9 +1571,9 @@ function epIndex(){
   return EPX;
 }
 function yrLabel(id){var y=YR[id];if(y===undefined)return '';return y<0?(-y)+' av. J.-C.':String(y);}
-function epTile(id,withYear){
+function epTile(id,withYear,ns){
   var st=STORIES[id],lab=(withYear===true&&DTL[id])?DTL[id]:(st.series||st.kind);
-  return tile({p:st.p,t:st.title,s:lab+' · '+st.min+' min',attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
+  return tile({p:st.p,t:st.title,s:lab+' · '+st.min+' min',nosub:!!ns,attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
 }
 var HT=0,HS=null;
 function homeTheme(){
@@ -1585,7 +1585,7 @@ function homeTheme(){
   var eps=HS?all.filter(function(id){return subKey(id)===HS;}):all;
   var chips=(!dt&&subs.length>1)?'<div class="chips" style="padding-top:14px"><button data-hsub="" aria-pressed="'+(!HS)+'">Tout</button>'+subs.map(function(k){return '<button data-hsub="'+k+'" aria-pressed="'+(HS===k)+'">'+esc(subName(k))+' <small>'+cnt[k]+'</small></button>';}).join('')+'</div>':'';
   return '<p class="hint" style="padding:12px 20px 0">'+THEMES[i].d+'</p>'+chips+
-    (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>');
+    (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt,true);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>');
 }
 var HTT=null;
 function homeThemeRefresh(){var r=document.getElementById('thres');if(!r)return;
@@ -1650,7 +1650,7 @@ function library(){
   var chips='<button data-filter="-1" aria-pressed="'+(f<0)+'">Tout</button>'+T.map(function(t,i){return '<button data-filter="'+i+'" aria-pressed="'+(f===i)+'">'+t+'</button>';}).join('');
   var ids=(f<0?X.all:X.byT[f]),cap=90;
   var dt=f>=0&&THEMES[f].k==='date';
-  var grid=ids.slice(0,cap).map(function(id){return epTile(id,dt);}).join('');
+  var grid=ids.slice(0,cap).map(function(id){return epTile(id,dt,true);}).join('');
   return '<h1 class="ptitle">Bibliothèque</h1><div class="chips">'+chips+'</div>'+
     (ids.length?'<div class="shelf"><h2>Histoires <small>'+ids.length+(ids.length>cap?' · '+cap+' affichés':'')+'</small></h2></div><div class="grid">'+grid+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+'<div class="bottomspace"></div>';
 }
@@ -2202,7 +2202,7 @@ function themeLayer(i,sub){
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span><button class="circle" data-search aria-label="Rechercher">'+IC.search+'</button></div>'+
     '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1>'+(sub?'<p class="exs" style="padding:0 20px">'+esc(subName(sub))+'</p>':'')+
     '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+chips+
-    (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
+    (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt,true);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
     '<div class="bottomspace"></div>';
 }
 function layerHTML(top){var t=top.type;return t==='read'?reader(top.id):t==='lib'?saved():t==='theme'?themeLayer(top.i,top.sub):t==='legal'?legalLayer(top.k):t==='search'?searchLayer():t==='col'?colLayer(top.k):t==='path'?pathLayer(top.k):t==='mycol'?myColLayer(top.i):t==='quotes'?quotesLayer():t==='set'?setLayer(top.k):serie(top.key);}
