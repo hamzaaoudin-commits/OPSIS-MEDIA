@@ -1615,8 +1615,20 @@ function homeTheme(){
   return '<p class="hint" style="padding:12px 20px 0">'+THEMES[i].d+'</p>'+chips+
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>');
 }
-function homeThemeRefresh(){var r=document.getElementById('thres');if(!r)return;r.innerHTML=homeTheme();
-  var h=document.getElementById('hterr');if(h)h.querySelectorAll('[data-hth]').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.hth===HT));});}
+var HTT=null;
+function homeThemeRefresh(){var r=document.getElementById('thres');if(!r)return;
+  var h=document.getElementById('hterr');if(h)h.querySelectorAll('[data-hth]').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.hth===HT));});
+  var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(red){r.innerHTML=homeTheme();return;}
+  clearTimeout(HTT);
+  var h0=r.offsetHeight;r.style.overflow='hidden';r.style.height=h0+'px';r.style.transition='opacity .16s ease';r.style.opacity='0';
+  HTT=setTimeout(function(){
+    r.innerHTML=homeTheme();
+    r.style.transition='none';r.style.height='auto';var h1=r.scrollHeight;r.style.height=h0+'px';void r.offsetHeight;
+    r.style.transition='height .38s cubic-bezier(.22,.8,.2,1),opacity .3s ease .08s';r.style.height=h1+'px';r.style.opacity='1';
+    HTT=setTimeout(function(){r.style.height='';r.style.overflow='';r.style.transition='';r.style.opacity='';},460);
+  },170);
+}
 function nextOf(ti){var l=epIndex().byT[ti]||[];for(var i=0;i<l.length;i++)if(!S.read[l[i]])return l[i];return l[0]||null;}
 
 /* =====================================================================
@@ -3275,7 +3287,7 @@ function featClick(b,d){
   if(d.path){push({type:'path',k:d.path});return true;}
   if(d.mycol!==undefined){push({type:'mycol',i:+d.mycol});return true;}
   if(b.hasAttribute('data-quotes')){push({type:'quotes'});return true;}
-  if(d.hth!==undefined){var n=+d.hth;HT=(HT===n)?-1:n;HS=null;homeThemeRefresh();if(HT>=0){var r=document.getElementById('thres');if(r&&main.scrollTo){var y=r.getBoundingClientRect().top-main.getBoundingClientRect().top+main.scrollTop-72;main.scrollTo({top:y,behavior:'smooth'});}}return true;}
+  if(d.hth!==undefined){var n=+d.hth;HT=(HT===n)?-1:n;HS=null;homeThemeRefresh();return true;}
   if(d.hsub!==undefined&&!(top&&top.type==='theme')){HS=d.hsub||null;homeThemeRefresh();return true;}
   if(d.terr!==undefined&&d.sub){push({type:'theme',i:+d.terr,sub:d.sub});return true;}
   if(d.subf!==undefined&&top&&top.type==='theme'){top.sub=d.subf||null;var y=lv.scrollTop;lv.innerHTML=layerHTML(top);lv.scrollTop=Math.min(y,200);bindLayer(top);return true;}
