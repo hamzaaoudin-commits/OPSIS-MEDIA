@@ -1575,15 +1575,34 @@ function epTile(id,withYear,ns){
   var st=STORIES[id],lab=(withYear===true&&DTL[id])?DTL[id]:(st.series||st.kind);
   return tile({p:st.p,t:st.title,s:lab+' · '+st.min+' min',nosub:!!ns,attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">Lu</span>':'<span class="num">'+st.min+' MIN</span>'});
 }
+var THSUB={
+ histoire:[{n:"Procès",ids:['pr01','pr02','pr03','pr04','pr05','pr07','pr08','pr09','pr10','pr14','pr15','pr16','pr17','pr18','pr19','pr20','pr22','pr23','pr24','pr28']},{n:"Couronnes et révolutions",ids:['di21','di22','cs30','pr02','pr07','pr08','pr09','pr10']},{n:"Batailles et guerres",ids:['vc11','vc12','vc14','vc15','vc17','vc19','fi27','fi28','fi30','sv04','sv24','ce02']},{n:"Espions",ids:['es01','es02','es03','es05','es06','es07','es08','es09','es10','es25','ce02']},{n:"Évasions",ids:['ev08','ev18','ev19','ev20','ev21','ev22','ev23','ev24','ev28','ev29']},{n:"Vestiges et découvertes",ids:['ex20','ex28','ex30','pa24','pa25','ce06','fi26']},{n:"Faux et faussaires",ids:['fa16','fa21','fa22','es07']},{n:"Survivants et disparus",ids:['sv04','sv20','sv24','di21','di22','di26']}],
+ science:[{n:"Génies et découvertes",ids:['ce17','pa01','di17','di18']},{n:"Machines contre humains",ids:['du21','du23']},{n:"Espace et abîmes",ids:['ex21','ex22','ex26','ce27']},{n:"Faux de la science",ids:['fa19','fa20']}],
+ marques:[{n:"Tech et jeux vidéo",ids:['fi11','mq02','mq03','mq09','mq10','mq12','mq18']},{n:"Boissons et restauration",ids:['fi17','mq04','mq07','mq08']},{n:"Mode et luxe",ids:['mq01','mq14','mq15','mq20','fi16']},{n:"Industrie et objets",ids:['mq05','mq06','mq11','mq13','mq19','mq16']},{n:"Coups de génie marketing",ids:['mq17','mq16','mq07','mq01','mq08','mq19','mq11']},{n:"Désastres et illusions",ids:['fi11','fi16','fi17','ar26','ar29','mq10','mq09']}],
+ personnes:[{n:"Faux nobles et héritiers",ids:['ar09','ar15','ar24','ar25','ar23','im02','im01']},{n:"Faux métiers, faux titres",ids:['ar10','ar11','ar13','ar28','im16','im10','im09','im28']},{n:"Ventes impossibles",ids:['eiffel','ar01','ar02','ar04']},{n:"Grandes escroqueries financières",ids:['ar06','ar07','ar08','ar15','ar04']},{n:"Faux célèbres",ids:['ar17','ar18','ar19']},{n:"Écrivains et identités d'emprunt",ids:['im06','im23','di16','ar18']}],
+ jour:[{n:"Chefs d'État et assassinats",ids:['ld01','ld02','ld03','ld04','ld05','ld21','ld23','ld29']},{n:"Artistes et icônes",ids:['ld06','ld07','ld08','ld09','ld10','ld24','ld25']},{n:"Savants",ids:['ld11','ld12','ld13','ld14','ld15']},{n:"Explorateurs",ids:['ld16','ld17','ld18','ld19','ld20']},{n:"Catastrophes",ids:['ld27','ld28','ld30','pn01','pn26','pn28']},{n:"Espace et ciel",ids:['pn01','pn25','sv29','sv30','ld30','ld18']},{n:"Sauvés de justesse",ids:['sv29','sv30','pn28']}],
+ date:[{n:"Guerre et politique",ids:['fi27','vc12','fi28','vc14','vc17','ld01','ld29','ld05','ld28','pr17','ev29','es25','ld21','ld04','ld02','pn28','es29','pr03']},{n:"Exploration et conquêtes",ids:['ld19','ex21','ex03','ld17','ex24','ex25','ex07','ex15','pn25','ld30']},{n:"Science et techniques",ids:['pa01','ce06','du21','du23','pn25','pn28']},{n:"Faits divers et disparitions",ids:['cs01','cs21','di04','ld27','sv30','es29']},{n:"Sport et culture",ids:['vc11','du30','ld24','du21']}],
+ arts:[{n:"Tournages maudits",ids:['tm01','tm02','tm03','tm06','tm07','tm10','tm11','tm12','tm16','tm17','tm18','tm21']},{n:"Faux tableaux et objets d'art",ids:['fa01','fa02','fa03','fa04','fa06','fa08','fa10','fa18','fa28']},{n:"Faux historiques et manuscrits",ids:['fa11','fa12','fa15','fa27']},{n:"Procès et censure",ids:['pr13','pr27','pr29']},{n:"Impostures littéraires",ids:['im25','im27','im30']},{n:"Fiascos du spectacle",ids:['fi07','fi10','fi24','es21','tm01']}],
+ sport:[{n:"Duels de légende",ids:['du01','du08','du22','du26','du30','du20','vc06']},{n:"Outsiders",ids:['vc01','vc02','vc06']},{n:"Football",ids:['vc02','vc01','du30']},{n:"Boxe",ids:['du08','vc06']}],
+ aventure:[{n:"Pôles et glace",ids:['ex03','ex04','ex05','sv01','sv09','sv10','ex23']},{n:"Montagnes",ids:['ex07','ex08','ex09','ex10','sv06','sv07','sv08']},{n:"Mers et naufrages",ids:['sv01','sv02','sv03','ex11','ex12','ex15','sv23']},{n:"Ciel et chutes",ids:['ex24','ex25','sv11','sv12','sv13','sv14','sv15']},{n:"Déserts et jungles",ids:['ex17','ex18','ex19','sv14','sv18','sv19']},{n:"Corps à la limite",ids:['sv21','sv28','sv16','sv17','ex27','sv22']},{n:"Évasions célèbres",ids:['ev01','ev02','ev03','ev04','ev06','ev11','ev12','ev14','ev16']}],
+ crimes:[{n:"Bijoux et diamants",ids:['cs04','cs09','cs16','cs17','cs18','cs19','cs20']},{n:"Casses d'argent et de trains",ids:['cs01','cs02','cs03','cs05','cs06','cs07','cs08','cs24','cs29']},{n:"Disparus en mer et dans le ciel",ids:['di02','di03','di04','di06','di10']},{n:"Disparus célèbres",ids:['di09','di12','di23','di24']},{n:"Guerre froide",ids:['es11','es13','es14','es15','es16','es17','es18','es30']},{n:"Affaires d'État",ids:['es29','es13','pr25','di23']},{n:"Énigmes sans réponse",ids:['ce09','di04','di10','di12','di06','di03','di24','cs21','di09']}],
+ licences:[{n:"Super-héros",ids:['lc02','lc04','lc07','lc11','lc25','lc23','lc21']},{n:"Sagas de fantasy et de SF",ids:['lc01','lc05','lc08','lc09','lc12','lc16','lc17','lc29','lc30','lc27']},{n:"Jeux vidéo et jouets",ids:['lc06','lc14','lc15','lc19','lc21','lc22','lc23','lc26']},{n:"Disney et animation",ids:['lc03','lc10','lc20','lc24','lc28','lc31']},{n:"Héritages et procès d'auteurs",ids:['lc02','lc07','lc10','lc12','lc18','lc30','lc16','lc09']},{n:"Grands rachats",ids:['lc04','lc24','lc20','lc13','lc17','lc19']},{n:"Frissons et rires",ids:['lc27','lc32','lc17']}]
+};
+function subDefs(i,all){
+  var th=THSUB[THEMES[i].k],out=[];
+  if(th){th.forEach(function(g,j){var l=g.ids.filter(function(id){return all.indexOf(id)>=0;});if(l.length>=2)out.push({k:'t'+j,n:g.n,list:l});});return out;}
+  var cnt={},order=[];
+  all.forEach(function(id){var k=subKey(id);if(!k)return;if(!cnt[k]){cnt[k]=[];order.push(k);}cnt[k].push(id);});
+  order.forEach(function(k){if(cnt[k].length>=2&&subName(k))out.push({k:k,n:subName(k),list:cnt[k]});});
+  return out;
+}
 var HT=0,HS=null;
 function homeTheme(){
-  if(HT<0)return '<p class="hint" style="padding:16px 20px 0">Touchez un thème pour voir ses histoires.</p>';
-  var i=HT,X=epIndex(),all=hr(X.byT[i]),dt=THEMES[i].k==='date',cnt={},order=[];
-  all.forEach(function(id){var k=subKey(id);if(!k)return;if(!cnt[k]){cnt[k]=0;order.push(k);}cnt[k]++;});
-  var subs=order.filter(function(k){return cnt[k]>=2&&subName(k);});
-  if(HS&&!cnt[HS])HS=null;
-  var eps=HS?all.filter(function(id){return subKey(id)===HS;}):all;
-  var chips=(!dt&&subs.length>1)?'<div class="chips" style="padding-top:14px"><button data-hsub="" aria-pressed="'+(!HS)+'">Tout</button>'+subs.map(function(k){return '<button data-hsub="'+k+'" aria-pressed="'+(HS===k)+'">'+esc(subName(k))+' <small>'+cnt[k]+'</small></button>';}).join('')+'</div>':'';
+  var i=HT,X=epIndex(),all=hr(X.byT[i]),dt=THEMES[i].k==='date';
+  var defs=subDefs(i,all),cur=null;
+  defs.forEach(function(d){if(d.k===HS)cur=d;});if(!cur)HS=null;
+  var eps=cur?cur.list:all;
+  var chips=defs.length>1?'<div class="chips" style="padding-top:14px"><button data-hsub="" aria-pressed="'+(!HS)+'">Tout</button>'+defs.map(function(d){return '<button data-hsub="'+d.k+'" aria-pressed="'+(HS===d.k)+'">'+esc(d.n)+' <small>'+d.list.length+'</small></button>';}).join('')+'</div>':'';
   return '<p class="hint" style="padding:12px 20px 0">'+THEMES[i].d+'</p>'+chips+
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt,true);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>');
 }
@@ -2194,13 +2213,13 @@ function legalLayer(k){
     '<h1 class="ptitle" style="padding-top:104px">'+d[0]+'</h1><p class="hint">Dernière mise à jour : '+LEGAL_DATE+'</p><div class="lgw">'+body+'<div class="lgl">'+links+'</div></div><div class="bottomspace"></div>';
 }
 function themeLayer(i,sub){
-  var X=epIndex(),all=X.byT[i],dt=THEMES[i].k==='date',cnt={},order=[];
-  all.forEach(function(id){var k=subKey(id);if(!k)return;if(!cnt[k]){cnt[k]=0;order.push(k);}cnt[k]++;});
-  var subs=order.filter(function(k){return cnt[k]>=2&&subName(k);});
-  var eps=sub?all.filter(function(id){return subKey(id)===sub;}):all;
-  var chips=(!dt&&subs.length>1)?'<div class="chips"><button data-subf="" aria-pressed="'+(!sub)+'">Tout</button>'+subs.map(function(k){return '<button data-subf="'+k+'" aria-pressed="'+(sub===k)+'">'+esc(subName(k))+' <small>'+cnt[k]+'</small></button>';}).join('')+'</div>':'';
+  var X=epIndex(),all=X.byT[i],dt=THEMES[i].k==='date';
+  var defs=subDefs(i,all),cur=null;defs.forEach(function(d){if(d.k===sub)cur=d;});
+  var eps=cur?cur.list:(sub?all.filter(function(id){return subKey(id)===sub;}):all);
+  var subLabel=cur?cur.n:(sub?subName(sub):'');
+  var chips=(defs.length>1)?'<div class="chips"><button data-subf="" aria-pressed="'+(!sub)+'">Tout</button>'+defs.map(function(d){return '<button data-subf="'+d.k+'" aria-pressed="'+(sub===d.k)+'">'+esc(d.n)+' <small>'+d.list.length+'</small></button>';}).join('')+'</div>':'';
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+T[i]+'</span><button class="circle" data-search aria-label="Rechercher">'+IC.search+'</button></div>'+
-    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1>'+(sub?'<p class="exs" style="padding:0 20px">'+esc(subName(sub))+'</p>':'')+
+    '<h1 class="ptitle" style="padding-top:104px">'+T[i]+'</h1>'+(subLabel?'<p class="exs" style="padding:0 20px">'+esc(subLabel)+'</p>':'')+
     '<p class="hint" style="padding:0 20px 8px">'+THEMES[i].d+'</p>'+chips+
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt,true);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
     '<div class="bottomspace"></div>';
