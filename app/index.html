@@ -2874,9 +2874,20 @@ function listLayer(title,desc,ids,opt){
     '<p class="pkick">'+(opt.kick||'Collection')+'</p><h1 class="ptitle" style="padding-top:6px">'+esc(title)+'</h1>'+(desc?'<p class="hint" style="padding:8px 20px 0;font-size:15px">'+esc(desc)+'</p>':'')+(opt.top||'')+body+'<div class="bottomspace"></div>';
 }
 function colSaved(k){return myCols().some(function(x){return x.from===k;});}
+var COLLSC={
+menteurs:['curtain','#e0434b','#14080c','#060304','mask'],nature:['peaks','#8fd3f4','#06121a','#02060b','mountain'],froide:['fog','#e0434b','#0a0b12','#040508','spy'],ww2:['fog','#c9a86b','#0e0d09','#050504','flag'],
+elles:['rays','#f08ab0','#1a0a12','#07030a','crown'],hollywood:['curtain','#e0b25a','#150c06','#070403','clap'],argent:['city','#7bd99a','#07120c','#030805','bill'],espace:['night','#8fa8ff','#070a1c','#02030a','flag'],
+casses:['grid','#f0a04b','#0d0a07','#050403','safe'],faussaires:['grid','#e0b25a','#0d0a06','#050403','twoface'],revenus:['fog','#b9a6ff','#0b0914','#040308','candle'],chanceux:['rays','#f6d365','#151006','#070503','dice'],
+mer:['sea','#5ec0e8','#04101a','#02060a','buoy'],glace:['night','#bfe6ff','#08121a','#03070b','snow'],montagne:['peaks','#d7cdbf','#0c0e12','#040506','mountain'],disparus:['fog','#9fb0a6','#0a0d0c','#040605','question'],
+tribunaux:['curtain','#d9c9a0','#0f0d0a','#050403','gavel'],pouvoir:['city','#e0434b','#100607','#050203','hourglass'],savants:['night','#7bd0c8','#06100f','#030707','bulb'],artistes:['curtain','#f08ab0','#12070d','#060306','book'],
+marques1:['grid','#f0a04b','#0d0a07','#050403','burst'],marques2:['city','#e0434b','#0f0607','#050203','burst'],erreurs:['grid','#e0b25a','#0e0b06','#050403','chart'],sport:['rays','#f0a04b','#0d0a06','#050403','medal'],
+ombres:['night','#c8a2ff','#0b0912','#040308','twoface'],musique:['curtain','#ff6f91','#12060c','#060306','rings'],espions:['fog','#e0434b','#0a0a10','#040407','spy'],evasions:['night','#7bd99a','#030605','#010303','key'],
+decouvertes:['grid','#8fd3f4','#06101a','#02060a','bulb'],explorateurs:['sea','#f0a04b','#0a0907','#050403','flag'],xix:['city','#c9a86b','#0e0c08','#050403','book'],avant1700:['peaks','#d9b07a','#0e0b08','#050403','crown'],
+entredeux:['city','#f6d365','#120d06','#060403','dice'],seventies:['rays','#ff9f4a','#150a05','#070302','rings'],science:['grid','#7bd0c8','#06100f','#030707','chip'],identites:['curtain','#b9a6ff','#0e0b16','#05040a','mask']};
 function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k),d=pathDone(c),n=c.ids.length;
   var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/n*100)+'%"></i></span><small>'+(d===n?'Collection terminée':d+' sur '+n+' lues · dans l\'ordre que vous voulez')+'</small></div>';
-  return '<div class="pth">'+listLayer(c.n,c.d,c.ids,{kick:'Collection',top:top,html:trailHTML({ids:c.ids,free:true}),right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'})+'</div>';}
+  var sc=COLLSC[k]||['night','#e0434b','#0a0a12','#050508','question'],scn=pathScene({k:k,mo:sc[0],pa:sc[1],top:sc[2],b2:sc[3],ic:sc[4]});
+  return '<div class="pth" style="'+scn+'"><div class="pbg" aria-hidden="true"></div>'+listLayer(c.n,c.d,c.ids,{kick:'Collection',top:top,html:trailHTML({ids:c.ids,free:true}),right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'})+'</div>';}
 function trailHTML(p){
   var OFF=[0,56,84,56,0,-56,-84,-56],cur=-1,n=p.ids.length,H=p.free?160:184,rows='';
   if(!p.free)for(var q=0;q<n;q++)if(!S.read[p.ids[q]]){cur=q;break;}
@@ -2948,7 +2959,7 @@ function pathScene(p){
   if(m==='curtain'){for(i=0;i<9;i++){x=i*54-10;o+='<path d="M'+x+' 0 Q '+(x+30)+' 300 '+x+' 700 L'+(x+54)+' 700 Q '+(x+84)+' 300 '+(x+54)+' 0Z" fill="#000" opacity="'+(i%2?.18:.34)+'"/>';}o+='<path d="M215 0 L90 760 L340 760Z" fill="'+pa+'" opacity=".09"/><circle cx="215" cy="520" r="200" fill="url(#gl)" opacity=".6"/>';}
   if(m==='rays'){for(i=0;i<16;i++){var a1=(-80+i*10.6)*Math.PI/180;o+='<path d="M215 -40 L'+(215+Math.cos(a1+.03)*1500).toFixed(0)+' '+(-40+Math.sin(a1+.03)*1500).toFixed(0)+' L'+(215+Math.cos(a1-.03)*1500).toFixed(0)+' '+(-40+Math.sin(a1-.03)*1500).toFixed(0)+'Z" fill="'+pa+'" opacity="'+(i%2?.05:.09)+'"/>';}o+='<circle cx="215" cy="120" r="150" fill="url(#gl)"/>';}
   if(m==='grid'){o+='<circle cx="320" cy="230" r="200" fill="url(#gl)" opacity=".7"/><g stroke="'+pa+'" stroke-width=".8" opacity=".14">';for(i=0;i<22;i++)o+='<path d="M0 '+(i*42)+' H'+W+'"/>';for(i=0;i<11;i++)o+='<path d="M'+(i*43)+' 0 V900"/>';o+='</g>';for(i=0;i<8;i++){x=Math.floor(rnd()*10)*43;y=Math.floor(rnd()*14)*42;o+='<rect x="'+x+'" y="'+y+'" width="43" height="42" fill="'+pa+'" opacity="'+(.05+rnd()*.08).toFixed(2)+'"/>';}}
-  var ic=PICONS[PIC[p.k]];
+  var ic=PICONS[p.ic||PIC[p.k]];
   if(ic){var st='fill="'+pa+'" fill-opacity=".10" stroke="'+pa+'" stroke-opacity=".55" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" stroke-width="2.4"';
     o+='<g transform="translate(246 40) scale(2.0)" '+st+'>'+ic+'</g>';
     o+='<g transform="translate(20 560) scale(.9) rotate(-8 50 50)" '+st.replace('.10','.07').replace('.55','.28')+'>'+ic+'</g>';
