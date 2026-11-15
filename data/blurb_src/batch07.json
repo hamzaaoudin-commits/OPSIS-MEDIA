@@ -1,6 +1,6 @@
 {
  "ex19": {
-  "blurb": "En 1925, l'explorateur britannique Percy Fawcett, 57 ans, quitte Cuiabá, au Brésil, avec son fils Jack et un ami, Raleigh Rimmel. Il cherche une cité perdue qu'il nomme Z, dans le Mato Grosso. Le 29 mai, il envoie une dernière lettre. On ne sait pas ce qu'il est advenu d'eux, et les os rapportés plus tard ne sont pas les siens.",
+  "blurb": "QUATRIÈME: \"En 1925, un explorateur britannique de 57 ans s'enfonce dans la forêt brésilienne avec son fils et un ami pour chercher une cité dont il garde l'emplacement secret. Dans sa dernière lettre, il demande qu'on n'envoie personne à son secours. Que cherchait-il vraiment, et qu'ont trouvé ceux qui ont voulu le suivre ?\" ACCROCHE: \"Un homme qui n'a jamais voulu qu'on le suive, et ceux qui l'ont fait quand même.\"",
   "hook": "Une dernière lettre, puis la forêt. Les os rapportés ne sont pas les siens."
  },
  "ex20": {
@@ -12,7 +12,7 @@
   "hook": "Gagarine laisse les commandes verrouillées, le code glissé dans une enveloppe."
  },
  "ex22": {
-  "blurb": "Le 27 mai 1931, le physicien suisse Auguste Piccard et le physicien Paul Kipfer décollent d'Augsbourg dans une cabine scellée accrochée à un ballon. Ils atteignent 15 781 mètres, record du monde. Une fuite colmatée à la vaseline, une soupape défaillante : ils redescendent sur un glacier des Alpes tyroliennes et passent la nuit sur la glace.",
+  "blurb": "QUATRIÈME: \"En 1931, un physicien suisse s'enferme avec un assistant dans une sphère d'aluminium pour tenter de monter plus haut que personne, sous un ballon. Mais la soupape fonctionne mal, et leur retour dépend d'un gaz qui refroidit lentement. Où et dans quel état redescendront-ils ?\" ACCROCHE: \"Une boule fermée, un ballon, et un gaz qui refroidit trop lentement.\"",
   "hook": "À 15 781 mètres, une fuite est bouchée avec de la vaseline."
  },
  "ex23": {
@@ -36,7 +36,7 @@
   "hook": "Treize personnes sous la montagne, et une pompe qui s'arrête à la fin."
  },
  "ex28": {
-  "blurb": "Le 19 septembre 1991, deux randonneurs allemands, Helmut et Erika Simon, découvrent un corps sorti de la glace près de la frontière entre l'Autriche et l'Italie, à environ 3 200 mètres. Ils croient à un alpiniste récent. Il a environ 5 300 ans, une pointe de flèche dans l'épaule, et on ne sait toujours pas qui l'a tué ni pourquoi.",
+  "blurb": "QUATRIÈME: \"Deux randonneurs croient avoir trouvé un alpiniste mort, à demi pris dans la glace. En réalité, il est mort il y a cinq mille ans. Une première bataille éclate, entre deux pays, à 93 mètres près. Puis les examens scientifiques commencent à lui faire dire ce qu'il a vécu. Que cache son corps ?\" ACCROCHE: \"Il est mort il y a 5 300 ans. Que s'est-il passé ?\"",
   "hook": "Un randonneur croit trouver un alpiniste mort. L'homme a cinq mille trois cents ans."
  },
  "ex29": {
@@ -48,11 +48,11 @@
   "hook": "Un courant d'air mène à des lions peints il y a trente-six mille ans."
  },
  "ce01": {
-  "blurb": "En 1932, à Varsovie, le mathématicien polonais Marian Rejewski, 27 ans, entre au Bureau du chiffre et s'attaque à l'Enigma, la machine de chiffrement militaire allemande, avec deux jeunes collègues. Des documents obtenus par les Français l'aident beaucoup. En 1939, la Pologne remet ses machines reconstituées et sa documentation aux Alliés. Le rôle de ce travail resta longtemps ignoré.",
+  "blurb": "En 1932, à Varsovie, le mathématicien polonais Marian Rejewski, 27 ans, entre au Bureau du chiffre et s'attaque à l'Enigma, la machine de chiffrement militaire allemande, avec deux jeunes collègues. Des documents obtenus par les Français l'aident beaucoup. Jusqu'où ce travail mènera-t-il, et que deviendra-t-il à l'approche de la guerre ?",
   "hook": "Il a percé la machine sans l'avoir jamais vue, grâce à des permutations."
  },
  "ce02": {
-  "blurb": "En janvier 1917, le ministre allemand Arthur Zimmermann envoie un télégramme secret proposant au Mexique une alliance contre les États-Unis. La Room 40, service de décryptage britannique, l'intercepte et le lit. Les Britanniques doivent le montrer aux Américains sans révéler leur écoute : ils présentent une copie venue du Mexique. Le 6 avril, les États-Unis entrent en guerre.",
+  "blurb": "En 1917, la Grande-Bretagne tient dans ses mains un télégramme allemand qui pourrait faire entrer les États-Unis dans la guerre. Mais le montrer, c'est révéler qu'elle lit les codes de l'ennemi. Comment prouver une vérité sans trahir la façon dont on la connaît ? ACCROCHE proposée : Pour être cru, le secret le plus précieux de Londres devait trouver un détour.",
   "hook": "Londres lit le message allemand, puis doit prétendre l'avoir volé au Mexique."
  },
  "ce03": {
@@ -72,7 +72,7 @@
   "hook": "Le parchemin date des années 1400. Personne ne sait ce que dit le texte."
  },
  "ce16": {
-  "blurb": "Le 23 juin 1993, à Cambridge, le mathématicien britannique Andrew Wiles annonce qu'il a prouvé le dernier théorème de Fermat, un énoncé noté vers 1637 dans la marge d'un livre. Il y travaillait en quasi-secret depuis plus de six ans. Une faille apparaît dans l'été. Il ne la répare qu'en septembre 1994, avec Richard Taylor.",
+  "blurb": "Le 23 juin 1993, à Cambridge, le mathématicien britannique Andrew Wiles annonce qu'il a prouvé le dernier théorème de Fermat, un énoncé noté vers 1637 dans la marge d'un livre. Il y travaillait en quasi-secret depuis plus de six ans. La preuve tiendra-t-elle quand les spécialistes l'examineront ? ACCROCHE proposée : Six ans de travail en secret, puis des experts qui relisent.",
   "hook": "Il a travaillé six ans en secret. Puis la preuve a eu une faille."
  },
  "ce17": {
@@ -80,7 +80,7 @@
   "hook": "Il prouve un problème centenaire, puis refuse la médaille et le million."
  },
  "ce22": {
-  "blurb": "Louis Braille perd la vue dans l'enfance, à Coupvray, près de Paris, et entre à dix ans à l'Institut royal des jeunes aveugles de Paris. L'officier Charles Barbier y présente son écriture de nuit en points en relief, faite de grandes cellules. Le jeune Braille la réduit à six points. L'Institut ne l'adopte officiellement qu'en 1854, deux ans après sa mort.",
+  "blurb": "Louis Braille perd la vue dans l'enfance, à Coupvray, près de Paris, et entre à dix ans à l'Institut royal des jeunes aveugles de Paris. L'officier Charles Barbier y présente son écriture de nuit en points en relief, faite de grandes cellules. Le jeune Braille la réduit à six points. L'Institut finira-t-il par l'accepter ?",
   "hook": "Il avait quinze ans quand il a simplifié l'écriture d'un officier."
  },
  "ce27": {
@@ -96,15 +96,15 @@
   "hook": "Un seul signal de soixante-douze secondes, jamais revu depuis."
  },
  "fi01": {
-  "blurb": "En 1985, Coca-Cola, dont la part de marché américaine a fortement baissé, change sa formule pour la première fois en 99 ans. Près de 200 000 dégustations en aveugle ont préparé la décision. Mais les consommateurs protestent par dizaines de milliers de lettres et d'appels. Au bout de onze semaines, l'entreprise doit remettre l'ancienne boisson en vente.",
+  "blurb": "QUATRIÈME: \"En 1985, Coca-Cola, dont la part de marché américaine a fortement baissé, change sa formule pour la première fois en 99 ans. Près de 200 000 dégustations en aveugle ont préparé la décision. Mais les consommateurs protestent par dizaines de milliers de lettres et d'appels. L'entreprise va-t-elle tenir bon, et combien de temps ?\" ACCROCHE: \"Près de 200 000 dégustations avaient préparé la décision. Qu'avaient-elles oublié de mesurer ?\"",
   "hook": "Près de 200 000 dégustations n'ont pas mesuré l'attachement des gens."
  },
  "fi07": {
-  "blurb": "En 1978, le studio United Artists donne carte blanche au réalisateur Michael Cimino, auréolé du succès de Voyage au bout de l'enfer, pour La Porte du paradis, un western au budget initial de 11,6 millions de dollars. Le tournage s'étire, les décors sont refaits. Le film est un échec, et le studio est vendu en 1981.",
+  "blurb": "QUATRIÈME: \"Après un triomphe aux Oscars, un réalisateur obtient de son studio le droit de décider de tout. Un western, un budget de 11,6 millions de dollars, aucune limite. Le tournage s'étire, la facture explose. Et c'est tout un studio, fondé par des artistes en 1919, qui joue sa survie sur ce film. Que se passera-t-il à la sortie ?\" ACCROCHE: \"Il avait tout obtenu. Le studio jouait son avenir.\"",
   "hook": "Un western à 11,6 millions de dollars finit par vendre un studio."
  },
  "fi10": {
-  "blurb": "En 1985, la réalisatrice Elaine May tourne Ishtar, une comédie avec Warren Beatty et Dustin Hoffman, au Maroc puis à New York. Le budget d'origine est de 27,5 millions de dollars, et le film brut atteint 108 heures. Le patron du studio est congédié, son successeur critique les acteurs, et le film sort en 1987 sous des moqueries.",
+  "blurb": "QUATRIÈME: \"Une réalisatrice reconnue, deux des plus grandes stars du monde, un compositeur de talent : sur le papier, Ishtar avait tout pour réussir. Mais avant même sa sortie, Hollywood l'appelle déjà d'un surnom moqueur. Un tournage au Maroc, 108 heures de pellicule, un studio qui change de patron en plein montage. Que s'est-il passé ?\" ACCROCHE: \"Sur le papier, tout était réuni. Dans les couloirs, on riait déjà.\"",
   "hook": "Cent huit heures de film brut pour une comédie qui doit faire rire."
  },
  "fi11": {
@@ -112,23 +112,23 @@
   "hook": "Cinq semaines pour un jeu, quatre millions d'exemplaires, et une décharge."
  },
  "fi16": {
-  "blurb": "En 1991, au Royal Albert Hall de Londres, Gerald Ratner, patron d'une grande chaîne de bijouteries, plaisante devant environ 6 000 personnes sur la qualité de ses propres produits. La valeur de son groupe baisse d'environ 500 millions de livres et les clients désertent ses magasins. Il est renvoyé en 1992, et l'expression doing a Ratner est née.",
+  "blurb": "QUATRIÈME: \"Le 23 avril 1991, Gerald Ratner, patron d'un empire de bijouteries populaires, monte à la tribune devant 6 000 personnes. Un consultant lui a conseillé quelques blagues. Il en fait une, sur ses propres produits. La salle rit. Le lendemain, tous les journaux la reprennent. Que va devenir l'entreprise qu'il a bâtie en sept ans ?\" ACCROCHE: \"Quelques secondes de rire, sept ans de travail en jeu.\"",
   "hook": "Une plaisanterie sur ses boucles d'oreilles vaut cinq cents millions de livres."
  },
  "fi17": {
-  "blurb": "En 1992, aux Philippines, l'embouteilleur de Pepsi organise un jeu : des numéros de 001 à 999 sont imprimés sous les capsules. Le 25 mai, la télévision annonce que le 349 gagne, et des milliers de personnes se pressent aux usines. L'entreprise offre 500 pesos, que 486 170 personnes acceptent. Des violences font au moins cinq morts.",
+  "blurb": "QUATRIÈME: \"Sous les capsules de Pepsi, aux Philippines, des numéros de 001 à 999 : le gagnant du jour est annoncé à la télévision. Le 25 mai 1992, c'est le 349. Sauf que ce numéro a été imprimé sur 800 000 capsules sans code de validation. Des centaines de milliers de gens croient avoir gagné un million de pesos. Que se passe-t-il quand ils se présentent ?\" ACCROCHE: \"Une erreur de quelques chiffres, un pays entier qui y croit.\"",
   "hook": "Un numéro lu à la télévision, et des camions de livraison brûlés."
  },
  "fi24": {
-  "blurb": "Le 12 juillet 1979, à Chicago, les White Sox proposent d'entrer au stade pour 98 cents avec un disque de disco, à l'initiative de l'animateur de radio anti-disco Steve Dahl. Bien plus de monde que prévu se presse. Les disques volent, Dahl fait exploser des charges sur la pelouse, la police intervient et le second match est perdu par forfait.",
+  "blurb": "QUATRIÈME: \"En juillet 1979, un club de baseball de Chicago propose l'entrée à 98 cents à qui apporte un disque de disco, à faire sauter entre deux matchs. Il en attend 20 000. Ils seront plus de 47 000 dans le stade, des milliers d'autres dehors. Quand l'explosif ouvre un trou dans la pelouse, tout bascule. Qu'adviendra-t-il de la soirée ?\" ACCROCHE: \"Une promotion à 98 cents, 47 000 spectateurs, un explosif.\"",
   "hook": "Un trou dans la pelouse, des disques jetés depuis les gradins."
  },
  "fi26": {
-  "blurb": "Le 10 août 1628, à Stockholm, le Vasa, navire de guerre ordonné par le roi Gustave II Adolphe, appareille pour son premier voyage et coule peu après avoir quitté le port. Une enquête s'ouvre, mais personne n'est reconnu coupable ni puni. Interrogé sur la cause, un des constructeurs répond que Dieu seul le sait.",
+  "blurb": "QUATRIÈME: \"Le 10 août 1628, le plus beau navire de guerre de Suède quitte le port de Stockholm pour son premier voyage. Le vent est faible, les canons saluent. Il parcourt 1 300 mètres, puis il coule. Un roi pressé, un constructeur mort en cours de route, un essai de stabilité interrompu : qui est responsable ?\"",
   "hook": "Le navire le plus puissant coule au large du port. Dieu seul sait pourquoi."
  },
  "fi27": {
-  "blurb": "En avril 1961, plus de 1 400 exilés cubains entraînés par la CIA débarquent à Playa Girón, à Cuba, pour renverser Fidel Castro. Le plan comptait sur un soulèvement populaire, qui n'a pas lieu, et sur un appui aérien réduit de seize bombardiers à huit. La brigade se rend en trois jours. La question d'une promesse d'appui américain reste débattue.",
+  "blurb": "QUATRIÈME: \"Le 17 avril 1961, plus de 1 400 exilés cubains, formés par la CIA, débarquent sur une plage de Cuba pour renverser Fidel Castro. Ils comptent sur un soulèvement populaire et sur un appui aérien américain. Mais que se passe-t-il réellement sur la plage, et qui leur avait promis quoi ?\"",
   "hook": "Seize bombardiers prévus, huit engagés, et le soulèvement n'a jamais eu lieu."
  },
  "fi28": {
@@ -136,11 +136,11 @@
   "hook": "Chacun accuse l'autre, et celui qui avait porté l'ordre est mort."
  },
  "fi29": {
-  "blurb": "En 1696, la Compagnie d'Écosse lève 400 000 livres auprès de 1 320 souscripteurs, environ un cinquième de la richesse du pays selon une estimation, pour fonder une colonie à Panama. Deux expéditions partent. Le paludisme, le manque de ravitaillement et les querelles internes frappent les colons, et plus de 80 % des participants du second groupe meurent en un an.",
+  "blurb": "QUATRIÈME: \"En 1696, la Compagnie d'Écosse lève 400 000 livres auprès de 1 320 souscripteurs, environ un cinquième de la richesse du pays selon une estimation, pour fonder une colonie à Panama. Deux expéditions partent. Le paludisme, le manque de ravitaillement et les querelles internes guettent les colons. Que restera-t-il de ce pari ?\" ACCROCHE: \"Un pays met un cinquième de sa richesse dans une colonie au bout du monde.\"",
   "hook": "Un pays met un cinquième de sa richesse dans une colonie de fièvre."
  },
  "fi30": {
-  "blurb": "En 1932, en Australie-Occidentale, environ 20 000 émeus ravagent les champs de blé d'anciens combattants devenus fermiers. L'armée envoie le major Meredith avec deux mitrailleuses Lewis et 10 000 cartouches. Un cameraman est engagé, la presse critique l'opération, et les troupes sont retirées. Meredith est rappelé en décembre, sans que le nombre d'oiseaux tués soit connu.",
+  "blurb": "QUATRIÈME: \"En novembre 1932, des soldats armés de deux mitrailleuses et de 10 000 cartouches partent en guerre contre 20 000 émeus, dans l'ouest de l'Australie. L'épisode a fait sourire. Mais ceux qui l'ont demandé étaient d'anciens combattants ruinés par la crise, qui voyaient leurs champs de blé dévastés. Qui l'emportera ?\" ACCROCHE: \"Des soldats, des mitrailleuses, et vingt mille oiseaux.\"",
   "hook": "Les émeus ont gagné tous les rounds, plaisante un parlementaire."
  },
  "di02": {

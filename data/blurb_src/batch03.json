@@ -1,6 +1,6 @@
 {
  "pa13": {
-  "blurb": "George de Mestral, ingénieur suisse et chasseur à ses heures, rentre d'une sortie avec son chien et trouve des fruits de bardane accrochés à son pantalon. Au microscope, il y voit de petits crochets souples, sans colle. Il en tire l'idée d'une fermeture à crochets et à boucles, puis met des années à la fabriquer. Il ne s'en enrichira pas.",
+  "blurb": "George de Mestral, ingénieur suisse et chasseur à ses heures, rentre d'une sortie avec son chien et trouve des fruits de bardane accrochés à son pantalon. Au microscope, il y voit de petits crochets souples, sans colle. Il en tire l'idée d'une fermeture à crochets et à boucles, puis met des années à la fabriquer. Qu'en tirera-t-il ?",
   "hook": "Des graines collées au pantalon d'un chasseur donnent le Velcro."
  },
  "pa16": {
@@ -12,15 +12,15 @@
   "hook": "Une dose jugée prudente, puis un trajet à vélo dans un monde déformé."
  },
  "pa19": {
-  "blurb": "À Strasbourg, en 1889, les médecins Josef von Mering et Oskar Minkowski veulent comprendre le rôle du pancréas dans la digestion des graisses. Minkowski enlève l'organe d'un chien. Quelqu'un remarque que l'animal, pourtant propre, urine souvent par terre. Von Mering analyse l'urine : elle contient beaucoup de sucre. Ce résultat servira plus tard à Frederick Banting sur la route de l'insuline.",
+  "blurb": "À Strasbourg, en 1889, les médecins Josef von Mering et Oskar Minkowski veulent comprendre le rôle du pancréas dans la digestion des graisses. Minkowski enlève l'organe d'un chien. Quelqu'un remarque que l'animal, pourtant propre, urine souvent par terre. Von Mering décide d'analyser cette urine. Que va-t-il y trouver ? Accroche : Un chien propre se met à uriner partout.",
   "hook": "Un chien propre se met à uriner partout. L'urine est sucrée."
  },
  "pa20": {
-  "blurb": "Au début des années 1920, des vaches meurent d'hémorragies au Canada et aux États-Unis, sans que les vétérinaires comprennent. En février 1933, un fermier du Wisconsin, Ed Carlson, roule jusqu'à Madison avec une vache morte, un seau de sang qui ne coagule pas et du foin moisi. Le chercheur Karl Paul Link prend l'affaire. Elle mène à un poison pour rats, puis à un médicament.",
+  "blurb": "Au début des années 1920, des vaches meurent d'hémorragies au Canada et aux États-Unis, sans que les vétérinaires comprennent. En février 1933, un fermier du Wisconsin, Ed Carlson, roule jusqu'à Madison avec une vache morte, un seau de sang qui ne coagule pas et du foin moisi. Le chercheur Karl Paul Link prend l'affaire. Que va-t-il trouver dans ce foin ?",
   "hook": "Une vache morte, un seau de sang qui ne coagule pas, du foin moisi."
  },
  "pa21": {
-  "blurb": "En 1879, en Espagne, le juriste et archéologue amateur Marcelino Sanz de Sautuola explore la grotte d'Altamira, sur sa propriété. Sa fille María, huit ans, lève la tête et découvre au plafond des animaux peints. Les spécialistes français se moquent de lui et le soupçonnent d'avoir tout peint lui-même. Il meurt en 1888, bien avant que ses détracteurs ne changent d'avis.",
+  "blurb": "En 1879, en Espagne, le juriste et archéologue amateur Marcelino Sanz de Sautuola explore la grotte d'Altamira, sur sa propriété. Sa fille María, huit ans, lève la tête et découvre au plafond des animaux peints. Les spécialistes français se moquent de lui et le soupçonnent d'avoir tout peint lui-même. Qui aura raison, et quand ? Accroche : Une fillette lève les yeux ; son père sera-t-il cru ?",
   "hook": "Une fillette lève les yeux ; son père passera pour un faussaire."
  },
  "pa22": {
@@ -28,7 +28,7 @@
   "hook": "Une pierre tombe longtemps dans un trou, puis quatre garçons descendent."
  },
  "pa23": {
-  "blurb": "En juillet 1799, pendant la campagne d'Égypte, le lieutenant français Pierre-François Bouchard dirige des travaux dans un vieux fort près de Rosette. Ses soldats démolissent un mur et dégagent un bloc de granit noir couvert de trois écritures, qui répètent un même décret. En 1802, la pierre arrive en Angleterre, saisie par les Britanniques. Personne ne sait ce que Bouchard a reconnu au premier regard.",
+  "blurb": "En juillet 1799, pendant la campagne d'Égypte, le lieutenant français Pierre-François Bouchard dirige des travaux dans un vieux fort près de Rosette. Ses soldats démolissent un mur et dégagent un bloc de granit noir couvert de trois écritures, qui répètent un même décret. Où cette pierre va-t-elle finir ? Personne ne sait ce que Bouchard a reconnu au premier regard.",
   "hook": "Un mur démoli, un bloc noir, trois écritures pour un seul texte."
  },
  "pa24": {
@@ -36,15 +36,15 @@
   "hook": "Une pierre lancée contre une chèvre fait éclater un pot d'argile."
  },
  "pa25": {
-  "blurb": "En 1974, la sécheresse frappe le village de Xiyang, en Chine. Le paysan Yang Zhifa et ses cinq frères creusent un puits. À quinze mètres, ils remontent une tête en terre cuite grandeur nature. Des archéologues établissent que des figures de soldats, de chars et de chevaux, vieilles de plus de 2 000 ans, ont été faites pour la tombe du premier empereur de Chine.",
+  "blurb": "En 1974, la sécheresse frappe un village chinois et des paysans creusent un puits. Au fond, une tête humaine en argile, grandeur nature. Dessous, une armée entière, faite pour garder un empereur dans l'au-delà. Qui a découvert ce trésor, qui a prévenu les autorités, et que sont devenus les paysans ensuite ?",
   "hook": "En cherchant de l'eau, six frères trouvent une armée enterrée."
  },
  "pa27": {
-  "blurb": "Jocelyn Bell est étudiante en doctorat à Cambridge. En 1967, elle dépouille à la main des mètres de papier d'enregistrement d'un radiotélescope qu'elle a aidé à construire, et repère un signal minuscule qui revient avec le ciel. Ses impulsions régulières font plaisanter l'équipe sur de possibles « petits hommes verts ». Le prix Nobel de 1974 pour cette découverte ne lui est pas attribué.",
+  "blurb": "Jocelyn Bell est étudiante en doctorat à Cambridge. En 1967, elle dépouille à la main des mètres de papier d'enregistrement d'un radiotélescope qu'elle a aidé à construire, et repère un signal minuscule qui revient avec le ciel. Ses impulsions régulières font plaisanter l'équipe sur de possibles « petits hommes verts ». Que viennent-elles de découvrir ?",
   "hook": "Un gribouillis perdu dans des mètres de papier bat la mesure."
  },
  "pa28": {
-  "blurb": "Le 13 mars 1781, à Bath, en Angleterre, William Herschel, musicien d'origine allemande et astronome amateur, observe le ciel depuis son jardin avec un télescope qu'il a construit. Il remarque un point qui grossit, puis qui bouge, et le prend pour une comète. Mais l'objet n'a pas de queue. Il sera reconnu comme une septième planète, pourtant déjà vue avant lui.",
+  "blurb": "Le 13 mars 1781, à Bath, en Angleterre, William Herschel, musicien d'origine allemande et astronome amateur, observe le ciel depuis son jardin avec un télescope qu'il a construit. Il remarque un point qui grossit, puis qui bouge, et le prend pour une comète. Mais l'objet n'a pas de queue. Qu'a-t-il vraiment vu ?",
   "hook": "Plusieurs astronomes l'avaient notée avant lui, comme une simple étoile."
  },
  "pa30": {
@@ -64,7 +64,7 @@
   "hook": "Il voit passer des navires. Aucun ne le voit."
  },
  "sv04": {
-  "blurb": "Le 16 juillet 1945, le croiseur américain Indianapolis quitte San Francisco avec des pièces de la bombe qui sera lancée sur Hiroshima. Après leur livraison, il repart vers les Philippines sans escorte. Le 30 juillet, un sous-marin japonais le torpille et il coule en douze minutes. Des centaines d'hommes se retrouvent à l'eau, et les secours tardent plusieurs jours.",
+  "blurb": "Fin juillet 1945, un croiseur américain qui vient de livrer les éléments de la première bombe atomique est coulé en douze minutes. Près de neuf cents hommes se retrouvent dans l'eau. Un navire de guerre peut-il disparaître sans que personne ne s'en inquiète ? Et combien d'entre eux seront encore en vie quand quelqu'un les cherchera enfin ?",
   "hook": "Il a livré la bombe, puis personne n'a signalé sa disparition."
  },
  "sv05": {
@@ -88,7 +88,7 @@
   "hook": "Il mange ses chiens un à un pour rentrer vivant."
  },
  "sv10": {
-  "blurb": "Ada Blackjack, jeune mère de Nome, en Alaska, accepte en 1921 de partir comme couturière avec quatre hommes sur l'île Wrangel, en mer des Tchouktches, pour la revendiquer au nom de l'explorateur Vilhjalmur Stefansson. Le navire de relève n'arrive pas. En janvier 1923, trois hommes partent sur la banquise et ne reviennent jamais. Elle reste avec le dernier, malade du scorbut.",
+  "blurb": "En 1921, Ada Blackjack, mère d'un enfant malade, accepte un emploi de couturière pour une expédition de quatre hommes sur une île déserte de l'océan Arctique. Elle n'a jamais vécu en pleine nature. Deux ans plus tard, l'île est de nouveau en vue des navires. Voici ce qui s'est passé entre-temps, et ce que personne n'a jamais pu établir.",
   "hook": "Seule sur une île avec un malade, elle apprend à chasser."
  },
  "sv11": {
@@ -112,7 +112,7 @@
   "hook": "Ils apprennent à la radio que les recherches sont terminées."
  },
  "sv16": {
-  "blurb": "Le 5 août 2010, vers 14 heures, la montagne s'effondre dans la mine de San José, dans le désert d'Atacama, au Chili. Trente-trois mineurs restent enfermés dans un refuge d'environ cinquante mètres carrés, avec des vivres prévus pour deux ou trois jours. Ils rationnent, s'organisent, votent. En surface, les sauveteurs forent des sondages sans savoir s'ils sont vivants.",
+  "blurb": "Le 5 août 2010, une mine de cuivre s'effondre au Chili et emmure trente-trois hommes à 700 mètres sous terre. Dix-sept jours plus tard, un foret remonte avec un message. Au-dessus, tout un pays se mobilise ; en bas, un trou de 71 centimètres et des hommes qui doivent s'organiser. Que reste-t-il d'une épreuve pareille ?",
   "hook": "Dix-sept jours sans signe de vie, puis des coups contre un foret."
  },
  "sv17": {
@@ -124,7 +124,7 @@
   "hook": "Il se perd dans les dunes, et survit dans un marabout abandonné."
  },
  "sv19": {
-  "blurb": "Vers le 23 août 1823, dans l'actuel Dakota du Sud, le trappeur Hugh Glass surprend une ourse grizzly avec ses oursons. Elle le déchiquette. Ses compagnons le croient condamné : deux hommes restent pour l'enterrer, mais s'enfuient avec ses armes et le disent mort. Glass reprend conscience seul et rampe vers le fort Kiowa. Certains historiens y voient en partie une légende.",
+  "blurb": "En 1823, un trappeur américain est gravement blessé par un grizzly. Ses compagnons le croient perdu et le laissent mourir. Il serait pourtant revenu les voir, des mois plus tard, à des centaines de kilomètres de là. Voici ce que l'on sait de cette histoire, et ce que l'on ne peut pas prouver. [accroche : « Griffé par une ourse, abandonné, que sait-on vraiment de son retour ? »]",
   "hook": "Abandonné pour mort, il met six semaines à rejoindre un fort."
  },
  "sv20": {

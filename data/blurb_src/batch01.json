@@ -4,11 +4,11 @@
   "hook": "Sa machine à copier l’argent ne copiait rien. Sa valise, elle, était pleine."
  },
  "ar02": {
-  "blurb": "À New York, un homme que l’on appelle George C. Parker vend le pont de Brooklyn à des étrangers, en se présentant comme son propriétaire. Il montre de faux documents et promet les revenus des péages. La police l’arrête plusieurs fois. On ne sait presque rien de sûr sur lui, pas même si Parker était son vrai nom.",
+  "blurb": "Il aurait vendu le pont de Brooklyn à des acheteurs convaincus d'y encaisser un péage. Combien de fois, à qui, pour quel prix ? Personne ne peut le prouver. Ce que les archives établissent est moins drôle : une longue série de condamnations, et des années d'une vie que l'on ne sait presque pas raconter. Que reste-t-il de la légende ?",
   "hook": "Il a vendu un pont que des milliers de gens traversaient chaque jour."
  },
  "ar04": {
-  "blurb": "En 1822, des familles écossaises vendent tout pour partir vers Poyais, un pays d’Amérique centrale vanté par Gregor MacGregor, un ancien soldat qui se dit cacique, c’est-à-dire chef du pays. Un livre décrit sa capitale, son opéra et ses rivières d’or. Environ deux cents colons embarquent sur le Kennersley Castle, vers un endroit qui n’existe pas.",
+  "blurb": "Janvier 1823 : deux cents Écossais quittent tout pour un pays d'Amérique centrale décrit dans un livre, avec capitale, opéra et monnaie à son nom. Les investisseurs de Londres lui prêtent de l'argent. Mais ce pays existe-t-il ailleurs que sur le papier, et que devient l'homme qui le vendait quand les navires arrivent sur la côte ?",
   "hook": "Il avait une capitale, un opéra et une banque. Il n’avait pas de pays."
  },
  "ar06": {
@@ -24,7 +24,7 @@
   "hook": "Elle s’évade par la fenêtre avec des draps, puis rentre en prison toute seule."
  },
  "ar09": {
-  "blurb": "En 1926, en Allemagne, Harry Domela, un jeune homme de vingt et un ans sans le sou, né en Lettonie, se présente comme un prince. Des nobles monarchistes y voient l’héritier des Hohenzollern, la famille impériale, et se mettent à le loger et le fêter. Lui ne confirme jamais, il se contente de ne rien démentir. Aucun ne veut vérifier.",
+  "blurb": "Allemagne, 1926 : l'empereur est en exil, et des nobles regrettent l'Empire. Un jeune homme sans fortune arrive dans leurs salons, d'abord comme prince balte. Puis la rumeur lui prête un autre nom : celui du petit-fils du Kaiser. On l'invite, on le loge, on le promène de ville en ville. Jusqu'où le jeu peut-il aller ?",
   "hook": "Il n’a jamais dit qu’il était prince. Les nobles l’ont dit pour lui."
  },
  "ar10": {
@@ -36,11 +36,11 @@
   "hook": "Le pilote le plus célèbre du cinéma n’a jamais volé pour la Pan Am."
  },
  "ar13": {
-  "blurb": "En 1997, une famille du Texas retrouve Nicholas Barclay, son fils disparu à treize ans trois ans plus tôt. L’adolescent a pourtant l’air plus grand, les yeux différents, un accent étrange. En vérité, c’est Frédéric Bourdin, un Français de vingt-trois ans surnommé le Caméléon, qui vit chez eux plusieurs mois. On ne sait toujours pas ce qui est arrivé à Nicholas.",
+  "blurb": "Trois ans après la disparition de son fils, une famille texane reçoit un appel : il est vivant, en Espagne. Quand il descend de l'avion, il est plus grand, ses yeux sont différents, son accent est étrange. La famille l'accueille quand même. Pourquoi ouvre-t-on sa porte à quelqu'un qui ne ressemble pas à celui qu'on attend ?",
   "hook": "Une famille a accueilli un inconnu parce qu’elle voulait désespérément retrouver son fils."
  },
  "ar14": {
-  "blurb": "Dans les années 1990, à Los Angeles, Christophe Rocancourt, un Français né à Honfleur, commande du champagne, paie en liquide et dit s’appeler Rockefeller. Il se fait passer pour un producteur, un héritier ou un prince, et ses voisins de table lui confient leur argent. Arrêté au Canada en 2001, il est condamné à New York en 2003.",
+  "blurb": "Dans les années 1990, à Los Angeles, Christophe Rocancourt, un Français né à Honfleur, commande du champagne, paie en liquide et dit s'appeler Rockefeller. Il se fait passer pour un producteur, un héritier ou un prince, et ses voisins de table lui confient leur argent. Combien de temps une scène bien jouée peut-elle tenir lieu de preuve ?",
   "hook": "Il payait le champagne en liquide, et la scène faisait le reste."
  },
  "ar15": {
@@ -60,35 +60,35 @@
   "hook": "Le magazine a payé deux fois pour un seul mensonge."
  },
  "ar20": {
-  "blurb": "En 1912, à Londres, le paléontologue Arthur Smith Woodward présente un crâne et une mâchoire trouvés à Piltdown, dans le Sussex, par l’amateur Charles Dawson. Il y voit le chaînon manquant entre le singe et l’homme. Quarante et un ans plus tard, un test chimique révèle un crâne humain moderne et une mâchoire d’orang-outan aux dents limées. Le faussaire n’est pas identifié avec certitude.",
+  "blurb": "En 1912, à Londres, le paléontologue Arthur Smith Woodward présente un crâne et une mâchoire trouvés à Piltdown, dans le Sussex, par l'amateur Charles Dawson. Il y voit le chaînon manquant entre le singe et l'homme. Pendant des décennies, des savants l'étudient, le mesurent, le défendent. Qu'a-t-on vraiment tenu entre les mains, et qui l'avait préparé ?",
   "hook": "Pendant quarante et un ans, on a admiré un singe maquillé en ancêtre."
  },
  "ar21": {
-  "blurb": "En 1869, à Cardiff, dans l’État de New York, deux ouvriers creusant un puits derrière une grange déterrent un géant de pierre de plus de trois mètres. Le fermier fait payer l’entrée. En réalité, un fabricant de tabac, George Hull, l’a fait tailler dans du gypse et enterrer un an plus tôt, après avoir perdu une dispute sur la Genèse.",
+  "blurb": "En 1869, à Cardiff, dans l'État de New York, deux ouvriers creusant un puits derrière une grange déterrent un géant de pierre de plus de trois mètres. Le fermier fait payer l'entrée, la foule accourt, les savants se disputent. D'où vient cette silhouette, qui l'a mise là, et pourquoi tant de gens continuent-ils de payer pour la voir ?",
   "hook": "Les experts criaient au faux, et le public continuait de payer."
  },
  "ar22": {
-  "blurb": "En août 1835, le journal The Sun publie six articles attribués à l’astronome britannique John Herschel. Selon eux, son télescope géant a découvert la vie sur la Lune, avec des licornes et des créatures ailées comme des chauves-souris. Le texte est précis et technique, et Herschel est trop loin pour répondre. Le journal finit par admettre que tout était inventé.",
+  "blurb": "En août 1835, le journal The Sun publie six articles attribués à l'astronome britannique John Herschel. Selon eux, son télescope géant a découvert la vie sur la Lune, avec des licornes et des créatures ailées comme des chauves-souris. Le texte est précis et technique, et Herschel est trop loin pour répondre. Combien de temps le public va-t-il y croire ?",
   "hook": "Un astronome célèbre, trop loin pour démentir, aurait vu des hommes-chauves-souris sur la Lune."
  },
  "ar23": {
-  "blurb": "En avril 1817, près de Bristol, en Angleterre, une jeune femme au turban parle une langue que personne ne comprend. Elle se dit Caraboo, princesse d’une île lointaine, et un marin portugais prétend traduire ses paroles. En réalité, elle s’appelle Mary Willcocks, fille d’un cordonnier du Devon. Une logeuse la reconnaît sur un portrait publié dans un journal.",
+  "blurb": "Au printemps 1817, une jeune femme en turban surgit sur une route anglaise. Elle ne parle aucune langue connue, répète un seul mot, et pourtant un notable la reçoit chez lui comme une princesse venue de l'autre bout du monde. Qui est-elle vraiment, et combien de temps le conte peut-il durer ? Le plus étonnant vient peut-être après.",
   "hook": "Elle a inventé une langue, et chacun y a mis le sens qu’il voulait."
  },
  "ar24": {
-  "blurb": "En 1866, un boucher australien en faillite arrive en Angleterre et se dit Roger Tichborne, héritier d’une riche famille disparu en mer. Lady Tichborne, sa mère, le reconnaît. Un procès pénal de cent quatre-vingt-huit jours le déclare imposteur et le condamne à quatorze ans de prison. Pourtant, des milliers de gens continuent de le soutenir.",
+  "blurb": "En 1854, l'héritier d'une riche famille anglaise disparaît en mer. Sa mère refuse de l'admettre et fait paraître des annonces jusqu'en Australie. Onze ans plus tard, un boucher en faillite répond. Il sera reconnu par la mère et jugé dans l'un des plus longs procès de l'histoire britannique. Qui est-il ? ACCROCHE proposée : Sa mère l'a reconnu. Un procès de cent quatre-vingt-huit jours devait trancher.",
   "hook": "Sa mère l’a reconnu. Un jury a conclu que ce n’était pas son fils."
  },
  "ar25": {
-  "blurb": "En 1920, à Berlin, une jeune femme tente de se jeter d’un pont et refuse de dire son nom. On la connaît bientôt comme Anna Anderson, et certains la croient Anastasia, fille du dernier tsar, massacrée avec sa famille en 1918. Une partie des Romanov la rejette, et la justice allemande s’enlise pendant des décennies. L’ADN a tranché.",
+  "blurb": "En 1918, la famille du dernier tsar de Russie est exécutée, et personne ne montre les corps. Deux ans plus tard, une inconnue que l'on sauve d'un canal à Berlin refuse de dire son nom. Des proches des Romanov la croient, d'autres la rejettent, les tribunaux ne tranchent pas. Qui était-elle, et qu'est-ce qui pourra enfin départager les témoins ?",
   "hook": "Le procès a duré plus longtemps que tout autre en Allemagne."
  },
  "ar26": {
-  "blurb": "En 1996, en Indonésie, la petite société canadienne Bre-X annonce un des plus grands gisements d’or du monde, à Busang, sur l’île de Bornéo. Son action s’envole et de grandes sociétés minières se disputent le site. En mars 1997, une vérification n’y trouve presque pas d’or. Le géologue qui dirigeait les forages meurt en tombant d’un hélicoptère, et sa mort reste jugée suspecte.",
+  "blurb": "En 1996, une petite société canadienne annonce l'un des plus grands gisements d'or de l'histoire, au cœur de la jungle de Bornéo. Les grands noms de l'industrie, un président et des fonds de pension se pressent. Puis un géologue tombe d'un hélicoptère, et une vérification indépendante est exigée. Qu'allait-elle trouver ? ACCROCHE proposée : Le plus gros gisement d'or du monde, et personne pour regarder la roche.",
   "hook": "Les géants de l’or se battaient pour une mine qui n’existait pas."
  },
  "ar28": {
-  "blurb": "Dans les années 1920, dans le Kansas, John Brinkley, qui n’a qu’un diplôme acheté, greffe des testicules de chèvre à des hommes pour sept cent cinquante dollars. Il anime aussi une émission de radio où il recommande des remèdes vendus par ses pharmacies. En 1930, le Kansas lui retire sa licence. Il a signé les certificats de décès de quarante-deux personnes.",
+  "blurb": "Un diplôme acheté cent dollars, une clinique au milieu du Kansas, des greffes de glandes de chèvre à 750 dollars : John Brinkley n'a rien d'un médecin, mais il a une voix. Interdit d'exercer, chassé des ondes américaines, il se lance en politique. Comment un charlatan est-il devenu un homme politique, et jusqu'où ira-t-il ? ACCROCHE proposée : Un faux docteur, un micro, et les électeurs du Kansas.",
   "hook": "Sa radio lui apportait la confiance, ses pharmacies encaissaient."
  },
  "ar29": {
@@ -96,27 +96,27 @@
   "hook": "Le festival de luxe promis ressemblait à un camp de secours détrempé."
  },
  "cs01": {
-  "blurb": "Dans la nuit du 8 août 1963, en Angleterre, le train postal Glasgow-Londres s’arrête devant un signal rouge. Une quinzaine d’hommes, menés par Bruce Reynolds, ont masqué le signal vert avec un gant. Ils emportent environ 2,6 millions de livres. Le mécanicien Jack Mills, frappé à la tête, ne se remettra jamais tout à fait. Qui a frappé, on ne le sait pas.",
+  "blurb": "Un mécanicien de train s'arrête devant un signal rouge, comme il l'a fait mille fois. Mais cette nuit d'août 1963, la lumière a été truquée. Une quinzaine d'hommes attendent dans le noir, avec un plan simple. Tout est prévu, sauf peut-être ce qu'ils vont laisser derrière eux. Que reste-t-il de la légende quand on revient sur les faits ?",
   "hook": "Le casse du siècle se disait sans arme. Un homme en est resté blessé."
  },
  "cs02": {
-  "blurb": "En 1950, à Boston, onze hommes masqués entrent avec des clés copiées dans les locaux de la société de transport de fonds Brink’s. En vingt minutes, ils attachent cinq employés et repartent avec 2,775 millions de dollars. Le surintendant de police pense à un coup de l’intérieur et se trompe. Les arrestations n’arrivent qu’en janvier 1956, juste avant la prescription.",
+  "blurb": "Janvier 1950, Boston : des hommes masqués entrent avec une clé dans les bureaux d'une société de transport de fonds et repartent avec près de trois millions de dollars. Aucune trace. Pendant six ans, la police cherche en vain. Qui va rompre le silence, et qu'est devenu l'argent ? ACCROCHE proposée : Six ans de silence, et un compte à rebours que personne ne voyait.",
   "hook": "Ils ont attendu six ans sans être arrêtés, à quelques jours de la prescription."
  },
  "cs03": {
-  "blurb": "Le 11 décembre 1978, à l’aéroport JFK de New York, des hommes cagoulés prennent des otages dans le terminal cargo de la compagnie Lufthansa. Ils repartent avec 72 cartons, soit près de six millions de dollars en argent et en bijoux. Quelques jours plus tard, un des complices est abattu, puis d’autres disparaissent. L’argent n’a jamais été retrouvé.",
+  "blurb": "Décembre 1978, aéroport JFK : des hommes cagoulés vident un entrepôt de Lufthansa et repartent avec trois fois plus que prévu. Les semaines suivantes, ceux qui connaissaient le plan disparaissent un à un. Un film en a fait une légende. Que sait-on vraiment de ce qui s'est passé, et qui en a répondu ?",
   "hook": "Le fourgon a été retrouvé deux jours plus tard. L’argent, jamais."
  },
  "cs04": {
-  "blurb": "Le 16 février 2003, à Anvers, en Belgique, 109 des 189 coffres d’une chambre forte ultra protégée sont trouvés ouverts. Plus de cent millions de dollars ont disparu. Leonardo Notarbartolo, un Italien qui louait un bureau dans l’immeuble, a tout observé pendant deux ans. Des déchets jetés sur le bord d’une route, dont un sandwich à la salami, mènent à lui.",
+  "blurb": "Une chambre forte à deux étages sous terre, des détecteurs de chaleur, un radar, un capteur sismique : tout semblait prévu pour que personne n'entre. En février 2003, 109 coffres sont pourtant ouverts, et des voleurs repartent avec plus de 100 millions de dollars. Comment ont-ils fait, et que va-t-on trouver derrière eux ? ACCROCHE proposée : Dix systèmes de sécurité, et un détail que personne n'avait prévu.",
   "hook": "Dix couches de sécurité, battues par de la laque et du ruban adhésif."
  },
  "cs05": {
-  "blurb": "En novembre 1983, en Angleterre, six hommes entrent dans l’entrepôt de Brink’s-Mat. Ils comptaient trouver environ un million de livres. Ils repartent avec près de trois tonnes d’or. Les voleurs sont vite pris, mais l’or a déjà été fondu et blanchi par d’autres. Où est passé le reste, on ne sait pas.",
+  "blurb": "Novembre 1983 : six braqueurs cagoulés entrent dans un entrepôt de Heathrow pour trois millions de livres en billets. Ils trouvent à la place trois tonnes d'or, impossible à dépenser. Pour s'en débarrasser, il faudra des fours, des bijoutiers, des complices. Qui acceptera de toucher à cet or, et à quel prix ?",
   "hook": "Ils cherchaient des pesetas et sont tombés sur trois tonnes d’or."
  },
  "cs06": {
-  "blurb": "Pendant le week-end du 14 juillet 1976, à Nice, des hommes creusent depuis les égouts un tunnel de huit mètres et vident la chambre forte d’une banque. Sur un mur, ils écrivent : « Sans armes, ni haine, ni violence. » Le photographe Albert Spaggiari, arrêté, saute d’une fenêtre du palais de justice et s’enfuit. Le butin n’a jamais été retrouvé.",
+  "blurb": "Juillet 1976 : pendant un week-end de trois jours, Nice se vide, et des hommes creusent sous la chaussée vers les coffres d'une banque. Ils laissent un message sur un mur. Qui était le vrai chef ? Deux livres s'opposent encore, et chacun prétend détenir la réponse.",
   "hook": "Il a sauté par la fenêtre du tribunal, une moto l’attendait."
  },
  "cs07": {
@@ -132,7 +132,7 @@
   "hook": "Les grands-pères du casse ont percé le béton pendant tout un week-end."
  },
  "cs10": {
-  "blurb": "Le 29 décembre 2025, à Gelsenkirchen, en Allemagne, les pompiers entrent dans une agence de la banque Sparkasse après une alarme incendie. La salle des coffres a été percée à la perceuse : plus de 3 000 coffres sur 3 300 sont forcés. Le butin est estimé entre 10 et 90 millions d’euros. En mars 2026, personne n’est arrêté et les auteurs restent inconnus.",
+  "blurb": "Le 29 décembre 2025, à Gelsenkirchen, en Allemagne, les pompiers entrent dans une agence de la banque Sparkasse après une alarme incendie. La salle des coffres a été percée à la perceuse : plus de 3 000 coffres sur 3 300 sont forcés. Le butin est estimé entre 10 et 90 millions d'euros. Qui sont les auteurs, et que sait-on vraiment ?",
   "hook": "Les coffres ont été vidés par un trou percé depuis une salle d’archives."
  },
  "cs16": {
@@ -144,11 +144,11 @@
   "hook": "Hors-bord, déguisements en femmes, diamants cachés dans un pot de crème."
  },
  "cs18": {
-  "blurb": "Le 28 juillet 2013, à Cannes, en plein jour, un homme masqué par une écharpe et armé d’un pistolet entre dans un salon de l’hôtel Carlton par une porte-fenêtre. Il remplit une valise de 72 bijoux d’une exposition du milliardaire Lev Leviev, d’une valeur de 136 millions de dollars. Aucun garde n’est armé. Le voleur n’a jamais été identifié.",
+  "blurb": "Un dimanche de juillet, sur la Croisette, un homme à casquette entre dans un salon de l'hôtel Carlton avec un pistolet. Une minute plus tard, il repart à pied avec une valise pleine de bijoux. D'abord estimé à 40 millions d'euros, le butin double. Qui était cet homme, et la police pouvait-elle l'arrêter ?",
   "hook": "Trois gardes sans arme ont regardé un homme seul emporter 136 millions de dollars."
  },
  "cs19": {
-  "blurb": "Le 6 août 2009, à Londres, deux hommes entrent dans la boutique de joaillerie Graff, déguisés avec des perruques et des prothèses en latex, posées par une maquilleuse qui croyait travailler pour un clip musical. Ils menacent le personnel et repartent avec 43 bijoux d’une valeur de près de 40 millions de livres. Les voleurs sont condamnés, mais aucun bijou n’a été retrouvé.",
+  "blurb": "Quatre heures de maquillage, des prothèses en latex, des perruques : deux hommes se fabriquent un autre visage pour braquer une joaillerie de New Bond Street. Le butin approche 40 millions de livres. Mais un masque est-il aussi sûr qu'il le paraît ? ACCROCHE proposée : Ils avaient tout changé d'eux-mêmes. Avaient-ils tout prévu ?",
   "hook": "Quatre heures de maquillage, et la mère d’un voleur ne l’aurait pas reconnu."
  }
 }
