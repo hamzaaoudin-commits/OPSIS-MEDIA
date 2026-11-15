@@ -2263,8 +2263,11 @@ function renderLayer(){
   requestAnimationFrame(function(){layer.classList.add('in');});
   bindLayer(top);
 }
-function push(x){S.stack.push(x);renderLayer();}
-function back(){S.stack.pop();selBar.classList.remove('on');if(S.stack.length)renderLayer();else{if(AU.on)auStop();lv.classList.remove('focus','peek');layer.classList.remove('in');var y=main.scrollTop;renderMain();main.scrollTop=y;}}
+function push(x){S.stack.push(x);renderLayer();try{history.pushState({o:S.stack.length},'');}catch(e){}}
+/* retour : bouton, geste du bord de l'écran ou touche retour du navigateur font la même chose (revenir à l'écran précédent) */
+function back(){var hs=null;try{hs=history.state;}catch(e){}if(S.stack.length&&hs&&hs.o){try{history.back();return;}catch(e){}}doBack();}
+window.addEventListener('popstate',function(){if(S.stack.length)doBack();});
+function doBack(){S.stack.pop();selBar.classList.remove('on');if(S.stack.length)renderLayer();else{if(AU.on)auStop();lv.classList.remove('focus','peek');layer.classList.remove('in');var y=main.scrollTop;renderMain();main.scrollTop=y;}}
 function bindLayer(top){
   lv.classList.toggle('bookmode',top.type==='read'&&S.mode==='book');lv.classList.toggle('focus',top.type==='read'&&!!S.focus);lv.classList.remove('peek');selBar.classList.remove('on');
   if(AU.on&&(top.type!=='read'||top.id!==AU.id))auStop();
