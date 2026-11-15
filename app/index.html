@@ -523,12 +523,14 @@
   .ccard .cfan .poster:nth-child(3){left:82px;transform:rotate(8deg);transform-origin:bottom left}
   .ccard b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:18px;line-height:.98;margin-top:auto;letter-spacing:.2px}
   .ccard small{display:block;font-size:11.5px;color:rgba(237,230,218,.62);margin-top:4px}
-  .ccard.pcard{background:#0d0d0f;height:170px}
-  .ccard.pcard::before{background:linear-gradient(160deg,var(--c,#D2232C),transparent 62%);opacity:.38}
-  .pcard .pn{display:flex;align-items:flex-end;gap:6px;height:50px}.pcard .pn em{font:900 54px/.8 var(--disp);font-style:normal;letter-spacing:-1px;color:var(--bone)}.pcard .pn span{font:700 10px/1.1 var(--ui);letter-spacing:1.8px;color:rgba(237,230,218,.7);padding-bottom:3px}
-  .pcard .pt{position:relative;display:flex;justify-content:space-between;align-items:center;margin:12px 2px 10px;height:10px}.pcard .pt::before{content:"";position:absolute;left:4px;right:4px;top:50%;height:2px;margin-top:-1px;background:repeating-linear-gradient(90deg,rgba(237,230,218,.28) 0 3px,transparent 3px 7px)}
-  .pcard .pt i{position:relative;width:7px;height:7px;border-radius:50%;background:#1d1d21;border:1.5px solid rgba(237,230,218,.45)}.pcard .pt i.d{background:var(--red);border-color:var(--red)}.pcard .pt i.n{width:10px;height:10px;border-color:var(--bone);background:var(--bone);box-shadow:0 0 0 3px rgba(237,230,218,.18)}
-  .pcard b{margin-top:0;font-size:17px}
+  .ccard.pcard{height:170px;padding:0;background:#0d0d0f;justify-content:flex-end}
+  .ccard.pcard::before{display:none}
+  .pcard .pbg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;border-radius:0;transform:scale(1.25);transform-origin:50% 28%;filter:saturate(1.1)}
+  .pcard .pbg svg{width:100%;height:100%}
+  .pcard::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(9,9,10,0) 0%,rgba(9,9,10,.7) 52%,rgba(9,9,10,.96) 100%)}
+  .pcard .pk{position:absolute;left:12px;top:12px;font:700 10px/1 var(--ui);letter-spacing:1.8px;padding:6px 9px;border-radius:999px;background:rgba(9,9,10,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--bone)}
+  .pcard .pbody{padding:0 12px 12px}.pcard b{margin:0;font-size:19px}
+  .pcard .pseg{display:flex;gap:3px;margin-top:9px}.pcard .pseg i{flex:1;height:3px;border-radius:2px;background:rgba(237,230,218,.3)}.pcard .pseg i.d{background:var(--red)}.pcard .pseg i.n{background:var(--bone)}
   .rail .ccard,.rail .ccw{scroll-snap-align:start}
   .ccw{position:relative;flex:none}
   .ccsave{position:absolute;top:10px;right:10px;z-index:3;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(10,10,10,.72);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
@@ -2803,9 +2805,9 @@ function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
   return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-pick="'+id+'" data-rec="1"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
 function colCard(c,attr,extra){
   var col=(STORIES[c.ids[0]]&&STORIES[c.ids[0]].c)||'#D2232C',isP=/data-path=/.test(attr||''),card;
-  if(isP){var n=c.ids.length,d=pathDone(c),nx=-1,dots='';c.ids.forEach(function(id,i){var dn=!!S.read[id];if(!dn&&nx<0)nx=i;});
+  if(isP){var n=c.ids.length,d=pathDone(c),nx=-1,dots='';c.ids.forEach(function(id,i){if(!S.read[id]&&nx<0)nx=i;});
     c.ids.forEach(function(id,i){dots+='<i class="'+(S.read[id]?'d':i===nx?'n':'')+'"></i>';});
-    card='<button class="ccard pcard" '+attr+' style="--c:'+col+'"><span class="pn"><em>'+n+'</em><span>ÉTAPES</span></span><span class="pt">'+dots+'</span><b>'+esc(c.n)+'</b><small>'+(d?(d===n?'Parcours terminé':d+' sur '+n+' lues'):'Un sujet, de A à Z')+'</small></button>';}
+    card='<button class="ccard pcard" '+attr+'><span class="poster pbg" data-art="'+STORIES[c.ids[0]].p+'"></span><span class="pk">'+n+' ÉTAPES</span><span class="pbody"><b>'+esc(c.n)+'</b><span class="pseg">'+dots+'</span><small>'+(d?(d===n?'Parcours terminé':d+' sur '+n+' lues'):'À suivre dans l\'ordre')+'</small></span></button>';}
   else card='<button class="ccard" '+attr+' style="--c:'+col+'"><span class="cfan">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span><b>'+esc(c.n)+'</b><small>'+(extra||c.ids.length+' histoires')+'</small></button>';
   var m=/^data-col="([^"]+)"$/.exec(attr||'');
   if(!m)return card;var sv=colSaved(m[1]);
