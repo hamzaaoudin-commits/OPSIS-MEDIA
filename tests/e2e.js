@@ -128,8 +128,8 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     await p.evaluate(()=>document.querySelector('.hero [data-open]').click());await sleep(500);
     ok(await p.evaluate(()=>/Premier paragraphe/.test(document.body.innerText)),'l’histoire du jour s’ouvre et se lit');
     /* notification : texte du jour = l'histoire publiée ce jour-là */
-    const txt=await p.evaluate(()=>{const S=OPSIS.store.S;S.notif=true;S.hour='7 h';return OPSIS.notif.textForDay(OPSIS.day(),OPSIS.data,OPSIS.stories());});
-    ok(/Le récit du jour/.test(txt),'la notification du jour reprend le titre de l’histoire publiée');
+    const txt=await p.evaluate(()=>{const S=OPSIS.store.S;S.notif=true;S.hour='7 h';return JSON.stringify(OPSIS.notif.entryForDay(OPSIS.day(),OPSIS.data,OPSIS.stories()));});
+    ok(/Le récit du jour/.test(txt)&&/"id":"/.test(txt),'la notification du jour reprend le titre de l’histoire publiée');
     /* hors ligne : le cache local suffit */
     await ctx.route(BASE+'/rest/v1/**',r=>r.abort());
     await p.reload();await boot(p,'/app.html');
@@ -149,8 +149,10 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     const p=await page(ctx,null,fake);await boot(p,'/app.html');
     const plan=await p.evaluate(()=>{const S=OPSIS.store.S;S.notif=true;S.hour='7 h';
       return OPSIS.notif.plan(S,OPSIS.data,OPSIS.stories(),new Date(2027,0,5,10,0,0).getTime()).map(n=>({d:OPSIS.day(n.at.getTime()),h:n.at.getHours(),body:n.body}));});
-    eq(plan.length,14,'14 jours programmés');
-    eq([plan[0].d,plan[0].h,plan[13].d],['2027-01-06',7,'2027-01-19'],'à partir de demain 7 h, sur 14 jours');
+    eq(plan.length,8,'7 jours + une seule relance');
+    eq([plan[0].d,plan[0].h,plan[7].d],['2027-01-06',7,'2027-01-13'],'à partir de demain 7 h, 7 jours puis une relance');
+    const night=await p.evaluate(()=>{const S=OPSIS.store.S;S.hour='3 h';const r=OPSIS.notif.plan(S,OPSIS.data,OPSIS.stories(),new Date(2027,0,5,10,0,0).getTime())[0].at.getHours();S.hour='7 h';return r;});
+    eq(night,7,'jamais la nuit : 3 h devient 7 h');
     ok(plan.every(x=>x.body.length>5),'chaque notification a un texte');
     const pre=await p.evaluate(()=>{const S=OPSIS.store.S;S.hour='8 h';return OPSIS.notif.plan(S,OPSIS.data,OPSIS.stories(),new Date(2026,10,5,10,0,0).getTime()).length;});
     eq(pre,1,'avant le lancement : une seule notification, le jour J');
