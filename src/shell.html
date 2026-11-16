@@ -148,8 +148,8 @@
   .lens.plunge{transition:transform 1.05s cubic-bezier(.75,0,.6,1)}
   .lens .ticks{transition:opacity .4s ease}
   .lens.small .ticks{opacity:0}
-  .splash .word{display:flex;font-family:var(--disp);font-weight:900;font-size:66px;line-height:.8;letter-spacing:.1em;color:var(--bone);padding:4px 0}
-  .splash .word span{display:inline-block;opacity:0;transform:translateX(-46px);filter:blur(12px);transition:opacity .45s ease,transform .85s cubic-bezier(.2,.85,.25,1),filter 1s cubic-bezier(.3,0,.2,1)}
+  .splash .word{display:flex;font-family:var(--disp);font-weight:900;font-size:66px;line-height:.8;letter-spacing:.1em;color:var(--bone);padding:4px 0;overflow:visible}
+  .splash .word span{display:inline-block;padding:.16em .04em .1em;margin:-.16em -.04em -.1em;opacity:0;transform:translateX(-46px);filter:blur(12px);transition:opacity .45s ease,transform .85s cubic-bezier(.2,.85,.25,1),filter 1s cubic-bezier(.3,0,.2,1)}
   .splash .word span:nth-child(2){transition-delay:.06s}.splash .word span:nth-child(3){transition-delay:.12s}.splash .word span:nth-child(4){transition-delay:.18s}
   .splash.s4 .word span{opacity:1;transform:none;filter:none}
   .splash .tag{position:absolute;top:calc(50% + 24px);font-family:var(--serif);font-style:italic;font-size:19px;color:var(--dim);opacity:0;transform:translateY(8px);transition:opacity .9s ease,transform .9s ease}
