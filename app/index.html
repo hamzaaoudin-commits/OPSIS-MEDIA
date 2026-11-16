@@ -1677,6 +1677,12 @@ function apertureSVG(o){
 function logoSVG(){return '<svg viewBox="-106 -106 212 212" aria-hidden="true">'+apertureSVG({open:.82,pupil:.62,rot:-34,ring:18,id:'H'})+'</svg>';}
 function libCount(){var n=0;Object.keys(S.saved).forEach(function(k){if(S.saved[k])n++;});Object.keys(S.follow).forEach(function(k){if(S.follow[k])n++;});return n;}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+/* facturation : le texte suit la boutique d'où vient l'appli (App Store, Google Play ou site) ; aucun prestataire de paiement externe n'est appelé dans l'appli des boutiques */
+function billWhere(){var ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(ua),
+  tail='L\'abonnement se renouvelle automatiquement chaque mois, au même prix, jusqu\'à sa résiliation. Vous pouvez le résilier à tout moment, la résiliation prend effet à la fin de la période déjà payée.';
+  if(ios)return {cancel:'Sur iPhone et iPad, l\'abonnement se résilie dans Réglages > votre nom > Abonnements, au moins 24 heures avant la fin de la période en cours.',renew:'Le paiement est débité sur votre compte Apple à la confirmation de l\'achat. '+tail+' Le compte est débité du renouvellement dans les 24 heures qui précèdent la fin de la période. Vous gérez ou résiliez l\'abonnement dans les réglages de votre compte Apple.'};
+  if(and)return {cancel:'Sur Android, l\'abonnement se résilie dans Google Play > Paiements et abonnements > Abonnements, avant la date de renouvellement.',renew:'Le paiement est débité sur votre compte Google Play à la confirmation de l\'achat. '+tail+' Vous gérez ou résiliez l\'abonnement dans Google Play > Paiements et abonnements.'};
+  return {cancel:'L\'abonnement se résiliera ici, en un geste, sans justification.',renew:tail};}
 function toast(t){var e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(toast.k);toast.k=setTimeout(function(){e.classList.remove('show');},1700);}
 function dateFr(){var s=new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});return s.charAt(0).toUpperCase()+s.slice(1);}
 var IC={
@@ -3778,7 +3784,10 @@ function setLayer(k){
       '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">3,99 € par mois, sans engagement. Le paiement ouvrira au lancement : rien ne vous est prélevé avant.</small></span><span class="pill">3,99 €/mois</span></div>'+
       '<div class="opt"><span>Moyen de paiement<small class="os">Aucun moyen de paiement enregistré.</small></span></div>'+
       '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
-      '<div class="opt"><span>Résiliation<small class="os">L\'abonnement se résiliera ici, en un geste, sans justification.</small></span></div></div>';
+      '<div class="opt"><span>Résiliation<small class="os">'+billWhere().cancel+'</small></span></div>'+
+      '<div class="opt lgrow"><button data-restore>Restaurer les achats</button></div></div>'+
+      '<div class="sbox"><div class="opt" style="border-top:0"><span>Renouvellement automatique<small class="os">'+billWhere().renew+'</small></span></div>'+
+      '<div class="opt"><span>Conditions<small class="os">Le prix affiché est le prix mensuel, taxes comprises. Les mentions légales et les conditions d\'utilisation sont consultables dans les réglages.</small></span></div></div>';
   }else if(k==='confid'){
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Garder mon historique de lecture<small class="os">Sert à « Reprendre », aux badges et aux recommandations. Reste sur cet appareil tant que vous n\'avez pas de compte.</small></span><button class="tog" role="switch" aria-checked="'+(S.stats!==false)+'" data-toggle2="stats" aria-label="Garder mon historique de lecture"></button></div>'+
       '<div class="opt lgrow"><button data-export>Télécharger mes données</button></div>'+
@@ -3896,6 +3905,7 @@ function featClick(b,d){
   if(d.voice){S.voice=d.voice;reSet();if(auOK()){try{speechSynthesis.cancel();}catch(e){}var uu=new SpeechSynthesisUtterance('Voici la voix qui vous lira les histoires.');var vv=pickVoice();if(vv){uu.voice=vv;uu.lang=vv.lang;}uu.rate=(S.speed||1)*0.96;speechSynthesis.speak(uu);}return true;}
   if(d.pref!==undefined){var pf=S.x.prefs||[],i=pf.indexOf(+d.pref);if(i>=0)pf.splice(i,1);else pf.push(+d.pref);S.x.prefs=pf;reSet();return true;}
   if(d.langwish){var w=S.x.langWish||[],j=w.indexOf(d.langwish);if(j>=0)w.splice(j,1);else{w.push(d.langwish);toast('C\'est noté : vous serez prévenu');}S.x.langWish=w;reSet();return true;}
+  if(b.hasAttribute('data-restore')){var bl=OPSIS.billing;if(bl&&typeof bl.restore==='function'){toast('Recherche de vos achats…');Promise.resolve(bl.restore()).then(function(r){toast(r&&r.restored?'Achats restaurés':'Aucun achat à restaurer pour ce compte');}).catch(function(){toast('Restauration impossible pour le moment, réessayez');});}else toast('Aucun achat à restaurer pour ce compte');return true;}
   if(b.hasAttribute('data-pluswish')){S.x.plusWish=!S.x.plusWish;reSet();return true;}
   if(b.hasAttribute('data-export')){var blob=new Blob([JSON.stringify({exporte_le:OPSIS.day(),lues:S.read,liste:S.saved,notes:S.rate,progression:S.prog,citations:S.x.quotes||[],collections:S.x.cols||[],recherches:S.x.hist||[],reglages:{format:FM[S.len||3],sens:S.mode,taille:S.fs,theme:S.theme,police:S.font}},null,2)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='opsis-mes-donnees.json';document.body.appendChild(a);a.click();a.remove();toast('Vos données sont téléchargées');return true;}
   if(b.hasAttribute('data-histclear')){S.x.hist=[];toast('Historique de recherche effacé');return true;}
