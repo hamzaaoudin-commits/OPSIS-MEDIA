@@ -42,6 +42,13 @@ let bootRaw=false;
     ok(g.gone&&g.flag&&/in/.test(g.layer),'« Lire l\'histoire du jour » ferme l\'accueil et ouvre la lecture');
     await p.reload();bootRaw=false;await boot(p,'/app.html');await sleep(9000);
     ok(!(await p.evaluate(()=>!!document.querySelector('.onb'))),'le parcours ne revient pas au lancement suivant');
+    /* relancé depuis les réglages, « Explorer le catalogue » ramène à la page principale */
+    await p.evaluate(()=>{OPSIS.ui.openSettings();var r=document.querySelector('[data-set="root"]');if(r)r.click();});await sleep(400);
+    await p.evaluate(()=>{var b=document.querySelector('[data-onbagain]');if(!b){var x=document.createElement('button');x.setAttribute('data-onbagain','');document.getElementById('phone').appendChild(x);b=x;}b.click();});await sleep(500);
+    for(let i=0;i<14;i++){await p.click('[data-onb="next"]');await sleep(80);}
+    await p.click('[data-onb="explore"]');await sleep(900);
+    const hm=await p.evaluate(()=>({st:OPSIS.store.S.stack.length,tab:OPSIS.store.S.tab,sheet:!!document.querySelector('.sheet.show,.setwrap.show'),onb:!!document.querySelector('.onb')}));
+    ok(hm.st===0&&hm.tab==='home'&&!hm.onb,'« Explorer le catalogue » mène à la page principale ('+JSON.stringify(hm)+')');
     await ctx.close();bootRaw=false;
   }
   console.log('1. démarrage et sauvegarde locale');

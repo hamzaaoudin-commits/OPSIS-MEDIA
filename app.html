@@ -4119,12 +4119,15 @@ function onbShow(step){
     if(a){e.stopPropagation();
       if(a==='next'){ONB.step=Math.min(onbN()-1,ONB.step+1);onbRender();}
       else if(a==='prev'){ONB.step=Math.max(0,ONB.step-1);onbRender();}
-      else if(a==='skip'||a==='explore'){onbClose();}
+      else if(a==='skip'){onbClose();}
+      else if(a==='explore'){onbClose();onbHome();}
       else if(a==='read'){onbClose();var id=OPSIS.ui.daily();if(STORIES[id])push({type:'read',id:id});}
       return;}
     if(b.hasAttribute('data-pref')||b.hasAttribute('data-theme')||b.hasAttribute('data-fs')||b.hasAttribute('data-toggle')||b.hasAttribute('data-rm')||b.hasAttribute('data-font')){setTimeout(function(){onbRender(true);},0);}
   });
 }
+/* « Explorer le catalogue » ramène à la page principale, même si le parcours a été relancé depuis les réglages ou une histoire */
+function onbHome(){try{closeSheet();}catch(e){}S.stack=[];S.tab='home';CEL=null;try{if(AU.on)auStop();}catch(e){}lv.classList.remove('focus','peek');layer.classList.remove('in');renderMain();main.scrollTop=0;}
 function onbClose(){var el=ONB.el;if(!el)return;S.x.onb=1;el.classList.add('off');setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},550);ONB={step:0,el:null};}
 function onbN(){return GUIDE.length+2;}
 function onbSet(g){
