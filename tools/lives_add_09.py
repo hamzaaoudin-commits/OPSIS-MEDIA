@@ -7,8 +7,8 @@ add('pt43', 1, 'Livestrong', [
 
 # ---- Mike Tyson (pt07)
 add('pt07', 7, 'Undisputed Truth', [
- "En 2012, Tyson monte un spectacle seul en scène, mis en scène par le cinéaste Spike Lee, qu’il joue à Broadway. Il y raconte sa vie : Brownsville, Cus, la prison, la drogue, la mort de sa fille. Les critiques sont partagés, mais le public est touché par un homme qui dit ce qu’il a fait, sans chercher d’excuses.",
- "C’est une étape. Il apprend à se raconter lui-même. Plus tard viendront un livre, une série animée dans laquelle il joue une version drôle de lui-même, un podcast. L’homme qui faisait peur apprend à faire sourire."])
+ "Le spectacle d’août 2012 est repris en tournée en 2013, puis diffusé par la chaîne HBO en novembre. Son autobiographie, parue la même année, porte le même titre. Il y raconte, entre autres, comment il trichait aux contrôles antidopage.",
+ "Il apparaît au cinéma dans *Rocky Balboa* (2006), *Very Bad Trip* (2009) et *Ip Man 3* (2015). En 2014, il prête sa voix et son personnage à une série animée, *Mike Tyson Mysteries*. Il est intronisé en 2011 au Hall of Fame international de la boxe. L’homme qui faisait peur apprend à faire sourire."])
 
 # ---- Martha Stewart (pt36)
 add('pt36', 2, 'Le magazine, Kmart', [

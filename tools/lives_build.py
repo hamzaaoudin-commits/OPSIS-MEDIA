@@ -53,7 +53,7 @@ L[g] = {'eps': [
     S(g, 3, 0, 2),
     ["Au début, on ne cherche pas à cacher seulement son corps. On cherche à lui donner un autre visage. Le studio essaie d’abord de la transformer : perruque blonde, maquillage épais, costume de petite poupée. Le résultat est faux, et les essais le montrent. Le réalisateur George Cukor, consulté, demande qu’on enlève tout, la perruque et le fard. Il veut une fille de Kansas, naturelle."],
     S(g, 3, 2, 6),
-    ["Le film sort en août 1939. Il reçoit de très bonnes critiques, mais il coûte cher et ne rapporte pas tout de suite autant que le studio l’espérait. Le vrai triomphe du *Magicien d’Oz* viendra plus tard, à force de reprises, puis de la télévision : à partir de 1956, une chaîne américaine le diffuse chaque année, et chaque année des familles entières se rassemblent devant l’écran."],
+    ["Il reçoit de très bonnes critiques, mais il coûte cher et ne rapporte pas tout de suite autant que le studio l’espérait. Le vrai triomphe du *Magicien d’Oz* viendra plus tard, à force de reprises, puis de la télévision : à partir de 1956, une chaîne américaine le diffuse chaque année, et chaque année des familles entières se rassemblent devant l’écran."],
     S(g, 3, 6)),
  ep('Le Chant du Missouri', "Les années de triomphe, deux mariages, et une fille.",
     ["Les années 1940 sont celles du triomphe. Judy Garland enchaîne les comédies musicales, d’abord aux côtés de Mickey Rooney, puis seule en tête d’affiche. Elle est l’une des stars les mieux payées d’Hollywood. Elle a une voix que personne d’autre n’a.",
@@ -242,6 +242,19 @@ for pid in P:
         a = auto(pid)
         if len(a['eps']) >= 2:
             L[pid] = a
+
+# ---- insertions ciblées (vérification des faits) : tools/lives_ins_*.py
+INS = []
+def ins(pid, epn, after, lines):
+    """Insère `lines` après le paragraphe de l'épisode epn (1-based) qui contient `after`."""
+    INS.append((pid, epn, after, lines))
+for _f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), 'lives_ins_*.py'))):
+    exec(open(_f, encoding='utf-8').read())
+for (pid, epn, after, lines) in INS:
+    body = L[pid]['eps'][epn - 1]['body']
+    idx = [i for i, l in enumerate(body) if after in l]
+    assert len(idx) == 1, (pid, epn, after, len(idx))
+    body[idx[0] + 1:idx[0] + 1] = lines
 
 json.dump(L, open(os.path.join(root, 'data/lives.json'), 'w'), ensure_ascii=False, indent=1)
 for pid, v in L.items():

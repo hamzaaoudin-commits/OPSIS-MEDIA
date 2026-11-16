@@ -16,7 +16,7 @@ add('pt18', 2, 'Pepsi, Hammerman, les pantalons', [
  "En 1991, *U Can’t Touch This* lui vaut deux Grammy Awards. Le public adopte ses pantalons larges, resserrés aux chevilles, que l’on appelle partout « Hammer pants ». Il signe un contrat publicitaire avec Pepsi. Une série de dessins animés pour enfants, *Hammerman*, lui est consacrée le samedi matin.",
  "Il est partout : sur les murs, à la télévision, dans les publicités. Il devient en quelques mois l’un des artistes les plus visibles de la planète. C’est aussi l’une des premières fois qu’un rappeur est vendu comme une marque pour toute la famille."])
 add('pt18', 5, 'DanceJam', [
- "Dans les années 2010, Hammer lance une application, DanceJam, où l’on peut publier de courtes vidéos de danse. Elle arrive à l’époque où ce type de format commence à se répandre. Il continue de collaborer avec des jeunes entreprises technologiques et de parler à des étudiants de ce qu’il a appris : une fortune ne se dépense pas comme un salaire.",
+ "Hammer cofonde une application, DanceJam, lancée au tournant des années 2010, où l’on peut publier de courtes vidéos de danse. Elle arrive à l’époque où ce type de format commence à se répandre. Il continue de collaborer avec des jeunes entreprises technologiques et de parler à des étudiants de ce qu’il a appris : une fortune ne se dépense pas comme un salaire.",
  "Dans ses conférences, il parle souvent de gestion de l’argent sans rancœur. Il a transformé sa chute en cours."])
 
 # ---- Notch (pt19)

@@ -5,7 +5,7 @@ add('pt03', 2, 'Oops, Toxic', [
  "En 2000, son deuxième album, *Oops!… I Did It Again*, confirme qu’elle n’est pas un feu de paille. Les concerts s’enchaînent, les contrats publicitaires aussi. Elle passe, en quelques années, de l’adolescente de la chanson de 1998 à une artiste adulte qui contrôle davantage son image et son son.",
  "En 2003, l’album *In the Zone* contient *Toxic*, un morceau électronique que les critiques saluent comme l’un de ses plus audacieux. Il lui vaut un Grammy Award en 2005. Elle est alors au sommet de son art, et l’attention médiatique qui l’entoure est à son comble."])
 add('pt03', 5, 'Piece of Me', [
- "De 2013 à 2017, Britney Spears présente un spectacle régulier à Las Vegas, *Piece of Me*. Elle y chante ses plus grands succès devant des salles pleines. Le spectacle est un succès commercial et la fait revenir sur le devant de la scène.",
+ "Le spectacle *Piece of Me* ouvre à Las Vegas, au Planet Hollywood, le 27 décembre 2013. Prévu pour cent dates, il est prolongé de deux ans, puis jusqu’au 31 décembre 2017. L’un de ses concerts rapporte un record de plus de 1,1 million de dollars pour une seule soirée. Entre-temps, ses albums continuent de sortir : *Femme Fatale* en 2011, *Britney Jean* en 2013, *Glory* en 2016.",
  "Ce contraste est au cœur de l’affaire : à l’époque, la justice considère qu’elle a besoin d’être protégée, mais elle travaille, répète, danse, remplit des salles. Elle dira plus tard à la juge que ce travail ne lui était pas laissé à son choix."])
 
 # ---- Macaulay Culkin (pt04)
