@@ -3695,10 +3695,16 @@ function playIntro(){
   later(enter,5520);
 }
 splash.addEventListener('click',enter);
-playIntro();
-
+/* robustesse : l'intro ne démarre qu'une fois le rendu lourd terminé, les polices prêtes et la mise en page stable ; si l'app passe en arrière-plan (iOS gèle les timers et les images), on saute l'intro au lieu de la laisser se figer à mi-course */
+document.addEventListener('visibilitychange',function(){if(document.hidden)enter();});
+window.addEventListener('pagehide',enter);
 applyLook();renderMain();
+var introGo=false;
+function startIntro(){if(introGo||entered)return;introGo=true;requestAnimationFrame(function(){requestAnimationFrame(function(){if(!entered&&!document.hidden)playIntro();else enter();});});}
+try{if(document.fonts&&document.fonts.ready)document.fonts.ready.then(startIntro);}catch(e){}
+setTimeout(startIntro,700);
 try{if(deepLink())enter();}catch(e){}
+setTimeout(function(){if(!entered)enter();},9000);   /* filet : jamais d'écran d'intro bloqué */
 };
 </script>
 
