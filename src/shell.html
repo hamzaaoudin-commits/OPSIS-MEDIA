@@ -140,7 +140,8 @@
   @keyframes glowBreath{0%,100%{opacity:1}50%{opacity:.78}}
   .lockup{display:flex;align-items:center;gap:4px;margin-top:-52px}
   .lens{flex:none;width:55px;height:55px;margin-top:0;position:relative}
-  .lens .eye{width:100%;height:100%;clip-path:inset(50% 0 50% 0 round 50%);transition:clip-path .75s cubic-bezier(.65,0,.25,1)}
+  /* l'œil est dessiné 3 fois plus grand puis réduit : l'ouverture se joue à l'échelle 3 de la mise en page, donc le navigateur (iOS surtout) le rastérise déjà en haute définition au lieu d'agrandir une image de 55 px */
+  .lens .eye{flex:none;width:300%;height:300%;margin:-100% 0 0 -100%;transform:scale(.333334);clip-path:inset(50% 0 50% 0 round 50%);transition:clip-path .75s cubic-bezier(.65,0,.25,1)}
   .splash.s2 .lens .eye{clip-path:inset(0 0 0 0 round 50%)}
   .lens svg{width:100%;height:100%;display:block;overflow:visible}
   .splash .lens{margin-top:0}
