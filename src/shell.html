@@ -1045,7 +1045,7 @@ var SN="Jusqu'à la chute",BIDS=[],BP=[];
   function mins(w){return Math.max(3,Math.round(w/230));}
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1104,7 +1104,7 @@ var ARSN="L'arnaque parfaite",ARIDS=['eiffel'];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1137,7 +1137,7 @@ var CSSN="Le casse du siècle",CSIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1166,7 +1166,7 @@ var FASN="Faussaires",FAIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1195,7 +1195,7 @@ var PASN="Par accident",PAIDS=['penicilline'];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1225,7 +1225,7 @@ var SVSN="Survivants",SVIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1254,7 +1254,7 @@ var CBSN="Cobayes",CBIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1283,7 +1283,7 @@ var EVSN="Évadés",EVIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1312,7 +1312,7 @@ var IMSN="Imposteurs",IMIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1341,7 +1341,7 @@ var ESSN="Espions",ESIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1370,7 +1370,7 @@ var PNSN="Pannes",PNIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1399,7 +1399,7 @@ var EXSN="Expéditions",EXIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1428,7 +1428,7 @@ var CESN="Codes et énigmes",CEIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1457,7 +1457,7 @@ var FISN="Fiascos",FIIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1486,7 +1486,7 @@ var DISN="Disparus",DIIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1515,7 +1515,7 @@ var PRSN="Procès",PRIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1535,7 +1535,7 @@ var MQD=DATA.D.MQD,MQSN="Marques",MQIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1555,7 +1555,7 @@ var LCD=DATA.D.LCD,LCSN="Licences",LCIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1577,7 +1577,7 @@ var LDSN="Le dernier jour",LDIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1599,7 +1599,7 @@ var VCSN="L'impossible victoire",VCIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1621,7 +1621,7 @@ var DUSN="Le duel",DUIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
@@ -1643,7 +1643,7 @@ var TMSN="Tournage maudit",TMIDS=[];
   function syn(body){
     for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
       if(t.charAt(0)==='!')t=t.slice(1);
-      var re=/[^.!?»]*[.!?»]+(\s|$)/g,o='',m;while((m=re.exec(t))&&o.length<150)o+=m[0];
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
       return (o||t).trim();}
     return '';
   }
