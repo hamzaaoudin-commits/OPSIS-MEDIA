@@ -125,8 +125,14 @@
   /* ---------- intro ---------- */
   .splash{position:absolute;inset:0;z-index:60;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity .55s ease}
   .splash.out{opacity:0;pointer-events:none}
-  .splash .glow{position:absolute;left:50%;top:46%;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(closest-side,rgba(210,35,44,.38),rgba(210,35,44,0));opacity:0;transform:scale(.6);transition:opacity 1.4s ease,transform 1.6s ease}
-  .splash.lit .glow{opacity:1;transform:none}
+  /* halo : cœur chaud + longue décroissance douce (stops lissés, sans bord), souffle lent, trait anamorphique de cinéma */
+  .splash .glow{position:absolute;left:50%;top:46%;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;pointer-events:none;opacity:0;transform:scale(.55);transition:opacity 1.8s ease,transform 2.2s cubic-bezier(.2,.7,.2,1);
+    background:radial-gradient(closest-side,rgba(255,92,84,.34) 0%,rgba(226,48,56,.27) 12%,rgba(210,35,44,.19) 26%,rgba(190,30,40,.11) 42%,rgba(160,24,34,.055) 58%,rgba(120,18,28,.02) 76%,rgba(0,0,0,0) 100%)}
+  .splash .glow::before{content:"";position:absolute;left:50%;top:50%;width:230px;height:230px;margin:-115px 0 0 -115px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,170,150,.30) 0%,rgba(255,110,100,.17) 35%,rgba(255,80,80,.06) 70%,rgba(255,80,80,0) 100%);filter:blur(6px)}
+  .splash .glow::after{content:"";position:absolute;left:8%;right:8%;top:50%;height:2px;margin-top:-1px;border-radius:2px;background:linear-gradient(90deg,rgba(255,90,90,0),rgba(255,110,100,.55) 50%,rgba(255,90,90,0));filter:blur(1.2px);opacity:.8;transform:scaleX(.2);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+  .splash.lit .glow{opacity:1;transform:none;animation:glowBreath 4.2s ease-in-out 2.2s infinite}
+  .splash.lit .glow::after{transform:none}
+  @keyframes glowBreath{0%,100%{opacity:1}50%{opacity:.78}}
   .lockup{display:flex;align-items:center;gap:4px;margin-top:-52px}
   .lens{flex:none;width:55px;height:55px;margin-top:0;position:relative}
   .lens .eye{width:100%;height:100%;clip-path:inset(50% 0 50% 0 round 50%);transition:clip-path .75s cubic-bezier(.65,0,.25,1)}
