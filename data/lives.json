@@ -2970,8 +2970,12 @@
    },
    {
     "t": "Le personnage",
-    "sub": "Le patch s’avère irréalisable.",
+    "sub": "En 2004, à 19 ans, elle quitte Stanford sans diplôme et fonde une entreprise, qu’elle appelle d’abord Real-Time Cures av",
     "body": [
+     "En 2004, à 19 ans, elle quitte Stanford sans diplôme et fonde une entreprise, qu’elle appelle d’abord Real-Time Cures avant de choisir le nom de Theranos, mot formé à partir de « thérapie » et « diagnostic ». Elle s’appuie sur un de ses anciens professeurs de Stanford, qui lui apporte sa caution.",
+     "Elle lève ses premiers fonds notamment auprès de relations de sa famille. Elle comprend vite que, pour une entreprise qui n’a pas encore de produit, la crédibilité de ceux qui la soutiennent compte plus que la technologie.",
+     "*",
+     "#Le personnage",
      "Le patch s’avère irréalisable. L’idée évolue. Theranos va inventer une petite machine, de la taille d’une imprimante, capable de réaliser toutes les analyses de sang possibles à partir d’une goutte prélevée au bout du doigt. Plus de grosses seringues, plus de laboratoires, plus d’attente. Des résultats rapides, bon marché, accessibles à tous. Elle la baptise Edison.",
      "L’idée est magnifique. Elle répond à une peur universelle, celle des aiguilles. Elle promet de révolutionner la médecine. Il ne manque qu’une chose : la science pour la faire fonctionner.",
      "Pendant ce temps, Elizabeth Holmes se construit un personnage. Elle s’habille exclusivement de cols roulés noirs, comme Steve Jobs, son idole. Elle cligne rarement des yeux quand elle regarde ses interlocuteurs. Et elle parle d’une voix très grave, presque masculine. D’anciens collègues raconteront qu’il lui arrivait, en fin de soirée, de retrouver une voix plus aiguë, comme si la voix grave faisait partie du rôle.",
@@ -3007,7 +3011,15 @@
      "Le procès s’ouvre en septembre 2021 à San José, en Californie. Il dure près de quatre mois. Elizabeth Holmes y comparaît chaque jour, cheveux attachés, vêtue de tailleurs sobres. Elle a abandonné les cols roulés noirs. Elle a abandonné aussi la voix grave. Entre-temps, elle s’est mariée et a eu un enfant.",
      "À la barre, elle se présente comme une jeune femme sincère qui croyait en sa technologie, et qui était manipulée et maltraitée par son ancien compagnon, Sunny Balwani. Il nie.",
      "Le 3 janvier 2022, le jury la déclare coupable d’avoir escroqué ses investisseurs. Il l’acquitte des accusations concernant les patients. En novembre 2022, elle est condamnée à onze ans et trois mois de prison. Sunny Balwani, jugé séparément, est condamné à près de treize ans.",
-     "Le 30 mai 2023, Elizabeth Holmes entre dans une prison fédérale à sécurité minimale, au Texas. Elle a 39 ans. Grâce à des réductions de peine successives, sa sortie est désormais prévue en 2030, après un passage en centre de réinsertion à partir de l’été 2027. En 2025, elle a aussi demandé au président des États-Unis de commuer sa peine. À l’automne 2026, cette demande est toujours en attente.",
+     "Le 30 mai 2023, Elizabeth Holmes entre dans une prison fédérale à sécurité minimale, au Texas. Elle a 39 ans. Grâce à des réductions de peine successives, sa sortie est désormais prévue en 2030, après un passage en centre de réinsertion à partir de l’été 2027. En 2025, elle a aussi demandé au président des États-Unis de commuer sa peine. À l’automne 2026, cette demande est toujours en attente."
+    ]
+   },
+   {
+    "t": "Bad Blood",
+    "sub": "En 2018, le journaliste John Carreyrou publie *Bad Blood*, un livre qui reprend son enquête et raconte comment l’entreprise a été dirigée.",
+    "body": [
+     "En 2018, le journaliste John Carreyrou publie *Bad Blood*, un livre qui reprend son enquête et raconte comment l’entreprise a été dirigée. Il devient un best-seller. Il inspire un documentaire, *The Inventor*, puis une série, *The Dropout*, dans laquelle l’actrice Amanda Seyfried joue Holmes.",
+     "Sunny Balwani, ancien directeur des opérations de Theranos, est jugé séparément. En juillet 2022, il est reconnu coupable de plusieurs chefs de fraude. Il est condamné à douze ans et onze mois de prison. Lui aussi a toujours contesté les accusations.",
      "*",
      "#Ce que dit son histoire",
      "L’histoire d’Elizabeth Holmes est la plus importante de ce chapitre pour une raison très simple : c’est l’histoire d’un récit plus puissant que la réalité.",
@@ -3050,8 +3062,12 @@
    },
    {
     "t": "Le trou",
-    "sub": "FTX et Alameda Research, le fonds d’investissement de Sam, sont censés être deux entreprises séparées.",
+    "sub": "Sam n’est pas seul. Autour de lui, un petit cercle de jeunes gens très proches, qui vivent ensemble dans un grand appartement aux Bahamas.",
     "body": [
+     "Sam n’est pas seul. Autour de lui, un petit cercle de jeunes gens très proches, qui vivent ensemble dans un grand appartement aux Bahamas. Gary Wang, l’ingénieur, cofondateur de FTX. Nishad Singh, un autre ingénieur. Caroline Ellison, qui dirige Alameda.",
+     "Ils partagent les mêmes idées et le même enthousiasme. Ils sont jeunes, brillants, loyaux à Sam. Quand le fonds s’effondre, ils plaident coupables et acceptent de collaborer avec la justice.",
+     "*",
+     "#Le trou",
      "@Derrière la façade, il y a un secret.",
      "FTX et Alameda Research, le fonds d’investissement de Sam, sont censés être deux entreprises séparées. En réalité, elles sont intimement liées. Et l’argent que les clients déposent sur FTX est utilisé par Alameda pour faire des investissements risqués, acheter des biens immobiliers de luxe aux Bahamas, financer des dons politiques, rembourser des prêts. Sans que les clients le sachent.",
      "Tant que tout monte, personne ne s’en aperçoit. Mais en 2022, le marché des cryptomonnaies s’effondre.",
@@ -3066,7 +3082,15 @@
      "En décembre 2022, Sam Bankman-Fried est arrêté aux Bahamas puis extradé vers les États-Unis. Son procès s’ouvre à New York en octobre 2023.",
      "Ses plus proches collaborateurs témoignent contre lui. Parmi eux, Caroline Ellison, qui dirigeait Alameda et qui a été sa compagne. Elle explique au jury qu’il lui avait demandé d’utiliser l’argent des clients. Elle pleure à la barre.",
      "Le 2 novembre 2023, un an jour pour jour après l’article qui avait déclenché la chute, le jury le déclare coupable des sept chefs d’accusation de fraude et de complot. En mars 2024, il est condamné à vingt-cinq ans de prison.",
-     "En juin 2026, une cour d’appel fédérale rejette son recours et confirme la condamnation. Il se tourne vers la Cour suprême et demande au président des États-Unis de le gracier. Sauf grâce, il ne sortira pas de prison avant le milieu des années 2040. Il aura plus de 50 ans.",
+     "En juin 2026, une cour d’appel fédérale rejette son recours et confirme la condamnation. Il se tourne vers la Cour suprême et demande au président des États-Unis de le gracier. Sauf grâce, il ne sortira pas de prison avant le milieu des années 2040. Il aura plus de 50 ans."
+    ]
+   },
+   {
+    "t": "Les autres condamnations",
+    "sub": "Caroline Ellison, qui a plaidé coupable et témoigné contre son ancien compagnon, est condamnée en septembre 2024 à deux ans de prison.",
+    "body": [
+     "Caroline Ellison, qui a plaidé coupable et témoigné contre son ancien compagnon, est condamnée en septembre 2024 à deux ans de prison. Gary Wang et Nishad Singh, qui ont également plaidé coupable et coopéré, ne sont pas condamnés à de la prison ferme.",
+     "Le journaliste Michael Lewis publie en 2023 un livre sur Bankman-Fried, *Going Infinite*, qui retrace l’ascension de Bankman-Fried.",
      "*",
      "#Ce que dit son histoire",
      "@Sam Bankman-Fried a menti, d’une manière particulière. Il n’a pas seulement menti sur ses comptes. Il a menti sur qui il était.",
@@ -3467,15 +3491,23 @@
     ]
    },
    {
-    "t": "Haneda",
-    "sub": "En octobre 2016, Carlos Ghosn se remarie.",
+    "t": "Versailles",
+    "sub": "À son arrivée à Nissan, Ghosn présente un plan : fermer cinq usines au Japon, supprimer environ vingt et un mille postes",
     "body": [
+     "À son arrivée à Nissan, Ghosn présente un plan : fermer cinq usines au Japon, supprimer environ vingt et un mille postes, réduire le nombre de fournisseurs, et renouer avec le bénéfice dans un délai court. Il promet qu’il démissionnera si les objectifs ne sont pas atteints.",
+     "Les résultats arrivent, plus vite que prévu. Nissan retrouve des profits. L’entreprise, qui frôlait la faillite, redevient l’un des constructeurs les plus rentables du pays. C’est ce qui fait de lui un héros au Japon, pays qui n’accorde pas facilement cette place à un étranger.",
+     "*",
+     "#Versailles",
      "En octobre 2016, Carlos Ghosn se remarie. Il organise une fête somptueuse au château de Versailles, dans le Grand Trianon. Le thème évoque Marie-Antoinette. Les invités portent des costumes d’époque.",
      "La fête a été en partie financée dans le cadre d’un partenariat entre Renault et le château. Ghosn affirmera plus tard qu’il ignorait que l’événement avait été facturé ainsi, et qu’il a remboursé.",
      "L’image restera pourtant. Celle d’un homme qui ne fait plus la différence entre son argent et celui de l’entreprise. Entre lui et le roi.",
-     "Il est l’un des patrons les mieux payés d’Europe. Au Japon, où les grands patrons gagnent beaucoup moins, ses rémunérations font grincer des dents. Et la loi japonaise oblige à les déclarer publiquement.",
-     "*",
-     "#Haneda",
+     "Il est l’un des patrons les mieux payés d’Europe. Au Japon, où les grands patrons gagnent beaucoup moins, ses rémunérations font grincer des dents. Et la loi japonaise oblige à les déclarer publiquement."
+    ]
+   },
+   {
+    "t": "Haneda",
+    "sub": "Le jet privé de Carlos Ghosn atterrit.",
+    "body": [
      "@Tokyo, aéroport de Haneda. Le 19 novembre 2018.",
      "Le jet privé de Carlos Ghosn atterrit. Des procureurs japonais montent à bord. Ils l’arrêtent.",
      "Ils l’accusent d’avoir dissimulé une partie de ses revenus, en n’en déclarant qu’une fraction, et d’avoir utilisé l’argent de Nissan à des fins personnelles. Nissan, l’entreprise qu’il a sauvée, a coopéré avec les enquêteurs. Certains de ses plus proches collaborateurs japonais ont témoigné contre lui.",
@@ -3814,8 +3846,12 @@
    },
    {
     "t": "Le système",
-    "sub": "Pendant des décennies, Weinstein a utilisé son pouvoir pour attirer de jeunes femmes, actrices, assistantes, mannequins,",
+    "sub": "En 1993, la Walt Disney Company rachète Miramax.",
     "body": [
+     "En 1993, la Walt Disney Company rachète Miramax. Les deux frères restent à la tête de la société, qui bénéficie de moyens beaucoup plus importants. En 2005, ils quittent Disney et fondent une nouvelle société, The Weinstein Company, qui continue à produire des films et à remporter des Oscars.",
+     "Son pouvoir dans l’industrie s’appuie alors sur sa capacité à faire gagner des récompenses. Une campagne pour les Oscars, dans ces années-là, est un art, et personne ne le maîtrise comme lui.",
+     "*",
+     "#Le système",
      "@Ce que les enquêtes de 2017 révèlent, ce n’est pas seulement un homme. C’est un système.",
      "Pendant des décennies, Weinstein a utilisé son pouvoir pour attirer de jeunes femmes, actrices, assistantes, mannequins, dans des situations où il pouvait les agresser. Et pendant des décennies, tout un réseau l’a protégé. Des assistants qui organisaient les rendez-vous. Des avocats qui rédigeaient les accords de confidentialité. Des dirigeants qui fermaient les yeux. Des journalistes dont les articles étaient étouffés.",
      "Quand il a senti que les enquêtes approchaient, il a même engagé une agence de renseignement privée, composée d’anciens agents secrets israéliens. Ses détectives ont approché des victimes et des journalistes sous de fausses identités, pour découvrir ce qu’elles savaient et les discréditer.",
@@ -3824,8 +3860,12 @@
    },
    {
     "t": "Les procès",
-    "sub": "Après les révélations, tout s’effondre.",
+    "sub": "Parmi les premières femmes à s’exprimer publiquement figurent des actrices connues, comme Ashley Judd, dans l’article du",
     "body": [
+     "Parmi les premières femmes à s’exprimer publiquement figurent des actrices connues, comme Ashley Judd, dans l’article du *New York Times*, puis Rose McGowan et d’autres. D’autres témoignages viennent de femmes moins célèbres, assistantes, jeunes comédiennes, employées de ses sociétés. Elles décrivent des gestes et des pressions qui, selon elles, ont duré des années.",
+     "Beaucoup disent avoir longtemps cru qu’elles étaient seules, et qu’on ne les croirait pas. C’est la raison pour laquelle l’accumulation de récits, publiés ensemble, a eu un effet que des plaintes isolées n’avaient pas eu. Weinstein, par la voix de ses avocats, conteste les accusations de relations non consenties.",
+     "*",
+     "#Les procès",
      "Après les révélations, tout s’effondre. Weinstein est renvoyé de sa propre entreprise, qui fait faillite. Il est exclu de l’Académie des Oscars. Sa femme le quitte.",
      "Les procès commencent. En 2020, à New York, il est condamné à vingt-trois ans de prison pour agression sexuelle et viol. En 2022, en Californie, il est condamné à seize ans pour d’autres faits.",
      "Puis, en 2024, la plus haute cour de l’État de New York annule sa condamnation new-yorkaise, estimant que le procès n’avait pas été équitable. Il est rejugé en 2025. Il est déclaré coupable d’avoir agressé sexuellement une ancienne assistante de production, Miriam Haley. Il est acquitté pour une autre accusation. Le jury ne parvient pas à se mettre d’accord sur l’accusation de viol portée par une autre femme, Jessica Mann.",
@@ -3871,8 +3911,12 @@
    },
    {
     "t": "Le procès",
-    "sub": "Pistorius affirme qu’il a cru qu’un cambrioleur s’était introduit chez lui.",
+    "sub": "À Londres, quelques semaines plus tard, aux Jeux paralympiques, Pistorius perd le 200 mètres face au Brésilien Alan Oliveira.",
     "body": [
+     "À Londres, quelques semaines plus tard, aux Jeux paralympiques, Pistorius perd le 200 mètres face au Brésilien Alan Oliveira. À chaud, il critique les prothèses de son adversaire, qu’il juge trop longues. Il revient ensuite sur ses propos et présente ses excuses pour le moment choisi. Il remporte, lors de ces Jeux, d’autres titres.",
+     "Cet épisode est resté en mémoire : le champion qui se plaint à chaud, puis s’excuse, puis repart à la compétition.",
+     "*",
+     "#Le procès",
      "Pistorius affirme qu’il a cru qu’un cambrioleur s’était introduit chez lui. Qu’il a eu peur. Qu’il a tiré pour protéger Reeva, qu’il croyait dans le lit. L’accusation affirme qu’ils s’étaient disputés et qu’il savait parfaitement qui se trouvait derrière la porte.",
      "Le procès s’ouvre en 2014. Il est retransmis à la télévision. Le monde entier regarde Pistorius pleurer, vomir, sangloter à la barre. En face, la mère de Reeva, June Steenkamp, assiste à chaque audience, droite et silencieuse.",
      "En première instance, la juge le déclare coupable d’homicide involontaire. Il est condamné à cinq ans. Beaucoup sont choqués. En appel, en 2015, la justice requalifie les faits en meurtre. En 2017, sa peine est finalement portée à plus de treize ans de prison.",
