@@ -1858,7 +1858,7 @@ function reader(id){
   var nx=s.next?STORIES[s.next]:null;
   var up=pc?(pnx?'<button class="upnext" data-open="'+pc.p.ids[pc.i+1]+'">'+poster(pnx.p)+'<span><span class="uk" style="display:block">ÉTAPE SUIVANTE · '+(pc.i+2)+' SUR '+pc.p.ids.length+'</span><span class="ut" style="display:block">'+esc(pnx.title)+'</span><span class="us" style="display:block">'+esc(pc.p.n)+' · '+pnx.min+' min</span></span></button>'
       :'<button class="upnext" data-path="'+pc.p.k+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU PARCOURS</span><span class="ut" style="display:block">Revoir le parcours</span><span class="us" style="display:block">'+esc(pc.p.n)+'</span></span></button>'):
-    nx?'<button class="upnext" data-open="'+s.next+'">'+poster(nx.p)+'<span><span class="uk" style="display:block">À LIRE ENSUITE</span><span class="ut" style="display:block">'+esc(nx.title)+'</span><span class="us" style="display:block">'+esc(nx.kind)+', '+nx.min+' min</span></span></button>'
+    nx?'<button class="upnext" data-open="'+s.next+'">'+poster(nx.p)+'<span><span class="uk" style="display:block">'+(s.ep&&nx.ep&&nx.ep.of===s.ep.of?'ÉPISODE SUIVANT · '+nx.ep.n+' SUR '+nx.ep.N:'À LIRE ENSUITE')+'</span><span class="ut" style="display:block">'+esc(nx.title)+'</span><span class="us" style="display:block">'+esc(nx.kind)+', '+nx.min+' min</span></span></button>'
     :(s.th!==undefined?'<button class="upnext" data-terr="'+s.th+'">'+poster(s.p)+'<span><span class="uk" style="display:block">FIN DU THÈME</span><span class="ut" style="display:block">Revoir toutes les histoires</span><span class="us" style="display:block">'+esc(T[s.th])+'</span></span></button>':'');
   var bar='<div class="rbar'+(S.mode==='book'?' solid':' rd')+'" id="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt" id="rt">'+(S.mode==='book'?'':minOf(id,V.arr)+' min')+'</span><span style="display:flex;gap:6px"><button class="circle" data-quick aria-label="Réglages de lecture">'+IC.aa+'</button><button class="circle" data-share="'+id+'" aria-label="Partager">'+IC.share+'</button><button class="circle" data-save="'+id+'" aria-label="Ma liste">'+(sv?IC.markOn:IC.mark)+'</button></span><span class="prog"><i id="prog"></i></span></div>';
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
@@ -2421,7 +2421,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.save){var was=!!S.saved[d.save];S.saved[d.save]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
     if(S.stack.length)rerenderKeepScroll();else{var y=main.scrollTop;renderMain();main.scrollTop=y;}return;}
   if(d.finish){var id=d.finish;if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;S.minutes+=STORIES[id].min;(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}else toast('Histoire terminée. À demain, '+S.hour);}
-    renderMain();back();return;}
+    renderMain();(function(){var n0=STORIES[id].next;if(STORIES[id].ep&&n0&&STORIES[n0]){setTimeout(function(){var u=document.querySelector('.upnext[data-open="'+n0+'"]');if(u){try{u.scrollIntoView({block:'center',behavior:'smooth'});}catch(e){}}},80);return 1;}})()||back();return;}
   if(d.share){openShare(d.share);return;}
   if(b.hasAttribute('data-notify')){S.follow.serie=true;toast('Série suivie : vous serez prévenu à chaque épisode');return;}
   if(b.hasAttribute('data-settings')){openSettings();return;}
@@ -2941,6 +2941,7 @@ function applyLook(){
 }
 
 /* ---------- recommandations ---------- */
+function nextEps(){var l=S.x.rlog||{},out=[];Object.keys(l).filter(function(id){return S.read[id]&&STORIES[id]&&STORIES[id].ep;}).sort(function(a,b){return String(l[b]).localeCompare(String(l[a]));}).forEach(function(id){var n=STORIES[id].next;if(n&&STORIES[n]&&STORIES[n].ep&&STORIES[n].ep.of===STORIES[id].ep.of&&!S.read[n]&&out.indexOf(n)<0)out.push(n);});return out;}
 function recs(n){
   var X=epIndex(),w={},sig=0;
   function add(id,v){var st=STORIES[id];if(st&&st.th!==undefined&&v){w[st.th]=(w[st.th]||0)+v;sig++;}}
@@ -2951,8 +2952,8 @@ function recs(n){
   var day=OPSIS.day(),pool=X.all.filter(function(id){return !S.read[id]&&!(S.prog[id]>3);});
   var sc=pool.map(function(id){return [id,(w[STORIES[id].th]||0)+(hashN(id+day)%100)/100];});
   sc.sort(function(a,b){return b[1]-a[1];});
-  var out=[],per={};
-  for(var i=0;i<sc.length&&out.length<n;i++){var th=STORIES[sc[i][0]].th;per[th]=(per[th]||0)+1;if(per[th]>3)continue;out.push(sc[i][0]);}
+  var out=nextEps().slice(0,n),per={};
+  for(var i=0;i<sc.length&&out.length<n;i++){if(out.indexOf(sc[i][0])>=0)continue;var th=STORIES[sc[i][0]].th;per[th]=(per[th]||0)+1;if(per[th]>3)continue;out.push(sc[i][0]);}
   return {ids:out,personal:sig>0};
 }
 function inRec(id){return recentIds().indexOf(id)>=0;}
@@ -2970,7 +2971,8 @@ function colCard(c,attr,extra){
 function pathDone(p){return p.ids.filter(function(id){return S.read[id];}).length;}
 
 function homeExtra(){
-  var h='',rc=recentIds();
+  var h='',rc=recentIds(),ne=nextEps();
+  if(ne.length)h+='<div class="shelf"><h2><span>Votre prochain épisode</span></h2><div class="rail">'+ne.slice(0,8).map(function(id){return epTile(id);}).join('')+'</div></div>';
   if(rc.length)h+='<div class="shelf"><h2><span>Reprendre la lecture</span></h2><div class="rail">'+rc.slice(0,12).map(progTile).join('')+'</div></div>';
   var r=recs(12);
   if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
@@ -3371,7 +3373,7 @@ function wrCard(){
   if(r&&r.n)return '<button class="wrc" data-wrapped="'+ym+'"><span class="wi">'+r.n+'</span><span><b>Votre récap de '+MOIS[+ym.split('-')[1]-1]+'</b><small>'+r.n+' histoire'+(r.n>1?'s':'')+' · '+wrTime(r.min)+'. Touchez pour le voir.</small></span></button>';
   return '<button class="wrc" data-wrapped="demo"><span class="wi">★</span><span><b>Récap du mois · aperçu</b><small>Chaque début de mois, vos lectures en quelques écrans. Exemple avec des lectures fictives.</small></span></button>';
 }
-function twoSame(id){var s=STORIES[id];if(!s||s.th===undefined)return '';var X=epIndex(),all=hr(X.byT[s.th]),pick=[],def=null;
+function twoSame(id){var s=STORIES[id];if(!s||s.th===undefined||s.ep)return '';var X=epIndex(),all=hr(X.byT[s.th]),pick=[],def=null;
   subDefs(s.th,all).forEach(function(d){if(d.list.indexOf(id)>=0)def=d;});
   var pool=(def?def.list:[]).filter(function(x){return x!==id&&x!==s.next&&vis(x);});
   pool=pool.filter(function(x){return !S.read[x];}).concat(pool.filter(function(x){return S.read[x];}));
@@ -3379,7 +3381,7 @@ function twoSame(id){var s=STORIES[id];if(!s||s.th===undefined)return '';var X=e
   if(pick.length<2){all.forEach(function(x){if(pick.length<2&&x!==id&&x!==s.next&&pick.indexOf(x)<0&&!S.read[x])pick.push(x);});}
   if(!pick.length)return '';
   return '<div class="two"><p class="uk" style="padding:0 2px 8px">'+(def?'À LIRE AUSSI · '+esc(def.n.toUpperCase()):'À LIRE AUSSI · '+esc(T[s.th].toUpperCase()))+'</p>'+pick.map(function(x){var o=STORIES[x];return '<button class="upnext" data-open="'+x+'">'+poster(o.p)+'<span><span class="ut" style="display:block">'+esc(o.title)+'</span><span class="us" style="display:block">'+esc(o.kind)+', '+o.min+' min</span></span></button>';}).join('')+'</div>';}
-function moreLike(id){var s=STORIES[id];if(s.th===undefined)return '';var X=epIndex(),k=subKey(id);
+function moreLike(id){var s=STORIES[id];if(s.th===undefined||s.ep)return '';var X=epIndex(),k=subKey(id);
   var a=X.byT[s.th].filter(function(x){return x!==id&&x!==s.next&&!S.read[x]&&subKey(x)===k;}),b=X.byT[s.th].filter(function(x){return x!==id&&x!==s.next&&!S.read[x]&&subKey(x)!==k;});
   var ids=a.concat(b).slice(0,8);if(!ids.length)return '';
   return '<div class="shelf"><h2><span>Vous aimerez aussi</span></h2><div class="rail">'+ids.map(function(x){return epTile(x);}).join('')+'</div></div>';}
