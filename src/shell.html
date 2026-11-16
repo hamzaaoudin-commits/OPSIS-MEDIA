@@ -981,7 +981,7 @@ var SN="Jusqu'à la chute",BIDS=[],BP=[];
       if(i===0&&p.n===43&&cp.note)eb=['#Avant de lire ce chapitre'].concat(cp.note,['*'],eb);
       if(i===N-1&&cp.items[cp.items.length-1]===p.id&&cp.closing)eb=eb.concat(['*','#Fin du chapitre'],cp.closing.slice(cp.closing[0]==='*'?1:0));
       e={t:e.t,sub:e.sub,body:eb};
-      add(id,{p:p.id,kind:'Épisode',min:mins(p.words),series:SN,terr:'Destins',title:e.t,sub:e.sub||'',meta:p.name+' · épisode '+(i+1)+' sur '+N,
+      add(id,{p:id,kind:'Épisode',min:mins(p.words),series:SN,terr:'Destins',title:e.t,sub:e.sub||'',meta:p.name+' · épisode '+(i+1)+' sur '+N,
         klabel:'ÉPISODE '+(i+1)+' SUR '+N+' · '+p.name.toUpperCase(),body:e.body,quote:e.sub||p.sub,no:hub.no+'E'+(i+1),c:hub.c,syn:e.sub||syn(e.body),book:1,src:i===N-1?hub.src:'',ch:hub.ch,
         ep:{of:p.id,n:i+1,N:N},next:null});});
     ids.forEach(function(id,i){STORIES[id].next=ids[i+1]||hub.next;});
