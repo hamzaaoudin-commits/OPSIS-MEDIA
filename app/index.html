@@ -3781,12 +3781,12 @@ function ambStart(k){
   var t=c.currentTime;AMB.cur.g.gain.setValueAtTime(0,t);AMB.cur.g.gain.linearRampToValueAtTime({notes:2.2,nocturne:2.3,cinema:1.5,boite:3,zen:3.4,aube:1.7}[k]||1,t+3);
   AMB.master.gain.cancelScheduledValues(t);AMB.master.gain.setTargetAtTime(ambLevel(),t,.4);
 }
-function ambFade(){
-  var P=AMB.cur;AMB.cur=null;if(!P)return;var c=AMB.ctx,t=c.currentTime;
-  P.g.gain.cancelScheduledValues(t);P.g.gain.setValueAtTime(P.g.gain.value,t);P.g.gain.linearRampToValueAtTime(0,t+1.6);
-  P.tm.forEach(clearTimeout);setTimeout(function(){P.stop();try{P.g.disconnect();}catch(e){}},1900);
+function ambFade(fast){
+  var P=AMB.cur;AMB.cur=null;if(!P)return;var c=AMB.ctx,t=c.currentTime,d=fast?.25:1.6;
+  P.g.gain.cancelScheduledValues(t);P.g.gain.setValueAtTime(P.g.gain.value,t);P.g.gain.linearRampToValueAtTime(0,t+d);
+  P.tm.forEach(clearTimeout);setTimeout(function(){P.stop();try{P.g.disconnect();}catch(e){}if(fast&&!AMB.cur&&AMB.el){try{AMB.el.pause();}catch(e){}}},d*1000+300);
 }
-function ambStop(){ambFade();AMB.k=null;}
+function ambStop(){ambFade(true);AMB.k=null;}
 function ambSet(k){
   var a=ambCfg();
   if(k==='off'||a.k===k){a.k=null;S.x.amb=a;ambStop();toast('Ambiance coupée');}
