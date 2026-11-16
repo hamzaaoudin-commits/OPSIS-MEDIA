@@ -1,0 +1,20 @@
+from cv_recipes1 import R
+REC = {
+ 'pt14': [R('casque_audio','ville_nuit','nuit'), R('egaliseur','rayons'), R('eclair','nu','alerte'), R('croix_med','stores','froid'), R('boussole','horizon_mer','aube'), R('pousse','nu','jour')],
+ 'pt15': [R('bateau','horizon_mer','aube'), R('couronne','spot'), R(('affiche',{'t':'CHRISTINE'}),'balayage'), R(('robe',{}),'scene'), R('masque_theatre','brume','nuit'), R('chapeau','pluie','cendre'), R('fenetre_paris','ville_nuit','nuit'), R('cadre_photo','nu','cendre')],
+ 'pt16': [R(('enseigne',{'t':'RITZ'}),'balayage','nuit'), R('tiare','etoiles'), R('balancoire','nu','jour'), R('trio','brume','cendre'), R('bateau','horizon_mer','jour'), R(('journal',{'t':'L’ENQUÊTE'}),'presse')],
+ 'pt17': [R(('ecran',{'t':'LIVE'}),'brique'), R('larme','nu','froid'), R('pouce_bas','tribunes','cendre'), R('croix','brume','cendre'), R(('guitare',{'c':'#CFC4A8'}),'spot'), R('col_pretre','nu','jour')],
+ 'pt18': [R('voiture','ville_aube','aube'), R(('cassette',{'t':'HAMMER'}),'route'), R('pantalon','rayons','or'), R('courbe_baisse','trame','alerte'), R('sneaker','nu','jour'), R('telephone_app','reseau','nuit')],
+ 'pt19': [R('casquette','nu','nuit'), R('cube_herbe','etoiles','vert'), R(('chiffre',{'t':'2,5 Md'}),'rayons','or'), R(('ecran',{'t':'ERREUR'}),'trame','cendre')],
+ 'pt20': [R('ascenseur','nu','cendre'), R(('guitare',{'c':'#7A3FA8'}),'scene','violet'), R('visage_mot','nu','violet'), R('coeur_brise','nu','violet'), R('cd_journal','presse','violet'), R('avion','etoiles','nuit')],
+ 'pt21': [R('billet_loto','rayons','or'), R('bonnet','nu','jour'), R(('enseigne',{'t':'PINK PONY'}),'ville_nuit','nuit'), R('cadre_photo','nu','cendre'), R(('ecran',{'t':'INTERVIEW'}),'brique','cendre')],
+ 'pt22': [R('trio','nu','or'), R('lunettes','rayons'), R('colombe_guitare','etoiles','nuit'), R(('papier_stylo',{'t':'DROITS'}),'presse','cendre'), R('chaise_vide','brume','froid')],
+ 'pt23': [R('chapeau','etoiles','vert'), R(('chiffre',{'t':'10'}),'casiers' if False else 'trame'), R('tente','montagne','froid'), R('lit_hotel','pluie','nuit'), R('carte_joker','rayons','violet'), R('chaise_vide','brume','cendre')],
+ 'pt24': [R('casserole','nu','or'), R('livre','nu','jour'), R('globe','etoiles','nuit'), R('divan','nu','froid'), R('avion','horizon_mer','aube'), R('bougies','nu','nuit')],
+ 'pt25': [R('livre','nu','jour'), R(('graffiti',{'t':'SAMO©'}),'brique'), R('platine','ville_nuit','nuit'), R('boite_conserve','trame','or'), R('palais','marbre','jour')],
+ 'pt26': [R('podium','nu','nuit'), R('ciseaux','nu','alerte'), R('sac_luxe','nu','or'), R(('chapeau',{'c':'#7A3FA8'}),'brume','violet'), R('fil_aiguille','nu','cendre')],
+ 'pt27': [R('minarets','desert','aube'), R('croix_med','nu','froid'), R('couronne','rayons','or'), R('veste','nu','nuit'), R('palmier_valise','nu','jour'), R('eglise','nu','cendre')],
+ 'pt28': [R('module_lunaire','nu','nuit'), R('livre','etoiles','nuit'), R('globe','etoiles','nuit'), R('coeur_brise','nu','cendre'), R(('ecran',{'t':'COMPLOT ?'}),'trame','alerte'), R(('planete',{'red':1}),'nu','nuit')],
+ 'pt29': [R('porte_valise','stores','cendre'), R('lunettes_nage','horizon_mer','aube'), R(('chiffre',{'t':'8','c':'#E8B04A'}),'rayons','or'), R('bouee','nu','froid'), R('cadre_photo','nu','cendre')],
+ 'pt30': [R('raquette','tribunes'), R('couronne','spot','or'), R('valise','nu','cendre'), R(('etiquette',{}),'nu','jour')],
+}
