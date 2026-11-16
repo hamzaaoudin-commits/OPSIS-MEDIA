@@ -3371,11 +3371,113 @@ function quickSheet(){
 }
 var FONTS=[['serif','Newsreader','Classique, le style OPSIS',"'Newsreader',Georgia,serif"],['lora','Lora','Chaleureuse, calligraphique',"'Lora',Georgia,serif"],['literata','Literata','Conçue pour lire longtemps',"'Literata',Georgia,serif"],['garamond','EB Garamond','Livre ancien, élégante',"'EB Garamond',Georgia,serif"],['merri','Merriweather','Gros corps, très lisible',"'Merriweather',Georgia,serif"],['source','Source Serif','Sobre, éditoriale',"'Source Serif 4',Georgia,serif"],['georgia','Georgia','Police de l\'appareil',"Georgia,'Times New Roman',serif"],['sans','Hanken Grotesk','Moderne, sans empattement',"'Hanken Grotesk',system-ui,sans-serif"],['atkinson','Atkinson','Hyper lisible',"'Atkinson Hyperlegible',system-ui,sans-serif"],['lexend','Lexend','Aide à la fluidité',"'Lexend',system-ui,sans-serif"]];
 function fontDef(){var k=S.font||'serif';for(var i=0;i<FONTS.length;i++)if(FONTS[i][0]===k)return FONTS[i];return FONTS[0];}
+/* ---------- ambiances sonores : sons générés en direct (Web Audio), sans fichier ni droit d'auteur ---------- */
+var AMBS=[['focus','Deep focus','Nappes lentes et graves'],['pluie','Pluie','Pluie douce sur une vitre'],['nuit','Nuit','Vent lointain et étoiles'],['notes','Notes lointaines','Piano rare, très doux'],['ocean','Océan','Vagues sans fin']];
+var AMB={ctx:null,master:null,verb:null,cur:null,k:null};
+function ambCfg(){var a=S.x.amb;return a&&typeof a==='object'?a:{k:null,v:2};}
+function ambLevel(){var v=ambCfg().v||2;return v===1?.2:v===3?.62:.38;}
+function ambInit(){
+  if(AMB.ctx)return true;
+  var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return false;
+  try{
+    var c=new AC();AMB.ctx=c;AMB.master=c.createGain();AMB.master.gain.value=0;AMB.master.connect(c.destination);
+    var len=c.sampleRate*3,ir=c.createBuffer(2,len,c.sampleRate);
+    for(var ch=0;ch<2;ch++){var d=ir.getChannelData(ch);for(var i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6);}
+    AMB.verb=c.createConvolver();AMB.verb.buffer=ir;var vg=c.createGain();vg.gain.value=.9;AMB.verb.connect(vg);vg.connect(AMB.master);
+    AMB.bufs={};
+    ['white','pink','brown'].forEach(function(t){var n=c.sampleRate*5,b=c.createBuffer(2,n,c.sampleRate);
+      for(var ch=0;ch<2;ch++){var d=b.getChannelData(ch),l=0,b0=0,b1=0,b2=0;
+        for(var i=0;i<n;i++){var w=Math.random()*2-1;
+          if(t==='white')d[i]=w*.5;
+          else if(t==='brown'){l=(l+.02*w)/1.02;d[i]=l*3.2;}
+          else{b0=.99765*b0+w*.099046;b1=.963*b1+w*.2965164;b2=.57*b2+w*1.0526913;d[i]=(b0+b1+b2+w*.1848)*.11;}}}
+      AMB.bufs[t]=b;});
+    return true;
+  }catch(e){AMB.ctx=null;return false;}
+}
+function ambBuild(k){
+  var c=AMB.ctx,g=c.createGain();g.gain.value=0;g.connect(AMB.master);
+  var send=c.createGain();send.gain.value=.55;send.connect(AMB.verb);
+  var P={g:g,src:[],tm:[],stop:function(){this.tm.forEach(clearTimeout);this.src.forEach(function(s){try{s.stop();}catch(e){}});}};
+  function noise(t,lvl,f1,f2){var s=c.createBufferSource();s.buffer=AMB.bufs[t];s.loop=true;s.start(0,Math.random()*3);P.src.push(s);
+    var n=s,gg=c.createGain();gg.gain.value=lvl;
+    if(f1){var hp=c.createBiquadFilter();hp.type='highpass';hp.frequency.value=f1;n.connect(hp);n=hp;}
+    if(f2){var lp=c.createBiquadFilter();lp.type='lowpass';lp.frequency.value=f2;n.connect(lp);n=lp;}
+    n.connect(gg);gg.connect(g);return gg;}
+  function lfo(param,rate,depth){var o=c.createOscillator(),gg=c.createGain();o.frequency.value=rate;gg.gain.value=depth;o.connect(gg);gg.connect(param);o.start();P.src.push(o);}
+  function voice(f,dur,lvl,cut){var t=c.currentTime,o1=c.createOscillator(),o2=c.createOscillator(),e=c.createGain(),lp=c.createBiquadFilter();
+    o1.type='sine';o2.type='triangle';o1.frequency.value=f;o2.frequency.value=f;o2.detune.value=5;lp.type='lowpass';lp.frequency.value=cut||700;
+    e.gain.setValueAtTime(0,t);e.gain.linearRampToValueAtTime(lvl,t+dur*.4);e.gain.linearRampToValueAtTime(0,t+dur);
+    o1.connect(lp);o2.connect(lp);lp.connect(e);e.connect(g);e.connect(send);o1.start(t);o2.start(t);o1.stop(t+dur+.1);o2.stop(t+dur+.1);}
+  function pluck(f,lvl){var t=c.currentTime,o=c.createOscillator(),e=c.createGain();o.type='triangle';o.frequency.value=f;
+    e.gain.setValueAtTime(0,t);e.gain.linearRampToValueAtTime(lvl,t+.015);e.gain.exponentialRampToValueAtTime(.0002,t+5.5);
+    o.connect(e);e.connect(g);e.connect(send);o.start(t);o.stop(t+5.6);}
+  function loop(f,min,max){(function r(){P.tm.push(setTimeout(function(){f();r();},min+Math.random()*(max-min)));})();}
+  if(k==='focus'){
+    var CH=[[73.42,110,146.83,185],[65.41,98,130.81,164.81],[87.31,130.81,174.61,220],[82.41,123.47,164.81,207.65]],ci=0;
+    noise('brown',.5,0,260);
+    var chord=function(){CH[ci++%4].forEach(function(f,j){setTimeout(function(){voice(f,24,.1,650);},j*900);});};
+    chord();loop(chord,14000,14000);
+  }else if(k==='pluie'){
+    noise('pink',.55,700,7500);noise('brown',.7,0,220);
+    loop(function(){var s=c.createBufferSource();s.buffer=AMB.bufs.pink;var bp=c.createBiquadFilter();bp.type='bandpass';bp.frequency.value=2200+Math.random()*3500;bp.Q.value=2;
+      var e=c.createGain(),t=c.currentTime;e.gain.setValueAtTime(.18,t);e.gain.exponentialRampToValueAtTime(.001,t+.07);s.connect(bp);bp.connect(e);e.connect(g);s.start(t,Math.random()*3,.09);},70,380);
+  }else if(k==='nuit'){
+    var NC=[[55,82.41,110,130.81],[58.27,87.31,116.54,138.59]],ni=0;
+    var wg=c.createGain();wg.gain.value=.5;var ws=c.createBufferSource();ws.buffer=AMB.bufs.pink;ws.loop=true;ws.start(0,Math.random()*3);P.src.push(ws);
+    var bp2=c.createBiquadFilter();bp2.type='bandpass';bp2.frequency.value=420;bp2.Q.value=.8;ws.connect(bp2);bp2.connect(wg);wg.connect(g);
+    lfo(bp2.frequency,.07,180);lfo(wg.gain,.05,.22);
+    var nchord=function(){NC[ni++%2].forEach(function(f,j){setTimeout(function(){voice(f,26,.09,520);},j*1100);});};
+    nchord();loop(nchord,16000,16000);
+    var ST=[1174.66,1318.51,1567.98,1760,2093];
+    loop(function(){voice(ST[Math.floor(Math.random()*5)],5,.012,3000);},4000,9000);
+  }else if(k==='notes'){
+    noise('brown',.3,0,420);
+    var PN=[293.66,329.63,369.99,440,493.88,587.33,739.99];
+    loop(function(){pluck(PN[Math.floor(Math.random()*PN.length)],.07);},2600,7500);
+    pluck(293.66,.06);
+  }else if(k==='ocean'){
+    var o1=noise('pink',.45,0,850);lfo(o1.gain,.09,.3);
+    var o2=noise('pink',.2,1500,4500);lfo(o2.gain,.09,.14);
+    noise('brown',.35,0,200);
+  }
+  return P;
+}
+function ambStart(k){
+  if(!k)return;if(!ambInit())return;var c=AMB.ctx;
+  if(c.state==='suspended'){try{c.resume();}catch(e){}}
+  if(AMB.k===k&&AMB.cur)return;
+  ambFade();AMB.k=k;AMB.cur=ambBuild(k);
+  var t=c.currentTime;AMB.cur.g.gain.setValueAtTime(0,t);AMB.cur.g.gain.linearRampToValueAtTime(1,t+3);
+  AMB.master.gain.cancelScheduledValues(t);AMB.master.gain.setTargetAtTime(ambLevel(),t,.4);
+}
+function ambFade(){
+  var P=AMB.cur;AMB.cur=null;if(!P)return;var c=AMB.ctx,t=c.currentTime;
+  P.g.gain.cancelScheduledValues(t);P.g.gain.setValueAtTime(P.g.gain.value,t);P.g.gain.linearRampToValueAtTime(0,t+1.6);
+  P.tm.forEach(clearTimeout);setTimeout(function(){P.stop();try{P.g.disconnect();}catch(e){}},1900);
+}
+function ambStop(){ambFade();AMB.k=null;}
+function ambSet(k){
+  var a=ambCfg();
+  if(k==='off'||a.k===k){a.k=null;S.x.amb=a;ambStop();toast('Ambiance coupée');}
+  else{a.k=k;S.x.amb=a;ambStart(k);for(var i=0;i<AMBS.length;i++)if(AMBS[i][0]===k)toast('Ambiance : '+AMBS[i][1]);}
+}
+function ambVolSet(v){var a=ambCfg();a.v=v;S.x.amb=a;if(AMB.ctx&&AMB.master)AMB.master.gain.setTargetAtTime(ambLevel(),AMB.ctx.currentTime,.2);}
+function ambOpts(){
+  var a=ambCfg();
+  return '<div class="opt" style="display:block"><span>Ambiance sonore<small class="os">Sons générés dans l\'app, libres de droits. Ils accompagnent la lecture, sans coupure.</small></span><div class="fontgrid">'+
+    AMBS.map(function(m){return '<button data-amb="'+m[0]+'" aria-pressed="'+(a.k===m[0])+'">'+m[1]+'<small>'+m[2]+'</small></button>';}).join('')+
+    '<button data-amb="off" aria-pressed="'+(!a.k)+'">Silence<small>Aucun son</small></button></div></div>'+
+    (a.k?'<div class="opt"><span>Volume</span><span class="seg"><button data-ambv="1" aria-pressed="'+((a.v||2)===1)+'">Doux</button><button data-ambv="2" aria-pressed="'+((a.v||2)===2)+'">Moyen</button><button data-ambv="3" aria-pressed="'+((a.v||2)===3)+'">Fort</button></span></div>':'');
+}
+/* reprise : un navigateur mobile n'autorise le son qu'après un geste ; on relance l'ambiance choisie au premier toucher d'une lecture */
+document.addEventListener('pointerdown',function(){var a=ambCfg();if(!a.k)return;var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&(!AMB.ctx||AMB.k!==a.k||AMB.ctx.state!=='running'))ambStart(a.k);},true);
+document.addEventListener('visibilitychange',function(){if(!AMB.ctx)return;try{if(document.hidden)AMB.ctx.suspend();else if(AMB.k)AMB.ctx.resume();}catch(e){}});
 function lookOpts(){
   return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light'&&S.theme!=='night')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button><button data-theme="night" aria-pressed="'+(S.theme==='night')+'">Nuit</button></span></div>'+(S.theme==='night'?'<p class="os" style="padding:0 0 8px;font-size:12px;color:var(--dim)">Mode nuit : aucune lumière bleue, tons ambrés. Idéal le soir, avant de dormir.</p>':'')+
     '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
     '<div class="opt" style="display:block"><span>Police</span><div class="fontgrid">'+FONTS.map(function(f){return '<button data-font="'+f[0]+'" aria-pressed="'+((S.font||'serif')===f[0])+'" style="font-family:'+f[3]+'">'+f[1]+'<small>'+f[2]+'</small></button>';}).join('')+'</div></div>'+
-    '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>';
+    '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>'+ambOpts();
 }
 
 /* ---------- pages de réglages ---------- */
@@ -3575,6 +3677,8 @@ function featClick(b,d){
   if(d.set){closeSheet();if(top&&top.type==='set'&&d.set==='root')return true;push({type:'set',k:d.set});return true;}
   if(b.hasAttribute('data-quick')){openSheet(quickSheet);return true;}
   if(d.theme){S.theme=d.theme;applyLook();reSet();return true;}
+  if(d.amb){ambSet(d.amb);reSet();return true;}
+  if(d.ambv){ambVolSet(+d.ambv);reSet();return true;}
   if(d.font){S.font=d.font;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(d.lh){S.lh=d.lh;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
