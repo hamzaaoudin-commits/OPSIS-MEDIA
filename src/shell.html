@@ -3634,7 +3634,9 @@ function ambInit(){
     AMB.master=c.createGain();AMB.master.gain.value=0;
     var comp=c.createDynamicsCompressor();comp.threshold.value=-24;comp.knee.value=20;comp.ratio.value=3;comp.attack.value=.1;comp.release.value=.6;
     var warm=c.createBiquadFilter();warm.type='lowpass';warm.frequency.value=8500;warm.Q.value=.4;
-    var hp0=c.createBiquadFilter();hp0.type='highpass';hp0.frequency.value=150;hp0.Q.value=.7;var ls=c.createBiquadFilter();ls.type='lowshelf';ls.frequency.value=320;ls.gain.value=-6;AMB.master.connect(hp0);hp0.connect(ls);ls.connect(comp);comp.connect(warm);warm.connect(c.destination);
+    var hp0=c.createBiquadFilter();hp0.type='highpass';hp0.frequency.value=150;hp0.Q.value=.7;var ls=c.createBiquadFilter();ls.type='lowshelf';ls.frequency.value=320;ls.gain.value=-6;AMB.master.connect(hp0);hp0.connect(ls);ls.connect(comp);comp.connect(warm);AMB.warm=warm;
+    /* iPhone : le Web Audio direct est coupé par l'interrupteur silence ; passé par un lecteur <audio> il est traité comme un média et sonne */
+    try{if(c.createMediaStreamDestination){var md=c.createMediaStreamDestination(),el=new Audio();el.srcObject=md.stream;el.setAttribute('playsinline','');el.loop=true;AMB.el=el;warm.connect(md);}else warm.connect(c.destination);}catch(e){AMB.el=null;warm.connect(c.destination);}
     /* réverbération : queue de 5 s qui s'assombrit en s'éteignant, légère pré-attente, deux canaux indépendants */
     var len=sr*5,ir=c.createBuffer(2,len,sr);
     for(var ch=0;ch<2;ch++){var d=ir.getChannelData(ch),lp=0;
@@ -3726,7 +3728,9 @@ function ambBuild(k){
   return P;
 }
 /* iPhone : la session audio doit être « lecture » (sinon l'interrupteur silence coupe tout), et le son ne se débloque que sur un vrai geste (touchend ou click, pas pointerdown) */
-function ambSession(){try{if(navigator.audioSession&&navigator.audioSession.type!=='playback')navigator.audioSession.type='playback';}catch(e){}}
+function ambDirect(){try{AMB.warm.disconnect();AMB.warm.connect(AMB.ctx.destination);}catch(e){}AMB.el=null;}
+function ambPlayEl(){var el=AMB.el;if(!el)return;try{var p=el.play();if(p&&p.catch)p.catch(ambDirect);}catch(e){ambDirect();}}
+function ambSession(){ambPlayEl();try{if(navigator.audioSession&&navigator.audioSession.type!=='playback')navigator.audioSession.type='playback';}catch(e){}}
 function ambStart(k){
   if(!k)return;if(!ambInit())return;var c=AMB.ctx;ambSession();
   if(c.state==='suspended'){try{c.resume();}catch(e){}}
