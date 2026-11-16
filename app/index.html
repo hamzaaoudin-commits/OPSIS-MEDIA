@@ -217,18 +217,7 @@
   .shelf{margin-top:30px}
   .shelf h2{font-size:19px;font-weight:700;padding:0 20px;display:flex;justify-content:space-between;align-items:baseline}
   .shelf h2 small{font-size:13px;font-weight:500;color:var(--faint)}
-  .rhist{display:flex;align-items:flex-end;gap:18px;margin:14px 20px 4px;padding:14px 16px;border-radius:16px;background:var(--coal)}
-  .rh-bars{flex:1;display:flex;align-items:flex-end;gap:8px;height:74px}
-  .rh-c{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}
-  .rh-c i{display:block;width:100%;border-radius:4px 4px 2px 2px;background:linear-gradient(var(--red),#8E1B22);min-height:2px;transition:height .6s cubic-bezier(.2,.8,.2,1)}
-  .rh-c span{font-size:11px;color:var(--faint);line-height:1}
-  .rh-avg{display:flex;flex-direction:column;align-items:flex-end;line-height:1.1}
-  .rh-avg b{font-family:var(--disp);font-size:40px;font-weight:900;color:var(--bone)}
-  .rh-avg small{font-size:11px;color:var(--faint);margin-top:2px}
-  .rg{margin-top:18px}
-  .rg h3{display:flex;justify-content:space-between;align-items:baseline;padding:0 20px 2px;font-size:15px}
-  .rstars{color:#F2C14E;letter-spacing:3px;font-size:16px}.rstars em{font-style:normal;color:var(--line)}
-  .rg h3 small{font-size:13px;color:var(--faint)}
+  .rst{display:block;color:#F2C14E;letter-spacing:2px;font-size:13px;margin-top:2px}.rst em{font-style:normal;color:var(--line)}.rst.none{color:var(--faint);letter-spacing:0;font-size:12px}
   .rail{display:flex;gap:10px;overflow-x:auto;padding:12px 20px 4px;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
   .rail::-webkit-scrollbar{display:none}
   .terr{cursor:grab;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.terr.drag{cursor:grabbing}.terr.drag button{pointer-events:none}
@@ -1667,7 +1656,7 @@ function tile(o){
   var t=String(o.t),sub=o.s,m=/ : |, /.exec(t),i=m?m.index:-1;
   if(i>2&&i<=28){sub=t.slice(i+m[0].length);sub=sub.charAt(0).toUpperCase()+sub.slice(1);t=t.slice(0,i);}
   t=nb(t);var L=t.length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
+  return '<button class="tile" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.subhtml?'<p class="sub">'+o.subhtml+'</p>':o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
@@ -1804,6 +1793,10 @@ function saved(){
   var ids=Object.keys(S.saved).filter(function(k){return S.saved[k]&&vis(k);});
   var readIds=Object.keys(S.read).filter(function(k){return S.read[k]&&vis(k);});
   function gridOf(list){return '<div class="cgrid">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:'',nosub:true,attr:'data-pick="'+id+'"',badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
+  function gridRead(list){
+    var l=list.slice().sort(function(a,b){return (S.rate[b]||0)-(S.rate[a]||0);});
+    return '<div class="cgrid">'+l.map(function(id){var st=STORIES[id],r=Math.max(0,Math.min(5,S.rate[id]||0));
+      return tile({p:st.p,t:st.title,s:'',attr:'data-pick="'+id+'"',subhtml:r?'<span class="rst" aria-label="'+r+' sur 5">'+'★★★★★'.slice(0,r)+'<em>'+'★★★★★'.slice(r)+'</em></span>':'<span class="rst none">Pas noté</span>'});}).join('')+'</div>';}
   function railOf(list,ns){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',nosub:ns,badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   var rc=recentIds(),cs=myCols(),q=quotes(),bn=badgeNow(),bx=badgeNext(),n=readCount(),sk=OPSIS.store.streak();
   var started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length;}),startedC=COLLS.filter(function(p){var v=p.ids.filter(vis),d=pathDone({ids:v});return d>0&&d<v.length;});
@@ -1815,20 +1808,8 @@ function saved(){
     '<div class="shelf"><h2>Ma liste <small>'+ids.length+'</small></h2>'+(ids.length?gridOf(ids):''+empty('<path d="M6 3h12v18l-6-4-6 4z"/>','Les histoires que vous voulez garder pour plus tard vivront ici. Touchez « Ma liste » sur une histoire.')+'')+'</div>'+
     (function(){var sc=[];cs.forEach(function(c,i){if(c.from){var v=c.ids.filter(vis);if(v.length)sc.push(colCard({n:c.n,ids:v},'data-mycol="'+i+'"',v.length+(v.length>1?' histoires':' histoire')));}});return sc.length?'<div class="shelf"><h2>Collections enregistrées <small>'+sc.length+'</small></h2><div class="rail">'+sc.join('')+'</div></div>':'';})()+
     ((started.length||startedC.length)?'<div class="shelf"><h2>En cours</h2><div class="rail">'+started.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+startedC.map(function(p){return colCard(p,'data-col="'+p.k+'"');}).join('')+'</div></div>':'')+
-    '<div class="shelf rdsec"><button class="rdhead" data-readtog aria-expanded="false"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+IC.chev+'</button><div class="rdbody">'+(readIds.length?gridOf(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
+    '<div class="shelf rdsec"><button class="rdhead" data-readtog aria-expanded="false"><h2>Déjà lues <small>'+readIds.length+'</small></h2>'+IC.chev+'</button><div class="rdbody">'+(readIds.length?gridRead(readIds):''+empty('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>','Les histoires terminées apparaîtront ici.')+'')+
     '<div class="opt" style="margin:14px 20px 0"><span>Les masquer de l\'accueil</span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues de l\'accueil"></button></div></div></div>'+
-    (function(){
-      var rated=Object.keys(S.rate).filter(function(k){return S.rate[k]>0&&vis(k)&&STORIES[k];});
-      if(!rated.length)return '<div class="shelf"><h2>Mes notes <small>0</small></h2>'+empty('<path d="M12 3.500l2.700 5.600 6.100.8-4.500 4.300 1.100 6.100L12 17.300 6.600 20.300l1.100-6.100L3.200 9.900l6.100-.8z"/>','Notez les histoires avec les étoiles, en fin de lecture : votre classement apparaîtra ici.')+'</div>';
-      var cnt=[0,0,0,0,0,0],sum=0,mx=1;rated.forEach(function(k){var r=Math.max(1,Math.min(5,S.rate[k]));cnt[r]++;sum+=r;});for(var i=1;i<=5;i++)mx=Math.max(mx,cnt[i]);
-      var avg=(sum/rated.length).toFixed(1).replace('.',',');
-      var hist='<div class="rhist"><div class="rh-bars">'+[1,2,3,4,5].map(function(i){return '<div class="rh-c" title="'+cnt[i]+' × '+i+' ★"><i style="height:'+Math.max(cnt[i]?8:2,Math.round(cnt[i]/mx*100))+'%"></i><span>'+i+'</span></div>';}).join('')+'</div><div class="rh-avg"><b>'+avg+'</b><small>note moyenne</small><small>'+rated.length+(rated.length>1?' notes':' note')+'</small></div></div>';
-      var groups=[5,4,3,2,1].map(function(r){
-        var l=rated.filter(function(k){return Math.max(1,Math.min(5,S.rate[k]))===r;}).sort(function(a,b){return (S.read[b]===true?1:0)-(S.read[a]===true?1:0)||STORIES[a].title.localeCompare(STORIES[b].title,'fr');});
-        if(!l.length)return '';
-        return '<div class="rg"><h3><span class="rstars" aria-label="'+r+' étoiles">'+'★★★★★'.slice(0,r)+'<em>'+'★★★★★'.slice(r)+'</em></span><small>'+l.length+'</small></h3>'+railOf(l,true)+'</div>';}).join('');
-      return '<div class="shelf rates"><h2>Mes notes <small>'+rated.length+'</small></h2>'+hist+groups+'</div>';
-    })()+
     '<div class="bottomspace"></div>';
 }
 
