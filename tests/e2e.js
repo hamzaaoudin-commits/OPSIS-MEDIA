@@ -31,10 +31,12 @@ let bootRaw=false;
     const p=await page(ctx);await boot(p,'/app.html');
     await p.waitForSelector('.onb.on',{timeout:15000});
     ok(true,'le parcours de premier lancement s\'affiche après l\'intro');
-    await p.click('[data-onb="next"]');await sleep(300);
+    for(let i=0;i<8;i++){await p.click('[data-onb="next"]');await sleep(120);}
+    ok(await p.evaluate(()=>!!document.querySelector('.onb .ob-gfc .gx')),'les cartes du guide sont dans le parcours');
+    await p.click('[data-onb="prev"]');await sleep(150);await p.click('[data-onb="next"]');await sleep(200);
     await p.click('.onb [data-pref]');await sleep(200);
     const pf=await p.evaluate(()=>(OPSIS.store.S.x.prefs||[]).length);ok(pf===1,'un thème choisi est enregistré ('+pf+')');
-    await p.click('[data-onb="next"]');await sleep(300);await p.click('[data-onb="next"]');await sleep(300);
+    for(let i=0;i<6;i++){await p.click('[data-onb="next"]');await sleep(120);}
     await p.click('[data-onb="read"]');await sleep(1500);
     const g=await p.evaluate(()=>({gone:!document.querySelector('.onb'),flag:!!OPSIS.store.S.x.onb,layer:document.getElementById('layer').className}));
     ok(g.gone&&g.flag&&/in/.test(g.layer),'« Lire l\'histoire du jour » ferme l\'accueil et ouvre la lecture');

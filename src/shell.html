@@ -790,6 +790,13 @@
   .onb .ob-card .poster{position:relative;flex:none;width:112px;aspect-ratio:2/3;border-radius:10px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.65),0 0 0 1px rgba(237,230,218,.14)}
   .onb .ob-card .ob-kk{position:relative;margin-top:18px;font-size:11.5px;font-weight:700;letter-spacing:.2em;color:var(--red-type)}
   .onb .ob-card b{position:relative;display:block;margin-top:8px;font-family:var(--disp);font-weight:900;font-size:24px;line-height:1.04;text-transform:uppercase}.onb .ob-card small{position:relative;display:block;color:var(--dim);font-size:14px;margin-top:8px}
+  .onb .ob-top .ob-back{flex:none;width:32px;height:32px;margin-left:-8px;display:flex;align-items:center;justify-content:center;color:var(--bone)}.onb .ob-top .ob-back svg{width:20px;height:20px}
+  .onb .ob-bar{flex:1;height:2px;border-radius:2px;background:rgba(237,230,218,.14);overflow:hidden}.onb .ob-bar i{display:block;height:100%;background:var(--red-type);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+  .onb .ob-gfc{position:relative;display:block;margin:4px 0 0}.onb .ob-gfc .gx{height:226px}
+  .onb .ob-body>.ob-h3{font-family:var(--disp);font-weight:900;font-size:32px;line-height:1.05;text-transform:uppercase;color:var(--bone);margin-top:4px}
+  .onb .ob-set{margin-top:16px}.onb .ob-set .opt:first-child{border-top:0}
+  .onb .ob-set .fontgrid{margin-top:10px}
+  .onb .ob-set .qchips{padding-top:6px}
   .onb .ob-foot{display:flex;flex-direction:column;gap:10px;padding-top:6px}
   /* repère de position : zone de glissement agrandie sur la barre de progression */
   .prog.drag{pointer-events:auto}.prog.drag::before{content:"";position:absolute;left:0;right:0;top:-14px;bottom:-14px;cursor:pointer;touch-action:none}
@@ -3815,7 +3822,7 @@ confidentialite:'<rect x="5" y="11" width="14" height="10" rx="2.500"/><path d="
 conditions:'<path d="M12 3v18M5 7h14M5 7l-2.500 7a3 3 0 0 0 5 0zM19 7l-2.500 7a3 3 0 0 0 5 0zM8 21h8"/>'};
 function sico(k){return '<i class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+SI[k]+'</svg></i>';}
 function row(k,label,sub){return '<button class="srow" data-set="'+k+'">'+sico(k)+'<span class="stx">'+label+(sub?'<small>'+sub+'</small>':'')+'</span>'+IC.chev+'</button>';}
-var GUIDE=[['Des centaines d\'histoires','Choisissez parmi des centaines de titres, par thème ou au hasard. Touchez une couverture pour l\'ouvrir.',''],['Choisissez votre format','Beaucoup d\'histoires existent en 3 ou 7 minutes. Le choix se fait en haut de l\'histoire, avant de lire.',''],['Lisez à votre façon','En défilement vertical, ou en pages comme un livre : touchez les bords ou glissez pour tourner la page.',''],['Choisissez votre police','Touchez « Aa » pour régler la police, la taille du texte, l\'interligne et le fond clair ou sombre.',''],['Gardez pour plus tard','Touchez « Ma liste » sur une histoire. Vous la retrouvez dans Mon espace, sous forme de couvertures.',''],['Suivez un parcours','Un parcours enchaîne des histoires étape par étape. À la fin de chacune, la suivante vous est proposée.',''],['Explorez par thème','Touchez un thème pour voir ses histoires, puis un sous-thème pour affiner. Les collections éditoriales sont plus bas : le cœur d\'une collection l\'enregistre dans Mon espace.',''],['Vos thèmes préférés','Dans les réglages, rubrique « Préférences », cochez les thèmes qui vous attirent : ils orientent « Pour vous » et les suggestions en fin d\'histoire.',''],['Partagez une histoire','Sous chaque histoire, « Offrir » ouvre le partage de votre téléphone : envoyez-la à un proche en un geste.',''],['Partagez une citation','Sélectionnez un passage dans une histoire, puis « Créer une carte » : une image à partager, avec la couverture.',''],['Badges et série','Plus vous lisez, plus vous débloquez de badges. Touchez le vôtre, à côté du titre Mon espace, pour voir le suivant.',''],['Votre rappel du matin','Dans Réglages, Notifications : choisissez l\'heure à laquelle OPSIS vous prévient.',''],['Vérifiez les faits','Sous chaque histoire, « + Sources » affiche ce qui a été vérifié. Une erreur ? « Signaler une information inexacte ».','']];
+var GUIDE=[['Des centaines d\'histoires','Choisissez parmi des centaines de titres, par thème ou au hasard. Touchez une couverture pour l\'ouvrir.',''],['Choisissez votre format','Beaucoup d\'histoires existent en 3 ou 7 minutes. Le choix se fait en haut de l\'histoire, avant de lire.',''],['Lisez à votre façon','En défilement vertical, ou en pages comme un livre : touchez les bords ou glissez pour tourner la page.',''],['Choisissez votre police','Réglez la police, la taille du texte et le fond clair ou sombre. En lisant, « Aa » ajoute l\'interligne, les marges et plus encore.',''],['Gardez pour plus tard','Touchez « Ma liste » sur une histoire. Vous la retrouvez dans Mon espace, sous forme de couvertures.',''],['Suivez un parcours','Un parcours enchaîne des histoires étape par étape. À la fin de chacune, la suivante vous est proposée.',''],['Explorez par thème','Touchez un thème pour voir ses histoires, puis un sous-thème pour affiner. Les collections éditoriales sont plus bas : le cœur d\'une collection l\'enregistre dans Mon espace.',''],['Vos thèmes préférés','Cochez ceux qui vous attirent : ils orientent « Pour vous » et les suggestions en fin d\'histoire. Modifiable dans Préférences.',''],['Partagez une histoire','Sous chaque histoire, « Offrir » ouvre le partage de votre téléphone : envoyez-la à un proche en un geste.',''],['Partagez une citation','Sélectionnez un passage dans une histoire, puis « Créer une carte » : une image à partager, avec la couverture.',''],['Badges et série','Plus vous lisez, plus vous débloquez de badges. Touchez le vôtre, à côté du titre Mon espace, pour voir le suivant.',''],['Votre rappel du matin','Choisissez l\'heure à laquelle OPSIS vous prévient. Modifiable dans Réglages, Notifications.',''],['Vérifiez les faits','Sous chaque histoire, « + Sources » affiche ce qui a été vérifié. Une erreur ? « Signaler une information inexacte ».','']];
 
 function gpo(k,st){return '<span class="poster" data-art="'+k+'"'+(st?' style="'+st+'"':'')+'></span>';}
 function gps(){var K=Object.keys(STORIES).filter(function(k){return STORIES[k]&&STORIES[k].p;}),pre=['eiffel','penicilline','joconde'].filter(function(k){return STORIES[k];}),o=pre.slice();for(var i=0;i<K.length&&o.length<16;i+=Math.max(1,Math.floor(K.length/16)))if(o.indexOf(K[i])<0)o.push(K[i]);return o.map(function(k){return STORIES[k].p;});}
@@ -3857,7 +3864,7 @@ var SETT={prefs:'Préférences',lecture:'Préférences de lecture',langue:'Langu
 function setLayer(k){
   var b='';
   if(k==='root'){
-    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('prefs','Préférences',(S.x.prefs&&S.x.prefs.length)?S.x.prefs.length+' thème'+(S.x.prefs.length>1?'s':'')+' choisi'+(S.x.prefs.length>1?'s':''):'Vos thèmes préférés')+row('lecture','Préférences de lecture','Sens, format, typographie')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Votre abonnement OPSIS')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+row('guide','Guide d\'utilisation','Prendre l\'app en main')+'<button class="srow" data-onbagain>'+sico('guide')+'<span class="stx">Refaire le parcours de départ<small>Bienvenue, thèmes et réglages de lecture</small></span>'+IC.chev+'</button></div>'+
+    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('prefs','Préférences',(S.x.prefs&&S.x.prefs.length)?S.x.prefs.length+' thème'+(S.x.prefs.length>1?'s':'')+' choisi'+(S.x.prefs.length>1?'s':''):'Vos thèmes préférés')+row('lecture','Préférences de lecture','Sens, format, typographie')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Votre abonnement OPSIS')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+'<button class="srow" data-onbagain>'+sico('guide')+'<span class="stx">Guide d\'utilisation<small>Le parcours de départ, avec vos réglages</small></span>'+IC.chev+'</button></div>'+
       '<div class="slist"><button class="srow" data-legal="mentions">'+sico('mentions')+'<span class="stx">Mentions légales</span>'+IC.chev+'</button><button class="srow" data-legal="confidentialite">'+sico('confidentialite')+'<span class="stx">Politique de confidentialité</span>'+IC.chev+'</button><button class="srow" data-legal="conditions">'+sico('conditions')+'<span class="stx">Conditions d\'utilisation</span>'+IC.chev+'</button></div>';
   }else if(k==='compte'){
     b='<div class="sbox">'+OPSIS.accountHTML()+(OPSIS.live?'':'<p class="hint" style="padding:12px 0 0">La connexion à un compte sera proposée à l\'ouverture d\'OPSIS. D\'ici là, vos lectures sont gardées sur cet appareil.</p>')+'</div>';
@@ -3865,7 +3872,6 @@ function setLayer(k){
     var pf=S.x.prefs||[];
     b='<p class="hint" style="padding:6px 20px 0">Choisissez les thèmes qui vous attirent. Ils nourrissent « Pour vous », les recommandations et les suggestions en fin d\'histoire. Vous pouvez en choisir autant que vous voulez, et changer à tout moment.</p>'+
       '<div class="qchips" style="padding:16px 20px 0">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>'+
-      '<div class="opt lgrow" style="margin-top:14px"><button data-onbagain>Revoir la présentation d\'OPSIS</button></div>'+
       '<p class="hint" style="padding:18px 20px 0">'+(pf.length?pf.length+' thème'+(pf.length>1?'s':'')+' choisi'+(pf.length>1?'s':'')+'.':'Aucun thème choisi : « Pour vous » s\'appuie alors seulement sur vos lectures.')+'</p>';
   }else if(k==='lecture'){
     var pf=S.x.prefs||[];
@@ -4083,42 +4089,43 @@ function onbShow(step){
   el.addEventListener('click',function(e){
     var b=e.target.closest('button');if(!b)return;var a=b.dataset.onb;
     if(a){e.stopPropagation();
-      if(a==='next'){ONB.step++;onbRender();}
+      if(a==='next'){ONB.step=Math.min(onbN()-1,ONB.step+1);onbRender();}
+      else if(a==='prev'){ONB.step=Math.max(0,ONB.step-1);onbRender();}
       else if(a==='skip'||a==='explore'){onbClose();}
       else if(a==='read'){onbClose();var id=OPSIS.ui.daily();if(STORIES[id])push({type:'read',id:id});}
       return;}
-    if(b.hasAttribute('data-pref')||b.hasAttribute('data-theme')||b.hasAttribute('data-fs')||b.hasAttribute('data-toggle')){setTimeout(onbRender,0);}
+    if(b.hasAttribute('data-pref')||b.hasAttribute('data-theme')||b.hasAttribute('data-fs')||b.hasAttribute('data-toggle')||b.hasAttribute('data-rm')||b.hasAttribute('data-font')){setTimeout(function(){onbRender(true);},0);}
   });
 }
 function onbClose(){var el=ONB.el;if(!el)return;S.x.onb=1;el.classList.add('off');setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},550);ONB={step:0,el:null};}
-function onbRender(){
-  var el=ONB.el;if(!el)return;var st=ONB.step,N=4,h='';
-  var dots='<span class="ob-dots">'+[0,1,2,3].map(function(i){return '<i'+(i<=st?' class="on"':'')+'></i>';}).join('')+'</span>';
-  h+='<div class="ob-top">'+dots+(st<N-1?'<button class="ob-skip" data-onb="skip">Passer</button>':'<span></span>')+'</div><div class="ob-body" id="obbody">';
+function onbN(){return GUIDE.length+2;}
+function onbSet(g){
+  if(g===2)return '<div class="opt"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode!=='book')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>';
+  if(g===3)return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light'&&S.theme!=='night')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button><button data-theme="night" aria-pressed="'+(S.theme==='night')+'">Nuit</button></span></div>'+
+    '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
+    '<div class="opt" style="display:block"><span>Police</span><div class="fontgrid">'+FONTS.map(function(f){return '<button data-font="'+f[0]+'" aria-pressed="'+((S.font||'serif')===f[0])+'" style="font-family:'+f[3]+'">'+f[1]+'<small>'+f[2]+'</small></button>';}).join('')+'</div></div>';
+  if(g===7){var pf=S.x.prefs||[];return '<div class="qchips">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>';}
+  if(g===11)return '<div class="opt"><span>Une histoire chaque matin<small class="os">Jamais la nuit.</small></span><button class="tog" role="switch" aria-checked="'+!!S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+(S.notif?'<div class="opt"><span>Heure</span>'+timeIn()+'</div>':'');
+  return '';
+}
+function onbRender(partial){
+  var el=ONB.el;if(!el)return;var st=ONB.step,N=onbN(),h='',g=st-1;
+  if(partial&&g>=0&&g<GUIDE.length){var bx=el.querySelector('.ob-set');if(bx){bx.innerHTML=onbSet(g);return;}}
+  h+='<div class="ob-top">'+(st>0?'<button class="ob-back" data-onb="prev" aria-label="Précédent">'+IC.back+'</button>':'')+'<span class="ob-bar"><i style="width:'+Math.round((st+1)/N*100)+'%"></i></span>'+(st<N-1?'<button class="ob-skip" data-onb="skip">Passer</button>':'<span></span>')+'</div><div class="ob-body" id="obbody">';
   if(st===0){
     h+='<div class="ob-orb"></div><div class="ob-kick">Bienvenue dans OPSIS</div><h2>Des histoires <em>vraies</em>, jusqu\'au bout</h2><p class="ob-sub" style="margin-top:10px">The world is made of stories.</p>'+
       '<div class="ob-durs"><div><b>3</b><small>minutes</small></div><div><b>7</b><small>minutes</small></div><div><b>12</b><small>minutes</small></div></div>'+
-      '<p class="ob-cnt" style="margin-top:16px">Du nouveau chaque jour.</p>';
-  }else if(st===1){
-    var pf=S.x.prefs||[],n=pf.length;
-    h+='<div class="ob-kick">Vos goûts</div><h2>Qu\'est-ce qui vous <em>attire</em> ?</h2><p class="ob-sub">Cela guide « Pour vous » et les suggestions. Modifiable à tout moment.</p>'+
-      '<div class="qchips">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>'+
-      '<div class="ob-cnt">'+(n?n+(n>1?' thèmes choisis':' thème choisi'):'Facultatif : choisissez-en autant que vous voulez.')+'</div>';
-  }else if(st===2){
-    var th=S.theme==='light'?'light':S.theme==='night'?'night':'dark';
-    h+='<div class="ob-kick">Votre confort</div><h2>Votre <em>lecture</em></h2><p class="ob-sub">Tout se change ensuite dans les réglages.</p>'+
-      '<div class="ob-th"><button class="t-d" data-theme="dark" aria-pressed="'+(th==='dark')+'"><i>Aa</i>Sombre</button><button class="t-l" data-theme="light" aria-pressed="'+(th==='light')+'"><i>Aa</i>Clair</button><button class="t-n" data-theme="night" aria-pressed="'+(th==='night')+'"><i>Aa</i>Nuit</button></div>'+
-      '<div style="margin-top:14px"><div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
-      '<div class="opt"><span>Une histoire chaque matin<small class="os">Une notification à '+esc(String(S.hour||'7 h'))+', jamais la nuit.</small></span><button class="tog" role="switch" aria-checked="'+!!S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div></div>'+
-      '<p class="ob-prev th-'+th+'">Voici l\'aperçu du texte, à la taille et dans le confort choisis.</p>';
+      '<p class="ob-cnt" style="margin-top:16px">Prenez l\'app en main en '+GUIDE.length+' cartes, et réglez-la à votre goût au passage.</p>';
+  }else if(g<GUIDE.length){
+    var c=GUIDE[g],set=onbSet(g);
+    h+='<div class="gfc cur ob-gfc"><div class="gill"><div class="gx">'+gdIll(g)+'</div></div></div><div class="ob-kick" style="margin:18px 0 8px">'+(g+1)+' / '+GUIDE.length+'</div><h2 class="ob-h3">'+c[0]+'</h2><p class="ob-sub" style="margin-top:10px;font-size:17px">'+c[1]+'</p>'+(set?'<div class="ob-set">'+set+'</div>':'');
   }else{
     var id=OPSIS.ui.daily(),sd=STORIES[id];
     h+='<div class="ob-kick">C\'est parti</div><h2>Tout est <em>prêt</em></h2>'+
       (sd?'<div class="ob-card" style="margin-top:18px"><span class="poster">'+art(sd.p)+'</span><span class="ob-kk">HISTOIRE DU JOUR</span><b>'+esc(sd.title)+'</b><small>'+sd.min+' min</small></div>':'');
   }
   h+='</div><div class="ob-foot">'+(st<N-1?'<button class="btn red full" data-onb="next">'+(st===0?'Commencer':'Continuer')+'</button>':'<button class="btn red full" data-onb="read">Lire l\'histoire du jour</button><button class="btn glass full" data-onb="explore">Explorer le catalogue</button>')+'</div>';
-  var bd=el.querySelector('#obbody'),keep=bd&&el.dataset.st==String(st)?bd.scrollTop:0;el.dataset.st=st;
-  el.innerHTML=h;if(keep){var nb=el.querySelector('#obbody');nb.style.animation='none';nb.scrollTop=keep;}
+  el.innerHTML=h;
 }
 function enter(){
   if(entered)return;entered=true;timers.forEach(clearTimeout);if(raf)cancelAnimationFrame(raf);
