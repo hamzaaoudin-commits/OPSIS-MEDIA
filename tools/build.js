@@ -39,14 +39,17 @@ wr('app/data/covers.json',covers);
 wr('app/manifest.webmanifest',JSON.stringify({name:'OPSIS',short_name:'OPSIS',description:'The world is made of stories.',start_url:'./',scope:'./',display:'standalone',orientation:'portrait',background_color:'#09090A',theme_color:'#09090A',lang:'fr',shortcuts:[{name:"L'histoire du jour",short_name:'Du jour',url:'./?go=jour'},{name:'Une histoire au hasard',short_name:'Au hasard',url:'./?go=hasard'}],icons:[{src:'icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]},null,2));
 ['favicon-192.png:icons/icon-192.png','favicon-512.png:icons/icon-512.png','apple-touch-icon.png:apple-touch-icon.png','favicon.svg:favicon.svg'].forEach(p=>{const [a,b]=p.split(':');fs.mkdirSync(path.dirname(path.join(root,'app',b)),{recursive:true});fs.copyFileSync(path.join(root,a),path.join(root,'app',b));});
 wr('app/sw.js',`/* OPSIS service worker — généré, version ${ver} */
-const V='opsis-${ver}',SHELL=['./','index.html','manifest.webmanifest','icons/icon-192.png'];
-self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()));});
+const V='opsis-${ver}',SHELL=['./','index.html','manifest.webmanifest','icons/icon-192.png'],OFFLINE=${JSON.stringify(['data/content.json','data/covers.json'].concat(fs.readdirSync(path.join(root,'src/fonts')).filter(f=>/latin-(300|400|500|600|700|800|900)-(normal|italic)\.woff2$/.test(f)).map(f=>'fonts/'+f)))};
+/* installation : la coque, puis toutes les histoires et les polices, pour lire sans réseau */
+self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL).then(()=>c.addAll(OFFLINE).catch(()=>{}))).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x.startsWith('opsis-')&&x!==V).map(x=>caches.delete(x)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{
   const r=e.request,u=new URL(r.url);
   if(r.method!=='GET')return;
   /* l'API et l'authentification ne sont jamais mises en cache */
   if(u.pathname.indexOf('/rest/v1/')>=0||u.pathname.indexOf('/auth/v1/')>=0)return;
+  /* demande explicite de mise à jour : on va chercher la dernière version sur le réseau et on la range */
+  if(r.cache==='reload'&&u.origin===location.origin){e.respondWith(fetch(r).then(x=>{if(x.ok){const y=x.clone();caches.open(V).then(c=>c.put(r,y));}return x;}));return;}
   if(u.origin===location.origin&&u.pathname.indexOf('/data/')>=0){
     /* données : on répond tout de suite avec la copie locale, et on la rafraîchit en arrière-plan */
     e.respondWith(caches.open(V).then(c=>c.match(r).then(m=>{const n=fetch(r).then(x=>{if(x.ok)c.put(r,x.clone());return x;}).catch(()=>m);return m||n;})));return;

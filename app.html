@@ -69,7 +69,8 @@
     .phone{width:100%;height:100vh;height:100dvh;max-height:none;border-radius:0;box-shadow:none}
     .island,.sbar,.homebar{display:none}
     /* lecture : colonne centrée à largeur confortable ; grilles : autant de colonnes que la largeur le permet */
-    .rtext,.rhead:has(+.rtext),.rhead:has(+*+.rtext){max-width:720px;margin-left:auto;margin-right:auto}
+    .rtext:not(.bk),.rhead:has(+.rtext),.rhead:has(+*+.rtext){max-width:var(--rw,720px);margin-left:auto;margin-right:auto}
+    .phone .bkwrap{left:max(0px,calc((100% - var(--rw,720px))/2));right:max(0px,calc((100% - var(--rw,720px))/2))}
     .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
     .rail{scroll-padding-left:20px}
   }
@@ -320,13 +321,14 @@
   .prog{position:absolute;left:0;right:0;bottom:0;height:2px;background:transparent}
   .prog i{display:block;height:100%;width:0;background:var(--scx,var(--red-type))}
   .rhead{position:relative;margin-top:-150px;padding:0 24px;z-index:2}
+  .rhead:has(+.rtext){padding:0 var(--rpad,24px)}
   .rhead .k{font-size:13px;font-weight:700;color:var(--scx,var(--red-type))}
   .rhead h1{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:52px;line-height:.9;margin-top:8px}
   .rhead .m{font-size:14px;color:var(--dim);margin-top:12px}
-  .rtext{padding:26px 24px 10px;font-family:var(--serif);font-size:var(--fs);line-height:1.72;color:#E4DDD1}
+  .rtext{padding:26px var(--rpad,24px) 10px;font-family:var(--serif);font-size:var(--fs);line-height:1.72;color:#E4DDD1}
   .rtext p+p{margin-top:1em}
   .rtext p:first-child::first-letter{font-family:var(--disp);font-weight:900;font-size:3.3em;float:left;line-height:.82;margin:.06em .1em 0 0;color:var(--scx,var(--red-type))}
-  .rtext .turn{margin:1.6em -24px;padding:22px 24px;background:linear-gradient(90deg,rgba(210,35,44,.16),rgba(210,35,44,0));border-left:3px solid var(--scx,var(--red));font-size:1.08em;color:var(--bone)}
+  .rtext .turn{margin:1.6em calc(-1*var(--rpad,24px));padding:22px var(--rpad,24px);background:linear-gradient(90deg,rgba(210,35,44,.16),rgba(210,35,44,0));border-left:3px solid var(--scx,var(--red));font-size:1.08em;color:var(--bone)}
 
   .rhead .sb{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.3;color:var(--bone);margin-top:12px}
   .rtext h3.sec{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:27px;line-height:1;margin:2.3em 0 .55em;color:var(--bone)}
@@ -348,7 +350,7 @@
   .prg{font-size:13px;color:var(--faint);margin-top:12px}
   .view.bookmode{overflow:hidden}
   .bkwrap{position:absolute;left:0;right:0;top:100px;bottom:66px;overflow:hidden}
-  .bk{box-sizing:border-box;padding:6px 24px 0;will-change:transform}
+  .bk{box-sizing:border-box;padding:6px var(--rpad,24px) 0;will-change:transform}
   .bk h3.sec{break-after:avoid;margin-top:1.2em}
   .bk p{orphans:2;widows:2}
   .bk .turn{margin:1.2em 0;padding:16px}
@@ -364,8 +366,9 @@
   .bkend .srcb,.bkend .ract,.bkend .upnext,.bkend .keep,.bkend .src{margin-left:0;margin-right:0}
   .bkfoot{position:absolute;left:0;right:0;bottom:0;height:66px;display:flex;align-items:center;gap:14px;padding:0 20px 10px;background:linear-gradient(0deg,var(--black) 60%,rgba(9,9,10,0))}
   .bkb{width:40px;height:40px;border-radius:50%;background:var(--coal);font-size:26px;line-height:1;color:var(--bone);flex:none}
-  .bkbar{flex:1;height:3px;border-radius:2px;background:rgba(237,230,218,.15);overflow:hidden}
-  .bkbar i{display:block;height:100%;width:0;background:var(--red-type);transition:width .28s}
+  .bkbar{position:relative;touch-action:none;flex:1;height:3px;border-radius:2px;background:rgba(237,230,218,.15)}
+  .bkbar::before{content:"";position:absolute;left:0;right:0;top:-16px;bottom:-16px}
+  .bkbar i{border-radius:2px;display:block;height:100%;width:0;background:var(--red-type);transition:width .28s}
   .keep{margin:28px 20px 0;padding:22px 20px;border-radius:16px;background:var(--coal)}
   .keep h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:26px}
   .keep ol{list-style:none;margin-top:12px;counter-reset:k}
@@ -762,6 +765,18 @@
   .fontgrid button small{display:block;font-family:var(--ui);font-size:11px;opacity:.7;margin-top:3px}
   .fontgrid button[aria-pressed="true"]{background:var(--bone);color:#111}
   .phone.lh-l .rtext{line-height:1.95}.phone.lh-s .rtext{line-height:1.5}
+  /* mise en page : marges, largeur de colonne (tablettes), alignement */
+  .phone.mg-s{--rpad:14px}.phone.mg-l{--rpad:38px}
+  .phone.cw-n{--rw:600px}.phone.cw-w{--rw:880px}
+  .phone.al-j .rtext p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3}
+  .phone.al-j .rtext p.orn,.phone.al-j .rtext .turn{text-align:inherit}
+  /* lumière chaude : voile ambré réglable, indépendant du thème */
+  .phone[data-warm="1"] .nightveil{display:block;opacity:.16}.phone[data-warm="2"] .nightveil{display:block;opacity:.32}.phone[data-warm="3"] .nightveil{display:block;opacity:.5}
+  .phone.night .nightveil{display:block;opacity:1}
+  /* repère de position : zone de glissement agrandie sur la barre de progression */
+  .prog.drag{pointer-events:auto}.prog.drag::before{content:"";position:absolute;left:0;right:0;top:-14px;bottom:-14px;cursor:pointer;touch-action:none}
+  .scrubtip{position:absolute;left:50%;top:112px;transform:translateX(-50%) translateY(-6px);padding:7px 14px;border-radius:20px;background:rgba(14,13,16,.92);color:var(--bone);font-size:13px;font-weight:600;z-index:60;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;white-space:nowrap}
+  .scrubtip.on{opacity:1;transform:translateX(-50%)}
   /* ---------- apparence claire ---------- */
   /* mode nuit : fond brun très sombre, textes ambrés, et un voile multiplicateur qui supprime tout le bleu (images, logo, boutons compris) */
   .phone.night{--black:#0A0603;--coal:#130C06;--ash:#1E140A;--line:rgba(255,190,110,.14);--bone:#F2D3A2;--dim:#B08E5C;--faint:#7A6240;--red-type:#E8693A;--gold:#E6B060;background:var(--black)}
@@ -1640,7 +1655,7 @@ var DJIDS=[];
 /* =====================================================================
    ÉTAT (en mémoire)
    ===================================================================== */
-var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{penicilline:true},saved:{},follow:{},minutes:6,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
+var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{penicilline:true},saved:{},follow:{},minutes:6,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',mg:'n',al:'l',cw:'m',auto:false,warm:0,hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
 OPSIS.hydrate(S);S.x=S.x||{};if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,daily:function(){return DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel';},rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
 var main=document.getElementById('main'),layer=document.getElementById('layer'),lv=document.getElementById('layerview');
 /* ---------- le logo : un diaphragme à six lamelles, une pupille rouge, et c'est le O d'OPSIS ----------
@@ -1932,18 +1947,20 @@ var BK={w:0,n:1,p:0,id:null};
 function bookInit(id){
   var w=document.getElementById('bkw'),bk=document.getElementById('bk');if(!w||!bk)return;
   var W=w.clientWidth,H=w.clientHeight;if(!W)return;
-  bk.style.cssText='height:'+H+'px;width:'+W+'px;column-width:'+(W-48)+'px;column-gap:48px;column-fill:auto;transform:none';
+  var P=parseFloat(getComputedStyle(bk).paddingLeft)||24;
+  bk.style.cssText='height:'+H+'px;width:'+W+'px;column-width:'+(W-2*P)+'px;column-gap:'+(2*P)+'px;column-fill:auto;transform:none';
   var n=Math.max(1,Math.ceil((bk.scrollWidth-30)/W));
   BK={w:W,n:n,id:id,p:Math.min(S.bpage[id]||0,n-1)};
   bkgo(0,true);
 }
+function bkLabel(){var st=STORIES[BK.id],m=st?st.min:0,l=Math.ceil(m*(1-(BK.p+1)/BK.n));return (BK.p+1)+' / '+BK.n+(m?' · '+(l>0?'encore '+l+' min':'fin'):'');}
 function bkgo(d,quiet){
   var bk=document.getElementById('bk');if(!bk||BK.id===null)return;
   BK.p=Math.max(0,Math.min(BK.n-1,BK.p+d));S.bpage[BK.id]=BK.p;
   bk.style.transition=quiet?'none':'transform .28s cubic-bezier(.2,.8,.2,1)';
   bk.style.transform='translateX('+(-BK.p*BK.w)+'px)';
   var rt=document.getElementById('rt'),pg=document.getElementById('bkprog');
-  if(rt)rt.textContent=(BK.p+1)+' / '+BK.n;
+  if(rt)rt.textContent=bkLabel();
   if(pg)pg.style.width=((BK.p+1)/BK.n*100)+'%';
   if(!quiet&&S.stats!==false&&BK.n>1)saveProg(BK.id,BK.p/(BK.n-1)*.96);
 }
@@ -2453,10 +2470,49 @@ function bindLayer(top){
       var l=Math.ceil(m*(1-p));rt.textContent=l>0?'Encore '+l+' min':'Terminé';
     }
   };
+  if(top.type==='read'&&S.mode!=='book'){var pe=lv.querySelector('.prog');if(pe){pe.classList.add('drag');scrubInit(pe,function(f){var mx=lv.scrollHeight-lv.clientHeight,m=STORIES[top.id].min,l=Math.ceil(m*(1-f));lv.scrollTop=mx*f;tipShow(Math.round(f*100)+' % · '+(l>0?'encore '+l+' min':'fin'));});}}
   if(top.type==='read'&&S.mode==='book'){lv.onscroll=function(){};BK.id=null;
+    var bb=lv.querySelector('.bkbar');if(bb)scrubInit(bb,function(f){if(BK.id===null||BK.n<2)return;var t=Math.round(f*(BK.n-1));bkgo(t-BK.p,true);tipShow(bkLabel());});
     requestAnimationFrame(function(){bookInit(top.id);});
     if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(bookMode())bookInit(top.id);});}
 }
+/* ---------- repère de position : on fait glisser la barre pour aller n'importe où ---------- */
+var scrubTip=document.createElement('div');scrubTip.className='scrubtip';document.getElementById('phone').appendChild(scrubTip);
+function tipShow(t){scrubTip.textContent=t;scrubTip.classList.add('on');}function tipHide(){clearTimeout(tipHide.k);tipHide.k=setTimeout(function(){scrubTip.classList.remove('on');},450);}
+function scrubInit(el,onMove){
+  el.addEventListener('pointerdown',function(e){
+    e.preventDefault();try{el.setPointerCapture(e.pointerId);}catch(x){}
+    var r=el.getBoundingClientRect();
+    function mv(ev){onMove(Math.max(0,Math.min(1,(ev.clientX-r.left)/r.width)));}
+    function up(){el.removeEventListener('pointermove',mv);el.removeEventListener('pointerup',up);el.removeEventListener('pointercancel',up);tipHide();}
+    el.addEventListener('pointermove',mv);el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);mv(e);
+  });
+}
+/* ---------- lecture hors ligne : état réel du stockage, téléchargement à la demande ---------- */
+function offState(cb){
+  if(document.getElementById('opsis-data'))return cb('embedded');
+  if(!('caches' in window))return cb('unsupported');
+  caches.match('data/content.json').then(function(m){cb(m?'saved':'none');}).catch(function(){cb('unsupported');});
+}
+function offBox(){return '<div class="sbox" id="offbox"><div class="opt" style="border-top:0"><span>Lecture hors ligne<small class="os" id="offtxt">Vérification…</small></span></div><div class="opt lgrow" id="offact" style="display:none"><button data-offline id="offbtn"></button></div></div>';}
+function offRefresh(){
+  var t=document.getElementById('offtxt'),a=document.getElementById('offact'),bt=document.getElementById('offbtn');if(!t)return;
+  offState(function(st){
+    var tt=document.getElementById('offtxt');if(!tt)return;
+    if(st==='embedded'){tt.textContent='Toutes les histoires sont intégrées à l\'application : vous pouvez lire sans connexion, dans le métro comme en avion.';a.style.display='none';}
+    else if(st==='saved'){tt.textContent='Toutes les histoires sont enregistrées sur cet appareil. Vous pouvez lire sans connexion.';a.style.display='';bt.textContent='Mettre à jour les histoires';}
+    else if(st==='none'){tt.textContent='Pas encore enregistrées. Téléchargez-les une fois, puis lisez partout sans connexion.';a.style.display='';bt.textContent='Télécharger pour lire hors ligne';}
+    else{tt.textContent='Ce navigateur ne permet pas l\'enregistrement hors ligne. Installez OPSIS sur l\'écran d\'accueil pour en profiter.';a.style.display='none';}
+  });
+}
+function offSave(){
+  var bt=document.getElementById('offbtn');if(bt)bt.disabled=true;toast('Téléchargement en cours…');
+  Promise.all(['data/content.json','data/covers.json'].map(function(u){return fetch(u,{cache:'reload'}).then(function(r){if(!r.ok)throw 0;return r.arrayBuffer();});}))
+    .then(function(){toast('Disponible hors ligne');if(bt)bt.disabled=false;offRefresh();})
+    .catch(function(){toast('Téléchargement impossible, vérifiez votre connexion');if(bt)bt.disabled=false;});
+}
+window.addEventListener('offline',function(){offState(function(st){toast(st==='none'||st==='unsupported'?'Vous êtes hors ligne':'Hors ligne : vos histoires restent disponibles');});});
+window.addEventListener('online',function(){toast('De nouveau en ligne');});
 function rerenderKeepScroll(){var y=lv.scrollTop;var top=S.stack[S.stack.length-1];lv.innerHTML=layerHTML(top);lv.scrollTop=y;bindLayer(top);lv.onscroll();}
 
 document.getElementById('phone').addEventListener('click',function(e){
@@ -3000,13 +3056,22 @@ IC.folder='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
 IC.quote='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 17v-5c0-3.300 1.700-5.300 4.500-6l.6 1.600C8.500 8.200 7.800 9.300 7.700 11H10v6zm9 0v-5c0-3.300 1.700-5.300 4.500-6l.6 1.600c-1.600.6-2.300 1.700-2.400 3.400H19v6z"/></svg>';
 
 /* ---------- applique l'apparence (thème, police, interligne) ---------- */
+function evening(){var h=new Date().getHours();return h>=21||h<7;}
+function effTheme(){return (S.auto&&evening())?'night':S.theme;}
 function applyLook(){
-  var ph=document.getElementById('phone');
-  ph.classList.toggle('light',S.theme==='light');ph.classList.toggle('night',S.theme==='night');
+  var ph=document.getElementById('phone'),th=effTheme();
+  ph.classList.toggle('light',th==='light');ph.classList.toggle('night',th==='night');
+  ph.classList.toggle('mg-s',S.mg==='s');ph.classList.toggle('mg-l',S.mg==='l');
+  ph.classList.toggle('cw-n',S.cw==='n');ph.classList.toggle('cw-w',S.cw==='w');
+  ph.classList.toggle('al-j',S.al==='j');ph.setAttribute('data-warm',String(S.warm||0));
   ph.classList.toggle('f-sans',fontDef()[3].indexOf('sans-serif')>0);ph.style.setProperty('--rfont',fontDef()[3]);
   ph.classList.toggle('lh-l',S.lh==='l');ph.classList.toggle('lh-s',S.lh==='s');
   document.documentElement.style.setProperty('--fs',S.fs+'px');
 }
+
+/* nuit automatique : on réévalue chaque minute et au retour dans l'appli */
+var lastTh=null;function autoTick(){var t=effTheme();if(t!==lastTh){lastTh=t;applyLook();}}
+setInterval(autoTick,60000);document.addEventListener('visibilitychange',function(){if(!document.hidden)autoTick();});
 
 /* ---------- recommandations ---------- */
 function nextEps(){var l=S.x.rlog||{},out=[];Object.keys(l).filter(function(id){return S.read[id]&&STORIES[id]&&STORIES[id].ep;}).sort(function(a,b){return String(l[b]).localeCompare(String(l[a]));}).forEach(function(id){var n=STORIES[id].next;if(n&&STORIES[n]&&STORIES[n].ep&&STORIES[n].ep.of===STORIES[id].ep.of&&!S.read[n]&&out.indexOf(n)<0)out.push(n);});return out;}
@@ -3685,7 +3750,12 @@ function lookOpts(){
   return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light'&&S.theme!=='night')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button><button data-theme="night" aria-pressed="'+(S.theme==='night')+'">Nuit</button></span></div>'+(S.theme==='night'?'<p class="os" style="padding:0 0 8px;font-size:12px;color:var(--dim)">Mode nuit : aucune lumière bleue, tons ambrés. Idéal le soir, avant de dormir.</p>':'')+
     '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
     '<div class="opt" style="display:block"><span>Police</span><div class="fontgrid">'+FONTS.map(function(f){return '<button data-font="'+f[0]+'" aria-pressed="'+((S.font||'serif')===f[0])+'" style="font-family:'+f[3]+'">'+f[1]+'<small>'+f[2]+'</small></button>';}).join('')+'</div></div>'+
-    '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>'+ambOpts();
+    '<div class="opt"><span>Interligne</span><span class="seg"><button data-lh="s" aria-pressed="'+(S.lh==='s')+'">Serré</button><button data-lh="n" aria-pressed="'+(S.lh!=='s'&&S.lh!=='l')+'">Normal</button><button data-lh="l" aria-pressed="'+(S.lh==='l')+'">Aéré</button></span></div>'+
+    '<div class="opt"><span>Marges</span><span class="seg"><button data-mg="s" aria-pressed="'+(S.mg==='s')+'">Étroites</button><button data-mg="n" aria-pressed="'+(S.mg!=='s'&&S.mg!=='l')+'">Normales</button><button data-mg="l" aria-pressed="'+(S.mg==='l')+'">Larges</button></span></div>'+
+    '<div class="opt"><span>Alignement</span><span class="seg"><button data-al="l" aria-pressed="'+(S.al!=='j')+'">À gauche</button><button data-al="j" aria-pressed="'+(S.al==='j')+'">Justifié</button></span></div>'+
+    (window.innerWidth>=600?'<div class="opt"><span>Largeur du texte</span><span class="seg"><button data-cw="n" aria-pressed="'+(S.cw==='n')+'">Étroite</button><button data-cw="m" aria-pressed="'+(S.cw!=='n'&&S.cw!=='w')+'">Normale</button><button data-cw="w" aria-pressed="'+(S.cw==='w')+'">Large</button></span></div>':'')+
+    '<div class="opt"><span>Lumière chaude<small class="os">Un voile ambré qui repose les yeux, sans changer le thème.</small></span><span class="seg"><button data-warm="0" aria-pressed="'+!(S.warm>0)+'">Non</button><button data-warm="1" aria-pressed="'+(S.warm===1)+'">Douce</button><button data-warm="2" aria-pressed="'+(S.warm===2)+'">Moyenne</button><button data-warm="3" aria-pressed="'+(S.warm===3)+'">Forte</button></span></div>'+
+    '<div class="opt"><span>Mode nuit automatique<small class="os">Passe en mode nuit de 21 h à 7 h'+(S.auto&&evening()?' (actif en ce moment)':'')+'.</small></span><button class="tog" role="switch" aria-checked="'+!!S.auto+'" data-auto aria-label="Mode nuit automatique"></button></div>'+ambOpts();
 }
 
 /* ---------- pages de réglages ---------- */
@@ -3765,6 +3835,7 @@ function setLayer(k){
       '<div class="opt"><span>Questions en fin d\'histoire<small class="os">Quelques questions facultatives pour vérifier ce que vous avez retenu.</small></span><button class="tog" role="switch" aria-checked="'+!!S.quizOn+'" data-toggle2="quizOn" aria-label="Questions en fin d\'histoire"></button></div>'+
       '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
       '<div class="opt"><span>Masquer les histoires déjà lues<small class="os">Sur l\'accueil. Elles restent dans votre bibliothèque.</small></span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues"></button></div></div>';
+  b+=offBox();setTimeout(offRefresh,60);
   }else if(k==='langue'){
     var w=S.x.langWish||[];
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Français</span><span class="pill on">Active</span></div>'+
@@ -3892,6 +3963,9 @@ function featClick(b,d){
   if(d.ambv){ambVolSet(+d.ambv);reSet();return true;}
   if(d.font){S.font=d.font;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
   if(d.lh){S.lh=d.lh;applyLook();reSet();if(bookMode()){S.bpage[top.id]=0;bookInit(top.id);}return true;}
+  if(d.mg||d.al||d.cw||d.warm!==undefined||b.hasAttribute('data-auto')){
+    if(d.mg)S.mg=d.mg;if(d.al)S.al=d.al;if(d.cw)S.cw=d.cw;if(d.warm!==undefined)S.warm=+d.warm;if(b.hasAttribute('data-auto')){S.auto=!S.auto;lastTh=null;}
+    applyLook();reSet();var tq2=S.stack[S.stack.length-1];if(bookMode()&&tq2&&(d.mg||d.al||d.cw)){S.bpage[tq2.id]=0;bookInit(tq2.id);}return true;}
   if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
   if(d.gd!==undefined){var gw=b.closest('.gdwrap');if(d.gd==='next')gdMove(1,gw);else if(d.gd==='prev')gdMove(-1,gw);else if(d.gd==='tap'){if(Date.now()-gdSw>350&&b.classList.contains('cur'))gdMove(1,gw);}else if(d.gd.indexOf('go')===0){GI=+d.gd.slice(2);gdPaint(gw);}return true;}
   if(d.readtog!==undefined){var rs=lv.querySelector('.rdsec');if(rs){RDOPEN=rs.classList.toggle('open');b.setAttribute('aria-expanded',RDOPEN);}return true;}
@@ -3905,6 +3979,7 @@ function featClick(b,d){
   if(d.voice){S.voice=d.voice;reSet();if(auOK()){try{speechSynthesis.cancel();}catch(e){}var uu=new SpeechSynthesisUtterance('Voici la voix qui vous lira les histoires.');var vv=pickVoice();if(vv){uu.voice=vv;uu.lang=vv.lang;}uu.rate=(S.speed||1)*0.96;speechSynthesis.speak(uu);}return true;}
   if(d.pref!==undefined){var pf=S.x.prefs||[],i=pf.indexOf(+d.pref);if(i>=0)pf.splice(i,1);else pf.push(+d.pref);S.x.prefs=pf;reSet();return true;}
   if(d.langwish){var w=S.x.langWish||[],j=w.indexOf(d.langwish);if(j>=0)w.splice(j,1);else{w.push(d.langwish);toast('C\'est noté : vous serez prévenu');}S.x.langWish=w;reSet();return true;}
+  if(b.hasAttribute('data-offline')){offSave();return true;}
   if(b.hasAttribute('data-restore')){var bl=OPSIS.billing;if(bl&&typeof bl.restore==='function'){toast('Recherche de vos achats…');Promise.resolve(bl.restore()).then(function(r){toast(r&&r.restored?'Achats restaurés':'Aucun achat à restaurer pour ce compte');}).catch(function(){toast('Restauration impossible pour le moment, réessayez');});}else toast('Aucun achat à restaurer pour ce compte');return true;}
   if(b.hasAttribute('data-pluswish')){S.x.plusWish=!S.x.plusWish;reSet();return true;}
   if(b.hasAttribute('data-export')){var blob=new Blob([JSON.stringify({exporte_le:OPSIS.day(),lues:S.read,liste:S.saved,notes:S.rate,progression:S.prog,citations:S.x.quotes||[],collections:S.x.cols||[],recherches:S.x.hist||[],reglages:{format:FM[S.len||3],sens:S.mode,taille:S.fs,theme:S.theme,police:S.font}},null,2)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='opsis-mes-donnees.json';document.body.appendChild(a);a.click();a.remove();toast('Vos données sont téléchargées');return true;}
@@ -4115,7 +4190,7 @@ OPSIS.loadContent=function(){
 /* OPSIS runtime — état utilisateur : sauvegarde locale, horodatage par clé (pour la synchro), série de jours */
 (function(){
 var OPSIS=window.OPSIS,KEY='opsis.state.v1';
-var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','hideRead','quizOn','lang','focus','speed','nNew','nResume','nBack','stats','voice'];
+var SET=['len','mode','minutes','fs','notif','hour','theme','font','lh','mg','al','cw','auto','warm','hideRead','quizOn','lang','focus','speed','nNew','nResume','nBack','stats','voice'];
 var store=OPSIS.store={S:null,flat:{},dirty:false};
 
 /* S -> table plate { "read.pt01": true, "saved.eiffel": true, "set.fs": 19, "day.2027-01-04": true } */
