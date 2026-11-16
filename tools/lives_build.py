@@ -182,8 +182,18 @@ def first_sentence(lines):
         m = re.match(r'(.{20,140}?[.!?»])(\s|$)', t)
         return (m.group(1) if m else t[:120]).strip()
     return ''
+import glob
+def add(pid, k, title, lines):
+    ADDSEC.setdefault(pid, []).append((k, '#' + title, lines))
+ADDSEC = {}   # pid -> [(k, '#Titre', [lignes])]  : section ajoutée après la section d'origine k
+for _f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), 'lives_add_*.py'))):
+    exec(open(_f, encoding='utf-8').read())
 def auto(pid):
     sec = sections(pid)
+    solo = set()
+    for (k, t, lines) in sorted(ADDSEC.get(pid, []), key=lambda x: -x[0]):
+        sec.insert(k + 1, [t] + lines)
+        solo.add(t[1:])
     last = sec[-1]
     units = []                    # (titre, lignes sans titre)
     # cold open fusionné avec la section suivante
@@ -196,14 +206,25 @@ def auto(pid):
         units[-1] = (units[-1][0], units[-1][1] + ['*', last[0]] + last[1:])
     else:
         for x in sec: units.append((x[0][1:], x[1:]))
+    if len(sec) > 2 and rest[0][0][1:] in solo:
+        units[0] = (units[0][0], units[0][1])
     # regroupement : épisodes d'au moins ~450 mots
     eps_, cur = [], None
     for t, lines in units:
+        if t in solo and nw(lines) >= 170:
+            if cur:
+                if eps_ and nw(cur['body']) < 130: eps_[-1]['body'] += ['*', '#' + cur['t']] + cur['body']
+                else: eps_.append(cur)
+                cur = None
+            eps_.append({'t': t, 'body': list(lines), 'best': nw(lines)})
+            continue
         if cur is None:
-            cur = {'t': t, 'body': list(lines)}
+            cur = {'t': t, 'body': list(lines), 'best': nw(lines)}
         else:
             cur['body'] += ['*', '#' + t] + lines
-        if nw(cur["body"]) >= 220:
+            if nw(lines) > cur['best']:
+                cur['t'] = t; cur['best'] = nw(lines)
+        if nw(cur["body"]) >= 130:
             eps_.append(cur); cur = None
     if cur:
         if eps_ and nw(cur["body"]) < 130:
