@@ -170,6 +170,58 @@ L[m] = {'eps': [
     ['*'], S(m, 10, 0, head=True)),
 ]}
 
+
+# ---------------------------------------------------------------- les 49 autres vies : découpage automatique des sections
+import re
+HELPIDS = {'pt02','pt08','pt09','pt10','pt12','pt13','pt14','pt17','pt20','pt23','pt24','pt25','pt26'}
+def nw(lines):
+    return sum(len(x.split()) for x in lines if x[:1] not in '#@*')
+def first_sentence(lines):
+    for t in lines:
+        if t[:1] in '#@*': continue
+        m = re.match(r'(.{20,140}?[.!?»])(\s|$)', t)
+        return (m.group(1) if m else t[:120]).strip()
+    return ''
+def auto(pid):
+    sec = sections(pid)
+    last = sec[-1]
+    units = []                    # (titre, lignes sans titre)
+    # cold open fusionné avec la section suivante
+    first = sec[0]
+    rest = sec[1:-1] if len(sec) > 2 else sec[1:]
+    if len(sec) > 2:
+        units.append((rest[0][0][1:], first[1:] + ['*'] + rest[0][1:]))
+        for x in rest[1:]:
+            units.append((x[0][1:], x[1:]))
+        units[-1] = (units[-1][0], units[-1][1] + ['*', last[0]] + last[1:])
+    else:
+        for x in sec: units.append((x[0][1:], x[1:]))
+    # regroupement : épisodes d'au moins ~450 mots
+    eps_, cur = [], None
+    for t, lines in units:
+        if cur is None:
+            cur = {'t': t, 'body': list(lines)}
+        else:
+            cur['body'] += ['*', '#' + t] + lines
+        if nw(cur["body"]) >= 220:
+            eps_.append(cur); cur = None
+    if cur:
+        if eps_ and nw(cur["body"]) < 130:
+            eps_[-1]['body'] += ['*', '#' + cur['t']] + cur['body']
+        else:
+            eps_.append(cur)
+    out = []
+    for e in eps_:
+        out.append({'t': e['t'], 'sub': first_sentence(e['body']), 'body': e['body']})
+    if pid in HELPIDS:
+        out[-1]['body'] += HELP
+    return {'eps': out}
+for pid in P:
+    if pid not in L:
+        a = auto(pid)
+        if len(a['eps']) >= 2:
+            L[pid] = a
+
 json.dump(L, open(os.path.join(root, 'data/lives.json'), 'w'), ensure_ascii=False, indent=1)
 for pid, v in L.items():
     print(P[pid]['name'], len(v['eps']), 'épisodes')
