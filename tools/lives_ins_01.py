@@ -562,3 +562,193 @@ ins('pt41', 6, "Après sa condamnation, Madoff est envoyé", [
  "Sa femme Ruth a renoncé à 85 millions de dollars d’actifs, et n’en conserve que 2,5 millions en liquide. Madoff possédait notamment un yacht de pêche sportive de dix-sept mètres, le *Bull*."])
 ins('pt41', 7, "Bernie Madoff meurt en prison, en avril 2021", [
  "Il s’éteint le 14 avril, au centre médical fédéral de Butner, d’une insuffisance rénale chronique. Andrew est mort le 3 septembre 2014 d’un lymphome. Mark s’est pendu dans son appartement de Manhattan, et le médecin légiste a conclu au suicide."])
+
+# ---- Jordan Belfort (pt42)
+ins('pt42', 1, "Jordan Belfort naît le 9 juillet 1962", [
+ "Ses parents, Max et Leah, sont comptables. Il obtient un diplôme de biologie à l’American University, puis s’inscrit à l’école dentaire de l’université du Maryland. Il l’abandonne après un discours du doyen, qui déclare que l’âge d’or de la dentisterie est terminé."])
+ins('pt42', 1, "Adolescent, il vend des glaces sur la plage.", [
+ "Avec un ami, Elliot Loewenstern, il vend des glaces italiennes à Jones Beach, et amasse environ 20 000 dollars. Son commerce de viande et de poisson, à Long Island, affirme-t-il, écoule jusqu’à 2,3 tonnes par semaine. L’entreprise fait faillite quand il a 25 ans."])
+ins('pt42', 2, "Stratton Oakmont emploie jusqu’à un millier de courtiers.", [
+ "La société, au départ une franchise de Stratton Securities, a placé plus d’un milliard de dollars de titres. Il consomme surtout du méthaqualone, vendu sous le nom de Quaalude, dont il devient dépendant."])
+ins('pt42', 3, "En 1996, la société est fermée.", [
+ "L’autorité de régulation de la profession l’exclut en décembre 1996. Le 12 juin 1996, son yacht *Nadine*, construit en 1961 pour Coco Chanel, avait coulé au large de la Sardaigne : la marine italienne avait sauvé tous les passagers. Belfort dit avoir insisté pour prendre la mer malgré le vent, contre l’avis du capitaine. Les pertes des investisseurs sont estimées à environ 200 millions de dollars."])
+ins('pt42', 3, "Il coopère avec les enquêteurs.", [
+ "Il porte un micro pour enregistrer ses anciens associés. La peine est prononcée le 18 juillet 2003. Il la purge à Taft, en Californie. Parmi ses codétenus se trouve le comédien Tommy Chong."])
+ins('pt42', 4, "Dans son accord avec la justice, Belfort doit rembourser ses victimes", [
+ "Le jugement fixe le montant à 110,4 millions de dollars, avec une obligation de reverser la moitié de ses revenus jusqu’en 2009. Un accord ultérieur l’engage à verser au minimum 10 000 dollars par mois. Selon des informations récentes, il aurait achevé de s’en acquitter en avril 2026."])
+ins('pt42', 4, "Après le film de Scorsese, Jordan Belfort devient une marque.", [
+ "Ses interventions seraient facturées entre 30 000 et 75 000 dollars."])
+
+# ---- Lance Armstrong (pt43)
+ins('pt43', 1, "Lance Armstrong naît le 18 septembre 1971", [
+ "Il porte le nom de son beau-père, Terry Armstrong. En 1989 et 1990, il est champion national de triathlon dans la catégorie sprint."])
+ins('pt43', 2, "En octobre 1996, Lance Armstrong a 25 ans.", [
+ "Le diagnostic tombe le 2 octobre 1996. Il subit une ablation d’un testicule dès le lendemain. Les métastases touchent les ganglions, les poumons, l’abdomen et le cerveau. Son oncologue principal, Craig Nichols, enseigne à l’université d’Indiana. Sa dernière chimiothérapie a lieu le 13 décembre 1996. Il reprend la compétition en 1998."])
+ins('pt43', 3, "Son équipe, US Postal, est une machine.", [
+ "Elle porte ensuite le nom de Discovery Channel. Le service postal américain avait versé environ 31 millions de dollars de parrainage entre 2001 et 2004."])
+ins('pt43', 4, "Pendant des années, le monde entier a cru le héros", [
+ "Il est surnommé « le Boss » dans le peloton. Son ancien directeur sportif, Johan Bruyneel, sera suspendu dix ans par l’agence antidopage américaine."])
+ins('pt43', 5, "En octobre 2012, l’agence publie un rapport", [
+ "Armstrong ne conteste pas les accusations. Ses résultats sont effacés à partir d’août 1998. L’Union cycliste internationale confirme la décision, et ne réattribue pas ses victoires. Nike met fin à sa collaboration avec la fondation en mai 2013."])
+ins('pt43', 5, "En janvier 2013, il s’assoit en face d’Oprah Winfrey.", [
+ "Mais l’aveu est partiel : il affirme ne pas s’être dopé lors de son retour en 2009 et 2010, et situe sa dernière faute en 2005."])
+ins('pt43', 5, "Les années suivantes, il est poursuivi en justice", [
+ "En février 2015, un arbitrage donne raison à la société d’assurance SCA Promotions, qui réclamait environ 10 millions de dollars. L’affaire se règle en septembre 2015 pour une somme non rendue publique. En avril 2018, il verse 5 millions de dollars au gouvernement américain, qui avait demandé jusqu’à 100 millions pour le parrainage du service postal. Floyd Landis, à l’origine de la procédure, doit en toucher 1,1 million."])
+
+# ---- O.J. Simpson (pt44)
+ins('pt44', 1, "Orenthal James Simpson naît le 9 juillet 1947", [
+ "Les appareils orthopédiques à ses jambes, il les porte jusqu’à l’âge de cinq ans. Il sort du lycée Galileo en 1965. À l’université de Californie du Sud, il remporte le trophée Heisman en 1968, mais quitte l’université sans diplôme."])
+ins('pt44', 1, "La poursuite est retransmise en direct", [
+ "Le Bronco est conduit par son ami Al Cowlings. Le chiffre de 95 millions de téléspectateurs reste une estimation."])
+ins('pt44', 2, "Après l’université, il rejoint en 1969 les Buffalo Bills", [
+ "Il est le premier choix de la draft cette année-là. Il quitte Buffalo en 1978 pour les 49ers de San Francisco, où il joue deux saisons. Son record de 2 003 yards est établi en 1973, sur une saison de quatorze matchs. Il entre au Hall of Fame dès sa première année d’éligibilité."])
+ins('pt44', 2, "Sa seconde carrière est peut-être plus importante que la première.", [
+ "Il tourne pour Hertz à partir de 1975. Il joue dans *La Tour infernale* en 1974, puis le détective Nordberg dans les trois films de *Y a-t-il un flic…* (1988, 1991 et 1994)."])
+ins('pt44', 3, "En 1977, il rencontre Nicole Brown.", [
+ "Ils se marient le 2 février 1985."])
+ins('pt44', 4, "Le procès d’O.J. Simpson commence en janvier 1995.", [
+ "Il se termine en octobre."])
+ins('pt44', 5, "En 1997, les familles des victimes poursuivent", [
+ "Le verdict civil est rendu le 5 février 1997 : 33,5 millions de dollars au total."])
+ins('pt44', 5, "En 2007, à Las Vegas, il fait irruption", [
+ "Les faits se déroulent le 13 septembre 2007, à l’hôtel Palace Station. Il est reconnu coupable le 3 octobre 2008, puis condamné le 5 décembre, à trente-trois ans de prison, avec possibilité de libération conditionnelle au bout de neuf ans."])
+ins('pt44', 5, "O.J. Simpson meurt d’un cancer en avril 2024", [
+ "Il meurt le 10 avril, à Las Vegas."])
+
+# ---- Harvey Weinstein (pt45)
+ins('pt45', 1, "Harvey Weinstein naît le 19 mars 1952", [
+ "Pendant une bonne partie des années 1970, les deux frères organisent des concerts à Buffalo."])
+ins('pt45', 1, "Miramax se spécialise dans le cinéma indépendant.", [
+ "Sa première sortie est *Sexe, mensonges et vidéo*, de Steven Soderbergh, en 1989. *Pulp Fiction*, en 1994, est son premier grand succès commercial. *Le Patient anglais* lui donne son premier Oscar du meilleur film, en 1997 ; *Shakespeare in Love* le lui redonne en 1999."])
+ins('pt45', 2, "En 1993, la Walt Disney Company rachète Miramax.", [
+ "Le prix est d’environ 80 millions de dollars. The Weinstein Company naît le 30 septembre 2005."])
+ins('pt45', 3, "Après les révélations, tout s’effondre.", [
+ "Il est renvoyé le 8 octobre 2017. Au 31 octobre, plus de quatre-vingts femmes l’accusent de harcèlement ou de viol. En 2018, les actifs de la société sont rachetés par Lantern Entertainment, et la société cesse son activité le 16 juillet."])
+ins('pt45', 3, "Les procès commencent.", [
+ "À New York, le jury rend son verdict le 24 février 2020 : coupable de deux chefs sur cinq. La peine de vingt-trois ans est prononcée le 11 mars."])
+ins('pt45', 3, "Puis, en 2024, la plus haute cour de l’État de New York", [
+ "La décision, rendue le 25 avril 2024, annule les condamnations et ordonne un nouveau procès. La sélection du jury de ce nouveau procès commence le 15 avril 2025. Le verdict, partagé, est rendu le 11 juin 2025."])
+
+# ---- Oscar Pistorius (pt46)
+ins('pt46', 1, "Après une blessure au rugby, il découvre l’athlétisme.", [
+ "Il a étudié à Pretoria Boys High School, où il jouait en troisième équipe de rugby, et il pratiquait le water-polo et le tennis au niveau provincial. Les lames qu’il utilise sont des Flex-Foot Cheetah, fabriquées par l’entreprise islandaise Össur."])
+ins('pt46', 2, "En 2004, à 17 ans, il remporte l’or", [
+ "Plus exactement, il gagne l’or sur 200 mètres, avec un record du monde de 21,97 secondes, et le bronze sur 100 mètres. En 2008, à Pékin, il remporte trois médailles d’or, sur 100, 200 et 400 mètres."])
+ins('pt46', 2, "Il se bat devant le tribunal arbitral du sport.", [
+ "Le tribunal, installé à Lausanne, annule le 16 mai 2008 la décision de la fédération."])
+ins('pt46', 2, "Il atteint les demi-finales du 400 mètres.", [
+ "Il est aussi le porte-drapeau de l’Afrique du Sud, et court le relais 4 × 400 mètres, qui termine huitième de la finale."])
+ins('pt46', 3, "Le procès s’ouvre en 2014.", [
+ "Le verdict est rendu le 12 septembre 2014, et la peine, le 21 octobre. Il sort de prison le 19 octobre 2015, pour être placé en résidence surveillée."])
+ins('pt46', 3, "En première instance, la juge le déclare coupable", [
+ "La juge, Thokozile Masipa, le condamne aussi pour une infraction liée aux armes à feu."])
+ins('pt46', 3, "En appel, en 2015, la justice requalifie les faits en meurtre.", [
+ "C’est le 3 décembre 2015, devant la Cour suprême d’appel. En juillet 2016, la juge Masipa le condamne à six ans. Le 24 novembre 2017, la Cour suprême d’appel alourdit la peine à quinze ans, ce qui, après déduction du temps déjà purgé, fait treize ans et cinq mois. La Cour constitutionnelle rejette son dernier recours le 9 avril 2018."])
+ins('pt46', 3, "En janvier 2024, après avoir purgé la moitié de sa peine", [
+ "C’est le 5 janvier, après environ huit ans et demi de détention. Les conditions de sa liberté courent jusqu’au 5 décembre 2029."])
+
+# ---- Tiger Woods (pt47)
+ins('pt47', 1, "Eldrick « Tiger » Woods naît le 30 décembre 1975.", [
+ "Son prénom, Eldrick, a été choisi parce qu’il commence par la lettre de son père, Earl, et finit par celle de sa mère, Kultida, née en Thaïlande. Son surnom vient d’un ami de son père au Viêt Nam, le colonel sud-vietnamien Vuong Dang Phong, que Earl appelait aussi Tiger."])
+ins('pt47', 1, "À 2 ans, Tiger joue au golf dans une émission de télévision.", [
+ "C’est en 1978, au *Mike Douglas Show*, où il fait un concours de putting avec Bob Hope. Il gagne l’US Junior Amateur trois fois de suite, de 1991 à 1993, puis l’US Amateur trois fois de suite, de 1994 à 1996. Il étudie à Stanford, avec une bourse de golf, avant de passer professionnel en août 1996."])
+ins('pt47', 2, "En 1996, il devient professionnel.", [
+ "Le contrat de Nike est renouvelé en 2000 : cinq ans, 105 millions de dollars."])
+ins('pt47', 2, "Personne n’avait jamais dominé ce sport", [
+ "En juin 2008, il gagne l’US Open en prolongation, contre Rocco Mediate, malgré un genou blessé plus gravement qu’on ne le pensait. Il annonce ensuite une nouvelle opération. Il totalise 82 victoires sur le PGA Tour, soit autant que Sam Snead."])
+ins('pt47', 2, "Il entre en cure. Sa femme divorce.", [
+ "Le divorce d’avec Elin Nordegren est prononcé le 23 août 2010."])
+ins('pt47', 3, "En mai 2017, la police le trouve endormi", [
+ "Il est arrêté le 29 mai 2017, à Jupiter Island."])
+ins('pt47', 3, "Et en avril 2019, il gagne le Masters.", [
+ "Il reçoit en mai 2019 la médaille présidentielle de la Liberté, la plus haute distinction civile américaine."])
+ins('pt47', 4, "En février 2021, il est victime d’un grave accident de voiture", [
+ "L’accident survient le 23 février 2021, à Rancho Palos Verdes. Il est intronisé au World Golf Hall of Fame en 2021, et revient au Masters en 2022 : il termine quarante-septième."])
+
+# ---- Robert Downey Jr. (pt48)
+ins('pt48', 1, "À 5 ans, Robert joue déjà dans un film de son père.", [
+ "Le film s’appelle *Pound*, et il date de 1970. Sa mère, Elsie Ann Ford, est actrice."])
+ins('pt48', 1, "À 20 ans, il entre dans la troupe de Saturday Night Live.", [
+ "Il en est renvoyé au bout d’une saison, avec la plupart des nouveaux membres. Sa percée vient de *Weird Science*, en 1985, où il joue une petite brute, puis de *Less Than Zero*, en 1987."])
+ins('pt48', 1, "En 1992, il incarne Charlie Chaplin", [
+ "Il obtient aussi le prix BAFTA du meilleur acteur."])
+ins('pt48', 2, "De 1996 à 2001, Robert Downey Jr. vit une descente presque sans fin.", [
+ "Il est condamné à trois ans de prison, et passe presque un an à la prison de Corcoran, d’où il sort en 2000. Après un test antidrogue manqué, il avait déjà passé six mois dans une prison du comté de Los Angeles, en 1997."])
+ins('pt48', 3, "L’acteur Mel Gibson, son ami, lui obtient un rôle", [
+ "Il s’agit de *The Singing Detective*, en 2003. Il rencontre Susan Levin sur le tournage de *Gothika*, la même année."])
+ins('pt48', 3, "En 2005, il épouse Susan Levin.", [
+ "Le mariage a lieu le 27 août. Ils ont deux enfants."])
+ins('pt48', 4, "Favreau veut Robert Downey Jr. pour le rôle.", [
+ "Il prend plus de neuf kilos de muscle pour le rôle."])
+ins('pt48', 4, "Pendant onze ans, il incarne Iron Man", [
+ "*The Avengers*, en 2012, dépasse 1,5 milliard de dollars de recettes. Forbes le classe acteur le mieux payé du monde en 2013, 2014 et 2015, avec 75, 75 puis 80 millions de dollars. Ses films en tête d’affiche ont rapporté plus de 14 milliards de dollars."])
+ins('pt48', 5, "Le 10 mars 2024, à Los Angeles, Robert Downey Jr. reçoit", [
+ "Il joue Lewis Strauss, président de la commission de l’énergie atomique. Il a accepté un cachet d’environ 4 millions de dollars, alors que son salaire habituel est de 10 à 20 millions. En juillet 2024, Marvel a annoncé son retour dans la franchise, cette fois dans le rôle du Docteur Fatalis."])
+
+# ---- Dave Chappelle (pt49)
+ins('pt49', 1, "Dave Chappelle naît en 1973 à Washington.", [
+ "Il naît le 24 août. Son père, William David Chappelle III, enseigne le chant et est doyen à Antioch College. Sa mère, Yvonne Seon, a travaillé pour Patrice Lumumba, Premier ministre du Congo. Il étudie à la Duke Ellington School of the Arts, à Washington, et en sort diplômé en 1991."])
+ins('pt49', 1, "Il joue dans des comédies, écrit des sketches.", [
+ "À 19 ans, il joue dans *Robin des Bois, héros en collants*, de Mel Brooks, son premier film, et ouvre un concert d’Aretha Franklin. Il refuse le rôle de Bubba dans *Forrest Gump*, qu’il juge dégradant. Il est marié depuis 2001 à Elaine Erfe, et ils ont trois enfants."])
+ins('pt49', 2, "En 1998, il coécrit et joue dans *Half Baked*", [
+ "Le film est coécrit avec Neal Brennan, qui sera aussi cocréateur de *Chappelle’s Show*. Il est diffusé sur Comedy Central de 2003 à 2006."])
+ins('pt49', 2, "Alors il part. Il prend l’avion pour l’Afrique du Sud.", [
+ "Il quitte la production en mai 2005. Il en parle plus tard à Oprah Winfrey, dans un entretien diffusé le 3 février 2006, puis à *Inside the Actors Studio*, le 12 février."])
+ins('pt49', 3, "Quand il rentre aux États-Unis", [
+ "Sa ferme de 26 hectares se trouve près de Yellow Springs. En 2007, il bat un record d’endurance au Laugh Factory de Los Angeles : plus de six heures sur scène, en décembre. Il ne reprend le stand-up à temps plein qu’en août 2013."])
+ins('pt49', 3, "En 2016, il revient. Netflix lui propose un contrat", [
+ "L’accord est annoncé le 21 novembre 2016 : environ 20 millions de dollars par spectacle, trois spectacles prévus en 2017. *Sticks & Stones* sort le 26 août 2019. *8:46*, enregistré à Yellow Springs le 6 juin 2020, est mis en ligne six jours plus tard. *The Closer* paraît le 5 octobre 2021 : ses propos sur les personnes trans déclenchent une polémique."])
+ins('pt49', 3, "Il refuse de s’excuser.", [
+ "Dans la nuit du 4 mai 2022, au Hollywood Bowl, un homme monte sur scène et l’attaque, armé d’un faux pistolet contenant une lame. Son dernier spectacle sur la plateforme, *The Dreamer*, sort le 31 décembre 2023."])
+ins('pt49', 4, "En novembre 2016, quatre jours après l’élection", [
+ "Il y reçoit un Emmy du meilleur acteur invité. Il animera encore l’émission en 2020, 2022 et le 18 janvier 2025, et recevra un second Emmy en 2020."])
+ins('pt49', 4, "En 2019, il reçoit le prix Mark Twain", [
+ "La cérémonie a lieu au Kennedy Center, le 27 octobre 2019."])
+
+# ---- Stromae (pt50)
+ins('pt50', 1, "Paul Van Haver naît le 12 mars 1985.", [
+ "Il naît à Etterbeek, dans l’agglomération de Bruxelles. Sa mère, Miranda, est flamande. Son père, Pierre Rutare, est un architecte tutsi."])
+ins('pt50', 1, "Il se choisit un nom de scène", [
+ "Il débute en 2000 sous le nom d’Opsmaestro."])
+ins('pt50', 2, "En 2010, il sort son premier album, *Cheese*.", [
+ "Il paraît le 14 juin. Le 9 février 2011, il remporte la Victoire de la musique de l’album dance. Mosaert, le nom de sa marque, est lui aussi un anagramme de Stromae."])
+ins('pt50', 2, "L’album se vend à des millions d’exemplaires.", [
+ "Il s’en écoule deux millions en France. Aux MTV Europe Music Awards 2013, il est élu meilleur artiste belge. Sa tournée passe par l’Amérique du Nord en 2014."])
+ins('pt50', 3, "Pendant la tournée africaine, en 2015", [
+ "Elle commence le 13 mai 2015. Elle est interrompue en juin. Le médicament en cause est la méfloquine, plus connue sous le nom de Lariam."])
+ins('pt50', 3, "Il se marie avec sa compagne, Coralie Barbier.", [
+ "Le mariage, secret, a lieu le 12 décembre 2015, à Malines. Leur premier enfant naît en 2018."])
+ins('pt50', 4, "En 2021, il revient, avec une chanson intitulée Santé", [
+ "Elle sort le 15 octobre 2021. L’album est annoncé le 8 décembre 2021."])
+
+# ---- Simone Biles (pt51)
+ins('pt51', 2, "À 6 ans, lors d’une sortie scolaire", [
+ "Elle commence à s’entraîner avec Aimee Boorman à 8 ans."])
+ins('pt51', 2, "Aux Jeux de Rio, en 2016, elle remporte quatre médailles d’or.", [
+ "Par équipes, au concours général, au saut et au sol, auxquelles s’ajoute le bronze à la poutre. Son premier titre mondial, au concours général, date de 2013, à Anvers. Elle en gagne d’autres en 2014, 2015, 2018 et 2019. Au total, elle compte trente médailles mondiales, dont vingt-trois en or. En mai 2021, elle devient la première femme à réussir en compétition un Yurchenko avec double salto carpé, un saut qui porte son nom."])
+ins('pt51', 3, "En septembre 2021, quelques semaines après Tokyo", [
+ "C’est le 15 septembre. Aly Raisman, sa coéquipière de 2016, témoigne aussi."])
+ins('pt51', 4, "Elle prend deux ans de pause.", [
+ "Elle a épousé le joueur de football américain Jonathan Owens le 22 avril 2023. En juillet 2022, elle avait reçu la médaille présidentielle de la Liberté, dont elle est la plus jeune récipiendaire. *Sports Illustrated* l’a désignée sportive de l’année 2024."])
+ins('pt51', 4, "Aux Jeux de Paris, en 2024", [
+ "Elle gagne l’or par équipes, au concours général et au saut, et l’argent au sol."])
+
+# ---- Eminem (pt52)
+ins('pt52', 1, "Marshall Bruce Mathers III naît le 17 octobre 1972", [
+ "Son père quitte le foyer quand il a environ dix-huit mois. Sa mère, Debbie, le trimballe de ville en ville : St. Joseph, Savannah, Kansas City, Warren, Roseville, puis Detroit, quand il a environ douze ans. Il quitte le lycée Lincoln, à Warren, à 17 ans, après avoir redoublé trois fois sa neuvième année."])
+ins('pt52', 1, "Il découvre le rap.", [
+ "Il commence par des freestyles à la cantine de son lycée, puis participe à des concours ouverts au Hip-Hop Shop, sur West 7 Mile Road."])
+ins('pt52', 1, "En 1997, il termine deuxième", [
+ "Il signe chez Aftermath, le label de Dr. Dre, et chez Interscope, le 9 mars 1998."])
+ins('pt52', 2, "En 1999, Eminem sort son premier grand album.", [
+ "*The Slim Shady LP* paraît en février 1999. Il fonde fin 1999 Shady Records avec Paul Rosenberg, et son groupe D12 sort son premier album, *Devil’s Night*, en 2001."])
+ins('pt52', 2, "Son album suivant devient l’album de rap le plus vite vendu", [
+ "*The Marshall Mathers LP*, en mai 2000, s’écoule à 1,76 million d’exemplaires en une semaine. *The Eminem Show* paraît en mai 2002, puis *Encore* en 2004."])
+ins('pt52', 2, "Il n’assiste pas à la cérémonie. Il dort chez lui.", [
+ "C’est son coauteur, Luis Resto, qui reçoit la statuette, en 2003."])
+ins('pt52', 2, "Il prend du poids. Il ne parvient plus à écrire.", [
+ "Il avait déjà fait une cure en 2005, pour une dépendance aux somnifères."])
+ins('pt52', 3, "En 2009, il sort un album intitulé Relapse", [
+ "*Relapse* sort le 19 mai 2009, et *Recovery* le 18 juin 2010. *Kamikaze* suivra le 31 août 2018, puis *Music to Be Murdered By* le 17 janvier 2020."])
+ins('pt52', 4, "Les années suivantes, Eminem continue de sortir des albums.", [
+ "On estime ses ventes à plus de 220 millions de disques. Il est entré au Rock and Roll Hall of Fame en 2022, dès sa première année d’éligibilité."])

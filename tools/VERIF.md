@@ -38,3 +38,14 @@ pt38 ok
 pt39 ok
 pt40 ok
 pt40 ok, pt41 ok
+pt42 ok
+pt43 ok
+pt44 ok
+pt45 ok
+pt46 ok
+pt47 ok
+pt48 ok
+pt49 ok
+pt50 ok
+pt51 ok
+pt52 ok

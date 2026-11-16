@@ -32,5 +32,5 @@ add('pt50', 1, 'Maestro, à l’envers', [
  "Son nom de scène est un jeu de langage : « Stromae » est « maestro » retourné, dans la tradition du verlan. Avant cela, il a rappé sous d’autres pseudonymes avec des amis de lycée. Il apprend à produire seul, à composer des rythmes et des mélodies, à tout faire.",
  "En 2010, il sort son premier album, *Cheese*. Il porte l’ambition d’un artiste qui sait qu’il ne ressemble à personne : un grand garçon belge qui chante en français sur de la musique de club, en parlant de la solitude."])
 add('pt50', 3, 'Mosaert', [
- "Derrière Stromae, il y a une structure à lui : Mosaert, son label et sa marque, qu’il dirige avec sa compagne, Coralie Barbier. Elle dessine ses costumes, ses silhouettes, sa ligne de vêtements. Ils contrôlent ensemble l’image, les clips, la scène.",
+ "Derrière Stromae, il y a une structure à lui : Mosaert, son label et sa marque, qu’il dirige avec ses proches, notamment son frère Luc et sa compagne, Coralie Barbier. Elle dessine ses costumes, ses silhouettes, sa ligne de vêtements. Ils contrôlent ensemble l’image, les clips, la scène.",
  "Ce choix de tout faire à deux, loin de l’industrie, lui permet de continuer. Quand il disparaît en 2015, c’est aussi cette structure qui le protège. Il n’est pas un produit qu’on remplace : il est un créateur qu’on attend."])
