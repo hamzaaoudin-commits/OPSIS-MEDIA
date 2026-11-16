@@ -3401,7 +3401,7 @@ function quickSheet(){
 var FONTS=[['serif','Newsreader','Classique, le style OPSIS',"'Newsreader',Georgia,serif"],['lora','Lora','Chaleureuse, calligraphique',"'Lora',Georgia,serif"],['literata','Literata','Conçue pour lire longtemps',"'Literata',Georgia,serif"],['garamond','EB Garamond','Livre ancien, élégante',"'EB Garamond',Georgia,serif"],['merri','Merriweather','Gros corps, très lisible',"'Merriweather',Georgia,serif"],['source','Source Serif','Sobre, éditoriale',"'Source Serif 4',Georgia,serif"],['georgia','Georgia','Police de l\'appareil',"Georgia,'Times New Roman',serif"],['sans','Hanken Grotesk','Moderne, sans empattement',"'Hanken Grotesk',system-ui,sans-serif"],['atkinson','Atkinson','Hyper lisible',"'Atkinson Hyperlegible',system-ui,sans-serif"],['lexend','Lexend','Aide à la fluidité',"'Lexend',system-ui,sans-serif"]];
 function fontDef(){var k=S.font||'serif';for(var i=0;i<FONTS.length;i++)if(FONTS[i][0]===k)return FONTS[i];return FONTS[0];}
 /* ---------- ambiances sonores : sons générés en direct (Web Audio), sans fichier ni droit d'auteur ---------- */
-var AMBS=[['notes','Notes lointaines','Célesta rare sur nappe douce'],['nocturne','Nocturne','Piano lent, accords arpégés'],['cinema','Cinéma','Cloches et nappe qui gonfle'],['boite','Boîte à musique','Mélodie fragile, très aiguë'],['zen','Zen','Cordes pincées, gamme japonaise'],['aube','Aube','Notes qui se croisent sans fin']];
+var AMBS=[['notes','Notes lointaines','Célesta rare sur nappe douce'],['nocturne','Nocturne','Piano lent, accords arpégés'],['cinema','Cinéma','Cloches et nappe qui gonfle'],['zen','Zen','Cordes pincées, gamme japonaise'],['aube','Aube','Notes qui se croisent sans fin']];
 var AMB={ctx:null,master:null,verb:null,cur:null,k:null};
 function ambCfg(){var a=S.x.amb;a=a&&typeof a==='object'?a:{k:null,v:2};if(a.k&&!AMBS.some(function(m){return m[0]===a.k;}))a.k=null;return a;}
 function ambLevel(){var v=ambCfg().v||2;return v===1?.45:v===3?1.3:.8;}
@@ -3482,13 +3482,6 @@ function ambBuild(k){
     loop(tick,780,780);
     loop(function(){bell(146.83,.08,0,{d:2.2,c:900,w:1.4});},14000,19000);
     loop(function(){pad([587.33,698.46,880][Math.floor(R(0,3))],16,.014,2600,R(-.6,.6));},12000,20000);
-  }else if(k==='boite'){
-    /* boîte à musique : mélodie fragile très aiguë, tempo qui ralentit en fin de phrase */
-    var MB=[523.25,587.33,659.25,783.99,880,1046.5,1174.66,1318.51,1568],mp=4,MBP=[[1,1,2.8],[2.76,.2,1.5],[5.4,.07,.8]];
-    pad(261.63,34,.03,900,0);loop(function(){pad([261.63,196,329.63][Math.floor(R(0,3))],34,.03,800,R(-.3,.3));},22000,22000);
-    var mbPhrase=function(){var n=6+Math.floor(R(0,5)),t=0;for(var i=0;i<n;i++){(function(d){setTimeout(function(){mp=Math.max(0,Math.min(8,mp+Math.floor(R(-2,3))));bell(MB[mp],R(.03,.055),R(-.7,.7),{p:MBP,c:7000,a:.004});},d);})(t);t+=R(430,560)*(1+i/n*.9);}};
-    P.tm.push(setTimeout(mbPhrase,1200));loop(mbPhrase,9000,15000);
-    loop(function(){bell(MB[Math.floor(R(5,9))]*2,.012,R(-.8,.8),{p:MBP,c:9000,a:.004});},5000,11000);
   }else if(k==='zen'){
     /* zen : gamme japonaise, cordes pincées rares et sèches, bourdon, bol lointain */
     var ZN=[146.83,155.56,196,220,233.08,293.66,311.13,392,440,466.16,587.33],zp=5,ZP=[[1,1,2.4],[2,.5,1.5],[3,.28,1],[4.02,.12,.6],[5.1,.05,.4]];
