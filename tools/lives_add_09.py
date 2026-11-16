@@ -12,7 +12,7 @@ add('pt07', 7, 'Undisputed Truth', [
 
 # ---- Martha Stewart (pt36)
 add('pt36', 2, 'Le magazine, Kmart', [
- "En 1990 sort le magazine *Martha Stewart Living*. En 1993, elle présente une émission de télévision du même nom. Elle ne propose pas des recettes, mais un style. À la fin des années 1990, elle signe avec la chaîne de magasins Kmart une ligne de linge de maison et de décoration. Des millions d’Américaines achètent des draps ou des assiettes qui portent son nom.",
+ "En 1990 sort le magazine *Martha Stewart Living*. En 1993, elle présente une émission de télévision du même nom. Elle ne propose pas des recettes, mais un style. Dès la fin des années 1980, elle collabore avec la chaîne de magasins Kmart, avec laquelle elle signe plus tard une ligne de linge de maison et de décoration. Des millions d’Américaines achètent des draps ou des assiettes qui portent son nom.",
  "En quelques années, elle passe de la cuisine à l’industrie. Elle a un empire, un nom, une obsession de la perfection. Et une réputation qui ne tient qu’à sa propre image."])
 
 # ---- Jeffrey Skilling (pt38)

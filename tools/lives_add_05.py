@@ -2,7 +2,7 @@
 
 # ---- Jack Whittaker (pt21)
 add('pt21', 0, 'Le choix du paiement', [
- "Un gagnant de loterie américain peut choisir entre une rente étalée sur près de trente ans et une somme versée immédiatement, plus faible. Whittaker choisit la somme immédiate. Après impôts, il lui reste environ 113 millions de dollars, soit bien moins que le chiffre annoncé en une des journaux.",
+ "Le chiffre de 314,9 millions correspond à une rente étalée sur près de trente ans. La somme versée immédiatement est plus faible : 170,5 millions avant impôts. Après impôts, il reste à Whittaker 113 millions de dollars, bien moins que le chiffre annoncé en une des journaux.",
  "Il l’a annoncé publiquement : il donnera un dixième de son gain à des églises. Il tiendra parole. Mais le montant qui reste sur son compte est suffisamment élevé pour que ceux qui l’approchent, dès les premiers jours, ne le regardent plus comme un voisin."])
 
 # ---- Björn Borg (pt30)
@@ -29,5 +29,5 @@ add('pt29', 2, 'Un centième', [
  "À Pékin, la septième médaille d’or est la plus serrée. Dans le 100 mètres papillon, Phelps est derrière à la mi-course. Au dernier mètre, il touche le mur une fraction de seconde avant le Serbe Milorad Čavić : un centième de seconde. Les Serbes déposent une réclamation. Elle est rejetée.",
  "Sans ce centième, il aurait gagné sept médailles d’or, pas huit. Le record n’aurait pas été celui qu’on connaît. Les grandes histoires reposent parfois sur la longueur d’un ongle."])
 add('pt29', 4, 'Nicole et Boomer', [
- "En 2016, avant Rio, Phelps devient père. Son fils, Boomer, naît en mai. Il épouse Nicole Johnson, sa compagne, quelques semaines plus tard.",
+ "En 2016, avant Rio, Phelps devient père. Son fils, Boomer, naît en mai. Il épouse Nicole Johnson, sa compagne, quelques semaines plus tard, le 13 juin, en secret : le mariage ne sera révélé que quatre mois après.",
  "À Rio, il porte le drapeau de la délégation américaine à la cérémonie d’ouverture. Il n’est plus le garçon silencieux de 2004. Il est un homme qui sait pourquoi il nage."])

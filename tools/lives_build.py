@@ -253,7 +253,12 @@ for _f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), 'lives_ins_*.
 for (pid, epn, after, lines) in INS:
     body = L[pid]['eps'][epn - 1]['body']
     idx = [i for i, l in enumerate(body) if after in l]
-    assert len(idx) == 1, (pid, epn, after, len(idx))
+    if len(idx) != 1:
+        hits = [(n, j) for n, e in enumerate(L[pid]['eps']) for j, l in enumerate(e['body']) if after in l]
+        assert len(hits) == 1, (pid, epn, after, len(idx), len(hits))
+        print('  (ep déplacé)', pid, epn, '->', hits[0][0] + 1)
+        body = L[pid]['eps'][hits[0][0]]['body']
+        idx = [hits[0][1]]
     body[idx[0] + 1:idx[0] + 1] = lines
 
 json.dump(L, open(os.path.join(root, 'data/lives.json'), 'w'), ensure_ascii=False, indent=1)

@@ -6,7 +6,7 @@ add('pt39', 1, 'Le cofondateur', [
  "Les clients de la plateforme n’ont jamais été informés de ce passé. Patryn quitte l’entreprise avant la mort de Cotten et assure n’avoir eu aucun rôle dans ce qui est arrivé ensuite. Mais la révélation change la façon dont on regarde l’entreprise : une plateforme à qui des dizaines de milliers de personnes ont confié leurs économies était dirigée par deux hommes dont personne n’avait vérifié le passé.",
  "Ce que les clients voient, eux, c’est un site. Une page de connexion, un solde, un bouton pour retirer. Au fil des mois, les retraits deviennent lents, puis compliqués. On leur dit que c’est un problème technique, ou un problème de banque. Cotten, lui, répond rarement. Il voyage."])
 add('pt39', 1, 'Douze jours', [
- "Le 27 novembre 2018, Gerald Cotten signe son testament. Il laisse tout à sa femme. Il lègue aussi des biens plus étonnants : son bateau, son avion, et deux petits chiens de race chihuahua, qu’il confie à sa mère. Douze jours plus tard, il meurt, à Jaipur.",
+ "Le 27 novembre 2018, Gerald Cotten signe son testament. Il laisse tout à sa femme. Il lègue aussi des biens plus étonnants : son bateau, son avion, et un fonds de 100 000 dollars canadiens pour ses deux petits chiens de race chihuahua. Douze jours plus tard, il meurt, à Jaipur.",
  "Quand l’histoire sera connue, cette précision fera le tour des réseaux sociaux. Un homme de 30 ans, atteint d’une maladie chronique, qui organise sa succession quelques jours avant de partir en voyage de noces dans un pays où l’on est mal soigné. Les internautes y voient un indice. À ce jour, aucune preuve n’a établi que sa mort ait été mise en scène.",
  "Le 14 janvier 2019, la plateforme annonce le décès. Les clients attendent leur argent. Ils attendront longtemps. Quelques semaines plus tard, l’entreprise demande la protection de la justice canadienne pour ses créanciers. Elle doit plus de deux cents millions de dollars canadiens à des dizaines de milliers de personnes. Les retraits sont bloqués."])
 add('pt39', 3, 'Après lui', [
@@ -36,7 +36,7 @@ add('pt41', 2, 'Les alertes ignorées', [
 add('pt41', 3, 'Butner', [
  "Après sa condamnation, Madoff est envoyé dans une prison fédérale en Caroline du Nord, à Butner. Il y travaille à la cantine, puis à la bibliothèque. Les autres détenus le traitent avec une forme de respect étonnée. Quelques victimes lui écrivent. Il répond rarement.",
  "Dans des entretiens accordés depuis la prison, il affirme que d’autres savaient : les banques, les fonds qui lui envoyaient des clients, les grandes institutions qui encaissaient des commissions. Il dit qu’il n’était qu’un rouage. Il ne dit jamais comment il a pu, pendant des décennies, regarder dans les yeux ceux qu’il trompait. Il parle de honte, et de peur de la révéler. Ses victimes, elles, parlent de trahison.",
- "Parmi elles, des personnes très connues : le prix Nobel de la paix Elie Wiesel et sa fondation y perdent presque tout. Des associations caritatives, des universités, des retraités ordinaires aussi. La grande majorité des victimes n’ont jamais fait la une."])
+ "Parmi elles, des personnes très connues : Elie Wiesel, bien sûr, mais aussi des fondations et des hôpitaux dont le nom figure sur les murs. Des associations caritatives, des universités, des retraités ordinaires aussi. La grande majorité des victimes n’ont jamais fait la une."])
 
 # ---- Yves Saint Laurent (pt27)
 add('pt27', 4, 'Le smoking, Mondrian, Catherine', [
