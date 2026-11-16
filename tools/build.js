@@ -13,7 +13,9 @@ let cfg={launchDate:'2027-01-04'};
 try{Object.assign(cfg,JSON.parse(rd('opsis.config.json')));}catch(e){}
 const shell=rd('src/shell.html');
 const runtime=fs.readdirSync(path.join(root,'src/runtime')).filter(f=>f.endsWith('.js')).sort().map(f=>rd('src/runtime/'+f)).join('\n');
-const content=rd('data/content.json'),covers=rd('data/covers.json');
+let content=rd('data/content.json');const covers=rd('data/covers.json');
+/* « Une vie en épisodes » : data/lives.json (id du portrait -> épisodes) est fusionné dans le contenu */
+try{const lv=JSON.parse(rd('data/lives.json')),cj=JSON.parse(content);cj.LIVES=lv;content=JSON.stringify(cj);}catch(e){}
 const ver=crypto.createHash('sha1').update(shell+runtime+content.length+covers.length+JSON.stringify(cfg)).digest('hex').slice(0,10);
 const safe=j=>j.replace(/<\//g,'<\\/').replace(/<!--/g,'<\\!--');
 const cfgTag=(extra)=>'<script>window.OPSIS_CONFIG=Object.assign('+JSON.stringify(Object.assign({},cfg,extra||{}))+',window.OPSIS_CONFIG||{});</script>';

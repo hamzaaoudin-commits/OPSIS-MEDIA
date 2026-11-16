@@ -973,10 +973,23 @@ var SN="Jusqu'à la chute",BIDS=[],BP=[];
   });
   add('pt53',{p:'pt53',kind:'Épilogue',min:mins(K.words),series:SN,terr:'Destins',title:K.name,sub:K.sub,meta:[K.dates,K.country,K.job].join(' · '),
     klabel:'ÉPILOGUE · L\'HISTOIRE QUI S\'ÉCRIT ENCORE',body:K.body,quote:K.sub,no:'JC53',c:'#EDE6DA',syn:syn(K.body),book:1,src:BSRC['Kanye West'],next:null});
-  BP=BIDS.filter(function(id){return id>'pt00'&&id<'pt53';});
+  /* « Une vie en épisodes » : un portrait qui a des épisodes (DATA.LIVES) devient une série ; chaque épisode est une histoire cachée des listes */
+  var LV=DATA.LIVES||{};
+  all.forEach(function(p){var L=LV[p.id];if(!L||!L.eps||!L.eps.length)return;var hub=STORIES[p.id],N=L.eps.length,ids=[];
+    L.eps.forEach(function(e,i){var id=p.id+'e'+(i+1);ids.push(id);
+      add(id,{p:p.id,kind:'Épisode',min:mins(p.words),series:SN,terr:'Destins',title:e.t,sub:e.sub||'',meta:p.name+' · épisode '+(i+1)+' sur '+N,
+        klabel:'ÉPISODE '+(i+1)+' SUR '+N+' · '+p.name.toUpperCase(),body:e.body,quote:e.sub||p.sub,no:hub.no+'E'+(i+1),c:hub.c,syn:e.sub||syn(e.body),book:1,src:i===N-1?hub.src:'',ch:hub.ch,
+        ep:{of:p.id,n:i+1,N:N},next:null});});
+    ids.forEach(function(id,i){STORIES[id].next=ids[i+1]||hub.next;});
+    hub.eps=ids;hub.kind='Une vie';hub.life=1;hub.klabel='UNE VIE EN '+N+' ÉPISODES · CHAPITRE '+hub.ch;});
+  function entry(id){var h=STORIES[id];return h&&h.eps?h.eps[0]:id;}
+  BIDS.forEach(function(id){var s=STORIES[id];if(s.next&&!s.ep)s.next=entry(s.next);});
+  BIDS.forEach(function(id){var s=STORIES[id];if(s.ep&&s.next&&STORIES[s.next]&&STORIES[s.next].eps)s.next=STORIES[s.next].eps[0];});
+  BP=BIDS.filter(function(id){return id>'pt00'&&id<'pt53'&&!STORIES[id].ep;});
   BIDS.forEach(function(id){var s=STORIES[id];
     /* les chapitres sont des textes continus : on estime le temps de lecture sur le texte final */
     var w=0;s.body.forEach(function(t){w+=t.split(' ').length;});s.min=mins(w);});
+  BIDS.forEach(function(id){var s=STORIES[id];if(s.eps){var m=0;s.eps.forEach(function(e){m+=STORIES[e].min;});s.min=m;}});
 })();
 var ARD=DATA.D.ARD;
 
@@ -1644,7 +1657,7 @@ function epIndex(){
   var groups=THEMES.map(function(){return {};});
   Object.keys(STORIES).forEach(function(id){
     if(GONE[id])return;var st=STORIES[id];
-    var k=st.book?'vie':TH[id];if(!k||ki[k]===undefined||st.daily)return;
+    var k=st.book?'vie':TH[id];if(!k||ki[k]===undefined||st.daily||st.ep)return;
     var g=groups[ki[k]],sr=st.series||'x';(g[sr]=g[sr]||[]).push(id);
     st.th=ki[k];
   });
@@ -2275,12 +2288,24 @@ function serieT(){
     '<p class="prg">'+nRead+' lues sur '+ids.length+' histoires</p></div>'+
     '<div class="eps">'+list+'</div><div style="height:60px"></div>';
 }
+function lifeLayer(id){
+  var h=STORIES[id],ids=h.eps||[],nRead=ids.filter(function(e){return S.read[e];}).length,nxt=null;
+  for(var q=0;q<ids.length;q++){if(!S.read[ids[q]]){nxt=ids[q];break;}}
+  var list=ids.map(function(e,i){var st=STORIES[e],done=S.read[e];
+    return '<button class="ep" data-open="'+e+'"><span class="th">'+poster(st.p)+'<span class="play"><span>'+(done?IC.check:IC.play)+'</span></span></span><span style="flex:1;min-width:0"><span class="et" style="display:block">'+(i+1)+'. '+esc(st.title)+'</span><span class="es" style="display:block">'+esc(st.sub)+'</span><span class="es" style="display:block;opacity:.8">'+st.min+' min'+(done?' · lu':'')+'</span></span></button>';}).join('');
+  return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button></div>'+
+    '<div class="rhero">'+poster(h.p)+'<div class="shade"></div></div>'+
+    '<div class="rhead"><p class="k">UNE VIE EN '+ids.length+' ÉPISODES · '+esc(h.series.toUpperCase())+'</p><h1>'+esc(h.title)+'</h1><p class="m">'+esc(h.meta)+' · '+h.min+' min en tout</p><p class="m" style="margin-top:10px">'+esc(h.sub)+'</p>'+
+    '<div class="cta" style="margin-top:18px"><button class="btn light" data-open="'+(nxt||ids[0])+'">'+IC.play+(nRead&&nRead<ids.length?'Reprendre':nRead?'Relire':'Commencer')+'</button></div>'+
+    '<p class="prg">'+nRead+' épisodes lus sur '+ids.length+'</p></div>'+
+    '<div class="eps">'+list+'</div><div style="height:60px"></div>';
+}
 function serieC(){
   var nRead=BP.filter(function(id){return S.read[id];}).length,nxt=null;
   for(var q=0;q<BIDS.length;q++){if(!S.read[BIDS[q]]){nxt=BIDS[q];break;}}
   function row(id){
     var st=STORIES[id],done=S.read[id],lab=(id==='pt00'||id==='pt53'||id==='pt54')?'':(+id.slice(2))+'. ';
-    return '<button class="ep" data-open="'+id+'"><span class="th">'+poster(st.p)+'<span class="play"><span>'+(done?IC.check:IC.play)+'</span></span></span><span style="flex:1;min-width:0"><span class="et" style="display:block">'+lab+esc(st.title)+'</span><span class="es" style="display:block">'+esc(st.sub)+'</span><span class="es" style="display:block;opacity:.8">'+(st.meta?esc(st.meta.split(' · ').slice(0,2).join(' · '))+' · ':'')+st.min+' min'+(done?' · lu':'')+'</span></span></button>';
+    return '<button class="ep" data-open="'+id+'"><span class="th">'+poster(st.p)+'<span class="play"><span>'+(done?IC.check:IC.play)+'</span></span></span><span style="flex:1;min-width:0"><span class="et" style="display:block">'+lab+esc(st.title)+'</span><span class="es" style="display:block">'+esc(st.sub)+'</span><span class="es" style="display:block;opacity:.8">'+(st.meta?esc(st.meta.split(' · ').slice(0,2).join(' · '))+' · ':'')+(st.eps?st.eps.length+' épisodes · ':'')+st.min+' min'+(done?' · lu':'')+'</span></span></button>';
   }
   var list='<div class="chead"><h2 class="acte">Prologue</h2></div>'+row('pt00');
   BOOK.actes.forEach(function(a){
@@ -2324,7 +2349,7 @@ function themeLayer(i,sub){
     (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt,true);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>')+
     '<div class="bottomspace"></div>';
 }
-function layerHTML(top){var t=top.type;return t==='read'?reader(top.id):t==='lib'?saved():t==='theme'?themeLayer(top.i,top.sub):t==='legal'?legalLayer(top.k):t==='search'?searchLayer():t==='col'?colLayer(top.k):t==='path'?pathLayer(top.k):t==='mycol'?myColLayer(top.i):t==='quotes'?quotesLayer():t==='set'?setLayer(top.k):serie(top.key);}
+function layerHTML(top){var t=top.type;return t==='read'?reader(top.id):t==='lib'?saved():t==='theme'?themeLayer(top.i,top.sub):t==='legal'?legalLayer(top.k):t==='search'?searchLayer():t==='col'?colLayer(top.k):t==='path'?pathLayer(top.k):t==='mycol'?myColLayer(top.i):t==='quotes'?quotesLayer():t==='set'?setLayer(top.k):t==='life'?lifeLayer(top.id):serie(top.key);}
 function renderLayer(){
   var top=S.stack[S.stack.length-1];
   if(!top){layer.classList.remove('in');return;}
@@ -2335,7 +2360,7 @@ function renderLayer(){
   requestAnimationFrame(function(){layer.classList.add('in');});
   bindLayer(top);
 }
-function push(x){var tp=S.stack[S.stack.length-1];if(x.type==='read'&&tp&&tp.type==='read'){S.stack[S.stack.length-1]=x;renderLayer();return;}   /* une histoire ouverte depuis une autre la remplace : retour ramène d'où l'on venait (accueil), pas à l'histoire d'avant */
+function push(x){if(x.type==='read'&&STORIES[x.id]&&STORIES[x.id].eps)x={type:'life',id:x.id};var tp=S.stack[S.stack.length-1];if(x.type==='read'&&tp&&tp.type==='read'){S.stack[S.stack.length-1]=x;renderLayer();return;}   /* une histoire ouverte depuis une autre la remplace : retour ramène d'où l'on venait (accueil), pas à l'histoire d'avant */
   S.stack.push(x);renderLayer();try{history.pushState({o:S.stack.length},'');}catch(e){}}
 /* retour : bouton, geste du bord de l'écran ou touche retour du navigateur font la même chose (revenir à l'écran précédent) */
 function back(){var hs=null;try{hs=history.state;}catch(e){}if(S.stack.length&&hs&&hs.o){try{history.back();return;}catch(e){}}doBack();}
@@ -2391,7 +2416,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.filter!==undefined){S.filter=+d.filter;renderMain();return;}
   if(d.save){var was=!!S.saved[d.save];S.saved[d.save]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
     if(S.stack.length)rerenderKeepScroll();else{var y=main.scrollTop;renderMain();main.scrollTop=y;}return;}
-  if(d.finish){var id=d.finish;if(!S.read[id]){var b0=badgeNow();S.read[id]=true;CEL=id;S.prog[id]=100;S.minutes+=STORIES[id].min;(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}else toast('Histoire terminée. À demain, '+S.hour);}
+  if(d.finish){var id=d.finish;if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;S.minutes+=STORIES[id].min;(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}else toast('Histoire terminée. À demain, '+S.hour);}
     renderMain();back();return;}
   if(d.share){openShare(d.share);return;}
   if(b.hasAttribute('data-notify')){S.follow.serie=true;toast('Série suivie : vous serez prévenu à chaque épisode');return;}
@@ -2516,7 +2541,7 @@ function fitBack(){
   while(syn.scrollHeight>syn.clientHeight+1&&fs>8.5){fs-=.5;syn.style.fontSize=fs+'px';syn.style.lineHeight=fs>11.5?'1.55':'1.45';}
 }
 function randomPick(){
-  var all=Object.keys(STORIES).filter(function(k){var x=STORIES[k];return x&&x.title&&x.syn&&x.kind&&x.kind.indexOf('Série')!==0;});
+  var all=Object.keys(STORIES).filter(function(k){var x=STORIES[k];return x&&x.title&&x.syn&&x.kind&&x.kind.indexOf('Série')!==0&&!x.ep;});
   var fresh=all.filter(function(k){return !S.read[k];});
   var pool=fresh.length?fresh:all;
   if(!pool.length)return;
@@ -2805,7 +2830,7 @@ var FM={3:3,5:7,10:12};
 var SUBS={ar:'Arnaques',cs:'Casses',fa:'Faussaires',pa:'Découvertes',sv:'Survivants',ev:'Évasions',im:'Imposteurs',es:'Espions',pn:'Pannes',ex:'Expéditions',ce:'Codes et énigmes',fi:'Fiascos',di:'Disparus',pr:'Procès',ld:'Derniers jours',vc:'Victoires impossibles',du:'Duels',tm:'Tournages maudits',mq:'Marques',cb:'Cobayes'};
 function subKey(id){var st=STORIES[id];if(!st)return '';if(st.book){var c=chOf(+String(id).slice(2));return c>=0?'ch'+c:'';}return String(id).slice(0,2);}
 function subName(k){if(!k)return '';if(k.indexOf('ch')===0){var c=BOOK.chapters[+k.slice(2)];return c?c.title:'';}return SUBS[k]||'';}
-function vis(id){return !!STORIES[id]&&!GONE[id];}
+function vis(id){return !!STORIES[id]&&!GONE[id]&&!STORIES[id].ep;}
 function hr(ids){return S.hideRead?ids.filter(function(id){return !S.read[id];}):ids;}
 var COLLS=[
  {k:'menteurs',n:'Ils ont menti à tout le monde',d:'Faux princes, faux médecins, fausses héritières : ceux qui ont vécu sous un mensonge, et ceux qui les ont crus.',ids:['ar01','ar10','ar11','ar13','ar15','im01','im10','im16','im28','fa01','fa08','pt33','pt41']},
