@@ -191,7 +191,7 @@ for _f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), 'lives_add_*.
 def auto(pid):
     sec = sections(pid)
     solo = set()
-    for (k, t, lines) in sorted(ADDSEC.get(pid, []), key=lambda x: -x[0]):
+    for (k, t, lines) in [x[1] for x in sorted(enumerate(ADDSEC.get(pid, [])), key=lambda y: (-y[1][0], -y[0]))]:
         sec.insert(k + 1, [t] + lines)
         solo.add(t[1:])
     last = sec[-1]
