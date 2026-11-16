@@ -550,7 +550,7 @@
   .fxs-front .grad{position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));z-index:2}
   .fxs-front .ft{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:36px;line-height:.9;overflow-wrap:anywhere}
   .fxs-front .fn{position:absolute;top:12px;right:14px;z-index:3;font-family:var(--disp);font-weight:800;font-size:15px}
-  .fxs-front .fl{position:absolute;top:12px;left:14px;z-index:3;font-family:var(--disp);font-weight:900;font-size:16px;letter-spacing:.12em;color:#FF2430}
+  .fxs-front .fl{position:absolute;top:12px;left:14px;z-index:3;font-family:var(--disp);font-weight:900;font-size:16px;letter-spacing:.12em;color:#E3202B}
   .fxs-front::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:70%;z-index:9;background:linear-gradient(105deg,transparent 0,rgba(255,255,255,.16) 50%,transparent 100%);transform:translate3d(0,0,0);opacity:0;pointer-events:none;will-change:transform}
   .fxs.on .fxs-front::after{animation:shine 1.1s ease .5s both}
   @keyframes shine{0%{opacity:1;transform:translate3d(0,0,0)}100%{opacity:1;transform:translate3d(300%,0,0)}}
@@ -2887,7 +2887,7 @@ function storyAnim(id,cv,rec){
     var F=mk(),f=F.getContext('2d');rrect(f,0,0,CW,CH,28);f.clip();
     if(im)f.drawImage(im,0,0,CW,CH);else{f.fillStyle=c;f.fillRect(0,0,CW,CH);}
     var gr=f.createLinearGradient(0,CH*.45,0,CH);gr.addColorStop(0,'rgba(0,0,0,0)');gr.addColorStop(1,'rgba(0,0,0,.88)');f.fillStyle=gr;f.fillRect(0,CH*.45,CW,CH*.55);
-    f.fillStyle='#FF2430';f.font='900 30px '+disp;f.textAlign='left';if('letterSpacing' in f)f.letterSpacing='4px';f.fillText('OPSIS',28,52);f.textAlign='right';f.fillStyle='#F4EEE4';f.fillText('N° '+(d.no||''),CW-28,52);if('letterSpacing' in f)f.letterSpacing='0px';
+    f.fillStyle='#E3202B';f.font='900 30px '+disp;f.textAlign='left';if('letterSpacing' in f)f.letterSpacing='4px';f.fillText('OPSIS',28,52);f.textAlign='right';f.fillStyle='#F4EEE4';f.fillText('N° '+(d.no||''),CW-28,52);if('letterSpacing' in f)f.letterSpacing='0px';
     f.textAlign='left';f.fillStyle='#F4EEE4';var ft=(s.title||'').toUpperCase(),fs=96,fl;
     for(;fs>=48;fs-=4){fl=wrap(f,ft,'900 '+fs+'px '+disp,CW-56);if(fl.length<=3)break;}
     var fy=CH-30-(Math.min(3,fl.length)-1)*fs*.9;fl.slice(0,3).forEach(function(q){f.font='900 '+fs+'px '+disp;f.fillText(q,28,fy);fy+=fs*.9;});
