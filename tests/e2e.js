@@ -18,12 +18,30 @@ async function page(ctx,cfg,init){
   if(init)await p.addInitScript(init);
   return p;
 }
-async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunction(()=>window.OPSIS&&window.OPSIS.store&&window.OPSIS.store.S&&document.getElementById('main')&&document.getElementById('main').children.length>0,null,{timeout:20000});}
+async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunction(()=>window.OPSIS&&window.OPSIS.store&&window.OPSIS.store.S&&document.getElementById('main')&&document.getElementById('main').children.length>0,null,{timeout:20000});if(!bootRaw)await p.evaluate(()=>{OPSIS.store.S.x=OPSIS.store.S.x||{};OPSIS.store.S.x.onb=1;});}
+let bootRaw=false;
 (async()=>{
   const srv=spawn('node',[path.join(__dirname,'../tools/dev-server.js'),String(PORT)],{stdio:'ignore'});
   await sleep(900);
   const b=await chromium.launch();
   try{
+  console.log('0. premier lancement');
+  {
+    bootRaw=true;const ctx=await b.newContext({viewport:{width:430,height:900}});
+    const p=await page(ctx);await boot(p,'/app.html');
+    await p.waitForSelector('.onb.on',{timeout:15000});
+    ok(true,'le parcours de premier lancement s\'affiche après l\'intro');
+    await p.click('[data-onb="next"]');await sleep(300);
+    await p.click('.onb [data-pref]');await sleep(200);
+    const pf=await p.evaluate(()=>(OPSIS.store.S.x.prefs||[]).length);ok(pf===1,'un thème choisi est enregistré ('+pf+')');
+    await p.click('[data-onb="next"]');await sleep(300);await p.click('[data-onb="next"]');await sleep(300);
+    await p.click('[data-onb="read"]');await sleep(1500);
+    const g=await p.evaluate(()=>({gone:!document.querySelector('.onb'),flag:!!OPSIS.store.S.x.onb,layer:document.getElementById('layer').className}));
+    ok(g.gone&&g.flag&&/in/.test(g.layer),'« Lire l\'histoire du jour » ferme l\'accueil et ouvre la lecture');
+    await p.reload();bootRaw=false;await boot(p,'/app.html');await sleep(9000);
+    ok(!(await p.evaluate(()=>!!document.querySelector('.onb'))),'le parcours ne revient pas au lancement suivant');
+    await ctx.close();bootRaw=false;
+  }
   console.log('1. démarrage et sauvegarde locale');
   {
     const ctx=await b.newContext({viewport:{width:430,height:900}});
