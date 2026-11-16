@@ -2005,7 +2005,7 @@
  "pt21": {
   "eps": [
    {
-    "t": "Le Père Noël",
+    "t": "Le choix du paiement",
     "sub": "Andrew « Jack » Whittaker a 55 ans.",
     "body": [
      "@Hurricane, Virginie-Occidentale. Le matin du 25 décembre 2002.",
@@ -2015,6 +2015,14 @@
      "Quelques jours plus tard, il apparaît à la télévision, souriant, avec un chapeau de cow-boy. À côté de lui, il y a sa femme, Jewell, et sa petite-fille adorée, Brandi, 15 ans. Il annonce qu’il va donner de l’argent aux églises, créer une fondation, aider les gens de sa région. Il dit que c’est la première chose de sa vie qu’on lui a donnée, sans qu’il ait eu à travailler pour l’obtenir.",
      "Quatre ans plus tard, devant une caméra de télévision, il dira qu’il aurait voulu avoir déchiré ce billet.",
      "*",
+     "Un gagnant de loterie américain peut choisir entre une rente étalée sur près de trente ans et une somme versée immédiatement, plus faible. Whittaker choisit la somme immédiate. Après impôts, il lui reste environ 113 millions de dollars, soit bien moins que le chiffre annoncé en une des journaux.",
+     "Il l’a annoncé publiquement : il donnera un dixième de son gain à des églises. Il tiendra parole. Mais le montant qui reste sur son compte est suffisamment élevé pour que ceux qui l’approchent, dès les premiers jours, ne le regardent plus comme un voisin."
+    ]
+   },
+   {
+    "t": "Le Père Noël",
+    "sub": "Jack Whittaker a grandi très pauvre, dans un petit village de Virginie-Occidentale.",
+    "body": [
      "Jack Whittaker a grandi très pauvre, dans un petit village de Virginie-Occidentale. Sa famille n’avait même pas de voiture. Il a travaillé dur toute sa vie. Il croit en Dieu, au travail, à la générosité.",
      "Alors il donne. Il verse des millions de dollars à des églises. Il crée une fondation qui distribue de la nourriture, des vêtements, des bourses. Il offre une maison et une voiture à l’employée qui lui a vendu le ticket. Il aide des inconnus qui lui écrivent.",
      "Et c’est là que commence le piège. Des milliers de lettres arrivent chaque semaine. Partout où il va, des gens l’arrêtent pour lui demander de l’argent. À un match de basket, raconte-t-il, plus de cent personnes viennent le solliciter. Il devient le Père Noël de toute la région. Puis la cible de toute la région.",
@@ -2652,8 +2660,12 @@
    },
    {
     "t": "Après les Jeux",
-    "sub": "Quelques mois après Pékin, un journal publie une photo de lui en train de fumer du cannabis dans une soirée.",
+    "sub": "À Pékin, la septième médaille d’or est la plus serrée.",
     "body": [
+     "À Pékin, la septième médaille d’or est la plus serrée. Dans le 100 mètres papillon, Phelps est derrière à la mi-course. Au dernier mètre, il touche le mur une fraction de seconde avant le Serbe Milorad Čavić : un centième de seconde. Les Serbes déposent une réclamation. Elle est rejetée.",
+     "Sans ce centième, il aurait gagné sept médailles d’or, pas huit. Le record n’aurait pas été celui qu’on connaît. Les grandes histoires reposent parfois sur la longueur d’un ongle.",
+     "*",
+     "#Après les Jeux",
      "@Et c’est après les Jeux que les problèmes arrivent. Pas pendant.",
      "Quelques mois après Pékin, un journal publie une photo de lui en train de fumer du cannabis dans une soirée. Il est suspendu trois mois. Il perd un sponsor.",
      "Phelps décrira plus tard un phénomène qu’il a vécu après chaque olympiade. Pendant quatre ans, il vit pour un seul objectif. Chaque jour, chaque entraînement, chaque repas est tourné vers ces quelques jours d’été. Puis les Jeux arrivent. Il gagne. La fête, les médailles, les interviews. Et ensuite, plus rien. Le vide. Une tristesse profonde, sans raison apparente. Il parlera de dépression post-olympique.",
@@ -2662,7 +2674,7 @@
     ]
    },
    {
-    "t": "Le poids de l’or",
+    "t": "Sauver sa vie",
     "sub": "Ce sont ses proches qui le sortent de là.",
     "body": [
      "Ce sont ses proches qui le sortent de là. Son agent, sa famille. Ils le convainquent d’entrer dans un centre de traitement en Arizona. Il y reste quarante-cinq jours.",
@@ -2670,7 +2682,15 @@
      "Il se réconcilie avec son père. Il se marie, il a des enfants. Et il retourne dans l’eau.",
      "En 2016, à Rio, à 31 ans, il remporte cinq nouvelles médailles d’or. Il termine sa carrière avec vingt-trois titres olympiques et vingt-huit médailles au total. Un record qui ne sera peut-être jamais battu.",
      "*",
-     "#Le poids de l’or",
+     "#Nicole et Boomer",
+     "En 2016, avant Rio, Phelps devient père. Son fils, Boomer, naît en mai. Il épouse Nicole Johnson, sa compagne, quelques semaines plus tard.",
+     "À Rio, il porte le drapeau de la délégation américaine à la cérémonie d’ouverture. Il n’est plus le garçon silencieux de 2004. Il est un homme qui sait pourquoi il nage."
+    ]
+   },
+   {
+    "t": "Le poids de l’or",
+    "sub": "Après sa vraie retraite, Michael Phelps devient l’un des visages de la lutte pour la santé mentale des sportifs.",
+    "body": [
      "Après sa vraie retraite, Michael Phelps devient l’un des visages de la lutte pour la santé mentale des sportifs. Il parle publiquement de sa dépression, de ses idées suicidaires, de sa thérapie.",
      "En 2020, il produit et raconte un documentaire intitulé The Weight of Gold, le poids de l’or. Il y donne la parole à d’autres athlètes olympiques qui ont vécu la même chose que lui : l’effondrement qui suit les Jeux. Certains sont tombés dans la dépression, l’alcool, la drogue. D’autres ne s’en sont jamais remis. Le film rend hommage à des athlètes qui se sont donné la mort.",
      "Phelps y explique que, pendant toute leur carrière, les athlètes olympiques sont traités comme des machines à médailles. On s’occupe de leur corps, de leur alimentation, de leur technique. Personne ne s’occupe de leur esprit. Et quand les Jeux sont finis, plus personne ne s’occupe d’eux du tout.",
@@ -2707,8 +2727,12 @@
    },
    {
     "t": "Le roi",
-    "sub": "De 1976 à 1980, Björn Borg gagne Wimbledon cinq fois de suite.",
+    "sub": "Très jeune, Borg rencontre l’homme qui va diriger sa carrière, Lennart Bergelin, ancien joueur suédois devenu entraîneur",
     "body": [
+     "Très jeune, Borg rencontre l’homme qui va diriger sa carrière, Lennart Bergelin, ancien joueur suédois devenu entraîneur et capitaine de l’équipe de Coupe Davis. Bergelin voit ce que beaucoup d’autres ne voient pas : un gamin au jeu étrange, avec un coup droit très lifté et un revers à deux mains, qui n’a rien du manuel, mais qui ne rate jamais.",
+     "Bergelin l’accompagnera pendant presque toute sa carrière, sur les courts, dans les hôtels, aux tournois. Il est l’homme qui l’aide à canaliser son énergie et à tenir la longueur.",
+     "*",
+     "#Le roi",
      "De 1976 à 1980, Björn Borg gagne Wimbledon cinq fois de suite. Il gagne Roland-Garros six fois. Sur la terre battue de Paris et sur le gazon de Londres, deux surfaces opposées, il est quasiment imbattable.",
      "Sa méthode est une ascèse totale. Il s’entraîne des heures chaque jour. Pendant Wimbledon, il suit des rituels obsessionnels : il dort dans le même hôtel, dans la même chambre, mange les mêmes plats, prend le même chemin, ne se rase pas pendant les deux semaines du tournoi. Il fait régler la tension de ses raquettes si fort qu’on dit qu’on peut entendre les cordes claquer la nuit dans sa chambre.",
      "En 1980, en finale de Wimbledon, il affronte McEnroe, le jeune Américain colérique qui est tout son contraire. Le quatrième set se termine par un jeu décisif de vingt-deux minutes, gagné par McEnroe 18 points à 16. Borg remporte finalement le match au cinquième set. C’est souvent considéré comme l’un des plus grands matchs de l’histoire du tennis.",
@@ -2724,15 +2748,19 @@
      "Les années suivantes sont chaotiques. Il se lance dans les affaires. Il fait des investissements désastreux et frôle la faillite personnelle. Il se marie, divorce, se remarie. À la fin des années 1980, il vit à Milan avec une chanteuse italienne, Loredana Bertè. Une relation tumultueuse.",
      "En 1989, en Italie, il est hospitalisé d’urgence après une surdose. La presse parle de tentative de suicide. Lui affirmera toujours qu’il s’agissait d’un accident. Quelques années plus tard, aux Pays-Bas, il est de nouveau hospitalisé après une overdose. En ouvrant les yeux, il voit son père à son chevet. Ce sera, écrira-t-il, sa pire honte.",
      "En 1991, à 34 ans, il tente un retour sur les courts. Il joue avec une vieille raquette en bois, comme à son époque, alors que tout le monde joue désormais avec des raquettes modernes. Il perd tous ses matchs. C’est pathétique et touchant à la fois.",
-     "En 2006, il annonce qu’il va vendre aux enchères ses trophées de Wimbledon. Ses anciens rivaux sont choqués. John McEnroe l’appelle pour le convaincre de ne pas le faire. Borg renonce."
+     "En 2006, il annonce qu’il va vendre aux enchères ses trophées de Wimbledon. Ses anciens rivaux sont choqués. John McEnroe l’appelle pour le convaincre de ne pas le faire. Borg renonce.",
+     "*",
+     "#Le battement de cœur",
+     "Peu à peu, Björn Borg retrouve un équilibre. Il se remarie. Il a des enfants. Son fils Leo devient joueur de tennis professionnel. Il devient capitaine de l’équipe européenne dans une compétition créée en hommage aux grandes rivalités du tennis, face à son vieil ami McEnroe, capitaine de l’équipe du reste du monde.",
+     "En 2025, à 69 ans, il publie ses mémoires. Il y raconte tout ce qu’il avait caché pendant des décennies : la cocaïne, les overdoses, les années noires de Milan, les crises de panique. Il y révèle aussi qu’il a été soigné pour un cancer de la prostate. Il dit qu’il a eu honte pendant longtemps."
     ]
    },
    {
-    "t": "Le battement de cœur",
-    "sub": "Peu à peu, Björn Borg retrouve un équilibre.",
+    "t": "Une marque",
+    "sub": "À la fin des années 1980, une marque de vêtements prend son nom : Björn Borg.",
     "body": [
-     "Peu à peu, Björn Borg retrouve un équilibre. Il se remarie. Il a des enfants. Son fils Leo devient joueur de tennis professionnel. Il devient capitaine de l’équipe européenne dans une compétition créée en hommage aux grandes rivalités du tennis, face à son vieil ami McEnroe, capitaine de l’équipe du reste du monde.",
-     "En 2025, à 69 ans, il publie ses mémoires. Il y raconte tout ce qu’il avait caché pendant des décennies : la cocaïne, les overdoses, les années noires de Milan, les crises de panique. Il y révèle aussi qu’il a été soigné pour un cancer de la prostate. Il dit qu’il a eu honte pendant longtemps.",
+     "À la fin des années 1980, une marque de vêtements prend son nom : Björn Borg. Elle commence par des sous-vêtements et des vêtements de sport, qui se vendent surtout en Suède. Des décennies plus tard, elle est devenue une entreprise cotée à la Bourse de Stockholm.",
+     "Le champion qui n’avait plus d’argent a ainsi vu, avec le temps, son nom prendre une valeur commerciale qu’il n’avait pas su créer lui-même. Une manière, discrète, de revenir dans la vie des autres.",
      "*",
      "#Ce que dit son histoire",
      "Björn Borg a été l’un des rares champions à quitter le sommet de lui-même, en pleine gloire, à 26 ans. On pourrait croire que c’est une sortie réussie. Ce n’en était pas une.",
@@ -2785,11 +2813,27 @@
    },
    {
     "t": "Les adieux",
-    "sub": "En septembre 2006, à l’US Open, Andre Agassi joue le dernier match de sa carrière.",
+    "sub": "Pour remonter, Agassi s’appuie sur un entraîneur, Brad Gilbert, ancien joueur américain de second plan, connu pour sa lecture du jeu.",
     "body": [
+     "Pour remonter, Agassi s’appuie sur un entraîneur, Brad Gilbert, ancien joueur américain de second plan, connu pour sa lecture du jeu. Gilbert l’aide à retrouver une méthode : jouer plus malin, pas seulement plus fort. À partir de 1994, ils travaillent ensemble. Cette année-là, Agassi remporte l’US Open sans même être tête de série.",
+     "Quand il touche le fond, en 1997, il s’appuie à nouveau sur un entourage solide. Il recommence par les tournois Challenger, la division inférieure du tennis. Il y joue devant quelques centaines de personnes. C’est de là que repart la remontée.",
+     "*",
+     "#Les adieux",
      "En septembre 2006, à l’US Open, Andre Agassi joue le dernier match de sa carrière. Il a 36 ans. Son dos est détruit. Il joue sous piqûres. Il perd.",
      "À la fin du match, il prend le micro. Le stade entier est debout. Il pleure. Il dit qu’au cours des vingt et une dernières années, il a trouvé de la loyauté, de l’inspiration, de la générosité auprès du public. Il remercie les spectateurs de l’avoir porté.",
      "Trois ans plus tard, dans Open, il écrit qu’il a détesté le tennis, d’une haine sombre et secrète, pendant presque toute sa vie.",
+     "*",
+     "#Steffi, les enfants, l’école",
+     "En 2001, il épouse Steffi Graf, l’une des plus grandes joueuses de l’histoire. Ils auront deux enfants, un fils, Jaden, et une fille, Jaz. Elle a, comme lui, connu la pression d’une enfance entièrement tournée vers le tennis.",
+     "Dès les années 1990, il crée une fondation en faveur des enfants défavorisés de Las Vegas, sa ville. Elle ouvre, au début des années 2000, une école pour des élèves de quartiers pauvres. L’homme qui n’a pas choisi l’école de sa vie choisit celle des autres."
+    ]
+   },
+   {
+    "t": "Open",
+    "sub": "Ce que beaucoup de lecteurs retiennent, ce n’est pas la méthamphétamine.",
+    "body": [
+     "*Open*, publié en 2009, est écrit avec l’aide du journaliste J. R. Moehringer. Agassi y raconte tout : le père, l’académie, la perruque, la drogue, le mensonge à l’ATP. Le livre devient un best-seller mondial. Il est souvent cité comme l’une des meilleures autobiographies de sportif.",
+     "Ce que beaucoup de lecteurs retiennent, ce n’est pas la méthamphétamine. C’est la haine du tennis, avouée sans détour. Pour la première fois, un champion dit publiquement que le sommet n’est pas forcément un endroit où l’on est heureux.",
      "*",
      "#Ce que dit son histoire",
      "Andre Agassi a réalisé le rêve de son père. Il est devenu l’un des plus grands joueurs de tous les temps. Et ce rêve n’était pas le sien.",
