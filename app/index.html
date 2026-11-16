@@ -161,6 +161,7 @@
   .splash .glow::after{content:"";position:absolute;left:8%;right:8%;top:50%;height:2px;margin-top:-1px;border-radius:2px;background:linear-gradient(90deg,rgba(255,90,90,0),rgba(255,110,100,.55) 50%,rgba(255,90,90,0));filter:blur(1.2px);opacity:.8;transform:scaleX(.2);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
   .splash.lit .glow{opacity:1;transform:none;animation:glowBreath 4.2s ease-in-out 2.2s infinite}
   .splash.lit .glow::after{transform:none}
+  .splash.s4 .glow::after{opacity:0;transform:scaleX(1.15);transition:opacity .6s ease,transform .9s ease}
   @keyframes glowBreath{0%,100%{opacity:1}50%{opacity:.78}}
   .lockup{display:flex;align-items:center;gap:4px;margin-top:-52px}
   .lens{flex:none;width:55px;height:55px;margin-top:0;position:relative}
