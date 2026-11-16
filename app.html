@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="OPSIS">
+<style>html,body{background:#000;margin:0}</style>
 <script>window.OPSIS_CONFIG=Object.assign({"launchDate":"2027-01-04","serviceWorker":false},window.OPSIS_CONFIG||{});</script>
 <title>OPSIS — Prototype navigable</title>
 <style>
@@ -3750,8 +3753,10 @@ function ambBuild(k){
   }
   return P;
 }
+/* iPhone : la session audio doit être « lecture » (sinon l'interrupteur silence coupe tout), et le son ne se débloque que sur un vrai geste (touchend ou click, pas pointerdown) */
+function ambSession(){try{if(navigator.audioSession&&navigator.audioSession.type!=='playback')navigator.audioSession.type='playback';}catch(e){}}
 function ambStart(k){
-  if(!k)return;if(!ambInit())return;var c=AMB.ctx;
+  if(!k)return;if(!ambInit())return;var c=AMB.ctx;ambSession();
   if(c.state==='suspended'){try{c.resume();}catch(e){}}
   if(AMB.k===k&&AMB.cur)return;
   ambFade();AMB.k=k;AMB.cur=ambBuild(k);
@@ -3778,8 +3783,9 @@ function ambOpts(){
     (a.k?'<div class="opt"><span>Volume</span><span class="seg"><button data-ambv="1" aria-pressed="'+((a.v||2)===1)+'">Doux</button><button data-ambv="2" aria-pressed="'+((a.v||2)===2)+'">Moyen</button><button data-ambv="3" aria-pressed="'+((a.v||2)===3)+'">Fort</button></span></div>':'');
 }
 /* reprise : un navigateur mobile n'autorise le son qu'après un geste ; on relance l'ambiance choisie au premier toucher d'une lecture */
-document.addEventListener('pointerdown',function(){var a=ambCfg();if(!a.k)return;var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&(!AMB.ctx||AMB.k!==a.k||AMB.ctx.state!=='running'))ambStart(a.k);},true);
-document.addEventListener('visibilitychange',function(){if(!AMB.ctx)return;try{if(document.hidden)AMB.ctx.suspend();else if(AMB.k)AMB.ctx.resume();}catch(e){}});
+function ambGesture(){var a=ambCfg();if(!a.k)return;var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&(!AMB.ctx||AMB.k!==a.k||AMB.ctx.state!=='running'))ambStart(a.k);}
+['pointerdown','touchend','click'].forEach(function(ev){document.addEventListener(ev,ambGesture,true);});
+document.addEventListener('visibilitychange',function(){if(!AMB.ctx)return;try{if(document.hidden)AMB.ctx.suspend();else if(AMB.k){ambSession();AMB.ctx.resume();}}catch(e){}});
 function lookOpts(){
   return '<div class="opt"><span>Apparence</span><span class="seg"><button data-theme="dark" aria-pressed="'+(S.theme!=='light'&&S.theme!=='night')+'">Sombre</button><button data-theme="light" aria-pressed="'+(S.theme==='light')+'">Clair</button><button data-theme="night" aria-pressed="'+(S.theme==='night')+'">Nuit</button></span></div>'+(S.theme==='night'?'<p class="os" style="padding:0 0 8px;font-size:12px;color:var(--dim)">Mode nuit : aucune lumière bleue, tons ambrés. Idéal le soir, avant de dormir.</p>':'')+
     '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
@@ -3853,7 +3859,7 @@ var SETT={prefs:'Préférences',lecture:'Préférences de lecture',langue:'Langu
 function setLayer(k){
   var b='';
   if(k==='root'){
-    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('prefs','Préférences',(S.x.prefs&&S.x.prefs.length)?S.x.prefs.length+' thème'+(S.x.prefs.length>1?'s':'')+' choisi'+(S.x.prefs.length>1?'s':''):'Vos thèmes préférés')+row('lecture','Préférences de lecture','Sens, format, typographie')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Votre abonnement OPSIS')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+row('guide','Guide d\'utilisation','Prendre l\'app en main')+'</div>'+
+    b='<div class="slist">'+row('compte','Compte',OPSIS.auth&&OPSIS.auth.token&&OPSIS.auth.token()?'Connecté':'Synchroniser vos lectures')+row('prefs','Préférences',(S.x.prefs&&S.x.prefs.length)?S.x.prefs.length+' thème'+(S.x.prefs.length>1?'s':'')+' choisi'+(S.x.prefs.length>1?'s':''):'Vos thèmes préférés')+row('lecture','Préférences de lecture','Sens, format, typographie')+row('langue','Langue','Français')+row('notifs','Notifications',S.notif?'Chaque matin à '+S.hour:'Désactivées')+row('abo','Abonnement et facturation','Votre abonnement OPSIS')+row('confid','Confidentialité','Vos données, export, effacement')+row('widget','Widget et raccourcis','')+row('guide','Guide d\'utilisation','Prendre l\'app en main')+'<button class="srow" data-onbagain>'+sico('guide')+'<span class="stx">Refaire le parcours de départ<small>Bienvenue, thèmes et réglages de lecture</small></span>'+IC.chev+'</button></div>'+
       '<div class="slist"><button class="srow" data-legal="mentions">'+sico('mentions')+'<span class="stx">Mentions légales</span>'+IC.chev+'</button><button class="srow" data-legal="confidentialite">'+sico('confidentialite')+'<span class="stx">Politique de confidentialité</span>'+IC.chev+'</button><button class="srow" data-legal="conditions">'+sico('conditions')+'<span class="stx">Conditions d\'utilisation</span>'+IC.chev+'</button></div>';
   }else if(k==='compte'){
     b='<div class="sbox">'+OPSIS.accountHTML()+(OPSIS.live?'':'<p class="hint" style="padding:12px 0 0">La connexion à un compte sera proposée à l\'ouverture d\'OPSIS. D\'ici là, vos lectures sont gardées sur cet appareil.</p>')+'</div>';

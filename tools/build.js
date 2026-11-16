@@ -22,8 +22,16 @@ const cfgTag=(extra)=>'<script>window.OPSIS_CONFIG=Object.assign('+JSON.stringif
 const rt='<script>\n'+runtime+'\n</script>';
 const fontsCss=rd('src/fonts.css');
 const fontsInline=()=>fontsCss.replace(/url\(fonts\/([^)]+)\)/g,(m,f)=>'url(data:font/woff2;base64,'+fs.readFileSync(path.join(root,'src/fonts',f)).toString('base64')+')');
+/* images de démarrage iOS : noir plein, pour qu'aucun fond blanc ne précède l'intro */
+const STARTUP=[[430,932,3],[428,926,3],[414,896,3],[414,896,2],[393,852,3],[390,844,3],[375,812,3],[375,667,2],[320,568,2],[834,1194,2],[820,1180,2],[810,1080,2],[768,1024,2],[1024,1366,2]];
+function blackPng(w,h){const z=require('zlib');const raw=Buffer.alloc((w*3+1)*h);const crcT=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xedb88320^(c>>>1):c>>>1;crcT[n]=c>>>0;}
+const crc=b=>{let c=0xffffffff;for(const x of b)c=crcT[(c^x)&255]^(c>>>8);return(c^0xffffffff)>>>0;};
+const ch=(t,d)=>{const l=Buffer.alloc(4);l.writeUInt32BE(d.length);const td=Buffer.concat([Buffer.from(t),d]);const c=Buffer.alloc(4);c.writeUInt32BE(crc(td));return Buffer.concat([l,td,c]);};
+const ih=Buffer.alloc(13);ih.writeUInt32BE(w,0);ih.writeUInt32BE(h,4);ih[8]=8;ih[9]=2;
+return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),ch('IHDR',ih),ch('IDAT',z.deflateSync(raw,{level:9})),ch('IEND',Buffer.alloc(0))]);}
+STARTUP.forEach(d=>wr('app/startup/'+d[0]*d[2]+'x'+d[1]*d[2]+'.png',blackPng(d[0]*d[2],d[1]*d[2])));
 function page(inlineData,extra){
-  let h=shell.replace('<!--OPSIS:CONFIG-->',cfgTag(extra)+(extra&&extra.lite?'\n<link rel="manifest" href="manifest.webmanifest">':'')).replace('<!--OPSIS:RUNTIME-->',()=>rt);
+  let h=shell.replace('<!--OPSIS:CONFIG-->',cfgTag(extra)+(extra&&extra.lite?'\n<link rel="manifest" href="manifest.webmanifest">'+STARTUP.map(d=>`<link rel="apple-touch-startup-image" media="(device-width: ${d[0]}px) and (device-height: ${d[1]}px) and (-webkit-device-pixel-ratio: ${d[2]}) and (orientation: portrait)" href="startup/${d[0]*d[2]}x${d[1]*d[2]}.png">`).join('\n'):'')).replace('<!--OPSIS:RUNTIME-->',()=>rt);
   h=h.replace('<!--OPSIS:FONTS-->',()=>'<style>\n'+(inlineData?fontsInline():fontsCss)+'</style>');
   h=h.replace('<!--OPSIS:DATA-->',()=>inlineData?'<script type="application/json" id="opsis-data">'+safe(inlineData)+'</script>':'');
   return h;
