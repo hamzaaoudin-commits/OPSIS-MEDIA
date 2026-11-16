@@ -2765,7 +2765,7 @@ function rankCanvas(){
     var rg=g.createRadialGradient(W/2,300,40,W/2,300,820);rg.addColorStop(0,'rgba(210,35,44,.38)');rg.addColorStop(1,'rgba(210,35,44,0)');g.fillStyle=rg;g.fillRect(0,0,W,H);
     g.textAlign='center';g.textBaseline='alphabetic';
     g.fillStyle='#F4EEE4';g.font='700 44px '+disp;if('letterSpacing' in g)g.letterSpacing='22px';g.fillText('OPSIS',W/2+11,150);if('letterSpacing' in g)g.letterSpacing='0px';
-    g.font='900 168px '+disp;g.fillText('MON TOP '+ids.length,W/2,350);
+    g.font='900 168px '+disp;g.fillText('MON TOP 5',W/2,350);
     g.fillStyle='rgba(244,238,228,.68)';g.font='italic 40px '+serif;g.fillText(all.length+(all.length>1?' histoires notées':' histoire notée')+' · moyenne '+avg+' sur 5',W/2,418);
     function star(cx,cy,R,on){g.beginPath();for(var i=0;i<10;i++){var a=-Math.PI/2+i*Math.PI/5,rr=i%2?R*.42:R;g.lineTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr);}g.closePath();g.fillStyle=on?'#F2C14E':'rgba(244,238,228,.16)';g.fill();}
     function wrap(t,font,maxW){g.font=font;var w=t.split(' '),l=[],cur='';w.forEach(function(x){var tt=cur?cur+' '+x:x;if(g.measureText(tt).width>maxW&&cur){l.push(cur);cur=x;}else cur=tt;});if(cur)l.push(cur);return l;}
@@ -2781,6 +2781,9 @@ function rankCanvas(){
       g.fillStyle='#F4EEE4';var ty=y+70;lines.slice(0,2).forEach(function(t){g.font='900 '+fs+'px '+disp;g.fillText(t,360,ty);ty+=fs*.95;});
       for(var k=1;k<=5;k++)star(380+(k-1)*58,y+ph-40,24,k<=rt);
     });
+    for(var e=ids.length;e<5;e++){var ey=y0+e*rh;g.textAlign='right';g.fillStyle='rgba(244,238,228,.22)';g.font='900 96px '+disp;g.fillText(String(e+1),136,ey+130);
+      g.save();g.setLineDash([10,10]);g.lineWidth=3;g.strokeStyle='rgba(244,238,228,.2)';g.strokeRect(170,ey,150,225);g.restore();
+      g.textAlign='left';g.fillStyle='rgba(244,238,228,.3)';g.font='italic 40px '+serif;g.fillText('Une histoire à noter',360,ey+120);}
     g.textAlign='center';g.fillStyle='rgba(244,238,228,.45)';g.font='600 28px '+disp;if('letterSpacing' in g)g.letterSpacing='5px';g.fillText('THE WORLD IS MADE OF STORIES',W/2,H-70);if('letterSpacing' in g)g.letterSpacing='0px';
     return cv;
   });
