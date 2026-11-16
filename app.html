@@ -522,19 +522,20 @@
   .fxs-front::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:70%;z-index:9;background:linear-gradient(105deg,transparent 0,rgba(255,255,255,.16) 50%,transparent 100%);transform:translate3d(0,0,0);opacity:0;pointer-events:none;will-change:transform}
   .fxs.on .fxs-front::after{animation:shine 1.1s ease .5s both}
   @keyframes shine{0%{opacity:1;transform:translate3d(0,0,0)}100%{opacity:1;transform:translate3d(300%,0,0)}}
-  .fxs-back{transform:rotateY(180deg);display:flex;flex-direction:column;padding:18px 18px 14px;background:linear-gradient(170deg,color-mix(in srgb,var(--c) 18%,#17151b) 0%,#0e0d11 70%)}
+  .fxs-back{transform:rotateY(180deg);display:flex;flex-direction:column;padding:18px 18px 14px;background:linear-gradient(180deg,var(--g0,#17151b),var(--g1,#0e0d11));--fb:var(--bone);--fd:rgba(237,230,218,.62);--fs:#ece6dc;--fl:rgba(237,230,218,.22)}
+  .fxs-back.lt{--fb:#141210;--fd:rgba(20,18,16,.68);--fs:#1c1915;--fl:rgba(20,18,16,.3)}
   .fxs-back::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.014) 0 1px,transparent 1px 3px)}
-  .fxs-bk-top{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;color:rgba(237,230,218,.6);padding-bottom:8px;border-bottom:1px solid rgba(237,230,218,.14)}
-  .fxs-bk-top span{font-family:var(--disp);font-weight:900;letter-spacing:.14em;font-size:13px;color:var(--bone)}
-  .fxs-bk-top b{color:var(--c);font-weight:700}
+  .fxs-bk-top{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;color:var(--fd);padding-bottom:8px;border-bottom:1px solid var(--fl)}
+  .fxs-bk-top span{font-family:var(--disp);font-weight:900;letter-spacing:.14em;font-size:13px;color:var(--fb)}
+  .fxs-bk-top b{color:var(--fb);font-weight:700}
   .fxs-back h3{margin:12px 0 4px;font-family:var(--disp);font-weight:900;font-size:29px;line-height:.92;text-transform:uppercase}
-  .fxs-meta{margin:0 0 10px;font-size:11.5px;color:rgba(237,230,218,.62)}
-  .fxs-syn{font-family:var(--serif);font-size:13.5px;line-height:1.55;color:#ddd8d0;overflow:hidden;flex:1 1 auto;min-height:0}
-  .fxs-tag{margin-top:12px;padding-left:10px;border-left:2px solid var(--c);font-size:13px;font-weight:700;line-height:1.35;color:#fff}
+  .fxs-meta{margin:0 0 10px;font-size:11.5px;color:var(--fd)}
+  .fxs-syn{font-family:var(--serif);font-size:13.5px;line-height:1.55;color:var(--fs);overflow:hidden;flex:1 1 auto;min-height:0}
+  .fxs-tag{margin-top:12px;padding-left:10px;border-left:2px solid var(--fb);font-size:13px;font-weight:700;line-height:1.35;color:var(--fb)}
   .fxs-bk-bot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;padding-top:12px}
   .fxs-fm{display:flex;gap:5px}
-  .fxs-fm span{font-size:10px;font-weight:700;padding:3px 7px;border-radius:4px;border:1px solid rgba(237,230,218,.25);color:rgba(237,230,218,.75)}
-  .fxs-fm span.on{background:var(--c);border-color:var(--c);color:#0b0b0c}
+  .fxs-fm span{font-size:10px;font-weight:700;padding:3px 7px;border-radius:4px;border:1px solid var(--fl);color:var(--fd)}
+  .fxs-fm span.on{background:var(--fb);border-color:var(--fb);color:var(--g1,#0b0b0c)}
   .fxs-bc{padding:4px 5px 2px;background:#EDE6DA;border-radius:2px;text-align:center}
   .fxs-bc div{display:flex;gap:1px;height:22px}.fxs-bc i{display:block;background:#111;height:100%}
   .fxs-bc em{display:block;font-style:normal;font-family:ui-monospace,Menlo,monospace;font-size:7px;color:#111;margin-top:1px}
@@ -2577,6 +2578,9 @@ function pickData(key){
 }
 var SYN2={"serie": "Cinquante-deux femmes et hommes au sommet de leur art ou de leur pouvoir : Judy Garland, Mike Tyson, Amy Winehouse, Elizabeth Holmes, Eminem. Ce que la réussite leur a donné, promis, permis, et ce qu'elle n'a pas pu leur prendre. Un portrait complet par jour.", "serieK": "Du train postal de 1963 à Hatton Garden et aux coffres de Gelsenkirchen : dix-huit vrais cambriolages et braquages. Qui a préparé quoi, comment ça s'est passé, et ce qu'on ignore encore.", "serieF": "Tableaux, manuscrits, objets antiques, photos de fées : dix-huit faux célèbres et ceux qui les ont fabriqués, van Meegeren, Elmyr de Hory, Tom Keating, Mark Hofmann, les fées de Cottingley. Qui a été trompé, et comment on l'a su.", "serieA": "Victor Lustig a « vendu » la tour Eiffel, Billy McFarland un festival qui n'a pas eu lieu : vingt et une grandes escroqueries réelles. Escrocs, faux célèbres, canulars : la part de vérité et la part de légende dans chaque récit.", "serieP": "Les rayons X, les corn flakes, les pulsars : onze découvertes dues au hasard. Chaque récit sépare ce qui s'est vraiment passé de la légende qu'on en a faite.", "serieS": "Elles n'auraient pas dû s'en sortir, et pourtant : l'équipage de l'Endurance pris dans la banquise, un naufragé de soixante-seize jours en canot, les rescapés des Andes, les passagers de l'Hudson. Comment ils ont tenu, et ce que les sources divergent à dire.", "serieB": "Ils ont testé leur idée sur leur propre corps : Barry Marshall et la bactérie de l'ulcère, Pettenkofer et le choléra, Forssmann et son cathéter, Kevin Warwick et ses implants. Pourquoi, et ce que ça a prouvé.", "serieE": "De Marie Stuart en 1568 à Rédoine Faïd en 2018, vingt-quatre évasions réelles : Casanova aux Plombs, Latude à la Bastille, Papillon, la Grande Évasion de 1944. Comment ils sont sortis, et ce qui reste contesté.", "serieI": "Prendre la place d'un autre, ou s'inventer une identité : Martin Guerre, Clark Rockefeller, Misha Defonseca. Qui les a crus, jusqu'où ça a tenu, et ce qu'on sait de la supercherie.", "serieG": "De Mata Hari en 1917 à Gouzenko à Ottawa, vingt et une affaires d'espionnage réelles : agents doubles, traîtres, opérations secrètes (Garbo, l'homme qui n'a jamais existé, Argo, Farewell). Ce que les archives permettent d'affirmer.", "serieN": "Une erreur minuscule, des conséquences énormes : un entier trop grand (Ariane 501), une commande mal saisie. Sept pannes : ce qui a cassé, et ce qu'on a compris après.", "serieX": "Des pôles aux abîmes : Amundsen et Scott au pôle Sud, l'Endurance, Franklin, l'Everest en 1953, le Kon-Tiki, Gagarine, la fosse des Mariannes. Vingt-quatre expéditions : ce qu'ils cherchaient, ce qu'ils ont trouvé, ce qu'on ignore.", "serieQ": "Des messages que personne ne savait lire, ou que personne ne devait lire : Enigma, le linéaire B, Kryptos, Cicada 3301, le message d'Arecibo envoyé aux étoiles. Neuf histoires de codes : ce qui a été cassé, et ce qui résiste encore.", "serieZ": "Des projets énormes qui ont raté : le Vasa qui coule à son premier voyage, l'Emu War, des films, un festival. Onze échecs célèbres : pourquoi ça a raté, et ce qu'on en raconte à tort.", "serieD": "Du Mary Celeste à la colonie de Roanoke, seize disparitions célèbres : un navire, un avion, un tableau, un prince, une civilisation. Ce qu'on a retrouvé, ce qu'on suppose, et ce qui reste sans réponse.", "serieR": "De Socrate à James Joyce, vingt-quatre procès célèbres : Galilée, Dreyfus, Eichmann, Mandela, O.J. Simpson, Flaubert. Ce qui s'est dit au tribunal, ce que les juges ont décidé, et ce que les sources en retiennent.", "serieL": "Lincoln, Molière, Marie Curie, Scott, Lennon, le Titanic, la navette Challenger : leurs dernières vingt-quatre heures, reconstituées d'après les sources. Ce qui s'est passé ce jour-là, et ce qu'on ne sait pas.", "serieV": "Ils partaient perdants : Leicester champion en 2016, Douglas contre Tyson, le Miracle sur glace, Apollo 13, LeMond au Tour, l'Uruguay au Maracanã. Vingt-cinq victoires inattendues : les circonstances, et ce sur quoi les sources divergent.", "serieU": "Deux adversaires, un seul gagnant : Borg–McEnroe à Wimbledon, Hagler–Hearns, Senna–Prost, Kasparov contre Deep Blue, Maradona contre l'Angleterre. Vingt-quatre duels de légende : qui a gagné, comment, et ce que les témoins ne racontent pas pareil.", "serieT": "Des films qui ont failli détruire ceux qui les faisaient : Twilight Zone, Apocalypse Now, Fitzcarraldo, Shining. Treize tournages : accidents, budgets explosés, plateaux en guerre, et ce qui relève de la légende."};
 var SYN2_META={};
+/* le dégradé de la quatrième est exactement celui de la face avant (mêmes deux couleurs de l'affiche) */
+function coverGrad(key){var raw=COVERS[key]||dailyCover(key),m=raw.match(/<stop[^>]*stop-color="(#[0-9A-Fa-f]{6})"/g)||[],c=m.map(function(x){return x.match(/#[0-9A-Fa-f]{6}/)[0];});return c.length>1?[c[0],c[1]]:c.length?[c[0],c[0]]:null;}
+function lumOf(h){var v=[1,3,5].map(function(i){var c=parseInt(h.substr(i,2),16)/255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4);});return .2126*v[0]+.7152*v[1]+.0722*v[2];}
 function fitBack(){
   var syn=fxs.querySelector('.fxs-syn');if(!syn)return;
   var fs=13.5;syn.style.fontSize=fs+'px';syn.style.lineHeight=fs>11.5?'1.55':'1.45';
@@ -2598,10 +2602,12 @@ function pick(key,src){
   var bars=Array.from({length:34},function(_,k){return '<i style="width:'+(1+(hashN(key+k)%3))+'px"></i>';}).join('');
   var fm=['Flash','Récit','Série'].map(function(f){return '<span class="'+(f===d.fmt?'on':'')+'">'+f+'</span>';}).join('');
   fxs.style.setProperty('--c',d.c||'#D2232C');
+  var cg=coverGrad(d.p),lt=false;
+  if(cg){fxs.style.setProperty('--g0',cg[0]);fxs.style.setProperty('--g1',cg[1]);lt=(lumOf(cg[0])+lumOf(cg[1]))/2>.2;}else{fxs.style.removeProperty('--g0');fxs.style.removeProperty('--g1');}
   fxs.innerHTML='<button class="fxs-x" data-go="close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>'+
     '<div class="fxs-card" id="fxsCard" role="button" tabindex="0" aria-label="Retourner la couverture"><div class="fxs-in">'+
       '<div class="fxs-face fxs-front">'+poster(d.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+d.no+'</span><span class="ft">'+esc(nb(d.front))+'</span></div>'+
-      '<div class="fxs-face fxs-back"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+d.no+'</b></div>'+
+      '<div class="fxs-face fxs-back'+(lt?' lt':'')+'"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+d.no+'</b></div>'+
         '<h3>'+esc(d.title)+'</h3><p class="fxs-meta">'+esc(d.meta)+'</p><p class="fxs-syn">'+esc(d.syn)+'</p>'+
         '<div class="fxs-bk-bot"><div class="fxs-fm">'+fm+'</div><div class="fxs-bc"><div>'+bars+'</div><em>OPS-'+d.no+'-'+(h%9000+1000)+'</em></div></div></div>'+
     '</div></div>'+
