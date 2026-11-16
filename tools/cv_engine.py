@@ -72,12 +72,7 @@ def scene(p): return ('<path d="M0 0 H56 Q42 120 30 300 H0Z" fill="%s" opacity="
                       '<polygon points="76,0 124,0 168,262 32,262" fill="%s" opacity=".17"/><ellipse cx="100" cy="262" rx="72" ry="11" fill="%s" opacity=".6"/>' % (CREAM, p['a']))
 @bg
 def brique(p):
-    o = '<rect width="200" height="300" fill="%s" opacity=".35"/>' % mix(p['b0'], INK, .2)
-    for r in range(15):
-        y = r * 20
-        o += '<path d="M0 %s H200" stroke="%s" stroke-width="1.6" opacity=".35"/>' % (y, INK)
-        for c in range(6): o += '<path d="M%s %s v20" stroke="%s" stroke-width="1.6" opacity=".35"/>' % ((c * 40 + (20 if r % 2 else 0)), y, INK)
-    return o
+    return ('<rect width="200" height="300" fill="%s" opacity=".35"/><defs><pattern id="zB" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 0 H40 M0 20 H40 M0 0 V20 M20 20 V40" stroke="%s" stroke-width="1.6" opacity=".35" fill="none"/></pattern></defs><rect width="200" height="300" fill="url(#zB)"/>' % (mix(p['b0'], INK, .2), INK))
 @bg
 def ville_nuit(p):
     o = stars(p, 22, 7, 0, 130) + '<circle cx="152" cy="82" r="20" fill="%s" opacity=".92"/><circle cx="160" cy="76" r="17" fill="%s"/>' % (CREAM, p['b0'])
@@ -137,16 +132,11 @@ def presse(p):
     return o
 @bg
 def trame(p):
-    o = ''
-    for y in range(0, 300, 10):
-        for x in range(0, 200, 10): o += '<circle cx="%s" cy="%s" r="%.1f" fill="%s" opacity=".09"/>' % (x + (5 if (y // 10) % 2 else 0), y, 1 + ((x + y) % 30) / 20, CREAM)
-    return o
+    return ('<defs><pattern id="zT" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.5" fill="%s" opacity=".1"/><circle cx="7.5" cy="7.5" r="1.2" fill="%s" opacity=".08"/></pattern></defs><rect width="200" height="300" fill="url(#zT)"/>' % (CREAM, CREAM))
 @bg
 def tribunes(p):
-    o = '<rect x="0" y="100" width="200" height="120" fill="%s" opacity=".45"/>' % INK
-    for r in range(5):
-        for i in range(24): o += '<circle cx="%s" cy="%s" r="2.2" fill="%s" opacity="%s"/>' % (4 + i * 8.4 + (r % 2) * 4, 112 + r * 20, [p['a'], CREAM, p['a2']][(i + r) % 3], .55)
-    return o + '<polygon points="20,0 -20,230 60,230" fill="%s" opacity=".12"/><polygon points="180,0 220,230 140,230" fill="%s" opacity=".12"/>' % (CREAM, CREAM)
+    return ('<rect x="0" y="100" width="200" height="120" fill="%s" opacity=".45"/><defs><pattern id="zG" width="16.8" height="20" patternUnits="userSpaceOnUse"><circle cx="4.2" cy="12" r="2.2" fill="%s" opacity=".55"/><circle cx="12.6" cy="2" r="2.2" fill="%s" opacity=".55"/></pattern></defs><rect x="0" y="102" width="200" height="104" fill="url(#zG)"/>' % (INK, p['a'], CREAM)
+            + '<polygon points="20,0 -20,230 60,230" fill="%s" opacity=".12"/><polygon points="180,0 220,230 140,230" fill="%s" opacity=".12"/>' % (CREAM, CREAM))
 @bg
 def flammes(p):
     o = ''

@@ -507,6 +507,8 @@
   .fxs-face{position:absolute;inset:0;border-radius:8px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 30px 60px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
   /* Safari iOS laisse parfois transparaître la face cachée : on cache aussi chaque face au milieu du retournement */
   .fxs-face,.fxs-face *{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+  .fxs-face svg *{-webkit-backface-visibility:visible;backface-visibility:visible}
+  .fxs-front .poster{transform:translateZ(0)}
   .fxs-front{transform:translateZ(0);transition:visibility 0s linear .475s}
   .fxs-card.flip .fxs-front{visibility:hidden}
   .fxs-back{visibility:hidden;transition:visibility 0s linear .475s}
