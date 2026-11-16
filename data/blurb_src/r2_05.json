@@ -56,7 +56,7 @@
   "hook": "Dans le désert, la règle est de ne pas bouger. Il a choisi de marcher."
  },
  "sv19": {
-  "blurb": "En 1823, un trappeur américain est gravement blessé par un grizzly. Ses compagnons le croient perdu et le laissent mourir. Il serait pourtant revenu les voir, des mois plus tard, à des centaines de kilomètres de là. Voici ce que l'on sait de cette histoire, et ce que l'on ne peut pas prouver. [accroche : « Griffé par une ourse, abandonné, que sait-on vraiment de son retour ? »]",
+  "blurb": "En 1823, un trappeur américain est gravement blessé par un grizzly. Ses compagnons le croient perdu et le laissent mourir. Il serait pourtant revenu les voir, des mois plus tard, à des centaines de kilomètres de là. Voici ce que l'on sait de cette histoire, et ce que l'on ne peut pas prouver.",
   "hook": "Griffé par une ourse et abandonné, il aurait fait plus de trois cents kilomètres pour revenir."
  },
  "sv20": {
@@ -92,7 +92,7 @@
   "hook": "Deux moteurs éteints au-dessus de New York, et un fleuve pour poser l'avion."
  },
  "ev01": {
-  "blurb": "QUATRIÈME: \"Une île au milieu d'un lac, des barques surveillées, une reine qui a tout perdu en un an. Deux tentatives ont échoué. La troisième repose sur un garçon orphelin que personne ne regarde et sur un trousseau de clés pris pendant un repas. Réussira-t-elle enfin, et que fera-t-elle de sa liberté ?\" ACCROCHE: \"Elle avait déjà échoué deux fois, et il restait un garçon que personne ne regardait.\"",
+  "blurb": "Une île au milieu d'un lac, des barques surveillées, une reine qui a tout perdu en un an. Deux tentatives ont échoué. La troisième repose sur un garçon orphelin que personne ne regarde et sur un trousseau de clés pris pendant un repas. Réussira-t-elle enfin, et que fera-t-elle de sa liberté ?",
   "hook": "Elle avait déjà échoué deux fois. La troisième évasion tenait dans la poche d'un garçon."
  },
  "ev02": {
@@ -100,7 +100,7 @@
   "hook": "Le coffre sortait chaque mois de la forteresse. Un matin, il était plus lourd."
  },
  "ev03": {
-  "blurb": "QUATRIÈME: \"Jack Sheppard a vingt-deux ans, des fers aux jambes, des crampons dans le sol de la cellule la plus sûre de Londres. Quelques heures plus tard, il est sur le toit. Un jeune charpentier devenu voleur, un chef de bande qui le traque, quatre évasions en quelques mois. Pourquoi toute la ville s'est-elle prise de passion pour lui ?\"",
+  "blurb": "Jack Sheppard a vingt-deux ans, des fers aux jambes, des crampons dans le sol de la cellule la plus sûre de Londres. Quelques heures plus tard, il est sur le toit. Un jeune charpentier devenu voleur, un chef de bande qui le traque, quatre évasions en quelques mois. Pourquoi toute la ville s'est-elle prise de passion pour lui ?",
   "hook": "Il était enchaîné dans la cellule la plus sûre de Londres, et il en est sorti par le toit."
  },
  "ev04": {
@@ -108,11 +108,11 @@
   "hook": "Un morceau de fer, une Bible et une assiette de pâtes ont fait sortir Casanova de prison."
  },
  "ev06": {
-  "blurb": "QUATRIÈME: \"Colditz est une forteresse réservée aux officiers qui ont déjà tenté de s'évader ailleurs. Airey Neave y échoue une première fois : son faux uniforme est vert vif sous les projecteurs. Il apprend. Quelques mois plus tard, avec un compagnon, il retente sa chance en uniforme allemand. Cette fois, le déguisement tiendra-t-il face aux sentinelles ?\" ACCROCHE: \"Dans une forteresse pour évadés, deux prisonniers retentent leur chance sous l'uniforme allemand.\"",
+  "blurb": "Colditz est une forteresse réservée aux officiers qui ont déjà tenté de s'évader ailleurs. Airey Neave y échoue une première fois : son faux uniforme est vert vif sous les projecteurs. Il apprend. Quelques mois plus tard, avec un compagnon, il retente sa chance en uniforme allemand. Cette fois, le déguisement tiendra-t-il face aux sentinelles ?",
   "hook": "Dans la forteresse des évadés, deux prisonniers sont sortis en officiers allemands."
  },
  "ev08": {
-  "blurb": "QUATRIÈME: \"Septembre 1940, Varsovie. Des milliers d'hommes tentent d'échapper à une rafle. Un seul s'y laisse prendre exprès, pour être envoyé à Auschwitz et en rapporter ce qui s'y passe. Il y organise la résistance et écrit des rapports que l'on peine à croire. Mais comment faire sortir un témoignage d'un camp dont personne ne sort ? Qui l'écoutera ?\"",
+  "blurb": "Septembre 1940, Varsovie. Des milliers d'hommes tentent d'échapper à une rafle. Un seul s'y laisse prendre exprès, pour être envoyé à Auschwitz et en rapporter ce qui s'y passe. Il y organise la résistance et écrit des rapports que l'on peine à croire. Mais comment faire sortir un témoignage d'un camp dont personne ne sort ? Qui l'écoutera ?",
   "hook": "Il s'est fait arrêter exprès pour entrer à Auschwitz et pouvoir un jour raconter."
  },
  "ev11": {
