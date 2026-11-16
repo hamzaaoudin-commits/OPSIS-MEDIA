@@ -3261,7 +3261,7 @@ selBar.addEventListener('pointerdown',function(e){e.preventDefault();});
 function saveSel(){var top=S.stack[S.stack.length-1];if(!SEL||!top)return -1;var q=quotes();q.unshift({id:top.id,t:SEL,n:'',at:OPSIS.day()});selBar.classList.remove('on');try{window.getSelection().removeAllRanges();}catch(e){}return 0;}
 
 /* ---------- note, quiz, signalement, cadeau ---------- */
-function starsHTML(id){var r=S.rate[id]||0,h='';for(var i=1;i<=5;i++)h+='<button data-rate="'+i+'" data-id="'+id+'" aria-label="'+i+(i>1?' étoiles':' étoile')+'" aria-pressed="'+(r===i)+'" class="'+(i<=r?'on':'')+'">'+(i<=r?IC.starOn:IC.star)+'</button>';
+function starsHTML(id){var es=STORIES[id]&&STORIES[id].ep;if(es){if(es.n!==es.N)return '';return starsHTML(es.of).replace('Noter cette histoire sur 5','Noter cette vie sur 5').replace('Notez cette histoire pour affiner','Notez cette vie pour affiner');}var r=S.rate[id]||0,h='';for(var i=1;i<=5;i++)h+='<button data-rate="'+i+'" data-id="'+id+'" aria-label="'+i+(i>1?' étoiles':' étoile')+'" aria-pressed="'+(r===i)+'" class="'+(i<=r?'on':'')+'">'+(i<=r?IC.starOn:IC.star)+'</button>';
   return '<div class="rateb"><h4>Votre note</h4><div class="stars" role="group" aria-label="Noter cette histoire sur 5">'+h+'</div><p>'+(r?['','Pas pour moi','Moyenne','Bonne histoire','Très bonne','Inoubliable'][r]:'Notez cette histoire pour affiner vos recommandations.')+'</p></div>';}
 function quizFor(id){
   var s=STORIES[id];if(!s||s.th===undefined)return null;var X=epIndex(),pool=X.byT[s.th].filter(function(x){return x!==id;}),out=[];
