@@ -3119,21 +3119,77 @@ setInterval(autoTick,60000);document.addEventListener('visibilitychange',functio
 
 /* ---------- recommandations ---------- */
 function nextEps(){var l=S.x.rlog||{},out=[];Object.keys(l).filter(function(id){return S.read[id]&&STORIES[id]&&STORIES[id].ep;}).sort(function(a,b){return String(l[b]).localeCompare(String(l[a]));}).forEach(function(id){var n=STORIES[id].next;if(n&&STORIES[n]&&STORIES[n].ep&&STORIES[n].ep.of===STORIES[id].ep.of&&!S.read[n]&&out.indexOf(n)<0)out.push(n);});return out;}
-function recs(n){
-  var X=epIndex(),w={},sig=0;
-  function add(id,v){var st=STORIES[id];if(st&&st.th!==undefined&&v){w[st.th]=(w[st.th]||0)+v;sig++;}}
-  Object.keys(S.read).forEach(function(id){if(S.read[id])add(id,1);});
-  Object.keys(S.saved).forEach(function(id){if(S.saved[id])add(id,2);});
-  Object.keys(S.rate).forEach(function(id){var r=S.rate[id];add(id,r>=4?3:r<=2?-2:0);});
-  (S.x.prefs||[]).forEach(function(ti){w[ti]=(w[ti]||0)+4;sig++;});
-  var day=OPSIS.day(),pool=X.all.filter(function(id){return !S.read[id]&&!(S.prog[id]>3);});
-  var sc=pool.map(function(id){return [id,(w[STORIES[id].th]||0)+(hashN(id+day)%100)/100];});
-  sc.sort(function(a,b){return b[1]-a[1];});
-  var out=nextEps().slice(0,n),per={};
-  for(var i=0;i<sc.length&&out.length<n;i++){if(out.indexOf(sc[i][0])>=0)continue;var th=STORIES[sc[i][0]].th;per[th]=(per[th]||0)+1;if(per[th]>3)continue;out.push(sc[i][0]);}
-  return {ids:out,personal:sig>0};
+/* ---------- recommandation : profil de goûts + similarité de contenu ----------
+   Chaque histoire est un vecteur de traits : thème, série, nature (récit / vie), époque, pays, durée, et surtout ses mots
+   (titre, résumé, accroche) pondérés par leur rareté. Le profil du lecteur est la somme des vecteurs de ce qu'il a lu,
+   gardé, noté ou commencé, pondérée par l'intensité (note centrée sur 3, mise en liste, récence) ; une note basse
+   retranche. Chaque histoire non lue est notée par sa proximité avec ce profil, puis la liste est composée pour rester
+   variée (pas dix fois la même série) avec une place réservée à l'inattendu. Rien n'est calculé hors de l'appareil. */
+var RX=null,RSTOP=' dans avec pour cette cette entre sont plus mais comme tout tous leur leurs elle elles ils ils nous vous quand apres avant sans sous chez dont aussi encore alors puis depuis pendant contre vers jusqu faire fait font etait etaient avait avaient avoir etre ete cela celui celle ceux ainsi tres tout toute toutes meme autre autres deux trois premier premiere seul seule seulement parce lorsque quelques quelque rien jamais toujours donc ni ou et qui que quoi quel quelle lequel son sa ses ses leur une des les aux par sur ne pas se ce ca il on y en au du de la le un a est ont sera peut doit veut dit dire jour jours annee annees temps homme hommes femme femmes monde'.split(' ').reduce(function(o,w){if(w)o[w]=1;return o;},{});
+function rxTokens(t){var seen={},out=[];norm(t).split(/[^a-z0-9]+/).forEach(function(w){if(w.length<4||RSTOP[w]||/^\d+$/.test(w))return;if(w.length>6)w=w.replace(/(ements|ement|ation|ations|eurs|euse|ique|iques|ees|es|s|e)$/,'');if(w.length<4||seen[w])return;seen[w]=1;out.push(w);});return out;}
+function rxBuild(){
+  if(RX)return RX;
+  var X=epIndex(),ids=X.all.filter(function(id){var s=STORIES[id];return s&&!s.ep&&s.th!==undefined&&!GONE[id];}),df={},toks={};
+  ids.forEach(function(id){var s=STORIES[id],t=rxTokens([s.title,s.title,s.syn,(BLURB[id]&&BLURB[id].h)||'',s.sub||''].join(' '));toks[id]=t;t.forEach(function(w){df[w]=(df[w]||0)+1;});});
+  var N=ids.length,vec={};
+  ids.forEach(function(id){
+    var s=STORIES[id],v={},parts=String(s.meta||'').split(' · '),y=YR[id],c=parts[1];
+    v['t'+s.th]=.9;v['s:'+subKey(id)]=.9;v['k:'+(s.book?'vie':'recit')]=.35;
+    if(y!==undefined&&y!==null&&!isNaN(+y)){var e=Math.floor(+y/60);v['e'+e]=.5;v['e'+(e-1)]=.2;v['e'+(e+1)]=.2;}
+    if(c&&c.length<30)v['c:'+norm(c)]=.5;
+    var m=s.min||5;v['l:'+(m<=4?'s':m<=8?'m':'l')]=.25;
+    var ws=[],tot=0;toks[id].forEach(function(w){if(df[w]<2||df[w]>N*.2)return;var x=Math.log(N/df[w]);ws.push([w,x]);tot+=x*x;});
+    tot=Math.sqrt(tot)||1;ws.forEach(function(q){v['w:'+q[0]]=1.1*q[1]/tot;});
+    var n2=0;for(var k in v)n2+=v[k]*v[k];n2=Math.sqrt(n2)||1;for(var k2 in v)v[k2]/=n2;
+    vec[id]=v;
+  });
+  return RX={ids:ids,vec:vec};
 }
-function inRec(id){return recentIds().indexOf(id)>=0;}
+function rxDot(a,b){var d=0,t=a;if(Object.keys(a).length>Object.keys(b).length){a=b;b=t;}for(var k in a)if(b[k])d+=a[k]*b[k];return d;}
+function rxProfile(){
+  var R=rxBuild(),P={},sig=0,ord={},rl=S.x.rlog||{},ks=Object.keys(S.read).filter(function(k){return S.read[k]&&R.vec[k];}).sort(function(a,b){return String(rl[a]||'').localeCompare(String(rl[b]||''));});
+  ks.forEach(function(k,i){ord[k]=i;});var tot=ks.length;
+  function add(id,w){var v=R.vec[id];if(!v||!w)return;sig++;for(var f in v)P[f]=(P[f]||0)+v[f]*w;}
+  ks.forEach(function(id){var rec=tot>1?.6+.4*ord[id]/(tot-1):1,r=S.rate[id];add(id,rec*(r?(r-3)*.9+1:1));});   /* lu = +1 ; noté 5 = +2,8 ; noté 1 = −1,8 */
+  Object.keys(S.rate).forEach(function(id){if(!S.read[id]&&S.rate[id])add(id,(S.rate[id]-3)*.9);});
+  Object.keys(S.saved).forEach(function(id){if(S.saved[id]&&!S.read[id])add(id,1.6);});            /* mise en liste : intérêt explicite */
+  Object.keys(S.prog).forEach(function(id){var p=S.prog[id];if(!S.read[id]&&p>=35&&p<100)add(id,.8);else if(!S.read[id]&&p>0&&p<12)add(id,-.3);});   /* bien entamée = goût ; lâchée d'entrée = léger rejet */
+  (S.x.prefs||[]).forEach(function(ti){sig++;P['t'+ti]=(P['t'+ti]||0)+2.2;});                       /* thèmes choisis au départ */
+  return {P:P,sig:sig};
+}
+function recsFor(n,opt){
+  opt=opt||{};var R=rxBuild(),pr=rxProfile(),P=pr.P,day=opt.day||OPSIS.day();
+  var pool=R.ids.filter(function(id){return !S.read[id]&&!(S.prog[id]>3)&&!GONE[id]&&!(opt.skip&&opt.skip[id]);});
+  var sc=pool.map(function(id){return [id,rxDot(P,R.vec[id])+(hashN(id+day)%100)/100*.03];});
+  var mx=0;sc.forEach(function(x){if(x[1]>mx)mx=x[1];});mx=mx||1;
+  sc.forEach(function(x){x[1]=x[1]/mx;});sc.sort(function(a,b){return b[1]-a[1];});
+  var out=[],seenT={},seenS={},cand=sc.slice(0,160);
+  /* sélection gloutonne : score − redondance avec ce qui est déjà choisi, bonus aux thèmes pas encore représentés */
+  while(out.length<n&&cand.length){
+    var bi=-1,bs=-1e9;
+    for(var i=0;i<cand.length;i++){var id=cand[i][0],v=R.vec[id],red=0,th=STORIES[id].th,sk=subKey(id);
+      out.forEach(function(o){var d=rxDot(v,R.vec[o]);if(d>red)red=d;});
+      var s2=cand[i][1]-.45*red+(seenT[th]?0:.08)-(seenS[sk]>=2?.25:0);
+      if(s2>bs){bs=s2;bi=i;}}
+    var pick=cand.splice(bi,1)[0][0];out.push(pick);var t=STORIES[pick].th,k=subKey(pick);seenT[t]=(seenT[t]||0)+1;seenS[k]=(seenS[k]||0)+1;
+  }
+  /* places réservées à l'inattendu : la meilleure histoire d'un thème que la liste n'a pas encore montré */
+  if(pr.sig>0&&n>=8){
+    var slots=n>=10?[4,9]:[4];
+    slots.forEach(function(si){
+      var have={};out.forEach(function(o){have[STORIES[o].th]=1;});
+      for(var i=0;i<sc.length;i++){var id=sc[i][0];if(out.indexOf(id)>=0||have[STORIES[id].th])continue;if(sc[i][1]<=0)break;out[si]=id;break;}
+    });
+  }
+  return {ids:out,personal:pr.sig>0,P:P};
+}
+function recs(n){
+  var X=epIndex(),ne=nextEps().slice(0,n);
+  var r=recsFor(n,{skip:ne.reduce(function(o,k){o[k]=1;return o;},{})});
+  var out=ne.concat(r.ids.filter(function(x){return ne.indexOf(x)<0;})).slice(0,n);
+  return {ids:out,personal:r.personal};
+}
+OPSIS.ui.recsFor=recsFor;
 function recentIds(){return (S.x.recent||[]).filter(function(id){return vis(id)&&!S.read[id]&&S.prog[id]>=3&&S.prog[id]<97;});}
 function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
   return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-pick="'+id+'" data-rec="1"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
@@ -3567,6 +3623,10 @@ function twoSame(id){var s=STORIES[id];if(!s||s.th===undefined||s.ep)return '';v
   subDefs(s.th,all).forEach(function(d){if(d.list.indexOf(id)>=0)def=d;});
   var pool=(def?def.list:[]).filter(function(x){return x!==id&&x!==s.next&&vis(x);});
   pool=pool.filter(function(x){return !S.read[x];}).concat(pool.filter(function(x){return S.read[x];}));
+  /* les deux plus proches de celle qu'on vient de lire (mots, époque, pays, série), pas seulement les deux premières du thème */
+  (function(){var R=rxBuild(),v0=R.vec[id];if(!v0)return;var cand=R.ids.filter(function(x){return x!==id&&x!==s.next&&vis(x)&&!S.read[x]&&!STORIES[x].ep;});
+    cand=cand.map(function(x){return [x,rxDot(v0,R.vec[x])];}).sort(function(p,q){return q[1]-p[1];});
+    var c=[];cand.forEach(function(q){if(c.length<2&&q[1]>.12)c.push(q[0]);});if(c.length===2)pool=c;})();
   pick=pool.slice(0,2);
   if(pick.length<2){all.forEach(function(x){if(pick.length<2&&x!==id&&x!==s.next&&pick.indexOf(x)<0&&!S.read[x])pick.push(x);});}
   if(!pick.length)return '';
