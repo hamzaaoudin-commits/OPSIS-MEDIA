@@ -23,7 +23,7 @@ const rt='<script>\n'+runtime+'\n</script>';
 const fontsCss=rd('src/fonts.css');
 const fontsInline=()=>fontsCss.replace(/url\(fonts\/([^)]+)\)/g,(m,f)=>'url(data:font/woff2;base64,'+fs.readFileSync(path.join(root,'src/fonts',f)).toString('base64')+')');
 /* images de démarrage iOS : noir plein, pour qu'aucun fond blanc ne précède l'intro */
-const STARTUP=[[430,932,3],[428,926,3],[414,896,3],[414,896,2],[393,852,3],[390,844,3],[375,812,3],[375,667,2],[320,568,2],[834,1194,2],[820,1180,2],[810,1080,2],[768,1024,2],[1024,1366,2]];
+const STARTUP=[[430,932,3],[428,926,3],[414,896,3],[414,896,2],[393,852,3],[390,844,3],[375,812,3],[375,667,2],[320,568,2],[834,1194,2],[820,1180,2],[810,1080,2],[768,1024,2],[1024,1366,2],[440,956,3],[420,912,3],[402,874,3],[834,1210,2],[1032,1376,2],[744,1133,2],[834,1112,2]];
 function blackPng(w,h){const z=require('zlib');const raw=Buffer.alloc((w*3+1)*h);const crcT=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xedb88320^(c>>>1):c>>>1;crcT[n]=c>>>0;}
 const crc=b=>{let c=0xffffffff;for(const x of b)c=crcT[(c^x)&255]^(c>>>8);return(c^0xffffffff)>>>0;};
 const ch=(t,d)=>{const l=Buffer.alloc(4);l.writeUInt32BE(d.length);const td=Buffer.concat([Buffer.from(t),d]);const c=Buffer.alloc(4);c.writeUInt32BE(crc(td));return Buffer.concat([l,td,c]);};
