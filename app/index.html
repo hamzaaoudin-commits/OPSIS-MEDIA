@@ -3232,6 +3232,7 @@ function recs(n){
   return {ids:out,personal:r.personal};
 }
 OPSIS.ui.recsFor=recsFor;
+function inRec(id){return recentIds().indexOf(id)>=0;}
 function recentIds(){return (S.x.recent||[]).filter(function(id){return vis(id)&&!S.read[id]&&S.prog[id]>=3&&S.prog[id]<97;});}
 function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
   return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-pick="'+id+'" data-rec="1"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
