@@ -1,0 +1,37 @@
+{
+ "id": "mq25",
+ "fmt": 3,
+ "name": "Burbn devient Instagram : une seule fonction",
+ "sub": "San Francisco, 2010 — Deux fondateurs ont conçu une appli de « check-in » trop chargée. Ils gardent une seule fonction, la photo, et lancent l'app le 6 octobre 2010.",
+ "dates": "2010–2012",
+ "country": "États-Unis",
+ "job": "Instagram (Burbn)",
+ "yr": 2010,
+ "src": [
+  "« Instagram », Wikipédia (anglais). en.wikipedia.org/wiki/Instagram",
+  "« Kevin Systrom », Wikipédia (anglais). en.wikipedia.org/wiki/Kevin_Systrom",
+  "« From 0 To $1 Billion In Two Years: Instagram's Rose-Tinted Ride To Glory », TechCrunch, 9 avril 2012. techcrunch.com/2012/04/09/instagram-story-facebook-acquisition/"
+ ],
+ "body": [
+  "Au début, il n'y a pas d'Instagram. Il y a Burbn. Au début de 2010, Kevin Systrom met à l'essai une application de localisation très simple, avec environ quatre onglets. Il constate que ses utilisateurs s'en servent surtout pour partager des photos plutôt que pour signaler leur position.",
+  "Le problème est double. L'application ressemble trop à Foursquare. Et elle a trop de fonctions : les utilisateurs ne veulent pas d'un produit compliqué.",
+  "#Une fonction",
+  "Mike Krieger rejoint Systrom après un an et demi chez Meebo. Les deux fondateurs abandonnent Burbn et étudient les applications photo les plus populaires. Ils décident de se concentrer sur une seule fonction, le partage de photos. Un précurseur appelé Scotch existait, mais il n'avait pas de filtres et était « lent et plein de bugs ». Des mois de prototypes suivent.",
+  "Krieger, né au Brésil, est arrivé en Californie en 2004 pour étudier à Stanford, où il a rencontré Systrom. Au début, il développe seul l'essentiel de l'ingénierie et de l'expérience utilisateur. Il raconte qu'un matin, un e-mail lui apprend que le site est tombé. En relisant l'historique de son terminal, il découvre qu'il l'avait lui-même remis en marche à 3 h 30 du matin, sans s'en souvenir. Il résume cette période : « Voilà à quel point on galérait à l'époque. »",
+  "L'idée serait née pendant des vacances au Mexique, où une amie de Systrom ne voulait pas publier des photos prises avec un iPhone 4 qu'elle jugeait peu flatteuses. Les filtres sont la réponse : Systrom crée le filtre X-Pro II, toujours utilisé sur Instagram.",
+  "Le 5 mars 2010, Systrom boucle un tour de table d'amorçage de 500 000 dollars avec Baseline Ventures et Andreessen Horowitz.",
+  "#Octobre 2010",
+  "L'application est lancée sur l'App Store pour iPhone le 6 octobre 2010. Elle attire 25 000 utilisateurs le premier jour, et les fondateurs ne rentrent chez eux qu'à 6 heures du matin le lendemain. Elle atteint un million d'utilisateurs en deux ou trois mois, selon les récits. Instagram n'a rien dépensé pour acquérir ses utilisateurs.",
+  "En février 2011, on apprend qu'Instagram a levé 7 millions de dollars auprès d'investisseurs parmi lesquels Benchmark Capital et Jack Dorsey. La société est valorisée à environ 20 millions de dollars.",
+  "#Avril 2012",
+  "En mars 2012, au festival SXSW, Systrom annonce 27 millions d'utilisateurs inscrits, soit près de deux fois la taille de Foursquare. La version Android sort le 3 avril 2012. Elle est téléchargée plus d'un million de fois en moins d'une journée.",
+  "Six jours plus tard, le 9 avril 2012, Facebook annonce le rachat d'Instagram pour un milliard de dollars, en argent et en actions. Instagram n'a pas encore de revenus, et compte environ une douzaine d'employés. L'opération est finalisée le 6 septembre 2012 : 300 millions de dollars en argent et 23 millions d'actions.",
+  "Matt Cohler, membre du conseil d'administration et venu de Facebook, a encouragé la jeune société à privilégier la croissance avant les revenus. Le prix de l'opération a été discuté : Facebook comptait alors plus de 850 millions d'utilisateurs actifs par mois.",
+  "Mark Zuckerberg dit que Facebook s'engage à construire et développer Instagram « de manière indépendante ». Krieger deviendra directeur technique : sous sa direction, les utilisateurs actifs mensuels passeront de quelques millions à un milliard. Il annonce son départ le 24 septembre 2018."
+ ],
+ "note": "Établi (Wikipédia anglais, TechCrunch ; vérifié) : Burbn, application de localisation à environ quatre onglets, utilisée surtout pour les photos ; trop proche de Foursquare ; trop de fonctions ; Krieger après un an et demi chez Meebo ; précurseur Scotch sans filtres (« slow and buggy ») ; mois de prototypes ; idée liée à des vacances au Mexique (page « Kevin Systrom ») ; filtre X-Pro II ; tour d'amorçage de 500 000 dollars le 5 mars 2010 ; lancement iOS le 6 octobre 2010, 25 000 utilisateurs le premier jour (TechCrunch) ; 1 million d'utilisateurs en trois mois (TechCrunch) ou deux mois (Wikipédia) ; aucune dépense d'acquisition ; février 2011 : 7 millions de dollars, Benchmark Capital et Jack Dorsey, valorisation d'environ 20 millions ; 27 millions d'inscrits à SXSW en mars 2012 ; Android le 3 avril 2012, plus d'un million de téléchargements en moins d'une journée ; 9 avril 2012 : un milliard de dollars ; environ une douzaine d'employés, pas de revenus ; clôture le 6 septembre 2012 : 300 millions de dollars en argent et 23 millions d'actions ; citation de Zuckerberg. À vérifier avant publication : « San Francisco » (lieu du développement, d'après la page « Kevin Systrom »), « une amie de Systrom » (la page parle d'une girlfriend), la chronologie entre le tour d'amorçage de mars 2010 (page Instagram) et les « débuts de 2010 » (TechCrunch), la formulation exacte de la citation de Zuckerberg, le nombre d'employés (13 selon Wikipédia, environ une douzaine selon TechCrunch). Ajouté : Krieger né au Brésil (São Paulo), Stanford 2004, développement seul au début, anecdote de 3 h 30 (page Mike Krieger, propos rapportés) ; Matt Cohler, croissance avant revenus ; prix discuté, plus de 850 millions d'utilisateurs actifs mensuels pour Facebook (TechCrunch). À vérifier : traduction de la citation de Krieger, « né au Brésil » (la page dit « moved from São Paulo »), « Cohler venu de Facebook ». Ajouté (page Mike Krieger) : directeur technique, de quelques millions à un milliard d'utilisateurs actifs mensuels, départ annoncé le 24 septembre 2018. À vérifier : « Krieger deviendra directeur technique » (la page dit « during his tenure as CTO »).",
+ "blurb": {
+  "b": "Burbn était une application de localisation trop chargée, qui ressemblait trop à Foursquare. Ses deux fondateurs en gardent une seule fonction, la photo, et la rebaptisent Instagram. Elle sort le 6 octobre 2010, attire 25 000 utilisateurs dès le premier jour, et Facebook la rachète moins de deux ans plus tard.",
+  "h": "Deux fondateurs ont jeté toutes leurs fonctions sauf une, la photo."
+ }
+}
