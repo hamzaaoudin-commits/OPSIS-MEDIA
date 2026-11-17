@@ -178,7 +178,8 @@
   .lens svg{width:100%;height:100%;display:block;overflow:visible}
   .splash .lens{margin-top:0}
   .lens.move{transition:transform .95s cubic-bezier(.7,0,.2,1)}
-  .lens.plunge{transition:transform 1.05s cubic-bezier(.75,0,.6,1)}
+  .dive-eye{position:absolute;z-index:3;pointer-events:none}
+  .dive-eye svg{width:100%;height:100%;display:block;overflow:visible}
   .lens .ticks{transition:opacity .4s ease}
   .lens.small .ticks{opacity:0}
   .splash .word{display:flex;font-family:var(--disp);font-weight:900;font-size:66px;line-height:.8;letter-spacing:.1em;color:var(--bone);padding:4px 0;overflow:visible}
@@ -4321,13 +4322,17 @@ function playIntro(){
   later(function(){splash.classList.add('s4');},2820);                                  // PSIS sort de derrière le O, du flou au net
   later(function(){splash.classList.add('s5');},3450);                                  // la promesse
   later(function(){                                                                     // plongée dans la pupille
-    splash.classList.add('dive');lens.classList.remove('move');lens.classList.add('plunge');
-    /* la plongée est animée image par image (et non par une transition CSS) : le navigateur redessine le vectoriel à chaque échelle, donc l'œil reste net jusqu'au plein écran */
-    var m=centerOffset(1).match(/translate\((-?[\d.]+)px,(-?[\d.]+)px\)/),dx=+m[1],dy=+m[2];
-    lens.style.transition='none';
-    tween(1050,function(k){var e=bez(.75,0,.6,1,k);
-      lens.style.transform='translate('+(dx*e).toFixed(2)+'px,'+(dy*e).toFixed(2)+'px) scale('+(1+33*e).toFixed(3)+')';
-      drawLens(.82+easeInOut(k)*.9,.62+k*.55,0,34-k*24);});
+    splash.classList.add('dive');lens.classList.remove('move');
+    /* la plongée ne passe plus par un agrandissement CSS (transform: scale), qui étirait une image déjà rastérisée et floutait la pupille rouge : l'œil est redessiné en SVG à chaque image, à sa taille réelle (jusqu'au plein écran), donc il reste net */
+    var lr=lens.getBoundingClientRect(),sr=splash.getBoundingClientRect();
+    var cx0=lr.left+lr.width/2-sr.left,cy0=lr.top+lr.height/2-sr.top,cx1=sr.width/2,cy1=sr.height*.46,s0=lr.width;
+    var ov=document.createElement('div');ov.className='dive-eye';ov.setAttribute('aria-hidden','true');
+    ov.innerHTML='<svg viewBox="-128 -128 256 256" preserveAspectRatio="xMidYMid meet"></svg>';splash.appendChild(ov);
+    var ovSvg=ov.firstChild;lens.style.visibility='hidden';
+    var dFrame=function(k){var e=bez(.75,0,.6,1,k),sz=s0*(1+33*e),cx=cx0+(cx1-cx0)*e,cy=cy0+(cy1-cy0)*e;
+      ov.style.width=ov.style.height=sz.toFixed(2)+'px';ov.style.left=(cx-sz/2).toFixed(2)+'px';ov.style.top=(cy-sz/2).toFixed(2)+'px';
+      ovSvg.innerHTML=apertureSVG({open:.82+easeInOut(k)*.9,pupil:.62+k*.55,rot:-(.82+easeInOut(k)*.9)*62,ring:34-k*24,ticks:false,tick:0,id:'D'});};
+    dFrame(0);tween(1050,dFrame);
   },4550);
   later(enter,5520);
 }
