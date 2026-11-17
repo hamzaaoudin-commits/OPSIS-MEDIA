@@ -1,11 +1,13 @@
 # Couvertures « scènes » du sous-thème Lore et mythologie (lc33–lc62)
-def gl(x,y,rr,col,o=.25): return c(x,y,rr,col,o)
+def gl(x,y,rr,col,o=.25):
+    k='gw'+col.strip('#')+str(int(o*100))
+    return ('<defs><radialGradient id="%s"><stop offset="0" stop-color="%s" stop-opacity="%s"/><stop offset=".55" stop-color="%s" stop-opacity="%s"/><stop offset="1" stop-color="%s" stop-opacity="0"/></radialGradient></defs><circle cx="%s" cy="%s" r="%s" fill="url(#%s)"/>'%(k,col,min(1,o*2.2),col,min(1,o*0.9),col,x,y,rr,k))
 def stars(pts,col='#FFFFFF'): return ''.join(c(a,b,1.2,col,.75) for a,b in pts)
 ST=[(20,30),(62,18),(150,26),(182,60),(40,84),(122,44),(172,104),(14,130),(92,12)]
 def sk(x,y): return c(x,y,0.1,'#000',0)
 COV.update({
 'lc33':('#14261A','#030805','#DDE8D0','#7CFF8A',
- stars(ST)+c(150,66,26,'#DDE8D0')+c(142,60,6,'#BFD0B4',.5)+gl(100,214,96,'#5CFF7A',.16)
+ stars(ST)+c(150,66,26,'#DDE8D0')+c(142,60,6,'#BFD0B4',.5)+gl(100,238,84,'#5CFF7A',.2)
  +p('M0 232 Q60 214 120 230 T200 222 L200 300 L0 300Z','#050B07',0,'#050B07')
  +''.join(r(x,204,22,44,'#1E2E23',11)+r(x+9,214,4,16,'#0A130C',2) for x in (22,72,152))
  +p('M38 236 L44 150 M44 172 L16 138 M44 160 L72 126 M44 192 L74 170 M16 138 L8 120','#0A130C',5)

@@ -11,7 +11,9 @@ def e(x,y,rx,ry,f,o=1):return '<ellipse cx="%s" cy="%s" rx="%s" ry="%s" fill="%s
 def p(dd,s,w,f='none',t=''):return '<path d="%s" stroke="%s" stroke-width="%s" fill="%s" stroke-linecap="round"%s/>'%(dd,s,w,f,(' transform="%s"'%t if t else ''))
 def pg(pts,f,t=''):return '<polygon points="%s" fill="%s"%s/>'%(pts,f,(' transform="%s"'%t if t else ''))
 
-def gl(x,y,rr,col,o=.25): return c(x,y,rr,col,o)
+def gl(x,y,rr,col,o=.25):
+    k='gw'+col.strip('#')+str(int(o*100))
+    return ('<defs><radialGradient id="%s"><stop offset="0" stop-color="%s" stop-opacity="%s"/><stop offset=".55" stop-color="%s" stop-opacity="%s"/><stop offset="1" stop-color="%s" stop-opacity="0"/></radialGradient></defs><circle cx="%s" cy="%s" r="%s" fill="url(#%s)"/>'%(k,col,min(1,o*2.2),col,min(1,o*0.9),col,x,y,rr,k))
 ST=[(20,30),(62,18),(150,26),(182,60),(40,84),(122,44),(172,104),(14,130),(92,12)]
 def stars(pts=ST,col='#FFFFFF'): return ''.join(c(a,b,1.2,col,.75) for a,b in pts)
 def ln(a,b,col,w=2,o=1): return '<line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s" stroke-width="%s" opacity="%s" stroke-linecap="round"/>'%(a[0],a[1],b[0],b[1],col,w,o)
