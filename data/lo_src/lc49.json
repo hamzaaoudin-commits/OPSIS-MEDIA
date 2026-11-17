@@ -1,0 +1,35 @@
+{
+ "id": "lc49",
+ "fmt": 3,
+ "name": "Neo : le programmeur devenu l'Élu",
+ "sub": "Thomas Anderson, programmeur le jour, pirate la nuit, avale la pilule rouge. Il apprend que son monde est une simulation, qu'il est l'Élu, et que tout recommence.",
+ "dates": "1999–2021 (fiction)",
+ "country": "États-Unis (Matrix)",
+ "job": "Personnage de fiction",
+ "yr": 1999,
+ "src": [
+  "« Neo (The Matrix) », Wikipédia (anglais). en.wikipedia.org/wiki/Neo_(The_Matrix)"
+ ],
+ "body": [
+  "Thomas A. Anderson, dit Neo, est programmeur le jour, pour la société Meta Cortex, et pirate informatique la nuit. Son surnom, Neo, est une anagramme de « One », c'est-à-dire « l'Un ». Sa date de naissance est ambiguë : son casier judiciaire indique le 11 mars 1962, et son passeport le 13 septembre 1971.",
+  "#La pilule rouge",
+  "Dans « Matrix », en 1999, Neo rencontre Trinity, puis reçoit l'appel de Morpheus, qui le recherche depuis des années. Il est capturé par des agents dirigés par l'agent Smith. Il accepte la pilule rouge de Morpheus, qui lui apprend que le monde dans lequel il vit est une simulation.",
+  "Il s'entraîne, rencontre l'Oracle et affronte la trahison de Cypher, un membre de l'équipage qui préfère vivre dans l'illusion. À la fin du film, Trinity le ramène à la vie, et il devient The One.",
+  "Cet entraînement se fait dans un programme de simulation. Morpheus lui apprend que les règles de la Matrice peuvent être pliées, voire brisées, par ceux qui savent qu'elles sont des règles. Neo apprend à se battre, à sauter d'un toit à l'autre, et, peu à peu, à ne plus avoir peur de tomber.",
+  "#Zion et la Source",
+  "Dans les deux films suivants, sortis en 2003, Smith se multiplie. Neo doit défendre Zion, la dernière cité des humains, obtenir le Keymaker et atteindre la Source, où l'Architecte lui révèle qu'il y a eu des prédécesseurs : il n'est pas le premier Élu.",
+  "Smith, ancien agent, est devenu un virus : il se copie dans tout ce qu'il touche. Il est l'adversaire de Neo, mais aussi son contraire : une idée qui se reproduit, quand Neo est un individu unique. Leur combat final est un affrontement sans fin possible, jusqu'à ce que Neo comprenne qu'il doit le laisser le prendre.",
+  "Neo sauve Trinity et négocie une trêve avec les machines. Il meurt en absorbant Smith, puis la paix s'installe. Cette fin donne à la trilogie un ton de sacrifice : l'Élu ne gagne pas en détruisant l'ennemi, mais en acceptant de se faire absorber par lui.",
+  "#Resurrections",
+  "Dans « Matrix Resurrections », en 2021, des décennies plus tard, Neo est de nouveau Thomas Anderson. Il est designer de jeux vidéo, et traverse une crise existentielle. Un nouveau Morpheus, un agent devenu rebelle, le recontacte. Neo et Trinity se retrouvent, et ils redéfinissent la Matrice avec l'aide de l'Analyste.",
+  "#Une idée qui a beaucoup voyagé",
+  "Ce que la trilogie a fait entrer dans la culture, c'est surtout une question : que se passerait-il si ce qui nous entoure n'était pas réel ? Le thème est ancien, de la caverne de Platon à la science-fiction. « Matrix » lui donne une image forte et une pilule à choisir.",
+  "Le choix entre la pilule rouge et la bleue est devenu une expression courante : la rouge, c'est la vérité, même si elle fait mal ; la bleue, c'est le confort de ne pas savoir. Neo choisit la rouge, ce qui le met sur un chemin qu'il n'aurait pas choisi s'il avait su ce qu'il y trouverait.",
+  "L'histoire de Neo est donc celle d'un homme ordinaire à qui l'on dit qu'il est exceptionnel, et qui doit décider de le croire. La prophétie ne le dispense pas de choisir. Elle lui donne seulement une raison de commencer."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : Thomas A. Anderson, alias Neo, aussi appelé « The One » (anagramme de « one ») ; programmeur de jour pour Meta Cortex, hacker la nuit ; naissance le 11 mars 1962 (casier judiciaire) ou le 13 septembre 1971 (passeport) ; « Matrix » (1999) : Trinity, Morpheus, agents dirigés par l'agent Smith, pilule rouge, simulation, entraînement, Oracle, trahison de Cypher, Trinity le ramène à la vie, il devient The One ; deuxième et troisième films : Smith se multiplie, défendre Zion, obtenir le Keymaker, atteindre la Source, l'Architecte lui révèle ses prédécesseurs, sauve Trinity, trêve avec les machines, meurt en absorbant Smith, paix ; « Matrix Resurrections » (2021) : designer de jeux vidéo, crise existentielle, un Morpheus agent devenu rebelle, retrouve Trinity, redéfinissent la Matrice avec l'Analyste. À vérifier avant publication : « les deux films de 2003 » (la page lie 2003 au troisième film seulement : « Reloaded » 2003 et « Revolutions » 2003 sont des connaissances canoniques) ; « Cypher préfère vivre dans l'illusion » (connaissance canonique) ; « caverne de Platon » (commentaire) ; « Zion, la dernière cité des humains » (la page cite Zion sans la décrire) ; « l'Élu ne gagne pas en détruisant l'ennemi » (interprétation) ; deux derniers paragraphes : commentaire. Ajouté de connaissance canonique, à vérifier : entraînement en simulation, règles pliables ; Smith devenu virus, se copie ; « le laisser le prendre ».",
+ "blurb": {
+  "b": "Thomas Anderson est programmeur le jour, pirate la nuit. En 1999, il avale la pilule rouge et apprend que son monde est une simulation. Il devient Neo, l'Élu. Il meurt en 2003 pour sauver Zion, puis revient en 2021, sous son ancien nom.",
+  "h": "Il choisit la vérité, et elle lui coûte tout."
+ }
+}
