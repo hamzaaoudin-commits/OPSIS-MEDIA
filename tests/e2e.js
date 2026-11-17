@@ -130,8 +130,8 @@ let bootRaw=false;
   console.log('4. contenu publié sans republier l’app');
   {
     const ctx=await b.newContext();const p=await page(ctx,LIVE);await boot(p,'/app.html');
-    const before=await p.evaluate(()=>({src:OPSIS.data.source,n:Object.keys(OPSIS.stories()).length,hero:document.querySelector('.bigtitle').textContent}));
-    eq([before.src,before.hero],['snapshot','L\'homme qui a vendu la tour Eiffel'],'au départ : instantané embarqué, l’histoire d’Eiffel à la une');
+    const before=await p.evaluate(()=>({src:OPSIS.data.source,n:Object.keys(OPSIS.stories()).length,hero:document.querySelector('.bigtitle').textContent,exp:OPSIS.stories()[OPSIS.ui.daily()].title}));
+    eq([before.src,before.hero],['snapshot',before.exp],'au départ : instantané embarqué, histoire du jour tirée du catalogue à la une');
     const all=await (await fetch(BASE+'/rest/v1/stories?limit=1000')).json();
     const base=all.find(r=>r.id==='ar01');
     const day=(d)=>new Date(Date.now()+d*86400e3).toISOString();

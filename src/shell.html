@@ -1681,8 +1681,8 @@ var DJIDS=[];
 /* =====================================================================
    ÉTAT (en mémoire)
    ===================================================================== */
-var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{penicilline:true},saved:{},follow:{},minutes:6,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',mg:'n',al:'l',cw:'m',auto:false,warm:0,hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
-OPSIS.hydrate(S);S.x=S.x||{};if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={lists:function(){var f=function(a){return a.map(function(x){return {k:x.k,n:x.n,d:x.d||'',ids:x.ids.slice()};});};return {paths:f(PATHS),cols:f(COLLS)};},amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,daily:function(){return DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel';},rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
+var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{},saved:{},follow:{},minutes:0,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',mg:'n',al:'l',cw:'m',auto:false,warm:0,hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
+OPSIS.hydrate(S);S.x=S.x||{};if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={lists:function(){var f=function(a){return a.map(function(x){return {k:x.k,n:x.n,d:x.d||'',ids:x.ids.slice()};});};return {paths:f(PATHS),cols:f(COLLS)};},amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
 var main=document.getElementById('main'),layer=document.getElementById('layer'),lv=document.getElementById('layerview');
 /* ---------- le logo : un diaphragme à six lamelles, une pupille rouge, et c'est le O d'OPSIS ----------
    open : 0 = fermé, 1 = ouvert (au-delà, les lamelles s'effacent) ; pupil : taille de la pupille ;
@@ -1833,7 +1833,7 @@ function nextOf(ti){var l=epIndex().byT[ti]||[];for(var i=0;i<l.length;i++)if(!S
    ÉCRANS
    ===================================================================== */
 function home(){
-  var hid=DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel',st=STORIES[hid],r=!!S.read[hid],saved=!!S.saved[hid];
+  var hid=DJIDS.length?DJIDS[DJIDS.length-1]:dailyId(OPSIS.day()),st=STORIES[hid],r=!!S.read[hid],saved=!!S.saved[hid];
   var epDone=S.read.pt33?1:0;
   var chDone=BOOK.chapters.map(function(c){return c.items.every(function(id){return S.read[id];});}),nowCh=chDone.indexOf(false),nRead=BP.filter(function(id){return S.read[id];}).length;
   var segs=chDone.map(function(d,i){return '<i class="'+(d?'done':(i===nowCh?'now':''))+'"></i>';}).join('');
@@ -2559,7 +2559,7 @@ document.getElementById('phone').addEventListener('click',function(e){
   if(d.filter!==undefined){S.filter=+d.filter;renderMain();return;}
   if(d.save){var was=!!S.saved[d.save];S.saved[d.save]=!was;toast(was?'Retirée de ma liste':'Ajoutée à ma liste');
     if(S.stack.length)rerenderKeepScroll();else{var y=main.scrollTop;renderMain();main.scrollTop=y;}return;}
-  if(d.finish){var id=d.finish;if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;S.minutes+=STORIES[id].min;(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}else toast('Histoire terminée. À demain, '+S.hour);}
+  if(d.finish){var id=d.finish;if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;var mr=minOf(id,lenPick(STORIES[id],S.len||3).arr);S.minutes+=mr;(function(){var m=Object.assign({},S.x.rmin||{});m[id]=mr;S.x.rmin=m;})();(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}else toast('Histoire terminée. À demain, '+S.hour);}
     renderMain();(function(){var n0=STORIES[id].next;if(STORIES[id].ep&&n0&&STORIES[n0]){setTimeout(function(){var u=document.querySelector('.upnext[data-open="'+n0+'"]');if(u){try{u.scrollIntoView({block:'center',behavior:'smooth'});}catch(e){}}},80);return 1;}})()||back();return;}
   if(d.share){openShare(d.share);return;}
   if(b.hasAttribute('data-notify')){S.follow.serie=true;toast('Série suivie : vous serez prévenu à chaque épisode');return;}
@@ -2692,6 +2692,22 @@ function fitBack(){
   var fs=13.5;syn.style.fontSize=fs+'px';syn.style.lineHeight=fs>11.5?'1.55':'1.45';
   while(syn.scrollHeight>syn.clientHeight+1&&fs>8.5){fs-=.5;syn.style.fontSize=fs+'px';syn.style.lineHeight=fs>11.5?'1.55':'1.45';}
 }
+/* histoire du jour quand la base n'en fournit pas : une permutation du catalogue, tirée au sort une fois par cycle (graine = numéro du cycle).
+   Même histoire pour tout le monde le même jour, aucune répétition avant d'avoir fait tout le catalogue. */
+function dailyPool(){return Object.keys(STORIES).filter(function(k){var x=STORIES[k];return x&&x.title&&x.syn&&x.kind&&x.kind.indexOf('Série')!==0&&x.kind!=='Une vie'&&!x.ep&&!x.daily&&!GONE[k];}).sort();}
+function dailyPerm(pool,cyc){
+  var a=pool.slice(),seed=(cyc*2654435761+12345)>>>0;function rnd(){seed=(seed+0x6D2B79F5)>>>0;var t=seed;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;}
+  for(var i=a.length-1;i>0;i--){var j=Math.floor(rnd()*(i+1)),x=a[i];a[i]=a[j];a[j]=x;}
+  return a;
+}
+function dailyId(day){
+  var pool=dailyPool();if(!pool.length)return 'eiffel';
+  var q=String(day).split('-'),n=Math.floor(Date.UTC(+q[0],+q[1]-1,+q[2])/864e5),N=pool.length,cyc=Math.floor(n/N),pos=n%N,p=dailyPerm(pool,cyc);
+  /* à la jonction de deux cycles, les 30 premières histoires ne reprennent pas les 30 dernières du cycle précédent */
+  if(pos<30&&N>120){var prev=dailyPerm(pool,cyc-1).slice(N-30),bad={};prev.forEach(function(k){bad[k]=1;});var s=60;for(var i=0;i<30;i++){if(bad[p[i]]){while(bad[p[s]])s++;var x=p[i];p[i]=p[s];p[s]=x;s++;}}}
+  return p[pos];
+}
+OPSIS.ui.daily=function(day){return day?dailyId(day):(DJIDS.length?DJIDS[DJIDS.length-1]:dailyId(OPSIS.day()));};
 function randomPick(){
   var all=Object.keys(STORIES).filter(function(k){var x=STORIES[k];return x&&x.title&&x.syn&&x.kind&&x.kind.indexOf('Série')!==0&&!x.ep;});
   var fresh=all.filter(function(k){return !S.read[k];});
@@ -3463,7 +3479,7 @@ function wrDemo(){
   var w=wrBuild(ym,ids,days);w.demo=true;w.top=ids[1]||ids[0];return w;
 }
 function wrBuild(ym,ids,days){
-  var th={},mn=0;ids.forEach(function(id){var s=STORIES[id];mn+=s.min||0;if(s.th!==undefined)th[s.th]=(th[s.th]||0)+1;});
+  var th={},mn=0;var RM=S.x.rmin||{};ids.forEach(function(id){var s=STORIES[id];mn+=RM[id]||s.min||0;if(s.th!==undefined)th[s.th]=(th[s.th]||0)+1;});
   var tk=Object.keys(th).sort(function(a,b){return th[b]-th[a];}),t1=tk.length?+tk[0]:null;
   var run=0,best=0,prev=null;days.forEach(function(d){var p=prev?OPSIS.dayAdd(prev,1):null;run=(p===d)?run+1:1;if(run>best)best=run;prev=d;});
   var top=null,tr=0;ids.forEach(function(id){var r=S.rate[id]||0;if(r>tr){tr=r;top=id;}});if(!top)top=ids[0]||null;
@@ -3917,7 +3933,7 @@ function setLayer(k){
   }else if(k==='guide'){
     b=guideHTML();
   }else if(k==='widget'){
-    var hid=DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel',st=STORIES[hid];
+    var hid=DJIDS.length?DJIDS[DJIDS.length-1]:dailyId(OPSIS.day()),st=STORIES[hid];
     b='<div class="wprev"><div class="wcard"><span class="poster" data-art="'+st.p+'"></span><span class="wtx"><i>Histoire du jour</i><b>'+esc(st.title)+'</b><small>'+st.min+' min</small></span></div><p>Aperçu du widget</p></div>'+
       '<div class="sbox"><div class="opt" style="border-top:0"><span>Widget d\'écran d\'accueil<small class="os">Il affichera l\'histoire du jour sans ouvrir l\'application. Il arrivera avec l\'application iOS et Android : un site web ne peut pas en installer.</small></span><span class="pill">Bientôt</span></div>'+
       '<div class="opt"><span>Icône sur l\'écran d\'accueil<small class="os">Dès maintenant : dans votre navigateur, choisissez « Partager » puis « Sur l\'écran d\'accueil ». Sur Android, un appui long sur l\'icône ouvre deux raccourcis : l\'histoire du jour et une histoire au hasard.</small></span></div></div>';
@@ -3979,7 +3995,7 @@ function deepLink(){
   if(mp){var pk=decodeURIComponent(mp[1]);if(PATHS.some(function(x){return x.k===pk;})){push({type:'path',k:pk});return true;}}
   if(mc){var ck=decodeURIComponent(mc[1]);if(COLLS.some(function(x){return x.k===ck;})){push({type:'col',k:ck});return true;}}
   if(q&&q[1]==='hasard'){randomPick();return true;}
-  if(q&&q[1]==='jour'){var hid=DJIDS.length?DJIDS[DJIDS.length-1]:'eiffel';push({type:'read',id:hid});return true;}
+  if(q&&q[1]==='jour'){var hid=DJIDS.length?DJIDS[DJIDS.length-1]:dailyId(OPSIS.day());push({type:'read',id:hid});return true;}
   return false;
 }
 function shareCard(){

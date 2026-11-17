@@ -16,6 +16,8 @@ notif.entryForDay=function(day,DATA,STORIES){
   var ids=Object.keys(STORIES);
   for(var i=0;i<ids.length;i++){var st=STORIES[ids[i]];if(st.daily&&st.at&&OPSIS.day(Date.parse(st.at))===day)return {title:st.title,body:st.sub||'L\'histoire du jour est arrivée.',id:ids[i]};}
   if(sch&&sch[day])return {title:'OPSIS · votre histoire du jour',body:sch[day],id:null};
+  var di=OPSIS.ui&&OPSIS.ui.daily&&OPSIS.ui.daily(day),ds=di&&STORIES[di];
+  if(ds)return {title:ds.title,body:String(ds.sub||ds.syn||'').slice(0,110),id:di};
   return {title:'OPSIS · votre histoire du jour',body:'Votre histoire du jour est arrivée.',id:null};
 };
 /* liste des notifications : une par jour au plus, sur 7 jours, puis une seule « histoire pour vous » après 7 jours d'absence, puis plus rien */
