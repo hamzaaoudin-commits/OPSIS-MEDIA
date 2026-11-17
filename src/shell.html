@@ -1589,6 +1589,26 @@ var SCD=DATA.D.SCD||[],SCSN="Science",SCIDS=[];
     SCIDS.push(d.id);
   });
 })();
+var PED=DATA.D.PED||[],PESN="Personnes",PEIDS=[];
+(function(){
+  function mins(w){return Math.max(3,Math.round(w/230));}
+  function syn(body){
+    for(var i=0;i<body.length;i++){var t=body[i];if('#@*'.indexOf(t.charAt(0))>=0)continue;
+      if(t.charAt(0)==='!')t=t.slice(1);
+      var re=/[.!?]+»?(?=\s|$)|»(?=\s+[A-ZÀ-Ý])/g,o='',m;while((m=re.exec(t))&&o.length<150)o=t.slice(0,m.index+m[0].length);
+      return (o||t).trim();}
+    return '';
+  }
+  var PEA=['#E8B04A','#6C94E0','#C77AD6','#D8C75A','#F08AA8'];
+  PED.forEach(function(d,k){
+    if(GONE[d.id])return;
+    var w=0;d.body.forEach(function(t){w+=t.split(' ').length;});
+    STORIES[d.id]={p:d.id,kind:'Récit',min:mins(w),series:PESN,terr:'Personnes',title:d.name,sub:d.sub,
+      meta:[d.dates,d.country,d.job].join(' · '),klabel:'PERSONNES · '+('0'+(k+1)).slice(-2),
+      body:d.body,quote:d.sub,no:'PE'+('0'+(k+1)).slice(-2),c:PEA[k%5],syn:syn(d.body),pe:1,src:d.src,g:0,next:null};
+    PEIDS.push(d.id);
+  });
+})();
 var LDD=DATA.D.LDD;
 var LDGROUPS=[{"t":"Le pouvoir visé","e":"Deux présidents, un roi, un tsar, un homme de paix : la dernière journée de ceux que l’on visait."},{"t":"Les artistes","e":"Un comédien, deux musiciens, une peintre, un romancier : des créateurs au travail jusqu’au bout."},{"t":"Les savants","e":"Deux physiciens mariés, un autre physicien, un naturaliste, un inventeur : des esprits à la dernière heure."},{"t":"Les explorateurs","e":"Un officier polaire, deux alpinistes, un écrivain-aviateur, deux navigateurs : partis sans savoir qu’ils ne reviendraient pas."},{"t":"Les icônes du XXᵉ siècle","e":"Un pasteur, une princesse, un guérillero, un musicien, un pilote : cinq vies que le monde regardait."},{"t":"L’histoire collective","e":"Une cité, un paquebot, une ville, une famille, une navette : des journées vécues par des centaines ou des milliers de personnes."}];
 var LDSN="Le dernier jour",LDIDS=[];
@@ -3019,7 +3039,7 @@ sheet.addEventListener('click',function(e){if(e.target===sheet)sheet.classList.r
    FONCTIONNALITÉS : découverte, espace personnel, lecteur, réglages
    ===================================================================== */
 var FM={3:3,5:7,10:12};
-var SUBS={ar:'Arnaques',cs:'Casses',fa:'Faussaires',pa:'Découvertes',sv:'Survivants',ev:'Évasions',im:'Imposteurs',es:'Espions',pn:'Pannes',ex:'Expéditions',ce:'Codes et énigmes',fi:'Fiascos',di:'Disparus',pr:'Procès',ld:'Derniers jours',vc:'Victoires impossibles',du:'Duels',tm:'Tournages maudits',mq:'Marques',sc:'Science',cb:'Cobayes'};
+var SUBS={ar:'Arnaques',cs:'Casses',fa:'Faussaires',pa:'Découvertes',sv:'Survivants',ev:'Évasions',im:'Imposteurs',es:'Espions',pn:'Pannes',ex:'Expéditions',ce:'Codes et énigmes',fi:'Fiascos',di:'Disparus',pr:'Procès',ld:'Derniers jours',vc:'Victoires impossibles',du:'Duels',tm:'Tournages maudits',mq:'Marques',sc:'Science',pe:'Personnes',cb:'Cobayes'};
 function subKey(id){var st=STORIES[id];if(!st)return '';if(st.book){var c=chOf(+String(id).slice(2));return c>=0?'ch'+c:'';}return String(id).slice(0,2);}
 function subName(k){if(!k)return '';if(k.indexOf('ch')===0){var c=BOOK.chapters[+k.slice(2)];return c?c.title:'';}return SUBS[k]||'';}
 function vis(id){return !!STORIES[id]&&!GONE[id]&&!STORIES[id].ep;}
@@ -3233,7 +3253,7 @@ function homeExtra(){
   return h;
 }
 function homeNew(){
-  var ids=hr(SCIDS.concat(LCIDS,MQIDS).reverse().filter(vis));
+  var ids=hr(PEIDS.concat(SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
   h+='<div class="shelf"><h2><span>Collections <small>Sélections et parcours</small></span></h2><div class="rail">'+COLLS.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+PATHS.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+'</div></div>';
   return h;
@@ -3531,7 +3551,7 @@ function gift(id){
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
 }
 function reportSheet(id){var s=STORIES[id];return '<div class="grab"></div><h3 class="sth">Signaler une erreur</h3><p class="hint" style="padding:0 0 12px">Une date, un nom, un fait vous semble inexact dans « '+esc(s.title)+' » ? Dites-nous lequel, avec votre source si vous en avez une. Nous vérifions chaque signalement.</p><textarea id="rpt" class="ta" rows="5" maxlength="1200" placeholder="Le passage concerné, et ce qui vous semble inexact" aria-label="Votre signalement"></textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-rptsend="'+id+'">Envoyer</button></div>';}
-function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.lc||s.sc||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'</div>';}
+function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.lc||s.sc||s.pe||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'</div>';}
 function tailExtra(id){
   var s=STORIES[id];
   return starsHTML(id)+quizHTML(id)+
