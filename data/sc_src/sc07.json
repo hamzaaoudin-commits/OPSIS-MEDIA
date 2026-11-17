@@ -1,0 +1,38 @@
+{
+ "id": "sc07",
+ "fmt": 3,
+ "name": "1919 : l'éclipse qui a pesé la lumière",
+ "sub": "Île de Príncipe et Brésil, 29 mai 1919 — Deux expéditions britanniques photographient le ciel pendant une éclipse pour savoir si Einstein, un physicien allemand, a raison.",
+ "dates": "1919",
+ "country": "Royaume-Uni, Brésil, Príncipe",
+ "job": "Arthur Eddington, astronome",
+ "yr": 1919,
+ "src": [
+  "« Eddington experiment », Wikipédia (anglais). en.wikipedia.org/wiki/Eddington_experiment",
+  "F. W. Dyson, A. S. Eddington et C. Davidson, « A determination of the deflection of light by the Sun's gravitational field », Philosophical Transactions of the Royal Society, 1920."
+ ],
+ "body": [
+  "Imaginez une étoile très lointaine, qui brille dans le ciel presque exactement derrière le Soleil. Si la lumière voyage en ligne droite, elle devrait nous parvenir sans dévier : l'étoile reste à sa place. Mais si une théorie récente a raison, la lumière est elle-même attirée par la masse du Soleil, et sa trajectoire se courbe un tout petit peu en le frôlant. L'étoile paraît alors légèrement décalée. Le seul problème est qu'on ne voit les étoiles proches du Soleil qu'à un moment très rare : pendant une éclipse totale.",
+  "La théorie est celle d'Albert Einstein, publiée en 1915 sous le nom de relativité générale. Elle prévoit que la lumière d'une étoile rasant le Soleil est déviée d'environ 1,75 seconde d'arc. C'est un angle minuscule : celui sous lequel on verrait une pièce de deux centimètres depuis un peu plus de deux kilomètres. La physique de Newton, qui admet elle aussi une attraction de la lumière, prévoit une déviation deux fois plus faible, d'environ 0,83 seconde d'arc.",
+  "Les deux théories donnent donc des réponses différentes. Il suffit de mesurer.",
+  "#Une expédition en temps de guerre",
+  "En 1915, le Royaume-Uni et l'Allemagne sont en guerre. Un astronome britannique, Arthur Eddington, lit pourtant la théorie d'un physicien allemand et la juge digne d'être testée. L'éclipse totale du 29 mai 1919 offrira la première occasion depuis la fin des combats. Elle est particulièrement longue, et le Soleil se trouvera, ce jour-là, dans une région du ciel riche en étoiles brillantes.",
+  "On raconte qu'Eddington, quaker et opposé à la guerre, aurait dû être mobilisé, et que l'astronome royal Frank Dyson aurait obtenu qu'il soit dispensé pour mener l'expédition. L'anecdote est célèbre, et elle est souvent reprise.",
+  "Dyson organise deux expéditions, par précaution, au cas où les nuages gâcheraient l'une d'elles. Eddington part avec Edwin Cottingham pour l'île de Príncipe, dans le golfe de Guinée, au large de l'Afrique. Andrew Crommelin et Charles Davidson se rendent à Sobral, dans le nord-est du Brésil. Dyson, lui, reste en Europe pour coordonner.",
+  "#Quelques minutes sous les nuages",
+  "Le matin de l'éclipse, il pleut à Príncipe. Selon les récits, le ciel ne se dégage que par intermittence pendant la totalité. Eddington réussit à prendre seize photographies, dont beaucoup sont masquées par des nuages. Il ne peut en exploiter que quelques-unes. Le 3 juin, il écrit dans son carnet qu'une plaque qu'il vient de mesurer s'accorde avec Einstein.",
+  "À Sobral, le ciel est plus clair. L'équipe dispose de deux instruments. Le plus grand enregistre douze étoiles, mais les images sont floues : on les écartera. Le plus petit, un télescope de secours, en capture sept, avec des images d'une excellente netteté. Ses mesures sont légèrement au-dessus de la prédiction d'Einstein. Elles sont jugées les plus fiables.",
+  "Il reste ensuite à comparer ces plaques avec d'autres photographies des mêmes étoiles, prises à un moment de l'année où elles ne sont pas voisines du Soleil. La mesure se fait au micromètre, des semaines durant, sur des déplacements infimes.",
+  "#6 novembre",
+  "Le 6 novembre 1919, la Royal Society et la Société royale d'astronomie tiennent une réunion commune à Londres. Les résultats y sont présentés. Après quelques délibérations, ils sont acceptés : la lumière est déviée de la façon qu'avait prévue Einstein, pas comme le disait Newton. La presse s'en empare, d'abord en Grande-Bretagne, puis aux États-Unis, notamment dans le New York Times, et enfin en Allemagne.",
+  "Le public suit l'affaire avec passion : un physicien allemand, un astronome britannique, deux pays qui viennent de se faire la guerre, et une théorie qui bouleverse l'idée que l'on se faisait de la gravité. Einstein devient célèbre dans le monde entier. Une anecdote ultérieure le montre indifférent aux résultats. Ses lettres de l'époque, elles, le montrent impressionné et ravi de ce succès.",
+  "#Une victoire qui se discute",
+  "Les historiens des sciences se sont longuement penchés sur ces mesures. Certains, comme les sociologues Harry Collins et Trevor Pinch dans leur livre Le Golem, ont soutenu que la manière de trier les plaques et de pondérer les étoiles laissait une place à des erreurs systématiques, voire à un parti pris : Eddington aurait trouvé ce qu'il cherchait. Une réanalyse moderne a montré, au contraire, que son traitement des données était exact et moins biaisé que certaines analyses faites plus tard. Une autre, en 1979, a confirmé les résultats de Sobral.",
+  "Les mesures en lumière visible sont restées assez imprécises pendant longtemps. Ce sont des mesures faites par ondes radio, à la fin des années 1960, qui ont confirmé la valeur d'Einstein avec une grande précision. Quant aux plaques britanniques d'origine, elles ont été perdues après 1979."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : éclipse totale du 29 mai 1919 ; observation depuis Príncipe (Eddington, Cottingham) et Sobral (Crommelin, Davidson), Dyson restant en Europe ; prédiction einsteinienne de 1915 d'environ 1,75'' ; valeur newtonienne de 0,83'' donnée par la page (et non 0,87'') ; Sobral : télescope principal avec 12 étoiles aux images floues écartées, petit télescope de secours avec 7 étoiles aux images les plus nettes, valeur légèrement au-dessus d'Einstein ; Príncipe : 16 plaques dont beaucoup obscurcies, carnet du 3 juin ; réunion commune du 6 novembre 1919 ; couverture de presse en Grande-Bretagne, aux États-Unis (New York Times) et en Allemagne ; critiques (Pinch et Collins, Le Golem) ; réanalyse moderne favorable à Eddington ; réanalyse de 1979 des plaques de Sobral ; mesures radio de la fin des années 1960 ; plaques britanniques perdues après 1979 ; anecdote d'un Einstein indifférent contredite par ses lettres. À vérifier avant publication : le récit selon lequel Dyson aurait fait dispenser Eddington (quaker) de mobilisation (rapporté, volontairement formulé comme tel), la pluie le matin à Príncipe et le ciel qui se dégage par intermittence, la comparaison avec des plaques prises à un autre moment de l'année, l'image de la pièce de deux centimètres (conversion : 1,75'' ≈ 2 cm à environ 2,4 km), l'expression « quelques délibérations » (la page dit « after some deliberation »), « le Soleil dans une région riche en étoiles brillantes » (les Hyades, connu mais non vérifié ici), le caractère « particulièrement long » de l'éclipse (environ 6 min 51 s au maximum).",
+ "blurb": {
+  "b": "En 1919, Albert Einstein soutient que la lumière d'une étoile se courbe en passant près du Soleil. Newton prévoyait la moitié de cette déviation. Pour trancher, il faut photographier le ciel pendant une éclipse totale : un astronome britannique part sur une île d'Afrique, deux collègues au Brésil. Les nuages menacent, et la guerre vient de finir.",
+  "h": "Deux expéditions, quelques minutes d'obscurité, et une théorie à vérifier."
+ }
+}

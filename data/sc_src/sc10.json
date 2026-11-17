@@ -1,0 +1,34 @@
+{
+ "id": "sc10",
+ "fmt": 3,
+ "name": "Katalin Karikó : l'ARN que personne ne voulait",
+ "sub": "Philadelphie, 1995 — Une chercheuse hongroise est rétrogradée parce que son idée ne trouve aucun financement. Vingt-cinq ans plus tard, elle sert de base aux premiers vaccins contre le Covid-19.",
+ "dates": "1985–2023",
+ "country": "Hongrie, États-Unis",
+ "job": "Katalin Karikó, biochimiste",
+ "yr": 2005,
+ "src": [
+  "« Katalin Karikó », Wikipédia (anglais). en.wikipedia.org/wiki/Katalin_Karik%C3%B3",
+  "B. Karikó, M. Buckstein, H. Ni et D. Weissman, « Suppression of RNA Recognition by Toll-like Receptors », Immunity, 2005."
+ ],
+ "body": [
+  "En 1995, à l'université de Pennsylvanie, une chercheuse de quarante ans apprend qu'elle est rétrogradée. Elle travaille depuis six ans sur une idée dont personne, autour d'elle, ne veut financer la suite. Elle ne sera jamais titularisée dans cette université. Vingt-cinq ans plus tard, son idée servira de base aux vaccins qui ont aidé à arrêter une pandémie.",
+  "Katalin Karikó est née en Hongrie, à Szolnok, en 1955. Elle étudie la biochimie et travaille dans un centre de recherche de son pays, jusqu'à ce que son laboratoire perde ses financements, en 1985. Un chercheur américain de l'université Temple, Robert Suhadolnik, lui propose un poste aux États-Unis. Elle part avec son mari et leur fille de deux ans. Selon ce qu'elle a raconté, elle cache dans l'ours en peluche de la petite l'argent de la vente de leur voiture, environ neuf cents livres sterling.",
+  "#Un messager à fabriquer",
+  "Elle entre à l'université de Pennsylvanie en 1989. Elle s'intéresse à l'ARN messager. Chaque cellule du corps possède dans son noyau des plans, l'ADN, qui contiennent la recette de toutes les protéines dont l'organisme a besoin. Mais l'ADN ne quitte pas le noyau. Ce sont des copies temporaires, des ARN messagers, qui transportent la recette jusqu'aux ateliers de la cellule, où la protéine est fabriquée, puis disparaissent.",
+  "L'idée de Karikó est simple à énoncer, et très difficile à réaliser : fabriquer en laboratoire un messager qui porte la recette d'une protéine utile, l'injecter à un patient, et laisser ses propres cellules fabriquer le médicament. Mais ses demandes de financement sont rejetées à plusieurs reprises, et en 1995 l'université la rétrograde.",
+  "Il y a un obstacle sérieux. Lorsqu'on injecte de l'ARN fabriqué en laboratoire à un animal, son système immunitaire le prend pour une menace, comme un virus, et déclenche une inflammation, parfois dangereuse. Le messager est détruit avant d'avoir servi.",
+  "#Un immunologue",
+  "En 1997, un immunologue, Drew Weissman, arrive à l'université. Ils commencent à travailler ensemble sur ce problème. Pendant des années, ils cherchent pourquoi le corps réagit si violemment, et s'il existe un moyen de contourner la réaction.",
+  "Ils en trouvent un. En 2005, ils montrent que l'on peut remplacer l'une des quatre « lettres » chimiques de l'ARN, l'uridine, par une version légèrement modifiée, la pseudouridine. La réaction immunitaire diminue alors fortement : le messager passe inaperçu. Les revues Nature et Science refusent l'article. Il paraît finalement dans une revue spécialisée, Immunity.",
+  "#Trop tard pour l'université",
+  "L'université de Pennsylvanie ne la réintègre pas. En 2013, Karikó rejoint une entreprise allemande, BioNTech, comme vice-présidente. Elle en devient vice-présidente senior en 2019. Elle quittera l'entreprise en 2022.",
+  "En 2020, quand le monde se confine à cause du virus responsable du Covid-19, les laboratoires cherchent un vaccin le plus vite possible. Deux d'entre eux, ceux de BioNTech avec Pfizer, et de Moderna, utilisent la technologie que Karikó et Weissman ont mise au point : un ARN messager modifié, qui porte la recette d'une protéine du virus. Les cellules la fabriquent, et l'organisme apprend ainsi à reconnaître l'ennemi avant de le rencontrer. Les premiers vaccins de ce type sont autorisés avant la fin de l'année.",
+  "Le 2 octobre 2023, le comité Nobel annonce qu'elle partage avec Drew Weissman le prix de physiologie ou médecine, pour leurs découvertes sur les modifications de l'ARN messager."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : naissance le 17 janvier 1955 à Szolnok ; perte de financement du laboratoire en Hongrie en 1985, offre de Suhadolnik (Temple), départ avec mari et fille de deux ans, ours en peluche rempli de 900 livres sterling issues de la vente de la voiture et d'un change au marché noir (récit rapporté) ; embauchée à l'université de Pennsylvanie en 1989 pour travailler sur l'ARN messager avec Elliot Barnathan ; rétrogradation de 1995 après des refus de bourses, jamais titularisée ; rencontre avec Weissman en 1997 ; article de 2005 (pseudouridine, rejeté par Nature et Science, publié dans Immunity) ; BioNTech en 2013, vice-présidente senior en 2019, départ en 2022 ; vaccins de 2020 (Pfizer-BioNTech, Moderna) fondés sur leurs travaux ; Nobel annoncé le 2 octobre 2023. Non retenu : l'épisode du photocopieur (il n'apparaît pas dans la page consultée). À vérifier : « avant la fin de l'année » pour les premières autorisations (décembre 2020). À vérifier avant publication : l'explication simplifiée du rôle de l'ARN messager, l'âge de 40 ans en 1995 (née en janvier 1955), la phrase « six ans » (1989-1995), le contexte du confinement en 2020, la précision de l'intitulé du prix Nobel (« pour leurs découvertes concernant les modifications des bases nucléosidiques qui ont permis le développement de vaccins ARNm efficaces contre le Covid-19 »).",
+ "blurb": {
+  "b": "En 1995, une chercheuse hongroise installée aux États-Unis perd son poste à l'université parce que son idée n'attire aucun financement. Elle veut fabriquer des messagers biologiques capables de faire produire un médicament par le corps lui-même. Un obstacle l'en empêche : le système immunitaire les détruit. Elle passera dix ans à chercher pourquoi.",
+  "h": "Une rétrogradation en 1995, puis un Nobel en 2023."
+ }
+}

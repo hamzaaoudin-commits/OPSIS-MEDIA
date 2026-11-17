@@ -1,0 +1,38 @@
+{
+ "id": "sc09",
+ "fmt": 3,
+ "name": "Henrietta Leavitt et la règle des étoiles",
+ "sub": "Harvard, 1912 — Une calculatrice de l'observatoire, quasi sourde, découvre comment mesurer la distance des étoiles. Elle ne verra jamais ce que sa règle va révéler.",
+ "dates": "1902–1924",
+ "country": "États-Unis",
+ "job": "Henrietta Swan Leavitt, astronome",
+ "yr": 1912,
+ "src": [
+  "« Henrietta Swan Leavitt », Wikipédia (anglais). en.wikipedia.org/wiki/Henrietta_Swan_Leavitt",
+  "H. S. Leavitt et E. C. Pickering, « Periods of 25 Variable Stars in the Small Magellanic Cloud », Harvard College Observatory Circular, 1912."
+ ],
+ "body": [
+  "Comment mesure-t-on la distance d'une étoile qu'aucun instrument ne peut approcher ? Au début du XXe siècle, la réponse est : on ne sait pas, ou presque. Pour les étoiles les plus proches, on peut observer un léger décalage quand la Terre se déplace d'un côté à l'autre de son orbite. Mais au-delà, tout s'arrête. Le ciel est un tableau sans profondeur : une étoile brillante peut être proche ou énorme et lointaine, et on ne peut pas trancher.",
+  "La réponse viendra d'un endroit inattendu : une salle de l'observatoire de l'université Harvard, où des femmes passent leurs journées à mesurer des points sur des plaques de verre.",
+  "#Les calculatrices",
+  "À la fin du XIXe siècle, l'observatoire du Harvard College accumule des milliers de photographies du ciel sur plaques de verre. Chaque plaque contient des centaines d'étoiles, dont il faut mesurer la position et l'éclat. Le directeur, Edward Pickering, engage pour cela des femmes, qu'on appelle des « calculatrices ».",
+  "Henrietta Swan Leavitt, née en 1868 dans le Massachusetts, a étudié à Oberlin puis dans un programme pour femmes de Harvard. Elle commence à l'observatoire comme assistante bénévole, car elle dispose de moyens personnels. Elle est embauchée en 1902, au tarif de trente cents de l'heure, soit dix dollars cinquante par semaine. À peu près au même moment, une maladie dont on ignore le nom lui fait perdre peu à peu l'audition, jusqu'à la surdité.",
+  "Pickering lui confie une tâche précise : repérer, sur des plaques, les étoiles dont la lumière varie, c'est-à-dire qui brillent plus ou moins selon les jours.",
+  "#Des étoiles qui battent",
+  "Parmi les étoiles variables, certaines, appelées céphéides, se comportent comme des phares : leur éclat monte et descend à intervalles réguliers, de quelques jours à quelques semaines. Cette durée entre deux maxima est leur période.",
+  "En 1908, Leavitt publie un catalogue de 1 777 étoiles variables dans les nuages de Magellan, deux grandes taches lumineuses visibles dans le ciel de l'hémisphère Sud. Elle remarque quelque chose d'étrange : les plus brillantes ont des périodes plus longues.",
+  "Quatre ans plus tard, en 1912, elle étudie vingt-cinq céphéides du petit nuage de Magellan. Elle les classe selon leur période et trouve une relation nette, pratiquement une ligne droite : plus la période est longue, plus l'étoile est brillante. Pickering cosigne le rapport.",
+  "#Pourquoi c'est une règle",
+  "Il y a une raison à cette régularité. Toutes les étoiles du petit nuage de Magellan sont, à peu de chose près, à la même distance de nous, car le nuage est très loin et assez compact. Si l'une paraît plus brillante qu'une autre, c'est donc qu'elle l'est vraiment.",
+  "La conséquence est considérable. Si l'on connaît la période d'une céphéide, on connaît sa luminosité réelle. En la comparant à l'éclat qu'elle nous présente, on en déduit sa distance, comme on estime l'éloignement d'une bougie dont on connaît la puissance. La céphéide devient une borne kilométrique du ciel.",
+  "Il manque une chose : le réglage. Leavitt n'a que des distances relatives, entre les étoiles du nuage. Environ un an après son rapport, le Danois Ejnar Hertzsprung détermine la distance de plusieurs céphéides de notre propre galaxie, ce qui permet d'étalonner la règle.",
+  "#Ce qu'elle n'a pas vu",
+  "La règle de Leavitt va changer l'idée qu'on se fait de l'Univers. Dans les années 1920, l'astronome américain Edwin Hubble repère des céphéides dans des taches floues du ciel, que l'on appelait « nébuleuses », notamment celle d'Andromède. Il en déduit leur distance, et elle est bien trop grande pour qu'elles appartiennent à la Voie lactée : ce sont d'autres galaxies. L'Univers est incomparablement plus vaste qu'on ne le pensait. Le travail de Hubble se situe en 1923-1924.",
+  "Henrietta Leavitt est morte le 12 décembre 1921, à cinquante-trois ans, d'un cancer. En 1924, le mathématicien suédois Gösta Mittag-Leffler, membre de l'Académie royale des sciences de Suède, tente de la proposer pour le prix Nobel. Il apprend qu'elle est décédée trois ans plus tôt. Le prix Nobel ne se décerne pas à titre posthume."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : naissance le 4 juillet 1868 à Lancaster (Massachusetts), mort le 12 décembre 1921 à Cambridge ; deux ans à Oberlin puis diplôme de la Society for the Collegiate Instruction of Women ; bénévole puis embauchée en 1902 à l'observatoire de Harvard par Pickering ; rémunération de 0,30 dollar de l'heure et 10,50 dollars par semaine ; perte progressive de l'audition (la maladie n'est pas nommée) ; article de 1908 (1 777 variables dans les nuages de Magellan) ; article de 1912 (25 céphéides du petit nuage de Magellan, relation en droite, Pickering cosigne) ; hypothèse d'une distance à peu près commune ; Hertzsprung détermine les distances de plusieurs céphéides galactiques environ un an plus tard ; Hubble détecte des céphéides dans Andromède et d'autres nébuleuses en 1923-1924 ; tentative de proposition de Mittag-Leffler en 1924, apprenant qu'elle est morte trois ans plus tôt ; pas de prix posthume. À vérifier avant publication : la formulation « moins payées que des hommes » (contexte, non vérifié dans la page consultée), le caractère « compact » du petit nuage et l'image du phare, la date du décès (le 12 décembre 1921) et le diagnostic (cancer de l'estomac selon le corps du texte, simplement « cancer » dans l'infobox), l'évocation de la parallaxe pour les étoiles proches, la mention des années 1920 pour les travaux de Hubble, la période des céphéides (« de quelques jours à quelques semaines »).",
+ "blurb": {
+  "b": "Au début du siècle dernier, à l'observatoire de Harvard, une employée presque sourde repère sur des plaques de verre des étoiles qui varient. Elle découvre que les plus lumineuses battent plus lentement. Sa remarque donne aux astronomes un moyen de mesurer des distances jusque-là inaccessibles. Elle en voit à peine les suites.",
+  "h": "Une employée payée à l'heure, et le premier mètre du ciel."
+ }
+}

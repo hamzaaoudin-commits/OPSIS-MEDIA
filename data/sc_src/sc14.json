@@ -1,0 +1,38 @@
+{
+ "id": "sc14",
+ "fmt": 3,
+ "name": "Neptune, la planète trouvée sur le papier",
+ "sub": "Paris, Cambridge et Berlin, 1846 — Deux hommes calculent, sans l'avoir jamais vue, la position d'une planète inconnue. Il suffit d'une lettre pour la trouver, en moins d'une heure.",
+ "dates": "1781–1846",
+ "country": "France, Royaume-Uni, Allemagne",
+ "job": "Urbain Le Verrier, astronome",
+ "yr": 1846,
+ "src": [
+  "« Discovery of Neptune », Wikipédia (anglais). en.wikipedia.org/wiki/Discovery_of_Neptune",
+  "U. Le Verrier, mémoires à l'Académie des sciences, 10 novembre 1845, 1er juin et 31 août 1846."
+ ],
+ "body": [
+  "Peut-on découvrir une planète avec un crayon ? Au XIXe siècle, la question n'a rien de théorique. Depuis qu'Isaac Newton a énoncé la loi de la gravitation, les astronomes savent prévoir où se trouvera chaque planète dans le ciel, des années à l'avance. Quand ce qu'ils observent s'écarte de ce qu'ils ont calculé, deux explications sont possibles : soit la loi est fausse, soit quelque chose, quelque part, tire sur la planète sans qu'on le voie.",
+  "En 1781, l'astronome britannique William Herschel repère un astre inconnu qui se révèle être une nouvelle planète, la septième : Uranus. C'est la première planète découverte au télescope. Elle met environ quatre-vingt-quatre ans à faire le tour du Soleil. Au début des années 1840, elle n'a donc pas encore achevé un tour complet depuis sa découverte, mais elle s'écarte déjà des prévisions. Son orbite ne suit pas ce que dit la théorie.",
+  "Plusieurs astronomes pensent à une planète encore plus lointaine, dont l'attraction perturberait Uranus. Mais il faut passer du soupçon à la réalité. Le problème est à l'envers : on connaît l'effet, et il faut remonter à la cause, une masse inconnue, sur une orbite inconnue, à une position inconnue. Les calculs sont longs, délicats, faits à la main.",
+  "#Deux calculateurs",
+  "En Angleterre, John Couch Adams, un jeune mathématicien de Cambridge, s'y met dès l'été 1843, après ses examens. Il avait certainement achevé une partie de ses calculs le 18 septembre 1845. On a parfois raconté qu'il en avait envoyé un résultat à l'astronome James Challis, directeur de l'observatoire de Cambridge, à la mi-septembre 1845, mais ce point est discuté.",
+  "En France, à Paris, un astronome et mathématicien, Urbain Le Verrier, s'attaque lui aussi à Uranus. Le 10 novembre 1845, il présente à l'Académie des sciences un mémoire qui démontre que la théorie existante n'explique pas le mouvement de la planète. Le 1er juin 1846, il indique la position où devrait se trouver l'astre perturbateur. Le 31 août 1846, il en donne la masse et l'orbite.",
+  "L'annonce de Le Verrier, en juin, pousse l'Astronome royal, George Airy, à demander à Challis de chercher. La recherche commence le 29 juillet 1846. Challis note sur ses cartes les étoiles qu'il observe, nuit après nuit, pour repérer celle qui aurait bougé.",
+  "Il la voit. Les 8 et 12 août 1846, la planète figure dans ses observations. Mais il ne la reconnaît pas, faute d'une carte d'étoiles à jour qui lui aurait permis de remarquer qu'il s'agissait d'un astre nouveau. De plus, les six solutions d'Adams l'avaient orienté vers une mauvaise région du ciel.",
+  "#Une lettre pour Berlin",
+  "Le Verrier écrit à un observateur de Berlin, Johann Galle, et lui envoie ses résultats par la poste.",
+  "Galle reçoit la lettre le matin du 23 septembre 1846. L'observatoire de Berlin possède une carte du ciel très récente de la région concernée, la carte appelée Hora XXI. Le soir même, aidé par un jeune astronome, Heinrich d'Arrest, il pointe la grande lunette vers la zone indiquée et compare, étoile par étoile, ce qu'il voit avec la carte. Peu après minuit, dans la nuit du 23 au 24, d'Arrest remarque une étoile qui n'est pas sur la carte.",
+  "C'est la planète. Elle se trouve à moins d'un degré de l'endroit calculé par Le Verrier. La recherche a duré moins d'une heure.",
+  "Le lendemain, l'astre a bougé par rapport aux étoiles voisines : c'est bien une planète. On l'appellera Neptune.",
+  "En Angleterre, la nouvelle fait l'effet d'un coup. Airy rappelle publiquement qu'Adams avait lui aussi calculé la position de la planète. La Royal Society remet à Le Verrier la médaille Copley en 1846, sans mentionner Adams, puis la décerne à Adams en 1848. Dès novembre 1846, Adams lui-même reconnaît publiquement la priorité de Le Verrier.",
+  "Des historiens, comme Nick Kollerstrom, William Sheehan et Robert Waff, ont ensuite soutenu que la découverte revenait à Le Verrier seul.",
+  "Les prévisions des deux hommes n'étaient pas parfaites : tous deux avaient surestimé la distance de la planète au Soleil. La dernière prédiction d'Adams, datée du 2 septembre 1846, plaçait l'astre à environ douze degrés de la position réelle. L'astronome Danjon a montré en 1946 que les deux orbites calculées ressemblaient pourtant beaucoup à celle de Neptune sur la période observée, ce qui explique que les prédictions aient fonctionné malgré une taille d'orbite erronée.",
+  "Neptune met 165 ans à faire le tour du Soleil. En 2011, elle a achevé son premier tour complet depuis sa découverte."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : anomalies d'Uranus (découverte en 1781, presque un tour complet) ; calculs d'Adams commencés à l'été 1843, certainement quelques-uns achevés le 18 septembre 1845 (envoi à Challis discuté) ; mémoire de Le Verrier du 10 novembre 1845, position le 1er juin 1846, masse et orbite le 31 août 1846 ; Airy pousse Challis à chercher, recherche commencée le 29 juillet 1846 ; Challis observe Neptune les 8 et 12 août sans la reconnaître (pas de carte à jour) ; les six solutions d'Adams orientaient vers la mauvaise région ; Le Verrier écrit à Galle (Berlin) ; Galle reçoit la lettre le matin du 23 septembre ; avec Heinrich d'Arrest il trouve la planète peu après minuit dans la nuit du 23 au 24, à moins d'un degré de la position prédite, en moins d'une heure, avec la carte Hora XXI ; d'Arrest repère une étoile absente de la carte ; querelle de priorité (Airy, médaille Copley 1846 à Le Verrier, 1848 à Adams, reconnaissance d'Adams en novembre 1846) ; critiques de Kollerstrom, Sheehan et Waff ; surestimation des distances, prédiction d'Adams du 2 septembre 1846 à environ 12° ; argument de Danjon (1946). À vérifier avant publication : la période d'environ 84 ans pour Uranus et de 165 ans pour Neptune, l'achèvement du premier tour de Neptune en 2011, la nature d'Uranus comme septième planète et première découverte au télescope, la confirmation le lendemain par le déplacement de l'astre (classique), la mention d'une « grande lunette » à Berlin, l'identité de Heinrich d'Arrest (jeune astronome), la conclusion du chapitre sur Challis (la page dit qu'il n'avait pas de carte à jour).",
+ "blurb": {
+  "b": "Au milieu des années 1840, Uranus ne suit pas la route que lui prédit la physique de Newton. Deux mathématiciens, l'un à Paris, l'autre à Cambridge, parient qu'une planète inconnue la perturbe, et en calculent la place. À Cambridge, on la regarde sans la voir. À Berlin, une lettre arrive un matin, et il suffit d'une nuit.",
+  "h": "Une planète trouvée en moins d'une heure, à l'endroit calculé sur le papier."
+ }
+}
