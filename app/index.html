@@ -3342,9 +3342,25 @@ function homeExtra(){
   return h;
 }
 /* collections recommandées : celles qui recoupent le plus ce que le lecteur a lu ou enregistré, sinon la sélection éditoriale */
+function recoColls(n){
+  var read=Object.keys(S.read||{}).filter(function(i){return S.read[i];}),saved=Object.keys(S.saved||{}).filter(function(i){return S.saved[i];});
+  var pref=((S.x&&S.x.prefs)||[]).map(function(i){return THEMES[i]&&THEMES[i].k;}).filter(Boolean);
+  var personal=read.length+saved.length>0||pref.length>0,out=[];
+  COLLS.forEach(function(c,j){
+    var v=c.ids.filter(vis);if(v.length<8)return;
+    var un=v.filter(function(id){return !S.read[id];}).length;if(un<3)return;
+    var sc=0;v.forEach(function(id){if(S.read[id])sc+=3;if(S.saved[id])sc+=2;if(pref.indexOf(TH[id])>=0)sc+=1;});
+    out.push({c:{k:c.k,n:c.n,ids:v},sc:sc,j:j});
+  });
+  out.sort(function(a,b){return (personal?b.sc-a.sc:0)||a.j-b.j;});
+  return {personal:personal&&out.length&&out[0].sc>0,list:out.slice(0,n).map(function(x){return x.c;})};
+}
+function colTile(c){var id=c.ids[0];return tile({p:STORIES[id].p,t:c.n,s:c.ids.length+' histoires',nosub:false,attr:'data-col="'+c.k+'"',badge:'<span class="num">COLLECTION</span>',subhtml:c.ids.length+' histoires'});}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
+  var rc=recoColls(10);
+  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous <small>'+(rc.personal?'D\'après vos lectures':'Notre sélection')+'</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
   return h;
 }
 
