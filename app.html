@@ -3482,11 +3482,17 @@ function homeList(){
   var head='<h2><span>Ma liste <small>'+(ids.length?'Vos histoires à lire':'Vide pour l\'instant')+'</small></span></h2>';
   if(!ids.length)return '<div class="shelf">'+head+'<p style="margin:0 20px;color:var(--dim);font-size:13.5px;line-height:1.5">Glissez une carte vers le haut dans Thèmes, ou touchez le signet d\'une histoire, pour la retrouver ici.</p></div>';
   return '<div class="shelf">'+head+'<div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>';}
+function homeSeries(){
+  var hubs=Object.keys(STORIES).filter(function(i){var x=STORIES[i];return x.eps&&x.eps.length&&vis(i);});
+  if(!hubs.length)return '';
+  var un=hubs.filter(function(i){return !STORIES[i].eps.every(function(e){return S.read[e];});}),pool=un.length?un:hubs;
+  return '<div class="shelf"><h2><span>Séries OPSIS <small>Une vie en plusieurs épisodes</small></span></h2><div class="rail">'+pool.map(function(id){var st=STORIES[id],n=st.eps.length,r=st.eps.filter(function(e){return S.read[e];}).length;
+    return tile({p:st.p,t:st.title,s:'Une vie · '+st.min+' min',nosub:false,attr:'data-pick="'+id+'"',badge:r?'<span class="read">'+r+'/'+n+'</span>':'<span class="num">'+n+' ÉPISODES</span>'});}).join('')+'</div></div>';}
 function homeListRefresh(){var r=document.getElementById('hlist');if(r)r.innerHTML=homeList();}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span></h2><div class="rail">'+mixRail(ids,colObjs(COLLS.slice(-3).map(function(c){return c.k;}).reverse()))+'</div></div>':'';
-  h+='<div id="hlist">'+homeList()+'</div>';
+  h+='<div id="hlist">'+homeList()+'</div>'+homeSeries();
   var rc=recoColls(10);
   if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous</span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
   var seen={};rc.list.forEach(function(c){seen[c.k]=1;});
