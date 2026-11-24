@@ -1892,15 +1892,20 @@ function subDefs(i,all){
   return out;
 }
 var HT=0,HS=null;
-try{var _pf=(S.x&&S.x.prefs)||[];if(_pf.length&&THEMES[_pf[0]])HT=_pf[0];}catch(e){}
+var ECO=null;
+/* l'accueil se range par collections éditoriales (Une vie et Une date, une histoire en tête) */
+function ecols(){
+  if(ECO)return ECO;
+  var X=epIndex(),vi=X.ki.vie,di=X.ki.date,out=[];
+  out.push({k:'vie',n:'Une vie',d:THEMES[vi].d,ids:X.byT[vi]});
+  out.push({k:'date',n:THEMES[di].n,d:THEMES[di].d,ids:X.byT[di],dt:1});
+  COLLS.forEach(function(c){var v=c.ids.filter(vis);if(v.length>=8)out.push({k:c.k,n:c.n,d:c.d,ids:v});});
+  return ECO=out;
+}
 function homeTheme(){
-  var i=HT,X=epIndex(),all=hr(X.byT[i]),dt=THEMES[i].k==='date';
-  var defs=subDefs(i,all),cur=null;
-  defs.forEach(function(d){if(d.k===HS)cur=d;});if(!cur)HS=null;
-  var eps=cur?cur.list:all;
-  var chips=defs.length>1?'<div class="chips" style="padding-top:14px"><button data-hsub="" aria-pressed="'+(!HS)+'">Tout</button>'+defs.map(function(d){return '<button data-hsub="'+d.k+'" aria-pressed="'+(HS===d.k)+'">'+esc(d.n)+' <small>'+d.list.length+'</small></button>';}).join('')+'</div>':'';
-  return '<p class="hint" style="padding:12px 20px 0">'+THEMES[i].d+'</p>'+chips+
-    (eps.length?'<div class="grid" style="padding-top:14px">'+eps.map(function(id){return epTile(id,dt,true);}).join('')+'</div>':'<div class="empty"><b>Bientôt</b>Les premières histoires de ce thème arrivent après le lancement.</div>');
+  var E=ecols(),c=E[Math.min(HT,E.length-1)],all=hr(c.ids);
+  return '<p class="hint" style="padding:12px 20px 0">'+esc(c.d||'')+'</p>'+
+    (all.length?'<div class="grid" style="padding-top:14px">'+all.map(function(id){return epTile(id,!!c.dt,true);}).join('')+'</div>':'<div class="empty"><b>Tout est lu</b>Vous avez lu toutes les histoires de cette collection.</div>');
 }
 var HTT=null;
 function homeThemeRefresh(){var r=document.getElementById('thres');if(!r)return;
@@ -1954,8 +1959,8 @@ function home(){
     '<div class="cta"><button class="btn light" data-open="'+hid+'">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="'+hid+'">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     homeNew()+
-    '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Thèmes</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
-      '<div class="terr" id="hterr">'+T.map(function(t,i){return '<button data-hth="'+i+'" aria-pressed="'+(HT===i)+'">'+t+'</button>';}).join('')+'</div></div>'+
+    '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Collections</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
+      '<div class="terr" id="hterr">'+ecols().map(function(c,i){return '<button data-hth="'+i+'" aria-pressed="'+(HT===i)+'">'+esc(c.n)+'</button>';}).join('')+'</div></div>'+
     '<div id="thres">'+homeTheme()+'</div>'+
     '<div class="bottomspace"></div>';
 }
@@ -3171,6 +3176,20 @@ var PATHS=[
  {k:'champions',n:'Champions et leurs ombres',d:'Borg, Agassi, Maradona, Tyson, Pantani, Armstrong, Pistorius, Tiger Woods, Phelps, Simone Biles : dix carrières, et ce qui s\'est passé derrière.',ids:['pt30','pt31','pt06','pt07','pt08','pt43','pt46','pt47','pt29','pt51'],pa:'#e0434b',b2:'#070304',top:'#241014',mo:'rays'}
 ];
 COLLS.forEach(function(c){c.ids=c.ids.filter(vis);});PATHS.forEach(function(c){c.ids=c.ids.filter(vis);});
+/* collections ajoutées : chaque histoire figure dans au moins une collection éditoriale */
+COLLS=COLLS.concat([
+ {k:'droits',n:'Qui possède un héros ?',d:'Des personnages devenus des empires, et ceux qui les ont créés sans rien toucher.',ids:['lc02','lc03','lc07','lc09','lc10','lc12','lc13','lc17','lc18','lc20','lc22','lc24','lc31']},
+ {k:'filmsimp',n:'Les films qui ont failli ne pas exister',d:'Contrats ratés, pilotes refaits, scénarios abandonnés : le chemin improbable de sagas devenues cultes.',ids:['lc01','lc04','lc05','lc08','lc11','lc16','lc25','lc27','lc28','lc29','lc30','lc32']},
+ {k:'jeux',n:'Jeux vidéo et jouets cultes',d:'Un jeu que personne ne possédait, une poupée venue d\'Allemagne, un tweet à 2,5 milliards.',ids:['lc06','lc14','lc15','lc19','lc21','lc22','lc23','lc26']},
+ {k:'mechants',n:'Les grands méchants',d:'Ceux qu\'on aime détester : leur origine, leur chute, ce qui les a faits.',ids:['lc33','lc34','lc38','lc39','lc42','lc43','lc45','lc46','lc47','lc52','lc53','lc54','lc60','lc61','lc62']},
+ {k:'heros',n:'Héros, élus et mondes imaginaires',d:'Un personnage, un peuple, une planète : l\'histoire de ceux qui portent les grandes sagas.',ids:['lc35','lc36','lc37','lc40','lc41','lc44','lc48','lc49','lc50','lc51','lc55','lc56','lc57','lc58','lc59']},
+ {k:'raisontot',n:'Ils avaient raison trop tôt',d:'Des scientifiques ignorés, moqués ou oubliés, avant que les faits leur donnent raison.',ids:['sc01','sc02','sc03','sc04','sc05','sc06','sc08','sc09','sc10','sc11','sc12']},
+ {k:'eclairs',n:'Expériences, erreurs et éclairs',d:'Une éclipse, une planète trouvée sur le papier, une fusion froide : quand la science se joue en direct.',ids:['sc07','sc13','sc14','sc15','sc16','sc17','sc18','pa01']},
+ {k:'exploits',n:'Exploits impossibles',d:'Un saut, une note, un marathon pieds nus : des moments où le sport a dépassé ses limites.',ids:['sp01','sp02','sp04','sp05','sp06','sp07','sp08','sp17','sp18','sp19']},
+ {k:'sporthist',n:'Le sport face à l\'Histoire',d:'Un poing levé, un dossard, un match : quand le terrain devient un lieu politique.',ids:['sp03','sp09','sp10','sp11','sp12','sp13','sp14','sp15','sp16','sp20','sp21','ld25']},
+ {k:'paris',n:'Les paris des marques',d:'Une colle ratée, une montre en plastique, une application à une seule fonction : le hasard derrière les grandes marques.',ids:['mq06','mq12','mq13','mq19','mq21','mq22','mq23','mq24','mq25']}
+]);
+(function(){var add={menteurs:['eiffel','im09'],argent:['pe01','pe02'],casses:['joconde'],hollywood:['tm10','tm17']};COLLS.forEach(function(c){(add[c.k]||[]).forEach(function(id){if(c.ids.indexOf(id)<0)c.ids.push(id);});});})();
 COLLS=COLLS.filter(function(c){return c.ids.length>=8;});PATHS=PATHS.filter(function(c){return c.ids.length>=8;});
 var BADGES=[[1,'Premier regard','Une première histoire lue'],[5,'Curieux','Cinq histoires lues'],[10,'Lecteur','Dix histoires lues'],[25,'Explorateur','Vingt-cinq histoires lues'],[50,'Passionné','Cinquante histoires lues'],[100,'Érudit','Cent histoires lues'],[200,'Mémoire vive','Deux cents histoires lues'],[250,'Archiviste','Deux cent cinquante histoires lues'],[500,'Légende','Cinq cents histoires lues']];
 function readCount(){var n=0;Object.keys(S.read).forEach(function(k){if(S.read[k]&&vis(k))n++;});return n;}
@@ -3304,7 +3323,7 @@ function homeExtra(){
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
-  h+='<div class="shelf"><h2><span>Collections <small>Sélections et parcours</small></span></h2><div class="rail">'+COLLS.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+PATHS.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+'</div></div>';
+  h+='<div class="shelf"><h2><span>Parcours <small>Huit histoires, dans l\'ordre</small></span></h2><div class="rail">'+PATHS.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+'</div></div>';
   return h;
 }
 
