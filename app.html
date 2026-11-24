@@ -594,7 +594,7 @@
   .pcard .pseg{display:flex;gap:3px;margin-top:9px}.pcard .pseg i{flex:1;height:3px;border-radius:2px;background:rgba(237,230,218,.3)}.pcard .pseg i.d{background:var(--red)}.pcard .pseg i.n{background:var(--bone)}
   .rail .ccard,.rail .ccw{scroll-snap-align:start}
   .ccw{position:relative;flex:none}
-  .ccsave{position:absolute;top:10px;right:10px;z-index:3;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(10,10,10,.72);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+  .ccsave{position:absolute;top:8px;left:8px;z-index:3;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(10,10,10,.72);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
   .ccsave svg{width:13px;height:13px}.ccsave.on{background:var(--bone);color:#111}
   .qwrap{padding:104px 20px 0}
   .qbox{display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;border-radius:12px;background:var(--coal);border:1px solid var(--line)}
@@ -3303,9 +3303,8 @@ function recentIds(){return (S.x.recent||[]).filter(function(id){return vis(id)&
 function progTile(id){var st=STORIES[id],p=Math.round(S.prog[id]||0);
   return tile({p:st.p,t:st.title,s:p+' % lu',attr:'data-pick="'+id+'" data-rec="1"',badge:'<span class="num">'+st.min+' MIN</span><span class="pbar"><i style="width:'+p+'%"></i></span>'});}
 function colCard(c,attr,extra){
-  var col=(STORIES[c.ids[0]]&&STORIES[c.ids[0]].c)||'#D2232C',isP=/data-path=/.test(attr||''),n=c.ids.length,d=pathDone(c);
-  var sub=extra||(d&&d<n?d+' sur '+n+' lues':d===n&&n?'Terminée':isP?n+' étapes':n+(n>1?' histoires':' histoire'));
-  var card='<button class="ccard" '+attr+' style="--c:'+col+'"><span class="cfan">'+c.ids.slice(0,3).map(function(id){return '<span class="poster" data-art="'+STORIES[id].p+'"></span>';}).join('')+'</span>'+(isP?'<span class="cpill">PARCOURS · '+n+' ÉTAPES</span>':'')+'<b>'+esc(c.n)+'</b><small>'+esc(sub)+'</small></button>';
+  var n=c.ids.length,d=pathDone(c),sub=extra||(d&&d<n?d+' sur '+n+' lues':d===n&&n?'Terminée':n+(n>1?' histoires':' histoire'));
+  var card=tile({p:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:attr,badge:'<span class="num">COLLECTION</span>',subhtml:esc(sub)});
   var m=/^data-col="([^"]+)"$/.exec(attr||'');
   if(!m)return card;var sv=colSaved(m[1]);
   return '<div class="ccw">'+card+'<button class="ccsave'+(sv?' on':'')+'" data-colsave="'+m[1]+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?IC.check:IC.plus)+'</button></div>';
@@ -3334,7 +3333,7 @@ function recoColls(n){
   out.sort(function(a,b){return (personal?b.sc-a.sc:0)||a.j-b.j;});
   return {personal:personal&&out.length&&out[0].sc>0,list:out.slice(0,n).map(function(x){return x.c;})};
 }
-function colTile(c){var id=c.ids[0];return tile({p:STORIES[id].p,t:c.n,s:c.ids.length+' histoires',nosub:false,attr:'data-col="'+c.k+'"',badge:'<span class="num">COLLECTION</span>',subhtml:c.ids.length+' histoires'});}
+function colTile(c){return colCard(c,'data-col="'+c.k+'"');}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
