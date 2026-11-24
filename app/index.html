@@ -3417,10 +3417,9 @@ marques1:['grid','#f0a04b','#0d0a07','#050403','burst'],marques2:['city','#e0434
 ombres:['night','#c8a2ff','#0b0912','#040308','twoface'],musique:['curtain','#ff6f91','#12060c','#060306','rings'],espions:['fog','#e0434b','#0a0a10','#040407','spy'],evasions:['night','#7bd99a','#030605','#010303','key'],
 decouvertes:['grid','#8fd3f4','#06101a','#02060a','bulb'],explorateurs:['sea','#f0a04b','#0a0907','#050403','flag'],xix:['city','#c9a86b','#0e0c08','#050403','book'],avant1700:['peaks','#d9b07a','#0e0b08','#050403','crown'],
 entredeux:['city','#f6d365','#120d06','#060403','dice'],seventies:['rays','#ff9f4a','#150a05','#070302','rings'],science:['grid','#7bd0c8','#06100f','#030707','chip'],identites:['curtain','#b9a6ff','#0e0b16','#05040a','mask']};
-function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k),d=pathDone(c),n=c.ids.length;
-  var top='<div class="pprog"><span class="pbar big"><i style="width:'+(d/n*100)+'%"></i></span><small>'+(d===n?'Collection terminée':d+' sur '+n+' lues · dans l\'ordre que vous voulez')+'</small></div>';
+function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k);
   var sc=COLLSC[k]||['night','#e0434b','#0a0a12','#050508','question'],scn=pathScene({k:k,mo:sc[0],pa:sc[1],top:sc[2],b2:sc[3],ic:sc[4]});
-  return '<div class="pth" style="'+scn+'"><div class="pbg" aria-hidden="true"></div>'+listLayer(c.n,c.d,c.ids,{kick:'Collection',top:top+shareBtn('c',k),html:trailHTML({ids:c.ids,free:true}),right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'})+'</div>';}
+  return '<div class="pth" style="'+scn+'"><div class="pbg" aria-hidden="true"></div>'+listLayer(c.n,c.d,c.ids,{kick:'Collection',top:shareBtn('c',k),right:'<button class="pill'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?'Enregistrée':'+ Enregistrer')+'</button>'})+'</div>';}
 function trailHTML(p){
   var OFF=[0,56,84,56,0,-56,-84,-56],cur=-1,n=p.ids.length,H=p.free?160:184,GAP=58,rows='';
   if(!p.free)for(var q=0;q<n;q++)if(!S.read[p.ids[q]]){cur=q;break;}
