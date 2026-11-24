@@ -2866,7 +2866,7 @@ function homeDeck(){
     '<div class="swk-card" id="swkCard" data-id="'+id+'"'+sty+'><div class="fxs-in"><div class="fxs-face fxs-front">'+poster(pd.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+pd.no+'</span><span class="ft">'+esc(nb(pd.front))+'</span></div>'+
     '<div class="fxs-face fxs-back'+(lt?' lt':'')+'"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+pd.no+'</b></div><h3>'+esc(pd.title)+'</h3><p class="fxs-meta">'+esc(pd.meta)+'</p><p class="fxs-syn">'+esc(pd.syn)+'</p>'+
     '<div class="fxs-bk-bot"><div class="fxs-fm">'+fm+'</div><div class="fxs-bc"><div>'+bars+'</div><em>OPS-'+pd.no+'-'+(h%9000+1000)+'</em></div></div></div></div>'+
-    '<span class="swk-l ok"><i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>Lire</span><span class="swk-l no"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Passer</span><span class="swk-l up"><i><svg viewBox="0 0 24 24"><path d="M7 4h10v16l-5-4-5 4z"/></svg></i>Ma liste</span></div>'+(S.x.swkHint?'':'<div class="swk-tip" id="swkTip"><span><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Passer</span><span>Ma liste<svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span><span>Lire<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>')+'</div>'+all+'</div>';
+    '<span class="swk-l ok"><i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>Lire</span><span class="swk-l no"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Passer</span><span class="swk-l up"><i><svg viewBox="0 0 24 24"><path d="M7 4h10v16l-5-4-5 4z"/></svg></i>Ma liste</span></div>'+((S.x.swkN||0)>=3?'':'<div class="swk-tip" id="swkTip"><span><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Passer</span><span>Ma liste<svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span><span>Lire<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>')+'</div>'+all+'</div>';
 }
 var SWT=null;
 function swkFit(c){var syn=c&&c.querySelector('.fxs-syn');if(!syn)return;var fs=13.5;syn.style.fontSize=fs+'px';
@@ -2886,7 +2886,7 @@ function deckKick(){var c=document.getElementById('swkCard');if(!c)return;clearT
 function deckRender(){var r=document.getElementById('thres');if(!r)return;clearTimeout(SWT);r.innerHTML=homeDeck();deckKick();}
 function deckAct(dir){var c=document.getElementById('swkCard');if(!c)return;var id=c.dataset.id,d=deckGet(HT);
   var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  S.x.swkHint=1;c.__stop=1;var tp=document.getElementById('swkTip');if(tp)tp.classList.add('off');
+  S.x.swkN=(S.x.swkN||0)+1;c.__stop=1;if(S.x.swkN>=3){var tp=document.getElementById('swkTip');if(tp)tp.classList.add('off');}
   function done(){
     if(dir>0){push({type:'read',id:id});setTimeout(function(){c.style.transform='';},400);}
     else if(dir<0){d.i++;deckRender();}
@@ -2896,7 +2896,7 @@ function deckAct(dir){var c=document.getElementById('swkCard');if(!c)return;var 
   c.style.transform=dir===0?'translateY(-460px) scale(.85)':'translateX('+(dir*420)+'px) rotate('+(dir*22)+'deg)';c.style.opacity='.0';
   setTimeout(function(){c.style.opacity='';c.style.transition='none';done();},290);}
 function swkHint(c){
-  if(S.x.swkHint||!c||!c.animate||c.__stop||!document.getElementById('swkCard')||document.getElementById('swkCard')!==c)return;
+  if((S.x.swkN||0)>=3||!c||!c.animate||c.__stop||!document.getElementById('swkCard')||document.getElementById('swkCard')!==c)return;
   var L=function(sel){return c.querySelector(sel);},ok=L('.swk-l.ok'),no=L('.swk-l.no'),up=L('.swk-l.up');
   var o={duration:2600,easing:'ease-in-out'};
   c.__h=[c.animate([{transform:'none'},{transform:'translateX(54px) rotate(4deg)',offset:.14},{transform:'none',offset:.3},{transform:'translateX(-54px) rotate(-4deg)',offset:.44},{transform:'none',offset:.6},{transform:'translateY(-54px)',offset:.76},{transform:'none'}],o)];
