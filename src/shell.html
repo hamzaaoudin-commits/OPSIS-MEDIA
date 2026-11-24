@@ -293,9 +293,12 @@
   .swk-card .fxs-face{border-radius:16px}
   .swk-card .fxs-fm{gap:4px}.swk-card .fxs-fm span{font-size:9px;padding:3px 5px}.swk-card .fxs-bc{transform:scale(.78);transform-origin:right bottom}
   .swk-card .fxs-front .poster svg{position:absolute;inset:0;width:100%;height:100%}
-  .swk-l{position:absolute;top:22px;z-index:20;font-family:var(--disp);font-weight:900;font-size:26px;letter-spacing:.06em;padding:4px 12px;border-radius:8px;border:3px solid;opacity:0;pointer-events:none}
-  .swk-l.up{left:50%;top:auto;bottom:32%;transform:translateX(-50%);color:#F6D365;white-space:nowrap}
-  .swk-l.ok{left:16px;color:#7BD99A;transform:rotate(-12deg)}.swk-l.no{right:16px;color:#ff6b6b;transform:rotate(12deg)}
+  .swk-l{position:absolute;inset:0;z-index:20;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;opacity:0;pointer-events:none;font-family:var(--disp);font-weight:800;font-size:14px;letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .swk-l i{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;border:1.5px solid currentColor;background:rgba(8,8,8,.45);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .swk-l svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .swk-l.ok{background:linear-gradient(90deg,rgba(70,200,120,.55),rgba(70,200,120,.08) 90%),rgba(6,6,6,.8);color:#c6f6d5}
+  .swk-l.no{background:linear-gradient(270deg,rgba(235,70,70,.55),rgba(235,70,70,.08) 90%),rgba(6,6,6,.8);color:#ffd0d0}
+  .swk-l.up{background:linear-gradient(180deg,rgba(246,211,101,.5),rgba(246,211,101,.06) 85%),rgba(6,6,6,.8);color:#fdeab0;justify-content:flex-start;padding-top:70px}
   .swk-all{display:block;background:none;border:0;margin:68px auto 0;padding:10px 14px;font-size:13.5px;font-weight:600;color:var(--dim);text-decoration:underline;text-underline-offset:3px}
   .swk-end{text-align:center;padding:36px 20px 0}.swk-end b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:28px}.swk-end p{margin:8px 0 18px;color:var(--dim);font-size:14.5px}
   .rbtns{display:flex;gap:8px}.rbtns .circle svg{width:19px;height:19px}.rbtns .circle.on{background:var(--bone);color:#111}
@@ -2811,7 +2814,7 @@ function homeDeck(){
     '<div class="swk-card" id="swkCard" data-id="'+id+'"'+sty+'><div class="fxs-in"><div class="fxs-face fxs-front">'+poster(pd.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+pd.no+'</span><span class="ft">'+esc(nb(pd.front))+'</span></div>'+
     '<div class="fxs-face fxs-back'+(lt?' lt':'')+'"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+pd.no+'</b></div><h3>'+esc(pd.title)+'</h3><p class="fxs-meta">'+esc(pd.meta)+'</p><p class="fxs-syn">'+esc(pd.syn)+'</p>'+
     '<div class="fxs-bk-bot"><div class="fxs-fm">'+fm+'</div><div class="fxs-bc"><div>'+bars+'</div><em>OPS-'+pd.no+'-'+(h%9000+1000)+'</em></div></div></div></div>'+
-    '<span class="swk-l ok">LIRE</span><span class="swk-l no">PASSER</span><span class="swk-l up">MA LISTE</span></div></div>'+all+'</div>';
+    '<span class="swk-l ok"><i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>Lire</span><span class="swk-l no"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Passer</span><span class="swk-l up"><i><svg viewBox="0 0 24 24"><path d="M7 4h10v16l-5-4-5 4z"/></svg></i>Ma liste</span></div></div>'+all+'</div>';
 }
 var SWT=null;
 function swkFit(c){var syn=c&&c.querySelector('.fxs-syn');if(!syn)return;var fs=13.5;syn.style.fontSize=fs+'px';
