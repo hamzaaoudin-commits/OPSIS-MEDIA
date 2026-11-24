@@ -443,19 +443,6 @@
     </div>
   </section>
 
-  <!-- CATALOGUE -->
-  <section class="sec serie" id="catalogue">
-    <div class="wrap">
-      <div class="headc rv">
-        <p class="chap">Le catalogue</p>
-        <h2>Un grand catalogue<em>d'histoires vraies</em></h2>
-        <p class="sub">Plus de 450 histoires dès l'ouverture, chacune avec sa couverture, sa durée affichée et ses sources, et de nouvelles histoires chaque jour.</p>
-      </div>
-      <div class="fan rv" id="fan"></div>
-      <div class="eplist rv" id="eplist"></div>
-    </div>
-  </section>
-
   <!-- EXPLORER -->
   <section class="sec alt" id="explorer">
     <div class="wrap rv">
@@ -493,7 +480,6 @@
           <div><b>Le temps affiché</b><span>3, 7 ou 12 minutes : vous savez avant de commencer ce que l'histoire vous demande.</span></div>
           <div><b>Deux façons de lire</b><span>Verticale, en défilant, ou horizontale, page après page, pour entrer dans le récit.</span></div>
           <div><b>Tout est vrai</b><span>Des faits vérifiés, des reconstitutions signalées, et les sources de chaque histoire à portée de main.</span></div>
-          <div><b>Pas un jeu</b><span>Ni points, ni vies, ni série de jours à maintenir. Vous lisez quand vous voulez.</span></div>
           <div><b>Français, puis le monde</b><span>Les histoires sont écrites en français. Des versions anglaise et espagnole, de vraies adaptations, sont en préparation.</span></div>
         </div>
       </div>
@@ -662,15 +648,6 @@ function art(key){
     return '<div class="ep" style="--r:'+rot2[i]+'deg;--y:'+yy2[i]+'px;--z:'+zz2[i]+'"><div class="poster">'+art(e[2])+'</div></div>';
   }).join('');
   document.getElementById('eplist2').innerHTML=EPS.map(function(e,i){return '<div>Épisode '+(i+1)+' · '+e[0]+'<b>'+esc(e[1])+'</b></div>';}).join('');
-
-  /* ---------- catalogue ---------- */
-  var FAN=['sc10','mq09','lc02','sp18','sv15'];
-  var FACTS=[['Histoires','Plus de 450'],['Thèmes','12'],['Durées','3 · 7 · 12 min'],['Portraits en épisodes','54'],['Langue','Français']];
-  var rot=[-9,-4.5,0,4.5,9],yy=[26,8,0,8,26],zz=[1,2,5,2,1];
-  document.getElementById('fan').innerHTML=FAN.map(function(k,i){
-    return '<div class="ep" style="--r:'+rot[i]+'deg;--y:'+yy[i]+'px;--z:'+zz[i]+'"><div class="poster">'+art(k)+'</div></div>';
-  }).join('');
-  document.getElementById('eplist').innerHTML=FACTS.map(function(f){return '<div>'+f[0]+'<b>'+esc(f[1])+'</b></div>';}).join('');
 
   var AF=['sc10','lc02','sp18'],ar=[-8,0,8],ay=[18,0,18];
   document.getElementById('appfan').innerHTML=AF.map(function(k,i){return '<div class="ep" style="--r:'+ar[i]+'deg;--y:'+ay[i]+'px;--z:'+(i===1?5:1)+';width:clamp(96px,14vw,150px)"><div class="poster">'+art(k)+'</div></div>';}).join('');
