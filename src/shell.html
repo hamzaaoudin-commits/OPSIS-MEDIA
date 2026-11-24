@@ -1949,7 +1949,7 @@ function home(){
     '<div class="cta"><button class="btn light" data-open="'+hid+'">'+(r?IC.check+'Relire':IC.play+'Lire')+'</button><button class="btn glass" data-save="'+hid+'">'+(saved?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div></div></section>'+
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     homeNew()+
-    '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Collections</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
+    '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Collections</span></h2>'+
       '<div class="terr" id="hterr">'+ecols().map(function(c,i){return '<button data-hth="'+i+'" aria-pressed="'+(HT===i)+'">'+esc(c.n)+'</button>';}).join('')+'</div></div>'+
     '<div id="thres">'+homeDeck()+'</div>'+
     '<div class="bottomspace"></div>';
@@ -3406,7 +3406,7 @@ function homeExtra(){
   if(ne.length)h+='<div class="shelf"><h2><span>Votre prochain épisode</span></h2><div class="rail">'+ne.slice(0,8).map(function(id){return epTile(id);}).join('')+'</div></div>';
   if(rc.length)h+='<div class="shelf"><h2><span>Reprendre la lecture</span></h2><div class="rail">'+rc.slice(0,12).map(progTile).join('')+'</div></div>';
   var r=recs(12);
-  if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
+  if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
   return h;
 }
 /* collections recommandées : celles qui recoupent le plus ce que le lecteur a lu ou enregistré, sinon la sélection éditoriale */
@@ -3426,16 +3426,16 @@ function recoColls(n){
 function colTile(c){return colCard(c,'data-col="'+c.k+'"');}
 function homeList(){
   var ids=Object.keys(S.saved).filter(function(k){return S.saved[k]&&vis(k)&&STORIES[k];}).reverse();
-  var head='<h2><span>Ma liste <small>'+(ids.length?'Vos histoires à lire':'Vide pour l\'instant')+'</small></span>'+(ids.length>2?'<span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span>':'')+'</h2>';
+  var head='<h2><span>Ma liste <small>'+(ids.length?'Vos histoires à lire':'Vide pour l\'instant')+'</small></span></h2>';
   if(!ids.length)return '<div class="shelf">'+head+'<p style="margin:0 20px;color:var(--dim);font-size:13.5px;line-height:1.5">Glissez une carte vers le haut dans Collections, ou touchez le signet d\'une histoire, pour la retrouver ici.</p></div>';
   return '<div class="shelf">'+head+'<div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>';}
 function homeListRefresh(){var r=document.getElementById('hlist');if(r)r.innerHTML=homeList();}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
-  var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
+  var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
   h+='<div id="hlist">'+homeList()+'</div>';
   var rc=recoColls(10);
-  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous <small>'+(rc.personal?'D\'après vos lectures':'Notre sélection')+'</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
+  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous <small>'+(rc.personal?'D\'après vos lectures':'Notre sélection')+'</small></span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
   return h;
 }
 
