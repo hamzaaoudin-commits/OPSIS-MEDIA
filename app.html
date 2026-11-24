@@ -1961,8 +1961,8 @@ function home(){
     '<button class="rand" data-random><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor"/></svg>Une histoire au hasard</span><small>Surprenez-moi</small></button>'+homeExtra()+
     homeNew()+
     '<div class="explore" id="explore"><h2 class="exh" style="display:flex;align-items:center;justify-content:space-between"><span>Collections</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2>'+
-      '<div class="terr" id="hterr">'+ecols().map(function(c,i){return '<button data-hth="'+i+'" aria-pressed="'+(HT===i)+'">'+esc(c.n)+'</button>';}).join('')+'</div></div>'+
-    '<div id="thres">'+homeTheme()+'</div>'+
+      '<div class="terr" id="hterr">'+ecols().map(function(c,i){return '<button data-hth="'+i+'" aria-pressed="false">'+esc(c.n)+'</button>';}).join('')+'</div></div>'+
+    '<p class="hint" style="padding:4px 20px 0">Touchez une collection : OPSIS vous propose une histoire à lire, et une autre si elle ne vous tente pas.</p>'+
     '<div class="bottomspace"></div>';
 }
 
@@ -2806,6 +2806,22 @@ function dailyId(day){
   return p[pos];
 }
 OPSIS.ui.daily=function(day){return day?dailyId(day):(DJIDS.length?DJIDS[DJIDS.length-1]:dailyId(OPSIS.day()));};
+var CDRAW={};
+function colDraw(n,src){
+  var E=ecols(),c=E[Math.min(n,E.length-1)];if(!c)return;
+  var ids=c.ids.filter(vis),fresh=ids.filter(function(i){return !S.read[i];}),pool=fresh.length?fresh:ids;
+  if(!pool.length)return;
+  var seen=CDRAW[c.k]||(CDRAW[c.k]=[]);
+  var left=pool.filter(function(i){return seen.indexOf(i)<0;});
+  if(!left.length){var last=seen[seen.length-1];seen.length=0;left=pool.length>1?pool.filter(function(i){return i!==last;}):pool;}
+  var id=left[Math.floor(Math.random()*left.length)];seen.push(id);
+  pick(id,src);
+  var acts=fxs.querySelector('.fxs-acts'),hint=fxs.querySelector('.fxs-hint');
+  if(hint)hint.textContent='Dans « '+c.n+' » · touchez la couverture pour la retourner';
+  var X=epIndex(),inC=COLLS.some(function(x){return x.k===c.k;});
+  var all=inC?'<button class="btn glass" data-go="colopen" data-key="'+c.k+'" style="grid-column:1/-1;flex:1 1 100%;width:100%">Voir toute la collection</button>':'<button class="btn glass" data-go="themeopen" data-key="'+(c.k==='vie'?X.ki.vie:X.ki.date)+'" style="grid-column:1/-1;flex:1 1 100%;width:100%">Voir toute la collection</button>';
+  if(acts)acts.insertAdjacentHTML('beforeend','<button class="btn glass" data-coldraw="'+n+'" style="grid-column:1/-1;flex:1 1 100%;width:100%">Une autre</button>'+all);
+}
 function randomPick(){
   var all=Object.keys(STORIES).filter(function(k){var x=STORIES[k];return x&&x.title&&x.syn&&x.kind&&x.kind.indexOf('Série')!==0&&!x.ep;});
   var fresh=all.filter(function(k){return !S.read[k];});
@@ -2864,6 +2880,7 @@ fxs.addEventListener('click',function(e){
   var b=e.target.closest('[data-go]');if(!b)return;e.stopPropagation();
   var g=b.dataset.go;
   if(g==='close'){closePick();return;}
+  if(g==='themeopen'){var ti=+b.dataset.key;closePick();setTimeout(function(){push({type:'theme',i:ti});},180);return;}
   if(g==='colopen'){var ok=b.dataset.key;closePick();setTimeout(function(){push({type:'col',k:ok});},180);return;}
   if(g==='colsv'){var st=colToggle(b.dataset.key);if(st!==null){b.innerHTML=st?IC.check+'Dans ma liste':IC.plus+'Ma liste';}return;}
   if(g==='read'){
@@ -4210,7 +4227,8 @@ function featClick(b,d){
   if(d.path){push({type:'path',k:d.path});return true;}
   if(d.mycol!==undefined){push({type:'mycol',i:+d.mycol});return true;}
   if(b.hasAttribute('data-quotes')){push({type:'quotes'});return true;}
-  if(d.hth!==undefined){var n=+d.hth;if(n===HT)return true;HT=n;HS=null;homeThemeRefresh();return true;}
+  if(d.hth!==undefined){colDraw(+d.hth,b.querySelector('.poster'));return true;}
+  if(d.coldraw!==undefined){colDraw(+d.coldraw);return true;}
   if(d.hsub!==undefined&&!(top&&top.type==='theme')){HS=d.hsub||null;homeThemeRefresh();return true;}
   if(d.terr!==undefined&&d.sub){push({type:'theme',i:+d.terr,sub:d.sub});return true;}
   if(d.subf!==undefined&&top&&top.type==='theme'){top.sub=d.subf||null;var y=lv.scrollTop;lv.innerHTML=layerHTML(top);lv.scrollTop=Math.min(y,200);bindLayer(top);return true;}
