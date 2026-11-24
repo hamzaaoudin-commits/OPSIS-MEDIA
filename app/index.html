@@ -2868,13 +2868,18 @@ function homeDeck(){
 var SWT=null;
 function swkFit(c){var syn=c&&c.querySelector('.fxs-syn');if(!syn)return;var fs=13.5;syn.style.fontSize=fs+'px';
   while(syn.scrollHeight>syn.clientHeight+1&&fs>8.5){fs-=.5;syn.style.fontSize=fs+'px';syn.style.lineHeight=fs>11.5?'1.55':'1.45';}}
-function deckKick(){var c=document.getElementById('swkCard');if(!c)return;clearTimeout(SWT);
+function deckKick(){var c=document.getElementById('swkCard');if(!c)return;clearTimeout(SWT);if(c.__io){try{c.__io.disconnect();}catch(_){}c.__io=null;}
   var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(red){c.classList.add('flip');requestAnimationFrame(function(){swkFit(c);});return;}
-  c.classList.add('arrive');
-  SWT=setTimeout(function(){var k=document.getElementById('swkCard');if(k&&k===c&&!k.__t){k.classList.add('flip');}},650);
-  setTimeout(function(){var k=document.getElementById('swkCard');if(k&&k===c&&!k.__t&&c.classList.contains('flip'))swkHint(c);},1900);
-  requestAnimationFrame(function(){swkFit(c);});}
+  function go(){
+    if(red){c.classList.add('flip');requestAnimationFrame(function(){swkFit(c);});return;}
+    c.classList.add('arrive');
+    SWT=setTimeout(function(){var k=document.getElementById('swkCard');if(k&&k===c&&!k.__t){k.classList.add('flip');}},650);
+    setTimeout(function(){var k=document.getElementById('swkCard');if(k&&k===c&&!k.__t&&c.classList.contains('flip'))swkHint(c);},1900);
+    requestAnimationFrame(function(){swkFit(c);});}
+  requestAnimationFrame(function(){swkFit(c);});
+  if(!('IntersectionObserver' in window)){go();return;}
+  c.__io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>=.6){try{c.__io.disconnect();}catch(_){}c.__io=null;go();}});},{threshold:[.6,.8,1]});
+  c.__io.observe(c);}
 function deckRender(){var r=document.getElementById('thres');if(!r)return;clearTimeout(SWT);r.innerHTML=homeDeck();deckKick();}
 function deckAct(dir){var c=document.getElementById('swkCard');if(!c)return;var id=c.dataset.id,d=deckGet(HT);
   var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
