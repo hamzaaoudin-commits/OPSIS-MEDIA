@@ -1960,7 +1960,7 @@ function saved(){
       return tile({p:st.p,t:st.title,s:'',attr:'data-pick="'+id+'"',subhtml:r?'<span class="rst" aria-label="'+r+' sur 5">'+'★★★★★'.slice(0,r)+'<em>'+'★★★★★'.slice(r)+'</em></span>':'<span class="rst none">Pas noté</span>'});}).join('')+'</div>';}
   function railOf(list,ns){return '<div class="rail">'+list.map(function(id){var st=STORIES[id];return tile({p:st.p,t:st.title,s:(st.series||st.kind)+' · '+st.min+' min',attr:'data-pick="'+id+'"',nosub:ns,badge:S.rate[id]?'<span class="num">'+S.rate[id]+' ★</span>':''});}).join('')+'</div>';}
   var rc=recentIds(),cs=myCols(),q=quotes(),bn=badgeNow(),bx=badgeNext(),n=readCount(),sk=OPSIS.store.streak();
-  var left=S.x.leftPaths||{},started=PATHS.filter(function(p){var d=pathDone(p);return d>0&&d<p.ids.length&&!left[p.k];}),startedC=COLLS.filter(function(p){var v=p.ids.filter(vis),d=pathDone({ids:v});return d>0&&d<v.length;});
+  var left=S.x.leftPaths||{},started=[],startedC=COLLS.filter(function(p){var v=p.ids.filter(vis),d=pathDone({ids:v});return d>0&&d<v.length;});
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour à l\'accueil">'+IC.back+'</button><span class="rt">Mon espace</span><button class="circle" data-set="root" aria-label="Réglages">'+IC.gear+'</button></div>'+
     '<div class="mglow"></div><div class="bhead" style="padding-top:104px"><h1 class="ptitle">Mon espace</h1>'+(bn?'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mon badge : '+bn[1]+'">'+badgeSVG(BADGES.indexOf(bn),true,44)+'</button>':'<button class="bbtn" data-badgetog aria-expanded="false" aria-label="Mes badges">'+badgeSVG(0,false,40)+'</button>')+'</div>'+
     '<div class="bwrap">'+(bx?'<div class="nextb">'+badgeSVG(BADGES.indexOf(bx),false,40)+'<div><b>Prochain badge : '+bx[1]+'</b><small>Encore '+(bx[0]-n)+' '+(bx[0]-n>1?'histoires':'histoire')+'</small><div class="bar"><i style="width:'+Math.round(Math.min(1,(n-(bn?bn[0]:0))/(bx[0]-(bn?bn[0]:0)))*100)+'%"></i></div></div></div>':'')+badgesHTML()+'</div>'+
@@ -3292,10 +3292,25 @@ function homeExtra(){
   if(r.ids.length)h+='<div class="shelf"><h2><span>'+(r.personal?'Pour vous <small>D\'après vos lectures</small>':'Pour commencer <small>Notre sélection</small>')+'</span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+r.ids.map(function(id){return epTile(id);}).join('')+'</div></div>';
   return h;
 }
+/* collections recommandées : celles qui recoupent le plus ce que le lecteur a lu ou enregistré, sinon la sélection éditoriale */
+function recoColls(n){
+  var read=Object.keys(S.read||{}).filter(function(i){return S.read[i];}),saved=Object.keys(S.saved||{}).filter(function(i){return S.saved[i];});
+  var pref=((S.x&&S.x.prefs)||[]).map(function(i){return THEMES[i]&&THEMES[i].k;}).filter(Boolean);
+  var personal=read.length+saved.length>0||pref.length>0,out=[];
+  COLLS.forEach(function(c,j){
+    var v=c.ids.filter(vis);if(v.length<8)return;
+    var un=v.filter(function(id){return !S.read[id];}).length;if(un<3)return;
+    var sc=0;v.forEach(function(id){if(S.read[id])sc+=3;if(S.saved[id])sc+=2;if(pref.indexOf(TH[id])>=0)sc+=1;});
+    out.push({c:{k:c.k,n:c.n,ids:v},sc:sc,j:j});
+  });
+  out.sort(function(a,b){return (personal?b.sc-a.sc:0)||a.j-b.j;});
+  return {personal:personal&&out.length&&out[0].sc>0,list:out.slice(0,n).map(function(x){return x.c;})};
+}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
-  h+='<div class="shelf"><h2><span>Parcours <small>Huit histoires, dans l\'ordre</small></span></h2><div class="rail">'+PATHS.map(function(p){return colCard(p,'data-path="'+p.k+'"');}).join('')+'</div></div>';
+  var rc=recoColls(8);
+  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous <small>'+(rc.personal?'D\'après vos lectures':'Notre sélection')+'</small></span></h2><div class="rail">'+rc.list.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+'</div></div>';
   return h;
 }
 
@@ -3321,7 +3336,6 @@ function searchBody(q){
   T.forEach(function(t,i){if(norm(t).indexOf(nq)>=0)sug+='<button class="qrow" data-terr="'+i+'"><i>Thème</i>'+t+'</button>';});
   Object.keys(SUBS).forEach(function(k){if(norm(SUBS[k]).indexOf(nq)>=0){var ti=-1;X.byT.forEach(function(l,j){if(ti<0&&THEMES[j].k!=='date'&&l.some(function(id){return subKey(id)===k;}))ti=j;});if(ti>=0)sug+='<button class="qrow" data-terr="'+ti+'" data-sub="'+k+'"><i>Catégorie</i>'+SUBS[k]+'</button>';}});
   COLLS.forEach(function(c){if(norm(c.n).indexOf(nq)>=0)sug+='<button class="qrow" data-col="'+c.k+'"><i>Collection</i>'+esc(c.n)+'</button>';});
-  PATHS.forEach(function(c){if(norm(c.n).indexOf(nq)>=0)sug+='<button class="qrow" data-path="'+c.k+'"><i>Parcours</i>'+esc(c.n)+'</button>';});
   ids.slice(0,5).forEach(function(id){sug+='<button class="qrow" data-pick="'+id+'"><i>Histoire</i>'+esc(STORIES[id].title)+'</button>';});
   if(!ids.length&&!sug)return '<div class="empty"><b>Aucun résultat</b>Essayez un nom, un lieu, une année ou un thème.</div>';
   return (sug?'<div class="qsug">'+sug+'</div>':'')+(ids.length?'<div class="shelf"><h2>Histoires <small>'+ids.length+'</small></h2></div><div class="grid">'+ids.slice(0,60).map(function(id){return epTile(id);}).join('')+'</div>':'');
