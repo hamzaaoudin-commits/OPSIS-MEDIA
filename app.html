@@ -2881,7 +2881,7 @@ function deckAct(dir){var c=document.getElementById('swkCard');if(!c)return;var 
   c.style.transform=dir===0?'translateY(-460px) scale(.85)':'translateX('+(dir*420)+'px) rotate('+(dir*22)+'deg)';c.style.opacity='.0';
   setTimeout(function(){c.style.opacity='';c.style.transition='none';done();},290);}
 function swkHint(c){
-  if((S.x.swkN||0)>=3||!c||!c.animate||c.__stop||!document.getElementById('swkCard')||document.getElementById('swkCard')!==c||window.__swkPlayed)return;window.__swkPlayed=1;
+  if(((S.x.swkN||0)>=3&&(S.x.swkShown||0)>=5)||!c||!c.animate||c.__stop||!document.getElementById('swkCard')||document.getElementById('swkCard')!==c||window.__swkPlayed)return;window.__swkPlayed=1;S.x.swkShown=(S.x.swkShown||0)+1;
   var L=function(sel){return c.querySelector(sel);},ok=L('.swk-l.ok'),no=L('.swk-l.no'),up=L('.swk-l.up');
   var o={duration:6500,easing:'ease-in-out'};
   c.__h=[c.animate([{transform:'none'},{transform:'translateX(54px) rotate(4deg)',offset:.14},{transform:'none',offset:.3},{transform:'translateX(-54px) rotate(-4deg)',offset:.44},{transform:'none',offset:.6},{transform:'translateY(-54px)',offset:.76},{transform:'none'}],o)];
