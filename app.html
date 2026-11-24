@@ -3190,7 +3190,7 @@ COLLS=COLLS.concat([
  {k:'paris',n:'Les paris des marques',d:'Une colle ratée, une montre en plastique, une application à une seule fonction : le hasard derrière les grandes marques.',ids:['mq06','mq12','mq13','mq19','mq21','mq22','mq23','mq24','mq25']}
 ]);
 (function(){var add={menteurs:['eiffel','im09'],argent:['pe01','pe02'],casses:['joconde'],hollywood:['tm10','tm17']};COLLS.forEach(function(c){(add[c.k]||[]).forEach(function(id){if(c.ids.indexOf(id)<0)c.ids.push(id);});});})();
-COLLS=COLLS.filter(function(c){return c.ids.length>=8;});PATHS=PATHS.filter(function(c){return c.ids.length>=8;});
+COLLS=COLLS.filter(function(c){return c.ids.length>=8;});PATHS=[];
 var BADGES=[[1,'Premier regard','Une première histoire lue'],[5,'Curieux','Cinq histoires lues'],[10,'Lecteur','Dix histoires lues'],[25,'Explorateur','Vingt-cinq histoires lues'],[50,'Passionné','Cinquante histoires lues'],[100,'Érudit','Cent histoires lues'],[200,'Mémoire vive','Deux cents histoires lues'],[250,'Archiviste','Deux cent cinquante histoires lues'],[500,'Légende','Cinq cents histoires lues']];
 function readCount(){var n=0;Object.keys(S.read).forEach(function(k){if(S.read[k]&&vis(k))n++;});return n;}
 function badgeNow(){var n=readCount(),b=null;BADGES.forEach(function(x){if(n>=x[0])b=x;});return b;}
@@ -3321,24 +3321,9 @@ function homeExtra(){
   return h;
 }
 /* collections recommandées : celles qui recoupent le plus ce que le lecteur a lu ou enregistré, sinon la sélection éditoriale */
-function recoColls(n){
-  var read=Object.keys(S.read||{}).filter(function(i){return S.read[i];}),saved=Object.keys(S.saved||{}).filter(function(i){return S.saved[i];});
-  var pref=((S.x&&S.x.prefs)||[]).map(function(i){return THEMES[i]&&THEMES[i].k;}).filter(Boolean);
-  var personal=read.length+saved.length>0||pref.length>0,out=[];
-  COLLS.forEach(function(c,j){
-    var v=c.ids.filter(vis);if(v.length<8)return;
-    var un=v.filter(function(id){return !S.read[id];}).length;if(un<3)return;
-    var sc=0;v.forEach(function(id){if(S.read[id])sc+=3;if(S.saved[id])sc+=2;if(pref.indexOf(TH[id])>=0)sc+=1;});
-    out.push({c:{k:c.k,n:c.n,ids:v},sc:sc,j:j});
-  });
-  out.sort(function(a,b){return (personal?b.sc-a.sc:0)||a.j-b.j;});
-  return {personal:personal&&out.length&&out[0].sc>0,list:out.slice(0,n).map(function(x){return x.c;})};
-}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span><span class="rn"><button data-rail="-1" aria-label="Précédent">‹</button><button data-rail="1" aria-label="Suivant">›</button></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
-  var rc=recoColls(8);
-  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous <small>'+(rc.personal?'D\'après vos lectures':'Notre sélection')+'</small></span></h2><div class="rail">'+rc.list.map(function(c){return colCard(c,'data-col="'+c.k+'"');}).join('')+'</div></div>';
   return h;
 }
 
@@ -4024,11 +4009,11 @@ confidentialite:'<rect x="5" y="11" width="14" height="10" rx="2.500"/><path d="
 conditions:'<path d="M12 3v18M5 7h14M5 7l-2.500 7a3 3 0 0 0 5 0zM19 7l-2.500 7a3 3 0 0 0 5 0zM8 21h8"/>'};
 function sico(k){return '<i class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+SI[k]+'</svg></i>';}
 function row(k,label,sub){return '<button class="srow" data-set="'+k+'">'+sico(k)+'<span class="stx">'+label+(sub?'<small>'+sub+'</small>':'')+'</span>'+IC.chev+'</button>';}
-var GUIDE=[['Des centaines d\'histoires','Choisissez parmi des centaines de titres, par thème ou au hasard. Touchez une couverture pour l\'ouvrir.',''],['Choisissez votre format','Beaucoup d\'histoires existent en 3 ou 7 minutes. Le choix se fait en haut de l\'histoire, avant de lire.',''],['Lisez à votre façon','En défilement vertical, ou en pages comme un livre : touchez les bords ou glissez pour tourner la page.',''],['Choisissez votre police','Réglez la police, la taille du texte et le fond clair ou sombre. En lisant, « Aa » ajoute l\'interligne, les marges et plus encore.',''],['Gardez pour plus tard','Touchez « Ma liste » sur une histoire. Vous la retrouvez dans Mon espace, sous forme de couvertures.',''],['Suivez un parcours','Un parcours enchaîne des histoires étape par étape. À la fin de chacune, la suivante vous est proposée.',''],['Explorez par thème','Touchez un thème pour voir ses histoires, puis un sous-thème pour affiner. Les collections éditoriales sont plus bas : le cœur d\'une collection l\'enregistre dans Mon espace.',''],['Vos thèmes préférés','Cochez ceux qui vous attirent : ils orientent « Pour vous » et les suggestions en fin d\'histoire. Modifiable dans Préférences.',''],['Partagez une histoire','Sous chaque histoire, « Offrir » ouvre le partage de votre téléphone : envoyez-la à un proche en un geste.',''],['Partagez une citation','Sélectionnez un passage dans une histoire, puis « Créer une carte » : une image à partager, avec la couverture.',''],['Badges et série','Plus vous lisez, plus vous débloquez de badges. Touchez le vôtre, à côté du titre Mon espace, pour voir le suivant.',''],['Votre rappel du matin','Choisissez l\'heure à laquelle OPSIS vous prévient. Modifiable dans Réglages, Notifications.',''],['Vérifiez les faits','Sous chaque histoire, « + Sources » affiche ce qui a été vérifié. Une erreur ? « Signaler une information inexacte ».','']];
+var GUIDE=[['Des centaines d\'histoires','Choisissez parmi des centaines de titres, par collection ou au hasard. Touchez une couverture pour l\'ouvrir.',''],['Choisissez votre format','Beaucoup d\'histoires existent en 3 ou 7 minutes. Le choix se fait en haut de l\'histoire, avant de lire.',''],['Lisez à votre façon','En défilement vertical, ou en pages comme un livre : touchez les bords ou glissez pour tourner la page.',''],['Choisissez votre police','Réglez la police, la taille du texte et le fond clair ou sombre. En lisant, « Aa » ajoute l\'interligne, les marges et plus encore.',''],['Gardez pour plus tard','Touchez « Ma liste » sur une histoire. Vous la retrouvez dans Mon espace, sous forme de couvertures.',''],['Explorez par collection','Touchez une collection pour voir ses histoires : une même histoire peut figurer dans plusieurs. Le cœur d\'une collection l\'enregistre dans Mon espace.',''],['Vos thèmes préférés','Cochez ceux qui vous attirent : ils orientent « Pour vous » et les suggestions en fin d\'histoire. Modifiable dans Préférences.',''],['Partagez une histoire','Sous chaque histoire, « Offrir » ouvre le partage de votre téléphone : envoyez-la à un proche en un geste.',''],['Partagez une citation','Sélectionnez un passage dans une histoire, puis « Créer une carte » : une image à partager, avec la couverture.',''],['Badges et série','Plus vous lisez, plus vous débloquez de badges. Touchez le vôtre, à côté du titre Mon espace, pour voir le suivant.',''],['Votre rappel du matin','Choisissez l\'heure à laquelle OPSIS vous prévient. Modifiable dans Réglages, Notifications.',''],['Vérifiez les faits','Sous chaque histoire, « + Sources » affiche ce qui a été vérifié. Une erreur ? « Signaler une information inexacte ».','']];
 
 function gpo(k,st){return '<span class="poster" data-art="'+k+'"'+(st?' style="'+st+'"':'')+'></span>';}
 function gps(){var K=Object.keys(STORIES).filter(function(k){return STORIES[k]&&STORIES[k].p;}),pre=['eiffel','penicilline','joconde'].filter(function(k){return STORIES[k];}),o=pre.slice();for(var i=0;i<K.length&&o.length<16;i+=Math.max(1,Math.floor(K.length/16)))if(o.indexOf(K[i])<0)o.push(K[i]);return o.map(function(k){return STORIES[k].p;});}
-var GILL=[0,1,2,3,4,5,6,12,7,8,9,10,11];
+var GILL=[0,1,2,3,4,6,12,7,8,9,10,11];
 function gdIll(i){return gdIll0(GILL[i]);}
 function gdIll0(i){var P=gps(),T0=STORIES.eiffel||STORIES[Object.keys(STORIES)[0]],h='';
  if(i===0){h='<div class="gwall">'+P.slice(0,15).map(function(k){return gpo(k);}).join('')+'</div>';}
