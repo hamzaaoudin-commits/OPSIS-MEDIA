@@ -3484,7 +3484,7 @@ function homeNew(){
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span></h2><div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>':'';
   h+='<div id="hlist">'+homeList()+'</div>';
   var rc=recoColls(10);
-  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous <small>'+(rc.personal?'D\'après vos lectures':'Notre sélection')+'</small></span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
+  if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous</span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
   return h;
 }
 
