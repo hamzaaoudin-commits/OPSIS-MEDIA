@@ -3034,6 +3034,8 @@ setBox.parentNode.addEventListener('click',function(e){if(e.target===setBox.pare
 var sheet=document.getElementById('sheet');
 /* ---------- partage en story : une image 1080×1920 (affiche + titre + accroche), envoyée par la feuille de partage du téléphone ---------- */
 var storyBlob=null,storyId=null;
+function drawStars(g,cx,cy,R,n){var gap=R*2.75,x0=cx-gap*2;
+  for(var k=0;k<5;k++){g.beginPath();for(var i=0;i<10;i++){var a=-Math.PI/2+i*Math.PI/5,rr=i%2?R*.42:R;g.lineTo(x0+k*gap+Math.cos(a)*rr,cy+Math.sin(a)*rr);}g.closePath();g.fillStyle=k<n?'#F2C14E':'rgba(244,238,228,.2)';g.fill();}}
 function storyCanvas(id){
   var s=STORIES[id],W=1080,H=1920,K=2,c=s.c||'#F2643C';
   var hook=(BLURB[id]&&BLURB[id].h)||s.quote||s.sub||'';
@@ -3050,6 +3052,7 @@ function storyCanvas(id){
     var rg=g.createRadialGradient(W/2,560,60,W/2,560,820);rg.addColorStop(0,'rgba(255,255,255,.16)');rg.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=rg;g.fillRect(0,0,W,H);
     g.textAlign='center';g.textBaseline='alphabetic';
     g.fillStyle='#F4EEE4';g.font='700 44px '+disp;if('letterSpacing' in g)g.letterSpacing='22px';g.fillText('OPSIS',W/2+11,150);if('letterSpacing' in g)g.letterSpacing='0px';
+    if(S.rate[id]>0)drawStars(g,W/2,196,15,S.rate[id]);
     var px=(W-660)/2,py=230,pw=660,ph=990,r=34;
     g.save();g.shadowColor='rgba(0,0,0,.6)';g.shadowBlur=70;g.shadowOffsetY=34;g.fillStyle='#000';g.beginPath();g.moveTo(px+r,py);g.arcTo(px+pw,py,px+pw,py+ph,r);g.arcTo(px+pw,py+ph,px,py+ph,r);g.arcTo(px,py+ph,px,py,r);g.arcTo(px,py,px+pw,py,r);g.closePath();g.fill();g.restore();
     g.save();g.beginPath();g.moveTo(px+r,py);g.arcTo(px+pw,py,px+pw,py+ph,r);g.arcTo(px+pw,py+ph,px,py+ph,r);g.arcTo(px,py+ph,px,py,r);g.arcTo(px,py,px+pw,py,r);g.closePath();g.clip();
@@ -3132,6 +3135,7 @@ function storyAnim(id,cv,rec){
         g.restore();}
       var tx=cl((ms-3400)/600);
       g.textAlign='center';g.globalAlpha=tx;g.fillStyle='rgba(244,238,228,.55)';g.font='600 30px '+disp;if('letterSpacing' in g)g.letterSpacing='6px';g.fillText('THE WORLD IS MADE OF STORIES',W/2,H-110);g.globalAlpha=1;if('letterSpacing' in g)g.letterSpacing='0px';
+      if(S.rate[id]>0){g.globalAlpha=cl((ms-3000)/600);drawStars(g,W/2,1625,24,S.rate[id]);g.globalAlpha=1;}
     }
     return {frame:frame,T:T,still:function(){frame(T);}};
   });
@@ -3218,7 +3222,7 @@ document.getElementById('sgo').onclick=function(){
   var vid=storyVid,mimeT=vid?vid.blob.type:'image/png',ext=vid?vid.ext:'png',b=vid?vid.blob:storyBlob;
   var go=function(b){
     var f;try{f=new File([b],'opsis-'+storyId+'.'+ext,{type:mimeT});}catch(e){f=null;}
-    var data={files:f?[f]:[],title:s.title,text:s.title+' — une histoire vraie sur OPSIS'};
+    var data={files:f?[f]:[],title:s.title,text:s.title+' — une histoire vraie sur OPSIS'+(S.rate[storyId]>0?' · ma note : '+S.rate[storyId]+'/5':'')};
     if(f&&navigator.share&&navigator.canShare&&navigator.canShare({files:[f]})){navigator.share(data).then(function(){sheet.classList.remove('show');}).catch(function(e){if(e&&e.name!=='AbortError')save(b);});}
     else save(b);};
   var save=function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='opsis-'+storyId+'.'+ext;document.body.appendChild(a);a.click();a.remove();toast((vid?'Vidéo':'Image')+' enregistrée : ajoute-la à ta story');};
@@ -3789,7 +3793,7 @@ function shareList(spec){
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
 }
 function gift(id){
-  var s=STORIES[id],url=storyURL(id),txt='Je t\'offre une histoire : « '+s.title+' ». Elle se lit en '+s.min+' minutes sur OPSIS, sans compte.';
+  var s=STORIES[id],url=storyURL(id),txt='Je t\'offre une histoire : « '+s.title+' ». Elle se lit en '+s.min+' minutes sur OPSIS, sans compte.'+(S.rate[id]>0?' Je lui mets '+S.rate[id]+'/5.':'');
   if(navigator.share){navigator.share({title:s.title,text:txt,url:url}).catch(function(){});return;}
   var done=function(){toast('Lien copié : envoyez-le à qui vous voulez');};
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
