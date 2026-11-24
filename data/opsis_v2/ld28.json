@@ -1,0 +1,36 @@
+{
+ "id": "ld28",
+ "fmt": 3,
+ "name": "Hiroshima : huit heures quinze",
+ "sub": "Hiroshima, 6 août 1945 : à 8 h 15, une bombe explose au-dessus de la ville ; des survivants racontent ce qu'ils faisaient à cette seconde",
+ "blurb": {
+  "b": "Le 6 août 1945, à 8 h 15, une bombe à l'uranium explose au-dessus d'Hiroshima. Des survivants, un étudiant, un ingénieur, des enfants, racontent ce qu'ils faisaient à cette seconde précise : aller à l'école, regarder un avion, démolir une maison. Un matin ordinaire devenu une date.",
+  "h": "Huit heures quinze : ce que chacun faisait quand la ville a disparu."
+ },
+ "body": [
+  "#Un ciel dégagé",
+  "@Hiroshima, lundi 6 août 1945.",
+  "Il est un peu plus de huit heures du matin, et Hiroshima commence sa journée. Les écoliers sont mobilisés pour démolir des maisons afin de créer des coupe-feu ; des étudiants rejoignent leurs cours, des ouvriers leur usine. Le ciel est clair. Trois avions américains apparaissent très haut. La ville les a déjà vus, comme les autres villes, et leur passage n'inquiète plus beaucoup : on pense à des appareils de reconnaissance.",
+  "Le premier de ces B-29 est l'Enola Gay, piloté par le colonel Paul Tibbets, parti de l'île de Tinian. Il porte une seule bombe, d'un type que personne n'a jamais lâché sur une ville.",
+  "#8 h 15",
+  "@Au-dessus du centre-ville.",
+  "La bombe, surnommée Little Boy, est à l'uranium 235. Elle explose à 8 h 15, selon l'heure généralement retenue, à environ 600 mètres au-dessus du centre, près du palais de la promotion industrielle, dont l'armature de métal restera debout et deviendra le Dôme de Genbaku. La puissance est d'environ 15 kilotonnes, mais ce chiffre ne dit rien de ce qui se passe en dessous : un éclair blanc, une chaleur qui brûle les peaux à plusieurs kilomètres, puis un souffle qui rase les maisons de bois.",
+  "La ville avait été en grande partie épargnée par les bombardements classiques, ce qui permettait de mesurer les effets de la nouvelle arme. Elle a payé cet avantage.",
+  "#Ceux qui ont vu",
+  "@8 h 15.",
+  "Sunao Tsuboi, 20 ans, marche vers son école. Il entend un grand bruit, est projeté à plusieurs mètres et se retrouve gravement brûlé. Il a refusé, ce matin-là, de rester déjeuner à la cantine, et tous ceux qui s'y trouvaient sont morts.",
+  "Tsutomu Yamaguchi, 29 ans, ingénieur naval chez Mitsubishi, rentre d'un voyage de travail. Il voit un avion et un objet qui descend au bout d'un parachute, se jette dans un fossé, et c'est le souffle qui le projette dans un champ. Il survivra, et il sera à Nagasaki trois jours plus tard, où il vivra la même chose une seconde fois.",
+  "#Les enfants",
+  "@6 août 1945.",
+  "Keiko Ogura a huit ans. Son père lui a défendu de sortir ce matin-là. Elle voit tout devenir blanc, puis le ciel se remplir de suie, puis tomber une pluie noire et grasse. Emiko Okada, qui a le même âge, dira plus tard qu'elle a eu l'impression que le soleil tombait sur elle. Seiko Komatsu, neuf ans, voit cette pluie noire retomber sur ses grands-parents blessés.",
+  "Hiroko Watanabe, treize ans, démolit des bâtiments à un kilomètre et demi du centre de l'explosion. Elle aperçoit un avion, un éclair, et s'évanouit. Tous ces enfants ont raconté ce moment des décennies plus tard, souvent pour que d'autres ne l'oublient pas.",
+  "!La ville a disparu en quelques secondes.",
+  "Les survivants marchent dans les ruines, vers les rivières, dans l'espoir d'y trouver de l'eau. Les hôpitaux sont détruits, et la plus grande partie du personnel médical est morte ou hors d'état de soigner. Il n'y a presque personne pour s'occuper des blessés.",
+  "#Combien de morts",
+  "@Après le 6 août.",
+  "On ne saura jamais le nombre exact. Les estimations vont de 70 000 à 80 000 morts sur le coup, parmi les 350 000 habitants que comptait la ville, et ce chiffre a plus que doublé d'ici la fin de l'année, du fait des blessures et des effets des radiations. Des milliers de survivants, les hibakusha, en garderont des séquelles et la stigmatisation toute leur vie.",
+  "Ce que l'on retient d'un tel événement tient rarement à un chiffre. C'est la liste de ce que chaque survivant faisait à cet instant précis : marcher vers l'école, déjeuner, démolir une maison, regarder un avion. Un matin d'été ordinaire, que la ville a mis des années à reconstruire, et que ceux qui l'ont vécu racontent depuis, pour que cet instant-là reste dans la mémoire.",
+  "Le Dôme de Genbaku, resté debout au-dessus des ruines, est aujourd'hui inscrit au patrimoine mondial de l'humanité."
+ ],
+ "notes": "Retiré : citations de survivants (non vérifiables ici, passées en style indirect), 12,5 kt remplacé par 15 kt (estimations 12 à 18), source divergente sur l'heure (8 h 16), phrase du copilote. À vérifier : Yamaguchi dans un champ, bilan de fin 1945, 600 m d'altitude (1 900 pieds)."
+}

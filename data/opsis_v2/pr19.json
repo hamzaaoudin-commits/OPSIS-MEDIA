@@ -1,0 +1,34 @@
+{
+ "id": "pr19",
+ "fmt": 3,
+ "name": "Mandela à Rivonia : un idéal",
+ "sub": "Pretoria, 1963-1964 : après une descente de police dans une ferme de banlieue, dix hommes risquent la potence, et Nelson Mandela prononce depuis le banc des accusés le discours de sa vie",
+ "blurb": {
+  "b": "Juillet 1963 : la police sud-africaine fait irruption dans une ferme près de Johannesburg et y arrête les chefs de la résistance clandestine. Le procès qui suit menace d'envoyer dix hommes à la potence. Mais Nelson Mandela choisit de ne pas se défendre : il parle, plusieurs heures durant, et finit par une phrase qui fait le tour du monde.",
+  "h": "Dix hommes risquent la pendaison ; l'un d'eux choisit de parler."
+ },
+ "body": [
+  "#Une ferme près de Johannesburg",
+  "@Rivonia, 11 juillet 1963.",
+  "Le 11 juillet 1963, en fin d'après-midi, une camionnette de blanchisserie remonte l'allée de Liliesleaf, une ferme de la banlieue nord de Johannesburg. Dans la camionnette, des policiers. À l'intérieur de la maison, des hommes sont réunis autour d'une table. Ils sont en train de lire un document qui s'appelle « Opération Mayibuye », un plan de lutte armée.",
+  "La police les arrête presque tous. Elle saisit aussi des papiers, qui décrivent des projets de sabotage et la préparation d'une guerre de guérilla. Parmi les hommes pris sur place figurent Walter Sisulu, Govan Mbeki, Ahmed Kathrada, Raymond Mhlaba et Denis Goldberg. D'autres suivent, dont Andrew Mlangeni et Elias Motsoaledi.",
+  "Nelson Mandela n'est pas à la ferme. Il est déjà en prison, où il purge cinq ans de détention pour avoir quitté le pays illégalement et appelé à la grève. On l'ajoute à la liste des accusés.",
+  "#Dix hommes, la peine de mort",
+  "@Pretoria, automne 1963.",
+  "Le procès s'ouvre à la Cour suprême de Pretoria, devant le juge Quartus de Wet. Le procureur, Percy Yutar, accuse les dix hommes de sabotage et de complot visant à renverser l'État. Ils plaident non coupable et risquent la pendaison.",
+  "Leur équipe de défense, qui comprend notamment Bram Fischer, Joel Joffe, Arthur Chaskalson et George Bizos, sait bien que le dossier de l'accusation est solide. Elle ne cherche donc pas seulement à gagner, mais à faire de l'audience une tribune, et à éviter la peine capitale.",
+  "#Un discours depuis le banc",
+  "@20 avril 1964.",
+  "Au moment où commence la défense, au printemps 1964, Mandela prend une décision inhabituelle : il ne montera pas à la barre, où il serait soumis au contre-interrogatoire du procureur. Il parlera depuis le banc des accusés, ce qui l'oblige à lire une déclaration et à ne pas répondre aux questions.",
+  "Il la lit pendant plusieurs heures. Il explique que l'ANC a choisi le sabotage après des années de lutte non violente, quand le gouvernement répondait à chaque protestation par de nouvelles lois et par la force. Il dit qu'il n'a pas voulu viser des personnes. Il dit aussi que le combat qu'il mène n'est pas dirigé contre les Blancs, mais contre la domination d'un groupe sur un autre, quel qu'il soit.",
+  "Il termine par une phrase qui aurait pu lui coûter la vie.",
+  "!J'ai chéri l'idéal d'une société démocratique et libre, où tous vivent ensemble en harmonie et avec des chances égales. C'est un idéal pour lequel j'espère vivre et que j'espère atteindre. Mais si besoin est, c'est un idéal pour lequel je suis prêt à mourir.",
+  "Les juristes présents savent que le dossier est lourd, et que cette dernière phrase peut avoir un prix. Elle n'en aura pas.",
+  "#Le verdict",
+  "@Pretoria, 11 – 12 juin 1964.",
+  "Le 11 juin 1964, le juge de Wet déclare huit des accusés coupables. Lionel Bernstein est acquitté, et James Kantor avait été relaxé en cours de procès. Le lendemain, 12 juin, Mandela, Sisulu, Mbeki, Mhlaba, Kathrada, Goldberg, Motsoaledi et Mlangeni apprennent leur peine : la prison à perpétuité.",
+  "Les accusés avaient compris qu'on pouvait les envoyer à la mort. Le juge ne la prononce pas, et l'on ne sait pas exactement ce qui l'a retenu. La pression internationale a été forte : des gouvernements, des églises, des syndicats et les Nations unies avaient réclamé la clémence.",
+  "Mandela est envoyé sur l'île de Robben Island. Il y restera dix-huit ans, avant d'être transféré dans d'autres prisons, et ne sortira qu'en 1990. Le discours de Rivonia, lui, a rempli son office : il a donné à un mouvement interdit une voix publique, et à un homme alors presque inconnu à l'étranger le visage d'un symbole."
+ ],
+ "notes": "Retirés : listes exactes des chefs d'accusation, détails de l'évasion de Goldreich et Wolpe, date exacte de l'ouverture (30 octobre contestée), état civil de Kantor et de Kathrada. À vérifier : traduction de la dernière phrase, nombre exact d'accusés présents (neuf ou dix selon les phases), rôle exact de la pression internationale."
+}

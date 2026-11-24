@@ -1,0 +1,35 @@
+{
+ "id": "sc11",
+ "fmt": 3,
+ "name": "James Lind et les douze marins du Salisbury",
+ "sub": "Golfe de Gascogne, 1747 — Un chirurgien de marine divise douze marins malades en six paires et leur donne six remèdes différents. L'un d'eux guérit. La marine mettra près d'un demi-siècle à l'adopter.",
+ "dates": "1747–1795",
+ "country": "Royaume-Uni",
+ "job": "James Lind, chirurgien de marine",
+ "yr": 1747,
+ "src": [
+  "« James Lind », Wikipédia (anglais). en.wikipedia.org/wiki/James_Lind",
+  "J. Lind, A Treatise of the Scurvy, Édimbourg, Kincaid et Donaldson, 1753."
+ ],
+ "body": [
+  "Pendant des siècles, un mal étrange tue des marins par centaines. Au début, ils sont fatigués. Puis leurs gencives gonflent et saignent, leurs dents se déchaussent, d'anciennes cicatrices se rouvrent, et leurs jambes se couvrent de taches. À la fin, ils meurent. Sur les longs voyages, le scorbut fait plus de victimes que les batailles. Personne ne sait ce qui le provoque, ni comment le soigner.",
+  "En mai 1747, le chirurgien James Lind est à bord du Salisbury, un navire de la marine britannique qui patrouille dans le golfe de Gascogne. Les hommes sont en mer depuis deux mois, et le scorbut s'est déclaré à bord.",
+  "#Une comparaison",
+  "Le 20 mai 1747, il choisit douze marins atteints du mal, tous dans un état comparable. Il les installe ensemble, leur donne le même repas, et les répartit en six paires. À chaque paire, il ajoute un traitement différent.",
+  "Le premier groupe boit environ un litre de cidre par jour. Le deuxième avale vingt-cinq gouttes d'un élixir acide, à base d'acide sulfurique. Le troisième prend six cuillerées de vinaigre. Le quatrième boit chaque jour un quart de litre d'eau de mer. Le cinquième reçoit deux oranges et un citron. Le sixième mange une pâte épicée avec de l'eau d'orge.",
+  "C'est l'une des premières comparaisons organisées de traitements de l'histoire de la médecine : mêmes malades, même nourriture, un seul facteur qui change.",
+  "#Les oranges",
+  "Les résultats sont rapides, et l'un d'eux est net. Les deux marins qui reçoivent des agrumes s'améliorent plus que tous les autres. Au bout de six jours, l'un est déjà apte à reprendre son service, l'autre est presque guéri. Le traitement doit s'arrêter, car il n'y a plus de fruits à bord. Les marins qui boivent du cidre vont, eux, un peu mieux. Les autres ne progressent pas.",
+  "En 1753, Lind publie à Édimbourg un Traité du scorbut, dédié à lord Anson, un amiral dont l'expédition autour du monde avait été durement frappée par la maladie. Le livre est, pour l'essentiel, ignoré.",
+  "#Pourquoi si peu de monde l'écoute",
+  "Lui-même, d'abord, n'est pas sûr de lui. Comme la plupart de ses confrères, Lind pense que le scorbut a plusieurs causes : une nourriture mal digérée, l'eau de mauvaise qualité, le travail excessif, l'humidité de l'air. Il n'affirme pas que les agrumes suffisent, et il recommande parfois d'autres remèdes. Il propose surtout un sirop concentré d'agrumes obtenu par ébullition, que l'on sait aujourd'hui avoir perdu une grande partie de son efficacité.",
+  "Les autorités médicales, de leur côté, estiment que le scorbut est une maladie de putréfaction du corps. Les citrons sont chers, et rares. Pendant des années, on les réserve aux navires qui croisent près des côtes, sous la direction de chirurgiens convaincus.",
+  "Le changement vient peu à peu. D'autres médecins de la marine, dont Gilbert Blane et Thomas Trotter, reprennent l'idée. En 1794, le navire Suffolk, qui fait une très longue traversée, reçoit du jus de citron sur ordre d'un contre-amiral, Alan Gardner : l'équipage arrive en bonne santé. En 1795, la distribution régulière de jus de citron à la flotte est décidée. Elle ne devient générale qu'après 1800, sous l'impulsion d'un amiral, lord St Vincent.",
+  "Quarante-huit ans se sont écoulés depuis l'expérience du Salisbury. On n'identifiera la substance qui manquait aux marins, la vitamine C, qu'au début des années 1930."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : Lind chirurgien du HMS Salisbury (flotte de la Manche, golfe de Gascogne) ; essai commencé le 20 mai 1747 après environ deux mois de mer ; douze marins scorbutiques en six paires, même régime, un complément chacun ; traitements : un quart de cidre, vingt-cinq gouttes d'élixir de vitriol, six cuillerées de vinaigre, un demi-pint d'eau de mer, deux oranges et un citron, pâte épicée avec boisson d'eau d'orge (la page dit « spicy paste », et non une pâte purgative) ; les agrumes cessent au bout de six jours, faute de fruits, un marin apte au service et l'autre presque guéri ; Traité du scorbut publié à Édimbourg en 1753, dédié à lord Anson, en grande partie ignoré ; Lind attribue le scorbut à plusieurs causes, recommande un concentré bouilli (« rob ») ; Blane, Trotter, Gardner (essai du Suffolk en 1794) ; distribution régulière approuvée en 1795, généralisée après 1800 sous St Vincent. La page précise que seul le groupe au cidre aurait eu un effet net outre les agrumes : formulation prudente adoptée. À vérifier avant publication : les conversions (un quart de gallon ≈ un litre de cidre, un demi-pinte ≈ un quart de litre d'eau de mer), l'ordre de présentation des symptômes, la phrase sur la supériorité du scorbut sur les batailles, la durée de 48 ans, l'isolement de la vitamine C « au début des années 1930 » (1932-1933), « sirop d'agrumes » pour le rob, le rôle de la mer de Biscaye.",
+ "blurb": {
+  "b": "En mai 1747, à bord d'un navire de guerre britannique, le chirurgien James Lind soigne douze marins atteints du scorbut. Il leur donne, par paires, six remèdes différents, du cidre à l'eau de mer. Un seul traitement agit nettement. Il faudra pourtant près de cinquante ans pour que la marine en tire des conséquences.",
+  "h": "Six remèdes, douze hommes, et une réponse que la marine a mis cinquante ans à entendre."
+ }
+}

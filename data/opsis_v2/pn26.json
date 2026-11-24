@@ -1,0 +1,28 @@
+{
+ "id": "pn26",
+ "fmt": 3,
+ "name": "Pont de Tacoma : Galloping Gertie",
+ "sub": "Washington, 7 novembre 1940 : un pont suspendu vieux de quatre mois se tord dans un vent modéré, et l'explication enseignée pendant des décennies se révèle fausse",
+ "blurb": {
+  "b": "Quatre mois après son ouverture, le pont des Narrows de Tacoma, surnommé Galloping Gertie, se tord dans un vent pourtant modeste, puis s'effondre sous l'objectif des caméras. Un seul être vivant y laisse la vie, un chien. Mais la leçon retenue pendant des décennies, la résonance, était fausse, et la vraie cause reste en partie mystérieuse.",
+  "h": "Un pont trop souple, un vent modéré, et une explication de manuel fausse"
+ },
+ "body": [
+  "#Un pont plus léger",
+  "@Tacoma, Washington, 1938-1940.",
+  "En 1938, on commence à bâtir un pont suspendu au-dessus du détroit de Tacoma, dans l'État de Washington. Le premier projet, plus lourd, est jugé trop cher. L'ingénieur Leon Moisseiff propose alors une version plus économique, avec des poutres plus fines. Le tablier devient très élancé, bien davantage que celui du Golden Gate, en proportion de sa portée. Sur le papier, le pont est calculé pour résister à des vents de 120 milles à l'heure. Moisseiff n'est pas un amateur : c'est l'un des ingénieurs de ponts suspendus les plus respectés de son temps, et c'est justement la mode de ces structures toujours plus minces qui l'inspire.",
+  "Il ouvre le 1er juillet 1940. Très vite, le tablier se met à osciller de haut en bas, de façon visible, au point de gagner un surnom : « Galloping Gertie ». Certains automobilistes viennent exprès pour sentir la chaussée onduler sous leurs roues.",
+  "Un professeur de l'université de Washington, Frederick Farquharson, fait des essais en soufflerie sur des maquettes. Il voit apparaître une torsion et recommande de percer les poutres ou d'ajouter des carénages. Les déflecteurs sont approuvés en novembre 1940.",
+  "#Le matin du 7 novembre",
+  "!Ils arrivent trop tard.",
+  "Ce matin-là, le vent mesure environ 38 puis 42 milles à l'heure, un vent fort mais très loin de ce pour quoi le pont avait été calculé. Vers 10 heures, la chaussée commence à se tordre sur elle-même, jusqu'à s'incliner d'environ 28 pieds de chaque côté. Elle tient encore une heure, puis s'effondre vers 11 heures.",
+  "Un journaliste, Leonard Coatsworth, traverse le pont en voiture avec le chien de sa fille, Tubby. Sa voiture est projetée contre le trottoir. Il en sort et rampe jusqu'à la tour. La voiture et Tubby tombent dans le détroit avec la chaussée. Farquharson filme l'effondrement, et ces images feront le tour des écoles d'ingénieurs. Aucun être humain n'est mort.",
+  "#Une explication qui ne tenait pas",
+  "Pendant des décennies, on a enseigné que le pont s'était effondré par résonance : le vent aurait poussé au même rythme que la vibration naturelle du tablier, comme un enfant qui pousse une balançoire au bon moment. C'est faux. Le calcul de fréquence ne correspondait pas à ce que l'on observait.",
+  "Le pont s'est effondré par flottement en torsion, un mouvement qui s'entretient tout seul : le tablier, en bougeant, crée lui-même les forces qui l'amplifient. Chaque oscillation nourrit la suivante, sans qu'il soit besoin d'un vent régulier.",
+  "#Ce qui reste inexpliqué",
+  "Les causes ne sont pas toutes résolues. Le flottement se produit d'habitude à très grande vitesse, vers 100 milles à l'heure, alors que la rupture a commencé par un vent modéré, ce qui est jugé inhabituel sans être pleinement expliqué. On ne sait toujours pas avec certitude pourquoi le mouvement est passé de vertical à torsion.",
+  "La catastrophe a conduit à revoir la façon de dessiner les ponts. Le vent n'agit pas sur une masse inerte : il agit sur une forme, et celle d'un tablier mince, plein, qui offre une large prise, est difficile à mettre en règles. Depuis, on teste les ponts en soufflerie avant de les construire. Ce que l'on avait d'abord pris pour une anecdote de chantier, un pont qui bougeait un peu trop, était en réalité le signe d'une ignorance de toute une profession. Un nouveau pont, beaucoup plus rigide, prendra la place du premier en 1950."
+ ],
+ "notes": "Retiré : rien d'important. Ajouté sans source vérifiable dans l'ancienne version : « certains automobilistes viennent exprès » (fait connu mais à confirmer), et les essais en soufflerie systématiques ensuite. À vérifier aussi : 38 puis 42 mph, 28 pieds."
+}

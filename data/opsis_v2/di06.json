@@ -1,0 +1,34 @@
+{
+ "id": "di06",
+ "fmt": 3,
+ "name": "Flannan Isles : une ardoise",
+ "sub": "Décembre 1900 : trois gardiens ont disparu d'un phare isolé des Hébrides ; derrière eux, une ardoise arrêtée en pleine journée, et la mer pour seule explication officielle",
+ "blurb": {
+  "b": "En décembre 1900, le bateau de relève atteint Eilean Mòr, dans les Hébrides, et ne trouve personne. Les portes sont fermées, les lampes prêtes, et sur une ardoise, les dernières notes de trois gardiens. Le rapport officiel accuse une vague. Mais pourquoi les trois hommes étaient-ils dehors en même temps ?",
+  "h": "Trois gardiens, un phare propre et une ardoise arrêtée en plein jour"
+ },
+ "body": [
+  "#Un phare qui n'a pas un an",
+  "@Eilean Mòr, Hébrides extérieures, décembre 1900.",
+  "Sur Eilean Mòr, un rocher battu par l'Atlantique à l'ouest de l'île de Lewis, la tour du phare des Flannan se dresse sur vingt-trois mètres de pierre. Il a fallu quatre ans pour la bâtir, de 1895 à 1899, et la lumière ne brille que depuis le 7 décembre 1899. L'été, le lieu semble presque doux. L'hiver, la mer passe par-dessus les falaises.",
+  "Trois hommes y vivent en ce mois de décembre 1900 : James Ducat, Thomas Marshall et Donald McArthur. McArthur n'est pas un gardien régulier. Il est là pour remplacer William Ross, absent. Un quatrième homme, Joseph Moore, est resté à terre, à Breasclete, sur Lewis ; son tour de service reviendra avec le bateau de relève.",
+  "#Une lumière qui manque",
+  "@15 – 26 décembre 1900.",
+  "Le 15 décembre, le vapeur Archtor, qui passe au large, remarque que le phare ne fonctionne pas. Il accoste à Leith le 18, et l'information ne remonte pas jusqu'aux autorités du phare. Pendant ce temps, le bateau de relève, l'Hesperus, ne peut pas quitter Breasclete, le 20, à cause du mauvais temps.",
+  "Il atteint enfin l'île à midi, le 26 décembre. Onze jours se sont écoulés depuis le signalement de l'Archtor. Les marins cherchent le drapeau qui annonce d'ordinaire qu'on les attend. Il n'y en a pas. Sur le débarcadère, personne ne vient prendre les amarres.",
+  "#Ce que Moore a trouvé",
+  "@Le phare, 26 décembre 1900.",
+  "Moore descend seul. Il gravit le chemin, trouve la porte de l'enceinte fermée, puis la porte principale, fermée elle aussi. L'horloge est arrêtée. Les lampes ont été nettoyées et remplies, comme si la lumière attendait la nuit suivante. Un jeu de cirés est resté à l'intérieur : l'un des hommes est donc sorti sans, ou bien n'est pas sorti de la même manière que les autres.",
+  "Le journal de bord s'arrête le 13 décembre. Mais les relevés se poursuivent sur une ardoise, jusqu'à 9 heures le 15 décembre. Les gardiens y notaient ce qu'ils voyaient pour le recopier plus tard au propre.",
+  "!Personne n'a jamais recopié l'ardoise.",
+  "Moore ne trouve ni corps, ni mot d'explication, ni signe d'un incendie ou d'une querelle. La lumière, elle, n'a pas été allumée ce soir-là, ni les suivants.",
+  "#La mer, faute de mieux",
+  "@29 décembre 1900.",
+  "Le surintendant Robert Muirhead arrive le 29 décembre. Il connaît les trois hommes, qu'il a lui-même engagés. Il parcourt l'île et regarde du côté du débarcadère ouest, exposé aux plus grosses vagues. Là, des rambardes sont tordues, une caisse a été fracassée, un rocher de plus d'une tonne a été déplacé, et le gazon a été arraché au sommet de la falaise.",
+  "Muirhead écrit que les gardiens sont probablement descendus au débarcadère, le 15, pour mettre à l'abri la caisse qui contenait les cordages d'amarrage, et qu'une vague énorme les a emportés tous les trois. Pour un phare qu'on voulait inattaquable, c'est une explication à la mesure de l'océan : simple, brutale, et jamais confirmée par un témoin.",
+  "Elle laisse pourtant des questions. On ne sait pas pourquoi les trois hommes se trouvaient dehors en même temps, alors que la règle voulait que l'un reste au phare. Et on ne sait pas non plus quand, exactement, la lumière s'est éteinte.",
+  "Ce qui a nourri la légende vient d'ailleurs. Un récit célèbre parle d'un journal de bord noirci de notes sur une tempête que nul n'avait vue, de lits défaits, de repas à moitié mangés. Rien de cela n'est établi, et le journal qu'on cite n'est pas celui que Moore a trouvé. Les faits attestés sont plus minces, et plus troublants : un phare propre, des portes closes, une ardoise qui s'arrête au milieu d'un jour ordinaire.",
+  "D'autres hommes sont venus relever les disparus, et les lampes ont été rallumées. Le phare a continué à tourner, au-dessus d'une mer qui avait gardé sa part du secret, et dont personne ne saura jamais quelle vague, ce jour-là, a été la bonne."
+ ],
+ "notes": "Retiré : coût de construction, nom de l'architecte, nombre exact de mètres de la caisse. À vérifier : l'état des lits et de l'horloge, la durée de l'extinction."
+}

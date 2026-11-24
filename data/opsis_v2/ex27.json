@@ -1,0 +1,32 @@
+{
+ "id": "ex27",
+ "fmt": 3,
+ "name": "Tham Luang : les Sangliers",
+ "sub": "Thaïlande, 23 juin – 10 juillet 2018 : douze garçons et leur entraîneur se retrouvent coincés par la crue dans une grotte, et le sauvetage coûte la vie à un plongeur bénévole",
+ "blurb": {
+  "b": "Après un entraînement, douze garçons d'une équipe de football et leur entraîneur entrent dans une grotte de Thaïlande. La pluie les piège. Neuf jours plus tard, deux plongeurs britanniques les trouvent vivants, à des kilomètres de la sortie. Reste à les en faire sortir : pour cela, une opération sans précédent et une vie perdue.",
+  "h": "Treize prisonniers d'une grotte, un seul moyen d'en sortir"
+ },
+ "body": [
+  "#La pluie",
+  "@Chiang Rai, 23 juin 2018.",
+  "Le samedi 23 juin 2018, après un entraînement, douze garçons de 11 à 16 ans entrent dans le réseau de Tham Luang Nang Non, dans la province de Chiang Rai. Ils jouent dans une équipe locale de football, les Sangliers. Leur entraîneur adjoint, Ekkaphon Kanthawong, 25 ans, les accompagne.",
+  "Peu après, une forte pluie inonde une partie du réseau et bloque la sortie. L'entraîneur principal donne l'alerte le soir, quand il trouve leurs vélos et leurs affaires à l'entrée.",
+  "#Neuf jours",
+  "@25 juin – 2 juillet 2018.",
+  "Les plongeurs de la Marine thaïlandaise commencent à chercher le 25 juin, mais l'eau trouble et la pluie interrompent le travail. Des plongeurs britanniques arrivent le 27 juin, suivis d'équipes des États-Unis, d'Australie et de Chine. La grotte fait environ dix kilomètres ; le groupe se trouve à environ deux kilomètres de l'entrée, plusieurs centaines de mètres sous le sommet. Passages inondés, courants, visibilité nulle, sections très étroites : le trajet est très dangereux.",
+  "!Le 2 juillet, deux plongeurs britanniques, Volanthen et Stanton, trouvent le groupe vivant sur un banc de roche surélevé, à environ 400 mètres au-delà de la chambre appelée « Pattaya Beach ».",
+  "Ils sont là depuis neuf jours, treize personnes sur un banc de roche, à plusieurs centaines de mètres sous la montagne. Pour la première fois, les familles qui attendent à l'entrée apprennent que les enfants sont vivants. Narongsak Osotthanakorn, qui dirige le sauvetage, dit : « Nous les avons trouvés en sécurité. Mais l'opération n'est pas terminée. » Seul Adul Sam-on parle anglais. Des soldats de la Marine et un médecin de l'armée restent avec les garçons.",
+  "#Comment sortir ?",
+  "@3 – 8 juillet 2018.",
+  "Les sauveteurs pèsent plusieurs options : attendre la fin de la mousson, apprendre aux garçons à plonger, trouver une autre entrée, forer un puits. Plus de cent évents sont percés, sans résultat utilisable. Les pompes évacuent environ 1,6 million de litres par heure, et plus d'un milliard de litres au total. Mais l'oxygène baisse, jusqu'à 15 % le 8 juillet, et la pluie prévue menace.",
+  "Il y a aussi le prix à payer. Saman Kunan, 37 ans, ancien plongeur de la Marine royale thaïlandaise, est bénévole. Le soir du 5 juillet, il plonge pour livrer des bouteilles d'air ; au retour, il perd connaissance sous l'eau. Il est déclaré mort vers 1 heure du matin, le 6 juillet.",
+  "Apprendre aux garçons à plonger est jugé trop risqué. Ils seront sédatés pour le trajet, par l'anesthésiste Richard Harris.",
+  "#Trois jours",
+  "@8 – 10 juillet 2018.",
+  "Le 8 juillet, dix-huit plongeurs entrent dans la grotte. Chaque garçon a un plongeur référent. Ils partent à environ quarante-cinq minutes d'intervalle, attachés, puis sont portés sur des civières, avec des poulies, jusqu'à l'entrée. Quatre garçons sortent le 8, quatre autres le 9, puis les quatre derniers et leur entraîneur, le 10.",
+  "Les militaires et le médecin restés avec le groupe sortent en dernier. Peu avant, un tuyau d'eau éclate et la pompe principale s'arrête, ce qui oblige à évacuer vite. Le petit sous-marin qu'Elon Musk avait annoncé le 7 juillet n'est pas utilisé : la grotte est trop étroite.",
+  "On ne sait pas si un autre procédé aurait permis de sortir plus tôt. Selon le gouvernement thaïlandais, environ dix mille personnes ont été mobilisées, venues de plusieurs pays. La Marine a promu Saman Kunan à titre posthume, et le roi lui a décerné un ordre royal : il est l'homme qui a payé de sa vie une sortie réussie pour treize autres."
+ ],
+ "notes": "Retiré : détail du trajet exact entre chambres, 'les sources divergent sur l'ordre de sortie', 'quatre travailleurs trouvés le 28 juin' (supprimé, source peu claire), nombre exact d'évents. À vérifier : 'Neuf jours' (23 juin au 2 juillet), 'sédatés' et le rôle exact de Harris, 'très étroites : le trajet est dangereux pour des plongeurs expérimentés' (ajout de ma part), "
+}

@@ -1,0 +1,33 @@
+{
+ "id": "pr27",
+ "fmt": 3,
+ "name": "Baudelaire : six poèmes condamnés",
+ "sub": "Paris, 1857 : deux mois après la parution des Fleurs du mal, le poète est jugé pour outrage à la morale publique ; six poèmes sont retirés, et la condamnation ne sera levée qu'en 1949",
+ "blurb": {
+  "b": "Été 1857 : à peine paru, le recueil de Baudelaire est dénoncé dans la presse puis poursuivi par le ministère public. Le même procureur qui venait de perdre contre Flaubert veut sa revanche. Le tribunal condamne le poète à l'amende et ordonne le retrait de six poèmes. La justice ne reviendra sur ce jugement qu'en 1949.",
+  "h": "Le procureur de Madame Bovary a perdu contre Flaubert ; il se retourne contre Baudelaire."
+ },
+ "body": [
+  "#Un recueil qui dérange",
+  "@Paris, juin – juillet 1857.",
+  "Les Fleurs du mal paraissent à la fin de juin 1857, chez l'éditeur Auguste Poulet-Malassis. Baudelaire a trente-six ans et publie depuis des années des traductions et des articles. Ce premier recueil de poèmes, qu'il a longuement travaillé, est le fruit d'une vie qui n'a rien de tranquille. Il y décrit Paris, l'amour, le désir, la mort, l'ennui, et ne cache pas ce qui, dans la beauté, peut aussi être trouble.",
+  "Le 5 juillet, un critique du Figaro le dénonce. Quelques jours plus tard, un rapport de la Sûreté publique le qualifie de défi jeté aux lois qui protègent la religion et la morale. La police saisit des exemplaires et l'affaire est portée devant le tribunal correctionnel de la Seine.",
+  "#Un procureur pressé",
+  "@Paris, février – août 1857.",
+  "Quelques mois plus tôt, le même ministère public avait poursuivi Gustave Flaubert pour Madame Bovary. Le représentant de l'accusation, Ernest Pinard, avait plaidé contre le roman, mais Flaubert avait été acquitté le 7 février. Pinard retrouve donc un autre écrivain, cette fois un poète.",
+  "Pour Baudelaire, la comparaison est rassurante. Il croit que, si Flaubert a été relaxé, la justice ne saurait le punir plus durement. Il se trompe. Il a plus d'ennemis, moins d'appuis dans les milieux officiels, et un recueil dont certaines pages sont plus directes que le roman de Flaubert.",
+  "#Le procès",
+  "@Paris, 20 août 1857.",
+  "L'audience a lieu le 20 août 1857. Pinard, substitut du procureur impérial, soutient l'accusation. Il cite plusieurs poèmes et leur reproche des peintures trop crues, dont l'effet, dit-il, est de séduire les lecteurs. Il estime que le réalisme du poète manque de mesure et que son livre offense la morale publique et la morale religieuse.",
+  "L'avocat de Baudelaire, Me Chaix d'Est-Ange, plaide que peindre le vice n'est pas l'approuver. Il insiste sur la tonalité douloureuse du recueil, sur ce qu'il a de moral à sa manière. Mais le tribunal n'est pas convaincu.",
+  "!Le même jour, le tribunal condamne Baudelaire pour outrage à la morale publique et aux bonnes mœurs.",
+  "Il le relaxe de l'offense à la morale religieuse. L'amende est de trois cents francs pour le poète, de cent francs pour l'éditeur. Surtout, le jugement ordonne la suppression de six poèmes : Les Bijoux, Le Léthé, À celle qui est trop gaie, une pièce des Femmes damnées, Lesbos et Les Métamorphoses du vampire.",
+  "#Un livre mutilé",
+  "@1857 – 1949.",
+  "Baudelaire est atterré. Il écrit à l'impératrice Eugénie pour solliciter la remise d'une partie de l'amende, ce qu'elle lui accorde. Il continue pourtant de composer. En 1861, il publie une deuxième édition des Fleurs du mal, privée des six pièces condamnées mais enrichie de nombreux poèmes nouveaux, parmi lesquels Le Cygne. Les poèmes interdits paraissent séparément en 1866, à Bruxelles, dans un recueil intitulé Les Épaves.",
+  "Baudelaire meurt en 1867. Il n'aura jamais vu la condamnation levée. Il faut attendre le 31 mai 1949 : la Cour de cassation réhabilite le poète et annule le jugement de 1857, qui n'avait jamais été effacé.",
+  "Il reste dans cette affaire une ironie que Baudelaire lui-même aurait goûtée. Les six poèmes condamnés comme dangereux sont aujourd'hui lus par tous les lycéens, et ceux qui l'ont jugé n'existent plus dans les mémoires que par ce procès.",
+  "On ne sait pas exactement quels vers du recueil ont pesé le plus dans le jugement. Mais on sait que ce procès a donné une étrange publicité à un livre qui, sans lui, aurait peut-être mis plus longtemps à trouver ses lecteurs."
+ ],
+ "notes": "Retirés : nombre exact de poèmes cités par Pinard, montant exact de l'amende de l'éditeur (100 francs), pièce exacte des Femmes damnées, éventuel recours. À vérifier : remise d'amende par l'impératrice Eugénie (réduction à 50 francs), date de réhabilitation du 31 mai 1949, mention du Cygne dans l'édition de 1861."
+}

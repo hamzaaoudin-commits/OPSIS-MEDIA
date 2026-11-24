@@ -1,0 +1,32 @@
+{
+ "id": "ce17",
+ "fmt": 3,
+ "name": "Perelman : un million refusé",
+ "sub": "Saint-Pétersbourg, 2002 – 2010 : un mathématicien met en ligne trois textes qui prouvent la conjecture de Poincaré, refuse la médaille Fields, puis le million de dollars",
+ "blurb": {
+  "b": "Un problème posé en 1904 résiste un siècle. En 2002, un mathématicien russe en met la solution en ligne, sans passer par une revue. Les pairs vérifient. Il refuse alors la plus haute distinction de sa discipline, puis un million de dollars, et se retire.",
+  "h": "Il a résolu un problème d'un siècle et tout refusé"
+ },
+ "body": [
+  "#Trois textes en ligne",
+  "@Novembre 2002 – juillet 2003.",
+  "Grigori Perelman est né à Leningrad en 1966. Peu après ses seize ans, il remporte la médaille d'or aux Olympiades internationales de mathématiques, avec un score parfait. Au début des années 1990, il travaille dans des universités américaines, puis refuse des postes à Princeton et à Stanford, et rentre en 1995 à l'institut Steklov, à Saint-Pétersbourg.",
+  "Entre novembre 2002 et juillet 2003, le mathématicien Grigori Perelman dépose trois articles sur arXiv, un site de mise en ligne ouvert à tous. Le premier, du 11 novembre 2002, porte sur une formule d'entropie pour le flot de Ricci. Le deuxième, de mars 2003, traite de ce flot avec chirurgie sur les variétés de dimension trois. Le troisième, de juillet 2003, donne un argument suffisant pour la conjecture de Poincaré, mais pas pour toute la géométrisation.",
+  "Ces textes sont denses, et ils ne passent par aucune revue. En décembre 2005, Perelman quitte l'institut Steklov. Au printemps 2003, Perelman donne de courtes séries d'exposés aux États-Unis, notamment au MIT et à Princeton.",
+  "#Une question de 1904",
+  "@1904 – 1982.",
+  "En 1904, Henri Poincaré pose « seulement une question ouverte », sans oser conjecturer dans un sens ni dans l'autre. Elle demande si un espace fermé de dimension trois, où toute boucle peut être resserrée jusqu'à un point, est nécessairement la sphère à trois dimensions. Les dimensions supérieures tombent d'abord : Stephen Smale en 1961, Michael Freedman en dimension quatre en 1982. Reste la dimension trois.",
+  "Richard Hamilton introduit en 1982 le flot de Ricci, un outil profondément original, et s'en sert pour prouver des cas particuliers, sans parvenir à conclure. C'est de cet outil que se sert Perelman.",
+  "#Vérifier",
+  "@2003 – 2006.",
+  "Des mathématiciens étudient pas à pas les textes. En 2006, trois exposés complets paraissent : Kleiner et Lott, Cao et Zhu, Morgan et Tian. Tous trouvent que les lacunes de Perelman sont mineures et qu'on peut les combler avec ses propres techniques. Kleiner et Lott écrivent : « Nous n'avons trouvé aucun problème grave ». En décembre 2006, la revue Science désigne la preuve « percée de l'année ».",
+  "Une polémique s'ensuit : certains lisent l'exposé de Cao et Zhu comme une appropriation du travail de Perelman, et une version révisée est parue avec les excuses du comité éditorial. Les auteurs ont parlé de négligence.",
+  "#Trois refus",
+  "@1996 – 2010.",
+  "En mai 2006, un comité de neuf mathématiciens vote pour lui attribuer la médaille Fields. Le président de l'Union mathématique internationale, John Ball, vient le voir à Saint-Pétersbourg et passe environ dix heures sur deux jours à tenter de le convaincre. Il renonce.",
+  "!Il est la seule personne à avoir décliné la médaille Fields.",
+  "Il a dit ne pas vouloir être exposé « comme un animal dans un zoo ». En mars 2010, l'institut Clay annonce qu'il remplit les critères de son prix d'un million de dollars. Perelman refuse, parce qu'il juge la décision injuste : Hamilton, dont le travail lui paraît tout aussi important, n'est pas associé au prix.",
+  "Le problème est le seul des problèmes du millénaire résolu à ce jour. L'institut Clay a utilisé l'argent pour financer une chaire de jeunes mathématiciens à l'Institut Henri Poincaré. Perelman vit à Saint-Pétersbourg avec sa mère et refuse les entretiens depuis 2006. On ne sait pas pourquoi il avait déjà refusé un prix européen en 1996, ni si ses articles ont été publiés en revue : ils n'en avaient pas besoin pour convaincre."
+ ],
+ "notes": "Retiré : biographie (olympiades, thèse, Berkeley), conjecture de l'âme, démission de Steklov, détail de la polémique du New Yorker/Yau, dates des exposés. À vérifier : 'arXiv, site ouvert à tous' (explicitation), 'chaire de jeunes mathématiciens', dernière phrase ('n'en avaient pas besoin')."
+}

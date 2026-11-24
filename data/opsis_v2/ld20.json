@@ -1,0 +1,34 @@
+{
+ "id": "ld20",
+ "fmt": 3,
+ "name": "James Cook : une main sur la tête",
+ "sub": "Kealakekua, 14 février 1779 : après le vol d'une chaloupe, Cook débarque avec dix marins pour retenir le roi ; sur la plage, il tombe dans l'eau, frappé d'un coup de massue puis d'une dague.",
+ "blurb": {
+  "b": "Février 1779, à Hawaï. Une chaloupe du Discovery a été volée. Cook débarque avec dix marins pour garder le roi en otage, comme il l'a déjà fait ailleurs. Une foule se rassemble, un coup de feu part, et le navigateur recule vers les rochers, la main sur la tête. Il ne se relèvera pas.",
+  "h": "Pour une chaloupe volée, Cook débarque et meurt sur une plage hawaïenne"
+ },
+ "body": [
+  "#Le retour dans la baie",
+  "@Kealakekua, 11 – 13 février 1779.",
+  "Cook a cinquante ans. C'est son troisième grand voyage dans le Pacifique, et le premier objectif de l'expédition est de chercher le passage du Nord-Ouest. Fin 1778, les navires ont découvert les îles Hawaï. Quand ils jettent l'ancre à Kealakekua, début 1779, des milliers de Hawaïens viennent à leur rencontre en pirogue. Plusieurs historiens pensent que Cook a été reçu comme une incarnation du dieu Lono, mais ce point est discuté.",
+  "Le 11 février 1779, après qu'un coup de vent a abîmé un mât du Resolution, les navires de James Cook reviennent dans la baie de Kealakekua, à Hawaï, pour des réparations. Quelques semaines plus tôt, ils y avaient été accueillis par une foule immense. Mais l'ambiance a changé : les relations sont tendues, les vols se multiplient, et les prêtres ont placé la baie sous kapu, un interdit sacré.",
+  "Dans la nuit du 13 au 14 février, la chaloupe du Discovery est volée.",
+  "#Le plan",
+  "@14 février 1779, vers 7 heures.",
+  "Cook, apprenant le vol, fait poster des bateaux aux deux extrémités de la baie. Puis il débarque à Kaʻawaloa avec dix marins pour emmener en otage le roi Kalaniʻōpuʻu, procédé qu'il a déjà utilisé ailleurs. Le roi, qu'il trouve endormi, vient de bon gré quand Cook lui prend la main et l'invite à bord.",
+  "Mais sa femme le supplie de ne pas y aller. Autour d'eux, une foule de deux ou trois mille personnes se rassemble, et beaucoup s'arment.",
+  "#La plage",
+  "@Vers 8 heures.",
+  "Cook fait former une ligne aux marins. Il dit à Phillips qu'emmener le chef de force coûterait la vie à beaucoup de gens. Puis l'annonce du meurtre d'un chef, Kalimu, ailleurs dans la baie, irrite la foule. Cook tire à petit plomb, puis à balle. Les marins tirent une fois et ne peuvent recharger.",
+  "Cook ordonne le repli vers les chaloupes. Mais elles se sont déjà éloignées : le lieutenant John Williamson a, selon certains, mal compris son signal.",
+  "Les fusils de l'époque se rechargent lentement. Face à une foule de plusieurs milliers de personnes, une salve ne suffit pas, et dix marins n'ont plus le temps d'en tirer une deuxième. Tout bascule en quelques minutes, sur quelques mètres de rocher.",
+  "#La mort de Cook",
+  "@14 février 1779.",
+  "Selon David Samwell, chirurgien du Discovery, qui n'était pas sur la plage mais a interrogé des témoins, Cook est le dernier sur les rochers, la main sur la tête.",
+  "!Il reçoit un coup de massue dans le dos, puis un coup de dague.",
+  "Samwell écrit : « on ne le revit plus vivant ». Cook et quatre marins meurent, ainsi que dix-sept Hawaïens à Kaʻawaloa et huit autres ailleurs dans la baie.",
+  "Quelques jours plus tard, des Hawaïens rendent une partie de ses restes à ses compagnons, qui l'immergent avec les honneurs militaires. Ce qui avait commencé comme une querelle de voleurs, et une décision de capitaine pressé de récupérer une chaloupe, finit en deuil des deux côtés de la baie.",
+  "On ne sait pas ce qu'il a dit en tombant, ni ce qu'il pensait, ni ce que pensait le roi. Les récits diffèrent sur la question de savoir s'il a fait signe aux bateaux d'arrêter de tirer, sur qui a porté le premier coup, et sur le rôle du lieutenant Williamson. Un homme qui avait traversé le Pacifique et franchi le cercle polaire a trouvé sa fin dans l'eau peu profonde, à quelques mètres de ses propres chaloupes, pour une embarcation volée. Le capitaine Charles Clerke prend le commandement de l'expédition."
+ ],
+ "notes": "Retiré : détails sur le nombre exact de morts, questions de qui a frappé en premier, dernier mot. À vérifier : « procédé utilisé ailleurs » (otage), « cercle polaire » (Cook l'a franchi), prise de commandement par Clerke, mât endommagé (non précisé), rôle de Phillips."
+}

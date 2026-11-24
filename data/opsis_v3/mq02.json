@@ -1,0 +1,51 @@
+{
+ "id": "mq02",
+ "fmt": 3,
+ "name": "Apple 1997 : la survie d'une marque",
+ "sub": "Boston, août 1997 — Apple perd des centaines de millions de dollars, Steve Jobs annonce l'argent de Microsoft, puis lance « Think Different ».",
+ "body": [
+  "#PROLOGUE — Boston, 6 août 1997",
+  "Steve Jobs est sur la scène du Macworld Expo.",
+  "Derrière lui, sur un écran géant, apparaît le visage de Bill Gates, transmis par satellite.",
+  "Jobs vient d'annoncer que Microsoft investit 150 millions de dollars dans Apple.",
+  "Dans la salle, les réactions se mélangent. On applaudit l'investissement. On hue l'annonce qu'Internet Explorer devient le navigateur par défaut du Mac. Quand Gates apparaît, la salle proteste.",
+  "Jobs prend alors la parole pour clore cette querelle ancienne.",
+  "!Il faut cesser de croire que pour qu'Apple gagne, Microsoft doit perdre.",
+  "D'après la biographie de Walter Isaacson, Jobs a jugé cette vidéo de Gates comme une erreur : elle a rendu Apple, et lui-même, tout petits.",
+  "#01 — UNE ENTREPRISE QUI PERD PARTOUT",
+  "Le 20 décembre 1996, Apple a annoncé racheter NeXT, l'entreprise de Jobs, pour 429 millions de dollars et 1,5 million d'actions. Jobs revient ainsi dans la direction d'Apple.",
+  "Les chiffres sont mauvais. Pour l'exercice clos le 26 septembre 1997, Apple publie 7,1 milliards de dollars de ventes, en baisse de 28 %, et une perte nette d'environ 1 milliard de dollars.",
+  "L'exercice précédent, la perte était de 816 millions.",
+  "Le PDG Gil Amelio, arrivé en février 1996, est écarté début juillet 1997. Jobs prend la tête de l'entreprise à titre provisoire en août.",
+  "#02 — LE CONTRAT",
+  "On lit souvent qu'Apple n'avait plus que 90 jours de trésorerie. Mais les chiffres disponibles ne disent pas la même chose.",
+  "Apple affichait 1,2 milliard de dollars de liquidités après le trimestre précédent, et valait 2,46 milliards en Bourse la veille de l'annonce. Une entreprise peut avoir de l'argent en caisse et en brûler vite.",
+  "Microsoft achète 150 millions de dollars d'actions Apple sans droit de vote, au prix du marché. Elle promet de les garder au moins trois ans.",
+  "Elle s'engage aussi à produire Office pour Mac pendant cinq ans. Les deux entreprises règlent leurs litiges de brevets, et Apple abandonne son procès sur la ressemblance de Windows avec le Mac.",
+  "#03 — « THINK DIFFERENT »",
+  "Sous Amelio, l'agence BBDO avait proposé une campagne « We're back ». Jobs la rejette et convoque trois agences. TBWA\\Chiat\\Day l'emporte.",
+  "La première publicité passe le 28 septembre 1997. Elle commence par « Here's to the crazy ones ».",
+  "Jobs enregistre sa propre version du texte. Le matin de la première diffusion, il choisit celle de l'acteur Richard Dreyfuss.",
+  "Jobs tient aussi à ce que « different » soit employé comme un nom, comme dans « think victory » ou « think beauty ». La campagne dure de 1997 à 2002.",
+  "Qui l'a inventée ? Rob Siltanen, rédacteur de l'agence, attribue le slogan au directeur artistique Craig Tanimoto. Il dit que Jobs a d'abord détesté son script, et juge « révisionniste » la version d'Isaacson, où Jobs écrit une grande partie du texte.",
+  "Son récit n'est pas vérifié par un tiers.",
+  "#ÉPILOGUE — Une alliance et un slogan",
+  "Le spot reçoit l'Emmy de la meilleure publicité en 1998.",
+  "On ne sait pas si les 150 millions ont sauvé Apple ou si leur valeur était surtout un signal envoyé au marché.",
+  "Ce qui est établi : en août et septembre 1997, Apple annonce un accord avec son rival et lance une campagne qui parle d'elle sans que Jobs y prête sa voix.",
+  "Une alliance et un slogan, à quelques semaines d'écart."
+ ],
+ "learned": [
+  "Le contexte financier d'Apple en 1997.",
+  "Le contrat avec Microsoft : actions sans droit de vote, Office pour Mac, règlement des brevets.",
+  "Pourquoi la légende des 90 jours de trésorerie ne tient pas.",
+  "La création de la campagne « Think Different » et la querelle sur son auteur.",
+  "La différence entre un fait établi et un récit non vérifié."
+ ],
+ "retain": "En août 1997, Apple signe un accord avec son rival Microsoft, puis lance « Think Different » : deux gestes d'une même survie.",
+ "note": "Les chiffres de trésorerie diffèrent de la légende des 90 jours. L'auteur du slogan est discuté : Siltanen conteste la version d'Isaacson, et son récit n'est pas vérifié par un tiers. L'effet réel des 150 millions sur la survie d'Apple reste incertain.",
+ "blurb": {
+  "b": "Août 1997. Apple perd presque un milliard de dollars, et Steve Jobs annonce, devant le visage géant de Bill Gates, que Microsoft investit 150 millions. Quelques semaines plus tard, une publicité commence par « Here's to the crazy ones ». L'argent a-t-il vraiment sauvé la marque ?",
+  "h": "Une alliance avec Microsoft et un slogan, à quelques semaines d'écart."
+ }
+}

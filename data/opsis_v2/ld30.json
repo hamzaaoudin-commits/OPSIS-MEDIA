@@ -1,0 +1,33 @@
+{
+ "id": "ld30",
+ "fmt": 3,
+ "name": "Challenger : une défaillance majeure",
+ "sub": "Cap Canaveral, 28 janvier 1986 : malgré le froid et les doutes d'ingénieurs de Morton Thiokol, Challenger décolle à 11 h 38 et se désintègre soixante-treize secondes plus tard",
+ "blurb": {
+  "b": "Le 28 janvier 1986, par un froid inhabituel en Floride, la navette Challenger décolle avec sept personnes à bord, dont une enseignante. Des ingénieurs avaient déconseillé le lancement la veille. Soixante-treize secondes plus tard, la navette se désintègre. Récit d'une nuit de discussions et d'un matin de glace.",
+  "h": "La veille, des ingénieurs disent non. Soixante-treize secondes après le décollage, tout bascule."
+ },
+ "body": [
+  "#La nuit avant",
+  "@Cap Canaveral, 27 janvier 1986.",
+  "La veille du lancement, au téléphone entre la Floride, l'Alabama et l'Utah, une conversation se tient que le monde ignorera pendant des mois. À l'autre bout de la ligne, des ingénieurs de Morton Thiokol, le constructeur des propulseurs à poudre de la navette, expliquent qu'ils ne veulent pas que Challenger décolle le lendemain matin. La météo annonce un froid inhabituel pour la Floride, bien en dessous de zéro pendant la nuit.",
+  "Leur inquiétude porte sur les joints toriques, des anneaux de caoutchouc qui assurent l'étanchéité entre les segments des propulseurs. Dans le froid, le caoutchouc durcit, et peut ne pas se refermer à temps. Aucun vol n'a jamais eu lieu à une température aussi basse : le plus froid, jusque-là, était d'environ douze degrés.",
+  "Les vice-présidents de Thiokol, Robert Lund et Joe Kilminster, recommandent d'abord de ne pas lancer. La NASA, par la voix de Lawrence Mulloy, conteste l'argument : les ingénieurs n'ont pas de preuve que le froid rendrait les joints défaillants. À la reprise de la discussion, après une suspension, la direction de Thiokol change de position. Allan McDonald, qui dirige le programme des propulseurs chez Thiokol, refuse de signer la recommandation de lancer ; Kilminster la signe et l'envoie par fax.",
+  "#Le matin",
+  "@28 janvier 1986.",
+  "Le lancement avait déjà été reporté de nombreuses fois : mauvais temps, incident technique, vents trop forts la veille. La presse se moque de ces retards, et la pression pèse sur le programme.",
+  "À bord, sept personnes : Dick Scobee, le commandant, Michael Smith, le pilote, Ronald McNair, Ellison Onizuka, Judith Resnik, Gregory Jarvis, et Christa McAuliffe, 37 ans, enseignante dans le New Hampshire, qui devait devenir la première civile américaine dans l'espace. Des classes entières suivent le décollage à la télévision.",
+  "Le matin, des blocs de glace se sont formés sur la rampe de lancement. L'équipe de glace les inspecte. Elle relève aussi, sur les propulseurs, des températures très inférieures aux valeurs prévues ; ces mesures sont consignées, mais ne remontent pas jusqu'à ceux qui décident, car la température des propulseurs ne fait pas partie des critères de lancement. Le départ est retardé d'une heure pour laisser fondre la glace, puis la décision est prise de poursuivre.",
+  "#Soixante-treize secondes",
+  "@11 h 38.",
+  "Challenger décolle à 11 h 38, de la rampe 39B. Dès les premières secondes, des bouffées de fumée grise s'échappent du propulseur droit, au niveau d'un joint : le froid l'a empêché de se refermer. Pendant un temps, les résidus de la combustion colmatent la fuite, et le vol semble se dérouler normalement.",
+  "Puis la flamme perce. Vers cinquante-neuf secondes, un panache apparaît près de la fixation arrière du propulseur. Il attaque le réservoir externe. À soixante-treize secondes, à environ quatorze kilomètres d'altitude, le réservoir d'hydrogène cède, et la navette disparaît dans un nuage blanc.",
+  "!Une défaillance majeure.",
+  "C'est ce que dit le porte-parole de la NASA, quelques instants plus tard, devant les écrans qui ne montrent plus rien de ce qu'ils annonçaient. Les enregistrements ont conservé la dernière parole du pilote Michael Smith : un « uh-oh ».",
+  "#Ce qu'on a su ensuite",
+  "@Après le 28 janvier.",
+  "La commission d'enquête présidée par William Rogers établit la cause. Le physicien Richard Feynman, l'un de ses membres, plonge un morceau de joint dans un verre d'eau glacée, devant les caméras, et montre que le caoutchouc perd son élasticité. Ce qui frappe davantage, c'est que le risque avait été connu avant le vol : des ingénieurs l'avaient signalé, par écrit, des mois plus tôt.",
+  "On ne sait pas à quel moment l'équipage est mort, ni quels membres sont restés conscients après l'éclatement. La cabine est retrouvée au fond de l'océan, plusieurs semaines plus tard. La navette ne volera plus pendant près de trois ans. La suppléante de McAuliffe, Barbara Morgan, enseignante elle aussi, volera finalement en 2007."
+ ],
+ "notes": "Retiré : températures exactes (25 °F / 8 °F), horaires précis de la désintégration (T+58,8), détails des retards (Dakar, boulon), Arnold Aldrich, citation de Nesbitt (passée en indirect). À vérifier : record de froid précédent (environ 12 °C), nombre de bouffées, délai de reprise des vols (environ 32 mois), recherche de la cabine, notes écrites des ingénieurs."
+}

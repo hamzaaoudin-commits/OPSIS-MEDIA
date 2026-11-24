@@ -1,0 +1,37 @@
+{
+ "id": "di24",
+ "fmt": 3,
+ "name": "Lord Lucan : une Corsair à Newhaven",
+ "sub": "7 novembre 1974 : une nourrice est tuée à Londres, la femme de Lord Lucan est blessée, et lui prend la route ; sa voiture est retrouvée à Newhaven, lui jamais",
+ "blurb": {
+  "b": "Le 7 novembre 1974, à Londres, la nourrice des Lucan est tuée et Lady Lucan s'enfuit, blessée, dans un pub. Son mari, le comte, appelle sa mère, écrit des lettres, puis disparaît. Sa voiture est retrouvée dans un port. Un jury le désigne comme meurtrier ; il n'a jamais été retrouvé.",
+  "h": "Une nourrice morte, un comte en fuite et une voiture au bord de l'eau"
+ },
+ "body": [
+  "#Un cri dans Belgravia",
+  "@46 Lower Belgrave Street, Londres, 7 novembre 1974.",
+  "Le soir du 7 novembre 1974, dans le quartier chic de Belgravia, à Londres, une femme couverte de sang entre dans un pub, The Plumbers Arms, et crie qu'on l'a attaquée. C'est Lady Lucan, la femme d'un comte. Elle vient de s'échapper de sa maison, au 46 Lower Belgrave Street, où la nourrice de ses enfants, Sandra Rivett, vient d'être tuée.",
+  "Lady Lucan a été attaquée en haut de l'escalier de la cave. Le corps de Rivett est découvert dans la maison, dans un sac postal. Son mari, Lord Lucan, a disparu. On ne le reverra pas.",
+  "#Un mariage qui s'effondre",
+  "@1934 – 1973.",
+  "Richard John Bingham, comte de Lucan, naît le 18 décembre 1934. Il épouse Veronica Duncan en mars 1963. Le couple se sépare en 1973, et Veronica obtient la garde complète des trois enfants en juin de cette année-là. Le comte s'installe dans un appartement non loin de là.",
+  "Lucan est un joueur, familier des clubs de jeu de Mayfair, et le monde qu'il fréquente a l'élégance de l'argent qui change de main en une nuit. Après la séparation, il cherche à obtenir la garde de ses enfants, sans succès. On en a plus tard fait le mobile du drame, sans que rien le prouve.",
+  "#La nuit du 7 novembre",
+  "@7 – 8 novembre 1974.",
+  "Lucan téléphone à sa mère, entre 22 h 30 et 23 h environ, pour lui demander de récupérer ses enfants. Puis il prend la route, et se rend chez Susan Maxwell-Scott, à Uckfield. Deux récits s'opposent sur cette nuit. Dans ses lettres, et dans ce qu'il dit à une amie, Susan Maxwell-Scott, il explique qu'un homme attaquait sa femme et qu'il est intervenu. Lady Lucan affirme au contraire que c'est lui qui l'a attaquée, et qu'il a admis avoir tué Rivett.",
+  "Il ne reste que deux versions, et personne ne peut les départager : celui qui pourrait répondre n'est plus là.",
+  "#Une voiture à Newhaven",
+  "@8 – 10 novembre 1974.",
+  "Lucan a écrit deux lettres à son beau-frère Bill Shand Kydd, adressées chez les Maxwell-Scott à Uckfield. Shand Kydd les récupère et les remet à la police. Elles étaient tachées de sang.",
+  "!La voiture est retrouvée le 10 novembre dans Norman Road, à Newhaven.",
+  "C'est une Ford Corsair. Dans le coffre se trouvent un tuyau de plomb enveloppé de sparadrap chirurgical et une bouteille de vodka pleine. Le comte, lui, n'est pas là. Newhaven est un port, d'où partent des ferries vers la France. La piste s'arrête au bord de l'eau.",
+  "#Le verdict d'un jury",
+  "@Juin 1975.",
+  "L'enquête du coroner se tient en juin 1975. Le 16 juin, le jury rend un verdict de « meurtre par Lord Lucan ». Le verdict désigne un homme absent, qui n'a pas pu se défendre ; la loi britannique cessera ensuite d'autoriser ce genre de désignation.",
+  "#Mort, vivant, nulle part",
+  "@1975 – 2016.",
+  "Lucan est présumé mort en chambre en décembre 1992 et déclaré légalement mort en 1999. Le 3 février 2016, la High Court permet à son fils George d'hériter du titre, et un certificat de décès suit. Pourtant, rien ne dit qu'il est mort, ni où, ni quand.",
+  "On ne sait pas ce qu'est devenu Lucan. On ne sait pas qui a mis le tuyau dans le coffre, ni si un intrus est vraiment entré dans la maison. Chacun lit les lettres à sa façon, et le verdict de 1975 ne dit pas la vérité : il dit ce qu'un jury a décidé de croire. Reste une nourrice morte, une femme qui a survécu, et un homme qui a disparu."
+ ],
+ "notes": "Retiré : détails de la nuit non établis. À vérifier : la phrase sur les ferries de Newhaven, le sang sur les lettres, l'appartement du comte, la formule du verdict, l'idée que ce verdict est rare, la date de 1999."
+}

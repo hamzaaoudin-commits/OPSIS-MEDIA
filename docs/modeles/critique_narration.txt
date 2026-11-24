@@ -1,0 +1,206 @@
+1. Le problème principal : Claude raconte des événements, il ne raconte pas une histoire
+Prenons l'histoire de l'expédition Franklin.
+
+Elle devrait être absolument passionnante.
+
+Imagine le potentiel :
+- 129 hommes disparaissent dans l'Arctique.
+- Deux navires restent prisonniers des glaces.
+- Un message est retrouvé plusieurs années plus tard.
+- Des hommes abandonnent les navires et tentent de rejoindre la civilisation à pied.
+- Des témoignages inuits sont ignorés.
+- Des décennies de recherches échouent.
+- Les épaves finissent par être retrouvées à plus d'un siècle d'intervalle.
+C'est une histoire extraordinaire.
+
+Mais regarde comment Claude la raconte :
+Les navires sont pris dans la glace au large de l'île du Roi-Guillaume.
+
+Ils n'en sortiront plus.
+
+Puis :
+Une première note, écrite le 28 mai 1847, dit que tout va bien.
+
+Franklin meurt le 11 juin 1847. Les navires sont abandonnés le 22 avril 1848.
+
+Ce sont des informations. Pas une narration.
+
+Claude donne au lecteur les résultats des événements, mais ne lui fait jamais vivre leur enchaînement.
+
+Il ne construit pas de progression dramatique. Il ne fait pas comprendre ce qui change, pourquoi la situation devient désespérée, comment les décisions des hommes modifient leur destin.
+
+Il confond raconter une histoire et résumer une histoire.
+
+C'est probablement le défaut le plus important de toutes les productions que tu me montres.
+2. Une écriture artificiellement découpée
+C'est quelque chose qui me dérange énormément dans les deux textes.
+
+Claude utilise constamment des phrases courtes, isolées, avec des retours à la ligne pour donner une impression de puissance cinématographique.
+
+Exemple dans l'histoire du lac Nyos :
+Ils ne voyaient pas le danger.
+
+Ils ne pouvaient pas le combattre.
+
+Et, pour beaucoup, ils n'ont même pas eu le temps de fuir.
+
+Ou encore :
+Les eaux profondes remontent.
+
+La pression diminue.
+
+Le CO₂ dissous se libère massivement.
+
+Le problème, c'est que cette technique devient une formule.
+
+Elle est utilisée tellement souvent qu'elle perd toute sa puissance.
+
+On a l'impression que Claude essaie constamment de fabriquer des moments dramatiques, même lorsque le contenu ne le justifie pas.
+
+Une bonne écriture cinématographique ne consiste pas à mettre chaque phrase sur une nouvelle ligne.
+
+Elle consiste à maîtriser :
+- Le rythme.
+- La longueur des phrases.
+- La fluidité.
+- Les transitions.
+- La montée de la tension.
+- Les changements de perspective.
+- La révélation des informations.
+Une phrase longue peut être beaucoup plus intense que cinq phrases courtes.
+
+Il faut arrêter de confondre écriture cinématographique et écriture télégraphique.
+3. Il n'y a aucune véritable immersion
+C'est particulièrement visible dans l'histoire d'Agatha Christie.
+
+Le sujet est excellent : une romancière célèbre disparaît pendant onze jours, et lorsqu'on la retrouve, elle utilise le nom de la maîtresse de son mari.
+
+C'est presque un scénario de film.
+
+Pourtant, la lecture reste étonnamment plate.
+
+Pourquoi ?
+
+Parce que Claude nous raconte l'affaire depuis une position extérieure, comme s'il commentait un documentaire en accéléré.
+
+Il nous informe de ce qui s'est passé, mais ne nous donne jamais véritablement la sensation de découvrir l'affaire.
+
+Prenons cette phrase :
+Onze jours après sa disparition, quelqu'un la reconnaît.
+
+C'est pourtant un moment central du récit.
+
+On pourrait construire toute une séquence narrative autour de cette découverte : une femme recherchée dans tout le pays séjourne tranquillement dans un hôtel sous un nom particulièrement troublant. Son identité est finalement repérée.
+
+Mais Claude expédie le moment en une phrase, puis passe immédiatement aux explications médicales.
+
+Il ne comprend pas que certains événements méritent du temps de lecture.
+
+Une histoire ne doit pas seulement contenir des moments extraordinaires. Elle doit savoir les mettre en valeur.
+4. Les histoires n'ont pas de véritable personnage central
+C'est un défaut particulièrement important.
+
+Dans une histoire, le lecteur doit pouvoir s'accrocher à quelqu'un.
+
+Il doit comprendre :
+- Qui est cette personne ?
+- Que cherche-t-elle ?
+- Qu'est-ce qui l'empêche d'y arriver ?
+- Qu'est-ce qu'elle risque de perdre ?
+- Qu'est-ce qui va lui arriver ?
+Or, dans les textes de Claude, les personnages sont essentiellement des noms associés à des dates.
+L'expédition Franklin
+On connaît Franklin, Crozier et quelques membres de l'équipage. Mais on ne s'attache à personne.
+
+Les 129 hommes deviennent une statistique.
+
+On ne comprend pas suffisamment les décisions prises par les officiers, les difficultés de leur progression, les enjeux de leur tentative de survie.
+Agatha Christie
+C'est encore plus dommageable.
+
+Agatha est pourtant le personnage idéal. On dispose d'une situation personnelle complexe, d'une disparition inexpliquée et d'une énigme qui touche directement à son identité.
+
+Mais Claude passe beaucoup de temps à expliquer l'enquête et les hypothèses des biographes, sans construire suffisamment le parcours de la femme au centre de l'affaire.
+
+Attention : cela ne signifie pas qu'il faut inventer ses pensées ou ses émotions. Il faut simplement exploiter intelligemment les faits et témoignages disponibles.
+5. Une structure beaucoup trop mécanique
+Je retrouve systématiquement le même mécanisme :
+- PROLOGUE
+- 01 — Présentation du contexte
+- 02 — Explication historique
+- 03 — Développement chronologique
+- 04 — Une révélation
+- 05 — Conséquences
+- ÉPILOGUE
+- CE QUE VOUS VENEZ DE DÉCOUVRIR
+- À RETENIR
+Le problème n'est pas d'utiliser des chapitres.
+
+Le problème est que la structure semble décidée avant même que l'histoire soit racontée.
+
+Résultat : toutes les histoires prennent la même forme, quels que soient leurs sujets.
+
+Une disparition mystérieuse, une catastrophe naturelle, une escroquerie, une guerre ou une ascension politique ne devraient pas nécessairement suivre la même architecture.
+
+L'histoire doit dicter sa structure.
+
+Par exemple :
+- Agatha Christie pourrait être construite comme une enquête dont le mystère ne sera jamais entièrement résolu.
+- Franklin pourrait être construite comme une tragédie de survie, avec une progression vers l'effondrement de l'expédition.
+- Victor Lustig pourrait être construite comme un véritable récit d'escroquerie, avec une succession de manipulations et de retournements.
+La structure doit être invisible au service de l'histoire, et non l'histoire visible au service de la structure.
+6. Claude explique trop et fait trop peu découvrir
+C'est un problème de gestion de l'information.
+
+Dans l'histoire du lac Nyos, Claude nous explique le fonctionnement du phénomène scientifique :
+L'eau des profondeurs, chargée en CO₂, est plus dense que celle de la surface. Elle ne se mélange donc pas facilement avec les couches supérieures.
+
+C'est utile.
+
+Mais l'explication est présentée comme une leçon de vulgarisation scientifique.
+
+Il faut trouver une manière de faire découvrir cette information au lecteur au moment où elle devient nécessaire.
+
+La différence est fondamentale.
+
+Dans une bonne histoire, l'information répond à une question que le lecteur se pose déjà.
+
+Dans un mauvais récit, l'auteur interrompt l'histoire pour transmettre une information.
+
+C'est exactement ce qui se passe ici.
+
+Le savoir doit faire avancer le récit, pas le suspendre.
+7. Les conclusions sont trop artificielles
+Claude semble penser que chaque histoire doit se terminer par une grande phrase philosophique.
+
+Exemple, Agatha Christie :
+Une romancière qui sait mieux que personne comment on égare une enquête.
+
+Ou le lac Nyos :
+La nature n'a pas besoin de colère, de volonté ou d'intention pour devenir meurtrière.
+
+Ces phrases ne sont pas nécessairement mauvaises individuellement.
+
+Mais elles donnent une impression de conclusion fabriquée.
+
+On sent que Claude cherche à produire une phrase mémorable plutôt qu'à trouver la véritable dernière impression de l'histoire.
+
+Une bonne conclusion peut être :
+- Un fait que le lecteur vient de découvrir.
+- Une conséquence inattendue.
+- Une image historique.
+- Un destin qui prend une signification particulière.
+- Une question qui demeure sans réponse.
+Elle n'a pas systématiquement besoin de ressembler à une citation inspirante.
+
+8. Le diagnostic : ce que Claude fait mal et ce qu'il devrait faire
+Le problème de fond
+Actuellement
+Une logique de résumé documentaire
+
+Claude collecte les événements, les classe chronologiquement, les répartit en chapitres et les reformule avec quelques effets de style.
+
+Objectif
+Une logique de narration immersive
+
+Claude identifie le cœur dramatique de l'histoire, choisit un point de vue narratif, organise les révélations et construit une progression qui donne envie de connaître la suite.

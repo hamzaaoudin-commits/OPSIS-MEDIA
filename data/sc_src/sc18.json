@@ -1,0 +1,33 @@
+{
+ "id": "sc18",
+ "fmt": 3,
+ "name": "Milgram : jusqu'où obéit-on ?",
+ "sub": "Yale, 1961 — Des volontaires croient infliger des chocs électriques de plus en plus forts à un inconnu, simplement parce qu'un expérimentateur en blouse grise leur demande de continuer.",
+ "dates": "1961–1963",
+ "country": "États-Unis",
+ "job": "Stanley Milgram, psychologue",
+ "yr": 1961,
+ "src": [
+  "« Milgram experiment », Wikipédia (anglais). en.wikipedia.org/wiki/Milgram_experiment"
+ ],
+ "body": [
+  "En août 1961, à l'université Yale, le psychologue Stanley Milgram lance une expérience qui deviendra célèbre. Sa question : jusqu'où des gens ordinaires obéissent-ils à une autorité qui leur demande de faire du mal à quelqu'un ?",
+  "Les volontaires croient participer à une étude sur la mémoire. Ils ont trois protagonistes : un expérimentateur en blouse grise, un « élève », et eux-mêmes, désignés « professeurs » par un tirage au sort truqué. À chaque mauvaise réponse de l'élève, le professeur doit actionner un levier qui envoie un choc électrique, de 15 à 450 volts par paliers de 15, avec des étiquettes qui vont de « choc léger » à « danger : choc sévère ». L'élève est un acteur, et il ne reçoit aucun choc.",
+  "#Quatre phrases",
+  "Quand le professeur hésite, l'expérimentateur dispose de quatre phrases, dites dans l'ordre : « Veuillez continuer. » « L'expérience exige que vous continuiez. » « Il est absolument indispensable que vous continuiez. » « Vous n'avez pas le choix, vous devez continuer. » Il n'y a pas d'autre pression.",
+  "Dans la première version, l'élève cogne contre le mur à 300 et 315 volts, puis se tait. Sur 40 volontaires, tous montent au moins jusqu'à 300 volts, et 26, soit 65 %, vont jusqu'à 450. Quatorze ont des rires nerveux. Tous s'arrêtent au moins une fois pour s'interroger sur l'expérience.",
+  "Avant le début, quatorze étudiants de psychologie de Yale avaient prédit que, sur cent professeurs, un ou deux iraient jusqu'au bout. Quarante psychiatres avaient prévu un peu plus d'un pour mille.",
+  "#Ce qui change le résultat",
+  "Milgram a fait varier la situation. Quand l'élève est dans la même pièce, l'obéissance tombe à 40 %. Quand le professeur doit lui poser lui-même la main sur la plaque, 30 %. Quand les ordres viennent par téléphone, 21 %. Dans un bureau de Bridgeport, sans lien avec Yale, 47,5 %. Quand deux autres professeurs refusent de continuer, 4 volontaires sur 40 vont jusqu'au bout.",
+  "Il a aussi testé des liens entre le professeur et l'élève. Quand ils sont amis, 15 % seulement des professeurs vont jusqu'au bout, et 80 % désobéissent avant le palier de 195 volts. Des femmes participent à une autre version : leur taux d'obéissance ne diffère pas de celui des hommes, mais elles se disent plus stressées.",
+  "Plus tard, une synthèse de plusieurs reproductions, due à Blass, trouve des taux d'obéissance allant de 28 % à 91 % selon les études, avec en moyenne 61 % aux États-Unis et 66 % ailleurs, sans tendance nette au fil des décennies.",
+  "#Les critiques",
+  "En 1964, la psychologue Diana Baumrind écrit que le consentement ne dispense pas l'expérimentateur de veiller au bien-être des participants. Elle estime qu'il aurait dû arrêter l'expérience quand ils se sont mis à transpirer et à trembler. Sa critique a conduit à une révision en profondeur des règles éthiques de la recherche en psychologie.",
+  "En 2009, Jerry Burger refait l'expérience en s'arrêtant à 150 volts, et obtient une obéissance pratiquement identique à celle de Milgram. En 2012, la chercheuse Gina Perry, qui a étudié ses archives, conclut que la moitié seulement des participants croyaient pleinement aux chocs, et que parmi eux, 66 % ont désobéi. Milgram, lui, avait interrogé ses anciens participants : 84 % se disaient contents ou très contents d'avoir participé, et 15 % neutres. Perry, de son côté, soutient qu'ils n'avaient pas été correctement informés après coup."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : août 1961 à Yale ; expérimentateur en blouse, élève acteur, tirage truqué ; chocs de 15 à 450 V par paliers de 15 ; quatre phrases ; l'élève cogne à 300 et 315 V ; 40 sujets, tous à 300 V, 65 % à 450 V ; 14 sur 40 rires nerveux ; prédictions des 14 étudiants (moyenne 1,2 sur 100) et des 40 psychiatres (un peu plus d'un dixième de pour cent au maximum) ; variantes : même pièce 40 %, main sur plaque 30 %, téléphone 21 %, Bridgeport 47,5 %, deux pairs refusent 4 sur 40 ; Baumrind 1964 ; Burger 2009 ; Perry 2012 (moitié croyait, 66 % de ceux-là ont désobéi). À vérifier avant publication : « 26 » (65 % de 40), l'ordre exact des étiquettes sur le pupitre, la formulation française des quatre phrases, la mention « un ou deux sur cent » (moyenne 1,2), la formule « bureau de Bridgeport, sans lien avec Yale ». Ajouté : variante amis (15 %, 80 % avant 195 V), femmes (même taux, plus de stress), Blass (28–91 %, 61 % États-Unis, 66 % ailleurs), sondage des participants (84 % contents, 15 % neutres), critique de Perry sur le débriefing. À vérifier : l'identité de Blass (la page cite « Blass meta-analysis »), la formulation française « contents », la phrase de Perry.",
+ "blurb": {
+  "b": "En 1961, à Yale, des volontaires croient punir un inconnu par des chocs électriques de plus en plus forts, parce qu'un homme en blouse grise leur demande de continuer. Près de deux sur trois vont jusqu'au maximum. L'expérience a changé la façon de penser l'obéissance, et celle de faire des expériences sur des humains.",
+  "h": "Deux volontaires sur trois ont obéi : l'expérience de Milgram a réécrit l'éthique de la recherche."
+ }
+}

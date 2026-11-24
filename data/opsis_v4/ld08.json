@@ -1,0 +1,32 @@
+{
+ "id": "ld08",
+ "fmt": 3,
+ "name": "Chopin : plus maintenant",
+ "sub": "Paris, 15 – 30 octobre 1849 — Un exilé polonais, incapable de jouer, est veillé par sa sœur. Ses dernières volontés vont le ramener, en partie, dans le pays qu'il a quitté.",
+ "body": [
+  "En octobre 1849, dans un appartement de la place Vendôme, à Paris, un homme de trente-neuf ans reste au lit, très malade. Frédéric Chopin, l'un des plus grands compositeurs pour le piano, auteur de nocturnes, de mazurkas et de polonaises, a quitté Varsovie à vingt ans, en 1830, et n'y est jamais retourné. Sa sœur aînée, Ludwika, venue de Pologne à Paris pendant l'été, est auprès de lui, et des amis polonais exilés à Paris se relaient à son chevet.",
+  "Chopin a quitté Varsovie le 2 novembre 1830, quelques semaines avant l'insurrection des Polonais contre la Russie, qui dominait alors une grande partie de leur pays. Il s'installe à Paris, où il enseigne le piano et donne des concerts. Il ne reverra plus la Pologne.",
+  "Le chemin jusqu'à cette chambre a été long. Sa rupture avec la romancière George Sand, avec qui il a vécu pendant près de dix ans, date de 1847. En avril 1848, alors que la révolution agite Paris, il part pour Londres, soutenu par son élève écossaise Jane Stirling, et donne des concerts en Angleterre et en Écosse. Sa dernière apparition publique a lieu à Londres le 16 novembre 1848, au profit de réfugiés polonais, et il rentre à Paris à la fin du mois, épuisé. En septembre 1849, il s'installe place Vendôme.",
+  "#La chanteuse",
+  "Vers le 15 octobre, la cantatrice Delphine Potocka vient chanter pour lui. L'Institut Chopin, qui tient la chronologie de sa vie, cite parmi ses airs un hymne de Stradella, un psaume de Marcello et des airs de Bellini. Le lendemain, rapporte-t-on, il demande à son médecin, Jean Cruveilhier, d'ouvrir son corps après sa mort, par crainte d'être enterré vivant. Il a aussi souhaité qu'on joue le Requiem de Mozart à ses obsèques et que son cœur soit rapporté en Pologne.",
+  "#La nuit du 17 octobre",
+  "Après minuit, un médecin lui demande s'il souffre beaucoup. Chopin répond, selon les récits : « Plus maintenant. » Il meurt quelques minutes avant 2 heures, avec près de lui sa sœur, le prêtre polonais Aleksander Jełowicki et quelques amis proches. Son acte de décès mentionne la tuberculose ; d'autres causes ont été avancées, et une étude de 2017 sur son cœur conservé évoque une péricardite liée à une tuberculose. Le matin, le sculpteur Clésinger, gendre de George Sand, vient prendre un masque mortuaire et un moulage de sa main gauche.",
+  "#Les obsèques",
+  "Les obsèques ont lieu le 30 octobre, à l'église de la Madeleine, une grande église du centre de Paris, près de deux semaines après la mort. L'archevêque de Paris avait d'abord refusé le Requiem de Mozart, car les femmes n'avaient pas le droit de chanter dans les églises paroissiales de la ville ; une dispense est accordée à condition qu'elles restent cachées. Pauline Viardot et la soprano Jeanne-Anaïs Castellan chantent derrière un rideau de velours noir, avec le ténor Alexis Dupont et la basse Luigi Lablache. On joue aussi la Marche funèbre de Chopin dans une orchestration de Napoléon-Henri Reber. Environ trois mille personnes se pressent à la cérémonie, d'après les comptes rendus, et le peintre Delacroix, son ami, est l'un de ceux qui portent le cercueil. Chopin est enterré au Père-Lachaise.",
+  "#Le cœur",
+  "Son cœur, lui, part plus loin. Conservé dans de l'alcool, il est rapporté à Varsovie début 1850 par Ludwika, qui le cache sous ses vêtements pour passer la frontière. Son frère n'avait jamais revu la ville depuis son départ de 1830. Le cœur repose aujourd'hui dans un pilier de l'église Sainte-Croix."
+ ],
+ "note": "Établi : départ de Varsovie le 2 novembre 1830, mort le 17 octobre 1849 un peu avant 2 h, obsèques à la Madeleine le 30 octobre, Requiem de Mozart chanté par des femmes derrière un rideau, inhumation au Père-Lachaise, cœur rapporté à Varsovie par Ludwika en 1850 (aujourd'hui église Sainte-Croix). Rapporté : la réponse « Plus maintenant » et la demande d'autopsie du 16 octobre ; le programme de Delphine Potocka vers le 15 octobre. Incertain : la cause exacte de la mort (tuberculose sur l'acte de décès, autres hypothèses) ; le nombre de personnes aux obsèques (environ trois mille selon les sources, dont certaines auraient été refoulées).",
+ "blurb": {
+  "b": "Chopin n'a pas revu la Pologne depuis dix-neuf ans quand il meurt à Paris, veillé par sa sœur. Entre un chant au chevet, une phrase dite à un médecin en pleine nuit et des obsèques qu'il avait organisées lui-même, un dernier vœu reste à accomplir. Accroche : Dix-neuf ans d'exil, et une dernière volonté.",
+  "h": "Dix-neuf ans d'exil, et un cœur qui rentre au pays."
+ },
+ "src": [
+  "Wikipédia (anglais), « Frédéric Chopin », 2026. en.wikipedia.org/wiki/Frédéric_Chopin",
+  "Wikipédia (anglais), « Heart of Frédéric Chopin », 2026. en.wikipedia.org/wiki/Heart_of_Frédéric_Chopin",
+  "Narodowy Instytut Fryderyka Chopina, « Chronique de la vie et de l'œuvre de Chopin : épilogue ». chopin.pl/kronika_zycia_tworczosci_chopina_epilog.en.html",
+  "Interlude, « Behind the Curtain » (musique des obsèques de Chopin). interlude.hk/behind-curtain-chopins-funeral-music",
+  "Sortiraparis, « On this day, October 30 in Paris: Paris bids farewell to Frédéric Chopin at the Church of La Madeleine ». sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/352641",
+  "Culture.pl, « Chopin's Gravest Fear ». culture.pl/en/article/chopins-gravest-fear"
+ ]
+}

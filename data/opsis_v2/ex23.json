@@ -1,0 +1,36 @@
+{
+ "id": "ex23",
+ "fmt": 3,
+ "name": "Nobile et l'Italia : la tente rouge",
+ "sub": "Spitzberg, mai – juillet 1928 : le dirigeable Italia atteint le pôle Nord, s'écrase au retour, et quarante-huit jours de secours commencent",
+ "blurb": {
+  "b": "Le dirigeable Italia vient d'atteindre le pôle Nord quand une tempête le plaque sur la banquise. Dix hommes survivent sur la glace, six disparaissent avec l'enveloppe. Ils dressent une tente de soie qu'ils teignent en rouge et attendent des secours qui mettront quarante-huit jours à venir, au prix de nouvelles vies.",
+  "h": "Dix hommes sur la glace, une tente rouge, quarante-huit jours"
+ },
+ "body": [
+  "#Le pôle",
+  "@Ny-Ålesund, 23 – 24 mai 1928.",
+  "L'Italia est un dirigeable semi-rigide commandé par Umberto Nobile. Il a quitté Milan le 15 avril 1928, et le 23 mai il décolle de Ny-Ålesund, au Spitzberg, pour le pôle Nord. Le pôle est atteint à 0 h 24 le 24 mai. Nobile connaît le chemin : en 1926, il avait déjà survolé le pôle à bord du Norge, avec Roald Amundsen et Lincoln Ellsworth, du Spitzberg à l'Alaska.",
+  "Le dirigeable repart vers le Spitzberg à 2 h 20 du matin. Il lui faut maintenant rentrer.",
+  "#La glace",
+  "@Au nord de Nordaustlandet, 25 mai 1928.",
+  "Au retour, le vent est très fort. À 9 h 25, le 25 mai, la commande de profondeur se bloque en position basse, à moins de 300 mètres d'altitude. Environ une heure plus tard, vers 10 h 25, l'Italia heurte la banquise.",
+  "Le choc sépare l'équipage. Dix hommes sont jetés sur la glace. Six autres sont emportés avec l'enveloppe, qui, délestée, remonte dans le ciel. L'un des dix, Pomella, meurt le jour même d'une blessure à la tête. Nobile a un bras, une jambe et une côte brisés, et un traumatisme crânien ; Cecioni a les deux jambes cassées ; Malmgren a l'épaule gravement touchée ; Zappi a plusieurs côtes brisées.",
+  "!L'ingénieur Ettore Arduino jette de la nourriture et du matériel de survie sur la glace, puis il est emporté avec ses cinq compagnons.",
+  "On ne les reverra pas. Les récits ne s'accordent pas sur le nombre des disparus, six ou sept selon qu'on compte Pomella, mort sur la glace.",
+  "#La tente rouge",
+  "@Banquise, juin 1928.",
+  "Les survivants récupèrent un émetteur radio et une tente de soie d'environ 2,4 mètres de côté. Ils la dressent sur un morceau de glace stable, puis la teignent en rouge avec les colorants des bombes de repérage du dirigeable, pour qu'on puisse la voir depuis les airs. Cette « tente rouge » donnera son titre au récit de Nobile, et à un film de 1969.",
+  "Le radio Giuseppe Biagi envoie des SOS quelques heures après le choc, avec un mât qu'il a bricolé. Pendant plusieurs jours, ces appels restent sans réponse. Le 3 juin, un radioamateur soviétique de 21 ans, Nikolaï Schmidt, capte le signal à Vokhma et prévient les autorités. Le contact avec le navire de soutien, le Città di Milano, n'est établi que le 9 juin.",
+  "#Quarante-huit jours",
+  "@Juin – juillet 1928.",
+  "Les secours s'organisent. Ils mobiliseront 23 avions et 20 navires de sept pays. Le 20 juin, l'aviateur italien Umberto Maddalena repère les naufragés et leur largue des vivres, dont beaucoup sont brisés ou inutilisables. Un second largage, le 22, réussit.",
+  "Le 23 juin, le pilote suédois Einar Lundborg se pose près du camp, mais l'avion ne peut porter qu'un passager. Il n'emmène que Nobile, alors que celui-ci avait dressé une liste d'évacuation où Cecioni passait en premier et lui-même en quatrième. Lundborg revient chercher un autre rescapé, mais capote à l'atterrissage et reste bloqué avec les autres.",
+  "Malmgren n'est pas au camp. Il était parti à pied le 30 mai avec Mariano et Zappi pour chercher la terre. Vers le 15 ou le 16 juin, il s'est effondré de froid et d'épuisement et a demandé qu'on l'abandonne. Son corps n'a jamais été retrouvé. Le 12 juillet, le brise-glace soviétique Krassine recueille Mariano et Zappi, puis les derniers hommes restés sur la glace, après quarante-huit jours.",
+  "#Ce que ça a coûté",
+  "@Juin 1928 – 1945.",
+  "Le 18 juin, Amundsen, parti rejoindre les recherches à bord d'un Latham 47 piloté par René Guilbaud, disparaît avec cinq autres hommes. On retrouve plus tard un flotteur, mais aucun corps. On ne sait pas pourquoi l'avion a disparu.",
+  "Nobile, lui, est à bord du Città di Milano. Il se dit consterné par l'incompétence qu'il observe, et le capitaine Romagna le place en quasi-résidence surveillée quand il menace de partir. Ses télégrammes sont censurés. Environ 200 000 personnes l'accueillent à Rome le 31 juillet 1928. Pourtant, l'enquête officielle le tient pour responsable du désastre, et il démissionne de l'armée de l'air le 5 mars 1929. En 1945, il est lavé de ces accusations, réintégré et promu lieutenant général."
+ ],
+ "notes": "Retiré : détails de l'heure d'impact selon les deux versions (120 km ou moins de 30 km de Nordaustlandet), nombre de rescapés du Krassine (5 ou 7), rumeurs sur la mort de Malmgren. À vérifier : 'deux parts' / 'six restés dans la partie qui se redresse' (reformulation de ma part, la source dit juste 'emportés avec l'enveloppe'), 'Pendant plusieurs jours, personne n'entend'."
+}

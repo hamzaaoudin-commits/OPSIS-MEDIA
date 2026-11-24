@@ -1,0 +1,35 @@
+{
+ "id": "pr28",
+ "fmt": 3,
+ "name": "Zola : un an de prison pour une lettre",
+ "sub": "Paris puis Versailles, 1898 : pour avoir publié « J'accuse… » en défense du capitaine Dreyfus, l'écrivain le plus célèbre de France est condamné, puis part pour Londres avant que la peine ne tombe",
+ "blurb": {
+  "b": "Janvier 1898 : un officier accusé d'avoir écrit le document qui a perdu Dreyfus est acquitté en quelques minutes. Deux jours plus tard, Émile Zola publie en une de L'Aurore une lettre ouverte au président de la République. Elle le conduit devant les assises, puis au départ précipité pour l'Angleterre.",
+  "h": "Une lettre ouverte, deux procès, et un écrivain contraint de fuir."
+ },
+ "body": [
+  "#Un acquittement",
+  "@Paris, 11 janvier 1898.",
+  "Le 11 janvier 1898, un conseil de guerre acquitte le commandant Esterhazy. Cet officier était soupçonné d'être l'auteur du bordereau, la note qui, trois ans plus tôt, avait servi à condamner le capitaine Alfred Dreyfus pour trahison. Le procès d'Esterhazy s'est tenu à huis clos, et le verdict est rendu très vite. Ceux qui croient Dreyfus innocent comprennent que la voie judiciaire est fermée.",
+  "Émile Zola, lui, a décidé d'intervenir. Il a cinquante-sept ans, il est l'écrivain le plus lu de France, et il n'ignore pas ce qu'il risque. Il va s'adresser au pays par le seul moyen qui lui reste : la presse.",
+  "#J'accuse",
+  "@Paris, 13 janvier 1898.",
+  "Le 13 janvier, le journal L'Aurore publie à la une une lettre ouverte au président de la République, Félix Faure. Zola avait proposé un titre plus long ; c'est Georges Clemenceau, alors rédacteur au journal, qui choisit le cri qui la rend célèbre : « J'accuse… ».",
+  "Le texte reprend l'affaire depuis le début. Zola y met en cause l'état-major, et accuse nommément des officiers d'avoir couvert l'erreur judiciaire. Il sait qu'en désignant ainsi ceux qu'il tient pour coupables, il s'expose à une poursuite pour diffamation. C'est exactement ce qu'il cherche : un procès public, où l'on pourrait rouvrir l'affaire.",
+  "!Le lendemain, une pétition d'intellectuels réclame elle aussi la révision du procès de Dreyfus.",
+  "#Les assises de la Seine",
+  "@Paris, 7 – 23 février 1898.",
+  "Le ministre de la Guerre porte plainte, mais pour des passages précis seulement, de manière à éviter que l'on rouvre tout le dossier. Zola est jugé du 7 au 23 février devant la cour d'assises de Paris, avec le gérant de L'Aurore. Son avocat est Fernand Labori. Dans la salle, des militaires, des journalistes, des nationalistes qui hurlent à l'entrée de l'écrivain.",
+  "Les juges empêchent presque toujours que l'on parle du fond de l'affaire Dreyfus. Les généraux témoignent en défenseurs de l'armée. Zola dit qu'il est convaincu de l'innocence de Dreyfus. Le jury le déclare coupable. Il est condamné à un an de prison et à trois mille francs d'amende, la peine maximale.",
+  "#Cassation et Versailles",
+  "@Avril – juillet 1898.",
+  "Mais la procédure n'est pas terminée. Le 2 avril 1898, la Cour de cassation casse la condamnation pour une irrégularité de forme : la plainte n'a pas été déposée par l'autorité qui devait le faire. Le dossier est renvoyé devant les assises de Seine-et-Oise, à Versailles. Le nouveau procès s'ouvre fin mai, mais les avocats de Zola contestent la procédure, et l'affaire est renvoyée en juillet.",
+  "Le 18 juillet, la cour d'assises de Versailles condamne de nouveau Zola, ainsi que le gérant de L'Aurore. La peine est la même : un an de prison et trois mille francs d'amende.",
+  "#Le départ pour Londres",
+  "@Paris, 18 – 19 juillet 1898.",
+  "Zola doit se rendre à l'évidence : la condamnation sera définitive et la prison l'attend. Sur le conseil de ses avocats, il quitte Paris le soir même et gagne l'Angleterre. Il n'emporte presque rien, et vit sous un nom d'emprunt.",
+  "Il restera à Londres près d'un an. Pendant ce temps, l'affaire continue sans lui. Le 3 juin 1899, la Cour de cassation annule la condamnation de Dreyfus et ordonne un nouveau jugement. Zola rentre à Paris quelques jours plus tard.",
+  "Il ne verra pas la fin de l'histoire. Dreyfus sera réhabilité en 1906, quatre ans après la mort de l'écrivain, qui meurt asphyxié dans son appartement parisien en 1902. Mais cette lettre, qui lui avait coûté un procès, une condamnation et un exil, avait déplacé le centre de gravité de l'affaire : ce n'était plus l'armée qui jugeait, c'était la France entière."
+ ],
+ "notes": "Retirés : âge erroné (48 ans, remplacé par 57), nom de Perrenx, détails du sort des amendes, tirage de L'Aurore. À vérifier : renvoi du second procès (23 mai puis juillet), date exacte du retour (juin 1899), exécution de la peine, nom du gérant."
+}

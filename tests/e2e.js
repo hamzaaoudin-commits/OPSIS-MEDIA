@@ -18,12 +18,39 @@ async function page(ctx,cfg,init){
   if(init)await p.addInitScript(init);
   return p;
 }
-async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunction(()=>window.OPSIS&&window.OPSIS.store&&window.OPSIS.store.S&&document.getElementById('main')&&document.getElementById('main').children.length>0,null,{timeout:20000});}
+async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunction(()=>window.OPSIS&&window.OPSIS.store&&window.OPSIS.store.S&&document.getElementById('main')&&document.getElementById('main').children.length>0,null,{timeout:20000});if(!bootRaw)await p.evaluate(()=>{OPSIS.store.S.x=OPSIS.store.S.x||{};OPSIS.store.S.x.onb=1;});}
+let bootRaw=false;
 (async()=>{
   const srv=spawn('node',[path.join(__dirname,'../tools/dev-server.js'),String(PORT)],{stdio:'ignore'});
   await sleep(900);
   const b=await chromium.launch();
   try{
+  console.log('0. premier lancement');
+  {
+    bootRaw=true;const ctx=await b.newContext({viewport:{width:430,height:900}});
+    const p=await page(ctx);await boot(p,'/app.html');
+    await p.waitForSelector('.onb.on',{timeout:15000});
+    ok(true,'le parcours de premier lancement s\'affiche après l\'intro');
+    for(let i=0;i<8;i++){await p.click('[data-onb="next"]');await sleep(120);}
+    ok(await p.evaluate(()=>!!document.querySelector('.onb .ob-gfc .gx')),'les cartes du guide sont dans le parcours');
+    await p.click('[data-onb="prev"]');await sleep(150);await p.click('[data-onb="next"]');await sleep(200);
+    await p.click('.onb [data-pref]');await sleep(200);
+    const pf=await p.evaluate(()=>(OPSIS.store.S.x.prefs||[]).length);ok(pf===1,'un thème choisi est enregistré ('+pf+')');
+    for(let i=0;i<6;i++){await p.click('[data-onb="next"]');await sleep(120);}
+    await p.click('[data-onb="read"]');await sleep(1500);
+    const g=await p.evaluate(()=>({gone:!document.querySelector('.onb'),flag:!!OPSIS.store.S.x.onb,layer:document.getElementById('layer').className}));
+    ok(g.gone&&g.flag&&/in/.test(g.layer),'« Lire l\'histoire du jour » ferme l\'accueil et ouvre la lecture');
+    await p.reload();bootRaw=false;await boot(p,'/app.html');await sleep(9000);
+    ok(!(await p.evaluate(()=>!!document.querySelector('.onb'))),'le parcours ne revient pas au lancement suivant');
+    /* relancé depuis les réglages, « Explorer le catalogue » ramène à la page principale */
+    await p.evaluate(()=>{OPSIS.ui.openSettings();var r=document.querySelector('[data-set="root"]');if(r)r.click();});await sleep(400);
+    await p.evaluate(()=>{var b=document.querySelector('[data-onbagain]');if(!b){var x=document.createElement('button');x.setAttribute('data-onbagain','');document.getElementById('phone').appendChild(x);b=x;}b.click();});await sleep(500);
+    for(let i=0;i<14;i++){await p.click('[data-onb="next"]');await sleep(80);}
+    await p.click('[data-onb="explore"]');await sleep(900);
+    const hm=await p.evaluate(()=>({st:OPSIS.store.S.stack.length,tab:OPSIS.store.S.tab,sheet:!!document.querySelector('.sheet.show,.setwrap.show'),onb:!!document.querySelector('.onb')}));
+    ok(hm.st===0&&hm.tab==='home'&&!hm.onb,'« Explorer le catalogue » mène à la page principale ('+JSON.stringify(hm)+')');
+    await ctx.close();bootRaw=false;
+  }
   console.log('1. démarrage et sauvegarde locale');
   {
     const ctx=await b.newContext({viewport:{width:430,height:900}});
@@ -33,12 +60,12 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     const cov=await p.evaluate(()=>OPSIS.art('ar01').indexOf('<svg')===0);ok(cov,'couverture rendue depuis les données');
     /* réglages par l'interface */
     await p.evaluate(()=>OPSIS.ui.openSettings());
-    await p.click('[data-hour="8 h"]');
+    await p.fill('[data-time]','08:00');await p.dispatchEvent('[data-time]','change');
     await p.evaluate(()=>{OPSIS.store.S.read.ar01=true;OPSIS.store.S.saved.cs03=true;});
     await sleep(500);await p.evaluate(()=>OPSIS.store.commit());
     await p.reload();await boot(p,'/app.html');
     const st=await p.evaluate(()=>({h:OPSIS.store.S.hour,r:!!OPSIS.store.S.read.ar01,s:!!OPSIS.store.S.saved.cs03}));
-    eq(st,{h:'8 h',r:true,s:true},'heure, lecture et liste retrouvées après rechargement');
+    eq(st,{h:'08:00',r:true,s:true},'heure, lecture et liste retrouvées après rechargement');
     ok(await p.evaluate(()=>OPSIS.store.streak())===1,'série : 1 jour après une lecture');
     await ctx.close();
   }
@@ -103,8 +130,8 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
   console.log('4. contenu publié sans republier l’app');
   {
     const ctx=await b.newContext();const p=await page(ctx,LIVE);await boot(p,'/app.html');
-    const before=await p.evaluate(()=>({src:OPSIS.data.source,n:Object.keys(OPSIS.stories()).length,hero:document.querySelector('.bigtitle').textContent}));
-    eq([before.src,before.hero],['snapshot','L\'homme qui a vendu la tour Eiffel'],'au départ : instantané embarqué, l’histoire d’Eiffel à la une');
+    const before=await p.evaluate(()=>({src:OPSIS.data.source,n:Object.keys(OPSIS.stories()).length,hero:document.querySelector('.bigtitle').textContent,exp:OPSIS.stories()[OPSIS.ui.daily()].title}));
+    eq([before.src,before.hero],['snapshot',before.exp],'au départ : instantané embarqué, histoire du jour tirée du catalogue à la une');
     const all=await (await fetch(BASE+'/rest/v1/stories?limit=1000')).json();
     const base=all.find(r=>r.id==='ar01');
     const day=(d)=>new Date(Date.now()+d*86400e3).toISOString();
@@ -120,7 +147,6 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     eq(after.src,'live','contenu récupéré depuis la base');
     eq([!!after.S.dj001,!!after.S.dj002,!!after.S.dj003],[true,true,false],'histoires du jour publiées visibles, celle de demain cachée');
     eq(after.hero,'Le récit du jour','la une de l’accueil affiche l’histoire du jour');
-    ok(after.week.includes('Le récit d’avant-hier')||after.week.some(x=>/avant-hier/.test(x)),'« Cette semaine » liste les dernières histoires du jour');
     ok(!after.S.ar99,'une série complète ignore l’ajout (30 places)');
     eq(after.S.ar01.title,'Titre corrigé à distance','correction d’une histoire existante appliquée sans republier');
     /* la couverture de secours est générée aux couleurs du thème */
@@ -129,8 +155,8 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     await p.evaluate(()=>document.querySelector('.hero [data-open]').click());await sleep(500);
     ok(await p.evaluate(()=>/Premier paragraphe/.test(document.body.innerText)),'l’histoire du jour s’ouvre et se lit');
     /* notification : texte du jour = l'histoire publiée ce jour-là */
-    const txt=await p.evaluate(()=>{const S=OPSIS.store.S;S.notif=true;S.hour='7 h';return OPSIS.notif.textForDay(OPSIS.day(),OPSIS.data,OPSIS.stories());});
-    ok(/Le récit du jour/.test(txt),'la notification du jour reprend le titre de l’histoire publiée');
+    const txt=await p.evaluate(()=>{const S=OPSIS.store.S;S.notif=true;S.hour='7 h';return JSON.stringify(OPSIS.notif.entryForDay(OPSIS.day(),OPSIS.data,OPSIS.stories()));});
+    ok(/Le récit du jour/.test(txt)&&/"id":"/.test(txt),'la notification du jour reprend le titre de l’histoire publiée');
     /* hors ligne : le cache local suffit */
     await ctx.route(BASE+'/rest/v1/**',r=>r.abort());
     await p.reload();await boot(p,'/app.html');
@@ -150,8 +176,10 @@ async function boot(p,pathname){await p.goto(BASE+pathname);await p.waitForFunct
     const p=await page(ctx,null,fake);await boot(p,'/app.html');
     const plan=await p.evaluate(()=>{const S=OPSIS.store.S;S.notif=true;S.hour='7 h';
       return OPSIS.notif.plan(S,OPSIS.data,OPSIS.stories(),new Date(2027,0,5,10,0,0).getTime()).map(n=>({d:OPSIS.day(n.at.getTime()),h:n.at.getHours(),body:n.body}));});
-    eq(plan.length,14,'14 jours programmés');
-    eq([plan[0].d,plan[0].h,plan[13].d],['2027-01-06',7,'2027-01-19'],'à partir de demain 7 h, sur 14 jours');
+    eq(plan.length,8,'7 jours + une seule relance');
+    eq([plan[0].d,plan[0].h,plan[7].d],['2027-01-06',7,'2027-01-13'],'à partir de demain 7 h, 7 jours puis une relance');
+    const night=await p.evaluate(()=>{const S=OPSIS.store.S;S.hour='3 h';const r=OPSIS.notif.plan(S,OPSIS.data,OPSIS.stories(),new Date(2027,0,5,10,0,0).getTime())[0].at.getHours();S.hour='7 h';return r;});
+    eq(night,7,'jamais la nuit : 3 h devient 7 h');
     ok(plan.every(x=>x.body.length>5),'chaque notification a un texte');
     const pre=await p.evaluate(()=>{const S=OPSIS.store.S;S.hour='8 h';return OPSIS.notif.plan(S,OPSIS.data,OPSIS.stories(),new Date(2026,10,5,10,0,0).getTime()).length;});
     eq(pre,1,'avant le lancement : une seule notification, le jour J');

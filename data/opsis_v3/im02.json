@@ -1,0 +1,52 @@
+{
+ "id": "im02",
+ "fmt": 3,
+ "name": "Perkin Warbeck, le faux Richard IV",
+ "sub": "Cork, 1491 — Un jeune Flamand se fait passer pour le fils d'Édouard IV et tient tête à Henri VII pendant huit ans, soutenu par des rois et des princes.",
+ "body": [
+  "#PROLOGUE — Londres, 1483",
+  "Les deux fils d'Édouard IV, les « princes de la Tour », sont présumés assassinés dans la Tour de Londres en 1483.",
+  "On ne sait pas ce qu'on a fait d'eux.",
+  "Le cadet, Richard, duc d'York, est celui que Perkin Warbeck prétend être. Né vers 1474, il se déclare Richard de Shrewsbury, duc d'York.",
+  "Après leur disparition, c'est leur oncle Richard III qui règne. Puis Henri Tudor, qui le bat à Bosworth en 1485 et devient Henri VII.",
+  "Le nouveau roi n'a pas un droit au trône très solide. Tout héritier yorkiste le menace.",
+  "Lorsqu'un jeune homme dit être l'un des princes, la menace est réelle, qu'il ait raison ou non.",
+  "#01 — CORK, 1491",
+  "Il revendique le trône d'Angleterre à la cour de Bourgogne en 1490, puis débarque en Irlande en 1491, où le soutien reste faible.",
+  "Marguerite de Bourgogne le reconnaît publiquement. En 1493, Maximilien le reçoit comme « Richard IV ». Le roi de France l'expulse en 1492.",
+  "Le 3 juillet 1495, il débarque à Deal, dans le Kent. Les habitants, fidèles à Henri VII, mettent sa troupe en déroute.",
+  "Jacques IV d'Écosse le reçoit bien. Warbeck épouse Lady Catherine Gordon à Édimbourg. En 1496, Jacques envahit l'Angleterre avec lui, mais le soutien espéré ne vient pas.",
+  "Un homme que des souverains traitent en prince, et qui n'a presque aucun peuple derrière lui, tient pourtant en échec un roi installé sur le trône.",
+  "Pour Henri VII, ces années sont un souci permanent. Chaque fois que Warbeck trouve un protecteur, le roi doit envoyer des ambassadeurs, payer des espions, convaincre des alliés de ne pas le soutenir.",
+  "L'imposteur coûte cher, même quand il ne gagne rien.",
+  "#02 — LA CORNOUAILLES",
+  "!Le 7 septembre 1497, il débarque à Whitesand Bay et se fait proclamer « Richard IV ».",
+  "La Cornouailles est une région mécontente, qui s'est déjà soulevée contre les impôts du roi.",
+  "Warbeck y trouve des hommes. Pendant quelques jours, il ressemble à un prétendant digne de ce nom : il a un titre, une armée, une région derrière lui. Il lève une armée d'environ 6 000 hommes.",
+  "Quand des éclaireurs royaux approchent, il abandonne son armée.",
+  "Il se rend à l'abbaye de Beaulieu, puis il est emprisonné. Il y avoue qu'il s'appelle Piers Osbeck, fils d'un batelier de Tournai.",
+  "Cet aveu est considéré comme en partie vrai seulement, parce qu'il a été fait sous la contrainte.",
+  "#03 — LE DERNIER COMPLOT",
+  "En 1499, lui et le comte de Warwick, dernier des Plantagenêt, tentent une évasion.",
+  "Il n'est pas exécuté pour avoir joué le prince yorkiste, mais pour un complot visant à renverser Henri VII.",
+  "Il est pendu à Tyburn le 23 novembre 1499, après avoir lu une confession. Warwick est décapité à Tower Hill quelques jours plus tard.",
+  "Sa femme, Catherine Gordon, est traitée avec égards par Henri VII, qui la prend à sa cour.",
+  "#ÉPILOGUE — Ni vrai ni faux",
+  "On ne sait pas s'il était le fils de Jehan de Werbecque ou un fils d'Édouard IV.",
+  "On ne sait pas non plus ce que l'on a fait des princes de la Tour.",
+  "!Huit ans durant, il a vécu dans une zone où le mensonge et la vérité sont indiscernables.",
+  "Ceux qui l'ont soutenu servaient leurs propres intérêts. Lui n'a jamais su, ou jamais dit, qui il était vraiment."
+ ],
+ "learned": [
+  "Qui étaient les princes de la Tour et pourquoi leur disparition comptait.",
+  "Pourquoi un prétendant, même faux, menaçait Henri VII.",
+  "Le parcours de Warbeck dans les cours d'Europe.",
+  "Sa chute en 1497 et son exécution en 1499."
+ ],
+ "retain": "Perkin Warbeck a vécu huit ans dans une zone où le mensonge et la vérité sont indiscernables. Ceux qui l'ont soutenu servaient leurs propres intérêts.",
+ "note": "On ignore s'il était le fils de Jehan de Werbecque ou un fils d'Édouard IV, et ce qu'il est advenu des princes de la Tour. Son aveu de 1497 est jugé en partie vrai seulement, car obtenu sous la contrainte. Les dates des soutiens étrangers varient légèrement selon les sources.",
+ "blurb": {
+  "b": "Londres, 1483 : deux princes disparaissent dans la Tour. Huit ans plus tard, à Cork, un jeune homme affirme être le cadet. Des souverains le reçoivent, des armées le suivent un temps, et le roi Henri VII ne dort plus tranquille. Était-il le prince disparu, un imposteur, ou autre chose encore ?",
+  "h": "Un jeune homme se dit prince disparu et inquiète un roi pendant huit ans."
+ }
+}

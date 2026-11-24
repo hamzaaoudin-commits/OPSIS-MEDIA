@@ -22,6 +22,7 @@ await click('#layerview [data-subf="es"]');await log('sub es',()=>document.query
 await click('#main [data-col="froide"]');await shot('05col');await back();
 await click('#main [data-path="gf"]');await shot('06path');await back();
 // reader
+await p.evaluate(()=>{OPSIS.store.S.quizOn=true;});
 await p.evaluate(()=>{const ph=document.querySelector('#phone');const bt=document.createElement('button');bt.setAttribute('data-open','es11');ph.appendChild(bt);bt.click();bt.remove();});await p.waitForTimeout(700);await shot('07reader');
 await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=(v.scrollHeight-v.clientHeight)*0.4;});await p.waitForTimeout(400);
 await log('prog',()=>OPSIS.store.S.prog);
@@ -32,24 +33,21 @@ for(let i=0;i<3;i++){await click('#layerview .qzo');}
 await p.evaluate(()=>{const v=document.getElementById('layerview');const e=v.querySelector('.quiz');v.scrollTop=e.offsetTop-200;});await shot('10quizend');
 // selection -> quote
 await p.evaluate(()=>{const v=document.getElementById('layerview');const ps=v.querySelectorAll('.rtext>p:not(.dl):not(.orn)');const el=ps[2];v.scrollTop=el.offsetTop-300;const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);});await p.waitForTimeout(400);await shot('11sel');
-await click('.selbar [data-selq]');await log('quotes',()=>(OPSIS.store.S.x.quotes||[]).map(q=>q.t.slice(0,40)));
+await click('.selbar [data-selc]');await p.waitForTimeout(1600);await shot('23card');await click('#sclose');
 // quick sheet + light
 await click('#layerview [data-quick]');await shot('12quick');
 await click('#settingsbox [data-theme="light"]');await click('#settingsbox [data-font="sans"]');await click('#settingsbox [data-closesettings]');
 await p.evaluate(()=>{document.getElementById('layerview').scrollTop=0;});await shot('13light_reader');
 await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=900;});await shot('14light_text');
-// audio
-await click('#layerview [data-audio]');await p.waitForTimeout(500);await log('audio',()=>[document.querySelector('.aubar').classList.contains('on'),'speechSynthesis' in window]);await shot('15audio');
-await click('.aubar [data-au="stop"]');
 // collection add
-await click('#layerview [data-coladd]');await p.fill('#newcol','À raconter');await click('#settingsbox [data-colnew]');await shot('16colsheet');await click('#settingsbox [data-closesettings]');
+
 await click('#layerview [data-report]');await shot('17report');await click('#settingsbox [data-closesettings]');
 await click('#layerview [data-finish]');await p.waitForTimeout(600);
 await shot('18light_home');
 await p.evaluate(()=>document.getElementById('main').scrollTo(0,620));await shot('19light_home2');
 // mon espace
 await click('#main [data-lib]');await shot('20espace');await p.evaluate(()=>{document.getElementById('layerview').scrollTop=520;});await shot('21espace2');
-await click('#layerview [data-quotes]');await shot('22quotes');await click('#layerview [data-qcard="0"]');await p.waitForTimeout(1600);await shot('23card');await click('#sclose');await back();
+await back();
 await click('#layerview [data-set="root"]');await shot('24settings');
 for(const k of ['lecture','langue','notifs','abo','confid','widget','compte']){await click('#layerview [data-set="'+k+'"]');await shot('25set_'+k);await back();}
 await back();await back();

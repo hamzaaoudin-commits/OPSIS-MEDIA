@@ -1,0 +1,50 @@
+{
+ "id": "tm07",
+ "fmt": 3,
+ "name": "Fitzcarraldo : un bateau sur la montagne",
+ "sub": "Pérou, 1979-1981 — Pour son film, Werner Herzog fait réellement hisser un vapeur par-dessus une colline, après avoir perdu son acteur principal en cours de route.",
+ "body": [
+  "#PROLOGUE — Pérou, 1979",
+  "Un rêveur veut apporter l'opéra au cœur de la forêt amazonienne.",
+  "Pour financer son rêve, il doit atteindre une zone de caoutchouc isolée. Et pour y arriver, il lui faut faire passer un bateau d'une rivière à une autre.",
+  "En franchissant une colline.",
+  "Ce rêveur s'appelle Fitzcarraldo. Au cinéma, tout cela se simule. Werner Herzog refuse de le simuler.",
+  "#01 — L'ACTEUR QUI S'EN VA",
+  "Pour le rôle, Herzog veut Jason Robards. L'acteur américain tourne environ quarante pour cent du film.",
+  "Puis il tombe malade, une dysenterie, et ses médecins lui interdisent de retourner au Pérou.",
+  "Mick Jagger, qui devait jouer un rôle, part en tournée avec les Rolling Stones. Mario Adorf n'est plus disponible : son rôle est recasté.",
+  "Herzog envisage Jack Nicholson, et même de jouer lui-même. Il engage finalement Klaus Kinski, avec qui il a déjà tourné plusieurs films.",
+  "Le film doit donc recommencer presque depuis le début, avec un acteur dont les crises de colère sont déjà célèbres.",
+  "#02 — UN VÉRITABLE VAPEUR SUR UNE PENTE",
+  "Herzog n'en fait pas une image truquée. Il fait hisser un véritable vapeur sur une pente abrupte, sans effets spéciaux.",
+  "Son poids est discuté : 320 tonnes pour certains, environ 200 pour le chef opérateur Thomas Mauch.",
+  "!Trois personnes sont blessées pendant l'opération.",
+  "Herzog avait acheté deux bateaux semblables. Les rapides les plus violents sont filmés avec une maquette. Mais la montée, elle, est réelle : des hommes, des câbles, une pente, et le risque à chaque minute que quelque chose cède.",
+  "Herzog a donné à son projet un nom qui le résume : « Conquistador de l'inutile ».",
+  "Mauch ajoute une précision qui gêne la légende. Le passage est mis en scène pour paraître tiré par les Indiens et leurs treuils. En réalité, un gros tracteur Caterpillar et des câbles d'acier faisaient avancer le vapeur, lentement.",
+  "Ce qu'on voit à l'écran n'est donc pas tout à fait la manière dont le bateau avance.",
+  "#03 — KINSKI ET LES AUTRES",
+  "Les crises de Kinski, ses conflits avec Herzog et avec l'équipe sont bien documentés.",
+  "Herzog raconte qu'un chef indigène lui a un jour proposé de tuer Kinski. Il a refusé.",
+  "Autour du tournage, les accusations se multiplient. Des critiques, dont l'anthropologue Michael F. Brown, disent que des Indigènes ont été exploités et que le tournage a tendu les relations avec les Aguaruna.",
+  "Herzog le conteste. Il cite un rapport d'Amnesty International qui n'aurait trouvé aucune preuve d'exploitation.",
+  "Deux accidents de petits avions font aussi des blessés, dont un paralysé. Mauch rejette l'idée que Herzog ait mis son équipe en danger. Il reconnaît toutefois que des Indigènes sont morts, noyés lors d'un incident hors tournage ou de maladie.",
+  "#ÉPILOGUE — Le navire au sommet",
+  "Le budget est de 14 millions de deutschemarks. En 1982, Herzog reçoit à Cannes le prix de la mise en scène. La même année, le documentaire de Les Blank, Burden of Dreams, enregistre les épreuves du tournage.",
+  "On ne sait pas l'effet réel du tournage sur les Aguaruna : Brown, Herzog et Mauch donnent des avis opposés. Le poids du bateau, le nombre de blessés et le budget varient selon les récits.",
+  "Reste une image qu'aucun trucage ne remplace : un navire à vapeur au sommet d'une colline, au milieu de la forêt, et des hommes qui regardent s'ils vont réussir."
+ ],
+ "learned": [
+  "Le rôle de Jason Robards, puis le remplacement par Klaus Kinski.",
+  "Le choix de Herzog de hisser un vrai bateau, sans trucage.",
+  "Ce que dit le chef opérateur du tracteur caché derrière la scène.",
+  "Les accusations contre le tournage et la contestation de Herzog.",
+  "Pourquoi les chiffres de l'histoire (poids, blessés, budget) varient."
+ ],
+ "retain": "Herzog a hissé un vrai vapeur sur une colline, mais la légende du tournage et sa réalité ne coïncident pas tout à fait.",
+ "note": "Les chiffres (poids du bateau, nombre de blessés, budget) varient selon les récits. L'impact du tournage sur les Aguaruna est contesté : Brown, Herzog et Mauch donnent des avis opposés. Aucun dialogue n'est inventé.",
+ "blurb": {
+  "b": "Pérou, 1979. Herzog perd son acteur principal, engage Klaus Kinski, puis décide de ne pas truquer la scène centrale de son film : un vrai vapeur, hissé par-dessus une vraie colline. Des blessés, des accusations, un tracteur caché derrière la légende. Que reste-t-il de cette image ?",
+  "h": "Un vrai bateau, une vraie colline, et un film qui refuse le trucage."
+ }
+}

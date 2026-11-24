@@ -1,0 +1,30 @@
+{
+ "id": "ld01",
+ "fmt": 3,
+ "name": "Lincoln : « Elle ne pensera rien »",
+ "sub": "Washington, 14 avril 1865 : la guerre est finie, Lincoln passe un vendredi serein entre cabinet, calèche et théâtre ; le soir, dans sa loge, il est abattu",
+ "blurb": {
+  "b": "Le 14 avril 1865, cinq jours après la reddition de Lee, Abraham Lincoln traverse la plus légère des journées : un rêve qu'il juge de bon augure, un cabinet joyeux, une promenade avec sa femme. Le soir, au Ford's Theatre, un acteur avance dans le couloir de sa loge. Il ne verra pas le matin.",
+  "h": "La dernière journée, étrangement paisible, d'Abraham Lincoln"
+ },
+ "body": [
+  "#Un bon présage",
+  "@Vendredi 14 avril 1865.",
+  "Cinq jours plus tôt, le général Lee a rendu les armes à Appomattox. Washington, après quatre ans de guerre, respire. Le matin, Lincoln déjeune avec sa femme Mary et son fils Robert, capitaine dans l'état-major de Grant, de retour du front. Il a rêvé, rapporte-t-on, d'un navire filant vers une rive inconnue, un rêve qui, à ses yeux, précède toujours les grands événements. Cette fois, il y voit une bonne nouvelle. Avant la réunion du cabinet, il fait prévenir le Ford's Theatre qu'il assistera le soir à la représentation.",
+  "#Le cabinet",
+  "@Fin de matinée.",
+  "Grant assiste à la réunion du cabinet, et les ministres trouvent le président d'une humeur inhabituellement haute. On y parle de la reconstruction : comment remettre les États du Sud dans l'Union, comment les gouverner en attendant. Lincoln évoque aussi l'après, un voyage en Californie, une visite en Terre sainte, la reprise du métier d'avocat. Un homme qui prépare sa retraite, pas un homme qui se sait menacé.",
+  "Les Grant déclinent l'invitation au théâtre. Le secrétaire à la Guerre, Stanton, l'avait lui-même mis en garde contre les risques des apparitions publiques. On ne sait pas pourquoi les Grant refusent, ni ce que Lincoln savait vraiment des menaces qui pesaient sur lui.",
+  "#La calèche",
+  "@L'après-midi.",
+  "Lincoln emmène Mary en calèche vers le Navy Yard, où il visite un navire de guerre. Elle lui trouve une gaieté qu'elle n'avait pas vue depuis longtemps. Il lui dit avoir le sentiment que la guerre est enfin terminée, et qu'il leur faut désormais être plus heureux ensemble. Après un souper précoce, ils partent pour le théâtre. Ils arrivent en retard, la pièce a commencé ; le public se lève, l'orchestre joue en l'honneur du président.",
+  "#La loge",
+  "@Vers 22 heures.",
+  "On joue Our American Cousin, une comédie légère. Avec les Lincoln, dans la loge, se trouvent le major Henry Rathbone et Clara Harris. Au cours de la soirée, rapporte-t-on, Lincoln prend la main de Mary et lui demande ce que Miss Harris va penser de les voir ainsi enlacés.",
+  "!Mary lui aurait répondu qu'elle n'en penserait rien.",
+  "Le matin même, John Wilkes Booth, un acteur connu, était passé au théâtre chercher son courrier. Il y avait appris que le président viendrait. Vers 22 heures, pendant que la salle rit, il entre dans la loge et tire. Le major Rathbone se jette sur lui et est blessé d'un coup de couteau. Booth saute sur la scène, se blesse à la jambe, lance en latin une devise sur les tyrans et disparaît dans la coulisse.",
+  "Un jeune chirurgien de l'armée, Charles Leale, se trouve dans la salle et monte dans la loge. Il comprend très vite qu'on ne peut plus rien faire. On ne veut pas laisser le président mourir sur une banquette de théâtre : on le transporte dans une maison de l'autre côté de la rue, où il ne reprendra pas connaissance. Il meurt à 7 h 22 le lendemain matin.",
+  "Il restait à la guerre quelques semaines de fumée. Il aura manqué à Lincoln de voir ce qu'il avait annoncé ce vendredi : le retour à la vie ordinaire, un voyage, un cabinet d'avocat. Sa dernière journée n'a rien de sombre, et c'est ce qui la rend si difficile à lire. On ne saura jamais l'heure exacte du coup de feu, ni pourquoi la loge était si mal gardée. Mais on sait comment il a passé ses dernières heures : en souriant, la main dans celle de sa femme."
+ ],
+ "notes": "Retiré : détail du rêve attribué à Winik et lien avec Johnston, heure précise du cabinet (11 h ou midi), nom du navire, heure de la mort selon Leale, place du garde. À vérifier : propos rapportés (Mary et Miss Harris), « paix » dans l'annonce du matin."
+}

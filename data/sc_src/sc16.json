@@ -1,0 +1,35 @@
+{
+ "id": "sc16",
+ "fmt": 3,
+ "name": "1859 : l'orage solaire des télégraphes",
+ "sub": "1er septembre 1859 — Deux astronomes voient une éruption sur le Soleil. Dix-sept heures plus tard, les télégraphes du monde crépitent et les aurores descendent jusqu'aux tropiques.",
+ "dates": "1859",
+ "country": "Royaume-Uni, États-Unis",
+ "job": "Richard Carrington et Richard Hodgson, astronomes",
+ "yr": 1859,
+ "src": [
+  "« Solar storm of 1859 », Wikipédia (anglais). en.wikipedia.org/wiki/Solar_storm_of_1859"
+ ],
+ "body": [
+  "Le 1er septembre 1859, juste avant midi, deux astronomes britanniques regardent le Soleil, chacun de son côté. Richard Carrington et Richard Hodgson observent en même temps une éruption solaire, une explosion de lumière à la surface de l'étoile. Ils sont les premiers à en noter une, et ni l'un ni l'autre ne sait encore ce qu'elle va déclencher.",
+  "Une éruption de cette taille projette dans l'espace un énorme nuage de particules chargées. Un nuage comme celui-ci met en général plusieurs jours à atteindre la Terre. Celui de 1859 parcourt les 150 millions de kilomètres en 17,6 heures.",
+  "#Une nuit trop claire",
+  "Dans la nuit du 1er au 2 septembre, le ciel s'embrase. Les aurores, d'ordinaire réservées aux régions polaires, sont vues dans les montagnes Rocheuses, dans le nord-est des États-Unis, au Mexique, à Cuba, à Hawaï, au Queensland, au sud du Japon, en Chine, en Nouvelle-Zélande et en Colombie.",
+  "Dans les Rocheuses, des chercheurs d'or, croyant qu'il fait jour, se mettent à préparer leur petit-déjeuner.",
+  "Ces aurores sont assez brillantes pour tromper les gens : dans les Rocheuses, le ciel est éclairé comme à l'aube.",
+  "#Des fils qui prennent feu",
+  "Le télégraphe est à l'époque la technologie de communication la plus avancée du monde, et il est frappé de plein fouet. En Europe et en Amérique du Nord, les réseaux tombent en panne. Des opérateurs reçoivent des décharges, et des poteaux projettent des étincelles.",
+  "Dans la nuit du 2 septembre, un opérateur de Boston et un autre de Portland, dans le Maine, décident de faire l'inverse : ils débranchent leurs batteries et laissent la ligne fonctionner avec le seul courant induit par l'aurore. Pendant environ deux heures, ils échangent leurs messages ainsi. D'après la source consultée, c'est la première fois qu'on a enregistré plus d'un mot ou deux envoyés de cette manière.",
+  "Des chercheurs ont cru retrouver la trace de l'événement dans les glaces du Groenland, à partir de 1986, grâce à des pics de nitrates, un composé de l'azote. Cette piste est aujourd'hui très discutée : des nitrates peuvent aussi venir de feux de forêt, et les pics du Groenland ne coïncident pas avec ceux de l'Antarctique.",
+  "Ce qui reste, ce sont les témoignages de l'époque : des opérateurs de télégraphe qui trouvent leurs lignes vivantes sans pile, des aurores visibles à des latitudes où personne n'en avait jamais vu, et deux astronomes qui, sans se concerter, ont noté la même lumière sur le Soleil.",
+  "#Si cela arrivait aujourd'hui",
+  "On appelle cet événement l'événement de Carrington. C'est la plus violente tempête géomagnétique connue de l'époque moderne. Mais en 1859, il n'y a ni satellites, ni réseaux électriques, ni transformateurs à haute tension. Les dégâts se limitent aux télégraphes.",
+  "Le 23 juillet 2012, une tempête de la même classe, une « Carrington-class », est observée par un satellite d'étude du Soleil. Sa trajectoire manque la Terre d'environ neuf jours.",
+  "En juin 2013, la compagnie Lloyd's de Londres et la société AER estiment qu'un événement de ce type frappant aujourd'hui les seuls États-Unis coûterait entre 600 milliards et 2,6 mille milliards de dollars, soit de 3,6 à 15,5 % du produit intérieur brut annuel du pays. Converti en dollars de 2024, cela représente de 794 milliards à 3,44 mille milliards."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : observations indépendantes de Carrington et Hodgson juste avant midi le 1er septembre 1859 ; nuage parcourant 150 millions de km en 17,6 heures ; liste des lieux d'aurores ; chercheurs d'or des Rocheuses préparant le petit-déjeuner ; pannes de télégraphe, opérateurs choqués, poteaux projetant des étincelles ; Boston–Portland, environ deux heures, batteries débranchées, première fois qu'on enregistre plus d'un mot ou deux ; 23 juillet 2012, manqué d'environ neuf jours ; Lloyd's/AER juin 2013 : 600 milliards à 2,6 mille milliards de dollars, 3,6 à 15,5 % du PIB. À vérifier avant publication : « un satellite d'étude du Soleil » pour la détection de 2012 (la page dit seulement « observed »), « les premiers à en noter une » (la page dit « earliest observations »), la définition d'une éruption, la phrase sur le télégraphe comme technologie la plus avancée, l'absence de réseaux électriques en 1859. Ajouté : nitrates du Groenland (à partir de 1986, très discutés ; feux de forêt ; Groenland et Antarctique non alignés) ; équivalent en dollars de 2024 (794 milliards à 3,44 mille milliards). À vérifier : « des latitudes où personne n'en avait jamais vu » (formulation de conclusion, à confirmer ou retirer). À vérifier : phrase sur le ciel « comme à l'aube » et le lien Soleil–aurore établi plus tard (reformulation du récit, à confirmer ou retirer).",
+ "blurb": {
+  "b": "Le 1er septembre 1859, deux astronomes anglais voient une éruption éclater sur le Soleil. Dix-sept heures plus tard, les aurores descendent jusqu'aux tropiques et les télégraphes du monde entier s'affolent. Un siècle et demi plus tard, une tempête de même ampleur nous a manqués de neuf jours seulement.",
+  "h": "Une éruption solaire, des télégraphes en feu : l'orage de 1859 frapperait bien plus fort aujourd'hui."
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "id": "ld19",
+ "fmt": 3,
+ "name": "Magellan : un javelot dans la jambe",
+ "sub": "Mactan, 27 avril 1521 : Magellan, venu aider un allié contre un chef qui lui résiste, débarque avec une cinquantaine d'hommes et meurt dans l'eau, d'après le récit de Pigafetta.",
+ "blurb": {
+  "b": "Avril 1521, aux Philippines. Magellan, qui a fait baptiser le roi de Cebu, veut punir Lapulapu, chef de Mactan, qui refuse de se soumettre. Les navires restent bloqués au large, les guerriers sont des centaines. Magellan meurt dans l'eau, un javelot dans la jambe. Le tour du monde continuera sans lui.",
+  "h": "Il voulait montrer sa puissance ; il meurt dans l'eau, face aux guerriers de Lapulapu"
+ },
+ "body": [
+  "#Un allié à servir",
+  "@Cebu, avril 1521.",
+  "Les mois précédents ont été durs. Magellan a trouvé le passage qui porte aujourd'hui son nom, à l'extrémité de l'Amérique du Sud, puis traversé un océan que nul Européen n'avait vu depuis ce côté, avec des équipages affamés. Il arrive aux Philippines avec des hommes épuisés, et la conviction que sa mission est presque accomplie. Il est portugais, au service du roi d'Espagne.",
+  "Parti d'Espagne en août 1519 pour chercher vers l'ouest la route des Moluques, Magellan atteint les Philippines au printemps 1521. À Cebu, il rencontre le rajah Humabon, qui est baptisé avec son épouse, sous les noms de Carlos et Juana. Magellan offre à Juana une statue de l'Enfant Jésus, le Santo Niño. Humabon ordonne aux chefs voisins de fournir des vivres et de se convertir. La plupart obéissent.",
+  "Pas Lapulapu, l'un des deux chefs de l'île de Mactan. Il refuse de prêter serment à l'Espagne. Humabon et l'autre chef, Zula, suggèrent à Magellan de le forcer. Il y voit l'occasion de renforcer ses liens avec Humabon et accepte, malgré les conseils de prudence de ses hommes.",
+  "Tout ce que l'on sait de Lapulapu vient d'Antonio Pigafetta, le chroniqueur de l'expédition. On ne connaît ni sa naissance, ni ses parents.",
+  "#La plage",
+  "@Mactan, 27 avril 1521, à l'aube.",
+  "Le combat a lieu tôt le matin, un samedi, sur une plage de Mactan : une cinquantaine d'Européens engagés, face à environ quinze cents guerriers d'après Pigafetta. Les navires, que des eaux peu profondes et un récif tiennent à distance, ne peuvent appuyer le tir. Les hommes avancent dans l'eau jusqu'à la cuisse.",
+  "À peine à terre, les Espagnols reçoivent des flèches, des lances de bambou à pointe de fer, des bâtons durcis au feu et des pierres. Leur armure les protège, mais cette pluie de projectiles les démoralise. Depuis les bateaux, arquebusiers et arbalétriers tirent de loin pendant une demi-heure, jusqu'à épuisement des munitions.",
+  "#La retraite",
+  "@Pendant près d'une heure.",
+  "Magellan fait brûler des maisons, ce qui enrage les habitants. Il ordonne la retraite, mais ses hommes continuent à se battre. Une flèche blesse Magellan à la jambe, que son armure ne couvrait pas. Les guerriers chargent alors au corps à corps. D'après Pigafetta, Humabon et Zula, à la demande de Magellan, ont regardé de loin.",
+  "!Magellan s'effondre et meurt dans l'eau, à hauteur de genou.",
+  "Pigafetta le décrit entouré, un javelot enfoncé dans la jambe, tombant face contre terre, puis atteint par des lances de fer et de bambou. Il l'appelle « notre miroir, notre lumière, notre réconfort et notre vrai guide ». Pigafetta et quelques autres s'échappent. On ne sait pas exactement combien ont péri de chaque côté, ni qui a porté le coup fatal.",
+  "#Un tour du monde sans lui",
+  "@1521 – 1522.",
+  "Humabon propose aux Mactans d'échanger la dépouille de Magellan et celle des morts contre des marchandises. Ils refusent. Les survivants rentrés à Cebu sont ensuite empoisonnés lors d'un festin offert par Humabon. Juan Sebastián Elcano prend la tête de l'expédition et regagne l'Espagne en 1522, bouclant le premier tour du monde.",
+  "Pour Magellan, l'affaire de Mactan devait être une démonstration de force, destinée à impressionner un allié et à lui rendre service. Elle a pris l'allure d'un piège, dans une eau où ses navires ne pouvaient pas le suivre. C'est un homme qui avait franchi des détroits inconnus qui trouve sa fin à quelques pas d'une plage.",
+  "Aux Philippines, Lapulapu est considéré comme le premier héros à avoir résisté à une domination étrangère. Des statues lui sont dédiées à Mactan et à Cebu, et le 27 avril est devenu, en 2017, un « Jour de Lapulapu ». Pour l'Espagne, Magellan a ouvert la route. Pour ceux de Mactan, il l'a payée de sa vie, dans l'eau, sur une plage qu'il avait cru conquérir en une matinée."
+ ],
+ "notes": "Retiré : détails sur les « récits » de la motivation (armure), controverse politique de 2021 sur les origines de Lapulapu, nombre d'hommes engagés (60/49, 1 500 à 3 000), ordre exact des blessures, rôle de Humabon. À vérifier : 2017 (Jour de Lapulapu), samedi, flèche empoisonnée non reprise."
+}

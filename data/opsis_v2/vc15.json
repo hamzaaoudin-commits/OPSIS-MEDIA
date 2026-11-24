@@ -1,0 +1,35 @@
+{
+ "id": "vc15",
+ "fmt": 3,
+ "name": "Guerre d'Hiver : trente-deux chars",
+ "sub": "Hiver 1939-1940 : la Finlande, avec 32 chars et une centaine d'avions, résiste à l'Union soviétique pendant près de quinze semaines, et garde son indépendance",
+ "blurb": {
+  "b": "Novembre 1939 : l'Union soviétique attaque la Finlande, qui n'a que 32 chars et une centaine d'avions. Dans les forêts, sous la neige, la méthode du motti, les bouteilles incendiaires et un tireur d'élite devenu légende retiennent l'Armée rouge près de quinze semaines. La Finlande perd des terres, pas son indépendance.",
+  "h": "Trente-deux chars contre plus de 2 500 : la Finlande tient quinze semaines."
+ },
+ "body": [
+  "#Les obus de Mainila",
+  "@Frontière finno-soviétique, 26 novembre 1939.",
+  "Le 26 novembre 1939, des obus s'abattent près du village de Mainila, côté soviétique, à quelques centaines de mètres de la frontière finlandaise. Moscou affirme que l'artillerie finlandaise a tiré et réclame des excuses. La Finlande répond que ses canons étaient trop loin pour cela, et propose une enquête commune. Moscou refuse.",
+  "Des historiens finlandais et russes ont conclu, depuis, à une provocation montée par le NKVD, ce que contestent encore certains auteurs en Russie. Quatre jours plus tard, le 30 novembre, l'Union soviétique attaque.",
+  "#Trente-deux chars",
+  "@30 novembre 1939.",
+  "Sur le papier, la rencontre est sans espoir. La Finlande aligne entre 300 000 et 340 000 hommes, 32 chars et environ 114 avions. En face, l'Armée rouge : plus de 2 500 chars, près de 3 900 avions, et plusieurs centaines de milliers de soldats, dont la plupart attendent de gagner en quelques semaines.",
+  "Mais la guerre se fait dans des forêts épaisses, sous la neige, par des froids qui descendent à moins trente ou moins quarante degrés. Les soldats finlandais, qui s'y déplacent à skis, connaissent chaque route et chaque lac gelé. Les Soviétiques, eux, avancent en colonnes sur des routes étroites.",
+  "#La ligne Mannerheim",
+  "@Isthme de Carélie, décembre 1939.",
+  "Sur l'isthme de Carélie, la ligne Mannerheim compte environ 221 points d'appui. La propagande soviétique la disait aussi forte que la ligne Maginot. Des historiens finlandais jugent qu'il s'agissait surtout de tranchées et d'abris couverts de rondins : c'est la détermination des défenseurs qui comptait plus que le béton.",
+  "Les Finlandais détruisent en zone frontière environ quatre-vingts chars soviétiques, souvent avec des bouteilles incendiaires lancées à la main, que la régie d'alcool Alko produit en masse. Les soldats finlandais les baptisent d'après le ministre soviétique des Affaires étrangères : les cocktails Molotov.",
+  "#La route de Raate",
+  "@Décembre 1939 à janvier 1940.",
+  "Au nord, sur la route de Raate, la 9e division finlandaise du colonel Siilasvuo, environ 6 000 hommes, affronte la 44e division soviétique, estimée à près de 14 000 hommes. Les Finlandais emploient une méthode qu'ils nomment le « motti » : encercler les colonnes ennemies qui avancent en file sur la route, les découper en poches isolées avec des barrages, des mines et des attaques de flanc, puis les réduire une à une. Ils visent notamment les cuisines de campagne, car les soldats affamés et glacés ne tiennent pas longtemps.",
+  "!Pertes finlandaises : 310 tués, 618 blessés et 92 disparus.",
+  "Les estimations finlandaises des morts soviétiques vont de 7 000 à 9 000. La 44e division est détruite, et son matériel tombe en grande partie aux mains des Finlandais.",
+  "#Le tireur de Kollaa",
+  "@Janvier à mars 1940.",
+  "Un homme est devenu le symbole de cette guerre : Simo Häyhä, un paysan de 1,60 m, tireur d'élite dans le secteur de Kollaa, armé d'un fusil M/28-30 à viseur mécanique, sans lunette. On lui attribue plus de 500 victimes en moins de quatre mois, un chiffre qui reste débattu. Il est grièvement blessé à la mâchoire en mars 1940.",
+  "Les Soviétiques finissent par comprendre, après de lourdes pertes, ce que cette guerre exige. Leur offensive de février perce la ligne finlandaise, et la Finlande, à bout d'hommes et de munitions, doit négocier. La paix est signée à Moscou le 12 mars et prend effet le 13 mars 1940, près de quinze semaines après le début de la guerre.",
+  "Elle coûte à la Finlande une partie de la Carélie, avec la ville de Viipuri. Mais le pays garde son indépendance, ce que les envahisseurs voulaient lui ôter. On ne saura jamais avec précision le nombre des morts des deux camps, ni ce qu'aurait été la suite sans cette résistance : une petite armée de trente-deux chars avait tenu quinze semaines face à un géant."
+ ],
+ "notes": "Retiré : chiffres précis de Raate côté soviétique (13 962), détails de Häyhä. À vérifier : '-30 à -40 °C', origine du nom 'cocktail Molotov' dans la guerre, offensive soviétique de février, perte de Viipuri/Carélie, blessure de Häyhä en mars, destruction de la 44e division."
+}

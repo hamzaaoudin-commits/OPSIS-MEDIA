@@ -1,0 +1,34 @@
+{
+ "id": "sc04",
+ "fmt": 3,
+ "name": "McClintock et les gènes qui sautent",
+ "sub": "Long Island, 1948 — Une botaniste découvre, dans des grains de maïs tachetés, que les gènes peuvent changer de place. On ne la croit pas, pendant plus de trente ans.",
+ "dates": "1944–1983",
+ "country": "États-Unis",
+ "job": "Barbara McClintock, généticienne",
+ "yr": 1948,
+ "src": [
+  "« Barbara McClintock », Wikipédia (anglais). en.wikipedia.org/wiki/Barbara_McClintock",
+  "B. McClintock, « The origin and behavior of mutable loci in maize », Proceedings of the National Academy of Sciences, 1950."
+ ],
+ "body": [
+  "Prenez un épi de maïs coloré. Ses grains ne sont pas d'une seule teinte : certains sont jaunes, d'autres bruns ou pourpres, et beaucoup sont tachetés, comme éclaboussés de petits points de couleur sur un fond pâle. Pour la plupart des gens, c'est une curiosité de jardin. Pour la généticienne américaine Barbara McClintock, c'est un message écrit dans une langue que personne n'a encore lue.",
+  "Elle travaille à Cold Spring Harbor, sur l'île de Long Island, près de New York, dans un laboratoire où elle est devenue membre permanente de l'équipe en 1943. À partir de l'été 1944, elle se consacre aux motifs de couleur du maïs. Ses collègues étudient des bactéries, des mouches, des moisissures. Elle, elle passe ses journées dans les champs, à compter des grains, à croiser des plants, à observer des chromosomes au microscope.",
+  "#Un interrupteur qui se déplace",
+  "À l'époque, on imagine les gènes comme des perles enfilées sur un collier, chacune à sa place, une fois pour toutes. McClintock découvre que ce n'est pas vrai. Elle identifie dans le maïs deux éléments qui interagissent, qu'elle appelle Ds et Ac. Au début de 1948, elle montre que tous deux peuvent se déplacer d'un endroit à l'autre d'un chromosome.",
+  "Voici comment cela fait apparaître des taches. Dans un grain, un gène qui fabrique du pigment est bloqué parce que l'un de ces éléments s'est installé à côté. Pendant que le grain se développe, il arrive que cet élément saute ailleurs. Dès cet instant, la cellule, et toutes celles qu'elle engendre, retrouvent la couleur. Plus le saut est précoce, plus la tache est grande. Les petites taches, les grandes, leur répartition : tout se lit dans le grain, comme dans un registre.",
+  "Les gènes, donc, ne sont pas figés. Certains éléments se déplacent et, en se déplaçant, allument ou éteignent d'autres gènes.",
+  "#Silence dans la salle",
+  "En 1950, elle publie ses résultats dans une revue scientifique, puis les présente en 1951 à Cold Spring Harbor, devant la communauté des généticiens. L'accueil est réservé : elle parlera plus tard de « perplexité » et, parfois, d'« hostilité ». Personne ne voit comment ses résultats pourraient s'appliquer à autre chose qu'au maïs, et l'idée même d'un gène mobile heurte tout ce que l'on croit de l'hérédité.",
+  "Après un nouvel article en 1953, elle cesse de publier le détail de ses travaux sur ces éléments. Elle craint de se couper davantage de ses pairs. Elle continue pourtant de travailler, dans ses champs. En 1973, elle écrira qu'il faut savoir attendre « le bon moment pour un changement de concepts ».",
+  "#Le bon moment",
+  "Il arrive dans les années 1960. Deux chercheurs français, François Jacob et Jacques Monod, montrent comment des interrupteurs commandent l'activité des gènes chez une bactérie, et la proximité avec les idées de McClintock frappe. À la fin des années 1960 et dans les années 1970, d'autres équipes trouvent des éléments mobiles chez des bactéries, chez des levures, chez des virus de bactéries. Ce que McClintock avait vu dans le maïs, on le retrouve partout.",
+  "En 1983, elle reçoit le prix Nobel de physiologie ou médecine, seule, plus de trente ans après sa découverte. Elle est la première femme à recevoir ce prix sans le partager. Le comité la compare à Gregor Mendel, un autre découvreur longtemps ignoré.",
+  "Les historiens se disputent encore sur la façon dont il faut raconter sa vie. Une biographe, Evelyn Fox Keller, soutient qu'elle a été marginalisée. Une autre, Nathaniel Comfort, y voit un « mythe » : elle était, d'après lui, respectée et écoutée de ses pairs, même si l'on ne comprenait pas encore la portée de ses idées. Barbara McClintock meurt le 2 septembre 1992, à quatre-vingt-dix ans."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : naissance le 16 juin 1902 à Hartford ; poste permanent à Cold Spring Harbor en 1943 ; étude du maïs à partir de l'été 1944 ; éléments Ds et Ac ; mobilité des deux éléments au début de 1948 ; article de 1950 (PNAS), présentation au symposium de 1951 ; ses mots sur la « perplexité » et l'« hostilité » ; arrêt des publications détaillées après 1953 ; citation de 1973 sur « le bon moment pour un changement de concepts » ; travaux de Jacob et Monod dans les années 1960 ; retrouvailles de la transposition chez bactéries, levures et bactériophages à la fin des années 1960 et 1970 ; Nobel 1983, première femme à le recevoir seule dans cette catégorie ; comparaison avec Mendel ; mort le 2 septembre 1992 à 90 ans. Débattu : la thèse d'une McClintock marginalisée (Keller) face au « mythe McClintock » (Comfort). À vérifier avant publication : l'explication du mécanisme des taches (formulée de façon vulgarisée), le fait que l'élément saute « pendant le développement du grain », le mot « registre », la citation de la comparaison à Mendel (source secondaire), l'attribution de la formule « première femme à recevoir ce prix seule ».",
+ "blurb": {
+  "b": "À la fin des années 1940, une généticienne américaine observe des épis de maïs tachetés de couleurs. Elle en déduit que certains morceaux d'ADN peuvent changer de place dans un chromosome, ce que personne ne croit possible. Ses collègues la regardent sans comprendre. Il faudra attendre plus de trente ans pour que le monde lui donne raison.",
+  "h": "Le maïs bariolé qui contredisait toute la génétique de l'époque."
+ }
+}

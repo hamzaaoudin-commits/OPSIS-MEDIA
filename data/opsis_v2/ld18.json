@@ -1,0 +1,33 @@
+{
+ "id": "ld18",
+ "fmt": 3,
+ "name": "Saint-Exupéry : le dernier écho",
+ "sub": "Corse, 31 juillet 1944 : Saint-Exupéry décolle pour une mission de reconnaissance et ne revient pas. Il faudra attendre 1998 pour la première trace, et 2003 pour identifier son avion.",
+ "blurb": {
+  "b": "Le 31 juillet 1944, l'auteur du Petit Prince décolle de Corse pour une mission de reconnaissance. Un dernier écho radar, puis plus rien. Cinquante-quatre ans plus tard, un pêcheur remonte une gourmette. Puis viennent l'épave, le numéro de série, et le témoignage d'un ancien pilote allemand qui dit l'avoir abattu.",
+  "h": "L'auteur du Petit Prince disparaît en mer, et son avion reste introuvable"
+ },
+ "body": [
+  "#Le décollage",
+  "@Bastia, 31 juillet 1944, 8 h 45.",
+  "Avant la guerre, il était pilote de ligne puis écrivain, l'auteur de Vol de nuit et de Terre des hommes. En 1943, à New York, il a publié Le Petit Prince, qui deviendra l'un des livres les plus lus au monde. Il est retourné au combat contre l'avis de beaucoup, convaincu qu'il devait partager le risque de ses camarades.",
+  "Antoine de Saint-Exupéry décolle vers 8 h 45 de Bastia, en Corse, aux commandes d'un P-38, pour une mission de reconnaissance en vue du débarquement de Provence. Il a quarante-quatre ans. Jugé trop âgé et trop abîmé par ses accidents pour le combat aérien, il avait été affecté à un groupe de reconnaissance photographique, dont les avions étaient désarmés.",
+  "Il n'aurait dû accomplir que cinq missions, mais il tient à voler, et la guerre manque de pilotes expérimentés. Ce matin-là, personne ne se doute que la dernière commence.",
+  "#Un dernier écho",
+  "@Vers 10 h 40.",
+  "Après le décollage, un dernier écho radar est enregistré, puis l'avion disparaît. Vers 10 h 40, il s'abîme en mer, au large des calanques, près de Marseille. Il ne revient pas. Les camarades de l'escadrille l'attendent, puis comprennent. En 1948, il est reconnu « mort pour la France ».",
+  "Pendant des décennies, on ne saura rien. Ni où, ni comment. Des hypothèses naissent : une panne, un malaise, un tir. Le mystère s'installe, et nourrit la légende d'un écrivain qui disait toujours vouloir mourir en vol.",
+  "#La gourmette",
+  "@Marseille, 1998 – 2004.",
+  "!Le 7 septembre 1998, un pêcheur marseillais remonte dans ses filets une gourmette.",
+  "Jean-Claude Bianco la regarde : elle porte les noms de Saint-Exupéry, de sa femme Consuelo, et de son éditeur américain, Reynal & Hitchcock. En 2000, des plongeurs identifient, à 85 mètres de profondeur, des vestiges qui pourraient appartenir à un avion. En 2003, un numéro de série, 2734 L, gravé sur le turbocompresseur gauche, confirme que c'est son P-38.",
+  "Les débris s'étalent sur environ un kilomètre de long et quatre cents mètres de large, ce qui suggère un impact à grande vitesse. On ne relève aucune trace de tir, mais seule une petite partie de l'avion a été remontée.",
+  "#Horst Rippert",
+  "@2006 – 2008.",
+  "En 2008, des chercheurs retrouvent Horst Rippert, ancien pilote de la Luftwaffe. Il affirme avoir pris l'avion en chasse : « Je l'ai suivi un court moment, j'ai tiré à plusieurs reprises et ensuite, j'ai vu comment il s'est abattu en mer. » Il ajoute que, s'il avait su qui était dans l'avion, il n'aurait pas tiré. Il avait lu ses livres.",
+  "Son récit comporte plusieurs incohérences, et aucun document ne le confirme. On ne sait pas pourquoi l'avion se trouvait là, ni si c'était un tir, une panne, un malaise ou autre chose. On ne saura pas ce qui s'est dit dans l'avion.",
+  "Que penser de cet aveu tardif ? Rippert dit avoir admiré l'auteur et regretté son geste, mais personne ne peut le vérifier. L'épave, elle, ne montre aucune trace de tir, et seule une petite partie de l'avion a été remontée. Les deux versions restent possibles, et l'une ne prouve pas l'autre.",
+  "Peut-être l'essentiel est-il ailleurs. Dans une lettre écrite peu avant sa disparition, Saint-Exupéry disait que, s'il était abattu, il ne regretterait absolument rien. Il n'a pas eu de tombe. Il a eu un chiffre gravé sur une pièce de moteur, au fond de la Méditerranée, et un livre pour enfants que plus personne ne cessera de lire."
+ ],
+ "notes": "Retiré : objectif exact de la mission (Grenoble/Annecy ou vallée du Rhône), nombre de missions précédentes, date et fiabilité du témoignage de Rippert. À vérifier : lettre à un ami (citation de mémoire, non reproduite mot à mot), 2008, âge de 44 ans, 'Il en est ailleurs' à relire."
+}

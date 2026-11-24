@@ -1,0 +1,33 @@
+{
+ "id": "pr09",
+ "fmt": 3,
+ "name": "Danton : le procès sans les accusés",
+ "sub": "Paris, avril 1794 : Danton et Desmoulins se défendent si bien que le pouvoir fait voter un décret pour les écarter. Ils sont condamnés sans pouvoir entendre le verdict.",
+ "blurb": {
+  "b": "Au printemps 1794, Danton et ses amis, partisans de l'indulgence, sont arrêtés puis jugés par le Tribunal révolutionnaire. Ils parlent avec une telle force que les jurés réclament les témoins. Le Comité de salut public répond par un décret qui écarte les accusés des débats. Ils sont guillotinés le 5 avril.",
+  "h": "Danton parle trop bien, alors on le juge sans lui."
+ },
+ "body": [
+  "#Après Hébert",
+  "@Paris, hiver 1793 – mars 1794.",
+  "À l'automne 1793, la Terreur est « mise à l'ordre du jour ». Une aile plus modérée sort de la Montagne : les Indulgents, dont Danton est le porte-voix le plus audible. Ils réclament la fin de la Terreur. Camille Desmoulins lance en décembre Le Vieux Cordelier, qui réclame un « comité de clémence ».",
+  "Les hébertistes, leurs adversaires de l'autre bord, sont arrêtés les 13 et 14 mars 1794 et exécutés le 24. Robespierre, qui vient d'éliminer les Cordeliers et Hébert, hésite à frapper les Indulgents. Prévenu, Danton refuse d'émigrer : « On n'emporte pas la patrie à la semelle de ses souliers. »",
+  "#Le procès",
+  "@Paris, 2 – 4 avril 1794.",
+  "Danton, Desmoulins, Lacroix et Philippeaux sont arrêtés dans la nuit du 30 au 31 mars et conduits à la prison du Luxembourg. Saint-Just présente l'acte d'accusation à la Convention. Les griefs sont nombreux : des relations suspectes, un enrichissement, une protection accordée à Fabre d'Églantine. Le chef principal est la clémence excessive envers les « suspects ». L'acte se contredit parfois : on lui reproche à la fois son inaction le 10 août 1792 et d'en avoir été l'instigateur.",
+  "Le procès s'ouvre le 2 ou le 3 avril devant le Tribunal révolutionnaire. Danton est jugé avec les accusés de l'affaire de la Compagnie des Indes, Fabre d'Églantine, Chabot, d'Espagnac et les banquiers Frey. Fouquier-Tinville accuse. Herman préside.",
+  "Interrogé sur son nom et son âge, Desmoulins répond, dit-on : « Benoît Camille Desmoulins, trente-trois ans, l'âge du sans-culotte Jésus, âge critique pour les patriotes. » Danton, lui, répond aux accusations une à une, et conteste les preuves. Desmoulins réclame des témoins, dont Robespierre. La demande est refusée, comme celle d'une quinzaine de témoins de la défense.",
+  "#Le décret",
+  "@Paris, 4 avril 1794.",
+  "Les jurés, touchés par la sincérité des accusés, demandent à entendre les témoins. Le Comité de salut public répond d'une autre façon.",
+  "!Il fait adopter un décret qui interdit aux accusés de plaider en séance publique : le tribunal rend alors son verdict sans qu'ils puissent l'entendre.",
+  "Une autre version existe : sur l'avis de Robespierre, la Convention aurait approuvé une proposition de Saint-Just qui permet d'écarter les prisonniers irrespectueux de la justice et de les juger en leur absence. Le résultat est le même. Les noms des jurés restent inconnus.",
+  "#L'échafaud",
+  "@Place de la Révolution, 5 avril 1794.",
+  "Le verdict est la mort. Les accusés, dont neuf députés, sont écartés avant la lecture, et on leur coupe les cheveux. Dans une lettre de prison à sa femme, Desmoulins écrit qu'il n'aurait jamais cru les hommes aussi féroces et aussi injustes. Sur la route de l'échafaud, il apprend l'arrestation de Lucile. Il faut plusieurs hommes pour le hisser dans la charrette. Lucile est exécutée le 13 avril.",
+  "Le 5 avril, une quinzaine de condamnés sont guillotinés place de la Révolution. Hérault de Séchelles passe le premier, Desmoulins le troisième, Danton le dernier.",
+  "On rapporte qu'il aurait dit au bourreau Sanson : « Tu montreras ma tête au peuple, elle en vaut la peine. » Le tribunal perd son président deux jours plus tard : Herman démissionne le 7 avril. Environ trois mois plus tard, les exécutions massives cessent, avec la chute de Robespierre, qui est guillotiné à son tour sur cette même place.",
+  "Ce procès n'a pas jugé des preuves, il a jugé une opinion : celle qui voulait en finir avec la terreur. Il s'est terminé parce que l'un des accusés parlait trop bien."
+ ],
+ "notes": "Retiré : détails sur les jurés (nombre de douze/sept), la querelle sur la date d'arrestation, l'âge de Desmoulins (né le 2 mars 1760, soit 34 ans, d'où l'écart). Phrase de Danton à Sanson : à vérifier ; le texte de la lettre de Desmoulins est résumé."
+}

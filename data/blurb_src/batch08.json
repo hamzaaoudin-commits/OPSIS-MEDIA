@@ -28,7 +28,7 @@
   "hook": "Treize chefs-d'œuvre sortent d'un musée sans caméra, et aucun n'est revenu."
  },
  "di13": {
-  "blurb": "En 1887, le tsar Alexandre III commande à la maison Fabergé un œuf précieux pour la tsarine Maria Feodorovna. Confisqué après 1917, il est vendu en 1964 à New York sans mention de sa provenance. Il est ensuite acheté pour environ 14 000 dollars, puis, en 2014, par la maison londonienne Wartski pour un collectionneur privé. On ne sait pas qui il est.",
+  "blurb": "En 1887, le tsar Alexandre III commande à la maison Fabergé un œuf précieux pour la tsarine Maria Feodorovna. Confisqué après 1917, il est vendu en 1964 à New York sans mention de sa provenance, pour environ 14 000 dollars. Qui l'a acheté, et qui l'a vraiment reconnu ? On ne sait pas où il a fini.",
   "hook": "Un bijou impérial est vendu à New York comme objet de provenance inconnue."
  },
  "di16": {
@@ -80,7 +80,7 @@
   "hook": "Elle signe pour échapper au bûcher, et y monte quand même."
  },
  "pr03": {
-  "blurb": "Le vendredi 13 octobre 1307, le roi de France Philippe IV fait arrêter les Templiers, ordre de moines soldats, dont leur grand maître Jacques de Molay. On les accuse d'hérésie, et la torture arrache des aveux. En 2001, l'historienne Barbara Frale retrouve au Vatican une copie d'un parchemin de 1308, mal catalogué. On ne sait pas si les accusations étaient fondées.",
+  "blurb": "Un matin d'octobre 1307, un roi fait arrêter en secret des centaines de chevaliers. Leurs chefs avouent, se rétractent, puis sont absous par trois cardinaux, avant de finir sur le bûcher. Pendant sept siècles, le récit de cette absolution est resté introuvable. Où était-il, et que change-t-il ?",
   "hook": "Un parchemin mal classé a dormi près de sept siècles dans les archives."
  },
  "pr04": {
@@ -88,7 +88,7 @@
   "hook": "Sept cardinaux sur dix signent. Le document décisif n'est signé par personne."
  },
  "pr05": {
-  "blurb": "En 1692, dans le Massachusetts, la fille et la nièce du pasteur Samuel Parris ont des crises, et les accusations de sorcellerie se multiplient. Un tribunal spécial admet comme preuve le témoignage selon lequel le spectre de l'accusé apparaît à la victime. Plus de deux cents personnes sont accusées. La dernière condamnée n'est innocentée qu'en 2022.",
+  "blurb": "Janvier 1692 : des enfants se tordent et disent être mordues par des esprits, et les adultes cherchent qui leur a jeté un sort. En quelques mois, des dizaines de voisins sont accusés sur la foi d'une preuve que seules les accusatrices pouvaient voir. Dix-neuf sont pendus. Une condamnée a été oubliée de toutes les réhabilitations. Pourquoi ?",
   "hook": "Des spectres servent de preuves, et une condamnée n'est innocentée qu'en 2022."
  },
  "pr06": {
@@ -112,11 +112,11 @@
   "hook": "Il demande un délai pour finir son expérience, réponse probablement légendaire."
  },
  "pr11": {
-  "blurb": "Le 13 octobre 1761, à Toulouse, le négociant protestant Jean Calas découvre son fils Marc-Antoine mort. Croyant à un suicide, il tente de le cacher, et une rumeur l'accuse d'avoir tué son fils pour l'empêcher de devenir catholique. Calas est emprisonné avec sa famille. Voltaire, d'abord hostile, se laisse convaincre, mobilise des soutiens européens et obtient la révision du procès.",
+  "blurb": "Le 13 octobre 1761, à Toulouse, le négociant protestant Jean Calas découvre son fils Marc-Antoine mort. Croyant à un suicide, il tente de le cacher, et une rumeur l'accuse d'avoir tué son fils pour l'empêcher de devenir catholique. Calas est emprisonné avec sa famille. Voltaire, d'abord hostile, finit par s'intéresser à l'affaire. Que peut-il faire ?",
   "hook": "Pour cacher un suicide, une famille se retrouve accusée de meurtre."
  },
  "pr13": {
-  "blurb": "En février 1895, à Londres, le marquis de Queensberry laisse à l'Albemarle Club une carte insultante pour l'écrivain Oscar Wilde. Wilde porte plainte pour diffamation, mais les accusations du marquis se révèlent fondées sur des faits. C'est lui qui est arrêté, pour grossière indécence. Un premier jury ne parvient pas à décider, puis un second le condamne.",
+  "blurb": "Un bout de carton, quelques mots mal orthographiés, et un écrivain au sommet de sa gloire qui décide de ne pas laisser passer l'insulte. Il pensait laver son nom devant un tribunal. Qu'allait-il lui en coûter ?",
   "hook": "Il poursuit pour diffamation, et c'est lui qui se retrouve sur le banc."
  },
  "pr14": {
@@ -124,11 +124,11 @@
   "hook": "Cinquante ans après leur exécution, un gouverneur reconnaît un procès inéquitable."
  },
  "pr15": {
-  "blurb": "Le 25 mars 1931, en Alabama, les autorités arrêtent neuf hommes noirs, accusés de viol sur un train. Un grand jury entièrement blanc les inculpe, et ils n'ont qu'une heure avec un avocat. En quelques jours, huit sont condamnés à mort. Un médecin juge le viol seulement possible. Les pardons posthumes ne viennent qu'en 2013.",
+  "blurb": "Une bagarre dans un wagon, deux femmes qui se retrouvent face à des hommes armés, et neuf garçons noirs dont aucun n'a encore dit un mot. En trois jours, huit d'entre eux sont condamnés à mort. Que va-t-il advenir d'eux, et combien de temps leur faudra-t-il pour être entendus ?",
   "hook": "Huit condamnations à mort en quelques jours, malgré des médecins qui doutent."
  },
  "pr16": {
-  "blurb": "En juillet 1925, à Dayton, dans le Tennessee, John Scopes, vingt-quatre ans, est jugé pour avoir enseigné l'évolution, interdite dans les écoles par une loi récente. L'avocat Clarence Darrow interroge à la barre son adversaire William Jennings Bryan. Le jury déclare Scopes coupable en neuf minutes, mais la condamnation est annulée pour une raison de procédure.",
+  "blurb": "En 1925, une petite ville du Tennessee voit dans une loi absurde une chance de faire parler d'elle. Quelques notables cherchent un enseignant volontaire pour être poursuivi. Ils en trouvent un. Puis arrivent deux des plus grandes voix d'Amérique, une foule, la radio, et un moment que personne n'avait prévu.",
   "hook": "Le jury met neuf minutes à condamner un enseignant."
  },
  "pr17": {

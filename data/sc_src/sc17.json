@@ -1,0 +1,34 @@
+{
+ "id": "sc17",
+ "fmt": 3,
+ "name": "Les neutrinos plus rapides que la lumière",
+ "sub": "Gran Sasso, 2011 — Une expérience européenne mesure des particules qui arrivent 60 milliardièmes de seconde trop tôt. Les physiciens cherchent l'erreur pendant six mois, et la trouvent dans un câble.",
+ "dates": "2011–2012",
+ "country": "Italie, Suisse",
+ "job": "Collaboration OPERA, physiciens",
+ "yr": 2011,
+ "src": [
+  "« Faster-than-light neutrino anomaly », Wikipédia (anglais). en.wikipedia.org/wiki/Faster-than-light_neutrino_anomaly"
+ ],
+ "body": [
+  "Rien ne va plus vite que la lumière. C'est l'un des piliers de la physique moderne, posé par Albert Einstein au début du XXe siècle. En septembre 2011, pourtant, une grande expérience européenne annonce un résultat qui semble le contredire.",
+  "L'expérience s'appelle OPERA. Des neutrinos, des particules presque sans masse, sont produits au CERN, à la frontière franco-suisse, puis envoyés sous terre sur plus de 730 kilomètres jusqu'à un détecteur du laboratoire du Gran Sasso, en Italie. La distance est connue à vingt centimètres près. Les physiciens mesurent le temps de trajet des particules.",
+  "#Soixante milliardièmes de seconde",
+  "Le résultat tombe : les neutrinos arrivent environ 60 milliardièmes de seconde plus tôt qu'ils ne l'auraient fait à la vitesse de la lumière. L'analyse principale, sur 15 223 neutrinos détectés, donne 57,8 nanosecondes d'avance, avec une certitude statistique de 6,2 sigmas. En physique des particules, une découverte s'annonce normalement à partir de cinq.",
+  "L'équipe a cherché l'erreur pendant des mois sans la trouver. Elle publie donc son résultat pour que d'autres puissent le contrôler. Le monde scientifique reste très prudent. En mars 2012, une expérience voisine, ICARUS, installée au même endroit et utilisant le même faisceau, mesure sept neutrinos qui voyagent à la vitesse de la lumière.",
+  "Une première analyse donnait 60,7 nanosecondes d'avance, avec une certitude de six sigmas, soit environ 0,2 chance sur un million que ce soit un simple effet du hasard. Une analyse alternative trouvait 54,5 nanosecondes. Une série de mesures répétée du 21 octobre au 7 novembre 2011, sur vingt neutrinos seulement, donnait 62,1.",
+  "Les théoriciens se mettent au travail. Deux physiciens, Andrew Cohen et Sheldon Glashow, montrent que des neutrinos plus rapides que la lumière devraient perdre de l'énergie en chemin, par un rayonnement qu'on aurait dû détecter, et qu'OPERA comme ICARUS n'observent pas. Autre indice : en 1987, les neutrinos de la supernova SN 1987A étaient arrivés presque en même temps que sa lumière.",
+  "#Un câble mal vissé",
+  "Entre février et mars 2012, deux défauts sont identifiés. Une fibre optique reliant le récepteur GPS à l'horloge principale était mal branchée : elle ajoutait un délai qui raccourcissait de 73 nanosecondes le temps de vol affiché. Une horloge d'une carte électronique, par ailleurs, tournait plus vite que sa fréquence prévue, ce qui allongeait le temps de vol et compensait en partie le premier défaut.",
+  "Un séminaire au laboratoire du Gran Sasso, en mars 2012, confirme que le câble n'était pas complètement vissé pendant la prise de données.",
+  "#L'épilogue",
+  "Le 30 mars 2012, le porte-parole de l'expérience, Antonio Ereditato, et son coordinateur de physique, Dario Autiero, démissionnent. Un vote de défiance parmi plus de trente responsables d'équipes avait pourtant échoué.",
+  "Le 8 juin 2012, le CERN annonce que les quatre expériences du Gran Sasso (OPERA, ICARUS, LVD et BOREXINO) mesurent des vitesses compatibles avec celle de la lumière. Le 12 juillet, OPERA publie son résultat final sur les données de 2009 à 2011 : une différence de 6,5 ± 15 nanosecondes, compatible avec zéro.",
+  "L'affaire laisse une image honorable de la science. Les auteurs ont publié une anomalie sans prétendre l'expliquer, leurs collègues ont cherché l'erreur autant que la gloire, et en quelques mois la communauté a retrouvé le défaut dans un câble. Le résultat final confirme ce que la relativité disait déjà : à ces précisions, les neutrinos vont à la vitesse de la lumière."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : OPERA, faisceau CNGS du CERN, plus de 730 km, distance connue à 20 cm ; 60,7 ns initial ; analyse principale 57,8 ns, 6,2 sigmas, 15 223 neutrinos ; cinq sigmas normalement requis ; ICARUS mars 2012, sept neutrinos ; deux erreurs de février 2012 (fibre : 73 ns ; horloge trop rapide, compensation partielle) ; séminaire de mars 2012 ; démissions du 30 mars 2012, vote de défiance échoué ; CERN 8 juin 2012 ; OPERA 12 juillet 2012 : 6,5 ± 15 ns. À vérifier avant publication : « posé au début du XXe siècle » (1905), la définition des neutrinos, « cherché l'erreur pendant des mois » et « publie pour que d'autres puissent contrôler » (motivation à confirmer), « le monde scientifique reste très prudent » (formulation générale). Ajouté : 60,7 ns initial à six sigmas, analyse alternative 54,5 ns, série d'octobre–novembre 2011 de vingt neutrinos à 62,1 ns ; Cohen et Glashow (rayonnement Tcherenkov du vide) ; SN 1987A. À vérifier : « deux chances sur dix millions » (la page dit 0,2 sur un million), « plusieurs milliers d'années » (la page n'en donne pas la durée : retirer si non confirmé), « 21 octobre au 7 novembre ».",
+ "blurb": {
+  "b": "À l'automne 2011, des neutrinos envoyés du CERN vers l'Italie semblent arriver plus vite que la lumière, ce qui contredirait Einstein. L'équipe ne trouve aucune erreur et publie son résultat pour qu'on l'aide à le vérifier. Six mois plus tard, la cause est identifiée : un câble optique mal vissé.",
+  "h": "Un câble mal vissé a fait croire six mois que la relativité était battue."
+ }
+}

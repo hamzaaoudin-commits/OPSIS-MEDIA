@@ -1,0 +1,29 @@
+{
+ "id": "pn28",
+ "fmt": 3,
+ "name": "Petrov : cinq missiles",
+ "sub": "Serpoukhov-15, 26 septembre 1983 : le système d'alerte soviétique signale cinq missiles américains, et l'officier de quart décide de ne pas y croire",
+ "blurb": {
+  "b": "Peu après minuit, le 26 septembre 1983, dans un bunker près de Moscou, le système d'alerte soviétique annonce cinq missiles américains en route. L'officier de quart, Stanislav Petrov, a quelques minutes pour décider de transmettre ou non l'alerte. Il choisit le doute, et sa décision restera inconnue pendant quinze ans.",
+  "h": "Cinq missiles à l'écran, quelques minutes, et un homme qui n'y croit pas"
+ },
+ "body": [
+  "#Peu après minuit",
+  "@Serpoukhov-15, près de Moscou, 26 septembre 1983.",
+  "Dans un bunker près de Moscou, le lieutenant-colonel Stanislav Petrov est officier de quart. Son travail : surveiller l'écran du système d'alerte soviétique, Oko, qui scrute les États-Unis depuis des satellites, et prévenir ses supérieurs si l'Amérique lance des missiles.",
+  "Nous sommes en septembre 1983, trois semaines après que l'aviation soviétique a abattu un avion de ligne de Korean Air Lines. La tension entre les deux blocs est extrême, et tout le monde, dans ce bunker, le sait. À la tête du pays se trouve Iouri Andropov, malade et méfiant, persuadé que l'Occident prépare quelque chose.",
+  "Peu après minuit, l'alarme se déclenche. Un missile balistique américain se dirige vers l'Union soviétique. Puis un deuxième. Cinq au total.",
+  "#Quelques minutes",
+  "!Petrov sait que s'il transmet l'alerte, la chaîne de commandement peut déclencher la riposte nucléaire.",
+  "Le temps lui est compté. Un missile intercontinental met une trentaine de minutes à franchir l'Atlantique, et chaque minute passée à hésiter est une minute retirée à ceux qui devraient décider de la riposte. Entre la machine et les généraux, il n'y a que lui, un officier assis devant un écran qui clignote.",
+  "Il n'en croit pas ses yeux. Il pense d'abord à une panne de l'ordinateur. Surtout, une vraie attaque américaine comporterait des centaines de missiles, pas cinq. Et ce système de satellites est neuf : il s'en méfie. Les radars au sol ne confirment rien, mais ils ne pouvaient de toute façon pas voir des missiles encore au-delà de l'horizon.",
+  "Petrov dira plus tard avoir eu « une sensation bizarre dans le ventre ». Il parlera d'un « 50-50 », un pari plutôt qu'une certitude. Il signale une panne du système, puis il attend une quinzaine de minutes pour voir si des ogives frappent. Rien ne vient. Au bout de ce temps, le bunker retrouve un silence qui ressemble à celui d'avant, avec une différence : l'attaque n'a jamais eu lieu.",
+  "#Un reflet dans les nuages",
+  "On attribue ensuite les fausses alertes au soleil, reflété par des nuages situés à haute altitude, que les satellites ont pris pour des départs de missiles. Un récit parle de nuages au-dessus du Dakota du Nord, à l'équinoxe d'automne. Le logiciel de filtrage est réécrit. Personne n'a pourtant vérifié cette explication de façon indépendante, et le défaut technique précis qui a trompé l'Oko reste inconnu.",
+  "#Après",
+  "Petrov est d'abord félicité par un général, puis réprimandé : il n'a pas rempli correctement le journal de bord. Sa réponse, rapportée : il avait un téléphone dans une main, un interphone dans l'autre, et pas de troisième main. Il prend sa retraite militaire en 1984. Pendant des années, presque personne en dehors de l'armée ne sait ce qui s'est passé cette nuit-là dans le bunker, ni que le monde est passé tout près d'une décision irréversible.",
+  "Son rôle n'est révélé qu'en 1998, par les mémoires du général qui l'avait félicité. Il recevra plus tard un prix de la paix à Dresde, en 2013.",
+  "Des points restent contestés : s'il a averti ses supérieurs et comment, s'il a été poussé hors de l'armée, ce qu'il a nié, et si sa décision a vraiment évité une guerre. Cette dernière lecture est celle que l'on retient le plus souvent, sans qu'il soit possible de la démontrer. Ce qui est sûr, c'est qu'un homme a regardé cinq points sur un écran, et qu'il a préféré douter d'une machine plutôt que de l'obéir."
+ ],
+ "notes": "À vérifier : « une quinzaine de minutes », trente minutes de vol d'un missile intercontinental, l'état de santé d'Andropov, l'explication des nuages et le « 50-50 ». Aucun fait retiré ; les points sur Petrov et ses supérieurs restent signalés comme contestés."
+}

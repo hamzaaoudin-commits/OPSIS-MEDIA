@@ -1,0 +1,31 @@
+{
+ "id": "sv20",
+ "fmt": 3,
+ "name": "Norvège 1943 : le douzième homme",
+ "sub": "Norvège, mars 1943 : un commando seul rescapé d'une mission trahie par une erreur de nom, des orteils coupés au couteau, un traîneau de rennes vers la Suède",
+ "blurb": {
+  "b": "En mars 1943, douze Norvégiens partent saboter un aérodrome allemand. Un homonyme prévient la police, et les Allemands attaquent leur bateau. Onze hommes sont tués ou exécutés. Jan Baalsrud, le douzième, nage jusqu'au rivage, traverse les montagnes sous la neige, s'ampute lui-même de ses orteils gelés et finit en Suède sur un traîneau tiré par des rennes.",
+  "h": "Seul survivant d'un piège, il traverse les montagnes enneigées"
+ },
+ "body": [
+  "#Un nom de trop",
+  "@Nord de la Norvège, mars 1943.",
+  "L'opération s'appelle « Martin ». Elle vise la tour de contrôle d'un aérodrome allemand à Bardufoss, et le recrutement pour la résistance norvégienne, à Tromsø. Douze hommes y participent, tous norvégiens : quatre commandos de la Compagnie Linge et huit hommes d'équipage. Le bateau de pêche Brattholm quitte les Shetland le 24 mars 1943.",
+  "Les hommes cherchent un contact de la résistance. Ils tombent sur un commerçant qui porte le même nom et a repris le magasin de ce contact. Il n'a aucun lien avec la résistance. Croyant à un test allemand, il prévient la police locale, qui prévient les Allemands.",
+  "Le bateau est attaqué par un navire allemand près de l'île de Rebbenesøya. L'équipage le sabote avec une charge à retardement, puis fuit en petit canot. Les Allemands tirent et le coulent aussitôt.",
+  "!Sur douze hommes, un seul sort du piège.",
+  "Un est abattu sur place. Dix sont capturés, torturés par la Gestapo, puis exécutés à Tromsø. Le douzième, un commando nommé Jan Baalsrud, nage jusqu'au rivage dans une eau glaciale. Il lui manque une botte de mer. Il se réfugie dans un ravin enneigé. Un soldat allemand le poursuit. Baalsrud a un pistolet : il l'abat.",
+  "#Les montagnes",
+  "Le soir, deux jeunes filles le trouvent. L'une d'elles, Dagmar Idrupsen, avait dix ans. Elle dira bien plus tard qu'il était glacé, son uniforme gelé. Les familles du coin se le passent. Un pêcheur lui donne des bottes et des skis, et un père le fait traverser l'eau en barque, de nuit.",
+  "Il monte vers le Jaeggevarre, une montagne d'environ 900 mètres. Dans le blizzard, il s'oriente en écoutant le bruit de boules de neige qu'il lance. Une avalanche l'emporte et l'enterre jusqu'au cou. Il perd ses skis, ses bottes et son sac. Il est atteint de cécité des neiges et d'hallucinations. Il erre dans la tempête, puis reste emmuré dans la neige.",
+  "Il atteint Furuflaten, où la famille Gronvoll, active dans la résistance, le cache dans une grange. Ses pieds gèlent. Avec son couteau de poche, il s'ampute le bout de plusieurs orteils, puis un gros orteil. On dit qu'il stérilise la lame à la flamme d'une lampe.",
+  "#Le plateau",
+  "Les villageois le déplacent sur une civière, en traîneau et en barque. Il est ensuite laissé sur un haut plateau, dans la vallée du Skaidijonni, près de Manndalen, en attente d'être récupéré. Le temps et les patrouilles allemandes l'y retiennent. Il y reste vingt-sept jours, proche de mourir de faim.",
+  "Derrière un mur de neige bâti autour d'un rocher, il s'ampute encore des orteils pour arrêter la gangrène, ce qui sauve le reste de ses pieds. Il dira avoir sérieusement pensé au suicide.",
+  "#Les rennes",
+  "Un fermier, Nils Nilsen, organise la sortie. Des éleveurs sames, qui conduisent leurs rennes à la migration de printemps, tirent Baalsrud en traîneau à travers la Finlande jusqu'en Suède, en évitant les unités allemandes. À Kilpisjärvi, un hydravion de la Croix-Rouge le prend et le dépose à Boden. Il arrive en Suède le 1er juin 1943, pesant environ 36 kilos.",
+  "Aslak Fossvoll, un homme du pays qui l'a aidé à gagner la Suède, meurt en 1943. Après sept mois d'hôpital à réapprendre à marcher, il retourne en Norvège comme agent, à sa demande, et est toujours en service quand la guerre se termine. Il meurt le 30 décembre 1988, à 71 ans. Ses cendres reposent à Manndalen, dans la tombe d'Aslak Fossvoll.",
+  "On ne sait pas les dates de la plupart des étapes de sa fuite, et les récits divergent sur sa durée, de neuf semaines à trois mois, comme sur le nombre d'orteils coupés."
+ ],
+ "notes": "Retiré : le parcours de Baalsrud avant 1943, le poids des explosifs (8 t ou 100 kg, discordant), le Gestapo tué, la date de l'attaque (29 ou 30 mars), l'« Hotel Savoy », la grange fouillée, l'après-guerre détaillé, les films et le livre de Howarth, Kurt Stage. À vérifier : toute la chronologie, le nombre d'orteils, l'âge de Dagmar Idrupsen. Choix de 3 min : la matière sûre ne permet pas 7 min sans broder."
+}

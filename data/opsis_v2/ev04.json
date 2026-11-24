@@ -1,0 +1,29 @@
+{
+ "id": "ev04",
+ "fmt": 3,
+ "name": "Casanova : l'évasion des Plombs",
+ "sub": "Venise, 1756 : un séducteur condamné sans procès perce le plafond de sa cellule avec une barre de fer cachée dans un fauteuil, et sort par la porte du palais.",
+ "blurb": {
+  "b": "En 1755, Casanova est arrêté à Venise sans qu'on lui dise pourquoi, et enfermé sous le toit de plomb du Palais des Doges. Il découvre une barre de fer, l'aiguise, la confie à un voisin. Quinze mois plus tard, il perce le plafond, marche sur les toits et passe la dernière porte comme un visiteur.",
+  "h": "Casanova s'évade du Palais des Doges avec une barre de fer"
+ },
+ "body": [
+  "#Sans procès",
+  "@Venise, 26 juillet 1755.",
+  "Giacomo Casanova a trente ans quand les hommes de l'Inquisition d'État viennent le chercher. On l'accuse d'offense à la religion et à la décence commune, ou de magie et de franc-maçonnerie, selon ce qu'on rapporte. Il n'y a pas de procès. Il n'y a pas non plus d'explication : on l'emmène et on l'enferme.",
+  "Sa cellule se trouve sous les Plombs, les combles du Palais des Doges, recouverts de plaques de plomb qui rendent l'été étouffant et l'hiver glacial. On finit par lui annoncer une condamnation à cinq ans. Mais personne ne lui dit pourquoi, ni ne lui dit s'il sortira vivant. Pour un homme qui vivait de rencontres et de voyages, c'est la pire des peines.",
+  "#La barre de fer",
+  "Casanova est un homme qui n'a pas appris à attendre. Pendant ses promenades dans les combles, il découvre une barre de fer et la cache dans son fauteuil. Il l'aiguise sur une pierre jusqu'à en faire un pic. L'outil est une arme minuscule, mais c'est une arme.",
+  "Il faut le faire passer à un autre prisonnier, un moine défroqué nommé Balbi, enfermé dans une cellule voisine et mieux placé pour attaquer le plafond. Le pic arrive chez lui caché dans une grosse Bible, posée sous une assiette de pâtes : les gardes laissent passer le plat, et le livre avec. C'est Balbi qui perce le plafond de sa cellule, puis celui de Casanova.",
+  "Un compagnon de cellule, un espion nommé Soradaci, complique l'affaire. Il est dans le secret et n'a pas la confiance de Casanova. Casanova lui ordonne de remettre la plaque de plomb en place, derrière eux, et de prier saint François pour qu'ils réussissent.",
+  "#Sur le toit",
+  "!Les deux hommes soulèvent les plaques de plomb et se hissent sur le toit.",
+  "Ils sont au-dessus de Venise, avec la lagune devant eux, les clochers, l'eau, la ville endormie. Ils brisent une lucarne et descendent d'environ vingt-cinq pieds à l'aide d'une échelle et d'une corde faite de draps, jusque dans une pièce du palais. Il est trop tôt pour continuer : ils attendent le matin, cachés.",
+  "Quand le jour se lève, ils se changent et forcent une petite serrure. Ils traversent le palais, encore presque vide, et arrivent à la dernière porte, gardée. Ils font croire au garde qu'ils ont le droit d'être là, et leur assurance fait le reste. Le garde ouvre, sans comprendre ce qu'il laisse partir. Ils sortent, comme n'importe qui.",
+  "Vers six heures, ils prennent une gondole. Casanova gagne la terre ferme, puis la Belgique et les Pays-Bas, et séjourne à Paris à partir de 1757. Le palais n'a plus entendu parler de lui comme prisonnier, et lui n'a plus remis les pieds dans les Plombs.",
+  "#Ce qu'on sait, ce qu'on ignore",
+  "Le récit de l'évasion vient de Casanova lui-même, dans son Histoire de ma fuite des prisons de la République de Venise, qu'il écrit plus tard. Il est l'auteur, le héros et, souvent, le seul témoin. On ne sait pas exactement quelles parties sont corroborées, ni ce que contenait le billet qu'il aurait laissé dans la cellule.",
+  "On ne sait pas non plus le jour exact : la plupart des récits parlent du 31 octobre 1756, un autre du 5 janvier 1757. Mais l'essentiel est là, et c'est pour cela qu'on s'en souvient : un homme dont on a voulu faire un exemple, qui a réussi à traverser les murs de la République par ses propres moyens, et à sortir, au matin, par la porte principale."
+ ],
+ "notes": "Retiré : détail de l'accusation exacte (contradictoire selon les récits). À vérifier : le détail de la Bible et des pâtes, le rôle précis de Balbi et de Soradaci, le passage devant le garde, l'heure de la gondole, la date (31 octobre 1756 ou 5 janvier 1757), le billet laissé dans la cellule. Presque tout vient du récit de Casanova lui-même."
+}

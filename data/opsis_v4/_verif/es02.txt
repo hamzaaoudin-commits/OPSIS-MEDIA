@@ -1,0 +1,32 @@
+VERIFIÉ — Bordereau trouvé en septembre 1894 par une femme de ménage (Mme Bastian, agent des services), déchiré en six morceaux, adressé à Schwartzkoppen, « frein hydraulique du 120 » — en.wikipedia.org/wiki/Dreyfus_affair ; en.wikipedia.org (la femme de ménage placée par les services : fr.wikipedia non obtenu, formule « placée » conservée car « agent » du service, point secondaire)
+CORRIGÉ — Dreyfus : né à Mulhouse en 1859, neuvième enfant d'un industriel du textile, famille à Paris après 1871, polytechnique 1880, capitaine 1889, seul juif de l'état-major en 1893 — encyclopedia.ushmm.org/content/en/article/alfred-dreyfus-and-the-dreyfus-affair ; britannica.com/biography/Alfred-Dreyfus (naissance 9 octobre 1859)
+RETIRÉ — « stagiaire », « officier peu liant, jugé froid », « cible presque naturelle » (non sourcés) ; remplacé par « arrestation fondée sur une analyse d'écriture et des préjugés antijuifs » (USHMM)
+CORRIGÉ — « les experts se contredisent » retiré ; Bertillon, criminologue non expert en écritures, théorie de l'autoforgerie — en.wikipedia.org/wiki/Dreyfus_affair
+VERIFIÉ — 15 octobre 1894 : dictée par du Paty de Clam, « Vous tremblez » / « J'ai froid aux doigts » (récit de Dreyfus, donc attribué), arrestation — famous-trials.com/dreyfus/2621-dreyfus-in-his-own-words-my-arrest
+CORRIGÉ — « La Libre Parole publie le nom à la fin du mois » → « quelques jours plus tard, annonce l'arrestation » (1er novembre selon Marxists Archive) ; « arrestation devait rester secrète » retiré — marxists.org/history/france/dreyfus-affair/chronology.htm
+VERIFIÉ — Procès à huis clos, 19-22 décembre 1894, sept juges, unanimité ; dossier secret communiqué illégalement aux juges sans l'accusé ni la défense (Mercier) — en.wikipedia.org ; famous-trials.com/dreyfus/2622-… ; herodote.net
+CORRIGÉ — Lettre « D. » : l'article dit que le Service savait qu'elle ne pouvait lui être attribuée → formulation conservée ; Henry : « personne honorable », « Le traître, le voici ! » (au lieu d'« accusateur anonyme » juré) — en.wikipedia.org ; famous-trials.com/dreyfus/2622-…
+VERIFIÉ — Dégradation le 5 janvier 1895, cour de l'École militaire, 35 ans ; insignes et boutons coupés, sabre brisé, soldats silencieux, foule injuriant derrière des grilles — en.wikipedia.org/wiki/Alfred_Dreyfus ; herodote.net/degradation_de_Dreyfus-evenement-18950105-254.php (lieu, âge)
+CORRIGÉ — « Innocent ! » + « marche droit » retirés ; cris : « Vive la France ! Vive l'armée ! » (deux articles Wikipédia anglais) — en.wikipedia.org
+VERIFIÉ — Embarquement le 21 février 1895 (arrivée à l'île du Diable : 8 mars (Hérodote), 15 mars (Marxists), 14 avril (Wikipédia) — date non retenue) — marxists.org ; herodote.net ; en.wikipedia.org
+CORRIGÉ — Case de pierre d'environ 4 m de côté ✓ ; « 45 °C », « nourriture médiocre », « fièvres », « gardiens répondent à peine » retirés/remplacés : chaleur humide, insectes, courrier censuré, seuls le commandant et le médecin peuvent lui parler — herodote.net/Le_bagne_en_solitaire-synthese-2629-254.php
+CORRIGÉ — Mathieu engage Demange (Demange défendait Dreyfus au procès, non lié à la révision) → retiré ; « fortune », « classée pour beaucoup de Français », « foi dans la justice », conseil à Lucie : retirés (non sourcés) ; lettres censurées, journal (devenu Cinq années de ma vie) — en.wikipedia.org ; herodote.net
+VERIFIÉ — Picquart à la tête du service de renseignements le 1er juillet 1895 ; petit bleu mars 1896 ; Esterhazy ; éloigné en mission (Tunisie) fin 1896 — defense.gouv.fr/chemins-memoire/… ; marxists.org
+RETIRÉ — « télégramme-carte déchiré et jamais expédié » (non sourcé) ; « chemins détournés jusqu'à Mathieu » remplacé par Scheurer-Kestner (Chemins de mémoire)
+VERIFIÉ — Esterhazy criblé de dettes — en.wikipedia.org/wiki/Dreyfus_affair
+VERIFIÉ — Mathieu dénonce Esterhazy le 15 novembre 1897 ; Esterhazy acquitté le 11 janvier 1898 — marxists.org ; larousse.fr/encyclopedie/divers/wd/117099
+CORRIGÉ — « Bernard Lazare brochure de 1896 » → soutien à la révision avec la famille (brochure non confirmée) — en.wikipedia.org
+VERIFIÉ — Zola, Le Figaro, 25 novembre 1897, « La vérité est en marche, et rien ne l'arrêtera » (texte de Zola) — gutenberg.org/ebooks/56808 ; larousse.fr
+VERIFIÉ — « J'accuse… ! » dans L'Aurore le 13 janvier 1898 — marxists.org ; en.wikipedia.org
+RETIRÉ — « son but selon les historiens était d'être poursuivi » (non retrouvé) ; « familles se déchirent à table » (non sourcé)
+CORRIGÉ — Zola condamné le 23 février 1898 à un an de prison et 3 000 francs, exil en Angleterre — marxists.org ; en.wikipedia.org
+CORRIGÉ — « Picquart arrêté puis chassé de l'armée » → mis à la retraite (février 1898), emprisonné du 13 juillet 1898 au 9 juin 1899 — defense.gouv.fr/chemins-memoire/…
+VERIFIÉ — Cavaignac, faux d'Henry ; aveu le 30 août, suicide le 31 août 1898 au Mont-Valérien — larousse.fr ; marxists.org ; en.wikipedia.org
+CORRIGÉ — « juré » → « témoigné » (Henry en 1894)
+VERIFIÉ — Cassation du 3 juin 1899 ; Rennes : verdict du 9 septembre 1899, circonstances atténuantes, dix ans ; grâce quelques jours plus tard (19 septembre) — marxists.org ; larousse.fr ; en.wikipedia.org
+RETIRÉ — Rennes : « comparaît en uniforme », « la ville se remplit de journalistes… », « sa santé ne lui laisse plus guère le choix » (non sourcés) ; état physique : « gaunt, ill, hoarse-voiced » (Hérodote)
+ATTRIBUÉ/CORRIGÉ — Esterhazy « finira par avouer » → il avoue à des journalistes en Angleterre (Observer, 1898 selon Wikipédia) ; chronologie exacte non établie — en.wikipedia.org
+VERIFIÉ — 12 juillet 1906 : Cassation annule sans renvoi ; réintégré commandant (13 juillet) ; chevalier de la Légion d'honneur le 21 juillet 1906, cour de l'École militaire — herodote.net/12_juillet_1906-evenement-19060712.php ; en.wikipedia.org/wiki/Alfred_Dreyfus
+VERIFIÉ — Picquart général puis ministre de la Guerre (octobre 1906, gouvernement Clemenceau) — defense.gouv.fr/chemins-memoire/…
+CORRIGÉ — Dreyfus 1914-18 : réserviste, lieutenant-colonel (26 sept. 1918) ; mort à Paris le 12 juillet 1935 — en.wikipedia.org/wiki/Alfred_Dreyfus ; britannica.com
+INCERTAIN — Contenu exact de la lettre « D. » ; date et circonstances des aveux d'Esterhazy ; date d'arrivée à l'île du Diable

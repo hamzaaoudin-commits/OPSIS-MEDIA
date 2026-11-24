@@ -1,0 +1,28 @@
+{
+ "id": "es01",
+ "fmt": 3,
+ "name": "Mata Hari : l'agent H-21",
+ "sub": "Paris, 1917 : une danseuse née en Frise, un message allemand intercepté sur l'agent H-21 et douze fusils à Vincennes",
+ "blurb": {
+  "b": "Née Margaretha Zelle dans une ville de Frise, devenue danseuse parisienne sous le nom de Mata Hari, elle accepte de l'argent d'un consul allemand, puis traite avec le contre-espionnage français. En 1917, un message allemand interceptant l'agent H-21 la désigne. Elle est condamnée à mort pour intelligence avec l'ennemi.",
+  "h": "Une danseuse devenue Mata Hari tombe pour un message interceptant l'agent H-21"
+ },
+ "body": [
+  "#Le musée, le personnage",
+  "@Paris, 13 mars 1905.",
+  "Ce soir-là, dans le musée d'Émile Guimet, une danseuse paraît dans un décor d'Orient. Elle s'appelle Mata Hari, nom malais que l'on traduit par « œil du jour », et le personnage est tout récent : Émile Guimet, qui l'a invitée dans son musée, lui a offert une scène pour le créer. En quelques mois, la presse la connaît, et son imprésario, Gabriel Astruc, obtient pour elle 10 000 francs par soirée.",
+  "Rien de tout cela n'est ce qu'elle était un an plus tôt. À son arrivée à Paris, à vingt-sept ans, elle vit comme « cocotte ». Début 1905, elle est écuyère au Nouveau Cirque, puis danseuse.",
+  "#Une fille de Leeuwarden",
+  "Margaretha Zelle naît le 7 août 1876 à Leeuwarden, en Frise. Son père est marchand de chapeaux, et son entreprise fait faillite en 1889. À dix-huit ans, elle épouse Rudolf MacLeod, officier de marine de dix-neuf ans son aîné. Le couple s'installe aux Indes néerlandaises, sur l'île de Java. Ils ont deux enfants, dont un seul survit. Le divorce est prononcé à La Haye ; MacLeod finit par enlever la fille. Elle se dira plus tard née à Java et élevée dans un temple, une légende qui lui sert de passeport pour la scène.",
+  "#De La Haye à Madrid",
+  "La guerre mondiale a commencé. Citoyenne d'un pays neutre, elle voyage à sa guise d'une capitale à l'autre, et ses amants sont officiers de plusieurs armées. Elle aime alors un jeune capitaine russe, Vadim Maslov, blessé au front, et veut le rejoindre. C'est une raison d'avoir besoin d'argent et de laissez-passer, et de s'adresser à qui peut lui en donner.",
+  "En 1915, elle loue une maison à La Haye. Le consul allemand lui propose de payer ses dettes contre des renseignements. Elle reçoit 20 000 francs. Plus tard, elle dira que c'était « pour prix de mes faveurs ».",
+  "Fin 1916, elle rencontre le capitaine Georges Ladoux, chef du contre-espionnage français. Elle réclame un million de francs, qu'on ne lui versera pas. Ladoux lui propose pourtant de travailler pour la France, en Belgique occupée, et elle accepte. En novembre 1916, elle est arrêtée à Falmouth, interrogée par le MI5. Elle passe par Madrid. Un attaché militaire allemand y transmet à Berlin un message radio sur l'agent H-21, que les services français interceptent.",
+  "#L'arrestation et le procès",
+  "Le 13 février 1917, elle est arrêtée à l'hôtel Élysée Palace, sur les Champs-Élysées. Le capitaine Pierre Bouchardon, chargé de l'instruction, l'interroge à de multiples reprises. Elle est détenue à la prison pour femmes de Saint-Lazare, où elle attend près de cinq mois, jusqu'au procès. Le procès se tient à huis clos, devant un conseil de guerre, en juillet 1917. Son avocat est son ancien amant, Édouard Clunet.",
+  "!Moins de quarante-cinq minutes de délibéré.",
+  "Elle est condamnée à mort pour intelligence avec l'ennemi en temps de guerre. À la barre, elle maintient que l'argent reçu de l'Allemagne ne payait que ses faveurs, et qu'elle n'a jamais trahi la France. Le président Poincaré rejette son recours. Elle est fusillée à l'aube à Vincennes, devant douze fusils, le 15 octobre 1917.",
+  "On ne sait pas si elle a transmis une information utile à l'Allemagne. On ne sait pas non plus quel fut le rôle exact de Ladoux dans cette affaire, ni à quelle date précise le message fut intercepté. Reste une danseuse que Paris avait aimée, et à qui il fut plus facile de reprocher ses amants que de prouver ses secrets."
+ ],
+ "notes": "Retiré : date exacte de l'exécution non indiquée (15 octobre 1917, de mémoire), nombre d'interrogatoires. A vérifier : scène d'ouverture au musée Guimet (de mémoire : 13 mars 1905), Bouchardon cité comme capitaine dans l'ancienne version (juge d'instruction militaire), phrase finale (interprétation), orthographe H-21."
+}

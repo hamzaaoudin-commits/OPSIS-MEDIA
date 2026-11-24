@@ -1,6 +1,6 @@
 {
  "vc05": {
-  "blurb": "Le 16 juillet 1950, à Rio de Janeiro, le Brésil affronte l'Uruguay lors du match qui décide de la Coupe du monde, et un simple nul lui suffit. Les journaux le proclament déjà champion, et le maire a félicité les joueurs d'avance. Le Brésil marque en premier, puis l'Uruguay renverse le match devant plus de 170 000 spectateurs devenus muets.",
+  "blurb": "Le 16 juillet 1950, à Rio de Janeiro, le Brésil affronte l'Uruguay lors du match qui décide de la Coupe du monde, et un simple nul lui suffit. Les journaux le proclament déjà champion, et le maire a félicité les joueurs d'avance. Plus de 170 000 spectateurs remplissent le stade. Que va-t-il se passer ensuite ?",
   "hook": "Le matin, les journaux sacrent le Brésil. Le soir, le stade se tait."
  },
  "vc06": {
@@ -8,23 +8,23 @@
   "hook": "Coté 42 contre 1, en deuil de sa mère, il met Tyson au tapis."
  },
  "vc07": {
-  "blurb": "En octobre 1974, à Kinshasa, au Zaïre, Muhammad Ali, 32 ans, défie George Foreman, 25 ans, champion du monde des poids lourds et favori à 4 contre 1. Le combat, reporté de cinq semaines après une blessure de Foreman, commence à quatre heures du matin devant 60 000 spectateurs. Ali s'appuie aux cordes et encaisse. L'arbitre arrête le combat quand Foreman est au tapis.",
+  "blurb": "En octobre 1974, à Kinshasa, au Zaïre, Muhammad Ali, 32 ans, défie George Foreman, 25 ans, champion du monde des poids lourds et favori à 4 contre 1. Le combat, reporté de cinq semaines après une blessure de Foreman, commence à quatre heures du matin devant 60 000 spectateurs. Ali s'appuie aux cordes et encaisse. Quel est son plan ?",
   "hook": "Ali se laisse acculer aux cordes pendant que Foreman s'épuise à frapper."
  },
  "vc08": {
-  "blurb": "Le boxeur américain James Braddock perd ses économies dans les faillites bancaires de 1929 et vit un temps de l'aide publique, avec sa famille dans un sous-sol. Après quelques victoires, il se retrouve en juin 1935 face au champion Max Baer, plus jeune et plus lourd, coté 10 contre 1. Il gagne aux points en quinze rounds. Un auteur soupçonne pourtant un combat arrangé.",
+  "blurb": "Le boxeur américain James Braddock perd ses économies dans les faillites bancaires de 1929 et vit un temps de l'aide publique, avec sa famille dans un sous-sol. Après quelques victoires, il se retrouve en juin 1935 face au champion Max Baer, plus jeune et plus lourd, coté 10 contre 1. Un auteur soupçonne un combat arrangé.",
   "hook": "Un boxeur à l'aide publique devient champion du monde des poids lourds."
  },
  "vc09": {
-  "blurb": "Aux Jeux olympiques de Sydney, en 2000, Rulon Gardner, fils d'agriculteurs du Wyoming, affronte en finale le Russe Alexandre Karelin, triple champion olympique de lutte gréco-romaine, coté 2 000 contre 1. Karelin l'avait battu 5-0 en 1997. Pendant neuf minutes, Gardner tient les mains jointes. Quand celles de Karelin se séparent, il reçoit l'unique point du combat.",
+  "blurb": "Aux Jeux olympiques de Sydney, en 2000, Rulon Gardner, fils d'agriculteurs du Wyoming, affronte en finale le Russe Alexandre Karelin, triple champion olympique de lutte gréco-romaine, coté 2 000 contre 1. Karelin l'avait battu 5-0 en 1997. Pendant neuf minutes, Gardner doit tenir les mains jointes. Jusqu'où ?",
   "hook": "Un fermier lutte neuf minutes poitrine contre poitrine, puis un point sépare les mains."
  },
  "vc10": {
-  "blurb": "Le 19 juin 1936, à New York, l'Allemand Max Schmeling, 30 ans, affronte le jeune Joe Louis, invaincu et promis au titre mondial des poids lourds. Schmeling a repéré un défaut : Louis baisse la main gauche après son jab. Il l'envoie au tapis au quatrième round et l'emporte par K.-O. Le régime nazi s'empare de sa victoire, que Schmeling n'a pas demandée.",
+  "blurb": "Le 19 juin 1936, à New York, l'Allemand Max Schmeling, 30 ans, affronte le jeune Joe Louis, invaincu et promis au titre mondial des poids lourds. Schmeling a repéré un défaut : Louis baisse la main gauche après son jab. Le régime nazi observe le combat de loin. Qui l'emportera, et que fera le régime de ce résultat ?",
   "hook": "Un seul défaut repéré à l'étude, et l'invaincu tombe. Hitler envoie des fleurs."
  },
  "vc11": {
-  "blurb": "En 490 avant Jésus-Christ, une armée perse débarque près de Marathon, en Grèce, après avoir détruit la cité d'Érétrie. Face à elle, environ 10 000 soldats athéniens attendent des renforts spartiates qui n'arriveront pas à temps. Le général Miltiade ordonne de charger sur environ deux kilomètres. Les historiens ne s'accordent ni sur la date, ni sur le nombre de combattants.",
+  "blurb": "En 490 avant notre ère, l'empire perse détruit une cité grecque et débarque à quarante kilomètres d'Athènes. Les Athéniens, seuls ou presque, hésitent : attendre Sparte ou attaquer. Un vote, une course, deux ailes plus fortes que le centre. Que sait-on vraiment de cette journée, et de ce qu'on en a retenu ?",
   "hook": "Les Perses voient dans la charge athénienne une folie suicidaire. Elle les brise."
  },
  "vc12": {
@@ -32,7 +32,7 @@
   "hook": "La pluie transforme un champ labouré en piège pour la chevalerie française."
  },
  "vc13": {
-  "blurb": "Le 20 septembre 1792, près du village de Valmy, l'armée prussienne qui a envahi la France fait face à des soldats français et des volontaires commandés par les généraux Kellermann et Dumouriez. La bataille se réduit à un duel d'artillerie, avec peu de victimes. Pourtant, le lendemain, les Prussiens se retirent. On discute encore des raisons de ce recul, de la prudence à la corruption.",
+  "blurb": "Le 20 septembre 1792, près du village de Valmy, l'armée prussienne qui a envahi la France fait face à des soldats français et des volontaires commandés par les généraux Kellermann et Dumouriez. La bataille se réduit à un duel d'artillerie, avec peu de victimes. Pourtant, ce duel va peser lourd. Que s'est-il vraiment passé ce jour-là, de la prudence à la corruption ?",
   "hook": "Un duel de canons fait peu de morts mais arrête l'invasion de la France."
  },
  "vc14": {
@@ -44,7 +44,7 @@
   "hook": "Trente-deux chars contre deux mille cinq cents, et l'envahisseur s'enlise."
  },
  "vc16": {
-  "blurb": "Le 18 novembre 1803, à Vertières, près du Cap-Français, à Saint-Domingue, l'armée des insurgés de Jean-Jacques Dessalines affronte les troupes françaises de Rochambeau, déjà décimées par la fièvre jaune. Le général rebelle François Capois charge à pied, son cheval tué sous lui, en criant « En avant ! ». Le lendemain, les Français négocient leur départ. Haïti sera proclamée six semaines plus tard.",
+  "blurb": "Le 18 novembre 1803, à Vertières, près du Cap-Français, à Saint-Domingue, l'armée des insurgés de Jean-Jacques Dessalines affronte les troupes françaises de Rochambeau, déjà décimées par la fièvre jaune. Le général rebelle François Capois charge à pied, son cheval tué sous lui, en criant « En avant ! ». Que va décider cette journée pour l'île ?",
   "hook": "Son cheval tué, Capois continue à pied sous le feu en criant « En avant ! »"
  },
  "vc17": {
@@ -52,55 +52,55 @@
   "hook": "Rosa Parks, militante aguerrie : des femmes ont lancé le boycott, pas Martin Luther King."
  },
  "vc18": {
-  "blurb": "Le 1er mars 1896, en Éthiopie, le général italien Baratieri lance à l'aube ses trois colonnes contre l'armée de l'empereur Ménélik, bien plus nombreuse et armée de fusils modernes. Dans la nuit, les colonnes se séparent sur un terrain difficile, et l'une prend un col pour un autre. Isolées, elles sont écrasées. Le corps du général Dabormida n'a jamais été retrouvé.",
+  "blurb": "Le 1er mars 1896, en Éthiopie, le général italien Baratieri lance à l'aube ses trois colonnes contre l'armée de l'empereur Ménélik, bien plus nombreuse et armée de fusils modernes. Dans la nuit, les colonnes se séparent sur un terrain difficile, et l'une prend un col pour un autre. Que deviennent des colonnes isolées ?",
   "hook": "Une erreur de col sépare trois colonnes, et l'armée italienne est écrasée."
  },
  "vc19": {
-  "blurb": "À la fin des années 1980, l'Estonie, alors soviétique, interdit à ses habitants d'afficher leur drapeau et de chanter des chants patriotiques. En juin 1988, des foules chantent la nuit à Tallinn, puis, en août 1989, près de deux millions de personnes forment une chaîne humaine à travers les trois pays baltes. L'indépendance est restaurée en août 1991, presque sans violence.",
+  "blurb": "Septembre 1988 : trois cent mille personnes, soit un Estonien sur cinq, se rassemblent sur un champ pour chanter des chants interdits sous un drapeau interdit. Les autorités soviétiques n'interviennent pas. Que se passe-t-il quand tout un peuple chante ensemble ? Un répertoire de chansons peut-il peser plus lourd qu'un empire ?",
   "hook": "Un peuple retrouve son indépendance en chantant, et la répression redoutée n'a pas lieu."
  },
  "vc20": {
-  "blurb": "Le 4 avril 1989, en Pologne, le régime communiste du général Jaruzelski accepte des élections en partie libres : le syndicat Solidarité ne peut briguer que 161 des 460 sièges de la Diète. Les électeurs rayent les noms refusés au lieu de cocher leur choix. Le parti communiste est battu, puis perd ses alliés. Un Premier ministre non communiste est nommé en août.",
+  "blurb": "Le 4 avril 1989, en Pologne, le régime communiste du général Jaruzelski accepte des élections en partie libres : le syndicat Solidarité ne peut briguer que 161 des 460 sièges de la Diète. Les électeurs rayent les noms refusés au lieu de cocher leur choix. Que va produire ce geste simple ?",
   "hook": "Il suffisait de barrer des noms sur un bulletin pour renverser un régime."
  },
  "vc26": {
-  "blurb": "En juillet 1972, à Reykjavik, en Islande, l'Américain Bobby Fischer, 29 ans, doit affronter Boris Spassky, champion du monde soviétique, dans le « Match du siècle ». Fischer discute argent et caméras, perd la première partie, puis ne se présente pas à la deuxième. Il décide de continuer au dernier moment, à condition de jouer sans caméras. Il finit par l'emporter 12,5 à 8,5.",
+  "blurb": "En juillet 1972, à Reykjavik, en Islande, l'Américain Bobby Fischer, 29 ans, doit affronter Boris Spassky, champion du monde soviétique, dans le « Match du siècle ». Fischer discute argent et caméras, perd la première partie, puis ne se présente pas à la deuxième. Il décide de continuer au dernier moment, à condition de jouer sans caméras. Ira-t-il au bout ?",
   "hook": "Le favori perd une partie, déclare forfait à la suivante, puis exige zéro caméra."
  },
  "vc27": {
-  "blurb": "En mai 1973, Bobby Riggs, ancien numéro un mondial de tennis âgé de 55 ans, bat la joueuse Margaret Court et affirme qu'une femme est faite pour la cuisine. La championne Billie Jean King accepte alors le défi. Le 20 septembre 1973, à Houston, devant plus de 30 000 spectateurs et des dizaines de millions de téléspectateurs, elle le bat en trois sets.",
+  "blurb": "En mai 1973, Bobby Riggs, ancien numéro un mondial de tennis âgé de 55 ans, bat la joueuse Margaret Court et affirme qu'une femme est faite pour la cuisine. La championne Billie Jean King accepte alors le défi. Le 20 septembre 1973, à Houston, devant plus de 30 000 spectateurs et des dizaines de millions de téléspectateurs, ils se font face.",
   "hook": "Elle entre en robe dorée de Cléopâtre, lui en pousse-pousse. Elle gagne."
  },
  "vc28": {
-  "blurb": "Le 23 juillet 1989, dernier jour du Tour de France, le Français Laurent Fignon, qui souffre d'abcès, a 50 secondes d'avance sur l'Américain Greg LeMond avant le contre-la-montre final dans Paris. LeMond roule avec un casque aérodynamique et un guidon à prolongateurs, que Fignon n'a pas. Il gagne le Tour avec huit secondes d'avance. Le matériel explique-t-il tout ? On l'ignore.",
+  "blurb": "Le 23 juillet 1989, dernier jour du Tour de France, le Français Laurent Fignon, qui souffre d'abcès, a 50 secondes d'avance sur l'Américain Greg LeMond avant le contre-la-montre final dans Paris. LeMond roule avec un casque aérodynamique et un guidon à prolongateurs, que Fignon n'a pas. Cinquante secondes suffiront-elles ? Le matériel explique-t-il tout ? On l'ignore.",
   "hook": "Un casque en goutte d'eau et un guidon spécial : huit secondes sur trois semaines."
  },
  "vc29": {
-  "blurb": "Le 10 avril 1896, à Athènes, a lieu le premier marathon olympique, avec 17 coureurs dont 13 Grecs. Spyridon Louis, 23 ans, porteur d'eau pour la boutique de son père, dépasse l'Australien Edwin Flack, en tête depuis huit kilomètres, qui s'effondre près de la fin. La foule crie « Hellène, Hellène ! ». Louis finit en moins de trois heures, accompagné de deux princes.",
+  "blurb": "Le 10 avril 1896, à Athènes, a lieu le premier marathon olympique, avec 17 coureurs dont 13 Grecs. Spyridon Louis, 23 ans, porteur d'eau pour la boutique de son père, s'élance derrière l'Australien Edwin Flack, en tête depuis huit kilomètres. Dans le stade, la foule attend un Grec, et crie « Hellène, Hellène ! ». Qui franchira la ligne le premier ?",
   "hook": "Un porteur d'eau grec double le favori australien. Le stade crie « Hellène ! »"
  },
  "vc30": {
-  "blurb": "Le 19 juillet 1966, à Middlesbrough, en Angleterre, la Corée du Nord, affronte l'Italie, deux fois championne du monde. Pak Doo-ik marque l'unique but du match, et l'Italie finit à dix. Le public local, venu en nombre, s'est rangé derrière les Nord-Coréens. À la fin, environ 17 000 personnes les ovationnent debout.",
+  "blurb": "Le 19 juillet 1966, à Middlesbrough, en Angleterre, la Corée du Nord affronte l'Italie, deux fois championne du monde. Le public local, venu en nombre, s'est rangé derrière les Nord-Coréens. À la fin, environ 17 000 personnes les ovationnent debout. Que s'est-il passé sur la pelouse pour provoquer une telle scène ?",
   "hook": "Une ville anglaise adopte l'équipe nord-coréenne et ovationne l'élimination de l'Italie."
  },
  "du01": {
-  "blurb": "Le 5 juillet 1980, à Wimbledon, le Suédois Björn Borg, quadruple tenant du titre, affronte en finale l'Américain John McEnroe, entré sur le court sous les sifflets. Au cinquième set, Borg gagne 8-6. Dans le quatrième, il a laissé passer deux balles de match, puis McEnroe a sauvé cinq balles de match dans un jeu décisif de vingt-deux minutes, gagné 18-16.",
+  "blurb": "Sept fois, Björn Borg est à un point de gagner Wimbledon. Sept fois, John McEnroe, vingt et un ans, sort un coup qui efface tout. Dans un jeu décisif de vingt minutes, le favori vacille, le public change de camp, et tout ne se joue qu'au cinquième set, après presque quatre heures de match.",
   "hook": "Un jeu décisif gagné 18-16 par celui qui va perdre le match."
  },
  "du02": {
-  "blurb": "Le 6 juillet 2008, à Wimbledon, Rafael Nadal, 22 ans, affronte en finale Roger Federer, 26 ans, vainqueur des cinq éditions précédentes. La pluie coupe le match à plusieurs reprises. Nadal mène de deux sets, Federer revient et sauve deux balles de match. Le match s'achève à 21 h 15 dans une quasi-obscurité, au bout de presque cinq heures.",
+  "blurb": "Le 6 juillet 2008, à Wimbledon, Rafael Nadal, 22 ans, affronte en finale Roger Federer, 26 ans, vainqueur des cinq éditions précédentes. La pluie coupe le match à plusieurs reprises. Nadal mène de deux sets, Federer revient et sauve deux balles de match. La nuit tombe sur le court central. Qui l'emportera ?",
   "hook": "Le règne de Federer s'achève presque dans le noir, sans toit sur le court."
  },
  "du05": {
-  "blurb": "Le 22 juin 2010, au premier tour de Wimbledon, l'Américain John Isner affronte le Français Nicolas Mahut sur le court 18. Le match dure trois jours, et le cinquième set à lui seul compte 138 jeux. Le tableau d'affichage s'éteint à 47-47, faute d'avoir été programmé plus loin. Isner finit par gagner 70-68 après onze heures de jeu.",
+  "blurb": "Le 22 juin 2010, au premier tour de Wimbledon, l'Américain John Isner affronte le Français Nicolas Mahut sur le court 18. Le match dure trois jours, et le cinquième set à lui seul compte plus de cent jeux. Le tableau d'affichage s'éteint à 47-47, faute d'avoir été programmé plus loin. Qui craquera le premier ?",
   "hook": "Le tableau d'affichage n'allait pas plus loin que 47-47. Le match, si."
  },
  "du06": {
-  "blurb": "Le 1er octobre 1975, à Manille, aux Philippines, Muhammad Ali et Joe Frazier disputent leur troisième combat à dix heures du matin, dans une salle étouffante dont la climatisation est tombée en panne. Ali a prédit qu'il aurait « le gorille à Manille ». Après quatorze rounds, l'entraîneur de Frazier, Eddie Futch, fait arrêter le combat malgré les protestations de son boxeur.",
+  "blurb": "Le 1er octobre 1975, à Manille, aux Philippines, Muhammad Ali et Joe Frazier disputent leur troisième combat à dix heures du matin, dans une salle étouffante dont la climatisation est tombée en panne. Ali a prédit qu'il aurait « le gorille à Manille ». Qui tiendra le plus longtemps ?",
   "hook": "Ali dit avoir connu ce qu'il y a de plus proche de la mort."
  },
  "du07": {
-  "blurb": "Le 15 avril 1985, à Las Vegas, le champion du monde des poids moyens Marvin Hagler défend ses titres contre Thomas Hearns. Le combat est surnommé « The War ». Dès la cloche, les deux hommes échangent des coups violents pendant tout le premier round. Au troisième, l'arbitre Richard Steele arrête le combat alors que Hearns est debout. Cet arrêt reste discuté.",
+  "blurb": "Le 15 avril 1985, à Las Vegas, le champion du monde des poids moyens Marvin Hagler défend ses titres contre Thomas Hearns. Le combat est surnommé « The War ». Dès la cloche, les deux hommes échangent des coups violents pendant tout le premier round. Combien de temps peut durer un tel rythme ?",
   "hook": "Un seul round de trois minutes, et Hagler et Hearns ont tout donné."
  },
  "du08": {
@@ -108,39 +108,39 @@
   "hook": "Un morceau d'oreille craché sur le ring, puis une seconde morsure."
  },
  "du09": {
-  "blurb": "Le 16 septembre 1981, à Las Vegas, Sugar Ray Leonard et Thomas Hearns s'affrontent pour unifier les titres mondiaux des poids welters. Après treize rounds, les trois juges donnent l'avantage à Hearns, au bras plus long. Son entraîneur, Angelo Dundee, lance alors à Leonard : « Tu es en train de tout rater. » Leonard passe à l'attaque, et le combat s'arrête au quatorzième round.",
+  "blurb": "Le 16 septembre 1981, à Las Vegas, Sugar Ray Leonard et Thomas Hearns s'affrontent pour unifier les titres mondiaux des poids welters. Après treize rounds, les trois juges donnent l'avantage à Hearns, au bras plus long. Son entraîneur, Angelo Dundee, lance alors à Leonard : « Tu es en train de tout rater. » Que fait Leonard ?",
   "hook": "Mené sur les trois cartes, Leonard entend son entraîneur lui dire qu'il rate tout."
  },
  "du10": {
-  "blurb": "Entre mai 2002 et juin 2003, les boxeurs américains Micky Ward et Arturo Gatti se rencontrent trois fois. Ward gagne le premier combat, désigné combat de l'année par le magazine The Ring, puis Gatti remporte les deux suivants. Les échanges y sont si violents qu'il faut ensuite soigner les deux hommes. Ils deviennent pourtant de proches amis, et Gatti engage Ward comme entraîneur.",
+  "blurb": "Entre mai 2002 et juin 2003, les boxeurs américains Micky Ward et Arturo Gatti se rencontrent trois fois. Le premier combat est désigné combat de l'année par le magazine The Ring. Les échanges sont si violents qu'il faut ensuite soigner les deux hommes. Que reste-t-il d'une telle rivalité ?",
   "hook": "Après trois combats d'une violence extrême, les deux boxeurs jouent au golf ensemble."
  },
  "du11": {
-  "blurb": "Le 24 octobre 1976, au Japon, le pilote autrichien Niki Lauda, qui mène le championnat de Formule 1, affronte son ami James Hunt pour le titre. Lauda a failli mourir dans un accident en Allemagne, en août. Sous une pluie battante, il s'arrête après un tour. Hunt, sans radio, doit finir troisième pour être champion, et gagne le titre d'un point.",
+  "blurb": "Le 24 octobre 1976, au Japon, le pilote autrichien Niki Lauda, qui mène le championnat de Formule 1, affronte son ami James Hunt pour le titre. Lauda a failli mourir dans un accident en Allemagne, en août. Sous une pluie battante, le départ est donné. Hunt, sans radio, doit finir troisième pour être champion.",
   "hook": "Lauda sort des flammes, revient en six semaines, puis abandonne sous la pluie."
  },
  "du12": {
-  "blurb": "Le 22 octobre 1989, à Suzuka, au Japon, les coéquipiers Ayrton Senna et Alain Prost jouent le titre de Formule 1. Au tour 47, Senna tente de passer Prost à la chicane, Prost ferme la porte, et les voitures s'immobilisent. Senna repart et gagne la course, mais il est disqualifié. Il écope en plus d'une suspension et d'une amende de 100 000 dollars.",
+  "blurb": "Le 22 octobre 1989, à Suzuka, au Japon, les coéquipiers Ayrton Senna et Alain Prost jouent le titre de Formule 1. Au tour 47, Senna tente de passer Prost à la chicane, Prost ferme la porte, et les voitures s'immobilisent. Que se passe-t-il ensuite ?",
   "hook": "Senna franchit la ligne en premier, et pourtant la course n'est pas à lui."
  },
  "du13": {
-  "blurb": "En juin 1966, aux 24 Heures du Mans, en France, Ford, qui veut battre Ferrari, place ses trois voitures aux trois premières places. Ken Miles, qui menait presque de quatre tours, reçoit l'ordre de ralentir pour une arrivée groupée. Selon le règlement, la victoire revient à une autre voiture, partie de plus loin sur la grille. Miles pensait avoir gagné.",
+  "blurb": "En juin 1966, aux 24 Heures du Mans, en France, Ford, qui veut battre Ferrari, place ses trois voitures aux trois premières places. Ken Miles, qui menait presque de quatre tours, reçoit l'ordre de ralentir pour une arrivée groupée. Qui sera déclaré vainqueur ?",
   "hook": "Celui qui menait la course perd à cause de sa place sur la grille."
  },
  "du15": {
-  "blurb": "Le 13 novembre 1994, à Adélaïde, en Australie, dernier Grand Prix de la saison de Formule 1, l'Allemand Michael Schumacher mène le Britannique Damon Hill d'un seul point. Au tour 36, Schumacher touche un mur, Hill tente de le dépasser, et les deux voitures se heurtent. Schumacher abandonne, Hill aussi. Les commissaires y voient un incident de course, mais beaucoup l'imputent à Schumacher.",
+  "blurb": "Le 13 novembre 1994, à Adélaïde, en Australie, dernier Grand Prix de la saison de Formule 1, l'Allemand Michael Schumacher mène le Britannique Damon Hill d'un seul point. Au tour 36, Schumacher touche un mur, Hill tente de le dépasser, et les deux voitures se heurtent. Qui est responsable ?",
   "hook": "Un mur frôlé, un dépassement, un contact : le titre se joue sur un point."
  },
  "du16": {
-  "blurb": "Le 7 août 1954, à Vancouver, les Jeux de l'Empire britannique réunissent pour la première fois dans une même course les deux seuls hommes passés sous les quatre minutes au mille : l'Anglais Roger Bannister et l'Australien John Landy. Landy mène dès le départ. Près de l'arrivée, il tourne la tête pour chercher Bannister. Bannister l'emporte d'environ une seconde.",
+  "blurb": "Le 7 août 1954, à Vancouver, les Jeux de l'Empire britannique réunissent pour la première fois dans une même course les deux seuls hommes passés sous les quatre minutes au mille : l'Anglais Roger Bannister et l'Australien John Landy. Landy mène dès le départ. Près de l'arrivée, il tourne la tête pour chercher Bannister. Qui gagnera ?",
   "hook": "Deux hommes sous les quatre minutes, un regard en arrière, et la course bascule."
  },
  "du18": {
-  "blurb": "Le 24 septembre 1988, aux Jeux olympiques de Séoul, le Canadien Ben Johnson gagne le 100 mètres en 9 s 79, record du monde, devant l'Américain Carl Lewis. Le lendemain, un contrôle le déclare positif au stanozolol, un stéroïde anabolisant. Son manager et lui évoquent une substance ajoutée à sa boisson. Le Comité international olympique, lui, juge cela impossible.",
+  "blurb": "Le 24 septembre 1988, aux Jeux olympiques de Séoul, le Canadien Ben Johnson gagne le 100 mètres en 9 s 79, record du monde, devant l'Américain Carl Lewis. Une vingtaine d'heures plus tard, un officiel frappe à sa porte. Que se passe-t-il, et qui dit la vérité ?",
   "hook": "Il court plus vite que personne, puis un échantillon d'urine lui retire l'or."
  },
  "du19": {
-  "blurb": "Le 16 août 2008, aux Jeux olympiques de Pékin, le nageur américain Michael Phelps, qui vise un septième titre, affronte le Serbe Milorad Cavic en finale du 100 mètres papillon. Cavic mène jusqu'au dernier mur. Phelps gagne en 50 s 58, contre 50 s 59 pour Cavic. Le chronométrage n'a enregistré qu'un seul des deux contacts.",
+  "blurb": "Le 16 août 2008, aux Jeux olympiques de Pékin, le nageur américain Michael Phelps, qui vise un septième titre, affronte le Serbe Milorad Cavic en finale du 100 mètres papillon. Cavic mène jusqu'au dernier mur. Le chronométrage n'a enregistré qu'un seul des deux contacts. Qui a touché le premier ?",
   "hook": "Un centième de seconde, et une plaque que l'un a touchée sans l'enfoncer."
  },
  "du20": {

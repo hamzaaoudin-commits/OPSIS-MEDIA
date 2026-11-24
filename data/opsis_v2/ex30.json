@@ -1,0 +1,32 @@
+{
+ "id": "ex30",
+ "fmt": 3,
+ "name": "Chauvet : l'air qui sort",
+ "sub": "Ardèche, 18 décembre 1994 : trois spéléologues dégagent un trou d'où sort un courant d'air, et descendent dans une grotte close depuis des dizaines de millénaires",
+ "blurb": {
+  "b": "Le 18 décembre 1994, trois spéléologues remarquent un courant d'air froid qui sort d'une paroi ardéchoise. Ils déblaient, puis descendent. Sous leurs lampes, des centaines d'animaux dessinés il y a plus de trente mille ans, des squelettes d'ours, des empreintes. La grotte n'avait pas été ouverte depuis une éternité.",
+  "h": "Un souffle d'air dans une falaise, une grotte fermée depuis 29 000 ans"
+ },
+ "body": [
+  "#Un souffle dans la falaise",
+  "@Ardèche, 18 décembre 1994.",
+  "Ce jour-là, trois spéléologues, Jean-Marie Chauvet, Éliette Brunel et Christian Hillaire, s'arrêtent devant un petit trou dans une paroi de l'Ardèche, qu'ils ont atteint après quarante-cinq minutes de montée. L'air qui en sort leur fait penser qu'une grotte plus grande se cache derrière.",
+  "Éliette Brunel est la première à s'y glisser. Les autres dégagent les débris pendant trois heures. Puis ils descendent à l'échelle de spéléologue, dans l'obscurité d'un lieu que personne n'a vu depuis un temps qui dépasse l'imagination, et c'est là que leurs lampes tombent sur les premières parois.",
+  "!Ils entrent dans une grotte qui est restée fermée pendant des dizaines de millénaires.",
+  "Une autre version de la découverte la place environ six mois après que Michel Rosa a trouvé l'ouverture voisine du « Trou de Baba » : un éboulement avait recouvert l'entrée d'origine. C'est pourtant le nom de Chauvet, qui eut l'idée de chercher à cet endroit, que la grotte a retenu.",
+  "#Des centaines d'animaux",
+  "@Grotte Chauvet.",
+  "Sur les parois, des centaines d'animaux : un ours, l'Ours rouge, une chouette, le Grand Cheval gravé, le Panneau des mégacéros. Au moins treize espèces sont recensées, dont des lions, des léopards, des hyènes des cavernes et des rhinocéros laineux, autrement dit des bêtes dangereuses, pas du gibier tranquille.",
+  "Le sol raconte autant que les murs. On y trouve des restes et des empreintes d'ours des cavernes, près de 300 tanières et plus de 4 000 os qui appartiennent à environ 190 ours.",
+  "#Quel âge ?",
+  "@Il y a 36 000 ans ou plus.",
+  "Les datations donnent à la grotte environ 36 000 ans, et jusqu'à 38 000 pour les plus anciens dessins : presque le double de l'âge de Lascaux. Une étude de 2016 fondée sur 259 datations distingue deux périodes d'occupation, d'environ 37 000 à 33 500 ans, puis de 31 000 à 28 000 ans. La plupart des dessins noirs, tracés au charbon, viennent de la première, la plus ancienne des deux. Une réévaluation de 2020 situe la plus ancienne peinture à environ 36 500 ans.",
+  "Cette chronologie n'est pas acceptée par tous. Les chercheurs Paul Pettitt et Paul Bahn jugent que les datations au radiocarbone contredisent l'ordre des styles, avec des incertitudes sur le charbon utilisé et la contamination en surface.",
+  "#L'entrée fermée",
+  "@Il y a environ 29 000 ans.",
+  "L'entrée est restée bloquée pendant des millénaires. Une étude de 2012 date la fermeture d'il y a environ 29 000 ans ; une autre, de 2016, relie la fin de la première période d'occupation à un éboulement survenu il y a environ 33 500 ans. On ne sait pas lequel des deux a scellé la grotte, ou si ce furent plusieurs éboulements. On y a aussi relevé les empreintes d'un enfant, de la période gravettienne. Cette fermeture explique en grande partie l'état de conservation : à l'abri de l'air extérieur et des visiteurs, la grotte est restée, au sens strict, un lieu intact.",
+  "Pendant tout ce temps, personne ne regarde les parois. Les empreintes d'un enfant restent sur le sol, et les dessins attendent que l'air, par un trou invisible dans la falaise, finisse par signaler une porte.",
+  "Aujourd'hui, la grotte Chauvet est classée au patrimoine mondial de l'UNESCO et fermée au public, pour la protéger : seuls quelques scientifiques y entrent, en suivant des passerelles installées pour ne pas abîmer le sol. Ce jour de décembre, le souffle d'air qui sortait de la paroi était le seul signe que, derrière, quelque chose attendait depuis des millénaires."
+ ],
+ "notes": "Retiré : 'foyers de 27 000 à 25 000 ans' (en tension avec la fermeture à 29 000), nombre exact de peintures, méthode de datation du chiffre de 38 000, détail sur le rôle de Michel Rosa réduit. À vérifier : UNESCO et fermeture au public (connaissance générale, à confirmer) ; 'Les Simon préviennent les autorités' (Ötzi, détail général)."
+}

@@ -1,0 +1,32 @@
+# Lot 3 : Bourdain, McQueen, Sly Stone
+
+# ---- Anthony Bourdain (pt24)
+add('pt24', 1, 'Provincetown, puis Les Halles', [
+ "À 17 ans, l’été, il travaille comme plongeur dans un restaurant de Provincetown, sur la côte du Massachusetts. C’est son premier contact avec une cuisine de restaurant. Il y découvre l’énergie, la fatigue, la camaraderie d’un monde où l’on se fait respecter par le travail. Il y voit des hommes marginaux, drôles, grossiers, qui tiennent debout par la solidarité. Il se dit que c’est là qu’il veut vivre.",
+ "Il suit ensuite la formation du Culinary Institute of America, l’école de cuisine de référence aux États-Unis, dont il sort diplômé en 1978. Il passe vingt ans dans les cuisines de Manhattan. À la fin des années 1990, il devient chef d’une brasserie française très fréquentée de la ville, Les Halles. C’est de là qu’il écrit l’article qui change sa vie."])
+add('pt24', 2, 'Parts Unknown', [
+ "Sa première émission, *A Cook’s Tour*, date de 2002. Il y suit le monde en mangeant. Puis *No Reservations*, en 2005. En juillet 2006, au Liban, son équipe est en plein tournage quand la guerre éclate entre Israël et le Hezbollah. Il se retrouve bloqué, puis évacué. Il décide de raconter cela à l’écran. L’épisode qui en sort est salué comme une réussite : un film sur la nourriture devenu film sur les gens.",
+ "En 2013, il rejoint la chaîne d’information CNN pour *Parts Unknown*. Il y filme des lieux que les touristes ne visitent pas : une banlieue de Detroit, la Libye, Gaza, Kinshasa. Il garde toujours la même méthode. Il s’assoit à une table, il écoute celui qui cuisine, il laisse parler. L’émission remporte plusieurs Emmy Awards.",
+ "Son talent est là : montrer qu’on peut comprendre un peuple à travers ce qu’il met dans son assiette, et qu’on doit d’abord s’asseoir pour l’entendre."])
+add('pt24', 3, 'Une famille, des départs', [
+ "Sa vie privée n’est pas aussi stable que son personnage. Il se marie en 1985 avec Nancy Putkoski, une amie d’enfance, et divorce en 2005. En 2007, il épouse Ottavia Busia, une adepte d’arts martiaux italienne, avec qui il a une fille, Ariane. Le couple se sépare en 2016. Il aime sa fille, il le dit, et il le répète souvent à l’écran. Mais l’emploi du temps d’un animateur sans cesse en déplacement est incompatible avec une vie de famille.",
+ "Ses amis disent qu’il cherche toujours quelque chose. Un nouveau pays. Une nouvelle personne. Une nouvelle discipline : il se met au jiu-jitsu brésilien, à plus de cinquante ans, et s’y consacre avec une discipline de moine. Il sait qu’il a une tendance à la dépendance et il la dirige, comme il le peut, vers des choses qui le tiennent debout."])
+
+# ---- Alexander McQueen (pt26)
+add('pt26', 1, 'Highland Rape', [
+ "Dès ses premières collections, McQueen scandalise. En 1993, il présente des pantalons si bas qu’ils découvrent le bas du dos. La presse les baptise « bumsters ». En 1995, sa collection *Highland Rape* montre des mannequins aux vêtements déchirés, aux dentelles arrachées, qui marchent comme si elles sortaient d’une bataille. Les critiques l’accusent de misogynie. Lui répond qu’il parle de l’Écosse de ses ancêtres, de la violence faite par les Anglais, de ce que l’histoire fait aux femmes.",
+ "Il veut que les gens ressentent quelque chose, même si c’est du dégoût. Il dit que son travail est une façon de dire la vérité sur le monde, avec des vêtements. Ses défilés se tiennent dans des endroits improbables : une église, un entrepôt, un parking."])
+add('pt26', 2, 'Gucci', [
+ "En décembre 2000, le groupe Gucci rachète une part majoritaire de la marque Alexander McQueen. Pour la première fois, le créateur a de l’argent pour développer son entreprise, des boutiques, des parfums, des sacs. En mars 2001, il quitte la direction artistique de Givenchy, après avoir déclaré publiquement qu’il y était malheureux. Il peut enfin se consacrer à sa propre marque.",
+ "Les années 2000 sont celles de ses défilés les plus fous. Une partie d’échecs jouée par des mannequins en 2005. Un hologramme de Kate Moss flottant dans les airs en 2006. Une robe peinte à l’aérographe par deux robots, sous les yeux du public, en septembre 1998, pour sa collection de l’été 1999. À chaque saison, il invente un monde. Et à chaque saison, il se demande s’il saura encore le faire."])
+add('pt26', 4, 'Sarah Burton', [
+ "À sa mort, la marque aurait pu s’éteindre. Son équipe décide de continuer. En mars 2010, quelques semaines après sa disparition, une dernière collection, restée inachevée, est présentée à Paris devant un cercle très restreint de journalistes et de proches. Elle s’intitule *Angels and Demons*, anges et démons.",
+ "Sarah Burton, qui travaillait à ses côtés depuis des années, prend la direction artistique de la maison. En 2011, elle dessine la robe de mariée de Kate Middleton pour son mariage avec le prince William. Le monde entier regarde une robe qui porte, sans que beaucoup le sachent, la patte d’un enfant de Lewisham qui avait appris à coudre sur les genoux de sa mère."])
+
+# ---- Sly Stone (pt22)
+add('pt22', 1, 'Everyday People', [
+ "Entre 1968 et 1971, Sly and the Family Stone enchaîne les succès. *Dance to the Music* en 1968. *Everyday People*, sorti fin 1968, qui atteint la première place des ventes américaines et dont le refrain parle de gens ordinaires, différents mais pareils. *Thank You (Falettinme Be Mice Elf Agin)*, fin 1969, avec une ligne de basse qui deviendra l’une des plus copiées de l’histoire. *Family Affair*, en 1971, qui atteint à son tour la première place.",
+ "Le groupe est composé d’hommes et de femmes, de Noirs et de Blancs, de musiciens qui se passent la parole. Il ne ressemble à aucun autre. Sur scène, il ne joue pas devant le public : il joue avec lui. Cette énergie, ce mélange de joie et de politique, va influencer le funk, le rock, la soul et, plus tard, le hip-hop."])
+add('pt22', 4, 'Le Hall of Fame', [
+ "En 1993, Sly and the Family Stone est intronisé au Rock and Roll Hall of Fame. Sly n’est pas apparu en public depuis des années. Ce soir-là, il monte sur scène avec les autres membres, accueilli par l’ovation de la salle. Il prononce quelques mots, brefs, un peu confus, sur la musique et sur ceux qui l’ont accompagné. Puis il quitte la scène sans attendre la fin.",
+ "Pour ceux qui l’aiment, ce moment est à la fois un hommage et un adieu. L’homme qui avait fait danser un demi-million de personnes se retire sans un mot de plus."])

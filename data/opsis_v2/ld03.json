@@ -1,0 +1,33 @@
+{
+ "id": "ld03",
+ "fmt": 3,
+ "name": "Alexandre II : avant la seconde bombe",
+ "sub": "Saint-Pétersbourg, 13 mars 1881 : le tsar signe le matin un projet de réforme, puis survit à une première bombe avant d'être tué par la seconde, sur le quai du canal Catherine",
+ "blurb": {
+  "b": "Le 13 mars 1881, Alexandre II, tsar qui a libéré les serfs, signe un projet de commissions consultatives : un premier pas vers la fin de l'autocratie. Quelques heures plus tard, une bombe explose sous sa voiture. Il en sort indemne, descend voir les blessés. Une seconde bombe est lancée à ses pieds.",
+  "h": "Le tsar libérateur, la première bombe, puis la seconde"
+ },
+ "body": [
+  "#Un projet signé le matin",
+  "@13 mars 1881.",
+  "Alexandre II règne depuis 1855. Il a libéré les serfs en 1861, réformé la justice, créé des assemblées locales, puis s'est durci quand on a contesté son autorité, notamment en Pologne. Il a déjà survécu à plusieurs attentats, dont un coup de feu tiré sur lui en 1866 et un autre près de son palais en 1879. Un groupe terroriste, la Volonté du peuple, s'est alors formé avec un seul but : le tuer.",
+  "Ce matin-là, avant d'aller assister à la relève de la garde, le tsar signe la convocation de commissions de notables, chargées de conseiller le gouvernement. C'est le projet du comte Loris-Melikov, son ministre de l'Intérieur, qui veut relancer les réformes. Certains y voient le premier pas vers une constitution. Il ne sera jamais appliqué. Alexandre II a soixante-deux ans. Loris-Melikov, qui avait reçu des pouvoirs étendus un an plus tôt pour combattre les terroristes sans renoncer aux réformes, voulait ainsi associer une partie de la société au gouvernement.",
+  "#Averti",
+  "@10 – 13 mars 1881.",
+  "Le tsar a été averti d'un complot après l'arrestation d'Andreï Jeliabov, le 10 mars. Il se rend pourtant à la cérémonie, par goût de la garde. Sophie Perovskaïa, fille d'un ancien gouverneur militaire de Saint-Pétersbourg, dirige désormais l'attentat. Le dimanche 13 mars du calendrier grégorien est le 1er mars du calendrier russe.",
+  "#Le quai du canal Catherine",
+  "@13 mars 1881, après la relève de la garde.",
+  "Le tsar rejoint en voiture fermée, escorté de cosaques, le manège Mikhaïlovski pour sa revue du dimanche. Au retour, il longe le quai du canal Catherine, où des lanceurs de bombes, placés par Perovskaïa, l'attendent ; elle donne le signal avec un mouchoir. Une première bombe explose sous les chevaux. Elle tue un cosaque, blesse le cocher et des passants, et endommage la voiture blindée, un cadeau de Napoléon III. Son lanceur est arrêté presque aussitôt.",
+  "!Le tsar est indemne.",
+  "Il descend, se retrouve au milieu des morts et des blessés, et veut parler lui-même à l'agresseur. Le chef de la police lui propose de l'emmener au palais dans son traîneau.",
+  "Une seconde bombe est lancée à ses pieds par un homme posté près de la grille. Une vingtaine de personnes sont blessées. L'auteur du geste, qui est un jeune Polonais du nom d'Ignacy Hryniewiecki, meurt lui aussi de sa bombe. Un troisième lanceur gardait la sienne dans une serviette.",
+  "#Le palais d'Hiver",
+  "@13 mars 1881, l'après-midi.",
+  "Le tsar est emmené en traîneau au palais d'Hiver, dans le bureau où, vingt ans plus tôt, il avait signé l'émancipation des serfs. Sa famille accourt. Catherine Dolgorouki, qu'il avait épousée en secret l'été précédent, quelques semaines après la mort de l'impératrice, est à son chevet. Il reçoit les derniers sacrements. Le drapeau du palais est abaissé à 15 h 30.",
+  "#Après",
+  "@1881 – 1883.",
+  "Son fils Alexandre III, trente-six ans, rejette le projet de Loris-Melikov et consacre son règne à défendre l'autocratie. Loris-Melikov démissionne en mai. Les conspirateurs sont arrêtés et pendus, la Volonté du peuple est brisée. Sur le quai du canal, on commence en 1883 la construction de l'église du Sauveur-sur-le-Sang-Versé.",
+  "Il aura régné vingt-six ans sur la Russie. On ne saura jamais ce que ces commissions auraient changé, ni si le tsar serait allé au bout. Il reste cette image : un homme qui, le matin, signe peut-être l'amorce d'un autre pays, et qui, l'après-midi, se tient sur un quai au milieu des blessés, alors qu'on lui proposait de repartir. Le projet resta dans un tiroir ; la porte qu'il venait d'entrouvrir se referma avec son fils."
+ ],
+ "notes": "Retiré : détails sur le remariage secret, citation attribuée sur la « constitution », mot du médecin Botkine, nom d'Emelianov et de Rissakov, heure exacte de la mort. À vérifier : nombre de lanceurs (trois ou quatre selon les récits), nationalité et rôle d'Hryniewiecki."
+}

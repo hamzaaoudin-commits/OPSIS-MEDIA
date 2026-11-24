@@ -1,0 +1,35 @@
+{
+ "id": "vc14",
+ "fmt": 3,
+ "name": "Rorke's Drift : une muraille de biscuits",
+ "sub": "Rorke's Drift, 22 et 23 janvier 1879 : une centaine d'hommes, dont des malades, tiennent une nuit contre 3 000 à 4 000 guerriers zoulous, derrière des caisses de biscuits",
+ "blurb": {
+  "b": "Janvier 1879. Quelques heures après le désastre d'Isandlwana, environ 150 soldats britanniques, dont des malades, se retranchent derrière des sacs de maïs et des caisses de biscuits. Toute la nuit, des milliers de guerriers zoulous les attaquent. L'hôpital brûle, mais le poste tient jusqu'à l'aube.",
+  "h": "Derrière des caisses de biscuits, quelques soldats tiennent une nuit contre des milliers de Zoulous."
+ },
+ "body": [
+  "#Les cavaliers de la mauvaise nouvelle",
+  "@Rorke's Drift, 22 janvier 1879, après-midi.",
+  "Rorke's Drift est une ancienne mission suédoise, devenue dépôt britannique et hôpital de campagne sur la rivière Buffalo, à une dizaine de kilomètres du champ de bataille d'Isandlwana. L'après-midi du 22 janvier, des cavaliers arrivent au galop. Ils apportent une nouvelle que personne ne veut croire : l'armée britannique vient d'être anéantie par les Zoulous, et une impi, un corps de guerriers, marche sur le poste.",
+  "Deux officiers, les lieutenants John Chard, du génie, et Gonville Bromhead, du 24e régiment, doivent décider. Se replier vers Helpmekaar, c'est risquer d'être rattrapés en rase campagne, avec des malades qu'on ne peut pas transporter. Ils choisissent de tenir. La garnison compte une centaine d'hommes selon l'estimation la plus basse, environ cent cinquante avec les malades de l'hôpital, dont une quarantaine ne peuvent pas se battre.",
+  "#Une muraille de caisses",
+  "@L'après-midi.",
+  "Il reste quelques heures. Les hommes bâtissent à la hâte un périmètre avec ce qu'ils ont sous la main : des sacs de maïs, des caisses de biscuits, des caisses de viande en conserve. Chard fait élever à l'intérieur un second mur de caisses, pour pouvoir abandonner l'hôpital, s'il le faut, et se replier plus près.",
+  "En face, 3 000 à 4 000 guerriers du corps Undi, une réserve qui n'avait pas combattu à Isandlwana, sous le prince Dabulamanzi kaMpande. Le roi Cetshwayo leur avait demandé de ne se battre que pour défendre le Zoulouland. Ils ont pourtant franchi la rivière et marché sur le poste.",
+  "#L'hôpital en feu",
+  "@La nuit du 22 au 23 janvier.",
+  "Le combat commence vers 16 h 30 et dure toute la nuit. Les Zoulous, armés pour la plupart de lances, en tête, et de vieux fusils à canon lisse, attaquent à répétition, en vagues. Certains tirent de loin, à 400 mètres, sans effet. Les défenseurs, eux, ont les fusils Martini-Henry, dont la baïonnette donne plus de portée que la lance.",
+  "Vers 18 heures, l'hôpital prend feu. Les défenseurs et les malades percent les murs à la hâte, pour rejoindre la barricade principale. Les malades sont sortis un à un, et tous ne pourront pas être sauvés. Chard resserre alors ses hommes autour d'un dernier réduit de caisses de biscuits.",
+  "!La nuit sera longue.",
+  "Les attaques faiblissent après minuit, cessent vers 2 heures, avec des tirs sporadiques jusqu'à 4 heures. À l'aube, les Britanniques voient les Zoulous qui s'éloignent. Un soldat dira qu'ils semblaient avoir très peur de la baïonnette.",
+  "#Pourquoi les Zoulous ont perdu",
+  "@Une analyse.",
+  "Les historiens ont débattu de cette défaite zouloue. Dabulamanzi, dit l'un d'eux, a commis l'erreur de combattre comme son adversaire le faisait le mieux : en attaquant une position fortifiée, face à des tireurs abrités. Les Zoulous étaient surtout formés à l'affrontement à la lance, en terrain ouvert.",
+  "Mais cette analyse ne dit pas tout : plusieurs fois, un seul instant a pu tout changer. Une percée zouloue était plausible à plusieurs moments de la nuit, et le résultat a dépendu aussi de la chance.",
+  "#Le bilan",
+  "@23 janvier 1879.",
+  "Dix-sept Britanniques sont morts, et presque tous les survivants sont blessés. On compte 351 Zoulous tués sur le terrain, et environ 500 blessés ; les estimations, selon les auteurs, varient beaucoup. Onze Victoria Cross seront décernées aux défenseurs de Rorke's Drift, un record pour un seul combat.",
+  "On ne saura pas combien de Zoulous ont réellement été tués, ni pourquoi l'attaque s'est arrêtée à cette heure précise. Le poste n'a pas été pris : à l'aube, il reste debout, et ses défenseurs, épuisés, comptent leurs morts parmi les caisses et les cendres de l'hôpital."
+ ],
+ "notes": "À vérifier : onze Victoria Cross, franchissement de la rivière par les Zoulous, sort des malades de l'hôpital, heure du début (16 h 20 ou 16 h 30), carré de caisses de biscuits (réduit final). Retiré : citation du soldat Hitch (passée en indirect), estimations de 3 000 à 4 500, fusils pris à Isandlwana."
+}

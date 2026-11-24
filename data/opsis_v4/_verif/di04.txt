@@ -1,0 +1,31 @@
+VERIFIÉ — Décollage à 00 h 42 (Airways : 00 h 41), Kuala Lumpur, 8 mars 2014 — Wikipedia (https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_370) ; Airways (https://airwaysmag.com/new-post/mh370-10th-anniversary)
+VERIFIÉ — Boeing 777-200ER ; 227 passagers dont 153 Chinois ; 12 membres d'équipage — Wikipedia ; Airways (227 + 12)
+RETIRÉ — « avion récent, aucune alerte technique » ; « Pékin en un peu plus de six heures » ; « il n'envoie aucun appel de détresse » (non confirmés)
+VERIFIÉ — 01 h 19 : le commandant accuse réception du transfert vers Hô Chi Minh-Ville ; « Good night. Malaysian three seven zero. » — Wikipedia
+RETIRÉ — « polie et calme » (adjectifs non sourcés)
+VERIFIÉ — 01 h 21 : radar secondaire perd l'avion, transpondeur coupé ; pas de contact vietnamien — Wikipedia
+RETIRÉ — « pendant plusieurs heures personne ne déclenche de véritables recherches » ; « à Pékin, des familles attendent » ; « aucun appareil n'est envoyé à sa rencontre » (non confirmés dans cette passe)
+VERIFIÉ — Virage à droite puis à gauche, cap sud-ouest, traversée de la péninsule ; 02 h 22, 29 500 pieds, ~247 nmi au nord-ouest de Penang — Wikipedia ; Airways (environ 200 nm de Penang selon cette source)
+CORRIGÉ — Rapport 2018 : « probablement pilotage manuel » → déroutement manuel par le pilote ou un tiers, cause non déterminée — Wikipedia ; Airways (« insufficient information to determine the causes ») (publié le 30 juillet 2018)
+VERIFIÉ — 02 h 25 : enregistrement du terminal satellite, probablement après coupure d'alimentation — Wikipedia satellite communications (https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_370_satellite_communications)
+VERIFIÉ — Requêtes horaires, aucune position dans les messages ; quelques dizaines d'octets — Wikipedia satellite communications ; The Register (https://www.theregister.com/2014/06/27/new_mh370_search_zone_picked_using_just_seven_satellite_handshakes/)
+VERIFIÉ — Sept échanges (handshakes) après la perte du radar ; BTO donne la distance, BFO (Doppler) le mouvement — ATSB (https://www.atsb.gov.au/node/2252) ; Register
+VERIFIÉ — Appels de 02 h 39 et 07 h 13 reçus par le terminal sans réponse — Wikipedia satellite communications ; Wikipedia MH370
+VERIFIÉ — Dernier échange à 08 h 19 : demande de reconnexion après possible épuisement du carburant ; ATSB confiant que le septième échange marque la zone d'épuisement — ATSB ; Wikipedia satellite communications
+CORRIGÉ — « Les enquêteurs retiennent l'hypothèse d'un vol stable droit vers le sud » retiré (non confirmé) ; remplacé par la comparaison des décalages de fréquence avec des trajectoires candidates — ATSB
+CORRIGÉ — 24 mars 2014 : annonce de la fin du vol dans le sud de l'océan Indien ; « aucun survivant » et « un lieu où les pleurer » retirés — Wikipedia
+CORRIGÉ — Passeports volés : deux passagers iraniens enquêtés puis écartés ; « cherchaient à gagner l'Europe » retiré — Wikipedia
+VERIFIÉ — Recherche de surface du 18 mars au 28 avril 2014, 52 jours, plus de 4,5 millions de km² — Wikipedia Search (https://en.wikipedia.org/wiki/Search_for_Malaysia_Airlines_Flight_370) ; Wikipedia MH370 (4,6 millions)
+RETIRÉ — « mer de Chine méridionale et détroit de Malacca d'abord » ; « aucun débris certain » (non confirmés) ; remplacé par premières pièces en 2015
+VERIFIÉ — ATSB : 120 000 km² à partir du septième arc ; recherche suspendue le 17 janvier 2017 — Wikipedia Search ; Wikipedia MH370
+RETIRÉ — « relief que personne n'avait jamais vu : montagnes, failles, plaines de vase » (non confirmé)
+VERIFIÉ — Flaperon trouvé le 29 juillet 2015 à la Réunion, examiné à Toulouse, rattaché au MH370 en septembre 2015 par numéros de série — Wikipedia MH370 ; Wikipedia Search (confirmation par les procureurs français le 3 septembre)
+RETIRÉ — « habitants qui nettoient le littoral », « couvert de coquillages » (non confirmés)
+VERIFIÉ — Seize mois à la dérive (mars 2014-juillet 2015) — calcul
+CORRIGÉ — Autres débris : Mozambique (panneau « NO STEP », carénage de volet), Afrique du Sud (capot moteur), Madagascar, Rodrigues, île de Pemba — Wikipedia MH370 ; Airways ; « certains attribués avec certitude » retiré
+VERIFIÉ — Modélisations de dérive CSIRO : zone la plus probable vers 35° S — Wikipedia Search
+VERIFIÉ — Ocean Infinity, janvier 2018, « no find, no fee », plus de 112 000 km² jusqu'à fin mai/juin 2018, sans résultat — Wikipedia MH370 ; Wikipedia Search ; Airways
+VERIFIÉ — Rapport final publié le 30 juillet 2018, cause non déterminée — Wikipedia MH370 ; Airways
+CORRIGÉ — « une nouvelle campagne reprend en 2025 » : reprise le 30 décembre 2025, terminée le 23 janvier 2026 sans résultat — Wikipedia Search
+RETIRÉ — « le rôle du commandant a fait l'objet de théories » ; « n'exclut pas l'intervention d'un tiers » remplacé par « par le pilote ou par un tiers » (formulation du rapport citée par Wikipedia) ; « Plusieurs milliers de mètres de profondeur » (non confirmé)
+INCERTAIN — Épave, dernières heures, cause de la disparition ; heure exacte du décollage (00 h 41 ou 00 h 42)

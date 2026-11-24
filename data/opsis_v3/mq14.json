@@ -1,0 +1,52 @@
+{
+ "id": "mq14",
+ "fmt": 3,
+ "name": "Lacoste : le crocodile et son polo",
+ "sub": "Boston, 1923 — Un pari sur une valise en croco aurait donné son surnom à René Lacoste, avant la chemise de 1933 et l'associé André Gillier.",
+ "body": [
+  "#PROLOGUE — Boston, 1923",
+  "René Lacoste a 19 ans. Il joue la Coupe Davis avec l'équipe de France.",
+  "Dans une vitrine de la ville, il voit une valise en peau de crocodile.",
+  "Son capitaine, Allan Muhr, lui fait une promesse. S'il gagne le premier match contre l'Australien James Anderson, la valise sera pour lui.",
+  "Lacoste perd en trois sets.",
+  "Un journaliste de Boston, George Carens, écrit qu'il « mâchait lentement ses adversaires ».",
+  "C'est le récit que René Lacoste et la marque ont répété. La presse américaine l'appelle alors le Crocodile.",
+  "!Un pari perdu aurait donné son nom à la marque.",
+  "#01 — QUELLE ANNÉE, QUEL ANIMAL ?",
+  "Les dates ne concordent pas. Le site de la marque situe le pari en 1923, tandis qu'un article sur l'entreprise donne 1925, un site d'histoire du tennis 1926 et une page de la marque 1927.",
+  "La plus ancienne mention du surnom dans la presse américaine date de septembre 1925. Le Boston Globe écrit que Lacoste « est maintenant appelé Crocodile ».",
+  "Le pari lui-même vient d'une nécrologie du fils de René, Bernard, publiée par le New York Times en 2006, qui le qualifie de supposé.",
+  "Dans plusieurs récits en anglais, le surnom est « alligator ».",
+  "#02 — UN DESSIN SUR UN BLAZER",
+  "Un ami, Robert George, dessine un crocodile. René Lacoste le fait broder sur le blazer qu'il porte avant ses matchs, en 1926 ou 1927 selon les récits.",
+  "Il fait partie des « Quatre Mousquetaires » du tennis français, avec Henri Cochet, Jean Borotra et Jacques Brugnon. La France gagne la Coupe Davis en 1927 et en 1928.",
+  "Il remporte sept titres du Grand Chelem en simple, dans un sport où l'on joue alors en chemise blanche à manches longues.",
+  "En 1929, à 25 ans, il arrête la compétition à cause de problèmes respiratoires récurrents.",
+  "#03 — LA CHEMISE DE 1933",
+  "D'après la marque, il joue en 1928 une finale du championnat de France dans une chemise dont il a coupé les manches. Les organisateurs la jugent non réglementaire.",
+  "Il fait ensuite fabriquer des chemises en jersey blanc pour sa tournée américaine.",
+  "En 1933, il fonde avec André Gillier la société La Chemise Lacoste. Gillier est le propriétaire et le président du plus grand fabricant français de bonneterie de l'époque. Il aide Lacoste à mettre au point la maille.",
+  "Le modèle a des manches courtes, un col côtelé, une patte de boutonnage et du petit piqué de coton. Le crocodile est brodé sur la poitrine, malgré les objections d'amis.",
+  "Son code est L.12.12 : L pour Lacoste, 1 pour le petit piqué, 2 pour les manches courtes, 12 pour le douzième prototype. Une note lit plutôt ce 12 comme le nombre d'essais avant le prototype final.",
+  "#04 — QUI A INVENTÉ LE POLO ?",
+  "La marque se présente comme l'inventeur. D'autres parlent plutôt d'un style popularisé. Un article en anglais date la chemise de 1929.",
+  "Les dates, 1928, 1929, 1933, ne désignent pas forcément la même chose : une chemise aux manches coupées, un modèle de tennis, une production commerciale.",
+  "La plus ancienne photo connue d'un polo Lacoste date de 1934.",
+  "#ÉPILOGUE — Une scène qu'on ne prouvera pas",
+  "On ne sait pas si le pari s'est passé comme on le raconte, ni quelle année, ni qui a nommé Lacoste en premier.",
+  "Le dessin, la société de 1933 et le code L.12.12 sont mieux documentés. Mais beaucoup de ces détails viennent de la marque elle-même.",
+  "Reste un crocodile brodé sur d'innombrables poitrines, et une première scène que l'on ne prouvera sans doute jamais."
+ ],
+ "learned": [
+  "La légende de la valise en crocodile et le surnom de René Lacoste.",
+  "Pourquoi les dates et même l'animal changent d'un récit à l'autre.",
+  "Le rôle d'André Gillier dans la création de La Chemise Lacoste en 1933.",
+  "Le sens du code L.12.12 du premier modèle."
+ ],
+ "retain": "Le dessin du crocodile, la société de 1933 et le code L.12.12 sont mieux documentés que le pari de Boston. Mais beaucoup de ces détails viennent de la marque elle-même.",
+ "note": "Le pari vient d'une nécrologie de Bernard Lacoste publiée par le New York Times en 2006, qui le qualifie de supposé. Les dates varient entre 1923 et 1927, et le surnom devient « alligator » dans plusieurs récits en anglais. Beaucoup de détails sur la chemise viennent de la marque.",
+ "blurb": {
+  "b": "Boston, 1923. Un jeune joueur de tennis français voit une valise en peau de crocodile dans une vitrine. Son capitaine lui fait une promesse. Il perd, la presse lui donne un surnom, et une marque naîtra. Mais l'année, l'animal et même le pari changent d'un récit à l'autre. Que sait-on vraiment ?",
+  "h": "Un pari de tennis, un crocodile brodé et des dates qui ne concordent pas."
+ }
+}

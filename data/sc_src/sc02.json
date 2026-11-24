@@ -1,0 +1,37 @@
+{
+ "id": "sc02",
+ "fmt": 3,
+ "name": "John Snow et la pompe de Broad Street",
+ "sub": "Londres, 1854 — Pendant une épidémie de choléra, un médecin dessine une carte des morts, et la ville découvre que l'air n'y est pour rien.",
+ "dates": "1854",
+ "country": "Royaume-Uni",
+ "job": "John Snow, médecin",
+ "yr": 1854,
+ "src": [
+  "« 1854 Broad Street cholera outbreak », Wikipédia (anglais). en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+  "J. Snow, On the Mode of Communication of Cholera, Londres, 1849 et 1855."
+ ],
+ "body": [
+  "Fin août 1854, dans le quartier de Soho, au cœur de Londres, des gens tombent malades par dizaines. Ils vomissent, ils ont d'horribles diarrhées, ils se vident de leur eau en quelques heures et meurent parfois le jour même. C'est le choléra. En trois jours, 127 personnes qui habitent à proximité de Broad Street sont mortes. En dix jours, plus de 500. Au total, l'épidémie en tuera 616.",
+  "À cette époque, presque tous les médecins pensent que la maladie vient de l'air. On l'appelle le miasme : une vapeur invisible qui s'élève de la boue, des déchets, des matières en décomposition, et qui rend malade ceux qui la respirent. C'est ce que croit, par exemple, William Farr, un statisticien de l'état civil qui compte les morts de Londres. Il croit que la maladie s'attrape près de la Tamise, dans les terrains bas et humides.",
+  "Un médecin de Soho n'y croit pas. Il s'appelle John Snow, il a quarante et un ans. Il habite à quelques rues de là.",
+  "#Une idée plus ancienne",
+  "Snow pense depuis des années que le choléra n'entre pas par les poumons, mais par la bouche : il se transmettrait par l'eau que l'on boit. Il l'a écrit dès 1849 dans un petit livre, On the Mode of Communication of Cholera, que presque personne n'a pris au sérieux. En 1854, il tient enfin l'occasion de le prouver, car l'épidémie éclate à sa porte.",
+  "Il fait ce que les autres ne font pas : il va frapper aux portes. Aidé par un jeune pasteur du quartier, Henry Whitehead, qui connaît les habitants et qui, d'abord, croyait lui aussi aux miasmes, il demande aux familles où les morts s'approvisionnaient en eau. Il note les adresses, il les reporte sur un plan du quartier, avec un trait pour chaque décès. Les traits s'agglutinent autour d'un point, au croisement de Broad Street et de Cambridge Street : une pompe publique.",
+  "Les exceptions comptent autant que la règle. Les ouvriers de la brasserie voisine ne sont pas touchés : ils reçoivent chaque jour leur ration de bière, et ne boivent donc pas l'eau du puits. Quelques personnes mortes loin de la pompe, elles, venaient s'y servir parce qu'elles trouvaient son eau meilleure.",
+  "#Le jeudi soir",
+  "Snow n'a pas de preuve chimique. Il examine l'eau au microscope et fait des analyses, qui ne montrent rien de décisif. Mais il a sa carte et ses témoignages. Le jeudi 7 septembre, il se rend devant le conseil des tuteurs de la paroisse de Saint-James, les responsables locaux, pour leur demander de retirer la poignée de la pompe, afin que personne ne puisse plus y pomper. Ils l'écoutent. Le lendemain, la poignée est enlevée.",
+  "Dans les jours qui suivent, l'épidémie recule. L'histoire est restée comme celle d'un geste qui arrête le choléra. La réalité est moins nette : le nombre de cas baissait peut-être déjà, car beaucoup d'habitants avaient fui le quartier, et Snow lui-même reconnaissait qu'il était impossible de savoir si la fermeture de la pompe avait fait la différence.",
+  "#Le bébé et la fosse",
+  "Whitehead poursuit l'enquête après la fin de l'épidémie. Il découvre que la pompe était creusée à moins d'un mètre d'une vieille fosse d'aisance, qui fuyait. Il retrouve aussi le premier cas du quartier : un nourrisson atteint de choléra, dont les langes avaient été lavés et l'eau jetée dans cette fosse. Le puits avait été contaminé par ses matières.",
+  "Avant cela, Snow avait mené une autre étude, plus vaste, qui comparait les clients de deux compagnies d'eau londoniennes. L'une puisait dans la Tamise en aval de la ville, l'autre en amont, dans une eau plus propre. Les foyers desservis par la première mouraient du choléra environ quatorze fois plus que ceux desservis par la seconde, alors qu'ils habitaient parfois côte à côte. L'étude concernait quelque 300 000 personnes.",
+  "#Un homme qui n'a pas eu gain de cause",
+  "Le Bureau de la santé conclut malgré tout que l'épidémie venait des miasmes. Farr finira par se ranger à l'idée de Snow, mais bien plus tard. Le microbe responsable du choléra avait pourtant déjà été observé en 1854, par un médecin italien, sans que son rôle soit compris ; la théorie des germes ne s'imposera qu'après les travaux de Louis Pasteur dans les années 1860.",
+  "Aujourd'hui, la carte de Snow est considérée comme l'un des actes fondateurs de l'épidémiologie, l'étude de la façon dont les maladies se répandent dans une population. Sur le trottoir de Broad Street, devant un pub qui porte son nom, une plaque marque l'emplacement de la pompe."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : début de l'épidémie le 31 août 1854, 127 morts en trois jours, plus de 500 le 10 septembre, bilan de 616 morts, carte des cas, comparaison des deux compagnies d'eau (taux environ 14 fois plus élevé, étude sur environ 300 000 personnes), réunion du jeudi 7 septembre avec le conseil de la paroisse, retrait de la poignée le lendemain, doute de Snow sur l'effet de ce retrait, rôle du pasteur Henry Whitehead, puits à moins d'un mètre d'une fosse d'aisance qui fuyait, nourrisson malade dont les langes ont été lavés dans la fosse, brasserie épargnée (ration de bière ; la source note aussi que le brassage fait bouillir le moût), Bureau de la santé concluant aux miasmes, livre de 1849, observation du vibrion en 1854. À vérifier avant publication : l'âge de Snow (41 ans, né en 1813), le fait que des habitants morts loin de la pompe s'y servaient parce que son eau leur plaisait (récit classique de Snow), la fuite de beaucoup d'habitants avant la fermeture de la pompe, l'attribution de l'observation du vibrion en 1854 à un médecin italien (Filippo Pacini), le rôle de Farr (statisticien, né en 1807) et le fait qu'il se rallie plus tard à Snow, la plaque devant le pub John Snow.",
+ "blurb": {
+  "b": "Fin août 1854, le choléra emporte des dizaines de personnes en quelques jours dans le quartier de Soho, à Londres. Tout le monde accuse l'air pourri. Un médecin, lui, frappe aux portes, note les adresses des morts, et les reporte sur un plan. Les points se resserrent autour d'un seul endroit de la rue.",
+  "h": "Une carte de points noirs, et une poignée de pompe retirée."
+ }
+}

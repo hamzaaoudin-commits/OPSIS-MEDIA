@@ -1,0 +1,27 @@
+{
+ "id": "im06",
+ "fmt": 3,
+ "name": "George Psalmanazar, le faux Formosan",
+ "sub": "Londres, 1704 : un Français se fait passer pour le premier Formosan d'Europe, et invente une langue, un calendrier, des rites et un pays entier pour convaincre l'Angleterre.",
+ "blurb": {
+  "b": "En 1704, Londres s'enthousiasme pour un jeune homme venu de Formose, l'actuelle Taïwan. Il parle une langue inconnue, mange de la viande crue et décrit une île de cannibales et de sacrifices. Rien n'est vrai : il est français, et son vrai nom ne sera jamais connu. Pendant des années, savants et évêques le croient.",
+  "h": "Un Français invente un pays entier et l'Angleterre le croit"
+ },
+ "body": [
+  "#Un nom qui n'est pas le sien",
+  "@Londres, 1703.",
+  "George Psalmanazar est un pseudonyme, et personne n'a retrouvé son vrai nom. C'est un Français, probablement né dans le sud de la France, entre 1679 et 1684, qui a volontairement brouillé sa jeunesse. Il prétend avoir été formé dans une école franciscaine puis dans une académie jésuite, mais on ne dispose pour cela que de son propre récit.",
+  "Il arrive en Angleterre en 1703, emmené par un aumônier écossais, Innes, qui prétend l'avoir converti et lui donne son nom, celui du roi assyrien Salmanazar V. Il n'arrive pas Formosan du premier coup. Il s'est d'abord présenté comme un pèlerin irlandais en route pour Rome, avec un faux passeport et une cape volée, démasqué par des gens qui connaissent l'Irlande. Il se fait ensuite passer pour un converti japonais, puis pour un « païen » japonais aux coutumes inventées, enfin pour un Formosan.",
+  "#Quatre personnages",
+  "Chaque fois, il corrige son personnage. Formose, l'actuelle Taïwan, est un lieu que presque personne en Europe ne connaît : personne ne peut le contredire. Il invente des coutumes, dont celle de manger de la viande crue, épicée à la cardamome, et de dormir assis sur une chaise, ainsi qu'un calendrier et une langue.",
+  "!L'aumônier lui fait écrire un passage, lui demande de le récrire, puis compare les deux copies.",
+  "Psalmanazar doit reconnaître qu'il est un imposteur. Innes choisit alors d'amplifier l'imposture plutôt que de la dénoncer. Il ne s'agit plus de cacher un mensonge, mais d'en faire un atout. Ce choix tient aussi, dit-on, à ce que l'exotisme « payait mieux ».",
+  "#Le livre de 1704",
+  "An Historical and Geographical Description of Formosa paraît en 1704. Le livre est entièrement fabriqué à partir d'autres récits de voyage, en particulier sur les Aztèques et les Incas. Il décrit une île organisée, dotée d'une capitale nommée Xternetsa, et prête aux habitants des coutumes spectaculaires : manger des serpents, le droit pour un mari de manger sa femme infidèle, le sacrifice annuel du cœur de 18 000 jeunes garçons. Pour expliquer son teint pâle, l'auteur dit que les classes supérieures de Formosa vivent sous terre.",
+  "Le livre connaît deux éditions anglaises, suivies d'éditions françaises et allemandes. Des étudiants s'inscrivent pour apprendre le « formosan ». Des grammairiens allemands reproduisent des échantillons de sa « langue formosane » jusqu'au XIXe siècle. Il parle devant une société savante, où Edmond Halley le met en difficulté, et il devient un favori de l'évêque de Londres, Henry Compton. Des jésuites ayant été missionnaires à Formose le contredisent, mais on ne les croit guère : l'époque se méfie des jésuites.",
+  "#Après le mensonge",
+  "Les soupçons grandissent quand d'autres sources sur Formose circulent. En 1706, il avoue d'abord à des amis, puis publiquement, alors que la mode formosane retombe. Le public qui l'avait acclamé se détourne, et l'homme qui avait inventé un pays doit maintenant inventer sa propre vie. Il travaille comme secrétaire de régiment, puis des ecclésiastiques financent des études de théologie. Il écrit pour Grub Street, apprend l'hébreu et contribue à des ouvrages de référence où il critique son propre canular. Il se lie d'amitié avec le jeune Samuel Johnson.",
+  "Il meurt le 3 mai 1763 à Ironmonger Row, à Londres. Son testament de 1762 déclare son Histoire de Formose une imposture. Ses Mémoires paraissent après sa mort, sans son nom véritable. On ne saura jamais qui il était : ce qui reste de lui, c'est un pays qui n'a jamais existé, et que l'Angleterre a cru pendant des années."
+ ],
+ "notes": "Retiré : détails de la jeunesse en Allemagne et aux Pays-Bas, discussion sur Oxford, divergences sur le prénom d'Innes (Alexander ou William), l'année des Mémoires (1764 ou 1765), l'âge de sa mort. À vérifier : formulation « selon l'un des ouvrages consultés » (attribution résiduelle à reformuler), cardamome, sacrifice de 18 000 garçons, ordre des personnages."
+}

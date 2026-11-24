@@ -1,0 +1,35 @@
+{
+ "id": "ex26",
+ "fmt": 3,
+ "name": "Ballard, le Titanic et la couverture",
+ "sub": "Atlantique Nord, 1985 : pour que la Marine américaine finance sa recherche du Titanic, Robert Ballard doit d'abord aller voir deux sous-marins perdus",
+ "blurb": {
+  "b": "En 1985, Robert Ballard cherche l'épave du Titanic, mais la Marine américaine ne veut pas la financer seule. Elle lui impose d'abord d'inspecter deux sous-marins nucléaires engloutis. Son idée : chercher les débris, pas le navire. Récit de la nuit où le fond de l'Atlantique a livré une chaudière, puis une coque.",
+  "h": "La Marine paie les sous-marins, Ballard veut le Titanic"
+ },
+ "body": [
+  "#Une condition",
+  "@1982 – 1985.",
+  "En 1982, Robert Ballard va voir la Marine américaine. Il lui parle d'Argo, un robot d'exploration sous-marine qui descend filmer le fond, et d'un projet qui lui tient à cœur : retrouver le Titanic. La Marine ne veut pas payer pour cela seul. Elle pose une condition. Avant de chercher le paquebot, Ballard doit inspecter les épaves de deux sous-marins nucléaires, l'USS Thresher et l'USS Scorpion, et évaluer l'effet de leurs réacteurs sur la radioactivité du milieu.",
+  "Une version de l'histoire en fait une mission secrète, dans laquelle le Titanic n'aurait été qu'une couverture. Une autre décrit simplement une recherche rendue possible une fois les objectifs de la Marine atteints. Ce qui est établi, c'est l'ordre des choses : les sous-marins d'abord, le paquebot ensuite.",
+  "#Ceux qui sont passés à côté",
+  "@1980 – 1985.",
+  "Beaucoup ont échoué avant lui. Des recherches au sonar, dont les expéditions Grimm de 1980 et de 1981, n'ont rien donné. En 1985, une équipe française de l'IFREMER, dirigée par Jean-Louis Michel à bord du Suroît, balaie la zone juste avant les Américains. Elle passe à quelques centaines de mètres de l'épave sans la voir.",
+  "Le sonar a un défaut : il ne distingue pas de façon fiable un objet fabriqué par l'homme d'un relief naturel. L'équipe américaine de Ballard, de la Woods Hole Oceanographic Institution, prend le relais à bord du Knorr, avec une autre idée.",
+  "#Chercher une traînée",
+  "@Août 1985.",
+  "Les deux sous-marins ont implosé en coulant et laissé derrière eux de longues traînées de débris. Un paquebot qui s'est brisé en deux en a certainement laissé aussi. Plutôt que de chercher un navire, Argo balaiera donc le fond en quête de morceaux. Les équipes se relaient en quarts devant les écrans vidéo, des heures durant, pour regarder défiler le sol.",
+  "Le Knorr arrive sur la zone le 22 août 1985. Le temps est compté : d'autres scientifiques attendent de pouvoir utiliser le bateau.",
+  "#Le matin du 1er septembre",
+  "@Atlantique Nord, 1er septembre 1985.",
+  "!Aux premières heures du 1er septembre, les observateurs remarquent des anomalies sur le fond : d'abord des cratères, puis des débris, puis une chaudière, enfin la coque.",
+  "L'épave repose à environ 3 800 mètres de profondeur. La proue et la poupe sont séparées d'environ 600 mètres, et les chaudières gisent à environ 180 mètres à l'est de la poupe. Le paquebot réputé insubmersible repose là, brisé en deux, sous près de quatre kilomètres d'eau, à l'endroit où aucun sonar n'avait su le distinguer.",
+  "#Un cimetière",
+  "@Juillet 1986.",
+  "L'équipe revient en juillet 1986 à bord de l'Atlantis II, avec le sous-marin Alvin et un petit robot, Jason Junior. La première plongée, longue de plus de deux heures, connaît des problèmes techniques. Les suivantes réussissent mieux et produisent un relevé photographique détaillé de l'épave.",
+  "Ballard considère le site comme un cimetière. Il refuse d'en retirer le moindre objet.",
+  "Les récits divergent sur plusieurs points : l'heure exacte de la découverte, passé minuit ou dans la soirée du 1er septembre, le jour où l'épave principale a été identifiée, et le rôle précis de chaque équipe, française et américaine, dans la campagne du Suroît. On ne sait pas non plus ce que l'évaluation des réacteurs a donné.",
+  "Reste le paradoxe de départ. Pour obtenir le droit de chercher le plus célèbre des naufrages, il a fallu commencer par aller voir deux épaves militaires, et c'est en cherchant ce que l'accident d'un sous-marin disperse sur le fond qu'on a fini par retrouver ce qu'un paquebot avait laissé. Au bout de la traînée, des observateurs penchés sur des écrans vidéo, et une chaudière qui apparaît."
+ ],
+ "notes": "Retiré : aucune citation. Incertitudes laissées ouvertes : heure exacte de la découverte, rôle de l'équipe du Suroît, résultats de l'inspection des réacteurs. À vérifier : 'quarts devant les écrans vidéo, des heures durant', 'le moins de temps' pour d'autres scientifiques."
+}

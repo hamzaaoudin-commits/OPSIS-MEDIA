@@ -1,0 +1,34 @@
+{
+ "id": "sc06",
+ "fmt": 3,
+ "name": "Mendel et ses petits pois oubliés",
+ "sub": "Brno, 1865 — Un moine cultive des milliers de pois pendant sept ans et découvre les lois de l'hérédité. Personne ne le lit avant sa mort.",
+ "dates": "1856–1900",
+ "country": "Empire d'Autriche",
+ "job": "Gregor Mendel, moine et botaniste",
+ "yr": 1865,
+ "src": [
+  "« Gregor Mendel », Wikipédia (anglais). en.wikipedia.org/wiki/Gregor_Mendel",
+  "G. Mendel, « Versuche über Pflanzen-Hybriden », Verhandlungen des naturforschenden Vereines in Brünn, 1866."
+ ],
+ "body": [
+  "Pourquoi les enfants ressemblent-ils à leurs parents ? Depuis des siècles, on pense que l'hérédité est un mélange : un enfant d'un père grand et d'une mère petite serait de taille moyenne, comme deux peintures qu'on mêle. Dans un monastère de Moravie, aujourd'hui en Tchéquie, un moine augustin décide de vérifier. Il n'a ni laboratoire ni diplôme de biologiste. Il a un jardin et de la patience.",
+  "Gregor Mendel vit à l'abbaye Saint-Thomas de Brno. Entre 1856 et 1863, il cultive environ 28 000 plants, pour la plupart des pois. Il choisit cette plante parce qu'elle pousse vite, que ses caractères sont faciles à distinguer, et qu'on peut décider quels plants vont se féconder entre eux.",
+  "#Un petit pois ne se mélange pas",
+  "Il croise, par exemple, des pois à tige haute avec des pois à tige courte. Si l'hérédité était un mélange, les enfants seraient de taille moyenne. Or, ce n'est pas ce qui se produit. Tous les descendants de la première génération sont hauts. Le caractère « court » semble avoir disparu.",
+  "Mais il n'a pas disparu. Quand Mendel croise entre eux ces plants hauts, la génération suivante comprend des plants hauts et des plants courts, dans une proportion remarquablement stable : environ trois hauts pour un court. Le caractère caché est donc revenu, intact. Il refait l'expérience en suivant sept caractères au total, comme la couleur ou la forme des graines. Pour chacun, le même rapport de trois pour un réapparaît. Il compte, trie et note chaque plant, génération après génération, pendant des années.",
+  "Il en déduit une idée simple et révolutionnaire. Chaque caractère est transmis par des « facteurs » distincts, que le plant reçoit de ses deux parents. Certains dominent, d'autres restent cachés tout en se transmettant. Rien ne se mélange : les facteurs se séparent et se recombinent.",
+  "#Un texte que personne ne lit",
+  "En février et en mars 1865, il présente ses résultats devant la Société d'histoire naturelle de Brno. Son article paraît en 1866. Il est à peine remarqué. Durant les trente-cinq ans qui suivent, il ne sera cité qu'environ trois fois.",
+  "Mendel écrit à un botaniste réputé, Carl Nägeli, qui ne mesure pas l'ampleur de la découverte. Nägeli lui suggère d'étudier l'épervière, une autre plante. Les résultats sont alors déroutants et Mendel ne parvient pas à les expliquer. Il devient plus tard abbé de son monastère, et ses obligations l'éloignent peu à peu des expériences.",
+  "Il meurt à Brno le 6 janvier 1884, à soixante et un ans. On rapporte qu'il aurait dit à un ami : « Mon temps viendra ».",
+  "#Seize ans après",
+  "Au printemps 1900, trois botanistes travaillent chacun de leur côté sur l'hérédité des plantes. Parmi eux, le Néerlandais Hugo de Vries et l'Allemand Carl Correns trouvent les mêmes rapports que Mendel. En fouillant la littérature scientifique, ils découvrent son article de 1866, resté dans les bibliothèques. Tous deux reconnaissent qu'il les a devancés.",
+  "La génétique est née, sous le nom de « mendélisme ». Une querelle reste ouverte : en 1936, le statisticien Ronald Fisher a fait remarquer que les chiffres de Mendel sont étonnamment proches de ce que prévoit la théorie, au point d'être presque trop beaux. Des chercheurs ont depuis contesté son argument, et le débat n'est pas clos."
+ ],
+ "note": "Établi (Wikipédia anglais, vérifié) : moine augustin à l'abbaye Saint-Thomas de Brno ; expériences de 1856 à 1863 sur environ 28 000 plants, surtout des pois ; proportion de trois dominants pour un récessif ; exposés en février et mars 1865 à la Société d'histoire naturelle de Brno ; article de 1866 peu remarqué, cité environ trois fois en trente-cinq ans ; correspondance avec Nägeli, qui n'apprécie pas ses découvertes, et résultats sur l'épervière que Mendel ne parvient pas à expliquer ; redécouverte en 1900 par de Vries et Correns ; mort le 6 janvier 1884 à 61 ans, et phrase rapportée « Mon temps viendra » ; analyse de Fisher en 1936 et contestations de Hartl et Fairbanks. À vérifier avant publication : le choix de plantes hautes et courtes comme exemple (le principe est classique), la phrase sur les croyances d'hérédité par mélange, le fait qu'il devienne abbé (Wikipédia : « later abbot »), l'attribution de l'idée de Nägeli (épervière), le fait que le texte de 1866 ait été trouvé par de Vries et Correns en fouillant la littérature, l'expression « au printemps 1900 ».",
+ "blurb": {
+  "b": "Dans un monastère de Moravie, un moine cultive des plants de pois pendant sept ans et croise ceux qui ont des caractères opposés. Les proportions qu'il observe, toujours les mêmes, démontrent que l'hérédité ne mélange rien. Il publie, présente ses résultats, puis personne ne s'y intéresse. Il faudra l'attendre seize ans après sa mort.",
+  "h": "Sept ans de petits pois pour un article que personne ne lit."
+ }
+}

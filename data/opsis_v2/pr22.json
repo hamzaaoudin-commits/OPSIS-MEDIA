@@ -1,0 +1,33 @@
+{
+ "id": "pr22",
+ "fmt": 3,
+ "name": "L'affaire Dominici : une nuit d'août",
+ "sub": "Lurs, Basses-Alpes, 1952-1960 : trois Britanniques en vacances sont tués au bord d'une route, et le vieux patriarche d'une ferme voisine est condamné à mort sur des aveux qu'il ne cessera de contester",
+ "blurb": {
+  "b": "Août 1952, en Haute-Provence : un scientifique britannique, sa femme et leur fille de dix ans sont abattus près de leur voiture, à quelques mètres d'une ferme. L'enquête désigne le vieux Gaston Dominici, qui avoue, se rétracte et est condamné à mort. Soixante-dix ans plus tard, personne ne s'accorde encore sur la vérité.",
+  "h": "Trois Britanniques tués, un vieux paysan condamné : l'enquête reste contestée."
+ },
+ "body": [
+  "#Trois campeurs, un matin",
+  "@Lurs, 5 août 1952.",
+  "Au petit matin du 5 août 1952, des corps sont découverts au bord de la route nationale 96, près du hameau de Lurs, dans les Basses-Alpes. À côté, une voiture britannique, une Hillman, a été garée à l'écart. Elle appartenait à Sir Jack Drummond, un biochimiste réputé, qui voyageait en vacances avec sa femme Anne et leur fille Elizabeth, âgée de dix ans.",
+  "Drummond n'est pas un touriste ordinaire. Pendant la guerre, ce spécialiste de la nutrition a conseillé le gouvernement britannique sur le rationnement, et il a été anobli. Le monde scientifique apprend sa mort avec stupeur, et la presse britannique envoie ses reporters en Provence.",
+  "Les trois ont été tués par balles. La fillette a aussi reçu des coups sur la tête, et son corps est retrouvé à quelque distance de la voiture. La ferme la plus proche, la Grand'Terre, est celle d'une famille de paysans, les Dominici, dont le patriarche, Gaston, a soixante-quinze ans. C'est son fils Gustave qui signale la découverte.",
+  "#Une enquête confuse",
+  "@1952 – 1953.",
+  "Le premier jour, la scène du crime est piétinée par la foule et par les curieux. Des policiers, des journalistes, des voisins s'approchent des corps, touchent à la voiture, déplacent des objets. Quand le commissaire Edmond Sébeille arrive de Marseille, l'essentiel des indices est déjà perdu. Il retrouve pourtant l'arme, une carabine américaine de guerre.",
+  "Peu à peu, l'enquête se resserre autour de la ferme. Les Dominici se contredisent, se disputent, se couvrent. Gustave est condamné pour ne pas avoir porté assistance, puis son frère Clovis finit par désigner leur père. Gaston, de son côté, accuse l'un de ses fils.",
+  "!En novembre 1953, après plus d'une journée d'interrogatoire, Gaston Dominici avoue.",
+  "On l'emmène sur les lieux pour une reconstitution, devant des journalistes et un public. Plus tard, il se rétracte. Il ne cessera de dire qu'il n'a pas tué, et que ses aveux lui ont été arrachés.",
+  "#Le procès de Digne",
+  "@Digne, novembre 1954.",
+  "Le procès s'ouvre à Digne le 17 novembre 1954. Dominici, âgé de soixante-dix-sept ans, est une figure de la presse nationale. Les journaux l'appellent le patriarche, ou le monstre de Lurs. Les audiences durent environ douze jours. Il se tait, se met en colère, ou répond par des formules en provençal.",
+  "L'accusation s'appuie sur les aveux, sur l'attitude de la famille et sur des témoignages de proches. La défense proteste contre le caractère trop rapide de l'enquête. À l'issue des débats, le jury le déclare coupable, sans circonstances atténuantes. Il est condamné à mort.",
+  "#Gracié, mais pas innocenté",
+  "@1957 – 1965.",
+  "Le doute n'a pas disparu. Une contre-enquête, confiée à des policiers parisiens, ne change rien aux éléments connus. En 1957, le président René Coty commue la peine en travaux forcés. En 1960, Dominici est libéré, sur décision du général de Gaulle, pour des raisons de santé et d'âge. Il n'a jamais été rejugé. Il meurt en 1965.",
+  "Depuis, l'affaire n'a jamais cessé d'être relue. Des journalistes, des écrivains, des juristes ont mis en cause la fiabilité des aveux, l'absence d'expertises solides, la précipitation de l'enquête. D'autres défendent le verdict. On ne sait pas qui a tiré, ni pourquoi.",
+  "Ce qu'on sait, c'est qu'un homme de soixante-dix-sept ans a été condamné à mort sur des paroles recueillies après un long interrogatoire, et que l'opinion l'avait déjà jugé avant les jurés. Il a quitté la prison sans que le doute soit levé."
+ ],
+ "notes": "Retirés : âges exacts d'Anne Drummond, couleur de la voiture, nombre de coups de feu, nom du commissaire Chenevier, dates exactes de libération (13 ou 14 juillet 1960). À vérifier : décision de grâce du général de Gaulle en 1960, nature exacte de la mesure, durée précise de l'interrogatoire de novembre 1953, présentation de la scène de crime piétinée."
+}
