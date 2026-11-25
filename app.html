@@ -1101,19 +1101,13 @@ var SN="Jusqu'à la chute",BIDS=[],BP=[];
   });
   add('pt53',{p:'pt53',kind:'Épilogue',min:mins(K.words),series:SN,terr:'Destins',title:K.name,sub:K.sub,meta:[K.dates,K.country,K.job].join(' · '),
     klabel:'ÉPILOGUE · L\'HISTOIRE QUI S\'ÉCRIT ENCORE',body:K.body,quote:K.sub,no:'JC53',c:'#EDE6DA',syn:syn(K.body),book:1,src:BSRC['Kanye West'],next:null});
-  /* « Une vie en épisodes » : un portrait qui a des épisodes (DATA.LIVES) devient une série ; chaque épisode est une histoire cachée des listes */
+  /* « Une vie » : le portrait est lu d'une traite ; les anciens épisodes (DATA.LIVES) deviennent des chapitres intertitrés d'un seul texte */
   var LV=DATA.LIVES||{};
-  all.forEach(function(p){var L=LV[p.id];if(!L||!L.eps||!L.eps.length)return;var hub=STORIES[p.id],N=L.eps.length,ids=[],cp=B.chapters[chOf(p.n)];
-    L.eps.forEach(function(e,i){var id=p.id+'e'+(i+1);ids.push(id);
-      var eb=e.body.slice();
-      if(i===0&&p.n===43&&cp.note)eb=['#Avant de lire ce chapitre'].concat(cp.note,['*'],eb);
-      if(i===N-1&&cp.items[cp.items.length-1]===p.id&&cp.closing)eb=eb.concat(['*','#Fin du chapitre'],cp.closing.slice(cp.closing[0]==='*'?1:0));
-      e={t:e.t,sub:e.sub,body:eb};
-      add(id,{p:id,kind:'Épisode',min:mins(p.words),series:SN,terr:'Destins',title:e.t,sub:e.sub||'',meta:p.name+' · épisode '+(i+1)+' sur '+N,
-        klabel:'ÉPISODE '+(i+1)+' SUR '+N+' · '+p.name.toUpperCase(),body:e.body,quote:e.sub||p.sub,no:hub.no+'E'+(i+1),c:hub.c,syn:e.sub||syn(e.body),book:1,src:i===N-1?hub.src:'',ch:hub.ch,
-        ep:{of:p.id,n:i+1,N:N},next:null});});
-    ids.forEach(function(id,i){STORIES[id].next=ids[i+1]||hub.next;});
-    hub.eps=ids;hub.kind='Une vie';hub.life=1;hub.klabel='UNE VIE EN '+N+' ÉPISODES · CHAPITRE '+hub.ch;});
+  all.forEach(function(p){var L=LV[p.id];if(!L||!L.eps||!L.eps.length)return;var hub=STORIES[p.id],cp=B.chapters[chOf(p.n)],eb=[];
+    if(p.n===43&&cp.note)eb=['#Avant de lire ce chapitre'].concat(cp.note,['*']);
+    L.eps.forEach(function(e){eb.push('#'+e.t);e.body.forEach(function(t){eb.push(t);});});
+    if(cp.items[cp.items.length-1]===p.id&&cp.closing)eb=eb.concat(['*','#Fin du chapitre'],cp.closing.slice(cp.closing[0]==='*'?1:0));
+    hub.body=eb;hub.kind='Une vie';hub.life=1;});
   function entry(id){var h=STORIES[id];return h&&h.eps?h.eps[0]:id;}
   BIDS.forEach(function(id){var s=STORIES[id];if(s.next&&!s.ep)s.next=entry(s.next);});
   BIDS.forEach(function(id){var s=STORIES[id];if(s.ep&&s.next&&STORIES[s.next]&&STORIES[s.next].eps)s.next=STORIES[s.next].eps[0];});
@@ -2788,7 +2782,7 @@ function pickData(key){
   if(key.indexOf('soon:')===0){var x=SERIES[+key.slice(5)];return {p:x.p,c:x.c||'#F04A50',no:SNO[x.p]||String(60+(+key.slice(5))).padStart(3,'0'),front:x.n,title:x.n,
     meta:'Série · '+T[x.t]+' · bientôt',syn:x.syn,tag:x.tag,fmt:'Série',
     acts:'<button class="btn glass" data-go="close">Plus tard</button>'};}
-  var s=STORIES[key],sv=!!S.saved[key],fmt=s.fmt||(s.kind.indexOf('Série')===0?'Série':s.kind);
+  var s=STORIES[key],sv=!!S.saved[key],fmt=s.fmt||fmtOf(s);
   return {p:s.p,c:s.c,no:s.no,front:s.title,title:s.title,meta:s.kind+' · '+s.min+' min · '+(s.series||s.terr)+(subName(subKey(key))&&subName(subKey(key))!==s.series?' · '+subName(subKey(key)):''),syn:(BLURB[s.p]&&BLURB[s.p].b)||s.syn,tag:(BLURB[s.p]&&BLURB[s.p].h)||s.quote,fmt:fmt,
     acts:'<button class="btn red" data-go="read" data-id="'+key+'">'+IC.play+'Lire</button>'+(S.read[key]?'<button class="btn glass" data-go="rate" data-id="'+key+'">'+rateLabel(key)+'</button><button class="btn glass" data-share="'+key+'" style="grid-column:1/-1">'+IC.share+'Partager l\'histoire</button>':inRec(key)?'<button class="btn glass" data-unrec="'+key+'">Retirer de la liste</button>':'<button class="btn glass" data-go="save" data-id="'+key+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button>')};
 }
@@ -2810,6 +2804,7 @@ function fitBack(){
 }
 /* histoire du jour quand la base n'en fournit pas : une permutation du catalogue, tirée au sort une fois par cycle (graine = numéro du cycle).
    Même histoire pour tout le monde le même jour, aucune répétition avant d'avoir fait tout le catalogue. */
+function fmtOf(s){return s.kind==='Flash'?'Flash':(s.life||s.book)?'Long':s.kind.indexOf('Série')===0?'Long':s.kind;}
 function dailyPool(){return Object.keys(STORIES).filter(function(k){var x=STORIES[k];return x&&x.title&&x.syn&&x.kind&&x.kind.indexOf('Série')!==0&&x.kind!=='Une vie'&&!x.ep&&!x.daily&&!GONE[k];}).sort();}
 function dailyPerm(pool,cyc){
   var a=pool.slice(),seed=(cyc*2654435761+12345)>>>0;function rnd(){seed=(seed+0x6D2B79F5)>>>0;var t=seed;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;}
@@ -2846,7 +2841,7 @@ function homeDeck(){
   var st=STORIES[id],nx=d.q[d.i+1],pd=pickData(id),h=hashN(id),cg=coverGrad(pd.p),lt=false;
   var sty='';if(cg){sty=' style="--g0:'+cg[0]+';--g1:'+cg[1]+'"';lt=(lumOf(cg[0])+lumOf(cg[1]))/2>.2;}
   var bars=Array.from({length:34},function(_,k){return '<i style="width:'+(1+(hashN(id+k)%3))+'px"></i>';}).join('');
-  var fm=['Flash','Récit','Série'].map(function(f){return '<span class="'+(f===pd.fmt?'on':'')+'">'+f+'</span>';}).join('');
+  var fm=['Flash','Récit','Long'].map(function(f){return '<span class="'+(f===pd.fmt?'on':'')+'">'+f+'</span>';}).join('');
   return '<div class="swk"><div class="swk-stack"><div class="swk-back">'+(nx&&STORIES[nx]?poster(STORIES[nx].p):'')+'</div>'+
     '<div class="swk-card" id="swkCard" data-id="'+id+'"'+sty+'><div class="fxs-in"><div class="fxs-face fxs-front">'+poster(pd.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+pd.no+'</span><span class="ft">'+esc(nb(pd.front))+'</span></div>'+
     '<div class="fxs-face fxs-back'+(lt?' lt':'')+'"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+pd.no+'</b></div><h3>'+esc(pd.title)+'</h3><p class="fxs-meta">'+esc(pd.meta)+'</p><p class="fxs-syn">'+esc(pd.syn)+'</p>'+
@@ -2937,7 +2932,7 @@ function pick(key,src){
   var d=pickData(key),h=hashN(key);
   if(SYN2[key]){d.syn=SYN2[key];var sx=SERIES.filter(function(z){return z.go===key;})[0];if(sx){var nn=(d.meta.match(/(\d+) (histoires|portraits)/)||[])[0];d.meta='Série · '+T[sx.t]+(nn?' · '+nn:'');}}
   var bars=Array.from({length:34},function(_,k){return '<i style="width:'+(1+(hashN(key+k)%3))+'px"></i>';}).join('');
-  var fm=d.nofmt?[]:['Flash','Récit','Série'].map(function(f){return '<span class="'+(f===d.fmt?'on':'')+'">'+f+'</span>';}).join('');
+  var fm=d.nofmt?[]:['Flash','Récit','Long'].map(function(f){return '<span class="'+(f===d.fmt?'on':'')+'">'+f+'</span>';}).join('');
   fxs.style.setProperty('--c',d.c||'#D2232C');
   var cg=coverGrad(d.p),lt=false,wm=false;
   if(cg){fxs.style.setProperty('--g0',cg[0]);fxs.style.setProperty('--g1',cg[1]);fxs.style.setProperty('--hl',haloOf(cg[0],cg[1]));lt=(lumOf(cg[0])+lumOf(cg[1]))/2>.2;wm=warmOf(cg[0])||warmOf(cg[1]);}else{fxs.style.removeProperty('--g0');fxs.style.removeProperty('--g1');fxs.style.removeProperty('--hl');}
@@ -3474,11 +3469,11 @@ function homeList(){
   if(!ids.length)return '<div class="shelf">'+head+'<p style="margin:0 20px;color:var(--dim);font-size:13.5px;line-height:1.5">Glissez une carte vers le haut dans Thèmes, ou touchez le signet d\'une histoire, pour la retrouver ici.</p></div>';
   return '<div class="shelf">'+head+'<div class="rail">'+ids.map(function(id){return epTile(id);}).join('')+'</div></div>';}
 function homeSeries(){
-  var hubs=Object.keys(STORIES).filter(function(i){var x=STORIES[i];return x.eps&&x.eps.length&&vis(i);});
+  var hubs=Object.keys(STORIES).filter(function(i){var x=STORIES[i];return x.life&&vis(i);});
   if(!hubs.length)return '';
-  var un=hubs.filter(function(i){return !STORIES[i].eps.every(function(e){return S.read[e];});}),pool=un.length?un:hubs;
-  return '<div class="shelf"><h2><span>Séries OPSIS <small>Une vie en plusieurs épisodes</small></span></h2><div class="rail">'+pool.map(function(id){var st=STORIES[id],n=st.eps.length,r=st.eps.filter(function(e){return S.read[e];}).length;
-    return tile({p:st.p,t:st.title,s:'Une vie · '+st.min+' min',nosub:false,attr:'data-pick="'+id+'"',badge:r?'<span class="read">'+r+'/'+n+'</span>':'<span class="num">'+n+' ÉPISODES</span>'});}).join('')+'</div></div>';}
+  var un=hubs.filter(function(i){return !S.read[i];}),pool=(un.length?un:hubs).slice(0,24);
+  return '<div class="shelf"><h2><span>Longs récits <small>À lire d\'une traite</small></span></h2><div class="rail">'+pool.map(function(id){var st=STORIES[id];
+    return tile({p:st.p,t:st.title,s:'Une vie · '+st.min+' min',nosub:false,attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">LU</span>':'<span class="num">'+st.min+' MIN</span>'});}).join('')+'</div></div>';}
 function homeListRefresh(){var r=document.getElementById('hlist');if(r)r.innerHTML=homeList();}
 function homeNew(){
   var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
