@@ -3471,7 +3471,7 @@ function pileColors(c){
   return out;
 }
 function colCard(c,attr,extra){
-  var n=c.ids.length,d=pathDone(c),sub=(d&&d<n?d+(d>1?' lues':' lue'):d===n&&n?'Terminée':'');/* pas de nombre d'histoires : le contenu grossit */
+  var n=c.ids.length,d=pathDone(c),sub='';/* pas de nombre d'histoires : le contenu grossit */
   var ck=c.k||c.from,m=/^data-col="([^"]+)"$/.exec(attr||'');var pc=pileColors(c);
   return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:(m?'data-colpick="'+m[1]+'"':attr)+' style="--p2:'+pc[0]+';--p1:'+pc[1]+'"',badge:'<span class="num">COLLECTION</span>',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile'});
 }
