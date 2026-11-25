@@ -276,13 +276,6 @@
   .tile .poster{width:122px;height:183px;border-radius:8px;contain:layout paint style;background:#16161a}
   .tile .ttl{overflow-wrap:normal;word-break:normal;hyphens:none;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
   .tile .num{position:absolute;top:7px;right:8px;z-index:2;font-family:var(--disp);font-weight:800;font-size:13px;opacity:.85}
-  /* carte collection : pile de cartes derrière la couverture + étiquette COLLECTION, pour ne pas la confondre avec une histoire */
-  .tile.ctile{position:relative}
-  .tile.ctile::before,.tile.ctile::after{content:"";position:absolute;top:0;height:14px;border-radius:7px 7px 0 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 -1px 6px rgba(0,0,0,.35)}
-  .tile.ctile::before{left:15px;right:15px;background:var(--p1,#4a4a53)}
-  .tile.ctile::after{left:8px;right:8px;top:4px;background:var(--p2,#6b6b76)}
-  .tile.ctile .poster{position:relative;z-index:1;margin-top:9px;height:174px;box-shadow:0 -2px 8px rgba(0,0,0,.45)}
-  .cgrid .tile.ctile .poster,.grid .tile.ctile .poster{height:auto}
   .tile .read{position:absolute;top:7px;left:7px;z-index:2;font-size:11px;font-weight:700;background:var(--red);color:#fff;border-radius:4px;padding:2px 6px}
   .lens{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
   .lens .seg button{white-space:nowrap}
@@ -3472,8 +3465,8 @@ function pileColors(c){
 }
 function colCard(c,attr,extra){
   var n=c.ids.length,d=pathDone(c),sub='';/* pas de nombre d'histoires : le contenu grossit */
-  var ck=c.k||c.from,m=/^data-col="([^"]+)"$/.exec(attr||'');var pc=pileColors(c);
-  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:(m?'data-colpick="'+m[1]+'"':attr)+' style="--p2:'+pc[0]+';--p1:'+pc[1]+'"',badge:'<span class="num">COLLECTION</span>',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile'});
+  var ck=c.k||c.from,m=/^data-col="([^"]+)"$/.exec(attr||'');
+  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile'});
 }
 function colToggle(k){var cc=COLLS.filter(function(x){return x.k===k;})[0];if(!cc)return null;
   if(colSaved(k)){S.x.cols=myCols().filter(function(x){return x.from!==k;});toast('Retirée de ma liste');return false;}
