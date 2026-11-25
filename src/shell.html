@@ -997,8 +997,6 @@ var THEMES=[
  {k:'science',n:'Science',d:'La science telle qu\'elle se fait : avec des doutes, de l\'ego et des erreurs, jusqu\'au jour où quelqu\'un a raison.'},
  {k:'marques',n:'Marques',d:'Ce qui se passe derrière un nom que tout le monde connaît, et pourquoi certaines marques deviennent des légendes quand d\'autres s\'effondrent.'},
  {k:'personnes',n:'Personnes',d:'Des gens dont on raconte la vie parce qu\'elle dépasse ce qu\'on oserait inventer, et qu\'elle dit quelque chose de nous.'},
- {k:'jour',n:'Le jour qui a tout changé',d:'Ce qu\'on fait quand tout bascule, et ce que ce jour a laissé derrière lui.'},
- {k:'date',n:'Une date, une histoire',d:'Des jours précis qui ont marqué le monde, racontés de l\'intérieur : ce qui s\'est joué, qui était là, et pourquoi on s\'en souvient encore.'},
  {k:'arts',n:'Arts',d:'Ce que l\'art a coûté à ceux qui l\'ont fait, et ce que certains ont fait passer pour de l\'art.'},
  {k:'sport',n:'Sport',d:'Le sport comme théâtre : ce qui se passe dans la tête d\'un athlète quand tout se décide en quelques secondes.'},
  {k:'aventure',n:'Aventure',d:'Ce que l\'endurance a de plus extrême.'},
@@ -1747,7 +1745,7 @@ var DJIDS=[];
    ÉTAT (en mémoire)
    ===================================================================== */
 var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{},saved:{},follow:{},minutes:0,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',mg:'n',al:'l',cw:'m',auto:false,warm:0,hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
-OPSIS.hydrate(S);S.x=S.x||{};if(S.x.prefs&&S.x.thv!==2){var np=[];S.x.prefs.forEach(function(i){var j=i>4?i-1:i===4?3:i;if(np.indexOf(j)<0)np.push(j);});S.x.prefs=np;}S.x.thv=2;if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={lists:function(){var f=function(a){return a.map(function(x){return {k:x.k,n:x.n,d:x.d||'',ids:x.ids.slice()};});};return {paths:f(PATHS),cols:f(COLLS)};},amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
+OPSIS.hydrate(S);S.x=S.x||{};if(S.x.prefs&&(S.x.thv||0)<3){var np=[],v0=S.x.thv||0;S.x.prefs.forEach(function(i){var j=i;if(v0<2)j=j>4?j-1:j===4?3:j;/* « Une vie » fusionné dans Personnes */if(j===4||j===5)return;/* « Le jour qui a tout changé » et « Une date, une histoire » deviennent des collections */j=j>5?j-2:j;if(np.indexOf(j)<0)np.push(j);});S.x.prefs=np;}S.x.thv=3;if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={lists:function(){var f=function(a){return a.map(function(x){return {k:x.k,n:x.n,d:x.d||'',ids:x.ids.slice()};});};return {paths:f(PATHS),cols:f(COLLS)};},amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
 var main=document.getElementById('main'),layer=document.getElementById('layer'),lv=document.getElementById('layerview');
 /* ---------- le logo : un diaphragme à six lamelles, une pupille rouge, et c'est le O d'OPSIS ----------
    open : 0 = fermé, 1 = ouvert (au-delà, les lamelles s'effacent) ; pupil : taille de la pupille ;
@@ -1832,15 +1830,15 @@ function epIndex(){
   var byT=groups.map(function(g,ti){
     return mix(Object.keys(g).sort().map(function(n){return g[n];}));
   });
-  var di=ki.date;
-  byT[di]=(DATA.DT||[]).map(function(x){return x[0];}).filter(function(id){return STORIES[id]&&!GONE[id];});
+  var di=-1;
   /* enchaînement « à lire ensuite » au sein du thème (hors portraits, qui gardent leur ordre) */
   byT.forEach(function(l,ti){if(ti===di)return;l.forEach(function(id,j){var st=STORIES[id];if(st.book)return;st.series=THEMES[ti].n;st.next=l[j+1]||null;});});
   var all=[];var seen={};byT.forEach(function(l,ti){if(ti===di)return;l.forEach(function(id){if(!seen[id]){seen[id]=1;all.push(id);}});});
-  EPX={byT:byT,all:mix(byT.filter(function(_,ti){return ti!==di;})),ki:ki,vies:Object.keys(STORIES).filter(function(id){var st=STORIES[id];return st.book&&!GONE[id]&&!st.daily&&!st.ep;}).sort()};
+  EPX={byT:byT,all:mix(byT),ki:ki,vies:Object.keys(STORIES).filter(function(id){var st=STORIES[id];return st.book&&!GONE[id]&&!st.daily&&!st.ep;}).sort()};
   /* une histoire peut appartenir à plusieurs thèmes : appartenances secondaires, ajoutées après le chaînage « à lire ensuite » */
   function addX(k,ids){var ti=ki[k],l=byT[ti],h={};l.forEach(function(i){h[i]=1;});ids.forEach(function(i){if(STORIES[i]&&!GONE[i]&&!h[i]){h[i]=1;l.push(i);}});}
   function pre(rx){return Object.keys(STORIES).filter(function(i){var x=STORIES[i];return rx.test(i)&&!x.daily&&!x.ep&&!x.book;});}
+  addX('personnes',['ld01','ld02','ld03','ld04','ld05','ld06','ld07','ld08','ld09','ld10','ld11','ld12','ld13','ld14','ld15','ld16','ld17','ld18','ld19','ld20','ld21','ld23','ld24','ld25','ld29']);
   addX('sport',['pt06','pt07','pt08','pt09','pt10','pt29','pt30','pt31','pt32','pt43','pt44','pt46','pt47','pt51']);
   addX('arts',['pt01','pt02','pt03','pt04','pt05','pt11','pt12','pt13','pt14','pt15','pt17','pt18','pt20','pt22','pt23','pt25','pt26','pt27','pt45','pt48','pt49','pt50','pt52','pt53']);
   addX('marques',['pt19','pt33','pt34','pt35','pt36','pt37','pt38','pt39','pt40','pt41','pt42']);
@@ -1881,10 +1879,9 @@ var ECO=null;
 /* l'accueil se range par collections éditoriales (Une vie et Une date, une histoire en tête) */
 function ecols(){
   if(ECO)return ECO;
-  var X=epIndex(),di=X.ki.date,out=[];
+  var X=epIndex(),out=[];
   out.push({k:'vie',n:'Une vie',d:'Chaque portrait pose la même question : qu\'aurait-on fait à leur place ?',ids:X.vies});
-  out.push({k:'date',n:THEMES[di].n,d:THEMES[di].d,ids:X.byT[di],dt:1});
-  COLLS.forEach(function(c){var v=c.ids.filter(vis);if(v.length>=8)out.push({k:c.k,n:c.n,d:c.d,ids:v});});
+  COLLS.forEach(function(c){var v=c.ids.filter(vis);if(v.length>=8)out.push({k:c.k,n:c.n,d:c.d,ids:v,dt:c.dt});});
   return ECO=out;
 }
 function homeTheme(){
@@ -2888,7 +2885,7 @@ function colDraw(n,src){
   var acts=fxs.querySelector('.fxs-acts'),hint=fxs.querySelector('.fxs-hint');
   if(hint)hint.textContent='Dans « '+c.n+' » · touchez la couverture pour la retourner';
   var X=epIndex(),inC=COLLS.some(function(x){return x.k===c.k;});
-  var all=inC?'<button class="btn glass" data-go="colopen" data-key="'+c.k+'" style="grid-column:1/-1;flex:1 1 100%;width:100%">Voir toute la collection</button>':'<button class="btn glass" data-go="themeopen" data-key="'+(c.k==='vie'?X.ki.personnes:X.ki.date)+'"'+(c.k==='vie'?' data-sub="t0"':'')+' style="grid-column:1/-1;flex:1 1 100%;width:100%">Voir toute la collection</button>';
+  var all=inC?'<button class="btn glass" data-go="colopen" data-key="'+c.k+'" style="grid-column:1/-1;flex:1 1 100%;width:100%">Voir toute la collection</button>':'<button class="btn glass" data-go="themeopen" data-key="'+X.ki.personnes+'" data-sub="t0"'+' style="grid-column:1/-1;flex:1 1 100%;width:100%">Voir toute la collection</button>';
   if(acts)acts.insertAdjacentHTML('beforeend','<button class="btn glass" data-coldraw="'+n+'" style="grid-column:1/-1;flex:1 1 100%;width:100%">Une autre</button>'+all);
 }
 function randomPick(){
@@ -3195,6 +3192,8 @@ function subName(k){if(!k)return '';if(k.indexOf('ch')===0){var c=BOOK.chapters[
 function vis(id){return !!STORIES[id]&&!GONE[id]&&!STORIES[id].ep;}
 function hr(ids){return S.hideRead?ids.filter(function(id){return !S.read[id];}):ids;}
 var COLLS=[
+ {k:'date',n:'Une date, une histoire',d:'Des jours précis qui ont marqué le monde, racontés de l\'intérieur : ce qui s\'est joué, qui était là, et pourquoi on s\'en souvient encore.',ids:['vc11', 'ld19', 'fi27', 'ld01', 'ld27', 'ex21', 'vc29', 'ld21', 'pr03', 'vc12', 'ld02', 'ce06', 'fi28', 'vc14', 'pa01', 'ex03', 'ld29', 'ex29', 'ld17', 'ex24', 'ex25', 'ev29', 'ev10', 'ld28', 'pr17', 'ld04', 'vc05', 'ex07', 'vc17', 'ex15', 'es25', 'cs01', 'ld05', 'pn25', 'cs21', 'vc04', 'ld24', 'du29', 'pn28', 'es29', 'ld30', 'du30', 'du21', 'sv30', 'di04', 'du23'],dt:1},
+ {k:'jour',n:'Le jour qui a tout changé',d:'Ce qu\'on fait quand tout bascule, et ce que ce jour a laissé derrière lui.',ids:['ld01', 'ld02', 'ld03', 'ld04', 'ld05', 'ld21', 'ld23', 'ld29', 'ld06', 'ld07', 'ld08', 'ld09', 'ld10', 'ld24', 'ld25', 'ld11', 'ld12', 'ld13', 'ld14', 'ld15', 'ld16', 'ld17', 'ld18', 'ld19', 'ld20', 'ld27', 'ld28', 'ld30', 'pn01', 'pn26', 'pn28', 'pn25', 'sv29', 'sv30']},
  {k:'menteurs',n:'Ils ont menti à tout le monde',d:'Faux princes, faux médecins, fausses héritières : ceux qui ont vécu sous un mensonge, et ceux qui les ont crus.',ids:['ar01','ar10','ar11','ar13','ar15','im01','im10','im16','im28','fa01','fa08','pt33','pt41']},
  {k:'nature',n:'Seuls contre la nature',d:'La banquise, l\'océan, la jungle, le désert. Des gens qui n\'auraient pas dû revenir.',ids:['sv01','sv02','sv03','sv06','sv09','sv14','sv15','sv18','sv19','sv28','ex23']},
  {k:'froide',n:'La guerre froide',d:'Taupes, transfuges, tunnels et fausses alertes : quarante ans d\'une guerre qui ne disait pas son nom.',ids:['es30','es13','es14','es15','es11','es16','es17','es18','ev16','ev18','ev19','ev20','pn28','fi27','ex21','du22']},
@@ -3416,7 +3415,7 @@ function pileColors(c){
   return out;
 }
 /* couleur du mot COLLECTION : couleur de la couverture là où l'onglet la montre (bande du haut), rendue vive (pas pâle) pour rester lisible sur le fond noir */
-var CTAG={"vie":"#D95E30","date":"#3970D0","menteurs":"#DA2F40","nature":"#58B6E4","froide":"#395AD0","ww2":"#D7A853","elles":"#E05C8D","hollywood":"#D8AC57","argent":"#39D075","espace":"#586ED8","casses":"#E89A48","faussaires":"#D8AC57","revenus":"#714EEE","chanceux":"#ECC750","mer":"#5BBAE0","glace":"#51AEEB","montagne":"#DAA662","disparus":"#62DA93","tribunaux":"#DAB862","pouvoir":"#D84149","savants":"#62DACE","artistes":"#D93054","marques1":"#E89A48","marques2":"#D9444B","erreurs":"#E0AA3E","sport":"#E89A48","ombres":"#7B5BD9","musique":"#F44871","espions":"#395FD0","evasions":"#62DA89","decouvertes":"#62B2DA","explorateurs":"#E89A48","xix":"#D7A852","avant1700":"#DAA762","entredeux":"#ECC750","seventies":"#F69946","science":"#62DACE","identites":"#7862DA","droits":"#D84148","filmsimp":"#D24637","jeux":"#4979E8","mechants":"#D43540","heros":"#6659E0","raisontot":"#E0AA3E","eclairs":"#394FD0","exploits":"#E87648","sporthist":"#D84148","paris":"#ECC750"};
+var CTAG={"jour":"#E8963A","vie":"#D95E30","date":"#3970D0","menteurs":"#DA2F40","nature":"#58B6E4","froide":"#395AD0","ww2":"#D7A853","elles":"#E05C8D","hollywood":"#D8AC57","argent":"#39D075","espace":"#586ED8","casses":"#E89A48","faussaires":"#D8AC57","revenus":"#714EEE","chanceux":"#ECC750","mer":"#5BBAE0","glace":"#51AEEB","montagne":"#DAA662","disparus":"#62DA93","tribunaux":"#DAB862","pouvoir":"#D84149","savants":"#62DACE","artistes":"#D93054","marques1":"#E89A48","marques2":"#D9444B","erreurs":"#E0AA3E","sport":"#E89A48","ombres":"#7B5BD9","musique":"#F44871","espions":"#395FD0","evasions":"#62DA89","decouvertes":"#62B2DA","explorateurs":"#E89A48","xix":"#D7A852","avant1700":"#DAA762","entredeux":"#ECC750","seventies":"#F69946","science":"#62DACE","identites":"#7862DA","droits":"#D84148","filmsimp":"#D24637","jeux":"#4979E8","mechants":"#D43540","heros":"#6659E0","raisontot":"#E0AA3E","eclairs":"#394FD0","exploits":"#E87648","sporthist":"#D84148","paris":"#ECC750"};
 function tagTint(key){return CTAG[key]||'#E8B04A';}
 function colCard(c,attr,extra){
   var n=c.ids.length,d=pathDone(c),sub='';/* pas de nombre d'histoires : le contenu grossit */
@@ -3518,16 +3517,17 @@ lv.addEventListener('keydown',function(e){if(e.target&&e.target.id==='q'&&e.key=
 function listLayer(title,desc,ids,opt){
   opt=opt||{};
   var body=opt.html?opt.html:opt.steps?'<div class="steps">'+ids.map(function(id,i){var st=STORIES[id],r=!!S.read[id];return '<button class="step'+(r?' done':'')+'" data-pick="'+id+'"><span class="sn">'+(r?IC.check:(i+1))+'</span><span class="poster" data-art="'+st.p+'"></span><span class="sx"><b>'+esc(st.title)+'</b><small>'+esc(st.series||'')+' · '+st.min+' min</small></span></button>';}).join('')+'</div>'
-    :(ids.length?'<div class="grid" style="padding-top:8px">'+ids.map(function(id){return epTile(id);}).join('')+'</div>':'<div class="empty"><b>Vide</b>'+(opt.empty||'Rien ici pour l\'instant.')+'</div>');
+    :(ids.length?'<div class="grid" style="padding-top:8px">'+ids.map(function(id){return epTile(id,!!opt.dt);}).join('')+'</div>':'<div class="empty"><b>Vide</b>'+(opt.empty||'Rien ici pour l\'instant.')+'</div>');
   return '<div class="rbar"><button class="circle" data-back aria-label="Retour">'+IC.back+'</button><span class="rt">'+esc(title)+'</span>'+(opt.right||'<span style="width:38px"></span>')+'</div>'+
     '<p class="pkick">'+(opt.kick||'Collection')+'</p><h1 class="ptitle" style="padding-top:6px">'+esc(title)+'</h1>'+(desc?'<p class="hint" style="padding:8px 20px 0;font-size:15px">'+esc(desc)+'</p>':'')+(opt.top||'')+body+'<div class="bottomspace"></div>';
 }
 function allColsLayer(){
   var X=epIndex(),cards=ecols().map(function(c){var inC=COLLS.some(function(x){return x.k===c.k;});
-    return colCard(c,inC?'data-col="'+c.k+'"':'data-themeopen="'+(c.k==='vie'?X.ki.personnes:X.ki.date)+'"'+(c.k==='vie'?' data-themesub="t0"':''));}).join('');
+    return colCard(c,inC?'data-col="'+c.k+'"':'data-themeopen="'+X.ki.personnes+'" data-themesub="t0"');}).join('');
   return listLayer('Collections','Touchez une collection pour la découvrir.',[],{kick:'Toutes',html:'<div class="cgrid">'+cards+'</div>'});}
 function colSaved(k){return myCols().some(function(x){return x.from===k;});}
 var COLLSC={
+jour:['rays','#e8a33d','#150c06','#070403','flag'],date:['night','#8fa8ff','#070a1c','#02030a','flag'],
 menteurs:['curtain','#e0434b','#14080c','#060304','mask'],nature:['peaks','#8fd3f4','#06121a','#02060b','mountain'],froide:['fog','#e0434b','#0a0b12','#040508','spy'],ww2:['fog','#c9a86b','#0e0d09','#050504','flag'],
 elles:['rays','#f08ab0','#1a0a12','#07030a','crown'],hollywood:['curtain','#e0b25a','#150c06','#070403','clap'],argent:['city','#7bd99a','#07120c','#030805','bill'],espace:['night','#8fa8ff','#070a1c','#02030a','flag'],
 casses:['grid','#f0a04b','#0d0a07','#050403','safe'],faussaires:['grid','#e0b25a','#0d0a06','#050403','twoface'],revenus:['fog','#b9a6ff','#0b0914','#040308','candle'],chanceux:['rays','#f6d365','#151006','#070503','dice'],
@@ -3539,7 +3539,7 @@ decouvertes:['grid','#8fd3f4','#06101a','#02060a','bulb'],explorateurs:['sea','#
 entredeux:['city','#f6d365','#120d06','#060403','dice'],seventies:['rays','#ff9f4a','#150a05','#070302','rings'],science:['grid','#7bd0c8','#06100f','#030707','chip'],identites:['curtain','#b9a6ff','#0e0b16','#05040a','mask']};
 function colLayer(k){var c=COLLS.filter(function(x){return x.k===k;})[0];if(!c)return '';var sv=colSaved(k);
   var sc=COLLSC[k]||['night','#e0434b','#0a0a12','#050508','question'],scn=pathScene({k:k,mo:sc[0],pa:sc[1],top:sc[2],b2:sc[3],ic:sc[4]});
-  return '<div class="pth" style="'+scn+'"><div class="pbg" aria-hidden="true"></div>'+listLayer(c.n,c.d,c.ids,{kick:'Collection',right:'<span class="rbtns"><button class="circle" data-sharelist="c:'+k+'" aria-label="Partager cette collection">'+IC.share+'</button><button class="circle'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?IC.markOn:IC.mark)+'</button></span>'})+'</div>';}
+  return '<div class="pth" style="'+scn+'"><div class="pbg" aria-hidden="true"></div>'+listLayer(c.n,c.d,c.ids,{dt:c.dt,kick:'Collection',right:'<span class="rbtns"><button class="circle" data-sharelist="c:'+k+'" aria-label="Partager cette collection">'+IC.share+'</button><button class="circle'+(sv?' on':'')+'" data-colsave="'+k+'" aria-label="'+(sv?'Collection enregistrée':'Enregistrer dans mes collections')+'">'+(sv?IC.markOn:IC.mark)+'</button></span>'})+'</div>';}
 function trailHTML(p){
   var OFF=[0,56,84,56,0,-56,-84,-56],cur=-1,n=p.ids.length,H=p.free?160:184,GAP=58,rows='';
   if(!p.free)for(var q=0;q<n;q++)if(!S.read[p.ids[q]]){cur=q;break;}
