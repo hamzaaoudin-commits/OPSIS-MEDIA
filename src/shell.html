@@ -227,6 +227,10 @@
   .tile .poster{width:122px;height:183px;border-radius:8px;contain:layout paint style;background:#16161a}
   .tile .ttl{overflow-wrap:normal;word-break:normal;hyphens:none;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
   .tile .num{position:absolute;top:7px;right:8px;z-index:2;font-family:var(--disp);font-weight:800;font-size:13px;opacity:.85}
+  /* carte collection : silhouette de dossier (onglet en haut à gauche), « COLLECTION » dans l'espace libre à droite de l'onglet */
+  .tile.ctile{position:relative}
+  .tile.ctile .poster{clip-path:url(#ctab)}
+  .tile.ctile .ctag{position:absolute;top:0;right:5px;height:16px;display:flex;align-items:center;font:700 7.5px/1 var(--ui);letter-spacing:1.2px;color:rgba(237,230,218,.75);pointer-events:none}
   .tile .read{position:absolute;top:7px;left:7px;z-index:2;font-size:11px;font-weight:700;background:var(--red);color:#fff;border-radius:4px;padding:2px 6px}
   .lens{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
   .lens .seg button{white-space:nowrap}
@@ -873,6 +877,7 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><clipPath id="ctab" clipPathUnits="objectBoundingBox"><path d="M 0.06667 0 H 0.22667 Q 0.28 0 0.30667 0.02667 L 0.33333 0.07111 Q 0.35333 0.09778 0.4 0.09778 H 0.93333 Q 1 0.09778 1 0.14222 V 0.95556 Q 1 1 0.93333 1 H 0.06667 Q 0 1 0 0.95556 V 0.04444 Q 0 0 0.06667 0 Z"/></clipPath></defs></svg>
 <div id="boot" role="status" aria-live="polite"><div class="bootlogo">OPSIS</div><div class="bootbar"><i></i></div></div>
 
 <div class="phone" id="phone">
@@ -1809,7 +1814,7 @@ function tile(o){
   var t=String(o.t),sub=o.s,m=/ : |, /.exec(t),i=m?m.index:-1;
   if(i>2&&i<=28){sub=t.slice(i+m[0].length);sub=sub.charAt(0).toUpperCase()+sub.slice(1);t=t.slice(0,i);}
   t=nb(t);var L=t.length,fs=L>26?15:L>18?18:L>12?21:0;
-  return '<button class="tile'+(o.cls?' '+o.cls:'')+'" '+o.attr+'><div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.subhtml?'<p class="sub">'+o.subhtml+'</p>':o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
+  return '<button class="tile'+(o.cls?' '+o.cls:'')+'" '+o.attr+'>'+(o.pre||'')+'<div class="poster" data-art="'+o.p+'"><span class="grad"></span>'+(o.badge||'')+'<span class="ttl"'+(fs?' style="font-size:'+fs+'px"':'')+'>'+esc(t)+'</span></div>'+(o.subhtml?'<p class="sub">'+o.subhtml+'</p>':o.nosub?'':'<p class="sub">'+esc(sub)+'</p>')+'</button>';
 }
 
 /* ---- Épisodes : chaque histoire a sa propre cover, les séries se rangent avec les thèmes ---- */
@@ -3417,7 +3422,7 @@ function pileColors(c){
 function colCard(c,attr,extra){
   var n=c.ids.length,d=pathDone(c),sub='';/* pas de nombre d'histoires : le contenu grossit */
   var ck=c.k||c.from,m=/^data-col="([^"]+)"$/.exec(attr||'');
-  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile'});
+  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile',pre:'<span class="ctag" aria-hidden="true">COLLECTION</span>'});
 }
 function colToggle(k){var cc=COLLS.filter(function(x){return x.k===k;})[0];if(!cc)return null;
   if(colSaved(k)){S.x.cols=myCols().filter(function(x){return x.from!==k;});toast('Retirée de ma liste');return false;}
