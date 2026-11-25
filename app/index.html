@@ -2862,7 +2862,7 @@ function homeDeck(){
   var bars=Array.from({length:34},function(_,k){return '<i style="width:'+(1+(hashN(id+k)%3))+'px"></i>';}).join('');
   var fm=['Flash','Récit','Long'].map(function(f){return '<span class="'+(f===pd.fmt?'on':'')+'">'+f+'</span>';}).join('');
   return '<div class="swk"><div class="swk-stack"><div class="swk-back">'+(nx&&STORIES[nx]?poster(STORIES[nx].p):'')+'</div>'+
-    '<div class="swk-card" id="swkCard" data-id="'+id+'"'+sty+'><div class="fxs-in"><div class="fxs-face fxs-front">'+poster(pd.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">N° '+pd.no+'</span><span class="ft">'+esc(nb(pd.front))+'</span></div>'+
+    '<div class="swk-card" id="swkCard" data-id="'+id+'"'+sty+'><div class="fxs-in"><div class="fxs-face fxs-front">'+poster(pd.p)+'<span class="grad"></span><span class="fl">OPSIS</span><span class="fn">'+(st&&st.min?st.min+' MIN':'N° '+pd.no)+'</span><span class="ft">'+esc(nb(pd.front))+'</span></div>'+
     '<div class="fxs-face fxs-back'+(lt?' lt':'')+'"><div class="fxs-bk-top"><span>OPSIS</span><b>N° '+pd.no+'</b></div><h3>'+esc(pd.title)+'</h3><p class="fxs-meta">'+esc(pd.meta)+'</p><p class="fxs-syn">'+esc(pd.syn)+'</p>'+
     '<div class="fxs-bk-bot"><div class="fxs-fm">'+fm+'</div><div class="fxs-bc"><div>'+bars+'</div><em>OPS-'+pd.no+'-'+(h%9000+1000)+'</em></div></div></div></div>'+
     '<span class="swk-l ok"><i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>Lire</span><span class="swk-l no"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i>Passer</span><span class="swk-l up"><i><svg viewBox="0 0 24 24"><path d="M7 4h10v16l-5-4-5 4z"/></svg></i>Ma liste</span></div>'+'</div>'+all+'</div>';
