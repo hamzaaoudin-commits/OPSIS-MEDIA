@@ -3468,21 +3468,13 @@ function pileColors(c){
   while(out.length<2)out.push(out[0]||'#6b6b76');
   return out;
 }
-/* couleur de l'étiquette COLLECTION : teinte dominante de la couverture (la plus saturée), éclaircie pour rester lisible sur le fond noir */
-var __ct={};
-function tagTint(key,svg){
-  if(__ct[key])return __ct[key];
-  var best=[200,200,200],bs=-1;
-  (String(svg||'').match(/#[0-9a-fA-F]{6}\b/g)||[]).forEach(function(h){
-    var r=parseInt(h.substr(1,2),16),g=parseInt(h.substr(3,2),16),b=parseInt(h.substr(5,2),16),mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/510,sat=(mx-mn)/255,sc=sat*(1-Math.abs(l-.5)*1.4);
-    if(sc>bs){bs=sc;best=[r,g,b];}});
-  var lum=(.2126*best[0]+.7152*best[1]+.0722*best[2])/255,t=lum<.62?(.62-lum)/(1-lum):0;
-  return __ct[key]='rgb('+best.map(function(v){return Math.round(v+(255-v)*t);}).join(',')+')';
-}
+/* couleur du mot COLLECTION : couleur de la couverture là où l'onglet la montre (bande du haut), rendue vive (pas pâle) pour rester lisible sur le fond noir */
+var CTAG={"vie":"#D95E30","date":"#3970D0","menteurs":"#DA2F40","nature":"#58B6E4","froide":"#395AD0","ww2":"#D7A853","elles":"#E05C8D","hollywood":"#D8AC57","argent":"#39D075","espace":"#586ED8","casses":"#E89A48","faussaires":"#D8AC57","revenus":"#714EEE","chanceux":"#ECC750","mer":"#5BBAE0","glace":"#51AEEB","montagne":"#DAA662","disparus":"#62DA93","tribunaux":"#DAB862","pouvoir":"#D84149","savants":"#62DACE","artistes":"#D93054","marques1":"#E89A48","marques2":"#D9444B","erreurs":"#E0AA3E","sport":"#E89A48","ombres":"#7B5BD9","musique":"#F44871","espions":"#395FD0","evasions":"#62DA89","decouvertes":"#62B2DA","explorateurs":"#E89A48","xix":"#D7A852","avant1700":"#DAA762","entredeux":"#ECC750","seventies":"#F69946","science":"#62DACE","identites":"#7862DA","droits":"#D84148","filmsimp":"#D24637","jeux":"#4979E8","mechants":"#D43540","heros":"#6659E0","raisontot":"#E0AA3E","eclairs":"#394FD0","exploits":"#E87648","sporthist":"#D84148","paris":"#ECC750"};
+function tagTint(key){return CTAG[key]||'#E8B04A';}
 function colCard(c,attr,extra){
   var n=c.ids.length,d=pathDone(c),sub='';/* pas de nombre d'histoires : le contenu grossit */
   var ck=c.k||c.from,m=/^data-col="([^"]+)"$/.exec(attr||'');
-  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile',pre:'<span class="ctag" aria-hidden="true" style="color:'+tagTint(ck,COVERS['c_'+ck])+'">COLLECTION</span>'});
+  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile',pre:'<span class="ctag" aria-hidden="true" style="color:'+tagTint(ck)+'">COLLECTION</span>'});
 }
 function colToggle(k){var cc=COLLS.filter(function(x){return x.k===k;})[0];if(!cc)return null;
   if(colSaved(k)){S.x.cols=myCols().filter(function(x){return x.from!==k;});toast('Retirée de ma liste');return false;}
