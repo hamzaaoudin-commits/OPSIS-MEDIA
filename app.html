@@ -258,7 +258,7 @@
   /* carte collection : silhouette de dossier (onglet en haut à gauche), « COLLECTION » dans l'espace libre à droite de l'onglet */
   .tile.ctile{position:relative}
   .tile.ctile .poster{clip-path:url(#ctab)}
-  .tile.ctile .ctag{position:absolute;top:0;right:5px;height:16px;display:flex;align-items:center;font:700 7.5px/1 var(--ui);letter-spacing:1.2px;color:rgba(237,230,218,.75);pointer-events:none}
+  .tile.ctile .ctag{position:absolute;top:0;right:5px;height:16px;display:flex;align-items:center;font:700 7.5px/1 var(--ui);letter-spacing:1.2px;color:rgba(237,230,218,.75);pointer-events:none;font-weight:800}
   .tile .read{position:absolute;top:7px;left:7px;z-index:2;font-size:11px;font-weight:700;background:var(--red);color:#fff;border-radius:4px;padding:2px 6px}
   .lens{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
   .lens .seg button{white-space:nowrap}
@@ -3447,10 +3447,21 @@ function pileColors(c){
   while(out.length<2)out.push(out[0]||'#6b6b76');
   return out;
 }
+/* couleur de l'étiquette COLLECTION : teinte dominante de la couverture (la plus saturée), éclaircie pour rester lisible sur le fond noir */
+var __ct={};
+function tagTint(key,svg){
+  if(__ct[key])return __ct[key];
+  var best=[200,200,200],bs=-1;
+  (String(svg||'').match(/#[0-9a-fA-F]{6}\b/g)||[]).forEach(function(h){
+    var r=parseInt(h.substr(1,2),16),g=parseInt(h.substr(3,2),16),b=parseInt(h.substr(5,2),16),mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/510,sat=(mx-mn)/255,sc=sat*(1-Math.abs(l-.5)*1.4);
+    if(sc>bs){bs=sc;best=[r,g,b];}});
+  var lum=(.2126*best[0]+.7152*best[1]+.0722*best[2])/255,t=lum<.62?(.62-lum)/(1-lum):0;
+  return __ct[key]='rgb('+best.map(function(v){return Math.round(v+(255-v)*t);}).join(',')+')';
+}
 function colCard(c,attr,extra){
   var n=c.ids.length,d=pathDone(c),sub='';/* pas de nombre d'histoires : le contenu grossit */
   var ck=c.k||c.from,m=/^data-col="([^"]+)"$/.exec(attr||'');
-  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile',pre:'<span class="ctag" aria-hidden="true">COLLECTION</span>'});
+  return tile({p:(ck&&COVERS['c_'+ck])?'c_'+ck:STORIES[c.ids[0]].p,t:c.n,s:sub,attr:m?'data-colpick="'+m[1]+'"':attr,badge:'',subhtml:sub?esc(sub):'&nbsp;',cls:'ctile',pre:'<span class="ctag" aria-hidden="true" style="color:'+tagTint(ck,COVERS['c_'+ck])+'">COLLECTION</span>'});
 }
 function colToggle(k){var cc=COLLS.filter(function(x){return x.k===k;})[0];if(!cc)return null;
   if(colSaved(k)){S.x.cols=myCols().filter(function(x){return x.from!==k;});toast('Retirée de ma liste');return false;}
