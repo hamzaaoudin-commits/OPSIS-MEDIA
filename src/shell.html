@@ -354,6 +354,16 @@
   .srcb{margin:26px 24px 0;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.55;color:var(--faint);overflow-wrap:anywhere}
   .srcb h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
   .srcb p+p{margin-top:8px}.srcb b{color:var(--dim)}
+  .srcn{margin:26px 20px 0}
+  .srcn h4{font:400 24px/1 var(--disp);letter-spacing:.5px;text-transform:uppercase;color:var(--bone);margin:0 0 14px}
+  .srcc{border:1px solid var(--line);border-radius:18px;padding:16px 4px 6px;overflow-wrap:anywhere}
+  .sch{font:700 10.5px/1 var(--ui);letter-spacing:1.4px;color:var(--gold);text-transform:uppercase;padding:0 16px;margin:0 0 10px}
+  .srr{display:flex;gap:12px;padding:12px 16px;align-items:flex-start;border-top:1px solid var(--line)}
+  .srcc>.srr:first-child,.sch+.srr{border-top:0}
+  .srr i{flex:none;width:30px;height:30px;border-radius:9px;background:rgba(237,230,218,.07);display:flex;align-items:center;justify-content:center;color:var(--dim)}.srr i svg{width:16px;height:16px}
+  .srr b{display:block;font:600 14px/1.35 var(--ui);color:var(--bone)}.srr small{display:block;font:400 12.5px/1.4 var(--ui);color:var(--faint);margin-top:2px}
+  .phone.light .srr i{background:rgba(23,21,18,.06)}
+  .bkend .srcn{margin-left:0;margin-right:0}
   .chead{margin-top:30px}
   .acte{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:30px;line-height:.95}
   .acte small,.chap small{display:block;font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--red-type);margin-bottom:6px}
@@ -2023,11 +2033,40 @@ function bodyHTML(arr){
     if(c==='@')return '<p class="dl">'+esc(p.slice(1))+'</p>';
     return '<p>'+esc(p)+'</p>';}).join('').replace(/\*([^*<>\n]{1,120})\*/g,'<em>$1</em>');
 }
+function srcParse(t){
+  var secs=[];
+  function item(raw,book){
+    var s=String(raw).replace(/\s+/g,' ').trim(),url='',m=s.match(/(?:https?:\/\/)?(?:www\.)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(?:\/\S*)?\s*\.?$/i);
+    if(m&&/[a-z]\.[a-z]{2,}/i.test(m[0])){url=m[0].replace(/[.\s]+$/,'');s=s.slice(0,m.index).trim();}
+    s=s.replace(/[\s.:,;—–-]+$/,'');
+    var dom=url.replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0];
+    var ti=s,sub='',q=s.match(/«\s*([^»]+?)\s*»/);
+    if(q){ti=q[1];sub=(s.slice(0,q.index)+' '+s.slice(q.index+q[0].length)).replace(/\s+/g,' ').replace(/^[\s.:,;—–-]+|[\s.:,;—–-]+$/g,'').replace(/\s+([:,;])/g,'$1');}
+    else if(book){var c=s.indexOf(', ');if(c>2&&c<44){var rest=s.slice(c+2),y=rest.match(/,\s*((?:1[0-9]|20)\d\d)$/);sub=s.slice(0,c)+(y?' · '+y[1]:'');ti=y?rest.slice(0,y.index):rest;}}
+    else{var d=s.indexOf(' : ');}
+    if(!sub&&dom)sub=dom;else if(dom&&sub.toLowerCase().indexOf(dom.split('.')[0])<0)sub+=' · '+dom;
+    return {t:ti,s:sub,book:!!book&&!url};
+  }
+  t=String(t||'');
+  if(t.indexOf(' || ')>=0){secs.push({h:'',it:t.split(' || ').map(function(p){return item(p,false);})});return secs;}
+  var m1=t.match(/Ouvrages et films\s*:\s*([\s\S]*?)(?=Presse et sources en ligne\s*:|$)/),m2=t.match(/Presse et sources en ligne\s*:\s*([\s\S]*)$/);
+  if(m1||m2){
+    if(m1&&m1[1].trim())secs.push({h:'Ouvrages et films',it:m1[1].trim().replace(/\b((?:1[0-9]|20)\d\d)\.\s*(?=\S)/g,'$1.\u0001').split('\u0001').filter(function(x){return x.trim();}).map(function(p){return item(p,true);})});
+    if(m2&&m2[1].trim())secs.push({h:'Presse et web',it:m2[1].trim().split(/\.\s+(?=«)/).map(function(p){return item(p,false);})});
+    return secs;
+  }
+  secs.push({h:'',it:t.split(/\.\s+(?=«)/).map(function(p){return item(p,false);})});return secs;
+}
+
+var SIC={b:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></svg>',l:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>'};
 function srcHTML(t){
   if(!t)return '';
-  if(t.indexOf(' || ')>=0)return '<div class="srcb"><h4>Sources</h4>'+t.split(' || ').map(function(p){return '<p>'+esc(p)+'</p>';}).join('')+'</div>';
-  var parts=t.split(/ (?=Presse et sources en ligne :)/);
-  return '<div class="srcb"><h4>Sources</h4>'+parts.map(function(p){return '<p>'+esc(p).replace(/^(Ouvrages et films|Presse et sources en ligne) :/,'<b>$1</b> :')+'</p>';}).join('')+'</div>';
+  var secs=[];try{secs=srcParse(t);}catch(e){secs=[];}
+  secs=secs.filter(function(x){return x.it.length;});
+  if(!secs.length)return '<div class="srcb"><h4>Sources</h4><p>'+esc(t)+'</p></div>';
+  return '<div class="srcn"><h4>Sources</h4><div class="srcc">'+secs.map(function(x,k){
+    return (x.h?'<div class="sch"'+(k?' style="margin-top:6px"':'')+'>'+esc(x.h)+'</div>':'')+x.it.map(function(o){return '<div class="srr"><i>'+(o.book?SIC.b:SIC.l)+'</i><div><b>'+esc(o.t)+'</b>'+(o.s?'<small>'+esc(o.s)+'</small>':'')+'</div></div>';}).join('');
+  }).join('')+'</div></div>';
 }
 function lenWords(a){var w=0;a.forEach(function(t){if('#@*'.indexOf(t.charAt(0))<0)w+=t.split(' ').length;});return w;}
 function lenMin(a){return Math.max(3,Math.round(lenWords(a)/200));}
