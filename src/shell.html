@@ -3860,7 +3860,7 @@ function tailExtra(id){
   var s=STORIES[id];
   return starsHTML(id)+quizHTML(id)+
     '<div class="ract" style="margin-top:14px"><button class="btn glass" data-gift="'+id+'">'+IC.gift+'Offrir</button><button class="btn glass srctog" data-srctog aria-expanded="false" style="grid-column:auto">+ Sources</button></div>'+srcBlock(id)+
-    twoSame(id)+moreLike(id);
+    '';/* fin d'histoire : un seul choix, « À lire ensuite » (twoSame et moreLike retirés) */
 }
 
 /* ---------- récap mensuel (façon Wrapped) ---------- */
