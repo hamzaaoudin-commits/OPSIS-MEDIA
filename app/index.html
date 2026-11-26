@@ -2106,7 +2106,7 @@ function timeIn(){return '<input type="time" class="tin" data-time value="'+hour
 function settings(){
   var hours=timeIn();
   return '<div class="grab"></div><h3 class="sth">Réglages</h3>'+
-    '<div class="opt"><span>Notification chaque matin</span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+
+    '<div class="opt"><span>Notification quotidienne</span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification quotidienne"></button></div>'+
     '<div class="opt"><span>Heure de sortie</span>'+hours+'</div>'+
     '<div class="opt"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
     lookOpts()+
@@ -4362,7 +4362,7 @@ function gdIll0(i){var P=gps(),T0=STORIES.ar01||STORIES[Object.keys(STORIES)[0]]
   setTimeout(function(){var host=document.getElementById('gcardhost');if(!host||host.firstChild)return;var id=STORIES.ar01?'ar01':Object.keys(STORIES)[0];coverImage(id).then(function(img){var h2=document.getElementById('gcardhost');if(!h2||h2.firstChild)return;var cv=quoteCanvas('La demande a de quoi surprendre, mais elle n\'a rien d\'absurde à l\'époque.',id,img);h2.appendChild(cv);});},60);}
  else if(i===7){h='<div class="gshs"><div class="gfr"><span class="gpo">'+gpo(T0.p)+'</span><span class="gft"><i>'+esc((T0.terr||'').toUpperCase())+'</i><b>'+esc(T0.title)+'</b></span></div><div class="gbs"><span class="gbt2 big on">'+IC.gift+'Offrir</span></div><div class="gms"><span>Je t\'offre cette histoire :</span><b>'+esc(T0.title)+'</b><small>OPSIS · lecture 3 min</small></div></div>';}
  else if(i===9){h='<div class="gbd"><div class="gbr">'+[0,2,4,6].map(function(k,j){return '<span class="gb'+j+'">'+badgeSVG(k,true,j===0?84:70)+'</span>';}).join('')+'</div><div class="gfl"><span class="gfi">'+eico('<path d="M12 3c1 5 7 7 7 13a7 7 0 0 1-14 0c0-3.500 2-5.500 4-7.500 0 3 1 4 2.500 4.500C11.500 12 11 7 12 3z"/>')+'</span><b>7</b><small>jours d\'affilée</small></div></div>';}
- else if(i===10){h='<div class="gnt"><div class="gbn"><span class="gbl">'+logoSVG()+'</span><span class="gbt"><i>OPSIS · maintenant</i><b>'+esc(T0.title)+'</b><small>L\'histoire du jour · 3 min</small></span></div><div class="gop"><span class="gor"><span>L\'histoire du jour<small>Une notification chaque matin.</small></span><span class="gtg on"></span></span><span class="gor"><span>Heure<small>Choisissez l\'heure exacte.</small></span><span class="gtm">07:30</span></span></div></div>';}
+ else if(i===10){h='<div class="gnt"><div class="gbn"><span class="gbl">'+logoSVG()+'</span><span class="gbt"><i>OPSIS · maintenant</i><b>'+esc(T0.title)+'</b><small>L\'histoire du jour · 3 min</small></span></div><div class="gop"><span class="gor"><span>L\'histoire du jour<small>Une suggestion de lecture par jour, à l\'heure choisie.</small></span><span class="gtg on"></span></span><span class="gor"><span>Heure<small>Choisissez l\'heure exacte.</small></span><span class="gtm">07:30</span></span></div></div>';}
  else if(i===11){h='<div class="gsr"><div class="gl"><i></i><i></i><i style="width:62%"></i></div><div class="grw"><span class="gbt2">'+IC.flag+'Signaler une erreur</span><span class="gbt2 on">− Sources</span></div><div class="gsc"><b>SOURCES</b><p>Tom Mueller, « The Smoothest Con Man That Ever Lived », Smithsonian Magazine, 2011.</p><p>« Victor Lustig », Wikipédia.</p></div></div>';}
  else if(i===12){h='<div class="gth"><div class="gchips">'+['Histoire','Science','Marques','Arts'].map(function(t,j){return '<span'+(j===0||j===2?' class="on"':'')+'>'+t+'</span>';}).join('')+'</div><div class="gcols" style="padding-top:22px"><span class="gcc" style="width:auto;flex:1"><b>Pour vous</b><span class="gc3" style="margin-top:8px">'+[P[3],P[5],P[7],P[9]].map(function(k){return gpo(k||P[0]);}).join('')+'</span></span></div></div>';}
  return h;}
@@ -4407,7 +4407,7 @@ function setLayer(k){
       '<p class="hint">Les histoires sont aujourd\'hui écrites en français. Les versions anglaise et espagnole seront de vraies adaptations, pas des traductions automatiques.</p>';
   }else if(k==='notifs'){
     var hours=timeIn();
-    b='<div class="sbox"><div class="opt" style="border-top:0"><span>L\'histoire du jour<small class="os">Une notification chaque matin.</small></span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+
+    b='<div class="sbox"><div class="opt" style="border-top:0"><span>L\'histoire du jour<small class="os">Une suggestion de lecture par jour, à l\'heure choisie.</small></span><button class="tog" role="switch" aria-checked="'+S.notif+'" data-toggle="notif" aria-label="Notification quotidienne"></button></div>'+
       '<div class="opt"><span>Heure<small class="os">Entre 7 h et 22 h, jamais la nuit. Une seule notification par jour.</small></span>'+hours+'</div>'+
       '<div class="opt"><span>Nouveautés dans mes thèmes<small class="os">Quand une histoire sort dans un thème que vous aimez.</small></span><button class="tog" role="switch" aria-checked="'+!!S.nNew+'" data-toggle2="nNew" aria-label="Nouveautés dans mes thèmes"></button></div>'+
       '<div class="opt"><span>Une histoire pour vous<small class="os">Si vous n\'ouvrez pas OPSIS pendant 7 jours, une seule notification vous propose une histoire choisie pour vous. Rien d\'autre ensuite.</small></span><button class="tog" role="switch" aria-checked="'+(S.nBack!==false)+'" data-toggle2="nBack" aria-label="Une histoire pour vous après une semaine d\'absence"></button></div>'+
@@ -4504,8 +4504,8 @@ function giftCta(id){
   var n=Object.keys(STORIES).filter(function(k){return vis(k)&&!STORIES[k].ep;}).length,pool=['pt01','es01','mq01','ar01'].filter(function(k){return STORIES[k];}),cv=pool.slice(0,3);
   return '<div class="gcta"><span class="gk">CETTE HISTOIRE VOUS A ÉTÉ OFFERTE</span>'+
     '<div class="gfan">'+cv.map(function(k,i){return '<div class="gm gm'+i+'">'+art(STORIES[k].p)+'</div>';}).join('')+'</div>'+
-    '<h3>Une histoire vraie,<br>chaque matin.</h3>'+
-    '<p>Vous venez de lire « '+esc(String(STORIES[id].title).split(/\s:\s/)[0])+' ». OPSIS en raconte une nouvelle chaque jour : plus de '+(Math.floor(n/10)*10)+' histoires vraies, des récits qui se lisent en quelques minutes, sans publicité.</p>'+
+    '<h3>The world is<br>made of stories.</h3>'+
+    '<p>Vous venez de lire « '+esc(String(STORIES[id].title).split(/\s:\s/)[0])+' ». Il y en a plus de '+(Math.floor(n/10)*10)+' autres dans OPSIS, et de nouvelles arrivent chaque jour : des histoires vraies, des récits qui se lisent en quelques minutes, sans publicité.</p>'+
     '<button class="btn red full" data-install>Télécharger l\'application</button>'+
     '<small>3,99 € par mois, résiliable à tout moment.</small></div>';
 }
@@ -4656,7 +4656,7 @@ function onbSet(g){
     '<div class="opt"><span>Taille du texte <b class="fsv">'+S.fs+' px</b></span><span class="sz"><button data-fs="-1" aria-label="Réduire le texte">A−</button><button data-fs="1" aria-label="Agrandir le texte">A+</button></span></div>'+
     '<div class="opt" style="display:block"><span>Police</span><div class="fontgrid">'+FONTS.map(function(f){return '<button data-font="'+f[0]+'" aria-pressed="'+((S.font||'serif')===f[0])+'" style="font-family:'+f[3]+'">'+f[1]+'<small>'+f[2]+'</small></button>';}).join('')+'</div></div>';
   if(g===7){var pf=S.x.prefs||[];return '<div class="qchips">'+T.map(function(t,i){return THEMES[i].k==='date'?'':'<button data-pref="'+i+'" aria-pressed="'+(pf.indexOf(i)>=0)+'">'+t+'</button>';}).join('')+'</div>';}
-  if(g===11)return '<div class="opt"><span>Une histoire chaque matin<small class="os">Jamais la nuit.</small></span><button class="tog" role="switch" aria-checked="'+!!S.notif+'" data-toggle="notif" aria-label="Notification chaque matin"></button></div>'+(S.notif?'<div class="opt"><span>Heure</span>'+timeIn()+'</div>':'');
+  if(g===11)return '<div class="opt"><span>Une suggestion de lecture<small class="os">Jamais la nuit.</small></span><button class="tog" role="switch" aria-checked="'+!!S.notif+'" data-toggle="notif" aria-label="Notification quotidienne"></button></div>'+(S.notif?'<div class="opt"><span>Heure</span>'+timeIn()+'</div>':'');
   return '';
 }
 function onbRender(partial){
