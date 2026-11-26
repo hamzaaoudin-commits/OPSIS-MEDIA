@@ -42,7 +42,9 @@ await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=9
 // collection add
 
 await click('#layerview [data-report]');await shot('17report');await click('#settingsbox [data-closesettings]');
-await click('#layerview [data-finish]');await p.waitForTimeout(600);
+/* fin d'histoire : validation automatique en atteignant le FIN (temps de lecture simulé) */
+await p.evaluate(()=>{OPSIS.ui.rtShift(20*60000);const v=document.getElementById('layerview');v.scrollTop=v.scrollHeight;});await p.waitForTimeout(700);await p.evaluate(()=>{const v=document.getElementById('layerview');v.scrollTop=v.scrollHeight-v.clientHeight-40;});await p.waitForTimeout(500);
+await click('#layerview [data-back]');await p.waitForTimeout(600);
 await shot('18light_home');
 await p.evaluate(()=>document.getElementById('main').scrollTo(0,620));await shot('19light_home2');
 // mon espace
