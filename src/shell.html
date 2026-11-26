@@ -1759,12 +1759,23 @@ var LENS=DATA.LENS;var BLURB=DATA.BLURB||{};
 Object.keys(LENS).forEach(function(id){var o=LENS[id];if(STORIES[id]&&!STORIES[id].life){if(o["3"])STORIES[id].b3=o["3"];if(o["5"])STORIES[id].b5=o["5"];if(o["10"])STORIES[id].b10=o["10"];}});/*LENS-END*/
 var FMT=(typeof DATA!=='undefined'&&DATA.FMT)||{};var FIN=(typeof DATA!=='undefined'&&DATA.FIN)||{};
 function finBlock(id){var f=FIN[id];if(!f||!f.l||!f.l.length)return '';return '<div class="fin"><h4>Ce que vous venez de découvrir</h4><ul>'+f.l.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul><h4>À retenir</h4><p>'+esc(f.r)+'</p></div>';}
+function finLab(l){l=String(l).replace(/\s+/g,' ').trim();
+  if(/^Établi/i.test(l))return 'Établi';
+  if(/^(Rapporté|Discuté)/i.test(l))return 'Rapporté ou discuté';
+  if(/^Contesté/i.test(l))return 'Contesté';
+  if(/^Incertain/i.test(l))return 'Incertain';
+  if(/^Divergences/i.test(l))return 'Sources divergentes';
+  return '';}
 function finNote(id){var f=FIN[id];if(!f||!f.n)return '';
-  var parts=f.n.split(/\.\s+(?=[A-ZÉÀ][^:.;()]{2,60}\s:\s)/),h='';
-  parts.forEach(function(p,k){var m=p.match(/^([^:]{2,60})\s:\s([\s\S]*)$/),lab=m?m[1]:'',body=(m?m[2]:p).replace(/[\s.]+$/,'');
-    var li=body.split(/\s;\s/).filter(function(x){return x.trim();});if(!li.length)return;
-    h+='<div class="nts'+(k===0?' open':'')+'"><button class="ntb" data-nt aria-expanded="'+(k===0)+'"><span>'+esc(lab||'Note')+'</span><em>'+li.length+'</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><ul>'+li.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';});
-  return h?'<div class="srcn"><h4>Note éditoriale</h4><div class="srcc nte">'+h+'</div></div>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
+  /* version lecteur : seules les rubriques de fiabilité sont montrées, les rubriques de travail restent dans les données */
+  var parts=f.n.split(/\.\s+(?=[A-ZÉÀ][^:.;()]{2,60}\s:\s)/),order=[],by={};
+  parts.forEach(function(p){var m=p.match(/^([^:]{2,60})\s:\s([\s\S]*)$/);if(!m)return;var lab=finLab(m[1]);if(!lab)return;
+    var li=m[2].replace(/[\s.]+$/,'').split(/\s;\s/).filter(function(x){return x.trim();});if(!li.length)return;
+    if(!by[lab]){by[lab]=[];order.push(lab);}by[lab]=by[lab].concat(li);});
+  var h='';
+  order.forEach(function(lab,k){var li=by[lab];
+    h+='<div class="nts'+(k===0?' open':'')+'"><button class="ntb" data-nt aria-expanded="'+(k===0)+'"><span>'+esc(lab)+'</span><em>'+li.length+'</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><ul>'+li.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';});
+  return h?'<div class="srcn"><h4>Fiabilité</h4><div class="srcc nte">'+h+'</div></div>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
 function minOf(id,arr){return FMT[id]||lenMin(arr);}
 /* ---- Histoires du jour : publiées depuis la base, sans mise à jour de l'application ---- */
 var DJIDS=[];
