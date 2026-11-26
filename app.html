@@ -1773,7 +1773,7 @@ var DJIDS=[];
    ÉTAT (en mémoire)
    ===================================================================== */
 var S={len:3,mode:'scroll',bpage:{},tab:'home',read:{},saved:{},follow:{},minutes:0,fs:19,notif:true,hour:'7 h',filter:-1,stack:[],rate:{},prog:{},x:{},theme:'dark',font:'serif',lh:'n',mg:'n',al:'l',cw:'m',auto:false,warm:0,hideRead:false,lang:'fr',focus:false,speed:1,nNew:true,nResume:false,stats:true};
-OPSIS.hydrate(S);S.x=S.x||{};if(S.x.prefs&&(S.x.thv||0)<3){var np=[],v0=S.x.thv||0;S.x.prefs.forEach(function(i){var j=i;if(v0<2)j=j>4?j-1:j===4?3:j;/* « Une vie » fusionné dans Personnes */if(j===4||j===5)return;/* « Le jour qui a tout changé » et « Une date, une histoire » deviennent des collections */j=j>5?j-2:j;if(np.indexOf(j)<0)np.push(j);});S.x.prefs=np;}S.x.thv=3;if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={lists:function(){var f=function(a){return a.map(function(x){return {k:x.k,n:x.n,d:x.d||'',ids:x.ids.slice()};});};return {paths:f(PATHS),cols:f(COLLS)};},amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
+OPSIS.hydrate(S);S.x=S.x||{};S.focus=true;/* mode sans distraction : seul mode de lecture */if(S.x.prefs&&(S.x.thv||0)<3){var np=[],v0=S.x.thv||0;S.x.prefs.forEach(function(i){var j=i;if(v0<2)j=j>4?j-1:j===4?3:j;/* « Une vie » fusionné dans Personnes */if(j===4||j===5)return;/* « Le jour qui a tout changé » et « Une date, une histoire » deviennent des collections */j=j>5?j-2:j;if(np.indexOf(j)<0)np.push(j);});S.x.prefs=np;}S.x.thv=3;if(!S.x.focusDef){S.x.focusDef=1;S.focus=true;}OPSIS.stories=function(){return STORIES;};OPSIS.art=art;OPSIS.ui={lists:function(){var f=function(a){return a.map(function(x){return {k:x.k,n:x.n,d:x.d||'',ids:x.ids.slice()};});};return {paths:f(PATHS),cols:f(COLLS)};},amb:function(){return {AMB:AMB,start:ambStart,stop:ambStop};},badgeCelebrate:function(i){badgeCelebrate(BADGES[i]);},vis:vis,openSettings:openSettings,renderSettings:renderSettings,toast:toast,renderMain:renderMain,rec:function(){try{return recs(1).ids[0]||null;}catch(e){return null;}},openStory:function(id){if(!id||!vis(id))id=this.daily();var t=S.stack[S.stack.length-1];if(t&&t.type==='read'&&t.id===id)return;push({type:'read',id:id});}};
 var main=document.getElementById('main'),layer=document.getElementById('layer'),lv=document.getElementById('layerview');
 /* ---------- le logo : un diaphragme à six lamelles, une pupille rouge, et c'est le O d'OPSIS ----------
    open : 0 = fermé, 1 = ouvert (au-delà, les lamelles s'effacent) ; pupil : taille de la pupille ;
@@ -2584,7 +2584,7 @@ function closeOverlay(){
 window.addEventListener('popstate',function(){if(closeOverlay()){try{history.pushState({o:S.stack.length},'');}catch(e){}return;}if(S.stack.length)doBack();});
 function doBack(){S.stack.pop();selBar.classList.remove('on');if(S.stack.length)renderLayer();else{CEL=null;if(AU.on)auStop();lv.classList.remove('focus','peek');layer.classList.remove('in');var y=main.scrollTop;renderMain();main.scrollTop=y;}}
 function bindLayer(top){
-  lv.classList.toggle('bookmode',top.type==='read'&&S.mode==='book');lv.classList.toggle('focus',top.type==='read'&&!!S.focus);lv.classList.remove('peek');selBar.classList.remove('on');
+  lv.classList.toggle('bookmode',top.type==='read'&&S.mode==='book');lv.classList.toggle('focus',top.type==='read'&&!!S.focus);lv.classList.remove('peek');if(top.type==='read'&&!S.x.fh){S.x.fh=1;setTimeout(function(){toast('Touchez le texte pour revoir les barres');},900);}selBar.classList.remove('on');
   if(AU.on&&(top.type!=='read'||top.id!==AU.id))auStop();
   if(top.type==='read'&&STORIES[top.id]&&STORIES[top.id].c)lv.style.setProperty('--sc',STORIES[top.id].c);else lv.style.removeProperty('--sc');
   var ou=lv.querySelector('.outro');if(ou){if(S.mode==='book'||!('IntersectionObserver' in window))ou.classList.add('on');else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.disconnect();}});},{root:lv,threshold:.3});io.observe(ou);}}
@@ -4014,7 +4014,6 @@ function quickSheet(){
     '<div class="opt"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
     
     lookOpts()+
-    '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture. Touchez le texte pour les revoir.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
     '<button class="btn light" data-closesettings style="width:100%;margin-top:18px">Terminé</button>';
 }
 var FONTS=[['serif','Newsreader','Classique, le style OPSIS',"'Newsreader',Georgia,serif"],['lora','Lora','Chaleureuse, calligraphique',"'Lora',Georgia,serif"],['literata','Literata','Conçue pour lire longtemps',"'Literata',Georgia,serif"],['garamond','EB Garamond','Livre ancien, élégante',"'EB Garamond',Georgia,serif"],['merri','Merriweather','Gros corps, très lisible',"'Merriweather',Georgia,serif"],['source','Source Serif','Sobre, éditoriale',"'Source Serif 4',Georgia,serif"],['georgia','Georgia','Police de l\'appareil',"Georgia,'Times New Roman',serif"],['sans','Hanken Grotesk','Moderne, sans empattement',"'Hanken Grotesk',system-ui,sans-serif"],['atkinson','Atkinson','Hyper lisible',"'Atkinson Hyperlegible',system-ui,sans-serif"],['lexend','Lexend','Aide à la fluidité',"'Lexend',system-ui,sans-serif"]];
@@ -4248,7 +4247,6 @@ function setLayer(k){
     b='<div class="sbox"><div class="opt" style="border-top:0"><span>Sens de lecture</span><span class="seg"><button data-rm="scroll" aria-pressed="'+(S.mode==='scroll')+'">Verticale</button><button data-rm="book" aria-pressed="'+(S.mode==='book')+'">Horizontale</button></span></div>'+
       lookOpts()+
       '<div class="opt"><span>Questions en fin d\'histoire<small class="os">Quelques questions facultatives pour vérifier ce que vous avez retenu.</small></span><button class="tog" role="switch" aria-checked="'+!!S.quizOn+'" data-toggle2="quizOn" aria-label="Questions en fin d\'histoire"></button></div>'+
-      '<div class="opt"><span>Sans distraction<small class="os">Masque les barres pendant la lecture.</small></span><button class="tog" role="switch" aria-checked="'+!!S.focus+'" data-focus aria-label="Mode sans distraction"></button></div>'+
       '<div class="opt"><span>Masquer les histoires déjà lues<small class="os">Sur l\'accueil. Elles restent dans votre bibliothèque.</small></span><button class="tog" role="switch" aria-checked="'+!!S.hideRead+'" data-toggle2="hideRead" aria-label="Masquer les histoires déjà lues"></button></div></div>';
   b+=offBox();setTimeout(offRefresh,60);
   }else if(k==='langue'){
@@ -4390,7 +4388,6 @@ function featClick(b,d){
   if(d.mg||d.al||d.cw||d.warm!==undefined||b.hasAttribute('data-auto')){
     if(d.mg)S.mg=d.mg;if(d.al)S.al=d.al;if(d.cw)S.cw=d.cw;if(d.warm!==undefined)S.warm=+d.warm;if(b.hasAttribute('data-auto')){S.auto=!S.auto;lastTh=null;}
     applyLook();reSet();var tq2=S.stack[S.stack.length-1];if(bookMode()&&tq2&&(d.mg||d.al||d.cw)){S.bpage[tq2.id]=0;bookInit(tq2.id);}return true;}
-  if(b.hasAttribute('data-focus')){setFocus(!S.focus);reSet();if(S.focus&&isRead())toast('Touchez le texte pour revoir les barres');return true;}
   if(d.gd!==undefined){var gw=b.closest('.gdwrap');if(d.gd==='next')gdMove(1,gw);else if(d.gd==='prev')gdMove(-1,gw);else if(d.gd==='tap'){if(Date.now()-gdSw>350&&b.classList.contains('cur'))gdMove(1,gw);}else if(d.gd.indexOf('go')===0){GI=+d.gd.slice(2);gdPaint(gw);}return true;}
   if(d.readtog!==undefined){var rs=lv.querySelector('.rdsec');if(rs){RDOPEN=rs.classList.toggle('open');b.setAttribute('aria-expanded',RDOPEN);}return true;}
   if(d.shrank!==undefined){openRank();return true;}
