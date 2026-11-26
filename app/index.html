@@ -271,7 +271,7 @@
   .explore h2 .rn{display:inline-flex;gap:6px;align-items:center;padding-right:20px}.explore h2 .rn button{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--fg,#fff);font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
   .shelf h2 .rn{display:inline-flex;gap:6px;align-items:center}
   .shelf h2 .rn button{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--fg,#fff);font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
-  .shelf h2 .rn .all{width:auto;border-radius:14px;padding:0 11px;font-size:12px;font-weight:600}
+  .shelf h2 .rn{flex:none;margin-left:10px}.shelf h2 .rn .all{white-space:nowrap;width:auto;border-radius:14px;padding:0 11px;font-size:12px;font-weight:600}
   .tile{flex:none;width:122px;scroll-snap-align:start}
   .tile .poster{width:122px;height:183px;border-radius:8px;contain:layout paint style;background:#16161a}
   .tile .ttl{overflow-wrap:normal;word-break:normal;hyphens:none;position:absolute;left:8px;right:8px;bottom:8px;z-index:2;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:23px;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
@@ -3647,7 +3647,7 @@ function homeNew(){
   if(rc.list.length)h+='<div class="shelf"><h2><span>Collections recommandées pour vous</span></h2><div class="rail">'+rc.list.map(colTile).join('')+'</div></div>';
   var seen={};rc.list.forEach(function(c){seen[c.k]=1;});
   var fv=colObjs(FAVC).filter(function(c){return !seen[c.k];}).slice(0,8);
-  if(fv.length>=3)h+='<div class="shelf"><h2><span>Coups de cœur <small>Les collections qu\'on vous conseille</small></span></h2><div class="rail">'+fv.map(colTile).join('')+'</div></div>';
+  if(fv.length>=3)h+='<div class="shelf"><h2><span>Coups de cœur <small>Notre sélection</small></span><span class="rn"><button class="all" data-hall="1" aria-label="Voir toutes les collections">Tout voir</button></span></h2><div class="rail">'+fv.map(colTile).join('')+'</div></div>';
   return h;
 }
 
