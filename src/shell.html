@@ -3623,7 +3623,6 @@ function searchBody(q){
   T.forEach(function(t,i){if(norm(t).indexOf(nq)>=0)sug+='<button class="qrow" data-terr="'+i+'"><i>Thème</i>'+t+'</button>';});
   Object.keys(SUBS).forEach(function(k){if(norm(SUBS[k]).indexOf(nq)>=0){var ti=-1;X.byT.forEach(function(l,j){if(ti<0&&THEMES[j].k!=='date'&&l.some(function(id){return subKey(id)===k;}))ti=j;});if(ti>=0)sug+='<button class="qrow" data-terr="'+ti+'" data-sub="'+k+'"><i>Catégorie</i>'+SUBS[k]+'</button>';}});
   COLLS.forEach(function(c){if(norm(c.n).indexOf(nq)>=0)sug+='<button class="qrow" data-col="'+c.k+'"><i>Collection</i>'+esc(c.n)+'</button>';});
-  ids.slice(0,5).forEach(function(id){sug+='<button class="qrow" data-pick="'+id+'"><i>Histoire</i>'+esc(STORIES[id].title)+'</button>';});
   if(!ids.length&&!sug)return '<div class="nores"><span class="nri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M8 8l5 5M13 8l-5 5" stroke-width="1.4"/></svg></span><b>Rien ne correspond</b><p>Aucune histoire pour « '+esc(q.trim())+' ».<br>Essayez un nom, un lieu, une année ou un thème.</p></div>';
   return (sug?'<div class="qsug">'+sug+'</div>':'')+(ids.length?'<div class="shelf"><h2>Histoires <small>'+ids.length+'</small></h2></div><div class="grid">'+ids.slice(0,60).map(function(id){return epTile(id);}).join('')+'</div>':'');
 }
