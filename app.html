@@ -389,6 +389,16 @@
  .fdone svg{width:16px;height:16px;flex:none}
   @keyframes fdin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .bkend .fdone{margin-top:12px}
+  .btn small.gl{font:500 11.5px/1 var(--ui);color:var(--faint);margin-left:6px}.btn.off{opacity:.55}
+  .gcta{position:relative;margin:26px 20px 0;padding:26px 22px 22px;border-radius:22px;text-align:center;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%,rgba(210,35,44,.30),rgba(210,35,44,0) 62%),linear-gradient(180deg,#1a1416,#0e0c0d);border:1px solid rgba(240,74,80,.28);box-shadow:0 22px 50px rgba(0,0,0,.45)}
+  .gcta .gk{display:block;font:700 10.5px/1.3 var(--ui);letter-spacing:1.6px;color:var(--gold);margin-bottom:18px}
+  .gfan{position:relative;height:176px;margin:0 auto 14px;width:230px}
+  .gm{position:absolute;top:0;width:96px;aspect-ratio:2/3;border-radius:9px;overflow:hidden;box-shadow:0 16px 34px rgba(0,0,0,.6);background:#111}.gm svg{position:absolute;inset:0;width:100%;height:100%}
+  .gm0{left:6px;transform:rotate(-9deg);top:12px}.gm1{left:67px;z-index:2;top:0}.gm2{right:6px;transform:rotate(9deg);top:12px}
+  .gcta h3{font:400 34px/.98 var(--disp);letter-spacing:.4px;text-transform:uppercase;color:var(--bone);margin:6px 0 12px}
+  .gcta p{font:400 14.5px/1.55 var(--ui);color:var(--dim);margin:0 auto 20px;max-width:330px}
+  .gcta .btn{width:100%}.gcta small{display:block;margin-top:12px;font:400 12px/1.4 var(--ui);color:var(--faint)}
+  .phone.light .gcta{background:radial-gradient(120% 90% at 50% 0%,rgba(210,35,44,.16),rgba(210,35,44,0) 62%),#f3ece0;border-color:rgba(210,35,44,.3)}
   .srcn{margin:26px 20px 0}
   .srep{margin:18px 20px 0;display:flex;justify-content:center}.srep .btn{width:auto;padding:0 18px}
   .bkend .srep{margin-left:0;margin-right:0}
@@ -2142,7 +2152,7 @@ function lensUI(s,V){
 function pathCtx(id){for(var q=S.stack.length-1;q>=0;q--){var e=S.stack[q];if(e&&e.type==='path'){var p=PATHS.filter(function(x){return x.k===e.k;})[0];if(p){var i=p.ids.indexOf(id);if(i>=0)return {p:p,i:i};}}}return null;}
 /* validation automatique : l'histoire est comptée comme lue quand le lecteur atteint le FIN, après au moins 20 secondes sur l'histoire */
 var RT={id:null,t:0,end:false,timer:0};
-function finishStory(id){try{var fd=document.getElementById('fdone');if(fd&&!S.read[id]){fd.classList.add('on');setTimeout(function(){fd.classList.add('out');setTimeout(function(){fd.classList.remove('on','out');},600);},3500);}}catch(e){}if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;var mr=minOf(id,lenPick(STORIES[id],S.len||3).arr);S.minutes+=mr;(function(){var m=Object.assign({},S.x.rmin||{});m[id]=mr;S.x.rmin=m;})();(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}}}
+function finishStory(id){try{var fd=document.getElementById('fdone');if(fd&&!S.read[id]){fd.classList.add('on');setTimeout(function(){fd.classList.add('out');setTimeout(function(){fd.classList.remove('on','out');},600);},3500);}}catch(e){}if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;var mr=minOf(id,lenPick(STORIES[id],S.len||3).arr);S.minutes+=mr;(function(){var m=Object.assign({},S.x.rmin||{});m[id]=mr;S.x.rmin=m;})();(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])&&GIFTIN.id!==id){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}}}
 function endReached(id){
   if(!id||S.read[id]||!STORIES[id])return;RT.end=true;
   var need=20000,el=Date.now()-RT.t;
@@ -2168,7 +2178,7 @@ function reader(id){
   var sbn=subName(subKey(id)),kk=(s.daily||s.th===undefined)?(s.klabel||(esc(s.kind).toUpperCase()+' · '+esc(s.series).toUpperCase())):esc((T[s.th]+(sbn&&sbn!==T[s.th]?' · '+sbn:'')).toUpperCase());
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+' min'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p></div>';
-  var tail=outro+finBlock(id)+
+  var tail=GIFTIN.id===id?(outro+finBlock(id)+'<p class="fdone" id="fdone"><span class="fdc">'+art(s.p)+'</span>'+IC.check+'Histoire terminée</p>'+giftCta(id)+'<div class="ract"><button class="btn glass srctog" data-srctog aria-expanded="false" style="grid-column:1/-1">+ Sources</button></div>'+srcBlock(id)):outro+finBlock(id)+
     '<p class="fdone" id="fdone"><span class="fdc">'+art(s.p)+'</span>'+IC.check+'Histoire terminée</p>'+
     '<div class="ract">'+
     '<button class="btn glass" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div>'+tailExtra(id)+up;
@@ -3902,18 +3912,30 @@ function shareList(spec){
   var done=function(){toast('Lien copié : envoyez-le à qui vous voulez');};
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
 }
+/* cadeaux : 5 histoires offertes par mois (mois civil), la même histoire peut être renvoyée sans compter deux fois */
+var GIFT_MAX=5;
+function giftState(){var ym=String(OPSIS.day()).slice(0,7),g=S.x.gift;if(!g||g.ym!==ym){g={ym:ym,ids:[]};S.x.gift=g;}return g;}
+function giftLeft(){return Math.max(0,GIFT_MAX-giftState().ids.length);}
+function giftLabel(){var n=giftLeft();return 'Offrir <small class="gl">'+n+' restante'+(n>1?'s':'')+'</small>';}
+function giftCount(id){var g=giftState(),again=g.ids.indexOf(id)>=0;if(!again){g.ids.push(id);S.x.gift=g;}try{OPSIS.store.commit();}catch(e){}
+  var b=document.querySelector('[data-gift="'+id+'"]');if(b)b.innerHTML=IC.gift+giftLabel();
+  if(again){toast('Histoire renvoyée. Cela ne compte pas dans vos cadeaux.');return;}
+  var n=giftLeft();toast(n?('Histoire offerte. Il vous en reste '+n+' ce mois-ci.'):'Histoire offerte. C\'était votre dernier cadeau du mois.');}
 function gift(id){
-  var s=STORIES[id],url=storyURL(id),txt='Je t\'offre une histoire : « '+s.title+' ». Elle se lit en '+s.min+' minutes sur OPSIS, sans compte.'+(S.rate[id]>0?' Je lui mets '+S.rate[id]+'/5.':'');
-  if(navigator.share){navigator.share({title:s.title,text:txt,url:url}).catch(function(){});return;}
-  var done=function(){toast('Lien copié : envoyez-le à qui vous voulez');};
-  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
+  var s=STORIES[id],g=giftState();
+  if(g.ids.indexOf(id)<0&&g.ids.length>=GIFT_MAX){var d=new Date(OPSIS.now());var nx=new Date(d.getFullYear(),d.getMonth()+1,1);
+    toast('Vos '+GIFT_MAX+' cadeaux du mois sont offerts. Ils reviennent le 1er '+MOIS[nx.getMonth()]+'.');return;}
+  var url=storyURL(id)+'?cadeau=1',txt='Je t\'offre une histoire : « '+s.title+' ». Elle se lit en '+s.min+' minutes, directement depuis ce lien, sans compte et sans rien télécharger.'+(S.rate[id]>0?' Je lui mets '+S.rate[id]+'/5.':'');
+  if(navigator.share){navigator.share({title:s.title,text:txt,url:url}).then(function(){giftCount(id);}).catch(function(){});return;}
+  var done=function(){giftCount(id);};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);done();});else{prompt('Copiez ce lien',url);done();}
 }
 function reportSheet(id){var s=STORIES[id];return '<div class="grab"></div><h3 class="sth">Signaler une erreur</h3><p class="hint" style="padding:0 0 12px">Une date, un nom, un fait vous semble inexact dans « '+esc(s.title)+' » ? Dites-nous lequel, avec votre source si vous en avez une. Nous vérifions chaque signalement.</p><textarea id="rpt" class="ta" rows="5" maxlength="1200" placeholder="Le passage concerné, et ce qui vous semble inexact" aria-label="Votre signalement"></textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-rptsend="'+id+'">Envoyer</button></div>';}
 function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.lc||s.sc||s.pe||s.sp||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'<div class="srep"><button class="btn glass sm2" data-report="'+id+'">'+IC.flag+'Signaler une erreur</button></div></div>';}
 function tailExtra(id){
   var s=STORIES[id];
   return starsHTML(id)+quizHTML(id)+
-    '<div class="ract" style="margin-top:14px"><button class="btn glass" data-gift="'+id+'">'+IC.gift+'Offrir</button><button class="btn glass srctog" data-srctog aria-expanded="false" style="grid-column:auto">+ Sources</button></div>'+srcBlock(id)+
+    '<div class="ract" style="margin-top:14px"><button class="btn glass'+(giftLeft()?'':' off')+'" data-gift="'+id+'">'+IC.gift+giftLabel()+'</button><button class="btn glass srctog" data-srctog aria-expanded="false" style="grid-column:auto">+ Sources</button></div>'+srcBlock(id)+
     '';/* fin d'histoire : un seul choix, « À lire ensuite » (twoSame et moreLike retirés) */
 }
 
@@ -4445,9 +4467,31 @@ return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 64 64" aria-hidden="tru
 function badgesHTML(){var n=readCount();return '<div class="bgrid">'+BADGES.map(function(b,i){var on=n>=b[0];return '<div class="bdg'+(on?' on':'')+'">'+badgeSVG(i,on,72)+'<b>'+b[1]+'</b><small>'+b[2]+'</small></div>';}).join('')+'</div>';}
 
 /* ---------- lien direct vers une histoire (cadeau, raccourcis) ---------- */
+/* cadeau reçu : lecture complète dans le navigateur, sans compte ni téléchargement, puis invitation à installer l'application */
+var GIFTIN={id:null};
+function isAppInstalled(){try{return !!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform())||(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;}catch(e){return false;}}
+var BIP=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();BIP=e;});
+function storeLink(){var ua=navigator.userAgent||'',c=OPSIS.cfg||{};if(/iPhone|iPad|iPod/i.test(ua)&&c.storeIos)return c.storeIos;if(/Android/i.test(ua)&&c.storeAndroid)return c.storeAndroid;return '';}
+function installApp(){
+  var l=storeLink();if(l){location.href=l;return;}
+  if(BIP){BIP.prompt();try{BIP.userChoice.then(function(){BIP=null;});}catch(e){}return;}
+  var ua=navigator.userAgent||'';
+  if(/iPhone|iPad|iPod/i.test(ua))toast('Touchez Partager, puis « Sur l\'écran d\'accueil »');
+  else toast('Ouvrez ce lien sur votre téléphone pour installer OPSIS');
+}
+function giftCta(id){
+  var n=Object.keys(STORIES).filter(function(k){return vis(k)&&!STORIES[k].ep;}).length,pool=['pt01','es01','mq01','ar01'].filter(function(k){return STORIES[k];}),cv=pool.slice(0,3);
+  return '<div class="gcta"><span class="gk">CETTE HISTOIRE VOUS A ÉTÉ OFFERTE</span>'+
+    '<div class="gfan">'+cv.map(function(k,i){return '<div class="gm gm'+i+'">'+art(STORIES[k].p)+'</div>';}).join('')+'</div>'+
+    '<h3>Une histoire vraie,<br>chaque matin.</h3>'+
+    '<p>Vous venez de lire « '+esc(String(STORIES[id].title).split(/\s:\s/)[0])+' ». OPSIS en raconte une nouvelle chaque jour : plus de '+(Math.floor(n/10)*10)+' histoires vraies, des récits qui se lisent en quelques minutes, sans publicité.</p>'+
+    '<button class="btn red full" data-install>Télécharger l\'application</button>'+
+    '<small>3,99 € par mois, résiliable à tout moment.</small></div>';
+}
+
 function deepLink(){
   var m=/[#&]h=([^&]+)/.exec(location.hash||''),q=/[?&]go=(\w+)/.exec(location.search||'');
-  if(m){var id=decodeURIComponent(m[1]);if(vis(id)){push({type:'read',id:id});return true;}}
+  if(m){var id=decodeURIComponent(m[1]);if(vis(id)){GIFTIN.id=/[#&]cadeau=1/.test(location.hash||'')&&!isAppInstalled()?id:null;push({type:'read',id:id});return true;}}
   var mp=/[#&]p=([^&]+)/.exec(location.hash||''),mc=/[#&]c=([^&]+)/.exec(location.hash||'');
   if(mp){var pk=decodeURIComponent(mp[1]);if(PATHS.some(function(x){return x.k===pk;})){push({type:'path',k:pk});return true;}}
   if(mc){var ck=decodeURIComponent(mc[1]);if(COLLS.some(function(x){return x.k===ck;})){push({type:'col',k:ck});return true;}}
@@ -4523,6 +4567,7 @@ function featClick(b,d){
   if(d.quizre){QZ[d.quizre]={a:[],open:1};re();return true;}
   if(d.quizans!==undefined){var qs=quizFor(d.id),st=QZ[d.id];if(qs&&st){st.a.push(qs[st.a.length].o[+d.quizans]);if(st.a.length>=qs.length){var qz=S.x.quiz||{};qz[d.id]=st.a.filter(function(v,k){return v===qs[k].a;}).length+'/'+qs.length;S.x.quiz=qz;}}re();return true;}
   if(d.gift){gift(d.gift);return true;}
+  if(b.hasAttribute('data-install')){installApp();return true;}
   if(d.report){openSheet(function(){return reportSheet(d.report);});return true;}
   if(d.rptsend){var t=(document.getElementById('rpt')||{}).value||'';t=t.trim();if(t.length<10){toast('Décrivez l\'erreur en quelques mots');return true;}
     var rp=S.x.reports||[];rp.unshift({id:d.rptsend,t:t,at:OPSIS.day()});S.x.reports=rp.slice(0,30);closeSheet();

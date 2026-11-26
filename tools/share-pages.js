@@ -26,8 +26,9 @@ const esc=t=>String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 .cta{display:block;text-align:center;background:#D2232C;color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:17px;border-radius:14px}.n{color:#A39E95;font-size:13px;text-align:center;line-height:1.5}</style></head>
 <body><div class="w"><div class="logo">OPSIS</div><div class="cv">${covers[s.id]||''}</div>
 <div><p class="k">${esc((s.series||s.kind).toUpperCase())}</p><h1>${esc(s.title)}</h1><p class="m">${esc(s.kind)}${s.min?' · '+s.min+' min de lecture':''}</p></div>
-<p class="b">${esc(blurb)}</p><a class="cta" href="/#h=${encodeURIComponent(s.id)}">Lire cette histoire dans l'app</a>
-<p class="n">OPSIS · The world is made of stories.<br>L'histoire complète se lit dans l'application.</p></div></body></html>`;
+<p class="b">${esc(blurb)}</p><a class="cta" id="cta" href="/#h=${encodeURIComponent(s.id)}">Lire cette histoire dans l'app</a>
+<p class="n" id="nn">OPSIS · The world is made of stories.<br>L'histoire complète se lit dans l'application.</p></div>
+<script>if(/[?&]cadeau=1/.test(location.search)){var c=document.getElementById('cta');c.href+='&cadeau=1';c.textContent="Lire l'histoire offerte";document.getElementById('nn').innerHTML="Cette histoire vous est offerte.<br>Elle se lit directement ici, sans compte et sans rien télécharger.";}</script></body></html>`;
   let n=0;
   for(const s of list){
     const bl=(content.BLURB&&content.BLURB[s.id]&&content.BLURB[s.id].b)||s.sub||'Une histoire vraie à lire dans OPSIS.';
