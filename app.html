@@ -4484,7 +4484,7 @@ function giftCta(id){
   return '<div class="gcta"><span class="gk">CETTE HISTOIRE VOUS A ÉTÉ OFFERTE</span>'+
     '<div class="gfan">'+cv.map(function(k,i){return '<div class="gm gm'+i+'">'+art(STORIES[k].p)+'</div>';}).join('')+'</div>'+
     '<h3>The world is<br>made of stories.</h3>'+
-    '<p>Vous venez de lire « '+esc(String(STORIES[id].title).split(/\s:\s/)[0])+' ». Il y en a plus de '+(Math.floor(n/10)*10)+' autres dans OPSIS, et de nouvelles arrivent chaque jour : des histoires vraies, des récits qui se lisent en quelques minutes, sans publicité.</p>'+
+    '<p>Vous venez de lire « '+esc(String(STORIES[id].title).split(/\s:\s/)[0])+' ». OPSIS en regorge : des histoires vraies, des récits qui se lisent en quelques minutes, sans publicité, et de nouvelles qui arrivent sans cesse.</p>'+
     '<button class="btn red full" data-install>Télécharger l\'application</button>'+
     '<small>3,99 € par mois, résiliable à tout moment.</small></div>';
 }
