@@ -355,6 +355,7 @@
   .srcb h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
   .srcb p+p{margin-top:8px}.srcb b{color:var(--dim)}
   .fdone{display:none;align-items:center;justify-content:center;gap:8px;width:max-content;max-width:calc(100% - 40px);margin:18px auto 0;padding:9px 16px;border-radius:999px;border:1px solid rgba(211,168,94,.4);background:rgba(211,168,94,.08);color:var(--gold);font:600 13.5px/1 var(--ui);letter-spacing:.2px}
+  .fdone .fdc{flex:none;width:22px;height:33px;border-radius:4px;overflow:hidden;position:relative;background:#111;box-shadow:0 1px 5px rgba(0,0,0,.45);margin:-3px 2px -3px -6px}.fdone .fdc svg{position:absolute;inset:0;width:100%;height:100%}
   .fdone.on{display:flex;animation:fdin .5s ease both}.fdone svg{width:16px;height:16px;flex:none}
   @keyframes fdin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .bkend .fdone{margin-top:12px}
@@ -2111,7 +2112,7 @@ function lensUI(s,V){
 function pathCtx(id){for(var q=S.stack.length-1;q>=0;q--){var e=S.stack[q];if(e&&e.type==='path'){var p=PATHS.filter(function(x){return x.k===e.k;})[0];if(p){var i=p.ids.indexOf(id);if(i>=0)return {p:p,i:i};}}}return null;}
 /* validation automatique : l'histoire est comptée comme lue quand le lecteur atteint le FIN, après au moins 20 secondes sur l'histoire */
 var RT={id:null,t:0,end:false,timer:0};
-function finishStory(id){try{var fd=document.getElementById('fdone');if(fd&&!S.read[id])fd.classList.add('on');}catch(e){}if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;var mr=minOf(id,lenPick(STORIES[id],S.len||3).arr);S.minutes+=mr;(function(){var m=Object.assign({},S.x.rmin||{});m[id]=mr;S.x.rmin=m;})();(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}else toast('Histoire terminée. À demain, '+S.hour);}}
+function finishStory(id){try{var fd=document.getElementById('fdone');if(fd&&!S.read[id])fd.classList.add('on');}catch(e){}if(!S.read[id]){var b0=badgeNow();S.read[id]=true;(function(){var e=STORIES[id].ep,h=e&&STORIES[e.of];if(h&&h.eps.every(function(x){return S.read[x];})&&!S.read[e.of]){S.read[e.of]=true;S.prog[e.of]=100;var l=Object.assign({},S.x.rlog||{});l[e.of]=OPSIS.day();S.x.rlog=l;}})();CEL=id;S.prog[id]=100;var mr=minOf(id,lenPick(STORIES[id],S.len||3).arr);S.minutes+=mr;(function(){var m=Object.assign({},S.x.rmin||{});m[id]=mr;S.x.rmin=m;})();(function(){var l=Object.assign({},S.x.rlog||{});l[id]=OPSIS.day();S.x.rlog=l;})();var b1=badgeNow();if(b1&&(!b0||b1[0]!==b0[0])){toast('Nouveau badge : '+b1[1]);setTimeout(function(){badgeCelebrate(b1);},650);}}}
 function endReached(id){
   if(!id||S.read[id]||!STORIES[id])return;RT.end=true;
   var need=20000,el=Date.now()-RT.t;
@@ -2138,7 +2139,7 @@ function reader(id){
   var head='<div class="rhead"><p class="k">'+kk+'</p><h1>'+esc(s.title)+'</h1>'+'<p class="m">'+(s.meta?esc(s.meta)+' · ':'')+minOf(id,V.arr)+' min'+(s.meta?'':' · '+esc(s.terr))+'</p>'+lensUI(s,V)+'</div>';
   var outro='<div class="outro"><i class="orule"></i><p class="of">FIN</p><p class="ot">'+esc(s.title)+'</p><p class="om">'+(s.no?'N° '+esc(s.no)+' · ':'')+minOf(id,V.arr)+' min</p></div>';
   var tail=outro+finBlock(id)+
-    '<p class="fdone'+(done?' on':'')+'" id="fdone">'+IC.check+'Histoire terminée</p>'+
+    '<p class="fdone'+(done?' on':'')+'" id="fdone"><span class="fdc">'+art(s.p)+'</span>'+IC.check+'Histoire terminée</p>'+
     '<div class="ract">'+
     '<button class="btn glass" data-share="'+id+'">'+IC.share+'Partager en story</button><button class="btn glass'+(sv?' on':'')+'" data-save="'+id+'">'+(sv?IC.check+'Dans ma liste':IC.plus+'Ma liste')+'</button></div>'+tailExtra(id)+up;
   if(S.mode==='book')return bar+'<div class="bkwrap" id="bkw"><div class="bk rtext" id="bk"><section class="bkcover"><div class="bkpost">'+poster(s.p)+'</div>'+head+'</section>'+body+'<section class="bkend">'+tail+'</section></div></div>'+
