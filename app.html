@@ -383,6 +383,8 @@
   .srcb h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
   .srcb p+p{margin-top:8px}.srcb b{color:var(--dim)}
   .srcn{margin:26px 20px 0}
+  .srep{margin:18px 20px 0;display:flex;justify-content:center}.srep .btn{width:auto;padding:0 18px}
+  .bkend .srep{margin-left:0;margin-right:0}
   .srcn h4{font:400 24px/1 var(--disp);letter-spacing:.5px;text-transform:uppercase;color:var(--bone);margin:0 0 14px}
   .srcc{border:1px solid var(--line);border-radius:18px;padding:16px 4px 6px;overflow-wrap:anywhere}
   .sch{font:700 10.5px/1 var(--ui);letter-spacing:1.4px;color:var(--gold);text-transform:uppercase;padding:0 16px;margin:0 0 10px}
@@ -3881,11 +3883,11 @@ function gift(id){
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt+' '+url).then(done).catch(function(){prompt('Copiez ce lien',url);});else prompt('Copiez ce lien',url);
 }
 function reportSheet(id){var s=STORIES[id];return '<div class="grab"></div><h3 class="sth">Signaler une erreur</h3><p class="hint" style="padding:0 0 12px">Une date, un nom, un fait vous semble inexact dans « '+esc(s.title)+' » ? Dites-nous lequel, avec votre source si vous en avez une. Nous vérifions chaque signalement.</p><textarea id="rpt" class="ta" rows="5" maxlength="1200" placeholder="Le passage concerné, et ce qui vous semble inexact" aria-label="Votre signalement"></textarea><div class="row2"><button class="btn glass" data-closesettings>Annuler</button><button class="btn red" data-rptsend="'+id+'">Envoyer</button></div>';}
-function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.lc||s.sc||s.pe||s.sp||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'</div>';}
+function srcBlock(id){var s=STORIES[id];return '<div class="srcwrap">'+((s.book||s.ar||s.cs||s.fa||s.pa||s.sv||s.cb||s.ev||s.im||s.es||s.pn||s.ex||s.ce||s.fi||s.di||s.pr||s.mq||s.lc||s.sc||s.pe||s.sp||s.ld||s.vc||s.du||s.tm)&&s.src?srcHTML(s.src):'<p class="src"><b>Sources.</b> Prototype : les sources vérifiées apparaîtront ici avant publication.</p>')+finNote(id)+'<div class="srep"><button class="btn glass sm2" data-report="'+id+'">'+IC.flag+'Signaler une erreur</button></div></div>';}
 function tailExtra(id){
   var s=STORIES[id];
   return starsHTML(id)+quizHTML(id)+
-    '<div class="ract" style="margin-top:14px"><button class="btn glass" data-gift="'+id+'">'+IC.gift+'Offrir</button><button class="btn glass sm2" data-report="'+id+'">'+IC.flag+'Signaler une erreur</button><button class="btn glass sm2 srctog" data-srctog aria-expanded="false">+ Sources</button></div>'+srcBlock(id)+
+    '<div class="ract" style="margin-top:14px"><button class="btn glass" data-gift="'+id+'">'+IC.gift+'Offrir</button><button class="btn glass srctog" data-srctog aria-expanded="false" style="grid-column:auto">+ Sources</button></div>'+srcBlock(id)+
     twoSame(id)+moreLike(id);
 }
 
