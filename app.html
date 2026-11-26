@@ -392,6 +392,7 @@
   .srr b{display:block;font:600 14px/1.35 var(--ui);color:var(--bone)}.srr small{display:block;font:400 12.5px/1.4 var(--ui);color:var(--faint);margin-top:2px}
   .phone.light .srr i{background:rgba(23,21,18,.06)}
   .bkend .srcn{margin-left:0;margin-right:0}
+  .srcc.nte{padding:16px 18px;border-left:2px solid var(--gold)}.srcc.nte p{font:400 13.5px/1.6 var(--ui);color:var(--dim)}
   .chead{margin-top:30px}
   .acte{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:30px;line-height:.95}
   .acte small,.chap small{display:block;font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--red-type);margin-bottom:6px}
@@ -1778,7 +1779,7 @@ var LENS=DATA.LENS;var BLURB=DATA.BLURB||{};
 Object.keys(LENS).forEach(function(id){var o=LENS[id];if(STORIES[id]&&!STORIES[id].life){if(o["3"])STORIES[id].b3=o["3"];if(o["5"])STORIES[id].b5=o["5"];if(o["10"])STORIES[id].b10=o["10"];}});/*LENS-END*/
 var FMT=(typeof DATA!=='undefined'&&DATA.FMT)||{};var FIN=(typeof DATA!=='undefined'&&DATA.FIN)||{};
 function finBlock(id){var f=FIN[id];if(!f||!f.l||!f.l.length)return '';return '<div class="fin"><h4>Ce que vous venez de découvrir</h4><ul>'+f.l.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul><h4>À retenir</h4><p>'+esc(f.r)+'</p></div>';}
-function finNote(id){var f=FIN[id];return f&&f.n?'<p class="src"><b>Note éditoriale.</b> '+esc(f.n)+'</p>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
+function finNote(id){var f=FIN[id];return f&&f.n?'<div class="srcn"><h4>Note éditoriale</h4><div class="srcc nte"><p>'+esc(f.n)+'</p></div></div>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
 function minOf(id,arr){return FMT[id]||lenMin(arr);}
 /* ---- Histoires du jour : publiées depuis la base, sans mise à jour de l'application ---- */
 var DJIDS=[];
