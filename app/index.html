@@ -1824,7 +1824,7 @@ function finNote(id){var f=FIN[id];if(!f||!f.n)return '';
   var h='';
   order.forEach(function(lab,k){var li=by[lab];
     h+='<div class="nts'+(k===0?' open':'')+'"><button class="ntb" data-nt aria-expanded="'+(k===0)+'"><span>'+esc(lab)+'</span><em>'+li.length+'</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><ul>'+li.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';});
-  return h?'<div class="srcn"><h4>Fiabilité</h4><div class="srcc nte">'+h+'</div></div>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
+  return h?'<div class="srcn"><h4>Note éditoriale</h4><div class="srcc nte">'+h+'</div></div>':'';}Object.keys(FMT).forEach(function(k){if(STORIES[k]){STORIES[k].min=FMT[k];STORIES[k].fmt=FMT[k];}});
 function minOf(id,arr){return FMT[id]||lenMin(arr);}
 /* ---- Histoires du jour : publiées depuis la base, sans mise à jour de l'application ---- */
 var DJIDS=[];
