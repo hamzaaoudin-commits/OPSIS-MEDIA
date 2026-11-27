@@ -23,6 +23,11 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
     await p.reload();await boot();
     const after=await p.evaluate(()=>({src:OPSIS.data.source,a:!!OPSIS.stories().dj900,f:!!OPSIS.stories().dj901}));
     ok(after.src==='feed'&&after.a&&!after.f,'app native sans Supabase : la nouvelle histoire arrive par le flux, celle du futur reste cachée');
+    await sleep(600);
+    const ui=await p.evaluate(()=>{const sh=[...document.querySelectorAll('.shelf')].map(s=>({h:(s.querySelector('h2 span')||{}).textContent||'',t:[...s.querySelectorAll('.tile .ttl')].map(x=>x.textContent)}));
+      return {hero:(document.querySelector('.bigtitle')||{}).textContent,nouv:sh.find(x=>/^Nouveaut/.test(x.h)),sem:sh.find(x=>/semaine/i.test(x.h))};});
+    ok(ui.hero==='Nouvelle histoire native','histoire du jour : la nouvelle histoire est à la une ('+ui.hero+')');
+    ok(ui.nouv&&ui.nouv.t[0]==='Nouvelle histoire native','Nouveautés : la nouvelle histoire est en première position ('+(ui.nouv&&ui.nouv.t.slice(0,3))+')');
     /* hors ligne : la nouvelle histoire reste disponible (cache local) */
     await ctx.route('**/data/feed.json',r=>r.abort());await p.reload();await boot();
     const off=await p.evaluate(()=>({src:OPSIS.data.source,a:!!OPSIS.stories().dj900}));

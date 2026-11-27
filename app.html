@@ -3634,7 +3634,7 @@ function homeSeries(){
     return tile({p:st.p,t:st.title,s:'Une vie · '+st.min+' min',nosub:false,attr:'data-pick="'+id+'"',badge:S.read[id]?'<span class="read">LU</span>':'<span class="num">'+st.min+' MIN</span>'});}).join('')+'</div></div>';}
 function homeListRefresh(){var r=document.getElementById('hlist');if(r)r.innerHTML=homeList();}
 function homeNew(){
-  var ids=hr(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse().filter(vis));
+  var ids=hr(DJIDS.slice().reverse().concat(SPIDS.concat(PEIDS,SCIDS,LCIDS,MQIDS).reverse()).filter(vis));   /* les histoires du jour publiées arrivent en tête */
   var h=ids.length?'<div class="shelf"><h2><span>Nouveautés <small>Dernières histoires ajoutées</small></span></h2><div class="rail">'+mixRail(ids,colObjs(COLLS.slice(-3).map(function(c){return c.k;}).reverse()))+'</div></div>':'';
   h+='<div id="hlist">'+homeList()+'</div>'+homeSeries();
   var rc=recoColls(10);
