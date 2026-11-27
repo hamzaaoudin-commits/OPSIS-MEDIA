@@ -12,5 +12,5 @@ ids=[k for k in B if k not in done]
 n=int(sys.argv[1]); 
 for i in ids[:n]:
     e=idx.get(i,{});body=e.get('body','');t=' '.join(body) if isinstance(body,list) else str(body)
-    print('##',i,'|',e.get('name',''),'|',e.get('dates',''));print('B:',B[i]['b']);print('T:',t[:700].replace('#',' / '));print()
+    print('##',i,'|',e.get('name',''),'|',e.get('dates',''));print('B:',B[i]['b']);print('T:',t[:300].replace('#',' / '));print()
 print(len(ids),'restants')
