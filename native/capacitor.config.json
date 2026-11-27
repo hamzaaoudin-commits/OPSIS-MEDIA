@@ -1,0 +1,34 @@
+{
+  "appId": "com.strawberryproduction.opsis",
+  "appName": "OPSIS",
+  "webDir": "www",
+  "backgroundColor": "#09090A",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#09090A",
+    "limitsNavigationsToAppBoundDomains": false
+  },
+  "android": {
+    "backgroundColor": "#09090A",
+    "allowMixedContent": false,
+    "adjustMarginsForEdgeToEdge": "auto"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "backgroundColor": "#09090A",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#09090A"
+    },
+    "Keyboard": {
+      "resize": "none"
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_opsis",
+      "iconColor": "#D2232C"
+    }
+  }
+}

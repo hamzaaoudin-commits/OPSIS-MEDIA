@@ -4,7 +4,7 @@
 (function(){
 var OPSIS=window.OPSIS,notif=OPSIS.notif={ids:[],horizon:14,timer:null};
 var BASE_ID=7000;
-notif.plugin=function(){var C=window.Capacitor;return C&&C.Plugins&&C.Plugins.LocalNotifications||null;};
+notif.plugin=function(){return OPSIS.plugin('LocalNotifications');};
 notif.minOf=function(S){var m=String(S&&S.hour||'').match(/(?::|h\s*)(\d{2})$/);return m&&+m[1]<60?+m[1]:0;};
 notif.hourOf=function(S){var h=parseInt(String(S&&S.hour||'7'),10);if(!(h>=0&&h<24))h=7;return Math.max(7,Math.min(21,h));};   /* jamais la nuit : entre 7 h et 22 h */
 notif.launch=function(){return (OPSIS.cfg.launchDate||'2027-01-04');};

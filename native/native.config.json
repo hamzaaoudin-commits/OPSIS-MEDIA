@@ -1,0 +1,11 @@
+{
+  "supabaseUrl": "",
+  "supabaseAnonKey": "",
+  "revenueCatIosKey": "",
+  "revenueCatAndroidKey": "",
+  "entitlementId": "premium",
+  "googleWebClientId": "",
+  "googleIosClientId": "",
+  "launchDate": "2027-01-04",
+  "serviceWorker": false
+}

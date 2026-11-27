@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">OPSIS</string>
+    <string name="title_activity_main">OPSIS</string>
+    <string name="package_name">com.strawberryproduction.opsis</string>
+    <string name="custom_url_scheme">com.strawberryproduction.opsis</string>
+</resources>

@@ -216,6 +216,18 @@
   .bigtitle{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:58px;line-height:.9;letter-spacing:.01em;margin-top:10px;text-shadow:0 4px 30px rgba(0,0,0,.5)}
   .meta{font-size:14px;color:var(--dim);margin-top:12px}
   .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .pw{position:absolute;inset:0;z-index:70;background:var(--black);overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column}
+  .pw .pwi{margin:auto 0;padding:calc(env(safe-area-inset-top) + 56px) 26px calc(env(safe-area-inset-bottom) + 28px)}
+  .pw .pwk{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--red-type)}
+  .pw h1{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:40px;line-height:.98;margin:14px 0 14px}
+  .pw .pwp{font-size:16px;line-height:1.5;color:var(--dim,#b8b8c0);margin:0 0 26px}
+  .pw .pwprice{border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;margin-bottom:16px;background:rgba(255,255,255,.03)}
+  .pw .pwprice b{font-family:var(--disp);font-size:30px;font-weight:900}.pw .pwprice b small{font:600 15px var(--ui);color:var(--faint)}
+  .pw .pwprice span{display:block;margin-top:6px;font-size:13px;line-height:1.45;color:var(--faint)}
+  .pw .btn{width:100%}.pw .pwr{display:block;margin:14px auto 0;font-size:14px;font-weight:600;color:var(--faint);text-decoration:underline;padding:8px}
+  .pw .pwt{margin:18px 0 0;font:400 11.5px/1.5 var(--ui);color:var(--faint)}
+  .pw .pwl{display:flex;gap:18px;justify-content:center;margin-top:14px}.pw .pwl button{font-size:12.5px;color:var(--faint);text-decoration:underline;padding:6px 2px}
+  .pw .btn[disabled]{opacity:.55}
   .btn{height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:16px;font-weight:700}
   .btn svg{width:18px;height:18px}
   .btn.light{background:var(--bone);color:#111}
@@ -1884,6 +1896,9 @@ function logoSVG(){return '<svg viewBox="-106 -106 212 212" aria-hidden="true">'
 function libCount(){var n=0;Object.keys(S.saved).forEach(function(k){if(S.saved[k])n++;});Object.keys(S.follow).forEach(function(k){if(S.follow[k])n++;});return n;}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
 /* facturation : le texte suit la boutique d'où vient l'appli (App Store, Google Play ou site) ; aucun prestataire de paiement externe n'est appelé dans l'appli des boutiques */
+function aboStatus(){var bl=OPSIS.billing,i=bl&&bl.info;
+  if(i&&i.active){var d=i.expires?new Date(i.expires).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}):null;return 'Abonnement actif'+(d?(i.renews?', renouvelé automatiquement le ':', se termine le ')+d:'')+'.';}
+  return '3,99 € par mois, sans engagement. Le paiement ouvrira au lancement : rien ne vous est prélevé avant.';}
 function billWhere(){var ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(ua),
   tail='L\'abonnement se renouvelle automatiquement chaque mois, au même prix, jusqu\'à sa résiliation. Vous pouvez le résilier à tout moment, la résiliation prend effet à la fin de la période déjà payée.';
   if(ios)return {cancel:'Sur iPhone et iPad, l\'abonnement se résilie dans Réglages > votre nom > Abonnements, au moins 24 heures avant la fin de la période en cours.',renew:'Le paiement est débité sur votre compte Apple à la confirmation de l\'achat. '+tail+' Le compte est débité du renouvellement dans les 24 heures qui précèdent la fin de la période. Vous gérez ou résiliez l\'abonnement dans les réglages de votre compte Apple.'};
@@ -2657,8 +2672,8 @@ function renderMain(){
   main.innerHTML={home:home,library:library,saved:saved}[S.tab]();
   if(S.tab==='home')deckKick();
 }
-var LEGAL={"mentions": ["Mentions légales", [["Éditeur", "<p>OPSIS (application et site) est édité par :</p><p><b>Hamza El Jaouahiry</b><br>Entrepreneur individuel (micro-entreprise), exerçant sous le nom commercial Strawberry Production</p><p>SIREN : 105 253 314<br>SIRET : 105 253 314 00014<br>TVA non applicable, article 293 B du Code général des impôts<br>Email : hamza@gostrawberryprod.com</p><p class=\"addr\">Siège : 8 place Eugène Thomas, 93160 Noisy-le-Grand, France</p>"], ["Directeur de la publication", "<p>Hamza El Jaouahiry, en qualité d'entrepreneur individuel.</p>"], ["Hébergement", "<p><b>Vercel Inc.</b><br>440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis<br>vercel.com</p>"], ["Propriété intellectuelle", "<p>Les textes, illustrations, affiches, couvertures, logo, structure et identité visuelle d'OPSIS sont la propriété exclusive de Hamza El Jaouahiry (Strawberry Production), sauf mention contraire.</p><p>Les œuvres, documents et articles cités dans les rubriques « Sources » restent la propriété de leurs auteurs et ayants droit ; ils ne sont mentionnés que pour permettre au lecteur de vérifier les faits.</p><p>Toute reproduction, représentation, modification ou adaptation, totale ou partielle, par quelque procédé que ce soit, sans autorisation écrite préalable, est interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>"], ["Crédits", "<p>Conception, rédaction et direction artistique : Hamza El Jaouahiry — Strawberry Production.</p><p>Polices : Big Shoulders Display, Newsreader et Hanken Grotesk (Google Fonts, licence Open Font License).</p>"], ["Données personnelles et cookies", "<p>Le traitement des données personnelles est décrit dans la politique de confidentialité. OPSIS n'utilise ni cookie publicitaire ni traceur marketing tiers.</p>"], ["Loi applicable", "<p>Les présentes mentions légales sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux de Paris sont seuls compétents.</p>"]]], "confidentialite": ["Politique de confidentialité", [["Responsable du traitement", "<p>Le responsable du traitement des données est :</p><p><b>Hamza El Jaouahiry</b><br>Entrepreneur individuel (micro-entreprise), exerçant sous le nom commercial Strawberry Production</p><p>SIREN : 105 253 314<br>SIRET : 105 253 314 00014<br>TVA non applicable, article 293 B du Code général des impôts<br>Email : hamza@gostrawberryprod.com</p><p class=\"addr\">Siège : 8 place Eugène Thomas, 93160 Noisy-le-Grand, France</p><p>Pour toute question sur vos données personnelles, écrivez à l'adresse ci-dessus.</p>"], ["Cadre légal", "<p>OPSIS s'engage à protéger la vie privée de ses lecteurs, conformément au Règlement général sur la protection des données (règlement UE 2016/679, « RGPD »), à la loi française n° 78-17 du 6 janvier 1978 « Informatique et Libertés » et aux recommandations de la CNIL.</p>"], ["Données traitées et finalités", "<p>OPSIS ne collecte que les données strictement nécessaires.</p><p><b>A. Utilisation de l'application.</b> Aucun compte n'est demandé à ce stade. Votre liste, les histoires lues, vos réglages (durée de lecture, taille du texte, mode de lecture) servent uniquement à personnaliser votre lecture et restent sur votre appareil ; ils ne nous sont pas transmis.</p><p><b>B. Données techniques.</b> Adresse IP, type de navigateur et pages consultées, traités par l'hébergeur (Vercel) pour assurer le fonctionnement du service et prévenir les abus. Base légale : intérêt légitime (article 6.1.f du RGPD). Durée de conservation : 13 mois maximum.</p><p><b>C. Polices de caractères.</b> L'application charge ses polices depuis Google Fonts, ce qui transmet votre adresse IP à Google.</p><p><b>D. Prochainement.</b> Si OPSIS propose un compte, des notifications, une inscription par e-mail ou un abonnement payant, les données concernées, leurs finalités, leurs durées de conservation et leurs sous-traitants seront ajoutés à cette politique avant toute collecte.</p>"], ["Sous-traitants", "<p><b>Vercel Inc.</b> (Covina, États-Unis) : hébergement technique. Données traitées : journaux techniques, adresse IP. Transfert hors UE encadré par les clauses contractuelles types de la Commission européenne.</p><p><b>Google LLC</b> (Mountain View, États-Unis) : fourniture des polices. Transfert encadré par le Data Privacy Framework UE–États-Unis.</p><p>Les données ne sont ni vendues, ni louées, ni communiquées à des tiers à des fins commerciales ou publicitaires.</p>"], ["Cookies et traceurs", "<p>OPSIS n'utilise aucun cookie publicitaire, aucun traceur marketing tiers et aucune mesure d'audience non anonymisée. Vous pouvez configurer votre navigateur pour bloquer ou supprimer les cookies sans effet notable sur la lecture.</p>"], ["Vos droits", "<p>Vous disposez des droits d'accès (art. 15), de rectification (art. 16), d'effacement (art. 17), de limitation (art. 18), de portabilité (art. 20) et d'opposition (art. 21 du RGPD), du droit de retirer votre consentement à tout moment lorsque le traitement repose sur celui-ci, et du droit de définir des directives sur le sort de vos données après votre décès.</p><p>Pour les exercer, écrivez à hamza@gostrawberryprod.com en précisant l'objet de votre demande. Une réponse vous sera apportée sous un mois maximum (article 12.3 du RGPD).</p>"], ["Sécurité", "<p>Les échanges avec OPSIS sont chiffrés (HTTPS). Seules les données strictement nécessaires sont collectées et conservées, et seuls des sous-traitants conformes au RGPD sont utilisés.</p>"], ["Réclamation auprès de la CNIL", "<p>Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez saisir la CNIL : 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — cnil.fr.</p>"], ["Modifications", "<p>Cette politique peut être modifiée, notamment pour suivre l'évolution du service ou de la loi. La date de dernière mise à jour figure en bas de page ; en cas de changement substantiel, les lecteurs en seront informés par tout moyen approprié.</p>"]]], "conditions": ["Conditions d'utilisation", [["Objet", "<p>Les présentes conditions générales d'utilisation (« CGU ») régissent l'accès et l'usage d'OPSIS, application et site de récits d'histoires vraies édités par Hamza El Jaouahiry, entrepreneur individuel exerçant sous le nom commercial Strawberry Production (SIRET 105 253 314 00014). En utilisant OPSIS, vous acceptez ces conditions.</p>"], ["Le service", "<p>OPSIS propose des récits d'histoires vraies, accompagnés de leurs sources, à lire en plusieurs durées. L'accès est gratuit à ce jour. Si une offre payante est proposée, elle fera l'objet de conditions générales de vente distinctes, présentées avant tout paiement.</p>"], ["Exactitude des contenus", "<p>Chaque récit repose sur des sources publiques citées en fin de texte. Nous distinguons, autant que possible, ce qui est établi, ce qui reste contesté et ce que l'on ignore. Malgré ce soin, une erreur peut subsister, et l'état des connaissances sur un fait peut évoluer. Les contenus sont fournis à titre d'information et de divertissement ; ils ne constituent ni un avis juridique, médical ou financier, ni une source d'autorité.</p><p>Pour signaler une erreur : hamza@gostrawberryprod.com.</p>"], ["Usage autorisé", "<p>OPSIS est destiné à un usage personnel et non commercial. Il est interdit de copier, extraire de manière automatisée, republier, revendre ou utiliser les textes, illustrations et affiches pour entraîner des systèmes d'intelligence artificielle, sans autorisation écrite préalable. Vous pouvez partager un récit à l'aide des fonctions de partage de l'application, ou en citer de courts extraits avec mention d'OPSIS et lien vers le récit.</p>"], ["Propriété intellectuelle", "<p>Les textes, illustrations, affiches, logo et identité visuelle d'OPSIS sont protégés par le droit d'auteur et restent la propriété de leur éditeur. L'usage du service ne vous confère aucun droit de propriété sur ces éléments. Les œuvres et documents cités restent la propriété de leurs auteurs.</p>"], ["Personnes citées", "<p>Les récits portent sur des faits historiques et des personnes réelles, relatés à partir de sources publiques. Toute personne qui estime qu'un contenu lui porte atteinte peut nous écrire à hamza@gostrawberryprod.com ; nous examinerons la demande avec soin.</p>"], ["Liens externes", "<p>Les sources et liens renvoient parfois vers des sites tiers dont OPSIS ne contrôle ni le contenu ni la disponibilité, et dont il n'est pas responsable.</p>"], ["Disponibilité", "<p>Nous nous efforçons de maintenir le service accessible en continu, sans pouvoir le garantir. Il peut être interrompu pour maintenance ou évolution. OPSIS est en cours de développement : des fonctions peuvent changer ou être retirées.</p>"], ["Responsabilité", "<p>OPSIS est fourni en l'état. Dans les limites autorisées par la loi, l'éditeur ne peut être tenu responsable des dommages indirects, ni de l'interruption du service, ni de l'usage fait des contenus. Ces limites ne s'appliquent pas aux droits que la loi reconnaît aux consommateurs.</p>"], ["Données personnelles", "<p>Le traitement de vos données est décrit dans la politique de confidentialité.</p>"], ["Modification des conditions", "<p>Ces conditions peuvent évoluer. La version en vigueur est celle affichée dans l'application ; la poursuite de l'usage après modification vaut acceptation.</p>"], ["Droit applicable et juridiction", "<p>Les présentes conditions sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux de Paris sont compétents, sous réserve des règles impératives protégeant les consommateurs.</p>"]]]};
-var LEGAL_DATE='4 novembre 2026';
+var LEGAL={"mentions": ["Mentions légales", [["Éditeur", "<p>OPSIS (application et site) est édité par :</p><p><b>Hamza El Jaouahiry</b><br>Entrepreneur individuel (micro-entreprise), exerçant sous le nom commercial Strawberry Production</p><p>SIREN : 105 253 314<br>SIRET : 105 253 314 00014<br>TVA non applicable, article 293 B du Code général des impôts<br>Email : hamza@gostrawberryprod.com</p><p class=\"addr\">Siège : 8 place Eugène Thomas, 93160 Noisy-le-Grand, France</p>"], ["Directeur de la publication", "<p>Hamza El Jaouahiry, en qualité d'entrepreneur individuel.</p>"], ["Hébergement", "<p><b>Vercel Inc.</b><br>440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis<br>vercel.com</p>"], ["Propriété intellectuelle", "<p>Les textes, illustrations, affiches, couvertures, logo, structure et identité visuelle d'OPSIS sont la propriété exclusive de Hamza El Jaouahiry (Strawberry Production), sauf mention contraire.</p><p>Les œuvres, documents et articles cités dans les rubriques « Sources » restent la propriété de leurs auteurs et ayants droit ; ils ne sont mentionnés que pour permettre au lecteur de vérifier les faits.</p><p>Toute reproduction, représentation, modification ou adaptation, totale ou partielle, par quelque procédé que ce soit, sans autorisation écrite préalable, est interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>"], ["Crédits", "<p>Conception, rédaction et direction artistique : Hamza El Jaouahiry — Strawberry Production.</p><p>Polices : Big Shoulders Display, Newsreader et Hanken Grotesk (Google Fonts, licence Open Font License).</p>"], ["Données personnelles et cookies", "<p>Le traitement des données personnelles est décrit dans la politique de confidentialité. OPSIS n'utilise ni cookie publicitaire ni traceur marketing tiers.</p>"], ["Loi applicable", "<p>Les présentes mentions légales sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux de Paris sont seuls compétents.</p>"]]], "confidentialite": ["Politique de confidentialité", [["Responsable du traitement", "<p>Le responsable du traitement des données est :</p><p><b>Hamza El Jaouahiry</b><br>Entrepreneur individuel (micro-entreprise), exerçant sous le nom commercial Strawberry Production</p><p>SIREN : 105 253 314<br>SIRET : 105 253 314 00014<br>TVA non applicable, article 293 B du Code général des impôts<br>Email : hamza@gostrawberryprod.com</p><p class=\"addr\">Siège : 8 place Eugène Thomas, 93160 Noisy-le-Grand, France</p><p>Pour toute question sur vos données personnelles, écrivez à l'adresse ci-dessus.</p>"], ["Cadre légal", "<p>OPSIS s'engage à protéger la vie privée de ses lecteurs, conformément au Règlement général sur la protection des données (règlement UE 2016/679, « RGPD »), à la loi française n° 78-17 du 6 janvier 1978 « Informatique et Libertés » et aux recommandations de la CNIL.</p>"], ["Données traitées et finalités", "<p>OPSIS ne collecte que les données strictement nécessaires.</p><p><b>A. Utilisation de l'application.</b> Votre liste, les histoires lues et vos réglages (durée de lecture, taille du texte…) servent uniquement à personnaliser votre lecture et sont enregistrés sur votre appareil. Si vous créez un compte, ils sont aussi synchronisés avec nos serveurs pour que vous les retrouviez sur vos autres appareils.</p><p><b>B. Données techniques.</b> Adresse IP, type de navigateur et pages consultées, traités par l'hébergeur (Vercel) pour assurer le fonctionnement du service et prévenir les abus. Base légale : intérêt légitime (article 6.1.f du RGPD). Durée de conservation : 13 mois maximum.</p><p><b>C. Polices de caractères.</b> L'application charge ses polices depuis Google Fonts, ce qui transmet votre adresse IP à Google.</p><p><b>D. Prochainement.</b> Si OPSIS propose un compte, des notifications, une inscription par e-mail ou un abonnement payant, les données concernées, leurs finalités, leurs durées de conservation et leurs sous-traitants seront ajoutés à cette politique avant toute collecte.</p><p><b>D. Compte.</b> Un compte est facultatif et sert à synchroniser votre lecture. Il se crée avec votre adresse e-mail (code de vérification), ou avec « Se connecter avec Apple » ou Google ; nous recevons alors votre adresse e-mail (ou l'adresse relais Apple) et un identifiant. Base légale : exécution du service. Conservation : jusqu'à la suppression du compte, que vous pouvez faire à tout moment dans l'application (Réglages > Compte), ce qui efface vos données de synchronisation.</p><p><b>E. Abonnement.</b> Le paiement est géré par Apple ou Google : nous ne recevons ni votre moyen de paiement ni vos coordonnées bancaires. Le service RevenueCat nous indique uniquement si votre abonnement est actif, sa date de fin et un identifiant d'achat. Base légale : exécution du contrat, obligations comptables.</p><p><b>F. Notifications.</b> Le rappel quotidien est programmé sur votre appareil, après votre autorisation ; il n'utilise aucun serveur de notification et se désactive dans les réglages.</p>"], ["Sous-traitants", "<p><b>Vercel Inc.</b> (Covina, États-Unis) : hébergement technique. Données traitées : journaux techniques, adresse IP. Transfert hors UE encadré par les clauses contractuelles types de la Commission européenne.</p><p><b>Google LLC</b> (Mountain View, États-Unis) : fourniture des polices. Transfert encadré par le Data Privacy Framework UE–États-Unis.</p><p><p><b>Supabase</b> (hébergement de la base de données, région Union européenne) : compte et synchronisation.</p><p><b>RevenueCat Inc.</b> (États-Unis) : vérification des abonnements ; transfert encadré par les clauses contractuelles types.</p><p><b>Apple</b> et <b>Google</b> : paiement des abonnements et, si vous le choisissez, connexion à votre compte.</p>Les données ne sont ni vendues, ni louées, ni communiquées à des tiers à des fins commerciales ou publicitaires.</p>"], ["Cookies et traceurs", "<p>OPSIS n'utilise aucun cookie publicitaire, aucun traceur marketing tiers et aucune mesure d'audience non anonymisée. Vous pouvez configurer votre navigateur pour bloquer ou supprimer les cookies sans effet notable sur la lecture.</p>"], ["Vos droits", "<p>Vous disposez des droits d'accès (art. 15), de rectification (art. 16), d'effacement (art. 17), de limitation (art. 18), de portabilité (art. 20) et d'opposition (art. 21 du RGPD), du droit de retirer votre consentement à tout moment lorsque le traitement repose sur celui-ci, et du droit de définir des directives sur le sort de vos données après votre décès.</p><p>Pour les exercer, écrivez à hamza@gostrawberryprod.com en précisant l'objet de votre demande. Une réponse vous sera apportée sous un mois maximum (article 12.3 du RGPD).</p>"], ["Sécurité", "<p>Les échanges avec OPSIS sont chiffrés (HTTPS). Seules les données strictement nécessaires sont collectées et conservées, et seuls des sous-traitants conformes au RGPD sont utilisés.</p>"], ["Réclamation auprès de la CNIL", "<p>Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez saisir la CNIL : 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — cnil.fr.</p>"], ["Modifications", "<p>Cette politique peut être modifiée, notamment pour suivre l'évolution du service ou de la loi. La date de dernière mise à jour figure en bas de page ; en cas de changement substantiel, les lecteurs en seront informés par tout moyen approprié.</p>"]]], "conditions": ["Conditions d'utilisation", [["Objet", "<p>Les présentes conditions générales d'utilisation (« CGU ») régissent l'accès et l'usage d'OPSIS, application et site de récits d'histoires vraies édités par Hamza El Jaouahiry, entrepreneur individuel exerçant sous le nom commercial Strawberry Production (SIRET 105 253 314 00014). En utilisant OPSIS, vous acceptez ces conditions.</p>"], ["Le service", "<p>OPSIS propose des récits d'histoires vraies, accompagnés de leurs sources, à lire en plusieurs durées. L'accès complet à l'application est réservé aux abonnés (voir « Abonnement » ci-dessous).</p>"], ["Abonnement", "<p>L'abonnement OPSIS coûte 3,99 € par mois, taxes comprises. Dans l'application iPhone et iPad, il est souscrit et payé via l'App Store (compte Apple) ; dans l'application Android, via Google Play (compte Google). Le paiement est donc encaissé par Apple ou Google, selon leurs propres conditions.</p><p>L'abonnement se renouvelle automatiquement chaque mois, au même prix, jusqu'à sa résiliation. Vous pouvez le résilier à tout moment : sur iPhone et iPad dans Réglages > votre nom > Abonnements, au moins 24 heures avant la fin de la période en cours ; sur Android dans Google Play > Paiements et abonnements > Abonnements. La résiliation prend effet à la fin de la période déjà payée ; aucun remboursement au prorata n'est effectué sauf obligation légale ou décision de la boutique.</p><p>Si vous changez d'appareil ou réinstallez l'application, utilisez « Restaurer les achats » dans Réglages > Abonnement et facturation. Les demandes de remboursement sont traitées par Apple ou Google. Pour toute difficulté : hamza@gostrawberryprod.com.</p>"], ["Exactitude des contenus", "<p>Chaque récit repose sur des sources publiques citées en fin de texte. Nous distinguons, autant que possible, ce qui est établi, ce qui reste contesté et ce que l'on ignore. Malgré ce soin, une erreur peut subsister, et l'état des connaissances sur un fait peut évoluer. Les contenus sont fournis à titre d'information et de divertissement ; ils ne constituent ni un avis juridique, médical ou financier, ni une source d'autorité.</p><p>Pour signaler une erreur : hamza@gostrawberryprod.com.</p>"], ["Usage autorisé", "<p>OPSIS est destiné à un usage personnel et non commercial. Il est interdit de copier, extraire de manière automatisée, republier, revendre ou utiliser les textes, illustrations et affiches pour entraîner des systèmes d'intelligence artificielle, sans autorisation écrite préalable. Vous pouvez partager un récit à l'aide des fonctions de partage de l'application, ou en citer de courts extraits avec mention d'OPSIS et lien vers le récit.</p>"], ["Propriété intellectuelle", "<p>Les textes, illustrations, affiches, logo et identité visuelle d'OPSIS sont protégés par le droit d'auteur et restent la propriété de leur éditeur. L'usage du service ne vous confère aucun droit de propriété sur ces éléments. Les œuvres et documents cités restent la propriété de leurs auteurs.</p>"], ["Personnes citées", "<p>Les récits portent sur des faits historiques et des personnes réelles, relatés à partir de sources publiques. Toute personne qui estime qu'un contenu lui porte atteinte peut nous écrire à hamza@gostrawberryprod.com ; nous examinerons la demande avec soin.</p>"], ["Liens externes", "<p>Les sources et liens renvoient parfois vers des sites tiers dont OPSIS ne contrôle ni le contenu ni la disponibilité, et dont il n'est pas responsable.</p>"], ["Disponibilité", "<p>Nous nous efforçons de maintenir le service accessible en continu, sans pouvoir le garantir. Il peut être interrompu pour maintenance ou évolution. OPSIS est en cours de développement : des fonctions peuvent changer ou être retirées.</p>"], ["Responsabilité", "<p>OPSIS est fourni en l'état. Dans les limites autorisées par la loi, l'éditeur ne peut être tenu responsable des dommages indirects, ni de l'interruption du service, ni de l'usage fait des contenus. Ces limites ne s'appliquent pas aux droits que la loi reconnaît aux consommateurs.</p>"], ["Données personnelles", "<p>Le traitement de vos données est décrit dans la politique de confidentialité.</p>"], ["Modification des conditions", "<p>Ces conditions peuvent évoluer. La version en vigueur est celle affichée dans l'application ; la poursuite de l'usage après modification vaut acceptation.</p>"], ["Droit applicable et juridiction", "<p>Les présentes conditions sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux de Paris sont compétents, sous réserve des règles impératives protégeant les consommateurs.</p>"]]]};
+var LEGAL_DATE='27 novembre 2026';
 function legalLayer(k){
   var d=LEGAL[k];if(!d)return '';
   var body=d[1].map(function(a,i){return '<section class="lg"><i>'+String(i+1).padStart(2,'0')+'</i><h2>'+a[0]+'</h2>'+a[1]+'</section>';}).join('');
@@ -3722,7 +3737,7 @@ function trailHTML(p){
 }
 /* célébration : la pastille de l'histoire qu'on vient de finir se remplit, le trait vers la suivante se dessine */
 var CEL=null;
-function haptic(){try{var C=window.Capacitor,H=C&&C.Plugins&&C.Plugins.Haptics;if(H&&H.impact){H.impact({style:'MEDIUM'});return;}if(navigator.vibrate)navigator.vibrate([18,40,28]);}catch(e){}}
+function haptic(){try{var H=window.OPSIS&&OPSIS.plugin&&OPSIS.plugin('Haptics');if(H&&H.impact){H.impact({style:'MEDIUM'});return;}if(navigator.vibrate)navigator.vibrate([18,40,28]);}catch(e){}}
 function celebrate(id){
   var n=lv.querySelector('.tn[data-pick="'+id+'"]');if(!n)return;
   var row=n.closest('.tr'),pth=row&&row.querySelector('.tl path');
@@ -4399,11 +4414,11 @@ function setLayer(k){
   }else if(k==='abo'){
     var wp=!!S.x.plusWish;
     b='<div class="plan"><p class="pkick" style="padding:0">Votre offre</p><h3>OPSIS</h3><p>Toutes les histoires et tous les thèmes, en 3, 7 ou 12 minutes. <b>3,99 € par mois</b>, résiliable à tout moment.</p></div>'+
-      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">3,99 € par mois, sans engagement. Le paiement ouvrira au lancement : rien ne vous est prélevé avant.</small></span><span class="pill">3,99 €/mois</span></div>'+
+      '<div class="sbox"><div class="opt" style="border-top:0"><span>Abonnement<small class="os">'+aboStatus()+'</small></span><span class="pill">3,99 €/mois</span></div>'+
       '<div class="opt"><span>Moyen de paiement<small class="os">Aucun moyen de paiement enregistré.</small></span></div>'+
       '<div class="opt"><span>Factures<small class="os">Aucune facture : rien ne vous a été prélevé.</small></span></div>'+
       '<div class="opt"><span>Résiliation<small class="os">'+billWhere().cancel+'</small></span></div>'+
-      '<div class="opt lgrow"><button data-restore>Restaurer les achats</button></div></div>'+
+      '<div class="opt lgrow"><button data-restore>Restaurer les achats</button></div>'+(OPSIS.billing&&OPSIS.billing.native()&&OPSIS.billing.info&&OPSIS.billing.info.active?'<div class="opt lgrow"><button data-manage>Gérer mon abonnement</button></div>':'')+'</div>'+
       '<div class="sbox"><div class="opt" style="border-top:0"><span>Renouvellement automatique<small class="os">'+billWhere().renew+'</small></span></div>'+
       '<div class="opt"><span>Conditions<small class="os">Le prix affiché est le prix mensuel, taxes comprises. Les mentions légales et les conditions d\'utilisation sont consultables dans les réglages.</small></span></div></div>';
   }else if(k==='confid'){
@@ -4493,6 +4508,36 @@ function giftCta(id){
     '<small>3,99 € par mois, résiliable à tout moment.</small></div>';
 }
 
+/* barrière d'abonnement : uniquement dans les applis des boutiques, et seulement si RevenueCat est configuré */
+var PW={el:null,busy:false};
+function pwHtml(){
+  var bl=OPSIS.billing||{},pr=bl.price||'3,99 €',w=billWhere();
+  return '<div class="pwi"><span class="pwk">OPSIS ORIGINALS</span><h1>The world is<br>made of stories.</h1>'+
+    '<p class="pwp">Des histoires vraies, à lire en 3, 7 ou 12 minutes. Sans publicité, et de nouvelles qui arrivent sans cesse.</p>'+
+    '<div class="pwprice"><b>'+esc(pr)+' <small>/ mois</small></b><span>Abonnement mensuel, renouvelé automatiquement jusqu\'à sa résiliation. Résiliable à tout moment.</span></div>'+
+    '<button class="btn red" id="pwgo">S\'abonner</button><button class="pwr" id="pwrs">Restaurer mes achats</button>'+
+    '<p class="pwt">'+esc(w.renew)+'</p>'+
+    '<div class="pwl"><button data-pwl="conditions">Conditions d\'utilisation</button><button data-pwl="confidentialite">Politique de confidentialité</button></div></div>';
+}
+function pwShow(k){
+  if(!PW.el){PW.el=document.createElement('div');PW.el.className='pw';PW.el.setAttribute('role','dialog');PW.el.setAttribute('aria-label','Abonnement OPSIS');document.getElementById('phone').appendChild(PW.el);
+    PW.el.addEventListener('click',function(e){
+      var t=e.target.closest('button');if(!t)return;
+      if(t.hasAttribute('data-pwl')){pwShow(t.getAttribute('data-pwl'));return;}
+      if(t.hasAttribute('data-legal')){pwShow(t.getAttribute('data-legal'));return;}
+      if(t.hasAttribute('data-back')){pwShow();return;}
+      if(t.id==='pwgo'&&!PW.busy){PW.busy=true;t.disabled=true;OPSIS.billing.purchase().then(function(r){PW.busy=false;if(r.ok)pwHide();else{t.disabled=false;if(!r.cancelled)toast('Achat non finalisé, réessayez');}}).catch(function(err){PW.busy=false;t.disabled=false;toast(String(err&&err.message||'Achat impossible pour le moment'));});}
+      if(t.id==='pwrs'&&!PW.busy){PW.busy=true;toast('Recherche de vos achats…');OPSIS.billing.restore().then(function(r){PW.busy=false;if(r.restored){toast('Achats restaurés');pwHide();}else toast('Aucun abonnement actif trouvé pour ce compte');}).catch(function(){PW.busy=false;toast('Restauration impossible pour le moment');});}
+    });}
+  PW.el.innerHTML=k&&LEGAL[k]?legalLayer(k):pwHtml();PW.el.scrollTop=0;PW.el.style.display='flex';
+}
+function pwHide(){if(PW.el)PW.el.style.display='none';}
+OPSIS.paywall={check:function(){
+  var bl=OPSIS.billing;if(!bl||!bl.native()||!bl.apiKey())return;
+  Promise.resolve(bl.ready?true:bl.init()).then(function(){if(!bl.entitled())pwShow();else pwHide();});
+}};
+OPSIS.on('entitlement',function(i){if(i&&i.active)pwHide();else if(OPSIS.billing&&OPSIS.billing.native()&&OPSIS.billing.apiKey()&&entered)pwShow();});
+
 function deepLink(){
   var m=/[#&]h=([^&]+)/.exec(location.hash||''),q=/[?&]go=(\w+)/.exec(location.search||'');
   if(m){var id=decodeURIComponent(m[1]);if(vis(id)){GIFTIN.id=/[#&]cadeau=1/.test(location.hash||'')&&!isAppInstalled()?id:null;push({type:'read',id:id});return true;}}
@@ -4560,6 +4605,7 @@ function featClick(b,d){
   if(d.sharelist){shareList(d.sharelist);return true;}
   if(b.hasAttribute('data-onbagain')){if(!ONB.el)onbShow(0);return true;}
   if(b.hasAttribute('data-offline')){offSave();return true;}
+  if(b.hasAttribute('data-manage')){if(OPSIS.billing)OPSIS.billing.manage();return true;}
   if(b.hasAttribute('data-restore')){var bl=OPSIS.billing;if(bl&&typeof bl.restore==='function'){toast('Recherche de vos achats…');Promise.resolve(bl.restore()).then(function(r){toast(r&&r.restored?'Achats restaurés':'Aucun achat à restaurer pour ce compte');}).catch(function(){toast('Restauration impossible pour le moment, réessayez');});}else toast('Aucun achat à restaurer pour ce compte');return true;}
   if(b.hasAttribute('data-pluswish')){S.x.plusWish=!S.x.plusWish;reSet();return true;}
   if(b.hasAttribute('data-export')){var blob=new Blob([JSON.stringify({exporte_le:OPSIS.day(),lues:S.read,liste:S.saved,notes:S.rate,progression:S.prog,citations:S.x.quotes||[],collections:S.x.cols||[],recherches:S.x.hist||[],reglages:{format:FM[S.len||3],sens:S.mode,taille:S.fs,theme:S.theme,police:S.font}},null,2)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='opsis-mes-donnees.json';document.body.appendChild(a);a.click();a.remove();toast('Vos données sont téléchargées');return true;}
@@ -4663,7 +4709,7 @@ function onbRender(partial){
 }
 function enter(){
   if(entered)return;entered=true;timers.forEach(clearTimeout);if(raf)cancelAnimationFrame(raf);
-  splash.classList.add('out');main.classList.add('arrive');setTimeout(onbMaybe,700);
+  splash.classList.add('out');main.classList.add('arrive');setTimeout(onbMaybe,700);setTimeout(function(){try{OPSIS.paywall.check();}catch(e){}},900);
   setTimeout(function(){main.classList.remove('arrive');},1200);
 }
 function playIntro(){
@@ -4720,6 +4766,8 @@ var OPSIS=window.OPSIS=window.OPSIS||{};
 OPSIS.cfg=CFG;
 OPSIS.live=!!(CFG.supabaseUrl&&CFG.supabaseAnonKey);
 OPSIS.now=function(){return Date.now();};
+/* plugin natif Capacitor par son nom (null sur le web) */
+OPSIS.plugin=function(n){try{var c=window.Capacitor;if(!c||!c.isNativePlatform||!c.isNativePlatform())return null;if(c.Plugins&&c.Plugins[n])return c.Plugins[n];if(c.registerPlugin){OPSIS._pl=OPSIS._pl||{};return OPSIS._pl[n]||(OPSIS._pl[n]=c.registerPlugin(n));}}catch(e){}return null;};
 /* stockage local : toujours entouré de try/catch (navigation privée, aperçus, quotas) */
 OPSIS.kv={
   get:function(k){try{var v=window.localStorage.getItem(k);return v==null?null:JSON.parse(v);}catch(e){return null;}},
@@ -4994,6 +5042,38 @@ auth.deleteAccount=function(){
 })();
 })();
 
+/* OPSIS runtime — connexion Apple / Google natives (Capacitor, plugin @capgo/capacitor-social-login).
+   Le plugin renvoie un jeton d'identité ; Supabase l'échange contre une session (auth.signInWithIdToken).
+   Configuration : googleWebClientId, googleIosClientId (opsis.config.json). */
+(function(){
+var OPSIS=window.OPSIS,CFG=OPSIS.cfg,auth=OPSIS.auth;
+function rnd(){var a=new Uint8Array(16);crypto.getRandomValues(a);return Array.prototype.map.call(a,function(x){return ('0'+x.toString(16)).slice(-2);}).join('');}
+function sha(t){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return ('0'+x.toString(16)).slice(-2);}).join('');});}
+var inited=false;
+function init(P){
+  if(inited)return Promise.resolve();
+  var o={apple:{}};
+  if(CFG.googleWebClientId)o.google={webClientId:CFG.googleWebClientId,iOSClientId:CFG.googleIosClientId||undefined,mode:'online'};
+  return P.initialize(o).then(function(){inited=true;});
+}
+auth.native=function(provider){
+  var P=OPSIS.plugin('SocialLogin');
+  if(!P)return Promise.reject(new Error('indisponible sur cet appareil'));
+  if(provider==='google'&&!CFG.googleWebClientId)return Promise.reject(new Error('Google n\'est pas encore configuré'));
+  return init(P).then(function(){
+    if(provider==='apple'){
+      var raw=rnd();
+      return sha(raw).then(function(h){return P.login({provider:'apple',options:{scopes:['email','name'],nonce:h}});}).then(function(r){
+        var t=r&&r.result&&r.result.idToken;if(!t)throw new Error('jeton Apple manquant');
+        return auth.signInWithIdToken('apple',t,raw);});
+    }
+    return P.login({provider:'google',options:{scopes:['email','profile']}}).then(function(r){
+      var t=r&&r.result&&r.result.idToken;if(!t)throw new Error('jeton Google manquant');
+      return auth.signInWithIdToken('google',t);});
+  }).then(function(){OPSIS.emit('auth',auth.user());});
+};
+})();
+
 /* OPSIS runtime — synchronisation entre appareils (fusion côté serveur, le plus récent gagne, clé par clé) */
 (function(){
 var OPSIS=window.OPSIS,sync=OPSIS.sync={status:'idle',last:0,error:null},busy=false,tmr=null,cur=Promise.resolve();
@@ -5024,7 +5104,7 @@ OPSIS.on('hydrated',function(){if(OPSIS.auth.token())sync.run();});
 (function(){
 var OPSIS=window.OPSIS,notif=OPSIS.notif={ids:[],horizon:14,timer:null};
 var BASE_ID=7000;
-notif.plugin=function(){var C=window.Capacitor;return C&&C.Plugins&&C.Plugins.LocalNotifications||null;};
+notif.plugin=function(){return OPSIS.plugin('LocalNotifications');};
 notif.minOf=function(S){var m=String(S&&S.hour||'').match(/(?::|h\s*)(\d{2})$/);return m&&+m[1]<60?+m[1]:0;};
 notif.hourOf=function(S){var h=parseInt(String(S&&S.hour||'7'),10);if(!(h>=0&&h<24))h=7;return Math.max(7,Math.min(21,h));};   /* jamais la nuit : entre 7 h et 22 h */
 notif.launch=function(){return (OPSIS.cfg.launchDate||'2027-01-04');};
@@ -5169,6 +5249,70 @@ document.addEventListener('click',function(e){
 });
 OPSIS.on('auth',rerender);OPSIS.on('sync',rerender);
 OPSIS.accountUI=ui;
+})();
+
+/* OPSIS runtime — abonnement dans les boutiques (App Store / Google Play) via RevenueCat.
+   Apple et Google encaissent et gèrent l'abonnement ; RevenueCat vérifie les reçus et dit à l'appli si l'abonnement est actif.
+   Configuration (opsis.config.json) : revenueCatIosKey, revenueCatAndroidKey (clés publiques « appl_… » / « goog_… »), entitlementId (défaut « premium »).
+   Sans clé, ou sur le web : aucune barrière de paiement (l'appli reste ouverte). */
+(function(){
+var OPSIS=window.OPSIS,CFG=OPSIS.cfg,KEY='opsis.ent.v1',GRACE=3*86400000;
+var b=OPSIS.billing={ready:false,configured:false,info:null,pkg:null,price:null,err:null};
+function C(){return window.Capacitor;}
+function native(){var c=C();return !!(c&&c.isNativePlatform&&c.isNativePlatform());}
+function plat(){var c=C();return c&&c.getPlatform?c.getPlatform():'web';}
+function P(){return OPSIS.plugin('Purchases');}
+b.native=native;
+b.apiKey=function(){var p=plat();return p==='ios'?CFG.revenueCatIosKey:p==='android'?CFG.revenueCatAndroidKey:null;};
+b.entId=function(){return CFG.entitlementId||'premium';};
+/* état d'abonnement mémorisé : l'appli fonctionne hors ligne, avec 3 jours de tolérance après la dernière vérification */
+b.cached=function(){var e=OPSIS.kv.get(KEY);if(!e)return false;if(e.active&&(!e.expires||e.expires+GRACE>OPSIS.now())&&e.at+7*86400000>OPSIS.now())return true;return false;};
+function apply(ci){
+  var ent=ci&&ci.entitlements&&ci.entitlements.active&&ci.entitlements.active[b.entId()];
+  var active=!!ent;
+  b.info=active?{active:true,renews:ent.willRenew!==false,expires:ent.expirationDateMillis||(ent.expirationDate?Date.parse(ent.expirationDate):null),trial:ent.periodType==='TRIAL',store:ent.store}:{active:false};
+  OPSIS.kv.set(KEY,{active:active,expires:b.info.expires||null,at:OPSIS.now()});
+  OPSIS.emit('entitlement',b.info);
+  return active;
+}
+b.entitled=function(){return b.info?!!b.info.active:b.cached();};
+b.init=function(){
+  if(b.ready||!native()||!P()||!b.apiKey())return Promise.resolve(false);
+  b.configured=true;
+  var p=P();
+  return p.configure({apiKey:b.apiKey(),appUserID:(OPSIS.auth&&OPSIS.auth.user&&OPSIS.auth.user()&&OPSIS.auth.user().id)||undefined}).then(function(){
+    b.ready=true;
+    try{p.addCustomerInfoUpdateListener(function(ci){apply(ci);});}catch(e){}
+    return Promise.all([p.getCustomerInfo().then(function(r){apply(r.customerInfo||r);}).catch(function(e){b.err=e;}),b.loadOffer()]);
+  }).then(function(){return true;}).catch(function(e){b.err=e;return false;});
+};
+b.loadOffer=function(){
+  var p=P();if(!p)return Promise.resolve(null);
+  return p.getOfferings().then(function(o){
+    var cur=o&&(o.current||(o.offerings&&o.offerings.current));
+    var pk=cur&&(cur.monthly||(cur.availablePackages&&cur.availablePackages[0]))||null;
+    b.pkg=pk;b.price=pk&&pk.product&&pk.product.priceString||null;return pk;
+  }).catch(function(e){b.err=e;return null;});
+};
+b.purchase=function(){
+  var p=P();if(!p)return Promise.reject(new Error('indisponible'));
+  var go=b.pkg?Promise.resolve(b.pkg):b.loadOffer();
+  return go.then(function(pk){
+    if(!pk)throw new Error('Offre indisponible pour le moment');
+    return p.purchasePackage({aPackage:pk});
+  }).then(function(r){return {ok:apply(r.customerInfo||r)};}).catch(function(e){
+    if(e&&(e.userCancelled||/cancel/i.test(String(e.message||''))))return {ok:false,cancelled:true};
+    throw e;});
+};
+b.restore=function(){
+  var p=P();if(!p)return Promise.resolve({restored:false});
+  return p.restorePurchases().then(function(r){var a=apply(r.customerInfo||r);return {restored:a};});
+};
+/* le compte OPSIS (Supabase) devient l'identité RevenueCat : même abonnement retrouvé sur tous les appareils */
+OPSIS.on('auth',function(u){var p=P();if(!p||!b.ready)return;if(u&&u.id)p.logIn({appUserID:u.id}).then(function(r){apply(r.customerInfo||r);}).catch(function(){});else p.logOut().catch(function(){});});
+/* abonnement géré depuis la boutique */
+b.manage=function(){var p=P();if(p&&p.showManageSubscriptions)return p.showManageSubscriptions().catch(function(){});return Promise.resolve();};
+if(native())OPSIS.on('ready',function(){b.init();});
 })();
 
 /* OPSIS runtime — démarrage : charge le contenu, puis lance l'application */

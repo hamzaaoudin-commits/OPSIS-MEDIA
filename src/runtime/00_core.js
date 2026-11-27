@@ -5,6 +5,8 @@ var OPSIS=window.OPSIS=window.OPSIS||{};
 OPSIS.cfg=CFG;
 OPSIS.live=!!(CFG.supabaseUrl&&CFG.supabaseAnonKey);
 OPSIS.now=function(){return Date.now();};
+/* plugin natif Capacitor par son nom (null sur le web) */
+OPSIS.plugin=function(n){try{var c=window.Capacitor;if(!c||!c.isNativePlatform||!c.isNativePlatform())return null;if(c.Plugins&&c.Plugins[n])return c.Plugins[n];if(c.registerPlugin){OPSIS._pl=OPSIS._pl||{};return OPSIS._pl[n]||(OPSIS._pl[n]=c.registerPlugin(n));}}catch(e){}return null;};
 /* stockage local : toujours entouré de try/catch (navigation privée, aperçus, quotas) */
 OPSIS.kv={
   get:function(k){try{var v=window.localStorage.getItem(k);return v==null?null:JSON.parse(v);}catch(e){return null;}},
