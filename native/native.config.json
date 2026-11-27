@@ -7,5 +7,6 @@
   "googleWebClientId": "",
   "googleIosClientId": "",
   "launchDate": "2027-01-04",
-  "serviceWorker": false
+  "serviceWorker": false,
+  "feedUrl": "https://opsis-media.vercel.app/data/feed.json"
 }

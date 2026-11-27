@@ -4874,10 +4874,25 @@ function fetchDelta(cursor){
   return next(0);
 }
 
+/* flux de publication : data/feed.json (hébergé avec le site) = les histoires publiées depuis l'instantané.
+   Une histoire du jour n'apparaît qu'à sa date (published_at). Copie locale gardée pour lire hors connexion. */
+function loadFeed(DATA){
+  var url=CFG.feedUrl||'data/feed.json';
+  return OPSIS.timeout(fetch(url,{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error('feed');return r.json();}),CFG.contentTimeoutMs||2500).then(function(j){
+    var rows=(j&&j.rows)||[];OPSIS.idb.set('feed',{builtAt:DATA.builtAt,rows:rows});return rows;
+  },function(){return OPSIS.idb.get('feed').then(function(c){return c&&c.builtAt===DATA.builtAt?c.rows:[];}).catch(function(){return [];});}).then(function(rows){
+    var t=new Date(OPSIS.now()).toISOString();
+    rows=rows.filter(function(r){return r&&r.id&&r.data&&r.series&&(!r.published_at||r.published_at<=t);});
+    if(rows.length){applyRows(DATA,rows);DATA.source='feed';DATA.fresh=rows.length;}
+    return DATA;
+  });
+}
 OPSIS.loadContent=function(){
   return loadSnapshot().then(function(DATA){
     DATA._pos={};DATA.builtAt=DATA.builtAt||'2000-01-01T00:00:00Z';DATA.meta=DATA.meta||{};
     DATA.source='snapshot';
+    return loadFeed(DATA);
+  }).then(function(DATA){
     if(!OPSIS.live)return DATA;
     return OPSIS.idb.get('delta').then(function(cache){
       cache=cache&&cache.builtAt===DATA.builtAt?cache:{builtAt:DATA.builtAt,cursor:DATA.builtAt,rows:{},meta:{}};
