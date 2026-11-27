@@ -2,6 +2,9 @@
 
 Le code de l'application est le même que celui du site (`app/`). Ce dossier l'enveloppe dans deux vraies applications.
 
+## Nouvelles histoires : aucune mise à jour d'app
+Les stores ne sont jamais à repasser pour ajouter une histoire. L'app embarque un instantané (hors ligne dès l'installation), puis demande à Supabase **uniquement ce qui est nouveau** et le garde en cache sur le téléphone. Une histoire du jour se publie en ajoutant une ligne dans la base avec sa date de publication (voir `docs/BACKEND.md`). Cela exige que `supabaseUrl` et `supabaseAnonKey` soient renseignés dans `native.config.json` (`npm run check` le contrôle). On ne republie l'app que pour changer son code ou son design.
+
 ## Comptes à ouvrir (une seule fois)
 | Service | Prix | Pour quoi |
 |---|---|---|

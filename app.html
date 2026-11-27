@@ -2760,7 +2760,7 @@ function scrubInit(el,onMove){
 }
 /* ---------- lecture hors ligne : état réel du stockage, téléchargement à la demande ---------- */
 function offState(cb){
-  if(document.getElementById('opsis-data'))return cb('embedded');
+  if(document.getElementById('opsis-data')||(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()))return cb('embedded');
   if(!('caches' in window))return cb('unsupported');
   caches.match('data/content.json').then(function(m){cb(m?'saved':'none');}).catch(function(){cb('unsupported');});
 }
@@ -2769,7 +2769,7 @@ function offRefresh(){
   var t=document.getElementById('offtxt'),a=document.getElementById('offact'),bt=document.getElementById('offbtn');if(!t)return;
   offState(function(st){
     var tt=document.getElementById('offtxt');if(!tt)return;
-    if(st==='embedded'){tt.textContent='Toutes les histoires sont intégrées à l\'application : vous pouvez lire sans connexion, dans le métro comme en avion.';a.style.display='none';}
+    if(st==='embedded'){tt.textContent=OPSIS.live?'Les histoires sont enregistrées sur cet appareil : vous pouvez lire sans connexion, dans le métro comme en avion. Les nouvelles histoires arrivent toutes seules dès que vous êtes en ligne.':'Toutes les histoires sont intégrées à l\'application : vous pouvez lire sans connexion, dans le métro comme en avion.';a.style.display='none';}
     else if(st==='saved'){tt.textContent='Toutes les histoires sont enregistrées sur cet appareil. Vous pouvez lire sans connexion.';a.style.display='';bt.textContent='Mettre à jour les histoires';}
     else if(st==='none'){tt.textContent='Pas encore enregistrées. Téléchargez-les une fois, puis lisez partout sans connexion.';a.style.display='';bt.textContent='Télécharger pour lire hors ligne';}
     else{tt.textContent='Ce navigateur ne permet pas l\'enregistrement hors ligne. Installez OPSIS sur l\'écran d\'accueil pour en profiter.';a.style.display='none';}
