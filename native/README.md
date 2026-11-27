@@ -22,6 +22,11 @@ Tant que ces clés sont vides, l'app reste ouverte (pas de paywall).
 ## 2. Connexion Apple / Google
 Renseigner dans `native.config.json` : `googleWebClientId`, `googleIosClientId` (Google Cloud → OAuth). Activer les fournisseurs Apple et Google dans Supabase → Authentication.
 
+## 2 bis. Clés à renseigner, puis vérification
+Remplir `native/native.config.json` (Supabase, RevenueCat, Google), puis lancer `npm run check` dans `native/` : il liste ce qui manque.
+- Google Cloud : créer un client OAuth « Application Web » (`googleWebClientId`), un client « iOS » (bundle id `com.strawberryproduction.opsis`, `googleIosClientId`) et un client « Android » (package `com.strawberryproduction.opsis` + empreinte SHA-1 de la clé de signature, y compris celle de Play App Signing).
+- Le script `npm run sync` ajoute tout seul la configuration Google dans Info.plist.
+
 ## 3. Préparer (Mac mini)
 ```
 git clone <opsis-media> && cd opsis-media
@@ -38,7 +43,11 @@ npm run sync                   # copie le web dans www/ et synchronise iOS/Andro
 
 ## 5. Android
 `npx cap open android` (Android Studio) →
-- Build → Generate Signed Bundle (AAB). Créez un keystore et **gardez-le précieusement** (jamais dans git) ; ou activez Play App Signing.
+- Créer la clé de signature (une seule fois, à garder précieusement, jamais dans git) :
+  `keytool -genkey -v -keystore ~/opsis-release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias opsis`
+  puis créer `native/android/keystore.properties` avec `storeFile=/Users/…/opsis-release.jks`, `storePassword=…`, `keyAlias=opsis`, `keyPassword=…`.
+- Augmenter `versionCode` dans `android/app/build.gradle` à chaque envoi.
+- Build → Generate Signed Bundle (AAB) ou `cd android && ./gradlew bundleRelease`.
 - Play Console → Production → importer l'AAB, remplir la fiche (`docs/STORE.md`), captures `android-phone-*`.
 - Les nouveaux comptes personnels doivent faire un test fermé (12 testeurs, 14 jours) avant la production.
 

@@ -31,7 +31,7 @@ Contenus parfois sombres (crimes, guerres, catastrophes réels) : prévoir 12+ (
 
 ## Confidentialité (étiquettes Apple / sécurité des données Google)
 Collecté : e-mail et identifiant de compte (fonctionnalité), historique de lecture et favoris (fonctionnalité), identifiant d'achat (abonnement). Pas de publicité, pas de suivi inter-applications (ATT non requis), pas de vente de données. Chiffrement en transit. Suppression du compte possible dans Réglages → Compte. Sous-traitants : Supabase, RevenueCat, Apple, Google.
-URL politique de confidentialité et conditions : celles du site OPSIS (même texte que dans l'app).
+URL à renseigner dans les deux boutiques : politique de confidentialité https://opsis-media.vercel.app/confidentialite · conditions https://opsis-media.vercel.app/conditions · mentions https://opsis-media.vercel.app/mentions (pages générées avec le même texte que dans l'app).
 
 ## Notes pour la revue Apple/Google
 Le contenu complet est derrière l'abonnement. Fournir un compte de test (ou un code promo/testeur de licence). « Restaurer les achats » est dans Réglages. La suppression de compte est dans Réglages → Compte. Connexion avec Apple proposée à côté de Google.

@@ -17,7 +17,7 @@ b.cached=function(){var e=OPSIS.kv.get(KEY);if(!e)return false;if(e.active&&(!e.
 function apply(ci){
   var ent=ci&&ci.entitlements&&ci.entitlements.active&&ci.entitlements.active[b.entId()];
   var active=!!ent;
-  b.info=active?{active:true,renews:ent.willRenew!==false,expires:ent.expirationDateMillis||(ent.expirationDate?Date.parse(ent.expirationDate):null),trial:ent.periodType==='TRIAL',store:ent.store}:{active:false};
+  b.info=active?{active:true,renews:ent.willRenew!==false,expires:ent.expirationDateMillis||(ent.expirationDate?Date.parse(ent.expirationDate):null),trial:ent.periodType==='TRIAL',store:ent.store,mgmt:ci.managementURL||null}:{active:false};
   OPSIS.kv.set(KEY,{active:active,expires:b.info.expires||null,at:OPSIS.now()});
   OPSIS.emit('entitlement',b.info);
   return active;
@@ -58,6 +58,9 @@ b.restore=function(){
 /* le compte OPSIS (Supabase) devient l'identité RevenueCat : même abonnement retrouvé sur tous les appareils */
 OPSIS.on('auth',function(u){var p=P();if(!p||!b.ready)return;if(u&&u.id)p.logIn({appUserID:u.id}).then(function(r){apply(r.customerInfo||r);}).catch(function(){});else p.logOut().catch(function(){});});
 /* abonnement géré depuis la boutique */
-b.manage=function(){var p=P();if(p&&p.showManageSubscriptions)return p.showManageSubscriptions().catch(function(){});return Promise.resolve();};
+b.manage=function(){
+  var url=(b.info&&b.info.mgmt)||(plat()==='ios'?'https://apps.apple.com/account/subscriptions':'https://play.google.com/store/account/subscriptions?package='+encodeURIComponent('com.strawberryproduction.opsis'));
+  var B=OPSIS.plugin('Browser');try{if(B)return B.open({url:url});}catch(e){}
+  window.open(url,'_blank');return Promise.resolve();};
 if(native())OPSIS.on('ready',function(){b.init();});
 })();

@@ -4506,6 +4506,7 @@ function pwShow(k){
 function pwHide(){if(PW.el)PW.el.style.display='none';}
 OPSIS.paywall={check:function(){
   var bl=OPSIS.billing;if(!bl||!bl.native()||!bl.apiKey())return;
+  if(document.querySelector('.onb.on')){clearTimeout(OPSIS.paywall.t);OPSIS.paywall.t=setTimeout(OPSIS.paywall.check,700);return;}   /* le premier lancement montre d'abord la visite, puis l'abonnement */
   Promise.resolve(bl.ready?true:bl.init()).then(function(){if(!bl.entitled())pwShow();else pwHide();});
 }};
 OPSIS.on('entitlement',function(i){if(i&&i.active)pwHide();else if(OPSIS.billing&&OPSIS.billing.native()&&OPSIS.billing.apiKey()&&entered)pwShow();});

@@ -68,3 +68,17 @@ self.addEventListener('fetch',e=>{
 });
 `);
 console.log('build',ver,'app.html',(fs.statSync(path.join(root,'app.html')).size/1e6).toFixed(2)+' Mo','| app/index.html',(fs.statSync(path.join(root,'app/index.html')).size/1e3).toFixed(0)+' Ko');
+
+/* 4) pages légales publiques (URL exigées par l'App Store et Google Play) : /confidentialite /conditions /mentions */
+(function(){
+  const m=shell.match(/var LEGAL=(\{[\s\S]*?\});\s*\nvar LEGAL_DATE='([^']*)'/);if(!m){console.warn('LEGAL introuvable : pages légales non générées');return;}
+  const L=JSON.parse(m[1]),date=m[2];
+  const css='body{margin:0;background:#09090A;color:#EDE6DA;font:17px/1.65 Georgia,serif}main{max-width:720px;margin:0 auto;padding:56px 22px 90px}h1{font:800 40px/1.05 Impact,"Arial Narrow",sans-serif;text-transform:uppercase;margin:0 0 8px}h2{font:700 20px/1.3 system-ui,sans-serif;margin:34px 0 8px}p{margin:0 0 12px;color:#d8d2c6}a{color:#E2474C}.d{color:#8d887f;font:14px system-ui,sans-serif;margin-bottom:28px}nav{margin-top:48px;font:15px system-ui,sans-serif}nav a{margin-right:18px}.brand{font:700 13px system-ui,sans-serif;letter-spacing:.3em;color:#E2474C;margin-bottom:26px;display:block;text-decoration:none}';
+  for(const k of Object.keys(L)){
+    const d=L[k],body=d[1].map(a=>'<section><h2>'+a[0]+'</h2>'+a[1]+'</section>').join('');
+    const nav=Object.keys(L).filter(x=>x!==k).map(x=>'<a href="/'+x+'">'+L[x][0]+'</a>').join('');
+    const html='<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+d[0]+' · OPSIS</title><meta name="robots" content="index,follow"><style>'+css+'</style></head><body><main><a class="brand" href="/">OPSIS</a><h1>'+d[0]+'</h1><p class="d">Dernière mise à jour : '+date+'</p>'+body+'<nav>'+nav+'</nav></main></body></html>';
+    wr('app/'+k+'.html',html);
+  }
+  console.log('pages légales :',Object.keys(L).join(', '));
+})();
